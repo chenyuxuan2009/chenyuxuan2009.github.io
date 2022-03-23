@@ -3,22 +3,23 @@
 <html class="article-header-style-default">
 <head>
 	
-	<title>CF1621A Stable Arrangement of Rooks - chenyuxuan__2009的博客</title>
+	<title>CF1555A 	PizzaForces - chenyuxuan__2009的博客</title>
 	<meta charset="utf-8">
 	
 		<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
 	
-	<meta name="description" content="题目翻译：有 $n \times n$ 大小的棋盘，一共放 $k$ 辆车，使得这个棋盘稳定。 稳定的概念是：所有的车移动至相邻四格（上下左右）不会出现一行一列有 $\ge 2$ 辆车。 做题思路:我们可以考虑，移动之后没有同一行一列有多辆车，那么就让它移动之后还是只有它一辆车，换句话说，每辆车之间至少空一行和一列，也就是在对角线上放是最优想法。如果对角线放不下 $k$ 辆车了，无解输出 -1 。">
+	<meta name="description" content="题目传送： 洛谷；   CodeForces。  题目分析：这题有 $3$ 大要点：   平均价一样 $2.5$ 分钟，只需满足尽量披萨数与人数差尽量小。   $6,8,10$ 可以凑出所有大于等于 $6$ 的偶数。转化一下：$3,4,5$ 可以凑出所有大于等于 $3$ 的整数，因为 $3,4$ 凑不出的最大数为 $5$，具体见洛谷 P3951。   语言特性：大部分编程语言做除法都是向下取整，所">
 <meta property="og:type" content="article">
-<meta property="og:title" content="CF1621A Stable Arrangement of Rooks">
-<meta property="og:url" content="https://chenyuxuan2009.github.io/2022/03/22/CF1621A/index.html">
+<meta property="og:title" content="CF1555A 	PizzaForces">
+<meta property="og:url" content="https://chenyuxuan2009.github.io/2022/03/22/CF1555A/index.html">
 <meta property="og:site_name" content="chenyuxuan__2009的博客">
-<meta property="og:description" content="题目翻译：有 $n \times n$ 大小的棋盘，一共放 $k$ 辆车，使得这个棋盘稳定。 稳定的概念是：所有的车移动至相邻四格（上下左右）不会出现一行一列有 $\ge 2$ 辆车。 做题思路:我们可以考虑，移动之后没有同一行一列有多辆车，那么就让它移动之后还是只有它一辆车，换句话说，每辆车之间至少空一行和一列，也就是在对角线上放是最优想法。如果对角线放不下 $k$ 辆车了，无解输出 -1 。">
+<meta property="og:description" content="题目传送： 洛谷；   CodeForces。  题目分析：这题有 $3$ 大要点：   平均价一样 $2.5$ 分钟，只需满足尽量披萨数与人数差尽量小。   $6,8,10$ 可以凑出所有大于等于 $6$ 的偶数。转化一下：$3,4,5$ 可以凑出所有大于等于 $3$ 的整数，因为 $3,4$ 凑不出的最大数为 $5$，具体见洛谷 P3951。   语言特性：大部分编程语言做除法都是向下取整，所">
 <meta property="og:locale" content="zh_CN">
-<meta property="article:published_time" content="2022-03-22T12:38:59.470Z">
-<meta property="article:modified_time" content="2022-03-23T00:01:01.294Z">
+<meta property="article:published_time" content="2022-03-22T12:38:59.461Z">
+<meta property="article:modified_time" content="2022-03-23T00:29:11.180Z">
 <meta property="article:author" content="CYX">
 <meta property="article:tag" content="C++">
+<meta property="article:tag" content="Python">
 <meta name="twitter:card" content="summary">
 
 	<meta name="theme-color" content="#5e72e4">
@@ -592,13 +593,13 @@
 	<article class="post post-full card bg-white shadow-sm border-0 ">
 	<header class="post-header text-center">
 		
-		<a class="post-title" href="/2022/03/22/CF1621A/">CF1621A Stable Arrangement of Rooks</a>
+		<a class="post-title" href="/2022/03/22/CF1555A/">CF1555A 	PizzaForces</a>
 		<div class="post-meta">
 			
 						
 						<div class="post-meta-detail post-meta-detail-time">
 							<i class="fa fa-clock-o" aria-hidden="true"></i>
-							<time title="发布于 2022-3-22 20:38:59 | 编辑于 2022-3-23 8:01:01">2022-3-22 20:38
+							<time title="发布于 2022-3-22 20:38:59 | 编辑于 2022-3-23 8:29:11">2022-3-22 20:38
 							</time>
 						</div>
 					
@@ -625,7 +626,7 @@
 						
 						<div class="post-meta-detail post-meta-detail-words">
 							<i class="fa fa-file-word-o" aria-hidden="true"></i>
-							372 字
+							308 字
 						</div>
 					
 						
@@ -641,14 +642,16 @@
 	</header>
 
 	<div class="post-content" id="post_content">
-		<h4 id="题目翻译："><a href="#题目翻译：" class="headerlink" title="题目翻译："></a>题目翻译：</h4><p>有 $n \times n$ 大小的棋盘，一共放 $k$ 辆车，使得这个棋盘稳定。</p>
-<p>稳定的概念是：所有的车移动至相邻四格（上下左右）不会出现一行一列有 $\ge 2$ 辆车。</p>
-<h4 id="做题思路"><a href="#做题思路" class="headerlink" title="做题思路:"></a>做题思路:</h4><p>我们可以考虑，移动之后没有同一行一列有多辆车，那么就让它移动之后还是只有它一辆车，换句话说，每辆车之间至少空一行和一列，也就是在对角线上放是最优想法。如果对角线放不下 $k$ 辆车了，无解输出 <code>-1</code> 。</p>
-<h4 id="深入思考（此分析大佬跳过）"><a href="#深入思考（此分析大佬跳过）" class="headerlink" title="深入思考（此分析大佬跳过）"></a>深入思考（此分析大佬跳过）</h4><p>在怎样的情况下 $n \times n$ 的棋盘放不下 $k$ 辆车呢？</p>
-<p>很显然，每两行两列放一辆车，那么最多可以放 $\left\lfloor\dfrac{n+1}{2}\right\rfloor$ 辆车（大多数语言整数除法自动下取整），所以只要判断 $\dfrac{n+1}{2}$ 与 $k$ 的大小关系。</p>
-<h4 id="AC代码"><a href="#AC代码" class="headerlink" title="AC代码"></a>AC代码</h4><figure class="highlight cpp"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="type">void</span> <span class="title">solve</span><span class="params">()</span></span></span><br><span class="line"><span class="function"></span>&#123;</span><br><span class="line">	<span class="type">int</span> n,k;</span><br><span class="line">	cin&gt;&gt;n&gt;&gt;k;</span><br><span class="line">	<span class="keyword">if</span>((n+<span class="number">1</span>)/<span class="number">2</span>&lt;k)<span class="comment">//判断是否放得下</span></span><br><span class="line">	&#123;</span><br><span class="line">		cout&lt;&lt;<span class="number">-1</span>&lt;&lt;endl;</span><br><span class="line">		<span class="keyword">return</span>;</span><br><span class="line">	&#125;</span><br><span class="line">	<span class="keyword">for</span>(<span class="type">int</span> i=<span class="number">1</span>;i&lt;=n;i++)</span><br><span class="line">	&#123;</span><br><span class="line">		<span class="keyword">for</span>(<span class="type">int</span> j=<span class="number">1</span>;j&lt;=n;j++)</span><br><span class="line">		&#123;</span><br><span class="line">			<span class="keyword">if</span>(i==j&amp;&amp;i%<span class="number">2</span>!=<span class="number">0</span>&amp;&amp;k&gt;<span class="number">0</span>)<span class="comment">//判断分别为：对角线、隔一行一列、还可以放车</span></span><br><span class="line">			&#123;</span><br><span class="line">				cout&lt;&lt;<span class="string">&#x27;R&#x27;</span>;</span><br><span class="line">				k--;<span class="comment">//放完一辆</span></span><br><span class="line">			&#125;</span><br><span class="line">			<span class="keyword">else</span></span><br><span class="line">			&#123;</span><br><span class="line">				cout&lt;&lt;<span class="string">&#x27;.&#x27;</span>;</span><br><span class="line">			&#125;</span><br><span class="line">		&#125;</span><br><span class="line">		cout&lt;&lt;endl;</span><br><span class="line">	&#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-<p>多组数据，代码未全。请勿copy，当心踩坑！</p>
-
+		<h3 id="题目传送："><a href="#题目传送：" class="headerlink" title="题目传送："></a>题目传送：</h3><ul>
+<li><a target="_blank" rel="noopener" href="https://www.luogu.com.cn/problem/CF1555A">洛谷</a>；  </li>
+<li><a target="_blank" rel="noopener" href="https://codeforces.com/problemset/problem/1555/A">CodeForces</a>。  <h3 id="题目分析："><a href="#题目分析：" class="headerlink" title="题目分析："></a>题目分析：</h3>这题有 $3$ 大要点：  </li>
+<li>平均价一样 $2.5$ 分钟，只需满足尽量披萨数与人数差尽量小。  </li>
+<li>$6,8,10$ 可以凑出所有大于等于 $6$ 的偶数。<br>转化一下：$3,4,5$ 可以凑出所有大于等于 $3$ 的整数，因为 $3,4$ 凑不出的最大数为 $5$，具体见<a target="_blank" rel="noopener" href="https://www.luogu.com.cn/problem/P3951">洛谷 P3951</a>。  </li>
+<li>语言特性：大部分编程语言做除法都是向下取整，所以数学上四舍五入 $a$ 除以 $b$ 等于编程语言中的 <code>(a+1)/b</code>。</li>
+</ul>
+<h3 id="做题思路："><a href="#做题思路：" class="headerlink" title="做题思路："></a>做题思路：</h3><p>先特判：<br>$n &lt; 6$ 是 $15$ 分钟；<br>$n \geq 6$ 时，输出 <code>(n+1)/2*5</code>,（因为 $n$ 可能是奇数，所以要加 $1$），前面提到，这个 $\frac{n + 1}{2}$ 一定会被 $3,4,5$ 凑出来，然后把乘 $2.5$ 转化为除以 $2$ 乘 $5$（否则万一 $n+1$ 是奇数就玩完）。  </p>
+<h3 id="AC-代码："><a href="#AC-代码：" class="headerlink" title="AC 代码："></a>AC 代码：</h3><h4 id="C-版："><a href="#C-版：" class="headerlink" title="C++ 版："></a>C++ 版：</h4><figure class="highlight cpp"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">#<span class="keyword">include</span><span class="string">&lt;bits/stdc++.h&gt;</span></span></span><br><span class="line"><span class="keyword">using</span> <span class="keyword">namespace</span> std;</span><br><span class="line"><span class="meta">#<span class="keyword">define</span> ll long long</span></span><br><span class="line"><span class="function"><span class="type">int</span> <span class="title">main</span><span class="params">()</span></span></span><br><span class="line"><span class="function"></span>&#123;</span><br><span class="line">	ll t;</span><br><span class="line">	cin&gt;&gt;t;</span><br><span class="line">	<span class="keyword">while</span>(t--)</span><br><span class="line">	&#123;</span><br><span class="line">		ll n;</span><br><span class="line">		cin&gt;&gt;n;</span><br><span class="line">		<span class="keyword">if</span>(n&lt;<span class="number">6</span>)n=<span class="number">6</span>;</span><br><span class="line">		cout&lt;&lt;(n+<span class="number">1</span>)/<span class="number">2</span>*<span class="number">5</span>&lt;&lt;endl;</span><br><span class="line">	&#125;</span><br><span class="line">	<span class="keyword">return</span> <span class="number">0</span>;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<h4 id="Python-版："><a href="#Python-版：" class="headerlink" title="Python 版："></a>Python 版：</h4><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line">t=<span class="built_in">int</span>(<span class="built_in">input</span>())</span><br><span class="line"><span class="keyword">for</span> tt <span class="keyword">in</span> <span class="built_in">range</span>(t):</span><br><span class="line">    n=<span class="built_in">int</span>(<span class="built_in">input</span>())</span><br><span class="line">    <span class="keyword">if</span> n&lt;<span class="number">6</span>:</span><br><span class="line">        <span class="built_in">print</span>(<span class="number">15</span>)</span><br><span class="line">    <span class="keyword">else</span>:</span><br><span class="line">        <span class="built_in">print</span>((n+<span class="number">1</span>)//<span class="number">2</span>*<span class="number">5</span>)</span><br></pre></td></tr></table></figure>
 	</div>
 
 	
@@ -658,7 +661,7 @@
 	
 		<div class="post-tags">
 			<i class="fa fa-tags" aria-hidden="true"></i>
-			<a class="tag badge badge-secondary post-meta-detail-tag -none-link" href="/tags/C/" rel="tag">C++</a>
+			<a class="tag badge badge-secondary post-meta-detail-tag -none-link" href="/tags/C/" rel="tag">C++</a><a class="tag badge badge-secondary post-meta-detail-tag -none-link" href="/tags/Python/" rel="tag">Python</a>
 		</div>
 	
 </article>
@@ -700,7 +703,7 @@
 				<span class="btn-inner--icon"><i class="fa fa-twitter"></i></span>
 			</button>
 		</a>
-		<a target="_blank" class="no-pjax icon-telegram" href="https://telegram.me/share/url?url=https://chenyuxuan2009.github.io/2022/03/22/CF1621A/&text=CF1621A Stable Arrangement of Rooks" tooltip="分享到 Telegram">
+		<a target="_blank" class="no-pjax icon-telegram" href="https://telegram.me/share/url?url=https://chenyuxuan2009.github.io/2022/03/22/CF1555A/&text=CF1555A 	PizzaForces" tooltip="分享到 Telegram">
 			<button class="btn btn-icon btn-primary" style="background: #42a5f5;border: none;">
 				<span class="btn-inner--icon"><i class="fa fa-telegram"></i></span>
 			</button>
@@ -717,12 +720,14 @@
 </div>
 <script type="text/javascript">
 	socialShare("#share", {
-	    title : 'CF1621A Stable Arrangement of Rooks',
-	    description : '题目翻译：有 $n \times n$ 大小的棋盘，一共放 $k$ 辆车，使得这个棋盘稳定。
-稳定的...',
+	    title : 'CF1555A 	PizzaForces',
+	    description : '题目传送：
+洛谷；  
+CodeForces。  题目分析：这题有 $3$ 大要点：  
+平均价一样...',
 	    wechatQrcodeTitle : "分享到微信",
 	    wechatQrcodeHelper : '微信扫描二维码',
-	    source : 'https://chenyuxuan2009.github.io/2022/03/22/CF1621A/'
+	    source : 'https://chenyuxuan2009.github.io/2022/03/22/CF1555A/'
 	});
 	$("#share_show")[0].onclick = function(){
 		$("#share_container").addClass("opened");
@@ -788,7 +793,7 @@
 
 
 
-<div class="post-navigation card shadow-sm"><div class="post-navigation-item post-navigation-pre"><span class="page-navigation-extra-text"><i class="fa fa-arrow-circle-o-left" aria-hidden="true"></i>上一篇</span><a href="/2022/03/22/CF1627B/" rel="prev"> CF1627B Not Sitting</a></div><div class="post-navigation-item post-navigation-next"><span class="page-navigation-extra-text">下一篇 <i class="fa fa-arrow-circle-o-right" aria-hidden="true"></i></span><a href="/2022/03/22/CF1615A/" rel="next"> CF1615A Closing The Gap</a></div></div>
+<div class="post-navigation card shadow-sm"><div class="post-navigation-item post-navigation-pre"><span class="page-navigation-extra-text"><i class="fa fa-arrow-circle-o-left" aria-hidden="true"></i>上一篇</span><a href="/2022/03/22/CF1613B/" rel="prev"> CF1613B Absent Remainder</a></div><div class="post-navigation-item post-navigation-next"><span class="page-navigation-extra-text">下一篇 <i class="fa fa-arrow-circle-o-right" aria-hidden="true"></i></span><a href="/2022/03/22/abc142_d/" rel="next"> ABC142D | AT4875 Disjoint Set of Common Divisors</a></div></div>
 
 
 
