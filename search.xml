@@ -4,6 +4,31 @@
   
     
     <entry>
+      <title>freopen讲解</title>
+      <link href="/2022/03/24/freopen%E8%AE%B2%E8%A7%A3/"/>
+      <url>/2022/03/24/freopen%E8%AE%B2%E8%A7%A3/</url>
+      
+        <content type="html"><![CDATA[<p>2022年3月24日，我在洛谷灌水区<del>不务正业</del>劳逸结合时，正值 2022 NOI Online 考试前 $2$ 天，有人在灌水区问 <code>freopen</code> 的用法，我就来说一下。</p><p>其实文件读入不一定用 <code>freopen</code>，其他的都可以，只是 <code>freopen</code> 最常用而已。</p><p><code>freopen</code> 分读入和输出，读入一般是 <code>freopen(&quot;读入文件名&quot;,&quot;r&quot;,stdin);</code>。</p><p>读入文件名一般都是 <code>xxx.in</code>，题目会给，不用管。<code>&quot;r&quot;</code> 很关键，$\tt r$ 是指 $\tt read$，读。</p><p> 输出一般是 <code>freopen(&quot;输出文件名&quot;,&quot;w&quot;,stdout);</code>。</p><p>读入文件名一般都是 <code>xxx.out</code>，和读入一样，题目会给。<code>&quot;w&quot;</code> 也很关键，$\tt w$ 是指 $\tt write$，写。</p><p>一定一定要看清你的 <code>&quot;r&quot;</code> 和 <code>stdin</code> 以及 <code>&quot;w&quot;</code> 和 <code>stdout</code> 是不是在同一行。</p><p>插个题外话，我因为复制读入的 <code>freopen</code> 而没给 <code>stdout</code>，在第一次使用文件读入时，模拟赛差点抱灵。 幸好我打代码打得快，瞎写几个读入文件检查时检查出来了。</p><p><code>freopen</code> 也不一定非要在考试时才使用，自己编游戏，用文件存档也是个不错的选择。</p>]]></content>
+      
+      
+      <categories>
+          
+          <category> 讲解 </category>
+          
+      </categories>
+      
+      
+        <tags>
+            
+            <tag> C++ </tag>
+            
+        </tags>
+      
+    </entry>
+    
+    
+    
+    <entry>
       <title>【置顶】公告</title>
       <link href="/2022/03/23/top/"/>
       <url>/2022/03/23/top/</url>
@@ -21,7 +46,7 @@
       <link href="/2022/03/23/%E4%B8%89%E7%9B%AE%E8%BF%90%E7%AE%97%E7%AC%A6%E8%AE%B2%E8%A7%A3/"/>
       <url>/2022/03/23/%E4%B8%89%E7%9B%AE%E8%BF%90%E7%AE%97%E7%AC%A6%E8%AE%B2%E8%A7%A3/</url>
       
-        <content type="html"><![CDATA[<p>我的第一年CSP，是2021年的J组。当时初赛结束，很多同学跟我对答案说，那个什么 <code>:</code> 什么 <code>?</code> 是啥玩意儿啊，压根看不懂。</p><p>于是，就有了这期讲解。所谓的”什么 <code>:</code> 什么 <code>?</code>“就是三目运算符。</p><p>三目运算符其实就是一个 <code>if(···)··· else ···</code>。</p><p>三目运算符使用格式一般为 <code>x?y:z</code>。</p><p>其中，$x$ 表示判断内容，如 <code>a==b</code> 这种。</p><p>$y$ 则表示 $x$ 为真时的操作，$z$ 则表示 $x$ 为假时的操作。</p><p>也就是说，<code>x?y:z</code> 在功能上等价于 <code>if(x)y;else z;</code>。</p><p>像并查集，就可以这样子完成。</p><figure class="highlight cpp"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"><span class="type">int</span> f[<span class="number">114514</span>];</span><br><span class="line"><span class="function"><span class="type">int</span> <span class="title">F</span><span class="params">(<span class="type">int</span> x)</span></span></span><br><span class="line"><span class="function"></span>&#123;</span><br><span class="line">    <span class="keyword">return</span> f[x]==x?x:f[x]=<span class="built_in">F</span>(f[x]);</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure><p>那么这个 <code>F</code> 函数就是查找老大，如果 $x$ 的老大是自己，对应函数中 <code>f[x]==x</code>，返回自己，对应函数中 <code>x</code>，否则的话自己的老大变成递归下去查找的结果，并返回，对应函数中 <code>f[x]=F(f[x])</code>。</p><p>这个 <code>? :</code> 就是三目运算符的框架。</p><p>我们把以上并查集函数换成 <code>if()else</code> 来看一下。</p><figure class="highlight cpp"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line"><span class="type">int</span> f[<span class="number">114514</span>];</span><br><span class="line"><span class="function"><span class="type">int</span> <span class="title">F</span><span class="params">(<span class="type">int</span> x)</span></span></span><br><span class="line"><span class="function"></span>&#123;</span><br><span class="line">    <span class="keyword">if</span>(f[x]==x)<span class="keyword">return</span> x;</span><br><span class="line">    <span class="keyword">else</span> <span class="keyword">return</span> f[x]=<span class="built_in">F</span>(f[x]);</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure><p><del>所以，三目运算符压代码很强。</del></p><p>三目运算符还常用于输出 <code>YES</code> 或 <code>NO</code> 之类的题目。</p><p>比如 <code>puts(flag?&quot;YES&quot;:&quot;NO&quot;)</code>，等同于 <code>if(flag)puts(&quot;YES&quot;);else puts(&quot;NO&quot;)</code>。</p><p>看完这篇讲解，你对三步运算符应该也有大概了解了。</p><p><del>快去板刷 ABC 的 A 题练练吧！</del></p>]]></content>
+        <content type="html"><![CDATA[<p>我的第一年 CSP，是2021年的 J 组。当时初赛结束，很多同学跟我对答案说，那个什么 <code>:</code> 什么 <code>?</code> 是啥玩意儿啊，压根看不懂。</p><p>于是，就有了这期讲解。所谓的”什么 <code>:</code> 什么 <code>?</code>“就是三目运算符。</p><p>三目运算符其实就是一个 <code>if(···)··· else ···</code>。</p><p>三目运算符使用格式一般为 <code>x?y:z</code>。</p><p>其中，$x$ 表示判断内容，如 <code>a==b</code> 这种。</p><p>$y$ 则表示 $x$ 为真时的操作，$z$ 则表示 $x$ 为假时的操作。</p><p>也就是说，<code>x?y:z</code> 在功能上等价于 <code>if(x)y;else z;</code>。</p><p>像并查集，就可以这样子完成。</p><figure class="highlight cpp"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"><span class="type">int</span> f[<span class="number">114514</span>];</span><br><span class="line"><span class="function"><span class="type">int</span> <span class="title">F</span><span class="params">(<span class="type">int</span> x)</span></span></span><br><span class="line"><span class="function"></span>&#123;</span><br><span class="line">    <span class="keyword">return</span> f[x]==x?x:f[x]=<span class="built_in">F</span>(f[x]);</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure><p>那么这个 <code>F</code> 函数就是查找老大，如果 $x$ 的老大是自己，对应函数中 <code>f[x]==x</code>，返回自己，对应函数中 <code>x</code>，否则的话自己的老大变成递归下去查找的结果，并返回，对应函数中 <code>f[x]=F(f[x])</code>。</p><p>这个 <code>? :</code> 就是三目运算符的框架。</p><p>我们把以上并查集函数换成 <code>if()else</code> 来看一下。</p><figure class="highlight cpp"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line"><span class="type">int</span> f[<span class="number">114514</span>];</span><br><span class="line"><span class="function"><span class="type">int</span> <span class="title">F</span><span class="params">(<span class="type">int</span> x)</span></span></span><br><span class="line"><span class="function"></span>&#123;</span><br><span class="line">    <span class="keyword">if</span>(f[x]==x)<span class="keyword">return</span> x;</span><br><span class="line">    <span class="keyword">else</span> <span class="keyword">return</span> f[x]=<span class="built_in">F</span>(f[x]);</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure><p><del>所以，三目运算符压代码很强。</del></p><p>三目运算符还常用于输出 <code>YES</code> 或 <code>NO</code> 之类的题目。</p><p>比如 <code>puts(flag?&quot;YES&quot;:&quot;NO&quot;)</code>，等同于 <code>if(flag)puts(&quot;YES&quot;);else puts(&quot;NO&quot;)</code>。</p><p>看完这篇讲解，你对三步运算符应该也有大概了解了。</p><p><del>快去板刷 ABC 的 A 题练练吧！</del></p>]]></content>
       
       
       <categories>

@@ -4,19 +4,22 @@
 <head>
 	<script type="text/javascript" src="/assets/js/click-live.js"></script>
 	
-	<title>标签 : Python - chenyuxuan__2009的博客</title>
+	<title>freopen讲解 - chenyuxuan__2009的博客</title>
 	<meta charset="utf-8">
 	
 		<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=5">
 	
-	<meta name="description" content="CYX 用来放博客文章的网站">
-<meta property="og:type" content="website">
-<meta property="og:title" content="chenyuxuan__2009的博客">
-<meta property="og:url" content="https://chenyuxuan2009.github.io/tags/Python/index.html">
+	<meta name="description" content="2022年3月24日，我在洛谷灌水区不务正业劳逸结合时，正值 2022 NOI Online 考试前 $2$ 天，有人在灌水区问 freopen 的用法，我就来说一下。 其实文件读入不一定用 freopen，其他的都可以，只是 freopen 最常用而已。 freopen 分读入和输出，读入一般是 freopen(&quot;读入文件名&quot;,&quot;r&quot;,stdin);。 读">
+<meta property="og:type" content="article">
+<meta property="og:title" content="freopen讲解">
+<meta property="og:url" content="https://chenyuxuan2009.github.io/2022/03/24/freopen%E8%AE%B2%E8%A7%A3/index.html">
 <meta property="og:site_name" content="chenyuxuan__2009的博客">
-<meta property="og:description" content="CYX 用来放博客文章的网站">
+<meta property="og:description" content="2022年3月24日，我在洛谷灌水区不务正业劳逸结合时，正值 2022 NOI Online 考试前 $2$ 天，有人在灌水区问 freopen 的用法，我就来说一下。 其实文件读入不一定用 freopen，其他的都可以，只是 freopen 最常用而已。 freopen 分读入和输出，读入一般是 freopen(&quot;读入文件名&quot;,&quot;r&quot;,stdin);。 读">
 <meta property="og:locale" content="zh_CN">
+<meta property="article:published_time" content="2022-03-24T06:49:44.392Z">
+<meta property="article:modified_time" content="2022-03-24T06:49:44.393Z">
 <meta property="article:author" content="CYX">
+<meta property="article:tag" content="C++">
 <meta name="twitter:card" content="summary">
 
 	<meta name="theme-color" content="#5e72e4">
@@ -455,20 +458,6 @@
 
 <div class="page-information-card-container">
 	
-		
-<div class="page-information-card card bg-gradient-secondary shadow-lg border-0">
-	<div class="card-body">
-		<h3 class="text-black">标签 : Python </h3>
-		
-			<p class="text-black mt-3 mb-0 opacity-8">
-				<i class="fa fa-file-o mr-1"></i>
-				1 篇文章
-			</p>
-		
-	</div>
-</div>
-
-	
 </div>
 
 <div id="sidebar_mask"></div>
@@ -495,18 +484,39 @@
 		<div id="leftbar_part2" class="widget widget_search card bg-white shadow-sm border-0">
 			<div id="leftbar_part2_inner" class="card-body">
 				
-				<div class="nav-wrapper" style="padding-top: 5px; display:none; ">
+				<div class="nav-wrapper" style="padding-top: 5px;">
 	                <ul class="nav nav-pills nav-fill" role="tablist">
 						
+							<li class="nav-item sidebar-tab-switcher">
+								<a class="active show" id="leftbar_tab_catalog_btn" data-toggle="tab" href="#leftbar_tab_catalog" role="tab" aria-controls="leftbar_tab_catalog" no-pjax>文章目录</a>
+							</li>
+						
 						<li class="nav-item sidebar-tab-switcher">
-							<a class="active show" id="leftbar_tab_overview_btn" data-toggle="tab" href="#leftbar_tab_overview" role="tab" aria-controls="leftbar_tab_overview" no-pjax>站点概览</a>
+							<a class="" id="leftbar_tab_overview_btn" data-toggle="tab" href="#leftbar_tab_overview" role="tab" aria-controls="leftbar_tab_overview" no-pjax>站点概览</a>
 						</li>
 	                </ul>
 				</div>
 				<div>
 					<div class="tab-content" style="padding: 10px 10px 0 10px;">
 						
-						<div class="tab-pane fade text-center active show" id="leftbar_tab_overview" role="tabpanel" aria-labelledby="leftbar_tab_overview_btn">
+							<div class="tab-pane fade active show" id="leftbar_tab_catalog" role="tabpanel" aria-labelledby="leftbar_tab_catalog_btn">
+								<div id="leftbar_catalog"></div>
+								<script type="text/javascript">
+									$(function () {
+										$(document).headIndex({
+											articleWrapSelector: '#post_content',
+											indexBoxSelector: '#leftbar_catalog',
+											subItemBoxClass: "index-subItem-box",
+											itemClass: "index-item",
+											linkClass: "index-link",
+											offset: 80,
+										});
+									})
+								</script>
+								
+							</div>
+						
+						<div class="tab-pane fade text-center" id="leftbar_tab_overview" role="tabpanel" aria-labelledby="leftbar_tab_overview_btn">
 							<img id="leftbar_overview_author_image" src="/assets/img/favicon.ico" class="img-fluid rounded-circle shadow-sm" style="width: 100px;" alt="avatar">
 							<h6 id="leftbar_overview_author_name">CYX</h6>
 							<nav class="site-state">
@@ -596,19 +606,17 @@
 	<main id="main" class="site-main" role="main">
 		
 		
-		
-		
 			
-	<article class="post card bg-white shadow-sm border-0 post-preview">
+	<article class="post post-full card bg-white shadow-sm border-0 post-preview">
 	<header class="post-header text-center">
 		
-		<a class="post-title" href="/2022/03/22/CF1555A/">CF1555A 	PizzaForces</a>
+		<a class="post-title" href="/2022/03/24/freopen%E8%AE%B2%E8%A7%A3/">freopen讲解</a>
 		<div class="post-meta">
 			
 						
 						<div class="post-meta-detail post-meta-detail-time">
 							<i class="fa fa-clock-o" aria-hidden="true"></i>
-							<time title="发布于 2022-3-22 20:38:59 | 编辑于 2022-3-23 18:31:10">2022-3-22 20:38
+							<time title="发布于 2022-3-24 14:49:44 | 编辑于 2022-3-24 14:49:44">2022-3-24 14:49
 							</time>
 						</div>
 					
@@ -617,14 +625,14 @@
 						
 						<div class="post-meta-detail post-meta-detail-categories">
 							<i class="fa fa-bookmark-o" aria-hidden="true"></i>
-							<a class="post-meta-detail-catagory-link" href="/categories/%E9%A2%98%E8%A7%A3/">题解</a>
+							<a class="post-meta-detail-catagory-link" href="/categories/%E8%AE%B2%E8%A7%A3/">讲解</a>
 						</div>
 					
 						
 							<div class="post-meta-devide">|</div>
 						
 						<div class="post-meta-detail post-meta-detail-words">
-							<i class="fa fa-book" aria-hidden="true"></i>
+							<i class="fa fa fa-book" aria-hidden="true"></i>
 							<span id="busuanzi_container_page_pv">
 								阅读<span id="busuanzi_value_page_pv"></span>次
 							</span>
@@ -635,7 +643,7 @@
 						
 						<div class="post-meta-detail post-meta-detail-words">
 							<i class="fa fa-file-word-o" aria-hidden="true"></i>
-							308 字
+							299 字
 						</div>
 					
 						
@@ -650,31 +658,172 @@
 		
 	</header>
 
-	<div class="post-content">
-		
-			
-				题目传送：
-洛谷；  
-CodeForces。  题目分析：这题有 $3$ 大要点：  
-平均价一样 $2.5$ 分钟，只需满足尽量披萨数与人数差尽量小。  
-$6,8,10$ 可以凑出所有大于等于 $6$ 的偶数。转化一下：$3,4,5$ 可以凑出所有大于等于 $3$ 的整数，因为 $3,4$ 凑不出的最大数为 $5$，具体见洛谷 P3951。 ...
-			
-		
+	<div class="post-content" id="post_content">
+		<p>2022年3月24日，我在洛谷灌水区<del>不务正业</del>劳逸结合时，正值 2022 NOI Online 考试前 $2$ 天，有人在灌水区问 <code>freopen</code> 的用法，我就来说一下。</p>
+<p>其实文件读入不一定用 <code>freopen</code>，其他的都可以，只是 <code>freopen</code> 最常用而已。</p>
+<p><code>freopen</code> 分读入和输出，读入一般是 <code>freopen(&quot;读入文件名&quot;,&quot;r&quot;,stdin);</code>。</p>
+<p>读入文件名一般都是 <code>xxx.in</code>，题目会给，不用管。<code>&quot;r&quot;</code> 很关键，$\tt r$ 是指 $\tt read$，读。</p>
+<p> 输出一般是 <code>freopen(&quot;输出文件名&quot;,&quot;w&quot;,stdout);</code>。</p>
+<p>读入文件名一般都是 <code>xxx.out</code>，和读入一样，题目会给。<code>&quot;w&quot;</code> 也很关键，$\tt w$ 是指 $\tt write$，写。</p>
+<p>一定一定要看清你的 <code>&quot;r&quot;</code> 和 <code>stdin</code> 以及 <code>&quot;w&quot;</code> 和 <code>stdout</code> 是不是在同一行。</p>
+<p>插个题外话，我因为复制读入的 <code>freopen</code> 而没给 <code>stdout</code>，在第一次使用文件读入时，模拟赛差点抱灵。 幸好我打代码打得快，瞎写几个读入文件检查时检查出来了。</p>
+<p><code>freopen</code> 也不一定非要在考试时才使用，自己编游戏，用文件存档也是个不错的选择。</p>
+
 	</div>
+
+	
+
+	
 
 	
 		<div class="post-tags">
 			<i class="fa fa-tags" aria-hidden="true"></i>
-			<a class="tag badge badge-secondary post-meta-detail-tag -none-link" href="/tags/C/" rel="tag">C++</a><a class="tag badge badge-secondary post-meta-detail-tag -none-link" href="/tags/Codeforces/" rel="tag">Codeforces</a><a class="tag badge badge-secondary post-meta-detail-tag -none-link" href="/tags/Python/" rel="tag">Python</a>
+			<a class="tag badge badge-secondary post-meta-detail-tag -none-link" href="/tags/C/" rel="tag">C++</a>
 		</div>
 	
 </article>
 
+	<div id="share_container">
+	<div id="share" data-initialized="true">
+		<a class="no-pjax icon-wechat" tooltip="分享到微信">
+			<button class="btn btn-icon btn-success">
+				<span class="btn-inner--icon"><i class="fa fa-weixin"></i></span>
+			</button>
+		</a>
+		<a target="_blank" class="no-pjax icon-douban" tooltip="分享到豆瓣">
+			<button class="btn btn-icon btn-primary" style="background: #209261;border: none;">
+				豆
+			</button>
+		</a>
+		<a target="_blank" class="no-pjax icon-qq" tooltip="分享到 QQ">
+			<button class="btn btn-icon btn-primary" style="background: #2196f3;border: none;">
+				<span class="btn-inner--icon"><i class="fa fa-qq"></i></span>
+			</button>
+		</a>
+		<a target="_blank" class="no-pjax icon-qzone" tooltip="分享到 QQ 空间">
+			<button class="btn btn-icon btn-primary" style="background: #ffc107;border: none;">
+				<span class="btn-inner--icon"><i class="fa fa-star"></i></span>
+			</button>
+		</a>
+		<a target="_blank" class="no-pjax icon-weibo" tooltip="分享到微博">
+			<button class="btn btn-icon btn-warning">
+				<span class="btn-inner--icon"><i class="fa fa-weibo"></i></span>
+			</button>
+		</a>
+		<a target="_blank" class="no-pjax icon-facebook" tooltip="分享到 Facebook">
+			<button class="btn btn-icon btn-primary" style="background: #283593;border: none;">
+				<span class="btn-inner--icon"><i class="fa fa-facebook"></i></span>
+			</button>
+		</a>
+		<a target="_blank" class="no-pjax icon-twitter" tooltip="分享到 Twitter">
+			<button class="btn btn-icon btn-primary" style="background: #03a9f4;border: none;">
+				<span class="btn-inner--icon"><i class="fa fa-twitter"></i></span>
+			</button>
+		</a>
+		<a target="_blank" class="no-pjax icon-telegram" href="https://telegram.me/share/url?url=https://chenyuxuan2009.github.io/2022/03/24/freopen%E8%AE%B2%E8%A7%A3/&text=freopen讲解" tooltip="分享到 Telegram">
+			<button class="btn btn-icon btn-primary" style="background: #42a5f5;border: none;">
+				<span class="btn-inner--icon"><i class="fa fa-telegram"></i></span>
+			</button>
+		</a>
+		<a target="_blank" class="no-pjax icon-copy-link" id="share_copy_link" tooltip="复制链接">
+			<button class="btn btn-icon btn-default">
+				<span class="btn-inner--icon"><i class="fa fa-link"></i></span>
+			</button>
+		</a>
+	</div>
+	<button id="share_show" class="btn btn-icon btn-primary" tooltip="分享">
+		<span class="btn-inner--icon"><i class="fa fa-share"></i></span>
+	</button>
+</div>
+<script type="text/javascript">
+	socialShare("#share", {
+	    title : 'freopen讲解',
+	    description : '2022年3月24日，我在洛谷灌水区不务正业劳逸结合时，正值 2022 NOI Online 考试前...',
+	    wechatQrcodeTitle : "分享到微信",
+	    wechatQrcodeHelper : '微信扫描二维码',
+	    source : 'https://chenyuxuan2009.github.io/2022/03/24/freopen%E8%AE%B2%E8%A7%A3/'
+	});
+	$("#share_show")[0].onclick = function(){
+		$("#share_container").addClass("opened");
+	};
+	$("#share_copy_link")[0].onclick = function(){
+		let input = document.createElement('input');
+		document.body.appendChild(input);
+		input.setAttribute("value", window.location.href);
+		input.setAttribute("readonly", "readonly");
+		input.setAttribute("style", "opacity: 0;mouse-events:none;");
+		input.select();
+		if (document.execCommand('copy')){
+			iziToast.show({
+				title: '链接已复制',
+				message: "链接已复制到剪贴板",
+				class: 'shadow',
+				position: 'topRight',
+				backgroundColor: '#2dce89',
+				titleColor: '#ffffff',
+				messageColor: '#ffffff',
+				iconColor: '#ffffff',
+				progressBarColor: '#ffffff',
+				icon: 'fa fa-check',
+				timeout: 5000
+			});
+		}else{
+			iziToast.show({
+				title: '复制失败',
+				message: "请手动复制链接",
+				class: 'shadow',
+				position: 'topRight',
+				backgroundColor: '#f5365c',
+				titleColor: '#ffffff',
+				messageColor: '#ffffff',
+				iconColor: '#ffffff',
+				progressBarColor: '#ffffff',
+				icon: 'fa fa-close',
+				timeout: 5000
+			});
+		}
+		document.body.removeChild(input);
+	};
+</script>
 
 
 
+	<div id="post_comment" class="card shadow-sm">
+		<div id="giscus"></div>
+<script src="https://giscus.app/client.js"
+        data-repo="chenyuxuan2009/blogtalk"
+        data-repo-id="R_kgDOHDKqeg"
+        data-category="General"
+        data-category-id="DIC_kwDOHDKqes4COOnc"
+        data-mapping="pathname"
+        data-input-position="top"
+        data-theme="light"
+        data-lang="zh-CN"
+        crossorigin="anonymous"
+        async>
+</script>
+
+	</div>
 
 
+
+<div class="post-navigation card shadow-sm"><div class="post-navigation-item post-navigation-pre"></div><div class="post-navigation-item post-navigation-next"><span class="page-navigation-extra-text">下一篇 <i class="fa fa-arrow-circle-o-right" aria-hidden="true"></i></span><a href="/2022/03/23/top/" rel="next"> 【置顶】公告</a></div></div>
+
+
+
+<script type="text/javascript" src="/assets/codeBlock/codeBlockFuction.js"></script>
+<!-- 代码语言 -->
+<script type="text/javascript" src="/assets/codeBlock/codeLang.js"></script>
+<!-- 代码块复制 -->
+<script type="text/javascript" src="/assets/codeBlock/codeCopy.js"></script>
+<script type="text/javascript" src="/assets/codeBlock/clipboard.min.js"></script>
+<!-- 代码块收缩 -->
+<script type="text/javascript" src="/assets/codeBlock/codeShrink.js"></script> 
+<!-- 代码块折行 -->
+<style type="text/css">code[class*="language-"], pre[class*="language-"] { white-space: pre !important; }</style>
+
+		
+		
 		
 		
 
