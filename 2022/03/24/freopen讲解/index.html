@@ -17,7 +17,7 @@
 <meta property="og:description" content="2022年3月24日，我在洛谷灌水区不务正业劳逸结合时，正值 2022 NOI Online 考试前 $2$ 天，有人在灌水区问 freopen 的用法，我就来说一下。 其实文件读入不一定用 freopen，其他的都可以，只是 freopen 最常用而已。 freopen 分读入和输出，读入一般是 freopen(&quot;读入文件名&quot;,&quot;r&quot;,stdin);。 读">
 <meta property="og:locale" content="zh_CN">
 <meta property="article:published_time" content="2022-03-24T06:49:44.392Z">
-<meta property="article:modified_time" content="2022-03-24T06:49:44.393Z">
+<meta property="article:modified_time" content="2022-03-24T07:03:01.875Z">
 <meta property="article:author" content="CYX">
 <meta property="article:tag" content="C++">
 <meta name="twitter:card" content="summary">
@@ -616,7 +616,7 @@
 						
 						<div class="post-meta-detail post-meta-detail-time">
 							<i class="fa fa-clock-o" aria-hidden="true"></i>
-							<time title="发布于 2022-3-24 14:49:44 | 编辑于 2022-3-24 14:49:44">2022-3-24 14:49
+							<time title="发布于 2022-3-24 14:49:44 | 编辑于 2022-3-24 15:03:01">2022-3-24 14:49
 							</time>
 						</div>
 					
@@ -643,7 +643,7 @@
 						
 						<div class="post-meta-detail post-meta-detail-words">
 							<i class="fa fa-file-word-o" aria-hidden="true"></i>
-							299 字
+							384 字
 						</div>
 					
 						
@@ -668,6 +668,10 @@
 <p>一定一定要看清你的 <code>&quot;r&quot;</code> 和 <code>stdin</code> 以及 <code>&quot;w&quot;</code> 和 <code>stdout</code> 是不是在同一行。</p>
 <p>插个题外话，我因为复制读入的 <code>freopen</code> 而没给 <code>stdout</code>，在第一次使用文件读入时，模拟赛差点抱灵。 幸好我打代码打得快，瞎写几个读入文件检查时检查出来了。</p>
 <p><code>freopen</code> 也不一定非要在考试时才使用，自己编游戏，用文件存档也是个不错的选择。</p>
+<p>文件读入输出的 A+B Problem 这样写：</p>
+<figure class="highlight cpp"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">#<span class="keyword">include</span><span class="string">&lt;bits/stdc++.h&gt;</span></span></span><br><span class="line"><span class="keyword">using</span> <span class="keyword">namespace</span> std;</span><br><span class="line"><span class="function"><span class="type">int</span> <span class="title">main</span><span class="params">()</span></span></span><br><span class="line"><span class="function"></span>&#123;</span><br><span class="line">    <span class="built_in">freopen</span>(<span class="string">&quot;example.in&quot;</span>,<span class="string">&quot;r&quot;</span>,stdin);</span><br><span class="line">    <span class="built_in">freopen</span>(<span class="string">&quot;example.out&quot;</span>,<span class="string">&quot;w&quot;</span>,stdout);</span><br><span class="line">    <span class="type">int</span> a,b;</span><br><span class="line">    cin&gt;&gt;a&gt;&gt;b;</span><br><span class="line">    cout&lt;&lt;a+b&lt;&lt;endl;</span><br><span class="line">    <span class="keyword">return</span> <span class="number">0</span>;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<p>开头加两行代码就行，后面就是正常写代码就好。</p>
 
 	</div>
 
