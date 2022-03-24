@@ -1,0 +1,120 @@
+/* ==============
+    Anton
+ ============== */
+
+@font-face {
+  font-family: Anton;
+  src: url(../font/Anton-Regular.ttf);
+}
+
+/* ==============
+    Montserrat
+ ============== */
+
+@font-face {
+  font-family: Montserrat-Regular;
+  src: url(../font/Montserrat-Regular.ttf);
+}
+
+@font-face {
+  font-family: Montserrat-Medium;
+  src: url(../font/Montserrat-Medium.ttf);
+}
+
+@font-face {
+  font-family: Montserrat-Bold;
+  src: url(../font/Montserrat-Bold.ttf);
+}
+
+/* ==============
+    Oswald
+ ============== */
+
+@font-face {
+  font-family: Oswald;
+  src: url(../font/Oswald-VariableFont_wght.ttf);
+}
+
+/* ==============
+    Signika Negative
+ ============== */
+
+@font-face {
+  font-family: Signika-light;
+  src: url(../font/SignikaNegative-Light.ttf);
+}
+
+@font-face {
+  font-family: Signika-regular;
+  src: url(../font/SignikaNegative-Regular.ttf);
+}
+
+@font-face {
+  font-family: Signika-Semibold;
+  src: url(../font/SignikaNegative-SemiBold.ttf);
+}
+
+@font-face {
+  font-family: Signika-Bold;
+  src: url(../font/SignikaNegative-Bold.ttf);
+}
+
+/* ==============
+    Source Sans Pro
+ ============== */
+
+@font-face {
+  font-family: Source-Sans-light;
+  src: url(../font/SourceSansPro-Light.ttf);
+}
+
+@font-face {
+  font-family: Source-Sans-Regular;
+  src: url(../font/SourceSansPro-Regular.ttf);
+}
+
+@font-face {
+  font-family: Source-Sans-Semibold;
+  src: url(../font/SourceSansPro-SemiBold.ttf);
+}
+
+@font-face {
+  font-family: Source-Sans-Bold;
+  src: url(../font/SourceSansPro-Bold.ttf);
+}
+
+/* ==============
+    Titillium Web
+ ============== */
+
+ @font-face {
+  font-family: TitilliumWeb-Light;
+  src: url(../font/TitilliumWeb-Light.ttf);
+}
+
+@font-face {
+  font-family: TitilliumWeb-Regular;
+  src: url(../font/TitilliumWeb-Regular.ttf);
+}
+
+@font-face {
+  font-family: TitilliumWeb-Semibold;
+  src: url(../font/TitilliumWeb-SemiBold.ttf);
+}
+
+@font-face {
+  font-family: TitilliumWeb-Bold;
+  src: url(../font/TitilliumWeb-Bold.ttf);
+}
+
+
+
+
+
+
+
+
+
+
+
+
