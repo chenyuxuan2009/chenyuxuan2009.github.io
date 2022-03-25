@@ -671,7 +671,19 @@
 <p>也就是说，不用看整个字符串。</p>
 <p>那么我们少拿一个 0 或少拿一个 1，答案就更多了。</p>
 <p>所以，输出 0 的个数 -1。</p>
-<h3 id="题目代码"><a href="#题目代码" class="headerlink" title="题目代码"></a>题目代码</h3><figure class="highlight cpp"><table><tr><td class="code"><pre><code class="hljs cpp"><span class="hljs-function"><span class="hljs-type">void</span> <span class="hljs-title">solve</span><span class="hljs-params">()</span></span><br><span class="hljs-function"></span>&#123;<br>	string s;<br>	cin&gt;&gt;s;<br>	<span class="hljs-type">int</span> cnt0=<span class="hljs-number">0</span>,cnt1=<span class="hljs-number">0</span>;<br>	<span class="hljs-keyword">for</span>(<span class="hljs-type">int</span> i=<span class="hljs-number">0</span>;i&lt;s.<span class="hljs-built_in">size</span>();i++)<span class="hljs-comment">//记录01个数</span><br>	&#123;<br>		<span class="hljs-keyword">if</span>(s[i]==<span class="hljs-string">&#x27;1&#x27;</span>)cnt1++;<br>		<span class="hljs-keyword">else</span> cnt0++;<br>	&#125;<br>	<span class="hljs-keyword">if</span>(cnt0==cnt1)cout&lt;&lt;cnt0<span class="hljs-number">-1</span>&lt;&lt;endl;<span class="hljs-comment">//分类讨论</span><br>	<span class="hljs-keyword">else</span> cout&lt;&lt;<span class="hljs-built_in">min</span>(cnt0,cnt1)&lt;&lt;endl;<br>&#125;<br></code></pre></td></tr></table></figure>
+<h3 id="题目代码"><a href="#题目代码" class="headerlink" title="题目代码"></a>题目代码</h3><pre><code class="hljs cpp"><span class="hljs-function"><span class="hljs-type">void</span> <span class="hljs-title">solve</span><span class="hljs-params">()</span></span>
+<span class="hljs-function"></span>&#123;
+	string s;
+	cin&gt;&gt;s;
+	<span class="hljs-type">int</span> cnt0=<span class="hljs-number">0</span>,cnt1=<span class="hljs-number">0</span>;
+	<span class="hljs-keyword">for</span>(<span class="hljs-type">int</span> i=<span class="hljs-number">0</span>;i&lt;s.<span class="hljs-built_in">size</span>();i++)<span class="hljs-comment">//记录01个数</span>
+	&#123;
+		<span class="hljs-keyword">if</span>(s[i]==<span class="hljs-string">&#x27;1&#x27;</span>)cnt1++;
+		<span class="hljs-keyword">else</span> cnt0++;
+	&#125;
+	<span class="hljs-keyword">if</span>(cnt0==cnt1)cout&lt;&lt;cnt0<span class="hljs-number">-1</span>&lt;&lt;endl;<span class="hljs-comment">//分类讨论</span>
+	<span class="hljs-keyword">else</span> cout&lt;&lt;<span class="hljs-built_in">min</span>(cnt0,cnt1)&lt;&lt;endl;
+&#125;</code></pre>
 
 <p>多组数据，代码未全。请勿copy，当心踩坑！</p>
 

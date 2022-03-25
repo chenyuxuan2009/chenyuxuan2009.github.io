@@ -672,7 +672,21 @@
 <p>$7$ $mod$ $2$ 不在数组 $a$ 中</p>
 <p>$8$ $mod$ $2$ 不在数组 $a$ 中</p>
 <p>贴代码：</p>
-<figure class="highlight cpp"><table><tr><td class="code"><pre><code class="hljs cpp"><span class="hljs-function"><span class="hljs-type">void</span> <span class="hljs-title">solve</span><span class="hljs-params">()</span></span><br><span class="hljs-function"></span>&#123;<br>	<span class="hljs-type">int</span> n;<br>	cin&gt;&gt;n;<br>	<span class="hljs-type">int</span> a[n];<br>	<span class="hljs-keyword">for</span>(<span class="hljs-type">int</span> i=<span class="hljs-number">0</span>;i&lt;n;i++) <br>	&#123;<br>		cin&gt;&gt;a[i];<br>	&#125;<br>	<span class="hljs-built_in">sort</span>(a,a+n);<br>	<span class="hljs-keyword">for</span>(<span class="hljs-type">int</span> i=<span class="hljs-number">0</span>;i&lt;n/<span class="hljs-number">2</span>;i++)<span class="hljs-comment">//n/2组数据即可 </span><br>	&#123;<br>		cout&lt;&lt;a[n-i<span class="hljs-number">-1</span>]&lt;&lt;<span class="hljs-string">&quot; &quot;</span>&lt;&lt;a[<span class="hljs-number">0</span>]&lt;&lt;endl;<span class="hljs-comment">//分别输出x与y,注意顺序，必须x在前y在后 </span><br>	&#125;<br>&#125;<br></code></pre></td></tr></table></figure>
+<pre><code class="hljs cpp"><span class="hljs-function"><span class="hljs-type">void</span> <span class="hljs-title">solve</span><span class="hljs-params">()</span></span>
+<span class="hljs-function"></span>&#123;
+	<span class="hljs-type">int</span> n;
+	cin&gt;&gt;n;
+	<span class="hljs-type">int</span> a[n];
+	<span class="hljs-keyword">for</span>(<span class="hljs-type">int</span> i=<span class="hljs-number">0</span>;i&lt;n;i++) 
+	&#123;
+		cin&gt;&gt;a[i];
+	&#125;
+	<span class="hljs-built_in">sort</span>(a,a+n);
+	<span class="hljs-keyword">for</span>(<span class="hljs-type">int</span> i=<span class="hljs-number">0</span>;i&lt;n/<span class="hljs-number">2</span>;i++)<span class="hljs-comment">//n/2组数据即可 </span>
+	&#123;
+		cout&lt;&lt;a[n-i<span class="hljs-number">-1</span>]&lt;&lt;<span class="hljs-string">&quot; &quot;</span>&lt;&lt;a[<span class="hljs-number">0</span>]&lt;&lt;endl;<span class="hljs-comment">//分别输出x与y,注意顺序，必须x在前y在后 </span>
+	&#125;
+&#125;</code></pre>
 <p>多组数据，代码未全，当心踩坑</p>
 
 	</div>

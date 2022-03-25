@@ -669,7 +669,17 @@
 <p>插个题外话，我因为复制读入的 <code>freopen</code> 而没改 <code>stdout</code>，在第一次使用文件读入时，模拟赛差点抱灵。 幸好我打代码打得快，瞎写几个读入文件检查时检查出来了。</p>
 <p><code>freopen</code> 也不一定非要在考试时才使用，自己编游戏，用文件存档也是个不错的选择。</p>
 <p>文件读入输出的 A+B Problem 这样写：</p>
-<figure class="highlight cpp"><table><tr><td class="code"><pre><code class="hljs cpp"><span class="hljs-meta">#<span class="hljs-keyword">include</span><span class="hljs-string">&lt;bits/stdc++.h&gt;</span></span><br><span class="hljs-keyword">using</span> <span class="hljs-keyword">namespace</span> std;<br><span class="hljs-function"><span class="hljs-type">int</span> <span class="hljs-title">main</span><span class="hljs-params">()</span></span><br><span class="hljs-function"></span>&#123;<br>    <span class="hljs-built_in">freopen</span>(<span class="hljs-string">&quot;example.in&quot;</span>,<span class="hljs-string">&quot;r&quot;</span>,stdin);<br>    <span class="hljs-built_in">freopen</span>(<span class="hljs-string">&quot;example.out&quot;</span>,<span class="hljs-string">&quot;w&quot;</span>,stdout);<br>    <span class="hljs-type">int</span> a,b;<br>    cin&gt;&gt;a&gt;&gt;b;<br>    cout&lt;&lt;a+b&lt;&lt;endl;<br>    <span class="hljs-keyword">return</span> <span class="hljs-number">0</span>;<br>&#125;<br></code></pre></td></tr></table></figure>
+<pre><code class="hljs cpp"><span class="hljs-meta">#<span class="hljs-keyword">include</span><span class="hljs-string">&lt;bits/stdc++.h&gt;</span></span>
+<span class="hljs-keyword">using</span> <span class="hljs-keyword">namespace</span> std;
+<span class="hljs-function"><span class="hljs-type">int</span> <span class="hljs-title">main</span><span class="hljs-params">()</span></span>
+<span class="hljs-function"></span>&#123;
+    <span class="hljs-built_in">freopen</span>(<span class="hljs-string">&quot;example.in&quot;</span>,<span class="hljs-string">&quot;r&quot;</span>,stdin);
+    <span class="hljs-built_in">freopen</span>(<span class="hljs-string">&quot;example.out&quot;</span>,<span class="hljs-string">&quot;w&quot;</span>,stdout);
+    <span class="hljs-type">int</span> a,b;
+    cin&gt;&gt;a&gt;&gt;b;
+    cout&lt;&lt;a+b&lt;&lt;endl;
+    <span class="hljs-keyword">return</span> <span class="hljs-number">0</span>;
+&#125;</code></pre>
 
 <p>开头加两行代码就行，后面就是正常写代码就好。</p>
 
