@@ -4,23 +4,22 @@
 <head>
 	<script type="text/javascript" src="/assets/js/click-live.js"></script>
 	
-	<title>CF17 FINAL A | AT3602 AKIBA - chenyuxuan__2009的博客</title>
+	<title>【置顶】我的码风 - chenyuxuan__2009的博客</title>
 	<meta charset="utf-8">
 	
 		<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=5">
 	
-	<meta name="description" content="题目翻译输入一个字符串，可不可以在任意一位插入 $\tt A$，使这个字符串变为 AKIHABARA。 题目思路AKIHABARA 中只出现了 $4$ 次 $\tt A$ ，所以，我们枚举所有可能，每个位置都可以有 选 或 不选 两种可能，所以一共只有 $2^4$ 种可能，十分少。 我们只要分别枚举 没有 $\tt A$、一个 $\tt A$、两个 $\tt A$、三个 $\tt A$、四个 $\">
+	<meta name="description" content="缺省源12345678910111213141516171819202122232425262728293031323334353637#include&lt;iostream&gt;#include&lt;algorithm&gt;#include&lt;cstring&gt;#include&lt;cstdio&gt;#include&lt;cmath&gt;#include&lt;climi">
 <meta property="og:type" content="article">
-<meta property="og:title" content="CF17 FINAL A | AT3602 AKIBA">
-<meta property="og:url" content="https://chenyuxuan2009.github.io/2022/03/22/cf17_final_a/index.html">
+<meta property="og:title" content="【置顶】我的码风">
+<meta property="og:url" content="https://chenyuxuan2009.github.io/2022/03/25/code/index.html">
 <meta property="og:site_name" content="chenyuxuan__2009的博客">
-<meta property="og:description" content="题目翻译输入一个字符串，可不可以在任意一位插入 $\tt A$，使这个字符串变为 AKIHABARA。 题目思路AKIHABARA 中只出现了 $4$ 次 $\tt A$ ，所以，我们枚举所有可能，每个位置都可以有 选 或 不选 两种可能，所以一共只有 $2^4$ 种可能，十分少。 我们只要分别枚举 没有 $\tt A$、一个 $\tt A$、两个 $\tt A$、三个 $\tt A$、四个 $\">
+<meta property="og:description" content="缺省源12345678910111213141516171819202122232425262728293031323334353637#include&lt;iostream&gt;#include&lt;algorithm&gt;#include&lt;cstring&gt;#include&lt;cstdio&gt;#include&lt;cmath&gt;#include&lt;climi">
 <meta property="og:locale" content="zh_CN">
-<meta property="article:published_time" content="2022-03-22T12:38:59.502Z">
-<meta property="article:modified_time" content="2022-03-23T09:34:36.149Z">
+<meta property="article:published_time" content="2022-03-25T10:49:51.824Z">
+<meta property="article:modified_time" content="2022-03-25T10:51:10.521Z">
 <meta property="article:author" content="CYX">
 <meta property="article:tag" content="C++">
-<meta property="article:tag" content="Atcoder">
 <meta name="twitter:card" content="summary">
 
 	<meta name="theme-color" content="#5e72e4">
@@ -611,22 +610,14 @@
 	<article class="post post-full card bg-white shadow-sm border-0 post-preview">
 	<header class="post-header text-center">
 		
-		<a class="post-title" href="/2022/03/22/cf17_final_a/">CF17 FINAL A | AT3602 AKIBA</a>
+		<a class="post-title" href="/2022/03/25/code/">【置顶】我的码风</a>
 		<div class="post-meta">
 			
 						
 						<div class="post-meta-detail post-meta-detail-time">
 							<i class="fa fa-clock-o" aria-hidden="true"></i>
-							<time title="发布于 2022-3-22 20:38:59 | 编辑于 2022-3-23 17:34:36">2022-3-22 20:38
+							<time title="发布于 2022-3-25 18:49:51 | 编辑于 2022-3-25 18:51:10">2022-3-25 18:49
 							</time>
-						</div>
-					
-						
-							<div class="post-meta-devide">|</div>
-						
-						<div class="post-meta-detail post-meta-detail-categories">
-							<i class="fa fa-bookmark-o" aria-hidden="true"></i>
-							<a class="post-meta-detail-catagory-link" href="/categories/%E9%A2%98%E8%A7%A3/">题解</a>
 						</div>
 					
 						
@@ -644,7 +635,7 @@
 						
 						<div class="post-meta-detail post-meta-detail-words">
 							<i class="fa fa-file-word-o" aria-hidden="true"></i>
-							351 字
+							621 字
 						</div>
 					
 						
@@ -652,7 +643,7 @@
 						
 						<div class="post-meta-detail post-meta-detail-readingtime">
 							<i class="fa fa-hourglass-end" aria-hidden="true"></i>
-							1 分钟
+							3 分钟
 						</div>
 					
 		</div>
@@ -660,11 +651,54 @@
 	</header>
 
 	<div class="post-content" id="post_content">
-		<h3 id="题目翻译"><a href="#题目翻译" class="headerlink" title="题目翻译"></a>题目翻译</h3><p>输入一个字符串，可不可以在任意一位插入 $\tt A$，使这个字符串变为 <code>AKIHABARA</code>。</p>
-<h3 id="题目思路"><a href="#题目思路" class="headerlink" title="题目思路"></a>题目思路</h3><p><code>AKIHABARA</code> 中只出现了 $4$ 次 $\tt A$ ，所以，我们枚举所有可能，每个位置都可以有 <em>选</em> 或 <em>不选</em> 两种可能，所以一共只有 $2^4$ 种可能，十分少。</p>
-<p>我们只要分别枚举 没有 $\tt A$、一个 $\tt A$、两个 $\tt A$、三个 $\tt A$、四个 $\tt A$ 的情况即可。</p>
-<h3 id="题目代码"><a href="#题目代码" class="headerlink" title="题目代码"></a>题目代码</h3><figure class="highlight cpp"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br></pre></td><td class="code"><pre><code class="hljs cpp"><span class="hljs-comment">//没有 A</span><br><span class="hljs-keyword">if</span>(s==<span class="hljs-string">&quot;KIHBR&quot;</span>)&#123;<span class="hljs-built_in">puts</span>(<span class="hljs-string">&quot;YES&quot;</span>);<span class="hljs-keyword">return</span> <span class="hljs-number">0</span>;&#125;<br><span class="hljs-comment">//一个 A</span><br><span class="hljs-keyword">if</span>(s==<span class="hljs-string">&quot;AKIHBR&quot;</span>)&#123;<span class="hljs-built_in">puts</span>(<span class="hljs-string">&quot;YES&quot;</span>);<span class="hljs-keyword">return</span> <span class="hljs-number">0</span>;&#125;<br><span class="hljs-keyword">if</span>(s==<span class="hljs-string">&quot;KIHABR&quot;</span>)&#123;<span class="hljs-built_in">puts</span>(<span class="hljs-string">&quot;YES&quot;</span>);<span class="hljs-keyword">return</span> <span class="hljs-number">0</span>;&#125;<br><span class="hljs-keyword">if</span>(s==<span class="hljs-string">&quot;KIHBAR&quot;</span>)&#123;<span class="hljs-built_in">puts</span>(<span class="hljs-string">&quot;YES&quot;</span>);<span class="hljs-keyword">return</span> <span class="hljs-number">0</span>;&#125;<br><span class="hljs-keyword">if</span>(s==<span class="hljs-string">&quot;KIHBRA&quot;</span>)&#123;<span class="hljs-built_in">puts</span>(<span class="hljs-string">&quot;YES&quot;</span>);<span class="hljs-keyword">return</span> <span class="hljs-number">0</span>;&#125;<br><span class="hljs-comment">//两个 A</span><br><span class="hljs-keyword">if</span>(s==<span class="hljs-string">&quot;AKIHABR&quot;</span>)&#123;<span class="hljs-built_in">puts</span>(<span class="hljs-string">&quot;YES&quot;</span>);<span class="hljs-keyword">return</span> <span class="hljs-number">0</span>;&#125;<br><span class="hljs-keyword">if</span>(s==<span class="hljs-string">&quot;AKIHBAR&quot;</span>)&#123;<span class="hljs-built_in">puts</span>(<span class="hljs-string">&quot;YES&quot;</span>);<span class="hljs-keyword">return</span> <span class="hljs-number">0</span>;&#125;<br><span class="hljs-keyword">if</span>(s==<span class="hljs-string">&quot;AKIHBRA&quot;</span>)&#123;<span class="hljs-built_in">puts</span>(<span class="hljs-string">&quot;YES&quot;</span>);<span class="hljs-keyword">return</span> <span class="hljs-number">0</span>;&#125;<br><span class="hljs-keyword">if</span>(s==<span class="hljs-string">&quot;KIHABAR&quot;</span>)&#123;<span class="hljs-built_in">puts</span>(<span class="hljs-string">&quot;YES&quot;</span>);<span class="hljs-keyword">return</span> <span class="hljs-number">0</span>;&#125;<br><span class="hljs-keyword">if</span>(s==<span class="hljs-string">&quot;KIHABRA&quot;</span>)&#123;<span class="hljs-built_in">puts</span>(<span class="hljs-string">&quot;YES&quot;</span>);<span class="hljs-keyword">return</span> <span class="hljs-number">0</span>;&#125;<br><span class="hljs-keyword">if</span>(s==<span class="hljs-string">&quot;KIHBARA&quot;</span>)&#123;<span class="hljs-built_in">puts</span>(<span class="hljs-string">&quot;YES&quot;</span>);<span class="hljs-keyword">return</span> <span class="hljs-number">0</span>;&#125;<br><span class="hljs-comment">//三个 A</span><br><span class="hljs-keyword">if</span>(s==<span class="hljs-string">&quot;AKIHABAR&quot;</span>)&#123;<span class="hljs-built_in">puts</span>(<span class="hljs-string">&quot;YES&quot;</span>);<span class="hljs-keyword">return</span> <span class="hljs-number">0</span>;&#125;<br><span class="hljs-keyword">if</span>(s==<span class="hljs-string">&quot;AKIHABRA&quot;</span>)&#123;<span class="hljs-built_in">puts</span>(<span class="hljs-string">&quot;YES&quot;</span>);<span class="hljs-keyword">return</span> <span class="hljs-number">0</span>;&#125;<br><span class="hljs-keyword">if</span>(s==<span class="hljs-string">&quot;AKIHBARA&quot;</span>)&#123;<span class="hljs-built_in">puts</span>(<span class="hljs-string">&quot;YES&quot;</span>);<span class="hljs-keyword">return</span> <span class="hljs-number">0</span>;&#125;<br><span class="hljs-keyword">if</span>(s==<span class="hljs-string">&quot;KIHABARA&quot;</span>)&#123;<span class="hljs-built_in">puts</span>(<span class="hljs-string">&quot;YES&quot;</span>);<span class="hljs-keyword">return</span> <span class="hljs-number">0</span>;&#125;<br><span class="hljs-comment">//四个 A</span><br><span class="hljs-keyword">if</span>(s==<span class="hljs-string">&quot;AKIHABARA&quot;</span>)&#123;<span class="hljs-built_in">puts</span>(<span class="hljs-string">&quot;YES&quot;</span>);<span class="hljs-keyword">return</span> <span class="hljs-number">0</span>;&#125;<br><span class="hljs-comment">//都不满足</span><br><span class="hljs-built_in">puts</span>(<span class="hljs-string">&quot;NO&quot;</span>);<br></code></pre></td></tr></table></figure>
+		<h3 id="缺省源"><a href="#缺省源" class="headerlink" title="缺省源"></a>缺省源</h3><figure class="highlight cpp"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br></pre></td><td class="code"><pre><code class="hljs cpp"><span class="hljs-meta">#<span class="hljs-keyword">include</span><span class="hljs-string">&lt;iostream&gt;</span></span><br><span class="hljs-meta">#<span class="hljs-keyword">include</span><span class="hljs-string">&lt;algorithm&gt;</span></span><br><span class="hljs-meta">#<span class="hljs-keyword">include</span><span class="hljs-string">&lt;cstring&gt;</span></span><br><span class="hljs-meta">#<span class="hljs-keyword">include</span><span class="hljs-string">&lt;cstdio&gt;</span></span><br><span class="hljs-meta">#<span class="hljs-keyword">include</span><span class="hljs-string">&lt;cmath&gt;</span></span><br><span class="hljs-meta">#<span class="hljs-keyword">include</span><span class="hljs-string">&lt;climits&gt;</span></span><br><span class="hljs-keyword">typedef</span> <span class="hljs-type">long</span> <span class="hljs-type">long</span> ll;<br><span class="hljs-keyword">using</span> <span class="hljs-keyword">namespace</span> std;<br><span class="hljs-type">const</span> <span class="hljs-type">int</span> mod=<span class="hljs-number">998244353</span>;<br><span class="hljs-type">const</span> ll N=<span class="hljs-number">1e5</span>+<span class="hljs-number">5</span>;<br>string c=<span class="hljs-string">&quot;0123456789ABCDEF&quot;</span>;<br><span class="hljs-type">int</span> arr[<span class="hljs-number">200005</span>];<br><span class="hljs-function"><span class="hljs-type">int</span> <span class="hljs-title">read</span><span class="hljs-params">()</span></span>&#123;<span class="hljs-type">int</span> x=<span class="hljs-number">0</span>,f=<span class="hljs-number">1</span>;<span class="hljs-type">char</span> ch=<span class="hljs-built_in">getchar</span>();<span class="hljs-keyword">while</span>(ch&lt;<span class="hljs-string">&#x27;0&#x27;</span>||ch&gt;<span class="hljs-string">&#x27;9&#x27;</span>)&#123;<span class="hljs-keyword">if</span>(ch==<span class="hljs-string">&#x27;-&#x27;</span>)f=<span class="hljs-number">-1</span>;ch=<span class="hljs-built_in">getchar</span>();&#125;<span class="hljs-keyword">while</span>(ch&gt;=<span class="hljs-string">&#x27;0&#x27;</span>&amp;&amp;ch&lt;=<span class="hljs-string">&#x27;9&#x27;</span>)&#123;x=(x&lt;&lt;<span class="hljs-number">1</span>)+(x&lt;&lt;<span class="hljs-number">3</span>)+(ch^<span class="hljs-number">48</span>);ch=<span class="hljs-built_in">getchar</span>();&#125;<span class="hljs-keyword">return</span> x*f;&#125;<br><span class="hljs-function"><span class="hljs-type">void</span> <span class="hljs-title">write</span><span class="hljs-params">(<span class="hljs-type">int</span> x)</span></span>&#123;<span class="hljs-keyword">if</span>(x&lt;<span class="hljs-number">0</span>)&#123;<span class="hljs-built_in">putchar</span>(<span class="hljs-string">&#x27;-&#x27;</span>);x=-x;&#125;<span class="hljs-keyword">if</span>(x&gt;<span class="hljs-number">9</span>)<span class="hljs-built_in">write</span>(x/<span class="hljs-number">10</span>);<span class="hljs-built_in">putchar</span>(x%<span class="hljs-number">10</span>+<span class="hljs-string">&#x27;0&#x27;</span>);&#125;<br><span class="hljs-function"><span class="hljs-type">int</span> <span class="hljs-title">Joseph</span><span class="hljs-params">(<span class="hljs-type">int</span> n,<span class="hljs-type">int</span> m)</span></span>&#123;<span class="hljs-keyword">return</span> n==<span class="hljs-number">1</span>?n:(<span class="hljs-built_in">Joseph</span>(n<span class="hljs-number">-1</span>,m)+m<span class="hljs-number">-1</span>)%n+<span class="hljs-number">1</span>;&#125;<br><span class="hljs-function"><span class="hljs-type">bool</span> <span class="hljs-title">is_prime</span><span class="hljs-params">(<span class="hljs-type">int</span> a)</span></span>&#123;<span class="hljs-keyword">if</span>(a==<span class="hljs-number">1</span>)<span class="hljs-keyword">return</span> <span class="hljs-literal">false</span>;<span class="hljs-keyword">for</span>(<span class="hljs-type">int</span> i=<span class="hljs-number">2</span>;i&lt;=<span class="hljs-built_in">sqrt</span>(a);i++)&#123;<span class="hljs-keyword">if</span>(a%i==<span class="hljs-number">0</span>)<span class="hljs-keyword">return</span> <span class="hljs-literal">false</span>;&#125;<span class="hljs-keyword">return</span> <span class="hljs-literal">true</span>;&#125;<br><span class="hljs-function"><span class="hljs-type">bool</span> <span class="hljs-title">is_palindrome</span><span class="hljs-params">(string str)</span></span>&#123;string st=str;<span class="hljs-built_in">reverse</span>(st.<span class="hljs-built_in">begin</span>(),st.<span class="hljs-built_in">end</span>());<span class="hljs-keyword">if</span>(st==str)<span class="hljs-keyword">return</span> <span class="hljs-literal">true</span>;<span class="hljs-keyword">else</span> <span class="hljs-keyword">return</span> <span class="hljs-literal">false</span>;&#125;<br><span class="hljs-function"><span class="hljs-type">int</span> <span class="hljs-title">qpow</span><span class="hljs-params">(<span class="hljs-type">int</span> x,<span class="hljs-type">int</span> y)</span></span>&#123;<span class="hljs-type">int</span> re=<span class="hljs-number">1</span>;<span class="hljs-keyword">for</span>(;y&gt;<span class="hljs-number">0</span>;y&gt;&gt;=<span class="hljs-number">1</span>)&#123;<span class="hljs-keyword">if</span>(y&amp;<span class="hljs-number">1</span>)re=re*x%mod;x=x*x%mod;&#125;<span class="hljs-keyword">return</span> re;&#125;<br><span class="hljs-function"><span class="hljs-type">void</span> <span class="hljs-title">f</span><span class="hljs-params">(<span class="hljs-type">int</span> x,<span class="hljs-type">int</span> m)</span></span>&#123;<span class="hljs-keyword">if</span>(x/m)<span class="hljs-built_in">f</span>(x/m,m);cout&lt;&lt;c[x%m];&#125;<br><span class="hljs-function"><span class="hljs-type">int</span> <span class="hljs-title">search</span><span class="hljs-params">(<span class="hljs-type">int</span> start,<span class="hljs-type">int</span> end,<span class="hljs-type">int</span> key)</span></span>&#123;<span class="hljs-type">int</span> ret=<span class="hljs-number">-1</span>;<span class="hljs-type">int</span> mid;<span class="hljs-keyword">while</span>(start&lt;=end)&#123;mid=start+((end-start)&gt;&gt;<span class="hljs-number">1</span>);<span class="hljs-keyword">if</span>(arr[mid]&lt;key)start=mid+<span class="hljs-number">1</span>;<span class="hljs-keyword">else</span> <span class="hljs-keyword">if</span>(arr[mid]&gt;key)end=mid<span class="hljs-number">-1</span>;<span class="hljs-keyword">else</span>&#123;ret=mid;<span class="hljs-keyword">break</span>;&#125;&#125;<span class="hljs-keyword">return</span> ret;&#125;<br><span class="hljs-function"><span class="hljs-type">void</span> <span class="hljs-title">solve</span><span class="hljs-params">()</span></span><br><span class="hljs-function"></span>&#123;<br>	<br>&#125;<br><span class="hljs-function"><span class="hljs-type">int</span> <span class="hljs-title">main</span><span class="hljs-params">()</span></span><br><span class="hljs-function"></span>&#123;<br><span class="hljs-comment">//	freopen(&quot;example.in&quot;,&quot;r&quot;,stdin);</span><br><span class="hljs-comment">//	freopen(&quot;example.out&quot;,&quot;w&quot;,stdout);</span><br><span class="hljs-comment">//	std::ios::sync_with_stdio(false);</span><br><span class="hljs-comment">//	cin.tie(nullptr);cout.tie(nullptr);</span><br>	<span class="hljs-type">int</span> t=<span class="hljs-built_in">read</span>();<br>	<span class="hljs-keyword">while</span>(t--)<br>	&#123;<br>		<span class="hljs-built_in">solve</span>();<br>	&#125;<br>    <span class="hljs-keyword">return</span> <span class="hljs-number">0</span>;<br>&#125;<br></code></pre></td></tr></table></figure>
 
+<h3 id="循环"><a href="#循环" class="headerlink" title="循环"></a>循环</h3><p><code>for</code></p>
+<figure class="highlight cpp"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br></pre></td><td class="code"><pre><code class="hljs cpp"><span class="hljs-keyword">for</span>(<span class="hljs-type">int</span> i=<span class="hljs-number">1</span>;i&lt;=n;i++)<br>&#123;<br>	<br>&#125;<br><span class="hljs-keyword">for</span>(vector&lt;type&gt;::iterator i=a.<span class="hljs-built_in">begin</span>();i!=a.<span class="hljs-built_in">end</span>();i++)<br>&#123;<br>	<br>&#125;<br><span class="hljs-keyword">for</span>(<span class="hljs-keyword">auto</span> i:a)<br>&#123;<br>    <br>&#125;<br></code></pre></td></tr></table></figure>
+
+<p><code>while</code></p>
+<figure class="highlight cpp"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><code class="hljs cpp"><span class="hljs-keyword">while</span>()<br>&#123;<br>	<br>&#125;<br></code></pre></td></tr></table></figure>
+
+<p><code>do while</code></p>
+<figure class="highlight cpp"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><code class="hljs cpp"><span class="hljs-keyword">do</span><br>&#123;<br>	<br>&#125;<span class="hljs-keyword">while</span>();<br></code></pre></td></tr></table></figure>
+
+<h3 id="结构体"><a href="#结构体" class="headerlink" title="结构体"></a>结构体</h3><figure class="highlight cpp"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><code class="hljs cpp"><span class="hljs-keyword">struct</span> <span class="hljs-title class_">node</span><br>&#123;<br>	<br>&#125;;<br></code></pre></td></tr></table></figure>
+
+<h3 id="STL"><a href="#STL" class="headerlink" title="STL"></a>STL</h3><p><code>vector</code></p>
+<figure class="highlight cpp"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs cpp">vector&lt;type&gt;v;<br></code></pre></td></tr></table></figure>
+
+<p><code>map</code></p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs plaintext">map&lt;key,value&gt;mp;<br></code></pre></td></tr></table></figure>
+
+<p><code>bitset</code></p>
+<figure class="highlight cpp"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs cpp">bitset&lt;size&gt;b;<br></code></pre></td></tr></table></figure>
+
+<p><code>queue</code></p>
+<figure class="highlight cpp"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs cpp">queue&lt;type&gt;q;<br></code></pre></td></tr></table></figure>
+
+<p><code>priority_queue</code></p>
+<figure class="highlight cpp"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs cpp">priority_queue&lt;type&gt;pq;<br></code></pre></td></tr></table></figure>
+
+<p>还有很多不列举了。</p>
+<h3 id="变量定义"><a href="#变量定义" class="headerlink" title="变量定义"></a>变量定义</h3><p>一般是按题目给定。</p>
+<p>保存 <code>.size()</code> 用 $sz$</p>
+<p>数组大小一般只有 $n,m,N,M$。部分时候也用 $sz$。</p>
+<p>数组无特殊就是 $a,b,c$ 之类的。</p>
+<p>计数或答案用 $s,sum,c,cnt,ans,z$ 等。</p>
+<p>多组数据肯定是 $t,T$。</p>
+<p>树的边输入用 $x,y$。然后 <code>a[x].push_back(y)</code> 之类的。</p>
+<p>存边用 $a$ 或 $tree$。</p>
+<p>打标记 $f,ff,f1,f2$。</p>
+<p>最大最小 $maxx,minn$。</p>
+<h3 id="函数定义"><a href="#函数定义" class="headerlink" title="函数定义"></a>函数定义</h3><p>判断质数 <code>is_prime</code>。</p>
+<p>约瑟夫 <code>Joseph</code>。</p>
+<p>快读 <code>read</code>。</p>
+<p>快写 <code>write</code>。</p>
+<p>判断回文 <code>is_palindrome</code>。</p>
+<p>快速幂 <code>qpow</code>。</p>
+<p>二分 <code>search,binary_search,s,bs</code>。</p>
+<p>并查集 <code>F</code> 和 <code>U</code>。</p>
+<p><code>dfs</code>，<code>bfs</code> 等全国通用的不说了。</p>
 
 	</div>
 
@@ -675,7 +709,7 @@
 	
 		<div class="post-tags">
 			<i class="fa fa-tags" aria-hidden="true"></i>
-			<a class="tag badge badge-secondary post-meta-detail-tag -none-link" href="/tags/Atcoder/" rel="tag">Atcoder</a><a class="tag badge badge-secondary post-meta-detail-tag -none-link" href="/tags/C/" rel="tag">C++</a>
+			<a class="tag badge badge-secondary post-meta-detail-tag -none-link" href="/tags/C/" rel="tag">C++</a>
 		</div>
 	
 </article>
@@ -717,7 +751,7 @@
 				<span class="btn-inner--icon"><i class="fa fa-twitter"></i></span>
 			</button>
 		</a>
-		<a target="_blank" class="no-pjax icon-telegram" href="https://telegram.me/share/url?url=https://chenyuxuan2009.github.io/2022/03/22/cf17_final_a/&text=CF17 FINAL A | AT3602 AKIBA" tooltip="分享到 Telegram">
+		<a target="_blank" class="no-pjax icon-telegram" href="https://telegram.me/share/url?url=https://chenyuxuan2009.github.io/2022/03/25/code/&text=【置顶】我的码风" tooltip="分享到 Telegram">
 			<button class="btn btn-icon btn-primary" style="background: #42a5f5;border: none;">
 				<span class="btn-inner--icon"><i class="fa fa-telegram"></i></span>
 			</button>
@@ -734,11 +768,11 @@
 </div>
 <script type="text/javascript">
 	socialShare("#share", {
-	    title : 'CF17 FINAL A | AT3602 AKIBA',
-	    description : '题目翻译输入一个字符串，可不可以在任意一位插入 $\tt A$，使这个字符串变为 AKIHABARA...',
+	    title : '【置顶】我的码风',
+	    description : '缺省源12345678910111213141516171819202122232425262728...',
 	    wechatQrcodeTitle : "分享到微信",
 	    wechatQrcodeHelper : '微信扫描二维码',
-	    source : 'https://chenyuxuan2009.github.io/2022/03/22/cf17_final_a/'
+	    source : 'https://chenyuxuan2009.github.io/2022/03/25/code/'
 	});
 	$("#share_show")[0].onclick = function(){
 		$("#share_container").addClass("opened");
@@ -804,7 +838,7 @@
 
 
 
-<div class="post-navigation card shadow-sm"><div class="post-navigation-item post-navigation-pre"><span class="page-navigation-extra-text"><i class="fa fa-arrow-circle-o-left" aria-hidden="true"></i>上一篇</span><a href="/2022/03/22/CF630E/" rel="prev"> CF630E A rectangle</a></div><div class="post-navigation-item post-navigation-next"><span class="page-navigation-extra-text">下一篇 <i class="fa fa-arrow-circle-o-right" aria-hidden="true"></i></span><a href="/2022/03/22/CF1651B/" rel="next"> CF1651B Prove Him Wrong</a></div></div>
+<div class="post-navigation card shadow-sm"><div class="post-navigation-item post-navigation-pre"></div><div class="post-navigation-item post-navigation-next"><span class="page-navigation-extra-text">下一篇 <i class="fa fa-arrow-circle-o-right" aria-hidden="true"></i></span><a href="/2022/03/24/freopen%E8%AE%B2%E8%A7%A3/" rel="next"> freopen讲解</a></div></div>
 
 
 
