@@ -678,67 +678,67 @@
 <p>注意，线段的两个端点也算进去。</p>
 <p>那么这个线段产生<strong>左边端点个数 $\times$ 线段长度 $\times$ 右边端点个数</strong>这么多贡献。</p>
 <p>同理，每个线段也产生上述贡献。</p>
-<h3 id="AC-代码"><a href="#AC-代码" class="headerlink" title="AC 代码"></a>AC 代码</h3><pre><code class="hljs cpp"><span class="hljs-meta">#<span class="hljs-keyword">include</span><span class="hljs-string">&lt;bits/stdc++.h&gt;</span></span>
-<span class="hljs-meta">#<span class="hljs-keyword">define</span> ll long long</span>
-<span class="hljs-keyword">using</span> <span class="hljs-keyword">namespace</span> std;
-<span class="hljs-keyword">struct</span> <span class="hljs-title class_">node</span>
+<h3 id="AC-代码"><a href="#AC-代码" class="headerlink" title="AC 代码"></a>AC 代码</h3><pre><code class="highlight cpp"><span class="meta">#<span class="keyword">include</span><span class="string">&lt;bits/stdc++.h&gt;</span></span>
+<span class="meta">#<span class="keyword">define</span> ll long long</span>
+<span class="keyword">using</span> <span class="keyword">namespace</span> std;
+<span class="keyword">struct</span> <span class="title class_">node</span>
 &#123;
-	<span class="hljs-type">int</span> x,y;<span class="hljs-comment">//记录x轴和y轴</span>
+	<span class="type">int</span> x,y;<span class="comment">//记录x轴和y轴</span>
 &#125;;
-vector&lt;node&gt;a[<span class="hljs-number">100020</span>];<span class="hljs-comment">//对数字分类</span>
-<span class="hljs-function">ll <span class="hljs-title">s</span><span class="hljs-params">(vector&lt;<span class="hljs-type">int</span>&gt;a)</span><span class="hljs-comment">//求和</span></span>
-<span class="hljs-function"></span>&#123;
-	ll sum=<span class="hljs-number">0</span>;
-	<span class="hljs-keyword">for</span>(<span class="hljs-type">int</span> i=<span class="hljs-number">1</span>;i&lt;a.<span class="hljs-built_in">size</span>();i++)
+vector&lt;node&gt;a[<span class="number">100020</span>];<span class="comment">//对数字分类</span>
+<span class="function">ll <span class="title">s</span><span class="params">(vector&lt;<span class="type">int</span>&gt;a)</span><span class="comment">//求和</span></span>
+<span class="function"></span>&#123;
+	ll sum=<span class="number">0</span>;
+	<span class="keyword">for</span>(<span class="type">int</span> i=<span class="number">1</span>;i&lt;a.<span class="built_in">size</span>();i++)
 	&#123;
-		sum+=i*(a[i]-a[i<span class="hljs-number">-1</span>])*(a.<span class="hljs-built_in">size</span>()-i);
+		sum+=i*(a[i]-a[i<span class="number">-1</span>])*(a.<span class="built_in">size</span>()-i);
 	&#125;
-	<span class="hljs-keyword">return</span> sum;
+	<span class="keyword">return</span> sum;
 &#125;
-<span class="hljs-function"><span class="hljs-type">void</span> <span class="hljs-title">solve</span><span class="hljs-params">()</span></span>
-<span class="hljs-function"></span>&#123;
-	<span class="hljs-type">int</span> n,m,maxx=INT_MIN;
+<span class="function"><span class="type">void</span> <span class="title">solve</span><span class="params">()</span></span>
+<span class="function"></span>&#123;
+	<span class="type">int</span> n,m,maxx=INT_MIN;
 	cin&gt;&gt;n&gt;&gt;m;
-	<span class="hljs-keyword">for</span>(<span class="hljs-type">int</span> i=<span class="hljs-number">1</span>;i&lt;=n;i++)
+	<span class="keyword">for</span>(<span class="type">int</span> i=<span class="number">1</span>;i&lt;=n;i++)
 	&#123;
-		<span class="hljs-keyword">for</span>(<span class="hljs-type">int</span> j=<span class="hljs-number">1</span>;j&lt;=m;j++)
+		<span class="keyword">for</span>(<span class="type">int</span> j=<span class="number">1</span>;j&lt;=m;j++)
 		&#123;
-			<span class="hljs-type">int</span> z;
+			<span class="type">int</span> z;
 			cin&gt;&gt;z;
 			node zz;
 			zz.x=i;
 			zz.y=j;
-			a[z].<span class="hljs-built_in">push_back</span>(zz);<span class="hljs-comment">//插入这个点信息</span>
-			maxx=<span class="hljs-built_in">max</span>(z,maxx);<span class="hljs-comment">//找出最大值</span>
+			a[z].<span class="built_in">push_back</span>(zz);<span class="comment">//插入这个点信息</span>
+			maxx=<span class="built_in">max</span>(z,maxx);<span class="comment">//找出最大值</span>
 		&#125;
 	&#125;
-	ll sum=<span class="hljs-number">0</span>;
-	<span class="hljs-keyword">for</span>(<span class="hljs-type">int</span> i=<span class="hljs-number">1</span>;i&lt;=maxx;i++)
+	ll sum=<span class="number">0</span>;
+	<span class="keyword">for</span>(<span class="type">int</span> i=<span class="number">1</span>;i&lt;=maxx;i++)
 	&#123;
-		vector&lt;<span class="hljs-type">int</span>&gt;xx;<span class="hljs-comment">//记录x轴</span>
-		vector&lt;<span class="hljs-type">int</span>&gt;yy;<span class="hljs-comment">//记录y轴</span>
-		<span class="hljs-keyword">for</span>(<span class="hljs-keyword">auto</span> j:a[i])<span class="hljs-comment">//插入点的信息</span>
+		vector&lt;<span class="type">int</span>&gt;xx;<span class="comment">//记录x轴</span>
+		vector&lt;<span class="type">int</span>&gt;yy;<span class="comment">//记录y轴</span>
+		<span class="keyword">for</span>(<span class="keyword">auto</span> j:a[i])<span class="comment">//插入点的信息</span>
 		&#123;
-			xx.<span class="hljs-built_in">push_back</span>(j.x);
-			yy.<span class="hljs-built_in">push_back</span>(j.y);
+			xx.<span class="built_in">push_back</span>(j.x);
+			yy.<span class="built_in">push_back</span>(j.y);
 		&#125;
-        <span class="hljs-comment">//排序</span>
-		<span class="hljs-built_in">sort</span>(xx.<span class="hljs-built_in">begin</span>(),xx.<span class="hljs-built_in">end</span>());
-		<span class="hljs-built_in">sort</span>(yy.<span class="hljs-built_in">begin</span>(),yy.<span class="hljs-built_in">end</span>());
-		ll sx=<span class="hljs-built_in">s</span>(xx);
-		ll sy=<span class="hljs-built_in">s</span>(yy);
-		sum+=sx+sy;<span class="hljs-comment">//求和</span>
+        <span class="comment">//排序</span>
+		<span class="built_in">sort</span>(xx.<span class="built_in">begin</span>(),xx.<span class="built_in">end</span>());
+		<span class="built_in">sort</span>(yy.<span class="built_in">begin</span>(),yy.<span class="built_in">end</span>());
+		ll sx=<span class="built_in">s</span>(xx);
+		ll sy=<span class="built_in">s</span>(yy);
+		sum+=sx+sy;<span class="comment">//求和</span>
 	&#125;
 	cout&lt;&lt;sum&lt;&lt;endl;
 &#125;
-<span class="hljs-function"><span class="hljs-type">int</span> <span class="hljs-title">main</span><span class="hljs-params">()</span></span>
-<span class="hljs-function"></span>&#123;
-	<span class="hljs-type">int</span> t=<span class="hljs-number">1</span>;
-	<span class="hljs-keyword">while</span>(t--)
+<span class="function"><span class="type">int</span> <span class="title">main</span><span class="params">()</span></span>
+<span class="function"></span>&#123;
+	<span class="type">int</span> t=<span class="number">1</span>;
+	<span class="keyword">while</span>(t--)
 	&#123;
-		<span class="hljs-built_in">solve</span>();
+		<span class="built_in">solve</span>();
 	&#125;
-    <span class="hljs-keyword">return</span> <span class="hljs-number">0</span>;
+    <span class="keyword">return</span> <span class="number">0</span>;
 &#125;</code></pre>
 
 	</div>

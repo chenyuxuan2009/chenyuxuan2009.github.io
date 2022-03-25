@@ -668,26 +668,26 @@
 <p>角色存活定义为：角色生命 $&gt;0$。</p>
 <h3 id="题目思路-不完整"><a href="#题目思路-不完整" class="headerlink" title="题目思路(不完整)"></a>题目思路(不完整)</h3><p>我们枚举这 $k$ 次机会，分别是加攻击还是加生命。然后判断角色增加这些属性后，能否击败怪物。</p>
 <p>而且每一轮的攻击，如果角色击败了怪物，怪物不会攻击角色。也就是说，怪物可以少打一轮伤害。</p>
-<h3 id="题目代码-不完整"><a href="#题目代码-不完整" class="headerlink" title="题目代码(不完整)"></a>题目代码(不完整)</h3><pre><code class="hljs cpp"><span class="hljs-function"><span class="hljs-type">void</span> <span class="hljs-title">solve</span><span class="hljs-params">()</span></span>
-<span class="hljs-function"></span>&#123;
-	<span class="hljs-type">long</span> <span class="hljs-type">long</span> hc,dc,hm,dm,k,w,a;
-	cin&gt;&gt;hc&gt;&gt;dc&gt;&gt;hm&gt;&gt;dm&gt;&gt;k&gt;&gt;w&gt;&gt;a;<span class="hljs-comment">//输入属性</span>
-	<span class="hljs-keyword">for</span>(<span class="hljs-type">long</span> <span class="hljs-type">long</span> i=<span class="hljs-number">0</span>;i&lt;=k;i++)
+<h3 id="题目代码-不完整"><a href="#题目代码-不完整" class="headerlink" title="题目代码(不完整)"></a>题目代码(不完整)</h3><pre><code class="highlight cpp"><span class="function"><span class="type">void</span> <span class="title">solve</span><span class="params">()</span></span>
+<span class="function"></span>&#123;
+	<span class="type">long</span> <span class="type">long</span> hc,dc,hm,dm,k,w,a;
+	cin&gt;&gt;hc&gt;&gt;dc&gt;&gt;hm&gt;&gt;dm&gt;&gt;k&gt;&gt;w&gt;&gt;a;<span class="comment">//输入属性</span>
+	<span class="keyword">for</span>(<span class="type">long</span> <span class="type">long</span> i=<span class="number">0</span>;i&lt;=k;i++)
 	&#123;
-		<span class="hljs-type">long</span> <span class="hljs-type">long</span> x=i,y=k-i;<span class="hljs-comment">//枚举加攻击或加生命</span>
-		<span class="hljs-type">long</span> <span class="hljs-type">long</span> rnd=<span class="hljs-built_in">ceil</span>(hm*<span class="hljs-number">1.0</span>/(dc+x*w));<span class="hljs-comment">//用怪物血量除以角色攻击得到轮数</span>
-		<span class="hljs-keyword">if</span>(dm*(rnd<span class="hljs-number">-1</span>)&lt;hc+a*y)<span class="hljs-comment">//如果怪物打出的伤害比角色生命少</span>
+		<span class="type">long</span> <span class="type">long</span> x=i,y=k-i;<span class="comment">//枚举加攻击或加生命</span>
+		<span class="type">long</span> <span class="type">long</span> rnd=<span class="built_in">ceil</span>(hm*<span class="number">1.0</span>/(dc+x*w));<span class="comment">//用怪物血量除以角色攻击得到轮数</span>
+		<span class="keyword">if</span>(dm*(rnd<span class="number">-1</span>)&lt;hc+a*y)<span class="comment">//如果怪物打出的伤害比角色生命少</span>
 		&#123;
-			<span class="hljs-built_in">puts</span>(<span class="hljs-string">&quot;YES&quot;</span>);<span class="hljs-comment">//可以通关</span>
-			<span class="hljs-keyword">return</span>;
+			<span class="built_in">puts</span>(<span class="string">&quot;YES&quot;</span>);<span class="comment">//可以通关</span>
+			<span class="keyword">return</span>;
 		&#125;
 	&#125;
-	<span class="hljs-built_in">puts</span>(<span class="hljs-string">&quot;NO&quot;</span>);
+	<span class="built_in">puts</span>(<span class="string">&quot;NO&quot;</span>);
 &#125;</code></pre>
 
 <p>但是，看似没问题，实则会在第13个数据点错误。</p>
 <p>让我们导出看一下。</p>
-<pre><code class="hljs plaintext">Input
+<pre><code class="highlight plaintext">Input
 1
 1 1
 1000000000000000 1000000000
@@ -700,7 +700,7 @@ Answer
 NO</code></pre>
 
 <p>我们进行调试，分别输出每个循环的结果。</p>
-<pre><code class="hljs plaintext">1
+<pre><code class="highlight plaintext">1
 1 1
 1000000000000000 1000000000
 200000 1 10000000000

@@ -664,23 +664,23 @@
 <p>补充：距离的定义为：$a_{i_1,j_1}$ 与 $a_{i_2,j_2}$ 距离为 $\left|i_1-i_2\right|+\left|j_1-j_2\right|$</p>
 <h3 id="题目思路"><a href="#题目思路" class="headerlink" title="题目思路"></a>题目思路</h3><p>A 会选什么位置，我们不用考虑，因为题目求所有情况，不是最优或最坏，所以只需考虑 B 坐的位置。由于想离得远，那么不管 A 坐哪，B 一定选择四个角上离得最远的位置。</p>
 <p>根据上述分析，我们只需穷举 A 坐的位置，并且每次判断 A 的位置与四个角的距离，就可以得出所有结果。</p>
-<h3 id="AC代码"><a href="#AC代码" class="headerlink" title="AC代码"></a>AC代码</h3><pre><code class="hljs cpp"><span class="hljs-function"><span class="hljs-type">int</span> <span class="hljs-title">juli</span><span class="hljs-params">(<span class="hljs-type">int</span> x1,<span class="hljs-type">int</span> y1,<span class="hljs-type">int</span> x2,<span class="hljs-type">int</span> y2)</span><span class="hljs-comment">//求距离函数</span></span>
-<span class="hljs-function"></span>&#123;
-	<span class="hljs-keyword">return</span> <span class="hljs-built_in">abs</span>(x1-x2)+<span class="hljs-built_in">abs</span>(y1-y2);
+<h3 id="AC代码"><a href="#AC代码" class="headerlink" title="AC代码"></a>AC代码</h3><pre><code class="highlight cpp"><span class="function"><span class="type">int</span> <span class="title">juli</span><span class="params">(<span class="type">int</span> x1,<span class="type">int</span> y1,<span class="type">int</span> x2,<span class="type">int</span> y2)</span><span class="comment">//求距离函数</span></span>
+<span class="function"></span>&#123;
+	<span class="keyword">return</span> <span class="built_in">abs</span>(x1-x2)+<span class="built_in">abs</span>(y1-y2);
 &#125;
-<span class="hljs-function"><span class="hljs-type">void</span> <span class="hljs-title">solve</span><span class="hljs-params">()</span></span>
-<span class="hljs-function"></span>&#123;
-	multiset&lt;<span class="hljs-type">int</span>&gt;s;<span class="hljs-comment">//答案要求排序，set自动排序+去重，mutiset自动排序+不去重</span>
-	<span class="hljs-type">int</span> n,m;
+<span class="function"><span class="type">void</span> <span class="title">solve</span><span class="params">()</span></span>
+<span class="function"></span>&#123;
+	multiset&lt;<span class="type">int</span>&gt;s;<span class="comment">//答案要求排序，set自动排序+去重，mutiset自动排序+不去重</span>
+	<span class="type">int</span> n,m;
 	cin&gt;&gt;n&gt;&gt;m;
-	<span class="hljs-keyword">for</span>(<span class="hljs-type">int</span> i=<span class="hljs-number">1</span>;i&lt;=n;i++)
+	<span class="keyword">for</span>(<span class="type">int</span> i=<span class="number">1</span>;i&lt;=n;i++)
 	&#123;
-		<span class="hljs-keyword">for</span>(<span class="hljs-type">int</span> j=<span class="hljs-number">1</span>;j&lt;=m;j++)<span class="hljs-comment">//双重循环穷举答案</span>
+		<span class="keyword">for</span>(<span class="type">int</span> j=<span class="number">1</span>;j&lt;=m;j++)<span class="comment">//双重循环穷举答案</span>
 		&#123;
-			s.<span class="hljs-built_in">insert</span>(<span class="hljs-built_in">max</span>(&#123;<span class="hljs-built_in">juli</span>(i,j,<span class="hljs-number">1</span>,<span class="hljs-number">1</span>),<span class="hljs-built_in">juli</span>(i,j,<span class="hljs-number">1</span>,m),<span class="hljs-built_in">juli</span>(i,j,n,<span class="hljs-number">1</span>),<span class="hljs-built_in">juli</span>(i,j,n,m)&#125;));<span class="hljs-comment">//判断四个角的最大距离</span>
+			s.<span class="built_in">insert</span>(<span class="built_in">max</span>(&#123;<span class="built_in">juli</span>(i,j,<span class="number">1</span>,<span class="number">1</span>),<span class="built_in">juli</span>(i,j,<span class="number">1</span>,m),<span class="built_in">juli</span>(i,j,n,<span class="number">1</span>),<span class="built_in">juli</span>(i,j,n,m)&#125;));<span class="comment">//判断四个角的最大距离</span>
 		&#125;
 	&#125;
-	<span class="hljs-keyword">for</span>(<span class="hljs-keyword">auto</span> i:s)cout&lt;&lt;i&lt;&lt;<span class="hljs-string">&quot; &quot;</span>;<span class="hljs-comment">//输出答案</span>
+	<span class="keyword">for</span>(<span class="keyword">auto</span> i:s)cout&lt;&lt;i&lt;&lt;<span class="string">&quot; &quot;</span>;<span class="comment">//输出答案</span>
 	cout&lt;&lt;endl;
 &#125;
 </code></pre>

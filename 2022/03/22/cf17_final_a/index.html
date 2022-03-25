@@ -663,29 +663,29 @@
 		<h3 id="题目翻译"><a href="#题目翻译" class="headerlink" title="题目翻译"></a>题目翻译</h3><p>输入一个字符串，可不可以在任意一位插入 $\tt A$，使这个字符串变为 <code>AKIHABARA</code>。</p>
 <h3 id="题目思路"><a href="#题目思路" class="headerlink" title="题目思路"></a>题目思路</h3><p><code>AKIHABARA</code> 中只出现了 $4$ 次 $\tt A$ ，所以，我们枚举所有可能，每个位置都可以有 <em>选</em> 或 <em>不选</em> 两种可能，所以一共只有 $2^4$ 种可能，十分少。</p>
 <p>我们只要分别枚举 没有 $\tt A$、一个 $\tt A$、两个 $\tt A$、三个 $\tt A$、四个 $\tt A$ 的情况即可。</p>
-<h3 id="题目代码"><a href="#题目代码" class="headerlink" title="题目代码"></a>题目代码</h3><pre><code class="hljs cpp"><span class="hljs-comment">//没有 A</span>
-<span class="hljs-keyword">if</span>(s==<span class="hljs-string">&quot;KIHBR&quot;</span>)&#123;<span class="hljs-built_in">puts</span>(<span class="hljs-string">&quot;YES&quot;</span>);<span class="hljs-keyword">return</span> <span class="hljs-number">0</span>;&#125;
-<span class="hljs-comment">//一个 A</span>
-<span class="hljs-keyword">if</span>(s==<span class="hljs-string">&quot;AKIHBR&quot;</span>)&#123;<span class="hljs-built_in">puts</span>(<span class="hljs-string">&quot;YES&quot;</span>);<span class="hljs-keyword">return</span> <span class="hljs-number">0</span>;&#125;
-<span class="hljs-keyword">if</span>(s==<span class="hljs-string">&quot;KIHABR&quot;</span>)&#123;<span class="hljs-built_in">puts</span>(<span class="hljs-string">&quot;YES&quot;</span>);<span class="hljs-keyword">return</span> <span class="hljs-number">0</span>;&#125;
-<span class="hljs-keyword">if</span>(s==<span class="hljs-string">&quot;KIHBAR&quot;</span>)&#123;<span class="hljs-built_in">puts</span>(<span class="hljs-string">&quot;YES&quot;</span>);<span class="hljs-keyword">return</span> <span class="hljs-number">0</span>;&#125;
-<span class="hljs-keyword">if</span>(s==<span class="hljs-string">&quot;KIHBRA&quot;</span>)&#123;<span class="hljs-built_in">puts</span>(<span class="hljs-string">&quot;YES&quot;</span>);<span class="hljs-keyword">return</span> <span class="hljs-number">0</span>;&#125;
-<span class="hljs-comment">//两个 A</span>
-<span class="hljs-keyword">if</span>(s==<span class="hljs-string">&quot;AKIHABR&quot;</span>)&#123;<span class="hljs-built_in">puts</span>(<span class="hljs-string">&quot;YES&quot;</span>);<span class="hljs-keyword">return</span> <span class="hljs-number">0</span>;&#125;
-<span class="hljs-keyword">if</span>(s==<span class="hljs-string">&quot;AKIHBAR&quot;</span>)&#123;<span class="hljs-built_in">puts</span>(<span class="hljs-string">&quot;YES&quot;</span>);<span class="hljs-keyword">return</span> <span class="hljs-number">0</span>;&#125;
-<span class="hljs-keyword">if</span>(s==<span class="hljs-string">&quot;AKIHBRA&quot;</span>)&#123;<span class="hljs-built_in">puts</span>(<span class="hljs-string">&quot;YES&quot;</span>);<span class="hljs-keyword">return</span> <span class="hljs-number">0</span>;&#125;
-<span class="hljs-keyword">if</span>(s==<span class="hljs-string">&quot;KIHABAR&quot;</span>)&#123;<span class="hljs-built_in">puts</span>(<span class="hljs-string">&quot;YES&quot;</span>);<span class="hljs-keyword">return</span> <span class="hljs-number">0</span>;&#125;
-<span class="hljs-keyword">if</span>(s==<span class="hljs-string">&quot;KIHABRA&quot;</span>)&#123;<span class="hljs-built_in">puts</span>(<span class="hljs-string">&quot;YES&quot;</span>);<span class="hljs-keyword">return</span> <span class="hljs-number">0</span>;&#125;
-<span class="hljs-keyword">if</span>(s==<span class="hljs-string">&quot;KIHBARA&quot;</span>)&#123;<span class="hljs-built_in">puts</span>(<span class="hljs-string">&quot;YES&quot;</span>);<span class="hljs-keyword">return</span> <span class="hljs-number">0</span>;&#125;
-<span class="hljs-comment">//三个 A</span>
-<span class="hljs-keyword">if</span>(s==<span class="hljs-string">&quot;AKIHABAR&quot;</span>)&#123;<span class="hljs-built_in">puts</span>(<span class="hljs-string">&quot;YES&quot;</span>);<span class="hljs-keyword">return</span> <span class="hljs-number">0</span>;&#125;
-<span class="hljs-keyword">if</span>(s==<span class="hljs-string">&quot;AKIHABRA&quot;</span>)&#123;<span class="hljs-built_in">puts</span>(<span class="hljs-string">&quot;YES&quot;</span>);<span class="hljs-keyword">return</span> <span class="hljs-number">0</span>;&#125;
-<span class="hljs-keyword">if</span>(s==<span class="hljs-string">&quot;AKIHBARA&quot;</span>)&#123;<span class="hljs-built_in">puts</span>(<span class="hljs-string">&quot;YES&quot;</span>);<span class="hljs-keyword">return</span> <span class="hljs-number">0</span>;&#125;
-<span class="hljs-keyword">if</span>(s==<span class="hljs-string">&quot;KIHABARA&quot;</span>)&#123;<span class="hljs-built_in">puts</span>(<span class="hljs-string">&quot;YES&quot;</span>);<span class="hljs-keyword">return</span> <span class="hljs-number">0</span>;&#125;
-<span class="hljs-comment">//四个 A</span>
-<span class="hljs-keyword">if</span>(s==<span class="hljs-string">&quot;AKIHABARA&quot;</span>)&#123;<span class="hljs-built_in">puts</span>(<span class="hljs-string">&quot;YES&quot;</span>);<span class="hljs-keyword">return</span> <span class="hljs-number">0</span>;&#125;
-<span class="hljs-comment">//都不满足</span>
-<span class="hljs-built_in">puts</span>(<span class="hljs-string">&quot;NO&quot;</span>);</code></pre>
+<h3 id="题目代码"><a href="#题目代码" class="headerlink" title="题目代码"></a>题目代码</h3><pre><code class="highlight cpp"><span class="comment">//没有 A</span>
+<span class="keyword">if</span>(s==<span class="string">&quot;KIHBR&quot;</span>)&#123;<span class="built_in">puts</span>(<span class="string">&quot;YES&quot;</span>);<span class="keyword">return</span> <span class="number">0</span>;&#125;
+<span class="comment">//一个 A</span>
+<span class="keyword">if</span>(s==<span class="string">&quot;AKIHBR&quot;</span>)&#123;<span class="built_in">puts</span>(<span class="string">&quot;YES&quot;</span>);<span class="keyword">return</span> <span class="number">0</span>;&#125;
+<span class="keyword">if</span>(s==<span class="string">&quot;KIHABR&quot;</span>)&#123;<span class="built_in">puts</span>(<span class="string">&quot;YES&quot;</span>);<span class="keyword">return</span> <span class="number">0</span>;&#125;
+<span class="keyword">if</span>(s==<span class="string">&quot;KIHBAR&quot;</span>)&#123;<span class="built_in">puts</span>(<span class="string">&quot;YES&quot;</span>);<span class="keyword">return</span> <span class="number">0</span>;&#125;
+<span class="keyword">if</span>(s==<span class="string">&quot;KIHBRA&quot;</span>)&#123;<span class="built_in">puts</span>(<span class="string">&quot;YES&quot;</span>);<span class="keyword">return</span> <span class="number">0</span>;&#125;
+<span class="comment">//两个 A</span>
+<span class="keyword">if</span>(s==<span class="string">&quot;AKIHABR&quot;</span>)&#123;<span class="built_in">puts</span>(<span class="string">&quot;YES&quot;</span>);<span class="keyword">return</span> <span class="number">0</span>;&#125;
+<span class="keyword">if</span>(s==<span class="string">&quot;AKIHBAR&quot;</span>)&#123;<span class="built_in">puts</span>(<span class="string">&quot;YES&quot;</span>);<span class="keyword">return</span> <span class="number">0</span>;&#125;
+<span class="keyword">if</span>(s==<span class="string">&quot;AKIHBRA&quot;</span>)&#123;<span class="built_in">puts</span>(<span class="string">&quot;YES&quot;</span>);<span class="keyword">return</span> <span class="number">0</span>;&#125;
+<span class="keyword">if</span>(s==<span class="string">&quot;KIHABAR&quot;</span>)&#123;<span class="built_in">puts</span>(<span class="string">&quot;YES&quot;</span>);<span class="keyword">return</span> <span class="number">0</span>;&#125;
+<span class="keyword">if</span>(s==<span class="string">&quot;KIHABRA&quot;</span>)&#123;<span class="built_in">puts</span>(<span class="string">&quot;YES&quot;</span>);<span class="keyword">return</span> <span class="number">0</span>;&#125;
+<span class="keyword">if</span>(s==<span class="string">&quot;KIHBARA&quot;</span>)&#123;<span class="built_in">puts</span>(<span class="string">&quot;YES&quot;</span>);<span class="keyword">return</span> <span class="number">0</span>;&#125;
+<span class="comment">//三个 A</span>
+<span class="keyword">if</span>(s==<span class="string">&quot;AKIHABAR&quot;</span>)&#123;<span class="built_in">puts</span>(<span class="string">&quot;YES&quot;</span>);<span class="keyword">return</span> <span class="number">0</span>;&#125;
+<span class="keyword">if</span>(s==<span class="string">&quot;AKIHABRA&quot;</span>)&#123;<span class="built_in">puts</span>(<span class="string">&quot;YES&quot;</span>);<span class="keyword">return</span> <span class="number">0</span>;&#125;
+<span class="keyword">if</span>(s==<span class="string">&quot;AKIHBARA&quot;</span>)&#123;<span class="built_in">puts</span>(<span class="string">&quot;YES&quot;</span>);<span class="keyword">return</span> <span class="number">0</span>;&#125;
+<span class="keyword">if</span>(s==<span class="string">&quot;KIHABARA&quot;</span>)&#123;<span class="built_in">puts</span>(<span class="string">&quot;YES&quot;</span>);<span class="keyword">return</span> <span class="number">0</span>;&#125;
+<span class="comment">//四个 A</span>
+<span class="keyword">if</span>(s==<span class="string">&quot;AKIHABARA&quot;</span>)&#123;<span class="built_in">puts</span>(<span class="string">&quot;YES&quot;</span>);<span class="keyword">return</span> <span class="number">0</span>;&#125;
+<span class="comment">//都不满足</span>
+<span class="built_in">puts</span>(<span class="string">&quot;NO&quot;</span>);</code></pre>
 
 
 	</div>
