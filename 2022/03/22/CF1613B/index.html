@@ -672,21 +672,22 @@
 <p>$7$ $mod$ $2$ 不在数组 $a$ 中</p>
 <p>$8$ $mod$ $2$ 不在数组 $a$ 中</p>
 <p>贴代码：</p>
-<pre><code class="highlight cpp"><span class="function"><span class="type">void</span> <span class="title">solve</span><span class="params">()</span></span>
-<span class="function"></span>&#123;
-	<span class="type">int</span> n;
-	cin&gt;&gt;n;
-	<span class="type">int</span> a[n];
-	<span class="keyword">for</span>(<span class="type">int</span> i=<span class="number">0</span>;i&lt;n;i++) 
-	&#123;
-		cin&gt;&gt;a[i];
-	&#125;
-	<span class="built_in">sort</span>(a,a+n);
-	<span class="keyword">for</span>(<span class="type">int</span> i=<span class="number">0</span>;i&lt;n/<span class="number">2</span>;i++)<span class="comment">//n/2组数据即可 </span>
-	&#123;
-		cout&lt;&lt;a[n-i<span class="number">-1</span>]&lt;&lt;<span class="string">&quot; &quot;</span>&lt;&lt;a[<span class="number">0</span>]&lt;&lt;endl;<span class="comment">//分别输出x与y,注意顺序，必须x在前y在后 </span>
-	&#125;
-&#125;</code></pre>
+<pre><code class="cpp">void solve()
+&#123;
+    int n;
+    cin&gt;&gt;n;
+    int a[n];
+    for(int i=0;i&lt;n;i++) 
+    &#123;
+        cin&gt;&gt;a[i];
+    &#125;
+    sort(a,a+n);
+    for(int i=0;i&lt;n/2;i++)//n/2组数据即可 
+    &#123;
+        cout&lt;&lt;a[n-i-1]&lt;&lt;&quot; &quot;&lt;&lt;a[0]&lt;&lt;endl;//分别输出x与y,注意顺序，必须x在前y在后 
+    &#125;
+&#125;
+</code></pre>
 <p>多组数据，代码未全，当心踩坑</p>
 
 	</div>

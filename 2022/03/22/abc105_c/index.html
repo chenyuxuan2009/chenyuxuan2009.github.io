@@ -9,12 +9,12 @@
 	
 		<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=5">
 	
-	<meta name="description" content="题目翻译给定一个 $10$ 进制数，将其转变成 $-2$ 进制。 题目思路和二进制一样短除法。 注意事项：  特判数据 $n&#x3D;0$ ，不特判的话，它本身进入不了短除法代码，答案就没有记录  任何位置上不可能出现 $-1$，要转成 $1$ 输出。  短除法倒着输出。   题目代码void solve()&#x2F;&#x2F;没加上快读快写、long long定义ll，防抄袭 &amp;#123; 	int a[10">
+	<meta name="description" content="题目翻译给定一个 $10$ 进制数，将其转变成 $-2$ 进制。 题目思路和二进制一样短除法。 注意事项：  特判数据 $n&#x3D;0$ ，不特判的话，它本身进入不了短除法代码，答案就没有记录  任何位置上不可能出现 $-1$，要转成 $1$ 输出。  短除法倒着输出。   题目代码void solve()&#x2F;&#x2F;没加上快读快写、long long定义ll，防抄袭 &amp;#123;     int a">
 <meta property="og:type" content="article">
 <meta property="og:title" content="ABC105C | AT4239 Base -2 Number">
 <meta property="og:url" content="https://chenyuxuan2009.github.io/2022/03/22/abc105_c/index.html">
 <meta property="og:site_name" content="chenyuxuan__2009的博客">
-<meta property="og:description" content="题目翻译给定一个 $10$ 进制数，将其转变成 $-2$ 进制。 题目思路和二进制一样短除法。 注意事项：  特判数据 $n&#x3D;0$ ，不特判的话，它本身进入不了短除法代码，答案就没有记录  任何位置上不可能出现 $-1$，要转成 $1$ 输出。  短除法倒着输出。   题目代码void solve()&#x2F;&#x2F;没加上快读快写、long long定义ll，防抄袭 &amp;#123; 	int a[10">
+<meta property="og:description" content="题目翻译给定一个 $10$ 进制数，将其转变成 $-2$ 进制。 题目思路和二进制一样短除法。 注意事项：  特判数据 $n&#x3D;0$ ，不特判的话，它本身进入不了短除法代码，答案就没有记录  任何位置上不可能出现 $-1$，要转成 $1$ 输出。  短除法倒着输出。   题目代码void solve()&#x2F;&#x2F;没加上快读快写、long long定义ll，防抄袭 &amp;#123;     int a">
 <meta property="og:locale" content="zh_CN">
 <meta property="article:published_time" content="2022-03-22T12:38:59.453Z">
 <meta property="article:modified_time" content="2022-03-23T09:33:00.454Z">
@@ -671,26 +671,26 @@
 <li><p>短除法倒着输出。</p>
 </li>
 </ul>
-<h3 id="题目代码"><a href="#题目代码" class="headerlink" title="题目代码"></a>题目代码</h3><pre><code class="highlight cpp"><span class="function"><span class="type">void</span> <span class="title">solve</span><span class="params">()</span><span class="comment">//没加上快读快写、long long定义ll，防抄袭</span></span>
-<span class="function"></span>&#123;
-	<span class="type">int</span> a[<span class="number">105</span>];<span class="comment">//存储答案</span>
-	ll n=<span class="built_in">read</span>();
-	<span class="type">int</span> x=<span class="number">-1</span>;<span class="comment">//存储答案位数</span>
-	<span class="keyword">if</span>(n==<span class="number">0</span>)&#123;<span class="built_in">puts</span>(<span class="string">&quot;0&quot;</span>);<span class="keyword">return</span>;&#125;<span class="comment">//特判</span>
-	<span class="keyword">while</span>(n!=<span class="number">0</span>)<span class="comment">//短除法</span>
-	&#123;
-		a[++x]=n%(<span class="number">-2</span>);
-		n/=(<span class="number">-2</span>);
-		<span class="keyword">if</span>(a[x]==(<span class="number">-1</span>))<span class="comment">//注意事项栏</span>
-		&#123;
-			n++;
-			a[x]=<span class="number">1</span>; 
-		&#125;
-	&#125;
-	<span class="built_in">reverse</span>(a,a+x+<span class="number">1</span>);<span class="comment">//倒着输出，翻转区间</span>
-	<span class="keyword">for</span>(<span class="type">int</span> i=<span class="number">0</span>;i&lt;=x;<span class="built_in">write</span>(a[i++]));
-&#125;</code></pre>
-
+<h3 id="题目代码"><a href="#题目代码" class="headerlink" title="题目代码"></a>题目代码</h3><pre><code class="cpp">void solve()//没加上快读快写、long long定义ll，防抄袭
+&#123;
+    int a[105];//存储答案
+    ll n=read();
+    int x=-1;//存储答案位数
+    if(n==0)&#123;puts(&quot;0&quot;);return;&#125;//特判
+    while(n!=0)//短除法
+    &#123;
+        a[++x]=n%(-2);
+        n/=(-2);
+        if(a[x]==(-1))//注意事项栏
+        &#123;
+            n++;
+            a[x]=1; 
+        &#125;
+    &#125;
+    reverse(a,a+x+1);//倒着输出，翻转区间
+    for(int i=0;i&lt;=x;write(a[i++]));
+&#125;
+</code></pre>
 
 	</div>
 

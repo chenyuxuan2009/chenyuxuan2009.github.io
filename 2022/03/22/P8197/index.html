@@ -9,12 +9,12 @@
 	
 		<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=5">
 	
-	<meta name="description" content="题目思路从交换相邻这里，我们可以明显看出来，这有些类似冒泡排序。 但是，我们要来思考一下怎样情况输出 NO。 我们就用冒泡排序的代码来分析一下。为了方便分析，就用 for 循环版的。 for(int i&#x3D;1;i&lt;&#x3D;n-1;i++) &amp;#123; 	for(int j&#x3D;1;j&lt;&#x3D;n-i;j++) 	&amp;#123; 		if(a[j]&lt;a[j+1]) 		&amp;#123; 			swap(">
+	<meta name="description" content="题目思路从交换相邻这里，我们可以明显看出来，这有些类似冒泡排序。 但是，我们要来思考一下怎样情况输出 NO。 我们就用冒泡排序的代码来分析一下。为了方便分析，就用 for 循环版的。 for(int i&#x3D;1;i&lt;&#x3D;n-1;i++) &amp;#123;     for(int j&#x3D;1;j&lt;&#x3D;n-i;j++)     &amp;#123;         if(a[j]&lt;a[j+1])">
 <meta property="og:type" content="article">
 <meta property="og:title" content="P8197 排排队">
 <meta property="og:url" content="https://chenyuxuan2009.github.io/2022/03/22/P8197/index.html">
 <meta property="og:site_name" content="chenyuxuan__2009的博客">
-<meta property="og:description" content="题目思路从交换相邻这里，我们可以明显看出来，这有些类似冒泡排序。 但是，我们要来思考一下怎样情况输出 NO。 我们就用冒泡排序的代码来分析一下。为了方便分析，就用 for 循环版的。 for(int i&#x3D;1;i&lt;&#x3D;n-1;i++) &amp;#123; 	for(int j&#x3D;1;j&lt;&#x3D;n-i;j++) 	&amp;#123; 		if(a[j]&lt;a[j+1]) 		&amp;#123; 			swap(">
+<meta property="og:description" content="题目思路从交换相邻这里，我们可以明显看出来，这有些类似冒泡排序。 但是，我们要来思考一下怎样情况输出 NO。 我们就用冒泡排序的代码来分析一下。为了方便分析，就用 for 循环版的。 for(int i&#x3D;1;i&lt;&#x3D;n-1;i++) &amp;#123;     for(int j&#x3D;1;j&lt;&#x3D;n-i;j++)     &amp;#123;         if(a[j]&lt;a[j+1])">
 <meta property="og:locale" content="zh_CN">
 <meta property="article:published_time" content="2022-03-22T12:38:59.511Z">
 <meta property="article:modified_time" content="2022-03-23T09:37:20.760Z">
@@ -663,62 +663,62 @@
 		<h3 id="题目思路"><a href="#题目思路" class="headerlink" title="题目思路"></a>题目思路</h3><p>从交换相邻这里，我们可以明显看出来，这有些类似冒泡排序。</p>
 <p>但是，我们要来思考一下怎样情况输出 <code>NO</code>。</p>
 <p>我们就用冒泡排序的代码来分析一下。为了方便分析，就用 <code>for</code> 循环版的。</p>
-<pre><code class="highlight cpp"><span class="keyword">for</span>(<span class="type">int</span> i=<span class="number">1</span>;i&lt;=n<span class="number">-1</span>;i++)
+<pre><code class="cpp">for(int i=1;i&lt;=n-1;i++)
 &#123;
-	<span class="keyword">for</span>(<span class="type">int</span> j=<span class="number">1</span>;j&lt;=n-i;j++)
-	&#123;
-		<span class="keyword">if</span>(a[j]&lt;a[j+<span class="number">1</span>])
-		&#123;
-			<span class="built_in">swap</span>(a[j],a[j+<span class="number">1</span>]);
-		&#125;
-	&#125;
-&#125;</code></pre>
-
+    for(int j=1;j&lt;=n-i;j++)
+    &#123;
+        if(a[j]&lt;a[j+1])
+        &#123;
+            swap(a[j],a[j+1]);
+        &#125;
+    &#125;
+&#125;
+</code></pre>
 <p>我们能很快的反应出来，$(n-1)\times (n-i)$ 肯定是比 $n^2$ 要小的。</p>
 <p>所以，$n^2$ 的操作绰绰有余。</p>
 <p>因此，我们只要判断数组元素是否相同就可以了，不用考虑能否在 $n^2$ 次操作内完成。</p>
 <p>我们先写出判断一样的代码。</p>
-<pre><code class="highlight cpp"><span class="type">int</span> n=<span class="built_in">read</span>();
-<span class="type">int</span> a[n+<span class="number">1</span>],b[n+<span class="number">1</span>],c[n+<span class="number">1</span>],d[n+<span class="number">1</span>];
-<span class="keyword">for</span>(<span class="type">int</span> i=<span class="number">1</span>;i&lt;=n;i++)
+<pre><code class="cpp">int n=read();
+int a[n+1],b[n+1],c[n+1],d[n+1];
+for(int i=1;i&lt;=n;i++)
 &#123;
-	cin&gt;&gt;a[i];
-	c[i]=a[i];
+    cin&gt;&gt;a[i];
+    c[i]=a[i];
 &#125;
-<span class="keyword">for</span>(<span class="type">int</span> i=<span class="number">1</span>;i&lt;=n;i++)
+for(int i=1;i&lt;=n;i++)
 &#123;
-	cin&gt;&gt;b[i];
-	d[i]=b[i];
+    cin&gt;&gt;b[i];
+    d[i]=b[i];
 &#125;
-<span class="built_in">sort</span>(c+<span class="number">1</span>,c+n+<span class="number">1</span>);
-<span class="built_in">sort</span>(d+<span class="number">1</span>,d+n+<span class="number">1</span>);
-<span class="comment">//因为不能打乱ab数组，就用别的数组代替。如果排序后一模一样，里面元素也一样。</span>
-<span class="keyword">for</span>(<span class="type">int</span> i=<span class="number">1</span>;i&lt;=n;i++)
+sort(c+1,c+n+1);
+sort(d+1,d+n+1);
+//因为不能打乱ab数组，就用别的数组代替。如果排序后一模一样，里面元素也一样。
+for(int i=1;i&lt;=n;i++)
 &#123;
-	<span class="keyword">if</span>(c[i]!=d[i])&#123;<span class="built_in">puts</span>(<span class="string">&quot;NO&quot;</span>);<span class="keyword">return</span>;&#125;<span class="comment">//判断ab数组元素是否相同</span>
-&#125;</code></pre>
-
+    if(c[i]!=d[i])&#123;puts(&quot;NO&quot;);return;&#125;//判断ab数组元素是否相同
+&#125;
+</code></pre>
 <p>接着，如果可以构造出来，我们就可以每次确定一个数的位置，最后就能创造出来。</p>
-<pre><code class="highlight cpp"><span class="built_in">puts</span>(<span class="string">&quot;YES&quot;</span>);
-<span class="keyword">for</span>(<span class="type">int</span> i=<span class="number">1</span>;i&lt;=n;i++)<span class="comment">//循环b的元素</span>
+<pre><code class="cpp">puts(&quot;YES&quot;);
+for(int i=1;i&lt;=n;i++)//循环b的元素
 &#123;
-	<span class="type">int</span> x;
-	<span class="keyword">for</span>(<span class="type">int</span> j=<span class="number">1</span>;j&lt;=n;j++)
-	&#123;
-		<span class="keyword">if</span>(a[j]==b[i])
-		&#123;
-			x=j;<span class="comment">//找位置</span>
-			<span class="keyword">break</span>;
-		&#125;
-	&#125;
-	<span class="keyword">for</span>(<span class="type">int</span> j=x;j&gt;i;j--)<span class="comment">//交换</span>
-	&#123;
-		<span class="built_in">swap</span>(a[j],a[j<span class="number">-1</span>]);
-		cout&lt;&lt;j&lt;&lt;<span class="string">&quot; &quot;</span>&lt;&lt;j<span class="number">-1</span>&lt;&lt;<span class="string">&#x27;\n&#x27;</span>;
-	&#125;
+    int x;
+    for(int j=1;j&lt;=n;j++)
+    &#123;
+        if(a[j]==b[i])
+        &#123;
+            x=j;//找位置
+            break;
+        &#125;
+    &#125;
+    for(int j=x;j&gt;i;j--)//交换
+    &#123;
+        swap(a[j],a[j-1]);
+        cout&lt;&lt;j&lt;&lt;&quot; &quot;&lt;&lt;j-1&lt;&lt;&#39;\n&#39;;
+    &#125;
 &#125;
-cout&lt;&lt;<span class="number">0</span>&lt;&lt;<span class="string">&quot; &quot;</span>&lt;&lt;<span class="number">0</span>&lt;&lt;<span class="string">&#x27;\n&#x27;</span>;</code></pre>
-
+cout&lt;&lt;0&lt;&lt;&quot; &quot;&lt;&lt;0&lt;&lt;&#39;\n&#39;;
+</code></pre>
 <h3 id="完整代码"><a href="#完整代码" class="headerlink" title="完整代码"></a>完整代码</h3><p><a target="_blank" rel="noopener" href="https://www.luogu.com.cn/paste/33v2dfh4">完整代码戳这</a></p>
 
 	</div>

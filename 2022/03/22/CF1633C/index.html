@@ -668,48 +668,48 @@
 <p>角色存活定义为：角色生命 $&gt;0$。</p>
 <h3 id="题目思路-不完整"><a href="#题目思路-不完整" class="headerlink" title="题目思路(不完整)"></a>题目思路(不完整)</h3><p>我们枚举这 $k$ 次机会，分别是加攻击还是加生命。然后判断角色增加这些属性后，能否击败怪物。</p>
 <p>而且每一轮的攻击，如果角色击败了怪物，怪物不会攻击角色。也就是说，怪物可以少打一轮伤害。</p>
-<h3 id="题目代码-不完整"><a href="#题目代码-不完整" class="headerlink" title="题目代码(不完整)"></a>题目代码(不完整)</h3><pre><code class="highlight cpp"><span class="function"><span class="type">void</span> <span class="title">solve</span><span class="params">()</span></span>
-<span class="function"></span>&#123;
-	<span class="type">long</span> <span class="type">long</span> hc,dc,hm,dm,k,w,a;
-	cin&gt;&gt;hc&gt;&gt;dc&gt;&gt;hm&gt;&gt;dm&gt;&gt;k&gt;&gt;w&gt;&gt;a;<span class="comment">//输入属性</span>
-	<span class="keyword">for</span>(<span class="type">long</span> <span class="type">long</span> i=<span class="number">0</span>;i&lt;=k;i++)
-	&#123;
-		<span class="type">long</span> <span class="type">long</span> x=i,y=k-i;<span class="comment">//枚举加攻击或加生命</span>
-		<span class="type">long</span> <span class="type">long</span> rnd=<span class="built_in">ceil</span>(hm*<span class="number">1.0</span>/(dc+x*w));<span class="comment">//用怪物血量除以角色攻击得到轮数</span>
-		<span class="keyword">if</span>(dm*(rnd<span class="number">-1</span>)&lt;hc+a*y)<span class="comment">//如果怪物打出的伤害比角色生命少</span>
-		&#123;
-			<span class="built_in">puts</span>(<span class="string">&quot;YES&quot;</span>);<span class="comment">//可以通关</span>
-			<span class="keyword">return</span>;
-		&#125;
-	&#125;
-	<span class="built_in">puts</span>(<span class="string">&quot;NO&quot;</span>);
-&#125;</code></pre>
-
+<h3 id="题目代码-不完整"><a href="#题目代码-不完整" class="headerlink" title="题目代码(不完整)"></a>题目代码(不完整)</h3><pre><code class="cpp">void solve()
+&#123;
+    long long hc,dc,hm,dm,k,w,a;
+    cin&gt;&gt;hc&gt;&gt;dc&gt;&gt;hm&gt;&gt;dm&gt;&gt;k&gt;&gt;w&gt;&gt;a;//输入属性
+    for(long long i=0;i&lt;=k;i++)
+    &#123;
+        long long x=i,y=k-i;//枚举加攻击或加生命
+        long long rnd=ceil(hm*1.0/(dc+x*w));//用怪物血量除以角色攻击得到轮数
+        if(dm*(rnd-1)&lt;hc+a*y)//如果怪物打出的伤害比角色生命少
+        &#123;
+            puts(&quot;YES&quot;);//可以通关
+            return;
+        &#125;
+    &#125;
+    puts(&quot;NO&quot;);
+&#125;
+</code></pre>
 <p>但是，看似没问题，实则会在第13个数据点错误。</p>
 <p>让我们导出看一下。</p>
-<pre><code class="highlight apache"><span class="attribute">Input</span>
-<span class="attribute">1</span>
-<span class="attribute">1</span> <span class="number">1</span>
-<span class="attribute">1000000000000000</span> <span class="number">1000000000</span>
-<span class="attribute">200000</span> <span class="number">1</span> <span class="number">10000000000</span>
-
-<span class="attribute">Output</span>
-<span class="attribute">YES</span>
-
-<span class="attribute">Answer</span>
-<span class="attribute">NO</span></code></pre>
-
-<p>我们进行调试，分别输出每个循环的结果。</p>
-<pre><code class="highlight makefile">1
+<pre><code>Input
+1
 1 1
 1000000000000000 1000000000
 200000 1 10000000000
-<span class="section">加攻击机会数:0 加生命机会数:200000 总轮数:1000000000000000 怪物打出伤害:2003764204206896640 角色生命:2000000000000001</span>
-<span class="section">加攻击机会数:1 加生命机会数:199999 总轮数:500000000000000 怪物打出伤害:1001882101603448320 角色生命:1999990000000001</span>
-<span class="section">加攻击机会数:2 加生命机会数:199998 总轮数:333333333333334 怪物打出伤害:667921401402298880 角色生命:1999980000000001</span>
-<span class="section">加攻击机会数:3 加生命机会数:199997 总轮数:250000000000000 怪物打出伤害:-8722430986553051648 角色生命:1999970000000001</span>
-YES</code></pre>
 
+Output
+YES
+
+Answer
+NO
+</code></pre>
+<p>我们进行调试，分别输出每个循环的结果。</p>
+<pre><code>1
+1 1
+1000000000000000 1000000000
+200000 1 10000000000
+加攻击机会数:0 加生命机会数:200000 总轮数:1000000000000000 怪物打出伤害:2003764204206896640 角色生命:2000000000000001
+加攻击机会数:1 加生命机会数:199999 总轮数:500000000000000 怪物打出伤害:1001882101603448320 角色生命:1999990000000001
+加攻击机会数:2 加生命机会数:199998 总轮数:333333333333334 怪物打出伤害:667921401402298880 角色生命:1999980000000001
+加攻击机会数:3 加生命机会数:199997 总轮数:250000000000000 怪物打出伤害:-8722430986553051648 角色生命:1999970000000001
+YES
+</code></pre>
 <p>答案竟然爆 <code>long long</code> 了。</p>
 <p>那么我们没办法了吗？错！<code>__int128</code> 了解一下？</p>
 <p>我们给总轮数换上 <code>__int128</code> 即可。</p>

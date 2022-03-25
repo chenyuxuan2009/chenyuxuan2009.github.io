@@ -678,68 +678,69 @@
 <p>注意，线段的两个端点也算进去。</p>
 <p>那么这个线段产生<strong>左边端点个数 $\times$ 线段长度 $\times$ 右边端点个数</strong>这么多贡献。</p>
 <p>同理，每个线段也产生上述贡献。</p>
-<h3 id="AC-代码"><a href="#AC-代码" class="headerlink" title="AC 代码"></a>AC 代码</h3><pre><code class="highlight cpp"><span class="meta">#<span class="keyword">include</span><span class="string">&lt;bits/stdc++.h&gt;</span></span>
-<span class="meta">#<span class="keyword">define</span> ll long long</span>
-<span class="keyword">using</span> <span class="keyword">namespace</span> std;
-<span class="keyword">struct</span> <span class="title class_">node</span>
+<h3 id="AC-代码"><a href="#AC-代码" class="headerlink" title="AC 代码"></a>AC 代码</h3><pre><code class="cpp">#include&lt;bits/stdc++.h&gt;
+#define ll long long
+using namespace std;
+struct node
 &#123;
-	<span class="type">int</span> x,y;<span class="comment">//记录x轴和y轴</span>
+    int x,y;//记录x轴和y轴
 &#125;;
-vector&lt;node&gt;a[<span class="number">100020</span>];<span class="comment">//对数字分类</span>
-<span class="function">ll <span class="title">s</span><span class="params">(vector&lt;<span class="type">int</span>&gt;a)</span><span class="comment">//求和</span></span>
-<span class="function"></span>&#123;
-	ll sum=<span class="number">0</span>;
-	<span class="keyword">for</span>(<span class="type">int</span> i=<span class="number">1</span>;i&lt;a.<span class="built_in">size</span>();i++)
-	&#123;
-		sum+=i*(a[i]-a[i<span class="number">-1</span>])*(a.<span class="built_in">size</span>()-i);
-	&#125;
-	<span class="keyword">return</span> sum;
+vector&lt;node&gt;a[100020];//对数字分类
+ll s(vector&lt;int&gt;a)//求和
+&#123;
+    ll sum=0;
+    for(int i=1;i&lt;a.size();i++)
+    &#123;
+        sum+=i*(a[i]-a[i-1])*(a.size()-i);
+    &#125;
+    return sum;
 &#125;
-<span class="function"><span class="type">void</span> <span class="title">solve</span><span class="params">()</span></span>
-<span class="function"></span>&#123;
-	<span class="type">int</span> n,m,maxx=INT_MIN;
-	cin&gt;&gt;n&gt;&gt;m;
-	<span class="keyword">for</span>(<span class="type">int</span> i=<span class="number">1</span>;i&lt;=n;i++)
-	&#123;
-		<span class="keyword">for</span>(<span class="type">int</span> j=<span class="number">1</span>;j&lt;=m;j++)
-		&#123;
-			<span class="type">int</span> z;
-			cin&gt;&gt;z;
-			node zz;
-			zz.x=i;
-			zz.y=j;
-			a[z].<span class="built_in">push_back</span>(zz);<span class="comment">//插入这个点信息</span>
-			maxx=<span class="built_in">max</span>(z,maxx);<span class="comment">//找出最大值</span>
-		&#125;
-	&#125;
-	ll sum=<span class="number">0</span>;
-	<span class="keyword">for</span>(<span class="type">int</span> i=<span class="number">1</span>;i&lt;=maxx;i++)
-	&#123;
-		vector&lt;<span class="type">int</span>&gt;xx;<span class="comment">//记录x轴</span>
-		vector&lt;<span class="type">int</span>&gt;yy;<span class="comment">//记录y轴</span>
-		<span class="keyword">for</span>(<span class="keyword">auto</span> j:a[i])<span class="comment">//插入点的信息</span>
-		&#123;
-			xx.<span class="built_in">push_back</span>(j.x);
-			yy.<span class="built_in">push_back</span>(j.y);
-		&#125;
-        <span class="comment">//排序</span>
-		<span class="built_in">sort</span>(xx.<span class="built_in">begin</span>(),xx.<span class="built_in">end</span>());
-		<span class="built_in">sort</span>(yy.<span class="built_in">begin</span>(),yy.<span class="built_in">end</span>());
-		ll sx=<span class="built_in">s</span>(xx);
-		ll sy=<span class="built_in">s</span>(yy);
-		sum+=sx+sy;<span class="comment">//求和</span>
-	&#125;
-	cout&lt;&lt;sum&lt;&lt;endl;
+void solve()
+&#123;
+    int n,m,maxx=INT_MIN;
+    cin&gt;&gt;n&gt;&gt;m;
+    for(int i=1;i&lt;=n;i++)
+    &#123;
+        for(int j=1;j&lt;=m;j++)
+        &#123;
+            int z;
+            cin&gt;&gt;z;
+            node zz;
+            zz.x=i;
+            zz.y=j;
+            a[z].push_back(zz);//插入这个点信息
+            maxx=max(z,maxx);//找出最大值
+        &#125;
+    &#125;
+    ll sum=0;
+    for(int i=1;i&lt;=maxx;i++)
+    &#123;
+        vector&lt;int&gt;xx;//记录x轴
+        vector&lt;int&gt;yy;//记录y轴
+        for(auto j:a[i])//插入点的信息
+        &#123;
+            xx.push_back(j.x);
+            yy.push_back(j.y);
+        &#125;
+        //排序
+        sort(xx.begin(),xx.end());
+        sort(yy.begin(),yy.end());
+        ll sx=s(xx);
+        ll sy=s(yy);
+        sum+=sx+sy;//求和
+    &#125;
+    cout&lt;&lt;sum&lt;&lt;endl;
 &#125;
-<span class="function"><span class="type">int</span> <span class="title">main</span><span class="params">()</span></span>
-<span class="function"></span>&#123;
-	<span class="type">int</span> t=<span class="number">1</span>;
-	<span class="keyword">while</span>(t--)
-	&#123;
-		<span class="built_in">solve</span>();
-	&#125;
-    <span class="keyword">return</span> <span class="number">0</span>;
-&#125;</code></pre>
+int main()
+&#123;
+    int t=1;
+    while(t--)
+    &#123;
+        solve();
+    &#125;
+    return 0;
+&#125;
+</code></pre>
 
 	</div>
 

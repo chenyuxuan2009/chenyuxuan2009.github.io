@@ -673,29 +673,29 @@
 <p>确保了找的答案是质数，然后确保它是这两个数的因数（因为能整除），那么我们只要找到两个数<strong>共同的质因数</strong>。</p>
 <p>共同的质因数，一定是两个数最大公因数的质因数。</p>
 <p>所以找出最大公因数，再找出所有最大公因数的质因数（还要算上特殊的”1”），即为答案。</p>
-<h3 id="题目代码"><a href="#题目代码" class="headerlink" title="题目代码"></a>题目代码</h3><pre><code class="highlight cpp"><span class="meta">#<span class="keyword">include</span><span class="string">&lt;bits/stdc++.h&gt;</span></span>
-<span class="meta">#<span class="keyword">define</span> ll long long<span class="comment">//数据很大，要long long</span></span>
-<span class="keyword">using</span> <span class="keyword">namespace</span> std;
-ll a,b,s=<span class="number">1</span>;<span class="comment">//1一定是两个数的公因数</span>
-<span class="function">ll <span class="title">gcd</span><span class="params">(ll x,ll y)</span></span>
-<span class="function"></span>&#123;
-	<span class="keyword">return</span> y?<span class="built_in">gcd</span>(y,x%y):x;<span class="comment">//辗转相除法求最大公因数</span>
+<h3 id="题目代码"><a href="#题目代码" class="headerlink" title="题目代码"></a>题目代码</h3><pre><code class="cpp">#include&lt;bits/stdc++.h&gt;
+#define ll long long//数据很大，要long long
+using namespace std;
+ll a,b,s=1;//1一定是两个数的公因数
+ll gcd(ll x,ll y)
+&#123;
+    return y?gcd(y,x%y):x;//辗转相除法求最大公因数
 &#125;
-<span class="function"><span class="type">int</span> <span class="title">main</span><span class="params">()</span></span>
-<span class="function"></span>&#123;
-	cin&gt;&gt;a&gt;&gt;b;
-	ll g=<span class="built_in">gcd</span>(a,b);
-	<span class="keyword">for</span>(ll i=<span class="number">2</span>;i&lt;=<span class="built_in">sqrt</span>(g);i++)<span class="comment">//枚举最大公因数的质因数</span>
-	&#123;
-		<span class="keyword">if</span>(g%i==<span class="number">0</span>)<span class="comment">//如果是的（后续补充说明）</span>
-		&#123;
-			s++;<span class="comment">//找到了一个</span>
-			<span class="keyword">while</span>(g%i==<span class="number">0</span>)g/=i;<span class="comment">//把这个质因数除完</span>
-		&#125;
-	&#125;
-	cout&lt;&lt;(g!=<span class="number">1</span>?++s:s);<span class="comment">//如果有剩余的质因数，再加上1</span>
-&#125;</code></pre>
-
+int main()
+&#123;
+    cin&gt;&gt;a&gt;&gt;b;
+    ll g=gcd(a,b);
+    for(ll i=2;i&lt;=sqrt(g);i++)//枚举最大公因数的质因数
+    &#123;
+        if(g%i==0)//如果是的（后续补充说明）
+        &#123;
+            s++;//找到了一个
+            while(g%i==0)g/=i;//把这个质因数除完
+        &#125;
+    &#125;
+    cout&lt;&lt;(g!=1?++s:s);//如果有剩余的质因数，再加上1
+&#125;
+</code></pre>
 <h3 id="补充说明"><a href="#补充说明" class="headerlink" title="补充说明"></a>补充说明</h3><p>第 $15$ 行 <code>if(g%i==0)</code> 解释</p>
 <p>找到了$g$ 最小能整除的数 $i$，那么 $i$ <strong>肯定是个质数</strong>，不用加以判断。</p>
 <p>举个不成功的反例验证一下结论。</p>
