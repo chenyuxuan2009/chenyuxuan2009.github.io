@@ -507,7 +507,7 @@
 							<nav class="site-state">
 								<div class="site-state-item site-state-posts">
 									<a href="/archives">
-										<span class="site-state-item-count">20</span>
+										<span class="site-state-item-count">21</span>
 										<span class="site-state-item-name">文章</span>
 									</a>
 								</div>
@@ -593,6 +593,77 @@
 		
 		
 				
+	<article class="post card bg-white shadow-sm border-0 post-preview">
+	<header class="post-header text-center">
+		
+		<a class="post-title" href="/2022/03/22/CF1646B/">CF1646B Quality vs Quantity</a>
+		<div class="post-meta">
+			
+						
+						<div class="post-meta-detail post-meta-detail-time">
+							<i class="fa fa-clock-o" aria-hidden="true"></i>
+							<time title="发布于 2022-3-22 20:38:59 | 编辑于 2022-3-23 17:36:49">2022-3-22 20:38
+							</time>
+						</div>
+					
+						
+							<div class="post-meta-devide">|</div>
+						
+						<div class="post-meta-detail post-meta-detail-categories">
+							<i class="fa fa-bookmark-o" aria-hidden="true"></i>
+							<a class="post-meta-detail-catagory-link" href="/categories/%E9%A2%98%E8%A7%A3/">题解</a>
+						</div>
+					
+						
+							<div class="post-meta-devide">|</div>
+						
+						<div class="post-meta-detail post-meta-detail-words">
+							<i class="fa fa-book" aria-hidden="true"></i>
+							<span id="busuanzi_container_page_pv">
+								阅读<span id="busuanzi_value_page_pv"></span>次
+							</span>
+						</div>
+					
+						
+							<div class="post-meta-devide">|</div>
+						
+						<div class="post-meta-detail post-meta-detail-words">
+							<i class="fa fa-file-word-o" aria-hidden="true"></i>
+							323 字
+						</div>
+					
+						
+							<div class="post-meta-devide">|</div>
+						
+						<div class="post-meta-detail post-meta-detail-readingtime">
+							<i class="fa fa-hourglass-end" aria-hidden="true"></i>
+							1 分钟
+						</div>
+					
+		</div>
+		
+	</header>
+
+	<div class="post-content">
+		
+			
+				题目翻译我们对于 $n$ 个数 $a_1,a_2,…,a_n$，每个数可以选择标记为 Red 或 Blue。
+对于颜色 $c$，Count(c) 表示颜色 $c$ 出现几次。
+对于颜色 $c$，Sum(c) 表示标记为颜色 $c$ 的数字总和。
+问是否存在 Sum(Red) $&gt;$ Sum(Blue) 且  Count(Red) $&lt;$...
+			
+		
+	</div>
+
+	
+		<div class="post-tags">
+			<i class="fa fa-tags" aria-hidden="true"></i>
+			<a class="tag badge badge-secondary post-meta-detail-tag -none-link" href="/tags/C/" rel="tag">C++</a><a class="tag badge badge-secondary post-meta-detail-tag -none-link" href="/tags/Codeforces/" rel="tag">Codeforces</a>
+		</div>
+	
+</article>
+
+
 	<article class="post card bg-white shadow-sm border-0 post-preview">
 	<header class="post-header text-center">
 		
@@ -1236,87 +1307,8 @@ $6,8,10$ 可以凑出所有大于等于 $6$ 的偶数。转化一下：$3,4,5$ �
 </article>
 
 
-	<article class="post card bg-white shadow-sm border-0 post-preview">
-	<header class="post-header text-center">
-		
-		<a class="post-title" href="/2022/03/22/abc105_c/">ABC105C | AT4239 Base -2 Number</a>
-		<div class="post-meta">
-			
-						
-						<div class="post-meta-detail post-meta-detail-time">
-							<i class="fa fa-clock-o" aria-hidden="true"></i>
-							<time title="发布于 2022-3-22 20:38:59 | 编辑于 2022-3-23 17:33:00">2022-3-22 20:38
-							</time>
-						</div>
-					
-						
-							<div class="post-meta-devide">|</div>
-						
-						<div class="post-meta-detail post-meta-detail-categories">
-							<i class="fa fa-bookmark-o" aria-hidden="true"></i>
-							<a class="post-meta-detail-catagory-link" href="/categories/%E9%A2%98%E8%A7%A3/">题解</a>
-						</div>
-					
-						
-							<div class="post-meta-devide">|</div>
-						
-						<div class="post-meta-detail post-meta-detail-words">
-							<i class="fa fa-book" aria-hidden="true"></i>
-							<span id="busuanzi_container_page_pv">
-								阅读<span id="busuanzi_value_page_pv"></span>次
-							</span>
-						</div>
-					
-						
-							<div class="post-meta-devide">|</div>
-						
-						<div class="post-meta-detail post-meta-detail-words">
-							<i class="fa fa-file-word-o" aria-hidden="true"></i>
-							197 字
-						</div>
-					
-						
-							<div class="post-meta-devide">|</div>
-						
-						<div class="post-meta-detail post-meta-detail-readingtime">
-							<i class="fa fa-hourglass-end" aria-hidden="true"></i>
-							1 分钟
-						</div>
-					
-		</div>
-		
-	</header>
 
-	<div class="post-content">
-		
-			
-				题目翻译给定一个 $10$ 进制数，将其转变成 $-2$ 进制。
-题目思路和二进制一样短除法。
-注意事项：
-
-特判数据 $n&#x3D;0$ ，不特判的话，它本身进入不了短除法代码，答案就没有记录
-
-任何位置上不可能出现 $-1$，要转成 $1$ 输出。
-
-短除法倒着输出。
-
-
-题目代码void solve()//没加上快读快写、long long...
-			
-		
-	</div>
-
-	
-		<div class="post-tags">
-			<i class="fa fa-tags" aria-hidden="true"></i>
-			<a class="tag badge badge-secondary post-meta-detail-tag -none-link" href="/tags/Atcoder/" rel="tag">Atcoder</a><a class="tag badge badge-secondary post-meta-detail-tag -none-link" href="/tags/C/" rel="tag">C++</a>
-		</div>
-	
-</article>
-
-
-
-<nav><ul class="pagination"><li class="page-item"><a aria-label="Previous Page" class="page-link" href="/archives/2022/03/"><i class="fa fa-angle-left" aria-hidden="true"></i></a></li><li class="page-item"><a class="page-link" href="/archives/2022/03/">1</a></li><li class="page-item active"><span class="page-link" style="cursor: default;">2</span></li></ul></nav><nav><ul class="pagination pagination-mobile"><li class="page-item"><a aria-label="Previous Page" class="page-link" href="/archives/2022/03/"><i class="fa fa-angle-left" aria-hidden="true"></i></a></li><li class="page-item"><a class="page-link" href="/archives/2022/03/">1</a></li><li class="page-item active"><span class="page-link" style="cursor: default;">2</span></li></ul></nav>
+<nav><ul class="pagination"><li class="page-item"><a aria-label="Previous Page" class="page-link" href="/archives/2022/03/"><i class="fa fa-angle-left" aria-hidden="true"></i></a></li><li class="page-item"><a class="page-link" href="/archives/2022/03/">1</a></li><li class="page-item active"><span class="page-link" style="cursor: default;">2</span></li><li class="page-item"><a class="page-link" href="/archives/2022/03/page/3/">3</a></li><li class="page-item"><a aria-label="Next Page" class="page-link" href="/archives/2022/03/page/3/"><i class="fa fa-angle-right" aria-hidden="true"></i></a></li></ul></nav><nav><ul class="pagination pagination-mobile"><li class="page-item"><a aria-label="Previous Page" class="page-link" href="/archives/2022/03/"><i class="fa fa-angle-left" aria-hidden="true"></i></a></li><li class="page-item"><a class="page-link" href="/archives/2022/03/">1</a></li><li class="page-item active"><span class="page-link" style="cursor: default;">2</span></li><li class="page-item"><a class="page-link" href="/archives/2022/03/page/3/">3</a></li><li class="page-item"><a aria-label="Next Page" class="page-link" href="/archives/2022/03/page/3/"><i class="fa fa-angle-right" aria-hidden="true"></i></a></li></ul></nav>
 
 
 			
