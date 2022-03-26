@@ -687,27 +687,27 @@
 
 <p>但是，看似没问题，实则会在第13个数据点错误。</p>
 <p>让我们导出看一下。</p>
-<pre><code class="highlight plaintext">Input
-1
-1 1
-1000000000000000 1000000000
-200000 1 10000000000
+<pre><code class="highlight apache"><span class="attribute">Input</span>
+<span class="attribute">1</span>
+<span class="attribute">1</span> <span class="number">1</span>
+<span class="attribute">1000000000000000</span> <span class="number">1000000000</span>
+<span class="attribute">200000</span> <span class="number">1</span> <span class="number">10000000000</span>
 
-Output
-YES
+<span class="attribute">Output</span>
+<span class="attribute">YES</span>
 
-Answer
-NO</code></pre>
+<span class="attribute">Answer</span>
+<span class="attribute">NO</span></code></pre>
 
 <p>我们进行调试，分别输出每个循环的结果。</p>
-<pre><code class="highlight plaintext">1
+<pre><code class="highlight makefile">1
 1 1
 1000000000000000 1000000000
 200000 1 10000000000
-加攻击机会数:0 加生命机会数:200000 总轮数:1000000000000000 怪物打出伤害:2003764204206896640 角色生命:2000000000000001
-加攻击机会数:1 加生命机会数:199999 总轮数:500000000000000 怪物打出伤害:1001882101603448320 角色生命:1999990000000001
-加攻击机会数:2 加生命机会数:199998 总轮数:333333333333334 怪物打出伤害:667921401402298880 角色生命:1999980000000001
-加攻击机会数:3 加生命机会数:199997 总轮数:250000000000000 怪物打出伤害:-8722430986553051648 角色生命:1999970000000001
+<span class="section">加攻击机会数:0 加生命机会数:200000 总轮数:1000000000000000 怪物打出伤害:2003764204206896640 角色生命:2000000000000001</span>
+<span class="section">加攻击机会数:1 加生命机会数:199999 总轮数:500000000000000 怪物打出伤害:1001882101603448320 角色生命:1999990000000001</span>
+<span class="section">加攻击机会数:2 加生命机会数:199998 总轮数:333333333333334 怪物打出伤害:667921401402298880 角色生命:1999980000000001</span>
+<span class="section">加攻击机会数:3 加生命机会数:199997 总轮数:250000000000000 怪物打出伤害:-8722430986553051648 角色生命:1999970000000001</span>
 YES</code></pre>
 
 <p>答案竟然爆 <code>long long</code> 了。</p>
