@@ -674,7 +674,14 @@
 <p>同理，这张图的宽也加上超过的部分，就是 $5-1+2&#x3D;6$。</p>
 <p>那么通过长，算出奇列数和偶列数，通过宽，算出每列上面有多少的格子。</p>
 <p>最后只要<strong>奇数列个数 $\times$ 奇数列的格子 $+$ 偶数列个数 $\times$ 偶数列的格子</strong>。</p>
-<h3 id="AC-代码"><a href="#AC-代码" class="headerlink" title="AC 代码"></a>AC 代码</h3><figure class="highlight cpp"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><code class="hljs cpp"><span class="hljs-function"><span class="hljs-type">void</span> <span class="hljs-title">solve</span><span class="hljs-params">()</span><span class="hljs-comment">//记得开longlong</span></span><br><span class="hljs-function"></span>&#123;<br>	ll x1,y1,x2,y2;<br>	cin&gt;&gt;x1&gt;&gt;y1&gt;&gt;x2&gt;&gt;y2;<br>	ll x=x2-x1+<span class="hljs-number">1</span>,y=y2-y1+<span class="hljs-number">1</span>;<span class="hljs-comment">//算出长宽</span><br>	ll ans=((y+<span class="hljs-number">1</span>)/<span class="hljs-number">2</span>)*((x+<span class="hljs-number">1</span>)/<span class="hljs-number">2</span>)+((y<span class="hljs-number">-1</span>)/<span class="hljs-number">2</span>)*((x<span class="hljs-number">-1</span>)/<span class="hljs-number">2</span>);<span class="hljs-comment">//结论带入</span><br>	cout&lt;&lt;ans&lt;&lt;endl;<br>&#125;<br></code></pre></td></tr></table></figure>
+<h3 id="AC-代码"><a href="#AC-代码" class="headerlink" title="AC 代码"></a>AC 代码</h3><pre><code class="highlight cpp"><span class="function"><span class="type">void</span> <span class="title">solve</span><span class="params">()</span><span class="comment">//记得开longlong</span></span>
+<span class="function"></span>&#123;
+	ll x1,y1,x2,y2;
+	cin&gt;&gt;x1&gt;&gt;y1&gt;&gt;x2&gt;&gt;y2;
+	ll x=x2-x1+<span class="number">1</span>,y=y2-y1+<span class="number">1</span>;<span class="comment">//算出长宽</span>
+	ll ans=((y+<span class="number">1</span>)/<span class="number">2</span>)*((x+<span class="number">1</span>)/<span class="number">2</span>)+((y<span class="number">-1</span>)/<span class="number">2</span>)*((x<span class="number">-1</span>)/<span class="number">2</span>);<span class="comment">//结论带入</span>
+	cout&lt;&lt;ans&lt;&lt;endl;
+&#125;</code></pre>
 
 	</div>
 
