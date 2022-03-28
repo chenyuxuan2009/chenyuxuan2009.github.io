@@ -4,6 +4,46 @@
   
     
     <entry>
+      <title>CF1654A Maximum Cake Tastiness</title>
+      <link href="/2022/03/28/CF1654A/"/>
+      <url>/2022/03/28/CF1654A/</url>
+      
+        <content type="html"><![CDATA[<h3 id="题目翻译"><a href="#题目翻译" class="headerlink" title="题目翻译"></a>题目翻译</h3><p>有 $n$ 个数，可以选择一个区间 $[l,r]$ 进行一次翻转。最大的相邻两个数的和是多少。</p><h3 id="题目思路"><a href="#题目思路" class="headerlink" title="题目思路"></a>题目思路</h3><p>最大的和，肯定就是最大加次大。而次大肯定能翻转到最大旁边，所以答案就是次大加最大。</p><p>为什么次大肯定翻转到最大旁边：用样例解释一下。</p><pre><code class="highlight tex">65 2 1 4 7 3</code></pre><p>翻转 $[1,4]$。</p><pre><code class="highlight tex">64 1 2 5 7 3</code></pre><p>最大是 $7$，次大是 $5$。</p><p>不管怎么样，以次大为一个端点，最大旁边为一个端点，永远能保证次大换到最大旁边。</p><h3 id="题目代码"><a href="#题目代码" class="headerlink" title="题目代码"></a>题目代码</h3><pre><code class="highlight cpp"><span class="function"><span class="type">void</span> <span class="title">solve</span><span class="params">()</span></span><span class="function"></span>&#123;<span class="type">int</span> n;cin&gt;&gt;n;<span class="type">int</span> a[n+<span class="number">1</span>];<span class="keyword">for</span>(<span class="type">int</span> i=<span class="number">1</span>;i&lt;=n;i++)&#123;cin&gt;&gt;a[i];&#125;<span class="built_in">sort</span>(a+<span class="number">1</span>,a+n+<span class="number">1</span>);<span class="comment">//sort从小到大排序。</span>cout&lt;&lt;a[n]+a[n<span class="number">-1</span>]&lt;&lt;endl;&#125;</code></pre>]]></content>
+      
+      
+      <categories>
+          
+          <category> 题解 </category>
+          
+      </categories>
+      
+      
+        <tags>
+            
+            <tag> C++ </tag>
+            
+            <tag> Codeforces </tag>
+            
+        </tags>
+      
+    </entry>
+    
+    
+    
+    <entry>
+      <title></title>
+      <link href="/2022/03/28/B3619/"/>
+      <url>/2022/03/28/B3619/</url>
+      
+        <content type="html"><![CDATA[<h3 id="题目思路"><a href="#题目思路" class="headerlink" title="题目思路"></a>题目思路</h3><p>就是进制转换啦。</p><p>进制转换，肯定要讲一下短除法。就是每次看余数并做除法。</p><p>比如 $10$ 转换 $2$ 进制。</p><p>$13\bmod2&#x3D;1$</p><p>$6 \bmod 2&#x3D;0$</p><p>$3 \bmod2&#x3D;1$</p><p>$1\bmod2&#x3D;1$</p><p>最后倒序枚举余数即可。</p><p>那么，我们可以有两种方案，<strong>递归</strong>和<strong>存数组</strong>。</p><p>存数组，字面意思，把余数存下来，最后翻转，输出。</p><p>递归，每次准备着输出数，但先递归后面的余数，最后返回来输出。</p><h3 id="题目代码"><a href="#题目代码" class="headerlink" title="题目代码"></a>题目代码</h3><p>我用的是递归。</p><pre><code class="highlight cpp"><span class="meta">#<span class="keyword">include</span><span class="string">&lt;bits/stdc++.h&gt;</span></span><span class="keyword">typedef</span> <span class="type">long</span> <span class="type">long</span> ll;<span class="keyword">using</span> <span class="keyword">namespace</span> std;string c=<span class="string">&quot;0123456789ABCDEFGHIJKLMNOPQRSTUVWXYZ&quot;</span>;<span class="comment">//存数</span><span class="function"><span class="type">void</span> <span class="title">f</span><span class="params">(ll x,ll m)</span></span>&#123;<span class="keyword">if</span>(x/m)<span class="built_in">f</span>(x/m,m);cout&lt;&lt;c[x%m];&#125;<span class="comment">//递归</span><span class="function"><span class="type">int</span> <span class="title">main</span><span class="params">()</span></span><span class="function"></span>&#123;ll n,x;cin&gt;&gt;n&gt;&gt;x;<span class="keyword">if</span>(x==<span class="number">0</span>)&#123;<span class="built_in">puts</span>(<span class="string">&quot;0&quot;</span>);<span class="keyword">return</span>;&#125;<span class="built_in">f</span>(n,x);    <span class="keyword">return</span> <span class="number">0</span>;&#125;</code></pre><p><a href="https://www.luogu.com.cn/problem/B2143">想了解其他做法，可以参考B2143。</a></p>]]></content>
+      
+      
+      
+    </entry>
+    
+    
+    
+    <entry>
       <title>【置顶】网站更新日志</title>
       <link href="/2022/03/26/change/"/>
       <url>/2022/03/26/change/</url>
@@ -468,9 +508,9 @@
             
             <tag> C++ </tag>
             
-            <tag> Codeforces </tag>
-            
             <tag> Python </tag>
+            
+            <tag> Codeforces </tag>
             
         </tags>
       
