@@ -4,6 +4,25 @@
   
     
     <entry>
+      <title>Pycharm讲解</title>
+      <link href="/2022/04/05/pycharm/"/>
+      <url>/2022/04/05/pycharm/</url>
+      
+        <content type="html"><![CDATA[<h3 id="下载软件"><a href="#下载软件" class="headerlink" title="下载软件"></a>下载软件</h3><p>首先进入官网，<a href="https://www.jetbrains.com/pycharm/">https://www.jetbrains.com/pycharm</a>，进去之后，点击黑色的 <code>DOWNLOAD</code>。</p><p><img src="https://s1.ax1x.com/2022/04/05/qLJjeJ.png" alt="qLJjeJ.png"></p><p>点击之后，进入这样的页面。</p><p><img src="https://s1.ax1x.com/2022/04/05/qLJOL4.png" alt="qLJOL4.png"><br>一定选择右边的，右边的是社区版，虽然缺失部分功能，却是免费的。</p><p>左边是正版，有钱的话，还是支持一下，付点钱，但是有点小贵。</p><p>下载好之后，在下载里面有这样图案。</p><p>下载的东西一般都在 <code>此电脑\下载</code> 或 <code>此电脑\Download</code>。</p><p><img src="https://s1.ax1x.com/2022/04/05/qLJHzT.png" alt="qLJHzT.png"></p><h3 id="安装软件"><a href="#安装软件" class="headerlink" title="安装软件"></a>安装软件</h3><p>双击点开，这样的页面，点击 <code>Next</code>。</p><p><img src="https://s1.ax1x.com/2022/04/05/qLJLyF.png" alt="qLJLyF.png"></p><p>这个是设置存放的目录，看个人喜好，我放在 D盘。</p><p>点击 <code>Next</code>。</p><p><img src="https://s1.ax1x.com/2022/04/05/qLJqQU.png" alt="qLJqQU.png"></p><p>全都打上勾，<code>Next</code>。</p><p><img src="https://s1.ax1x.com/2022/04/05/qLJvw9.png" alt="qLJvw9.png"></p><p>不用管，直接 <code>Install</code>。</p><p><img src="https://s1.ax1x.com/2022/04/05/qLJxoR.png" alt="qLJxoR.png"></p><p>这时候就开始下载了。</p><p><img src="https://s1.ax1x.com/2022/04/05/qLYSF1.png" alt="qLYSF1.png"></p><p>下载好之后，直接重启电脑，选择第一个，打钩，<code>Finish</code>。</p><p><img src="https://s1.ax1x.com/2022/04/05/qLYpJx.png" alt="qLYpJx.png"></p><p>下载好后，电脑出现这样的图标，就成功了。</p><p><img src="https://s1.ax1x.com/2022/04/05/qLY9W6.png" alt="qLY9W6.png"></p><p>打开是这样的页面。</p><p><img src="https://s1.ax1x.com/2022/04/05/qLYFyD.png" alt="qLYFyD.png"></p><p>新建一个 <code>Project</code>。</p><p><img src="https://s1.ax1x.com/2022/04/05/qLYiQO.png" alt="qLYiQO.png"></p><p>我这边是选择在桌面上建立一个名为 Python 的文件夹，放代码。改第一行就好，其他不动，<code>Create</code>。</p><p><img src="https://s1.ax1x.com/2022/04/05/qLYPSK.png" alt="qLYPSK.png"></p><p>打开这个样子。</p><p><img src="https://s1.ax1x.com/2022/04/05/qLYkOe.png" alt="qLYkOe.png"></p><h3 id="配置软件"><a href="#配置软件" class="headerlink" title="配置软件"></a>配置软件</h3><h4 id="设置主题"><a href="#设置主题" class="headerlink" title="设置主题"></a>设置主题</h4><p>我们不设置东西，打开是纯黑色界面，看得难受。</p><p>所以我我们来更改颜色主题。</p><p>左上角，<code>File-Settings</code>。</p><p><img src="https://s1.ax1x.com/2022/04/05/qLYkOe.png" alt="qLYkOe.png"></p><p>找到 <code>Editor-Color Scheme</code>。</p><p><img src="https://s1.ax1x.com/2022/04/05/qLYZTA.png" alt="qLYZTA.png"></p><p>直接更改，我选择的是 <code>Github</code> 主题，点击 <code>OK</code>。</p><p><img src="https://s1.ax1x.com/2022/04/05/qLYmFI.png" alt="qLYmFI.png"></p><p>此时，颜色调整好了。</p><p><img src="https://s1.ax1x.com/2022/04/05/qLYufP.png" alt="qLYufP.png"></p><h4 id="设置中文"><a href="#设置中文" class="headerlink" title="设置中文"></a>设置中文</h4><p>老地方，<code>File-Settings</code>。</p><p>打开后，找到 <code>Plugins</code>。</p><p><img src="https://s1.ax1x.com/2022/04/05/qLYnYt.png" alt="qLYnYt.png"></p><p>搜索 <code>Chinese</code>。</p><details><summary>无法查找？提示刷新网络依旧不出现插件页面？点击左侧小三角，展开，进行讲解。</summary><p>出现这种情况：<br>1.打开 <code>C盘-Windows-System32-drivers-etc-hosts</code>。<br>2.进入 <a href="https://ipaddress.com/">ipaddress</a>，搜索 <a href="https://plugins.jetbrains.com/">plugins.jetbrains</a> 的ip。 <br>3.找到第一个 ip，进入 hosts 文件，黏贴 <code>查找到的ip plugins.jetbrains.com</code> 这样一段字符。比如我的是 <code>108.156.107.47 plugins.jetbrains.com</code>。这个是不一定的，ip 地址是自己搜索的结果。<br>4.回 Pycharm，刷新试试。</p></details><p><img src="https://s1.ax1x.com/2022/04/05/qLY1Og.png" alt="qLY1Og.png"></p><p>选择第几个是不重要的，有时候可能会变。但里面一定要出现 <code>Simplified</code> 的字眼。</p><p>点击下载。</p><p><img src="https://s1.ax1x.com/2022/04/05/qLYEeH.png" alt="qLYEeH.png"></p><p>下载好后，点击 <code>Restart IDE</code>，重启 Pycharm。</p><p><img src="https://s1.ax1x.com/2022/04/05/qLY8mQ.png" alt="qLY8mQ.png"></p><p>再次打开就变成中文了。</p><p><img src="https://s1.ax1x.com/2022/04/05/qLYGwj.png" alt="qLYGwj.png"></p><h4 id="配置解释"><a href="#配置解释" class="headerlink" title="配置解释"></a>配置解释</h4><p>有的时候，特别是 Python 爬虫编写，会报错。我们就要下载这些东西。</p><p><code>设置-项目:Python-Python 解释器</code>。</p><p><img src="https://s1.ax1x.com/2022/04/05/qLYJTs.png"></p><p>插句嘴，像 BeautifulSoup4 这样非自带的，本地下载是打开 cmd，输入以下内容。</p><pre><code class="highlight cpp">pip3 install BeautifulSoup</code></pre><p>其他同理。</p><p><img src="https://s1.ax1x.com/2022/04/05/qLYtkn.png" alt="qLYtkn.png"></p><p>话说回来，Python 解释器，双击 <code>pip</code>。</p><p><img src="https://s1.ax1x.com/2022/04/05/qLYNYq.png" alt="qLYNYq.png"></p><p>打开。</p><p><img src="https://s1.ax1x.com/2022/04/05/qLYUf0.png" alt="qLYUf0.png"></p><p>搜索 <code>BeautifulSoup</code>。</p><p><img src="https://s1.ax1x.com/2022/04/05/qLYdpV.png" alt="qLYdpV.png"></p><p>下载。</p><p><img src="https://s1.ax1x.com/2022/04/05/qLYwlT.png" alt="qLYwlT.png"></p><p>其他会用到的，都可以下载。</p><p>这样，Pycharm 就差不多配置完了。有其他的，欢迎评论，我一一填坑。</p>]]></content>
+      
+      
+      <categories>
+          
+          <category> 讲解 </category>
+          
+      </categories>
+      
+      
+    </entry>
+    
+    
+    
+    <entry>
       <title>【置顶】信息学行内黑话</title>
       <link href="/2022/03/30/OI/"/>
       <url>/2022/03/30/OI/</url>
@@ -508,9 +527,9 @@
             
             <tag> C++ </tag>
             
-            <tag> Python </tag>
-            
             <tag> Codeforces </tag>
+            
+            <tag> Python </tag>
             
         </tags>
       
