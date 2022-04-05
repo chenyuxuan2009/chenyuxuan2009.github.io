@@ -4,6 +4,60 @@
   
     
     <entry>
+      <title>CF1656B Subtract Operation</title>
+      <link href="/2022/04/05/CF1656B/"/>
+      <url>/2022/04/05/CF1656B/</url>
+      
+        <content type="html"><![CDATA[<h3 id="题目翻译"><a href="#题目翻译" class="headerlink" title="题目翻译"></a>题目翻译</h3><p>有 $n$ 个数，每次选一个删掉，其他数都减去删掉的数，问最后一个数会不会等于 $k$。</p><h3 id="题目分析"><a href="#题目分析" class="headerlink" title="题目分析"></a>题目分析</h3><p>这题一看就是结论题。我们先把 $a$ 数组假设为删除数字顺序定下来的数组，看最后结果。</p><p><img src="https://cdn.luogu.com.cn/upload/image_hosting/xhqaiz6i.png"></p><p>上述过程每步已经化简。</p><p>那么，很容易看出，最后答案是两个数的差。</p><p>这题便成为了：$n$ 个数里，是否有两个数字差为 $k$。</p><p>那么我想到是用 <code>map</code> 和 <code>set</code> 做。</p><p><code>map</code> 没访问的位置便不存在，不担心 RE，<code>set</code> 自带 <code>count</code> 找出现次数。</p><h3 id="AC-代码"><a href="#AC-代码" class="headerlink" title="AC 代码"></a>AC 代码</h3><h4 id="set"><a href="#set" class="headerlink" title="set"></a>set</h4><pre><code class="highlight cpp"><span class="meta">#<span class="keyword">include</span><span class="string">&lt;bits/stdc++.h&gt;</span></span><span class="keyword">typedef</span> <span class="type">long</span> <span class="type">long</span> ll;<span class="keyword">using</span> <span class="keyword">namespace</span> std;<span class="function"><span class="type">void</span> <span class="title">solve</span><span class="params">()</span></span><span class="function"></span>&#123;set&lt;ll&gt;s;s.<span class="built_in">clear</span>();ll n,k;cin&gt;&gt;n&gt;&gt;k;<span class="type">bool</span> f=<span class="number">0</span>;<span class="keyword">for</span>(<span class="type">int</span> i=<span class="number">1</span>;i&lt;=n;i++)&#123;ll x;cin&gt;&gt;x;s.<span class="built_in">insert</span>(x);<span class="keyword">if</span>(s.<span class="built_in">count</span>(x-k)||s.<span class="built_in">count</span>(x+k))<span class="comment">//差值为k，可能x是较大数，也可能是较小数。</span>&#123;f=<span class="number">1</span>;&#125;&#125;<span class="built_in">puts</span>(f==<span class="number">1</span>?<span class="string">&quot;YES&quot;</span>:<span class="string">&quot;NO&quot;</span>);&#125;<span class="function"><span class="type">int</span> <span class="title">main</span><span class="params">()</span></span><span class="function"></span>&#123;<span class="type">int</span> t;cin&gt;&gt;t;<span class="keyword">while</span>(t--)&#123;<span class="built_in">solve</span>();&#125;    <span class="keyword">return</span> <span class="number">0</span>;&#125;</code></pre><h4 id="map"><a href="#map" class="headerlink" title="map"></a>map</h4><pre><code class="highlight cpp"><span class="meta">#<span class="keyword">include</span><span class="string">&lt;bits/stdc++.h&gt;</span></span><span class="keyword">typedef</span> <span class="type">long</span> <span class="type">long</span> ll;<span class="keyword">using</span> <span class="keyword">namespace</span> std;<span class="function"><span class="type">void</span> <span class="title">solve</span><span class="params">()</span></span><span class="function"></span>&#123;map&lt;ll,<span class="type">bool</span>&gt;mp;mp.<span class="built_in">clear</span>();ll n,k;cin&gt;&gt;n&gt;&gt;k;<span class="type">bool</span> f=<span class="number">0</span>;<span class="keyword">for</span>(<span class="type">int</span> i=<span class="number">1</span>;i&lt;=n;i++)&#123;ll x;cin&gt;&gt;x;mp[x]=<span class="number">1</span>;<span class="keyword">if</span>(mp[x-k]||mp[x+k])&#123;f=<span class="number">1</span>;&#125;&#125;<span class="built_in">puts</span>(f==<span class="number">1</span>?<span class="string">&quot;YES&quot;</span>:<span class="string">&quot;NO&quot;</span>);&#125;<span class="function"><span class="type">int</span> <span class="title">main</span><span class="params">()</span></span><span class="function"></span>&#123;<span class="type">int</span> t;cin&gt;&gt;t;<span class="keyword">while</span>(t--)&#123;<span class="built_in">solve</span>();&#125;    <span class="keyword">return</span> <span class="number">0</span>;&#125;</code></pre>]]></content>
+      
+      
+      <categories>
+          
+          <category> 题解 </category>
+          
+      </categories>
+      
+      
+        <tags>
+            
+            <tag> C++ </tag>
+            
+            <tag> Codeforces </tag>
+            
+        </tags>
+      
+    </entry>
+    
+    
+    
+    <entry>
+      <title>CF727C Guess the Array</title>
+      <link href="/2022/04/05/CF727C/"/>
+      <url>/2022/04/05/CF727C/</url>
+      
+        <content type="html"><![CDATA[<h3 id="题目翻译"><a href="#题目翻译" class="headerlink" title="题目翻译"></a>题目翻译</h3><p>一个长度为 $n$ 的数组，最多 $n$ 次询问，输出数组元素。</p><p>询问：每次输出 <code>? x y</code>，返回 $x+y$ 的值。</p><p>输出：输出 <code> !</code> 之后空一格，正常输出数组元素。  </p><h3 id="题目思路"><a href="#题目思路" class="headerlink" title="题目思路"></a>题目思路</h3><p>小学数学知识。</p><p>我们先询问 $x+y$ 的值，在询问 $x+z$ 的值，最后询问 $y+z$ 的值。</p><p>恰好每个数出现两次，把总和除以二，得到 $x+y+z$。</p><p>知道三数总和，知道两两之和，相减求 $3$ 个数的值。</p><p>接着处理余下的数。</p><p>整除 $3$，输出。</p><p>余 $2$，查询两个数的和，在随机找一个数搭配算出来。</p><p>余 $1$，随便找数搭配算。</p><h3 id="AC-代码"><a href="#AC-代码" class="headerlink" title="AC 代码"></a>AC 代码</h3><pre><code class="highlight cpp"><span class="function"><span class="type">void</span> <span class="title">solve</span><span class="params">()</span></span><span class="function"></span>&#123;<span class="type">int</span> n;cin&gt;&gt;n;<span class="type">int</span> a[n+<span class="number">1</span>];<span class="keyword">for</span>(<span class="type">int</span> i=<span class="number">1</span>;i&lt;=n-n%<span class="number">3</span>;i+=<span class="number">3</span>)<span class="comment">//先3个一组解决</span>&#123;<span class="type">int</span> x,y,z;cout&lt;&lt;<span class="string">&quot;? &quot;</span>&lt;&lt;i&lt;&lt;<span class="string">&quot; &quot;</span>&lt;&lt;i+<span class="number">2</span>&lt;&lt;endl;<span class="built_in">fflush</span>(stdout);cin&gt;&gt;x;cout&lt;&lt;<span class="string">&quot;? &quot;</span>&lt;&lt;i&lt;&lt;<span class="string">&quot; &quot;</span>&lt;&lt;i+<span class="number">1</span>&lt;&lt;endl;<span class="built_in">fflush</span>(stdout);cin&gt;&gt;y;cout&lt;&lt;<span class="string">&quot;? &quot;</span>&lt;&lt;i+<span class="number">1</span>&lt;&lt;<span class="string">&quot; &quot;</span>&lt;&lt;i+<span class="number">2</span>&lt;&lt;endl;<span class="built_in">fflush</span>(stdout);cin&gt;&gt;z;<span class="type">int</span> sum=x+y+z;sum/=<span class="number">2</span>;a[i+<span class="number">1</span>]=sum-x;a[i+<span class="number">2</span>]=sum-y;a[i]=sum-z;&#125;    <span class="comment">//解决剩下的</span><span class="keyword">if</span>(n%<span class="number">3</span>==<span class="number">2</span>)&#123;cout&lt;&lt;<span class="string">&quot;? &quot;</span>&lt;&lt;n<span class="number">-1</span>&lt;&lt;<span class="string">&quot; &quot;</span>&lt;&lt;n&lt;&lt;endl;<span class="built_in">fflush</span>(stdout);<span class="type">int</span> x,y;cin&gt;&gt;x;cout&lt;&lt;<span class="string">&quot;? &quot;</span>&lt;&lt;<span class="number">1</span>&lt;&lt;<span class="string">&quot; &quot;</span>&lt;&lt;n&lt;&lt;endl;<span class="built_in">fflush</span>(stdout);cin&gt;&gt;y;a[n]=y-a[<span class="number">1</span>];a[n<span class="number">-1</span>]=x-a[n];&#125;<span class="keyword">if</span>(n%<span class="number">3</span>==<span class="number">1</span>)&#123;cout&lt;&lt;<span class="string">&quot;? 1 &quot;</span>&lt;&lt;n&lt;&lt;endl;<span class="built_in">fflush</span>(stdout);<span class="type">int</span> x;cin&gt;&gt;x;a[n]=x-a[<span class="number">1</span>];&#125;cout&lt;&lt;<span class="string">&quot;! &quot;</span>;<span class="keyword">for</span>(<span class="type">int</span> i=<span class="number">1</span>;i&lt;=n;i++)&#123;cout&lt;&lt;a[i]&lt;&lt;<span class="string">&quot; &quot;</span>;&#125;&#125;</code></pre><p>不知道交互题怎么解决，看<a href="https://www.luogu.com.cn/problem/P1947">P1947</a>和<a href="https://www.luogu.com.cn/problem/P1733">P1733</a>。</p>]]></content>
+      
+      
+      <categories>
+          
+          <category> 题解 </category>
+          
+      </categories>
+      
+      
+        <tags>
+            
+            <tag> C++ </tag>
+            
+            <tag> Codeforces </tag>
+            
+        </tags>
+      
+    </entry>
+    
+    
+    
+    <entry>
       <title>Pycharm讲解</title>
       <link href="/2022/04/05/pycharm/"/>
       <url>/2022/04/05/pycharm/</url>
@@ -67,7 +121,7 @@
       <link href="/2022/03/26/change/"/>
       <url>/2022/03/26/change/</url>
       
-        <content type="html"><![CDATA[<h3 id="2022"><a href="#2022" class="headerlink" title="2022"></a>2022</h3><h4 id="2022-3-22"><a href="#2022-3-22" class="headerlink" title="2022.3.22"></a>2022.3.22</h4><p>创建此网站。</p><p>新增文章《<a href="https://chenyuxuan2009.github.io/2022/03/22/abc105_c/">ABC105C | AT4239 Base -2 Number</a>》；</p><p>新增文章《<a href="https://chenyuxuan2009.github.io/2022/03/22/abc142_d/">ABC142D | AT4875 Disjoint Set of Common Divisors</a>》；</p><p>新增文章《<a href="https://chenyuxuan2009.github.io/2022/03/22/CF1555A/">CF1555A PizzaForces</a>》；</p><p>新增文章《<a href="https://chenyuxuan2009.github.io/2022/03/22/CF1613B/">CF1613B Absent Remainder</a>》；</p><p>新增文章《<a href="https://chenyuxuan2009.github.io/2022/03/22/CF1615A/">CF1615A Closing The Gap</a>》；</p><p>新增文章《<a href="https://chenyuxuan2009.github.io/2022/03/22/CF1621A/">CF1621A Stable Arrangement of Rooks</a>》；</p><p>新增文章《<a href="https://chenyuxuan2009.github.io/2022/03/22/CF1627B/">CF1627B Not Sitting</a>》；</p><p>新增文章《<a href="https://chenyuxuan2009.github.io/2022/03/22/CF1633B/">CF1633B Minority</a>》；</p><p>新增文章《<a href="https://chenyuxuan2009.github.io/2022/03/22/CF1633C/">CF1633C Kill the Monster</a>》；</p><p>新增文章《<a href="https://chenyuxuan2009.github.io/2022/03/22/CF1644B/">CF1644B Anti-Fibonacci Permutation</a>》；</p><p>新增文章《<a href="https://chenyuxuan2009.github.io/2022/03/22/CF1646B/">CF1646B Quality vs Quantity</a>》；</p><p>新增文章《<a href="https://chenyuxuan2009.github.io/2022/03/22/CF1648A/">CF1648A Weird Sum</a>》；</p><p>新增文章《<a href="https://chenyuxuan2009.github.io/2022/03/22/CF1651B/">CF1651B Prove Him Wrong</a>》；</p><p>新增文章《<a href="https://chenyuxuan2009.github.io/2022/03/22/cf17_final_a/">CF17 FINAL A | AT3602 AKIBA</a>》；</p><p>新增文章《<a href="https://chenyuxuan2009.github.io/2022/03/22/CF630E/">CF630E A rectangle</a>》；</p><p>新增文章《<a href="https://chenyuxuan2009.github.io/2022/03/22/P8197/">P8197 排排队</a>》；</p><h4 id="2022-3-23"><a href="#2022-3-23" class="headerlink" title="2022.3.23"></a>2022.3.23</h4><p>新增文章《<a href="https://chenyuxuan2009.github.io/2022/03/23/%E4%B8%89%E7%9B%AE%E8%BF%90%E7%AE%97%E7%AC%A6%E8%AE%B2%E8%A7%A3/">三目运算符讲解</a>》；</p><p>新增文章《<a href="https://chenyuxuan2009.github.io/2022/03/23/top/">【置顶】公告</a>》；</p><p>添加评论功能；</p><h4 id="2022-3-24"><a href="#2022-3-24" class="headerlink" title="2022.3.24"></a>2022.3.24</h4><p>新增文章《<a href="https://chenyuxuan2009.github.io/2022/03/24/freopen%E8%AE%B2%E8%A7%A3/">freopen讲解</a>》</p><h4 id="2022-3-25"><a href="#2022-3-25" class="headerlink" title="2022.3.25"></a>2022.3.25</h4><p>新增文章《<a href="https://chenyuxuan2009.github.io/2022/03/25/code/">【置顶】我的码风</a>》</p><h4 id="2022-3-26"><a href="#2022-3-26" class="headerlink" title="2022.3.26"></a>2022.3.26</h4><p>优化代码块显示；</p><p>新增文章《<a href="https://chenyuxuan2009.github.io/2022/03/26/change/">【置顶】网站更新日志</a>》；</p><h4 id="2022-3-30"><a href="#2022-3-30" class="headerlink" title="2022.3.30"></a>2022.3.30</h4><p>新增文章《<a href="https://chenyuxuan2009.github.io/2022/03/30/OI/">【置顶】信息学行内黑话</a>》；</p>]]></content>
+        <content type="html"><![CDATA[<h3 id="2022"><a href="#2022" class="headerlink" title="2022"></a>2022</h3><h4 id="2022-3-22"><a href="#2022-3-22" class="headerlink" title="2022.3.22"></a>2022.3.22</h4><p>创建此网站。</p><p>新增文章《<a href="https://chenyuxuan2009.github.io/2022/03/22/abc105_c/">ABC105C | AT4239 Base -2 Number</a>》；</p><p>新增文章《<a href="https://chenyuxuan2009.github.io/2022/03/22/abc142_d/">ABC142D | AT4875 Disjoint Set of Common Divisors</a>》；</p><p>新增文章《<a href="https://chenyuxuan2009.github.io/2022/03/22/CF1555A/">CF1555A PizzaForces</a>》；</p><p>新增文章《<a href="https://chenyuxuan2009.github.io/2022/03/22/CF1613B/">CF1613B Absent Remainder</a>》；</p><p>新增文章《<a href="https://chenyuxuan2009.github.io/2022/03/22/CF1615A/">CF1615A Closing The Gap</a>》；</p><p>新增文章《<a href="https://chenyuxuan2009.github.io/2022/03/22/CF1621A/">CF1621A Stable Arrangement of Rooks</a>》；</p><p>新增文章《<a href="https://chenyuxuan2009.github.io/2022/03/22/CF1627B/">CF1627B Not Sitting</a>》；</p><p>新增文章《<a href="https://chenyuxuan2009.github.io/2022/03/22/CF1633B/">CF1633B Minority</a>》；</p><p>新增文章《<a href="https://chenyuxuan2009.github.io/2022/03/22/CF1633C/">CF1633C Kill the Monster</a>》；</p><p>新增文章《<a href="https://chenyuxuan2009.github.io/2022/03/22/CF1644B/">CF1644B Anti-Fibonacci Permutation</a>》；</p><p>新增文章《<a href="https://chenyuxuan2009.github.io/2022/03/22/CF1646B/">CF1646B Quality vs Quantity</a>》；</p><p>新增文章《<a href="https://chenyuxuan2009.github.io/2022/03/22/CF1648A/">CF1648A Weird Sum</a>》；</p><p>新增文章《<a href="https://chenyuxuan2009.github.io/2022/03/22/CF1651B/">CF1651B Prove Him Wrong</a>》；</p><p>新增文章《<a href="https://chenyuxuan2009.github.io/2022/03/22/cf17_final_a/">CF17 FINAL A | AT3602 AKIBA</a>》；</p><p>新增文章《<a href="https://chenyuxuan2009.github.io/2022/03/22/CF630E/">CF630E A rectangle</a>》；</p><p>新增文章《<a href="https://chenyuxuan2009.github.io/2022/03/22/P8197/">P8197 排排队</a>》；</p><h4 id="2022-3-23"><a href="#2022-3-23" class="headerlink" title="2022.3.23"></a>2022.3.23</h4><p>新增文章《<a href="https://chenyuxuan2009.github.io/2022/03/23/%E4%B8%89%E7%9B%AE%E8%BF%90%E7%AE%97%E7%AC%A6%E8%AE%B2%E8%A7%A3/">三目运算符讲解</a>》；</p><p>新增文章《<a href="https://chenyuxuan2009.github.io/2022/03/23/top/">【置顶】公告</a>》；</p><p>添加评论功能；</p><h4 id="2022-3-24"><a href="#2022-3-24" class="headerlink" title="2022.3.24"></a>2022.3.24</h4><p>新增文章《<a href="https://chenyuxuan2009.github.io/2022/03/24/freopen%E8%AE%B2%E8%A7%A3/">freopen讲解</a>》</p><h4 id="2022-3-25"><a href="#2022-3-25" class="headerlink" title="2022.3.25"></a>2022.3.25</h4><p>新增文章《<a href="https://chenyuxuan2009.github.io/2022/03/25/code/">【置顶】我的码风</a>》</p><h4 id="2022-3-26"><a href="#2022-3-26" class="headerlink" title="2022.3.26"></a>2022.3.26</h4><p>优化代码块显示；</p><p>新增文章《<a href="https://chenyuxuan2009.github.io/2022/03/26/change/">【置顶】网站更新日志</a>》；</p><h4 id="2022-3-30"><a href="#2022-3-30" class="headerlink" title="2022.3.30"></a>2022.3.30</h4><p>新增文章《<a href="https://chenyuxuan2009.github.io/2022/03/30/OI/">【置顶】信息学行内黑话</a>》；</p><h4 id="2022-4-5"><a href="#2022-4-5" class="headerlink" title="2022.4.5"></a>2022.4.5</h4><p>新增文章《<a href="https://chenyuxuan2009.github.io/2022/04/05/pycharm/">Pycharm讲解</a>》；</p>]]></content>
       
       
       
@@ -527,9 +581,9 @@
             
             <tag> C++ </tag>
             
-            <tag> Codeforces </tag>
-            
             <tag> Python </tag>
+            
+            <tag> Codeforces </tag>
             
         </tags>
       
