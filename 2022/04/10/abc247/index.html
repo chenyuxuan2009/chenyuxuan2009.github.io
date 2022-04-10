@@ -17,7 +17,7 @@
 <meta property="og:description" content="abc247_a题目翻译一个字符串，输出向左移 $1$ 位的结果，第四个位置移完后消失。 题目思路直接输出前一个位置。 AC 代码void solve() &amp;#123; 	char c1,c2,c3,c4; 	cin&gt;&gt;c1&gt;&gt;c2&gt;&gt;c3&gt;&gt;c4; 	cout&lt;&lt;0&lt;&lt;c1&lt;&lt;c2&lt;&lt;c3&lt;&amp;l">
 <meta property="og:locale" content="zh_CN">
 <meta property="article:published_time" content="2022-04-10T11:42:04.402Z">
-<meta property="article:modified_time" content="2022-04-10T13:41:38.363Z">
+<meta property="article:modified_time" content="2022-04-10T14:01:57.284Z">
 <meta property="article:author" content="CYX">
 <meta property="article:tag" content="C++">
 <meta property="article:tag" content="Atcoder">
@@ -617,7 +617,7 @@
 						
 						<div class="post-meta-detail post-meta-detail-time">
 							<i class="fa fa-clock-o" aria-hidden="true"></i>
-							<time title="发布于 2022-4-10 19:42:04 | 编辑于 2022-4-10 21:41:38">2022-4-10 19:42
+							<time title="发布于 2022-4-10 19:42:04 | 编辑于 2022-4-10 22:01:57">2022-4-10 19:42
 							</time>
 						</div>
 					
@@ -644,7 +644,7 @@
 						
 						<div class="post-meta-detail post-meta-detail-words">
 							<i class="fa fa-file-word-o" aria-hidden="true"></i>
-							851 字
+							1.2k 字
 						</div>
 					
 						
@@ -652,7 +652,7 @@
 						
 						<div class="post-meta-detail post-meta-detail-readingtime">
 							<i class="fa fa-hourglass-end" aria-hidden="true"></i>
-							4 分钟
+							5 分钟
 						</div>
 					
 		</div>
@@ -804,6 +804,65 @@ queue&lt;node&gt;q;
 	cout&lt;&lt;ans&lt;&lt;endl;
 &#125;</code></pre>
 
+<h3 id="abc247-f"><a href="#abc247-f" class="headerlink" title="abc247_f"></a>abc247_f</h3><h4 id="题目翻译-5"><a href="#题目翻译-5" class="headerlink" title="题目翻译"></a>题目翻译</h4><p>有 $n$ 张牌，第 $i$ 张牌正面是 $P_i$，反面是 $Q_i$。保证 $P_i$和 $Q_i$ 是 $1$ 到 $n$ 的排列。<br>从所有的牌中选一个子集，使得从 $1$ 到 $n$ 的每个数字，都出现过（正面或反面） 。</p>
+<h4 id="题目思路-5"><a href="#题目思路-5" class="headerlink" title="题目思路"></a>题目思路</h4><p>把每张牌看做是连接 $P_i$ 和 $Q_i$ 的一条边。</p>
+<p>因为都是排列，整个图是由若干环组成的。</p>
+<p>对每个换来说，选一个子集，不能有连续的两条边不选。</p>
+<p>答案是 Lucas Number。</p>
+<p>不同环不互相影响，不同环的答案撑起来就可以了。</p>
+<h4 id="AC-代码-5"><a href="#AC-代码-5" class="headerlink" title="AC 代码"></a>AC 代码</h4><pre><code class="highlight cpp"><span class="type">const</span> <span class="type">int</span> mod=<span class="number">998244353</span>;
+<span class="type">int</span> f[<span class="number">200050</span>];
+<span class="type">int</span> c[<span class="number">200050</span>];
+<span class="type">int</span> p[<span class="number">200050</span>];
+<span class="type">int</span> q[<span class="number">200050</span>];
+<span class="type">int</span> g[<span class="number">200050</span>]=&#123;<span class="number">2</span>,<span class="number">1</span>&#125;;
+<span class="type">long</span> <span class="type">long</span> z=<span class="number">1</span>;
+<span class="function"><span class="type">int</span> <span class="title">F</span><span class="params">(<span class="type">int</span> x)</span></span>
+<span class="function"></span>&#123;
+	<span class="keyword">return</span> f[x]!=x?f[x]=<span class="built_in">F</span>(f[x]):x;
+&#125;
+<span class="function"><span class="type">void</span> <span class="title">U</span><span class="params">(<span class="type">int</span> x,<span class="type">int</span> y)</span></span>
+<span class="function"></span>&#123;
+	x=<span class="built_in">F</span>(x);
+	y=<span class="built_in">F</span>(y);
+	<span class="keyword">if</span>(x==y)
+	&#123;
+		<span class="keyword">return</span>;
+	&#125;
+	f[x]=y;
+	c[y]+=c[x];
+&#125;
+<span class="function"><span class="type">void</span> <span class="title">solve</span><span class="params">()</span></span>
+<span class="function"></span>&#123;
+	<span class="type">int</span> n;
+	cin&gt;&gt;n;
+	<span class="keyword">for</span>(<span class="type">int</span> i=<span class="number">2</span>;i&lt;=n;i++)
+	&#123;
+		g[i]=(g[i<span class="number">-1</span>]+g[i<span class="number">-2</span>])%mod;
+	&#125;
+	<span class="keyword">for</span>(<span class="type">int</span> i=<span class="number">1</span>;i&lt;=n;i++)
+	&#123;
+		f[i]=i;
+		c[i]=<span class="number">1</span>;
+	&#125;
+	<span class="keyword">for</span>(<span class="type">int</span> i=<span class="number">1</span>;i&lt;=n;i++)
+	&#123;
+		cin&gt;&gt;p[i];
+	&#125;
+	<span class="keyword">for</span>(<span class="type">int</span> i=<span class="number">1</span>;i&lt;=n;i++)
+	&#123;
+		cin&gt;&gt;q[i];
+		<span class="built_in">U</span>(p[i],q[i]);
+	&#125;
+	<span class="keyword">for</span>(<span class="type">int</span> i=<span class="number">1</span>;i&lt;=n;i++)
+	&#123;
+		<span class="keyword">if</span>(f[i]==i)
+		&#123;
+			z=z*g[c[i]]%mod;
+		&#125;
+	&#125;
+	cout&lt;&lt;z&lt;&lt;endl;	
+&#125;</code></pre>
 
 	</div>
 
