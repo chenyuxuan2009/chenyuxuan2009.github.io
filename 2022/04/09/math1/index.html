@@ -17,7 +17,7 @@
 <meta property="og:description" content="友情提醒：抄袭非题解区的代码，也属于抄袭。同学们请勿复制以下代码。 顺带一提，cz前两天查ctj，光是一天，棕掉、封掉的，陶片放逐的显示都溢出了，上午的封禁，下午就被覆盖了。 看完记得发表评论支持一下。 题目都超链接了，可以直接点开。 P1143 进制转换十进制与 $n$ 进制的互相转换，板子题，不多说。 string c&#x3D;&quot;0123456789ABCDEF&quot;; void f(">
 <meta property="og:locale" content="zh_CN">
 <meta property="article:published_time" content="2022-04-09T04:14:36.576Z">
-<meta property="article:modified_time" content="2022-04-10T04:20:38.002Z">
+<meta property="article:modified_time" content="2022-04-10T06:16:10.282Z">
 <meta property="article:author" content="CYX">
 <meta property="article:tag" content="C++">
 <meta property="article:tag" content="洛谷">
@@ -617,7 +617,7 @@
 						
 						<div class="post-meta-detail post-meta-detail-time">
 							<i class="fa fa-clock-o" aria-hidden="true"></i>
-							<time title="发布于 2022-4-9 12:14:36 | 编辑于 2022-4-10 12:20:38">2022-4-9 12:14
+							<time title="发布于 2022-4-9 12:14:36 | 编辑于 2022-4-10 14:16:10">2022-4-9 12:14
 							</time>
 						</div>
 					
@@ -644,7 +644,7 @@
 						
 						<div class="post-meta-detail post-meta-detail-words">
 							<i class="fa fa-file-word-o" aria-hidden="true"></i>
-							2.6k 字
+							2.8k 字
 						</div>
 					
 						
@@ -652,7 +652,7 @@
 						
 						<div class="post-meta-detail post-meta-detail-readingtime">
 							<i class="fa fa-hourglass-end" aria-hidden="true"></i>
-							13 分钟
+							14 分钟
 						</div>
 					
 		</div>
@@ -1034,7 +1034,38 @@ cout&lt;&lt;(<span class="string">&quot;z&quot;</span>&lt;<span class="string">&
 	&#125;
 &#125;</code></pre>
 
-<h4 id="P1835-素数密度"><a href="#P1835-素数密度" class="headerlink" title="P1835 素数密度"></a><a target="_blank" rel="noopener" href="https://www.luogu.com.cn/problem/P1835">P1835 素数密度</a></h4><h4 id="P1029-NOIP2001-普及组-最大公约数和最小公倍数问题"><a href="#P1029-NOIP2001-普及组-最大公约数和最小公倍数问题" class="headerlink" title="P1029 [NOIP2001 普及组] 最大公约数和最小公倍数问题"></a><a target="_blank" rel="noopener" href="https://www.luogu.com.cn/problem/P1029">P1029 [NOIP2001 普及组] 最大公约数和最小公倍数问题</a></h4><p>我们枚举 $P$。</p>
+<h4 id="P1835-素数密度"><a href="#P1835-素数密度" class="headerlink" title="P1835 素数密度"></a><a target="_blank" rel="noopener" href="https://www.luogu.com.cn/problem/P1835">P1835 素数密度</a></h4><p>有一个做法可以直接求 $1$ 到 $n$ 个质数个数。</p>
+<p>注意到 $R-L\leq10^6$。</p>
+<p>注意到 $2^{31}$ 以下的合数，一定有一个 $\leq\sqrt{R}$ 的质因数。</p>
+<p>用一个长度为 $R-L+1$ 的数组存每个数字是否是合数。</p>
+<p><code>f[i]</code> 表示 $i$ 是否是合数。</p>
+<p>如果 <code>f[i] == 1</code> 表示 $L+i$ 是合数。</p>
+<p>如果 <code>f[i] == 0</code> 表示 $L+i$ 是质数。</p>
+<p>枚举所有 $\leq \sqrt{R}$ 的质数 $p$。</p>
+<p>枚举在 $L$ 到 $R$ 之间的，所有 $p$ 的倍数（不包括 $p$ 本身）设为 $i$。</p>
+<p>标记 $i$ 是合数.</p>
+<pre><code class="highlight cpp"><span class="type">int</span> pri[<span class="number">1000005</span>];
+<span class="type">int</span> v[<span class="number">1000005</span>];
+<span class="type">long</span> <span class="type">long</span> l,r,sum;
+<span class="function"><span class="type">void</span> <span class="title">init</span><span class="params">(<span class="type">long</span> <span class="type">long</span> n)</span></span>
+<span class="function"></span>&#123;
+	<span class="keyword">for</span>(<span class="type">long</span> <span class="type">long</span> i=<span class="number">2</span>;i&lt;=<span class="built_in">sqrt</span>(n);i++)
+	&#123;
+		<span class="keyword">if</span>(!v[i])
+		&#123;
+			<span class="keyword">for</span>(<span class="type">long</span> <span class="type">long</span> j=<span class="built_in">max</span>((l+i<span class="number">-1LL</span>)/i,<span class="number">2LL</span>)*i;j&lt;=r;j+=i)
+			&#123;
+				pri[j-l]=<span class="number">1</span>;
+			&#125;
+		&#125;
+		<span class="keyword">for</span>(<span class="type">int</span> j=i;j&lt;=r/j;j+=i)
+		&#123;
+			v[j] = i;
+		&#125;
+	&#125;
+&#125;</code></pre>
+
+<h4 id="P1029-NOIP2001-普及组-最大公约数和最小公倍数问题"><a href="#P1029-NOIP2001-普及组-最大公约数和最小公倍数问题" class="headerlink" title="P1029 [NOIP2001 普及组] 最大公约数和最小公倍数问题"></a><a target="_blank" rel="noopener" href="https://www.luogu.com.cn/problem/P1029">P1029 [NOIP2001 普及组] 最大公约数和最小公倍数问题</a></h4><p>我们枚举 $P$。</p>
 <p>判断 $P$ 是否是 $n\times m$ 的因数。</p>
 <p>又因为 $\gcd(a,b)\times\operatorname{lcm}(a,b)&#x3D;a\times b$。</p>
 <p>所以可以算出 $Q$。</p>
