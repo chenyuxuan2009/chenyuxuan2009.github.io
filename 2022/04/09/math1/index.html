@@ -17,7 +17,7 @@
 <meta property="og:description" content="友情提醒：抄袭非题解区的代码，也属于抄袭。同学们请勿复制以下代码。 顺带一提，cz前两天查ctj，光是一天，棕掉、封掉的，陶片放逐的显示都溢出了，上午的封禁，下午就被覆盖了。 看完记得发表评论支持一下。 题目都超链接了，可以直接点开。 P1143 进制转换十进制与 $n$ 进制的互相转换，板子题，不多说。 string c&#x3D;&quot;0123456789ABCDEF&quot;; void f(">
 <meta property="og:locale" content="zh_CN">
 <meta property="article:published_time" content="2022-04-09T04:14:36.576Z">
-<meta property="article:modified_time" content="2022-04-09T12:31:46.592Z">
+<meta property="article:modified_time" content="2022-04-10T01:13:03.816Z">
 <meta property="article:author" content="CYX">
 <meta property="article:tag" content="C++">
 <meta property="article:tag" content="洛谷">
@@ -617,7 +617,7 @@
 						
 						<div class="post-meta-detail post-meta-detail-time">
 							<i class="fa fa-clock-o" aria-hidden="true"></i>
-							<time title="发布于 2022-4-9 12:14:36 | 编辑于 2022-4-9 20:31:46">2022-4-9 12:14
+							<time title="发布于 2022-4-9 12:14:36 | 编辑于 2022-4-10 9:13:03">2022-4-9 12:14
 							</time>
 						</div>
 					
@@ -644,7 +644,7 @@
 						
 						<div class="post-meta-detail post-meta-detail-words">
 							<i class="fa fa-file-word-o" aria-hidden="true"></i>
-							2.3k 字
+							2.5k 字
 						</div>
 					
 						
@@ -652,7 +652,7 @@
 						
 						<div class="post-meta-detail post-meta-detail-readingtime">
 							<i class="fa fa-hourglass-end" aria-hidden="true"></i>
-							12 分钟
+							13 分钟
 						</div>
 					
 		</div>
@@ -1048,7 +1048,42 @@ cout&lt;&lt;(<span class="string">&quot;z&quot;</span>&lt;<span class="string">&
 	cout&lt;&lt;c/__gcd(a/__gcd(a,b)*b,c)*a/__gcd(a,b)*b&lt;&lt;endl;
 &#125;</code></pre>
 
-<h4 id="P1414-又是毕业季II"><a href="#P1414-又是毕业季II" class="headerlink" title="P1414 又是毕业季II"></a><a target="_blank" rel="noopener" href="https://www.luogu.com.cn/problem/P1414">P1414 又是毕业季II</a></h4><h4 id="P2651-添加括号III"><a href="#P2651-添加括号III" class="headerlink" title="P2651 添加括号III"></a><a target="_blank" rel="noopener" href="https://www.luogu.com.cn/problem/P2651">P2651 添加括号III</a></h4><p>结论就是判断 $a_1\times a_3\times a_4 \times a_5\times…\times a_n \bmod a_2&#x3D;0$ 是否成立。</p>
+<h4 id="P1414-又是毕业季II"><a href="#P1414-又是毕业季II" class="headerlink" title="P1414 又是毕业季II"></a><a target="_blank" rel="noopener" href="https://www.luogu.com.cn/problem/P1414">P1414 又是毕业季II</a></h4><p>我们把 $n$ 个数的因数存下来，存到数组里。</p>
+<p>就从最大的因数开始往下找，找到某个因数，出现次数正好大于等于 $k$，即为当前询问答案。</p>
+<pre><code class="highlight cpp"><span class="type">int</span> a[<span class="number">1000005</span>];
+<span class="function"><span class="type">void</span> <span class="title">solve</span><span class="params">()</span></span>
+<span class="function"></span>&#123;
+	<span class="type">int</span> n,maxx=<span class="number">-1</span>;
+	cin&gt;&gt;n;
+	<span class="keyword">for</span>(<span class="type">int</span> i=<span class="number">1</span>;i&lt;=n;i++)
+	&#123;
+		<span class="type">int</span> x;
+		cin&gt;&gt;x;
+		maxx=<span class="built_in">max</span>(maxx,x);
+		<span class="keyword">for</span>(<span class="type">int</span> j=<span class="number">1</span>;j&lt;=<span class="built_in">sqrt</span>(x);j++)
+		&#123;
+			<span class="keyword">if</span>(x%j==<span class="number">0</span>)
+			&#123;
+				a[x/j]++;
+				a[j]++;
+				<span class="keyword">if</span>(j*j==x)
+				&#123;
+					a[j]--;
+				&#125;
+			&#125;
+		&#125;
+	&#125;
+	<span class="keyword">for</span>(<span class="type">int</span> i=<span class="number">1</span>;i&lt;=n;i++)
+	&#123;
+		<span class="keyword">while</span>(a[maxx]&lt;i)
+		&#123;
+			maxx--;
+		&#125;
+		cout&lt;&lt;maxx&lt;&lt;endl;
+	&#125;
+&#125;</code></pre>
+
+<h4 id="P2651-添加括号III"><a href="#P2651-添加括号III" class="headerlink" title="P2651 添加括号III"></a><a target="_blank" rel="noopener" href="https://www.luogu.com.cn/problem/P2651">P2651 添加括号III</a></h4><p>结论就是判断 $a_1\times a_3\times a_4 \times a_5\times…\times a_n \bmod a_2&#x3D;0$ 是否成立。</p>
 <p>因为最好的办法就是让 $a_2$ 为分母，其他为分子。</p>
 <p>注意多组数据。</p>
 <pre><code class="highlight cpp"><span class="function"><span class="type">void</span> <span class="title">solve</span><span class="params">()</span></span>
