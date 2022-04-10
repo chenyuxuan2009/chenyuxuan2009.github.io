@@ -17,7 +17,7 @@
 <meta property="og:description" content="友情提醒：抄袭非题解区的代码，也属于抄袭。同学们请勿复制以下代码。 顺带一提，cz前两天查ctj，光是一天，棕掉、封掉的，陶片放逐的显示都溢出了，上午的封禁，下午就被覆盖了。 看完记得发表评论支持一下。 题目都超链接了，可以直接点开。 P1143 进制转换十进制与 $n$ 进制的互相转换，板子题，不多说。 string c&#x3D;&quot;0123456789ABCDEF&quot;; void f(">
 <meta property="og:locale" content="zh_CN">
 <meta property="article:published_time" content="2022-04-09T04:14:36.576Z">
-<meta property="article:modified_time" content="2022-04-10T06:16:10.282Z">
+<meta property="article:modified_time" content="2022-04-10T06:33:37.920Z">
 <meta property="article:author" content="CYX">
 <meta property="article:tag" content="C++">
 <meta property="article:tag" content="洛谷">
@@ -617,7 +617,7 @@
 						
 						<div class="post-meta-detail post-meta-detail-time">
 							<i class="fa fa-clock-o" aria-hidden="true"></i>
-							<time title="发布于 2022-4-9 12:14:36 | 编辑于 2022-4-10 14:16:10">2022-4-9 12:14
+							<time title="发布于 2022-4-9 12:14:36 | 编辑于 2022-4-10 14:33:37">2022-4-9 12:14
 							</time>
 						</div>
 					
@@ -644,7 +644,7 @@
 						
 						<div class="post-meta-detail post-meta-detail-words">
 							<i class="fa fa-file-word-o" aria-hidden="true"></i>
-							2.8k 字
+							3k 字
 						</div>
 					
 						
@@ -652,7 +652,7 @@
 						
 						<div class="post-meta-detail post-meta-detail-readingtime">
 							<i class="fa fa-hourglass-end" aria-hidden="true"></i>
-							14 分钟
+							15 分钟
 						</div>
 					
 		</div>
@@ -1173,7 +1173,55 @@ cout&lt;&lt;(<span class="string">&quot;z&quot;</span>&lt;<span class="string">&
 	cout&lt;&lt;ans&lt;&lt;endl;
 &#125;</code></pre>
 
-<h4 id="P3601-签到题"><a href="#P3601-签到题" class="headerlink" title="P3601 签到题"></a><a target="_blank" rel="noopener" href="https://www.luogu.com.cn/problem/P3601">P3601 签到题</a></h4><h4 id="P1403-AHOI2005-约数研究"><a href="#P1403-AHOI2005-约数研究" class="headerlink" title="P1403 [AHOI2005]约数研究"></a><a target="_blank" rel="noopener" href="https://www.luogu.com.cn/problem/P1403">P1403 [AHOI2005]约数研究</a></h4><p>每 $x$ 个数中，就有 $1$ 个 $x$ 的倍数。</p>
+<h4 id="P3601-签到题"><a href="#P3601-签到题" class="headerlink" title="P3601 签到题"></a><a target="_blank" rel="noopener" href="https://www.luogu.com.cn/problem/P3601">P3601 签到题</a></h4><p>和素数密度差不多做法，不多说。</p>
+<pre><code class="highlight cpp"><span class="type">const</span> <span class="type">int</span> mod=<span class="number">666623333</span>;
+<span class="type">long</span> <span class="type">long</span> a[<span class="number">1000020</span>]; 
+<span class="type">long</span> <span class="type">long</span> f[<span class="number">1000020</span>]; 
+<span class="type">long</span> <span class="type">long</span> l,r;
+<span class="type">int</span> v[<span class="number">1000020</span>];
+<span class="function"><span class="type">void</span> <span class="title">DO</span><span class="params">(<span class="type">long</span> <span class="type">long</span> p)</span></span>
+<span class="function"></span>&#123;
+	<span class="keyword">for</span>(<span class="type">long</span> <span class="type">long</span> i=(l+p<span class="number">-1</span>)/p*p;i&lt;=r;i+=p)
+	&#123;
+		<span class="keyword">while</span>(a[i-l]%p==<span class="number">0</span>)
+		&#123;
+			a[i-l]/=p;
+		&#125;
+		f[i-l]=f[i-l]/p*(p<span class="number">-1</span>);
+	&#125;
+&#125;
+<span class="function"><span class="type">void</span> <span class="title">solve</span><span class="params">()</span></span>
+<span class="function"></span>&#123;
+	<span class="built_in">scanf</span>(<span class="string">&quot;%lld%lld&quot;</span>,&amp;l,&amp;r);
+	<span class="keyword">for</span>(<span class="type">int</span> i=<span class="number">0</span>;i&lt;=r-l;i++)
+	&#123;
+		a[i]=l+i;
+		f[i]=l+i;
+	&#125;
+	<span class="keyword">for</span>(<span class="type">int</span> i=<span class="number">2</span>;i&lt;=r/i;i++)
+	&#123;
+		<span class="keyword">if</span>(!v[i])
+		&#123;
+			<span class="built_in">DO</span>(i);
+		&#125;
+		<span class="keyword">for</span>(<span class="type">int</span> j=i;j&lt;=r/j;j+=i)
+		&#123;
+			v[j]=i;
+		&#125;
+	&#125;
+	<span class="type">long</span> <span class="type">long</span> z=(l+r)%mod*(r-l+<span class="number">1</span>)%mod*<span class="number">333311667</span>%mod;
+	<span class="keyword">for</span>(<span class="type">int</span> i=<span class="number">0</span>;i&lt;=r-l;i++)
+	&#123;
+		<span class="keyword">if</span>(a[i]&gt;<span class="number">1</span>)
+		&#123;
+			f[i]=f[i]/a[i]*(a[i]<span class="number">-1</span>);
+		&#125;
+		z=(z-f[i])%mod;
+	&#125;
+	<span class="built_in">printf</span>(<span class="string">&quot;%lld\n&quot;</span>,(z+mod)%mod);
+&#125;</code></pre>
+
+<h4 id="P1403-AHOI2005-约数研究"><a href="#P1403-AHOI2005-约数研究" class="headerlink" title="P1403 [AHOI2005]约数研究"></a><a target="_blank" rel="noopener" href="https://www.luogu.com.cn/problem/P1403">P1403 [AHOI2005]约数研究</a></h4><p>每 $x$ 个数中，就有 $1$ 个 $x$ 的倍数。</p>
 <p>枚举约数，用 $n$ 去除一下，就知道有多少个倍数。</p>
 <pre><code class="highlight cpp"><span class="function"><span class="type">void</span> <span class="title">solve</span><span class="params">()</span></span>
 <span class="function"></span>&#123;
