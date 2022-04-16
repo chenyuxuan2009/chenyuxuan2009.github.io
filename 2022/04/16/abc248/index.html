@@ -4,23 +4,23 @@
 <head>
 	<script type="text/javascript" src="/assets/js/click-live.js"></script>
 	
-	<title>CF1621A Stable Arrangement of Rooks - chenyuxuan__2009的博客</title>
+	<title>abc248做题笔记 - chenyuxuan__2009的博客</title>
 	<meta charset="utf-8">
 	
 		<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=5">
 	
-	<meta name="description" content="题目翻译：有 $n \times n$ 大小的棋盘，一共放 $k$ 辆车，使得这个棋盘稳定。 稳定的概念是：所有的车移动至相邻四格（上下左右）不会出现一行一列有 $\ge 2$ 辆车。 做题思路:我们可以考虑，移动之后没有同一行一列有多辆车，那么就让它移动之后还是只有它一辆车，换句话说，每辆车之间至少空一行和一列，也就是在对角线上放是最优想法。如果对角线放不下 $k$ 辆车了，无解输出 -1 。">
+	<meta name="description" content="abc248_a题目翻译有一个字符串 $s$，找出 $0$ 到 $9$ 中没出现的数。 题目思路直接开数组存出现次数。 AC 代码int a[10]; void solve() &amp;#123; 	string s; 	cin&gt;&gt;s; 	for(int i&#x3D;0;i&lt;9;i++) 	&amp;#123; 		a[s[i]-&amp;#x27;0&amp;#x27;]++; 	&amp;#125; 	for(int i">
 <meta property="og:type" content="article">
-<meta property="og:title" content="CF1621A Stable Arrangement of Rooks">
-<meta property="og:url" content="https://chenyuxuan2009.github.io/2022/03/22/CF1621A/index.html">
+<meta property="og:title" content="abc248做题笔记">
+<meta property="og:url" content="https://chenyuxuan2009.github.io/2022/04/16/abc248/index.html">
 <meta property="og:site_name" content="chenyuxuan__2009的博客">
-<meta property="og:description" content="题目翻译：有 $n \times n$ 大小的棋盘，一共放 $k$ 辆车，使得这个棋盘稳定。 稳定的概念是：所有的车移动至相邻四格（上下左右）不会出现一行一列有 $\ge 2$ 辆车。 做题思路:我们可以考虑，移动之后没有同一行一列有多辆车，那么就让它移动之后还是只有它一辆车，换句话说，每辆车之间至少空一行和一列，也就是在对角线上放是最优想法。如果对角线放不下 $k$ 辆车了，无解输出 -1 。">
+<meta property="og:description" content="abc248_a题目翻译有一个字符串 $s$，找出 $0$ 到 $9$ 中没出现的数。 题目思路直接开数组存出现次数。 AC 代码int a[10]; void solve() &amp;#123; 	string s; 	cin&gt;&gt;s; 	for(int i&#x3D;0;i&lt;9;i++) 	&amp;#123; 		a[s[i]-&amp;#x27;0&amp;#x27;]++; 	&amp;#125; 	for(int i">
 <meta property="og:locale" content="zh_CN">
-<meta property="article:published_time" content="2022-03-22T12:38:59.470Z">
-<meta property="article:modified_time" content="2022-03-23T09:36:12.909Z">
+<meta property="article:published_time" content="2022-04-16T13:44:24.789Z">
+<meta property="article:modified_time" content="2022-04-16T14:20:31.607Z">
 <meta property="article:author" content="CYX">
 <meta property="article:tag" content="C++">
-<meta property="article:tag" content="Codeforces">
+<meta property="article:tag" content="Atcoder">
 <meta name="twitter:card" content="summary">
 
 	<meta name="theme-color" content="#5e72e4">
@@ -611,13 +611,13 @@
 	<article class="post post-full card bg-white shadow-sm border-0 post-preview">
 	<header class="post-header text-center">
 		
-		<a class="post-title" href="/2022/03/22/CF1621A/">CF1621A Stable Arrangement of Rooks</a>
+		<a class="post-title" href="/2022/04/16/abc248/">abc248做题笔记</a>
 		<div class="post-meta">
 			
 						
 						<div class="post-meta-detail post-meta-detail-time">
 							<i class="fa fa-clock-o" aria-hidden="true"></i>
-							<time title="发布于 2022-3-22 20:38:59 | 编辑于 2022-3-23 17:36:12">2022-3-22 20:38
+							<time title="发布于 2022-4-16 21:44:24 | 编辑于 2022-4-16 22:20:31">2022-4-16 21:44
 							</time>
 						</div>
 					
@@ -626,7 +626,7 @@
 						
 						<div class="post-meta-detail post-meta-detail-categories">
 							<i class="fa fa-bookmark-o" aria-hidden="true"></i>
-							<a class="post-meta-detail-catagory-link" href="/categories/%E9%A2%98%E8%A7%A3/">题解</a>
+							<a class="post-meta-detail-catagory-link" href="/categories/%E5%81%9A%E9%A2%98%E7%AC%94%E8%AE%B0/">做题笔记</a>
 						</div>
 					
 						
@@ -644,7 +644,7 @@
 						
 						<div class="post-meta-detail post-meta-detail-words">
 							<i class="fa fa-file-word-o" aria-hidden="true"></i>
-							372 字
+							638 字
 						</div>
 					
 						
@@ -652,7 +652,7 @@
 						
 						<div class="post-meta-detail post-meta-detail-readingtime">
 							<i class="fa fa-hourglass-end" aria-hidden="true"></i>
-							1 分钟
+							3 分钟
 						</div>
 					
 		</div>
@@ -660,38 +660,127 @@
 	</header>
 
 	<div class="post-content" id="post_content">
-		<h4 id="题目翻译："><a href="#题目翻译：" class="headerlink" title="题目翻译："></a>题目翻译：</h4><p>有 $n \times n$ 大小的棋盘，一共放 $k$ 辆车，使得这个棋盘稳定。</p>
-<p>稳定的概念是：所有的车移动至相邻四格（上下左右）不会出现一行一列有 $\ge 2$ 辆车。</p>
-<h4 id="做题思路"><a href="#做题思路" class="headerlink" title="做题思路:"></a>做题思路:</h4><p>我们可以考虑，移动之后没有同一行一列有多辆车，那么就让它移动之后还是只有它一辆车，换句话说，每辆车之间至少空一行和一列，也就是在对角线上放是最优想法。如果对角线放不下 $k$ 辆车了，无解输出 <code>-1</code> 。</p>
-<h4 id="深入思考（此分析大佬跳过）"><a href="#深入思考（此分析大佬跳过）" class="headerlink" title="深入思考（此分析大佬跳过）"></a>深入思考（此分析大佬跳过）</h4><p>在怎样的情况下 $n \times n$ 的棋盘放不下 $k$ 辆车呢？</p>
-<p>很显然，每两行两列放一辆车，那么最多可以放 $\left\lfloor\dfrac{n+1}{2}\right\rfloor$ 辆车（大多数语言整数除法自动下取整），所以只要判断 $\dfrac{n+1}{2}$ 与 $k$ 的大小关系。</p>
-<h4 id="AC代码"><a href="#AC代码" class="headerlink" title="AC代码"></a>AC代码</h4><pre><code class="highlight cpp"><span class="function"><span class="type">void</span> <span class="title">solve</span><span class="params">()</span></span>
+		<h3 id="abc248-a"><a href="#abc248-a" class="headerlink" title="abc248_a"></a><a target="_blank" rel="noopener" href="https://atcoder.jp/contests/abc248/tasks/abc248_a">abc248_a</a></h3><h4 id="题目翻译"><a href="#题目翻译" class="headerlink" title="题目翻译"></a>题目翻译</h4><p>有一个字符串 $s$，找出 $0$ 到 $9$ 中没出现的数。</p>
+<h4 id="题目思路"><a href="#题目思路" class="headerlink" title="题目思路"></a>题目思路</h4><p>直接开数组存出现次数。</p>
+<h4 id="AC-代码"><a href="#AC-代码" class="headerlink" title="AC 代码"></a>AC 代码</h4><pre><code class="highlight cpp"><span class="type">int</span> a[<span class="number">10</span>];
+<span class="function"><span class="type">void</span> <span class="title">solve</span><span class="params">()</span></span>
 <span class="function"></span>&#123;
-	<span class="type">int</span> n,k;
-	cin&gt;&gt;n&gt;&gt;k;
-	<span class="keyword">if</span>((n+<span class="number">1</span>)/<span class="number">2</span>&lt;k)<span class="comment">//判断是否放得下</span>
+	string s;
+	cin&gt;&gt;s;
+	<span class="keyword">for</span>(<span class="type">int</span> i=<span class="number">0</span>;i&lt;<span class="number">9</span>;i++)
 	&#123;
-		cout&lt;&lt;<span class="number">-1</span>&lt;&lt;endl;
-		<span class="keyword">return</span>;
+		a[s[i]-<span class="string">&#x27;0&#x27;</span>]++;
 	&#125;
-	<span class="keyword">for</span>(<span class="type">int</span> i=<span class="number">1</span>;i&lt;=n;i++)
+	<span class="keyword">for</span>(<span class="type">int</span> i=<span class="number">0</span>;i&lt;=<span class="number">9</span>;i++)
 	&#123;
-		<span class="keyword">for</span>(<span class="type">int</span> j=<span class="number">1</span>;j&lt;=n;j++)
+		<span class="keyword">if</span>(a[i]==<span class="number">0</span>)
 		&#123;
-			<span class="keyword">if</span>(i==j&amp;&amp;i%<span class="number">2</span>!=<span class="number">0</span>&amp;&amp;k&gt;<span class="number">0</span>)<span class="comment">//判断分别为：对角线、隔一行一列、还可以放车</span>
-			&#123;
-				cout&lt;&lt;<span class="string">&#x27;R&#x27;</span>;
-				k--;<span class="comment">//放完一辆</span>
-			&#125;
-			<span class="keyword">else</span>
-			&#123;
-				cout&lt;&lt;<span class="string">&#x27;.&#x27;</span>;
-			&#125;
+			cout&lt;&lt;i;
+			<span class="keyword">return</span>;
 		&#125;
-		cout&lt;&lt;endl;
 	&#125;
 &#125;</code></pre>
-<p>多组数据，代码未全。请勿copy，当心踩坑！</p>
+
+<h3 id="abc248-b"><a href="#abc248-b" class="headerlink" title="abc248_b"></a><a target="_blank" rel="noopener" href="https://atcoder.jp/contests/abc248/tasks/abc248_b">abc248_b</a></h3><h4 id="题目翻译-1"><a href="#题目翻译-1" class="headerlink" title="题目翻译"></a>题目翻译</h4><p>$a\times k^{x-1}\geq b$，问 $x$ 最小是几。 </p>
+<h4 id="题目思路-1"><a href="#题目思路-1" class="headerlink" title="题目思路"></a>题目思路</h4><p>模拟，<code>while</code> 循环。</p>
+<h4 id="AC-代码-1"><a href="#AC-代码-1" class="headerlink" title="AC 代码"></a>AC 代码</h4><pre><code class="highlight cpp"><span class="function"><span class="type">void</span> <span class="title">solve</span><span class="params">()</span></span>
+<span class="function"></span>&#123;
+	<span class="type">long</span> <span class="type">long</span> a,b,k,ans=<span class="number">0</span>;
+	cin&gt;&gt;a&gt;&gt;b&gt;&gt;k;
+	<span class="keyword">while</span>(a&lt;b)
+	&#123;
+		ans++;
+		a*=k;
+	&#125;
+	cout&lt;&lt;ans&lt;&lt;endl;
+&#125;</code></pre>
+
+<h3 id="abc248-c"><a href="#abc248-c" class="headerlink" title="abc248_c"></a><a target="_blank" rel="noopener" href="https://atcoder.jp/contests/abc248/tasks/abc248_c">abc248_c</a></h3><h4 id="题目翻译-2"><a href="#题目翻译-2" class="headerlink" title="题目翻译"></a>题目翻译</h4><p>从 $m$ 里选 $n$ 个数，保证 $\sum\limits_{i&#x3D;1}^na_i\leq k$，问方案数。</p>
+<h4 id="题目思路-2"><a href="#题目思路-2" class="headerlink" title="题目思路"></a>题目思路</h4><p>考虑 $f_{i,j}$ 记录 $i$ 个数和为 $j$ 的方案数。</p>
+<h4 id="AC-代码-2"><a href="#AC-代码-2" class="headerlink" title="AC 代码"></a>AC 代码</h4><pre><code class="highlight cpp"><span class="type">const</span> <span class="type">int</span> mod=<span class="number">998244353</span>;
+<span class="type">int</span> f[<span class="number">55</span>][<span class="number">2505</span>];
+<span class="function"><span class="type">void</span> <span class="title">solve</span><span class="params">()</span></span>
+<span class="function"></span>&#123;
+	<span class="type">int</span> n,m,k;
+	cin&gt;&gt;n&gt;&gt;m&gt;&gt;k;
+	f[<span class="number">1</span>][<span class="number">1</span>]=<span class="number">1</span>;
+	<span class="keyword">for</span>(<span class="type">int</span> i=<span class="number">1</span>;i&lt;=m;i++)
+	&#123;
+		f[<span class="number">1</span>][i]=<span class="number">1</span>;
+	&#125;
+	<span class="keyword">for</span>(<span class="type">int</span> i=<span class="number">2</span>;i&lt;=n;i++)
+	&#123;
+		<span class="keyword">for</span>(<span class="type">int</span> j=<span class="number">1</span>;j&lt;=m;j++)
+		&#123;
+			<span class="keyword">for</span>(<span class="type">int</span> kk=<span class="number">0</span>;kk&lt;k;kk++)
+			&#123;
+				<span class="keyword">if</span>(kk+j&lt;=k)
+				&#123;
+					f[i][kk+j]+=f[i<span class="number">-1</span>][kk];
+				&#125;
+				<span class="keyword">else</span>
+				&#123;
+					<span class="keyword">break</span>;
+				&#125;
+				f[i][kk+j]%=mod;
+			&#125;
+		&#125;
+	&#125;
+	<span class="type">int</span> ans=<span class="number">0</span>;
+	<span class="keyword">for</span>(<span class="type">int</span> i=<span class="number">0</span>;i&lt;=k;i++)
+	&#123;
+		ans+=f[n][i];
+		ans%=mod;
+	&#125;
+	cout&lt;&lt;ans&lt;&lt;endl;
+&#125;</code></pre>
+
+<h3 id="abc248-d"><a href="#abc248-d" class="headerlink" title="abc248_d"></a><a target="_blank" rel="noopener" href="https://atcoder.jp/contests/abc248/tasks/abc248_d">abc248_d</a></h3><h4 id="题目翻译-3"><a href="#题目翻译-3" class="headerlink" title="题目翻译"></a>题目翻译</h4><p>$q$ 个询问，问 $[l,r]$ 中，有多少数 $&#x3D;k$。</p>
+<h4 id="题目思路-3"><a href="#题目思路-3" class="headerlink" title="题目思路"></a>题目思路</h4><p><code>lower_bound</code> 和 <code>upper_bound</code> 找一下。</p>
+<p>值和位置一起排序，两次二分，找到符合要求的区间。</p>
+<h4 id="AC-代码-3"><a href="#AC-代码-3" class="headerlink" title="AC 代码"></a>AC 代码</h4><pre><code class="highlight cpp">vector&lt;<span class="type">int</span>&gt;v[<span class="number">200005</span>];
+<span class="type">int</span> a[<span class="number">200005</span>];
+<span class="function"><span class="type">void</span> <span class="title">solve</span><span class="params">()</span></span>
+<span class="function"></span>&#123;
+	<span class="type">int</span> n,q;
+	cin&gt;&gt;n;
+	<span class="keyword">for</span>(<span class="type">int</span> i=<span class="number">1</span>;i&lt;=n;i++)
+	&#123;
+		cin&gt;&gt;a[i];
+		v[a[i]].<span class="built_in">push_back</span>(i);
+	&#125;
+	cin&gt;&gt;q;
+	<span class="keyword">while</span>(q--)
+	&#123;
+		<span class="type">int</span> l,r,k;
+		cin&gt;&gt;l&gt;&gt;r&gt;&gt;k;
+		<span class="type">long</span> <span class="type">long</span> ans=<span class="built_in">upper_bound</span>(v[k].<span class="built_in">begin</span>(),v[k].<span class="built_in">end</span>(),r)-<span class="built_in">lower_bound</span>(v[k].<span class="built_in">begin</span>(),v[k].<span class="built_in">end</span>(),l);
+		cout&lt;&lt;ans&lt;&lt;endl;
+	&#125;
+&#125;</code></pre>
+
+<h3 id="abc248-e"><a href="#abc248-e" class="headerlink" title="abc248_e"></a><a target="_blank" rel="noopener" href="https://atcoder.jp/contests/abc248/tasks/abc248_e">abc248_e</a></h3><h4 id="题目翻译-4"><a href="#题目翻译-4" class="headerlink" title="题目翻译"></a>题目翻译</h4><p>输入 $n$ 个点的坐标和一个整数 $k$，问有多少条直线通过其中恰好 $k$ 个点，如果无穷多个输出 <code>Infinity</code>。</p>
+<h4 id="题目思路-4"><a href="#题目思路-4" class="headerlink" title="题目思路"></a>题目思路</h4><p>$n$ 个点一共可以生成至多 $\frac{n*(n-1)}{2}$ 个直线，每个直线判断一下。</p>
+<h4 id="AC-代码-4"><a href="#AC-代码-4" class="headerlink" title="AC 代码"></a>AC 代码</h4><pre><code class="highlight cpp">vector&lt;<span class="type">int</span>&gt;v[<span class="number">200005</span>];
+<span class="type">int</span> a[<span class="number">200005</span>];
+<span class="function"><span class="type">void</span> <span class="title">solve</span><span class="params">()</span></span>
+<span class="function"></span>&#123;
+	<span class="type">int</span> n,q;
+	cin&gt;&gt;n;
+	<span class="keyword">for</span>(<span class="type">int</span> i=<span class="number">1</span>;i&lt;=n;i++)
+	&#123;
+		cin&gt;&gt;a[i];
+		v[a[i]].<span class="built_in">push_back</span>(i);
+	&#125;
+	cin&gt;&gt;q;
+	<span class="keyword">while</span>(q--)
+	&#123;
+		<span class="type">int</span> l,r,k;
+		cin&gt;&gt;l&gt;&gt;r&gt;&gt;k;
+		<span class="type">long</span> <span class="type">long</span> ans=<span class="built_in">upper_bound</span>(v[k].<span class="built_in">begin</span>(),v[k].<span class="built_in">end</span>(),r)-<span class="built_in">lower_bound</span>(v[k].<span class="built_in">begin</span>(),v[k].<span class="built_in">end</span>(),l);
+		cout&lt;&lt;ans&lt;&lt;endl;
+	&#125;
+&#125;</code></pre>
 
 	</div>
 
@@ -704,7 +793,7 @@
 	
 		<div class="post-tags">
 			<i class="fa fa-tags" aria-hidden="true"></i>
-			<a class="tag badge badge-secondary post-meta-detail-tag -none-link" href="/tags/C/" rel="tag">C++</a><a class="tag badge badge-secondary post-meta-detail-tag -none-link" href="/tags/Codeforces/" rel="tag">Codeforces</a>
+			<a class="tag badge badge-secondary post-meta-detail-tag -none-link" href="/tags/Atcoder/" rel="tag">Atcoder</a><a class="tag badge badge-secondary post-meta-detail-tag -none-link" href="/tags/C/" rel="tag">C++</a>
 		</div>
 	
 </article>
@@ -746,7 +835,7 @@
 				<span class="btn-inner--icon"><i class="fa fa-twitter"></i></span>
 			</button>
 		</a>
-		<a target="_blank" class="no-pjax icon-telegram" href="https://telegram.me/share/url?url=https://chenyuxuan2009.github.io/2022/03/22/CF1621A/&text=CF1621A Stable Arrangement of Rooks" tooltip="分享到 Telegram">
+		<a target="_blank" class="no-pjax icon-telegram" href="https://telegram.me/share/url?url=https://chenyuxuan2009.github.io/2022/04/16/abc248/&text=abc248做题笔记" tooltip="分享到 Telegram">
 			<button class="btn btn-icon btn-primary" style="background: #42a5f5;border: none;">
 				<span class="btn-inner--icon"><i class="fa fa-telegram"></i></span>
 			</button>
@@ -763,12 +852,12 @@
 </div>
 <script type="text/javascript">
 	socialShare("#share", {
-	    title : 'CF1621A Stable Arrangement of Rooks',
-	    description : '题目翻译：有 $n \times n$ 大小的棋盘，一共放 $k$ 辆车，使得这个棋盘稳定。
-稳定的...',
+	    title : 'abc248做题笔记',
+	    description : 'abc248_a题目翻译有一个字符串 $s$，找出 $0$ 到 $9$ 中没出现的数。
+题目思路直接...',
 	    wechatQrcodeTitle : "分享到微信",
 	    wechatQrcodeHelper : '微信扫描二维码',
-	    source : 'https://chenyuxuan2009.github.io/2022/03/22/CF1621A/'
+	    source : 'https://chenyuxuan2009.github.io/2022/04/16/abc248/'
 	});
 	$("#share_show")[0].onclick = function(){
 		$("#share_container").addClass("opened");
@@ -834,7 +923,7 @@
 
 
 
-<div class="post-navigation card shadow-sm"><div class="post-navigation-item post-navigation-pre"><span class="page-navigation-extra-text"><i class="fa fa-arrow-circle-o-left" aria-hidden="true"></i>上一篇</span><a href="/2022/03/22/CF1627B/" rel="prev"> CF1627B Not Sitting</a></div><div class="post-navigation-item post-navigation-next"><span class="page-navigation-extra-text">下一篇 <i class="fa fa-arrow-circle-o-right" aria-hidden="true"></i></span><a href="/2022/03/22/CF1615A/" rel="next"> CF1615A Closing The Gap</a></div></div>
+<div class="post-navigation card shadow-sm"><div class="post-navigation-item post-navigation-pre"></div><div class="post-navigation-item post-navigation-next"><span class="page-navigation-extra-text">下一篇 <i class="fa fa-arrow-circle-o-right" aria-hidden="true"></i></span><a href="/2022/04/13/fft1/" rel="next"> 《四叉树》第一集 | 转世重生</a></div></div>
 
 
 
