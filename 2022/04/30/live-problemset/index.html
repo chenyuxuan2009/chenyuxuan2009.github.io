@@ -4,23 +4,25 @@
 <head>
 	<script type="text/javascript" src="/assets/js/click-live.js"></script>
 	
-	<title>CF1627B Not Sitting - chenyuxuan__2009的博客</title>
+	<title>直播卷题题单 - chenyuxuan__2009的博客</title>
 	<meta charset="utf-8">
 	
 		<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=5">
 	
-	<meta name="description" content="题目翻译A 和 B 两个人，在 $n \times m$ 的教室找位置。A 想和 B 坐得近，B 想和 A 坐得远，由 A 先选位置，请问对于所有情况，A 与 B 之间的距离各是多少？ 补充：距离的定义为：$a_{i_1,j_1}$ 与 $a_{i_2,j_2}$ 距离为 $\left|i_1-i_2\right|+\left|j_1-j_2\right|$ 题目思路A 会选什么位置，我们不用考虑">
+	<meta name="description" content="20222022.4.25[$\color">
 <meta property="og:type" content="article">
-<meta property="og:title" content="CF1627B Not Sitting">
-<meta property="og:url" content="https://chenyuxuan2009.github.io/2022/03/22/CF1627B/index.html">
+<meta property="og:title" content="直播卷题题单">
+<meta property="og:url" content="https://chenyuxuan2009.github.io/2022/04/30/live-problemset/index.html">
 <meta property="og:site_name" content="chenyuxuan__2009的博客">
-<meta property="og:description" content="题目翻译A 和 B 两个人，在 $n \times m$ 的教室找位置。A 想和 B 坐得近，B 想和 A 坐得远，由 A 先选位置，请问对于所有情况，A 与 B 之间的距离各是多少？ 补充：距离的定义为：$a_{i_1,j_1}$ 与 $a_{i_2,j_2}$ 距离为 $\left|i_1-i_2\right|+\left|j_1-j_2\right|$ 题目思路A 会选什么位置，我们不用考虑">
+<meta property="og:description" content="20222022.4.25[$\color">
 <meta property="og:locale" content="zh_CN">
-<meta property="article:published_time" content="2022-03-22T12:38:59.474Z">
-<meta property="article:modified_time" content="2022-03-23T09:36:19.120Z">
+<meta property="article:published_time" content="2022-04-30T07:04:18.804Z">
+<meta property="article:modified_time" content="2022-04-30T07:09:24.214Z">
 <meta property="article:author" content="CYX">
 <meta property="article:tag" content="C++">
 <meta property="article:tag" content="Codeforces">
+<meta property="article:tag" content="洛谷">
+<meta property="article:tag" content="Atcoder">
 <meta name="twitter:card" content="summary">
 
 	<meta name="theme-color" content="#5e72e4">
@@ -619,13 +621,13 @@
 	<article class="post post-full card bg-white shadow-sm border-0 post-preview">
 	<header class="post-header text-center">
 		
-		<a class="post-title" href="/2022/03/22/CF1627B/">CF1627B Not Sitting</a>
+		<a class="post-title" href="/2022/04/30/live-problemset/">直播卷题题单</a>
 		<div class="post-meta">
 			
 						
 						<div class="post-meta-detail post-meta-detail-time">
 							<i class="fa fa-clock-o" aria-hidden="true"></i>
-							<time title="发布于 2022-3-22 20:38:59 | 编辑于 2022-3-23 17:36:19">2022-3-22 20:38
+							<time title="发布于 2022-4-30 15:04:18 | 编辑于 2022-4-30 15:09:24">2022-4-30 15:04
 							</time>
 						</div>
 					
@@ -634,7 +636,7 @@
 						
 						<div class="post-meta-detail post-meta-detail-categories">
 							<i class="fa fa-bookmark-o" aria-hidden="true"></i>
-							<a class="post-meta-detail-catagory-link" href="/categories/%E9%A2%98%E8%A7%A3/">题解</a>
+							<a class="post-meta-detail-catagory-link" href="/categories/%E5%81%9A%E9%A2%98%E7%AC%94%E8%AE%B0/">做题笔记</a>
 						</div>
 					
 						
@@ -652,7 +654,7 @@
 						
 						<div class="post-meta-detail post-meta-detail-words">
 							<i class="fa fa-file-word-o" aria-hidden="true"></i>
-							518 字
+							4 字
 						</div>
 					
 						
@@ -660,7 +662,7 @@
 						
 						<div class="post-meta-detail post-meta-detail-readingtime">
 							<i class="fa fa-hourglass-end" aria-hidden="true"></i>
-							2 分钟
+							1 分钟
 						</div>
 					
 		</div>
@@ -668,36 +670,7 @@
 	</header>
 
 	<div class="post-content" id="post_content">
-		<h3 id="题目翻译"><a href="#题目翻译" class="headerlink" title="题目翻译"></a>题目翻译</h3><p>A 和 B 两个人，在 $n \times m$ 的教室找位置。A 想和 B 坐得近，B 想和 A 坐得远，由 A 先选位置，请问对于所有情况，A 与 B 之间的距离各是多少？</p>
-<p>补充：距离的定义为：$a_{i_1,j_1}$ 与 $a_{i_2,j_2}$ 距离为 $\left|i_1-i_2\right|+\left|j_1-j_2\right|$</p>
-<h3 id="题目思路"><a href="#题目思路" class="headerlink" title="题目思路"></a>题目思路</h3><p>A 会选什么位置，我们不用考虑，因为题目求所有情况，不是最优或最坏，所以只需考虑 B 坐的位置。由于想离得远，那么不管 A 坐哪，B 一定选择四个角上离得最远的位置。</p>
-<p>根据上述分析，我们只需穷举 A 坐的位置，并且每次判断 A 的位置与四个角的距离，就可以得出所有结果。</p>
-<h3 id="AC代码"><a href="#AC代码" class="headerlink" title="AC代码"></a>AC代码</h3><pre><code class="highlight cpp"><span class="function"><span class="type">int</span> <span class="title">juli</span><span class="params">(<span class="type">int</span> x1,<span class="type">int</span> y1,<span class="type">int</span> x2,<span class="type">int</span> y2)</span><span class="comment">//求距离函数</span></span>
-<span class="function"></span>&#123;
-	<span class="keyword">return</span> <span class="built_in">abs</span>(x1-x2)+<span class="built_in">abs</span>(y1-y2);
-&#125;
-<span class="function"><span class="type">void</span> <span class="title">solve</span><span class="params">()</span></span>
-<span class="function"></span>&#123;
-	multiset&lt;<span class="type">int</span>&gt;s;<span class="comment">//答案要求排序，set自动排序+去重，mutiset自动排序+不去重</span>
-	<span class="type">int</span> n,m;
-	cin&gt;&gt;n&gt;&gt;m;
-	<span class="keyword">for</span>(<span class="type">int</span> i=<span class="number">1</span>;i&lt;=n;i++)
-	&#123;
-		<span class="keyword">for</span>(<span class="type">int</span> j=<span class="number">1</span>;j&lt;=m;j++)<span class="comment">//双重循环穷举答案</span>
-		&#123;
-			s.<span class="built_in">insert</span>(<span class="built_in">max</span>(&#123;<span class="built_in">juli</span>(i,j,<span class="number">1</span>,<span class="number">1</span>),<span class="built_in">juli</span>(i,j,<span class="number">1</span>,m),<span class="built_in">juli</span>(i,j,n,<span class="number">1</span>),<span class="built_in">juli</span>(i,j,n,m)&#125;));<span class="comment">//判断四个角的最大距离</span>
-		&#125;
-	&#125;
-	<span class="keyword">for</span>(<span class="keyword">auto</span> i:s)cout&lt;&lt;i&lt;&lt;<span class="string">&quot; &quot;</span>;<span class="comment">//输出答案</span>
-	cout&lt;&lt;endl;
-&#125;
-</code></pre>
-
-<p>多组数据，代码未全。请勿copy，当心踩坑！</p>
-<p><a target="_blank" rel="noopener" href="https://codeforces.com/contest/1627/submission/142843751">完整代码在这</a></p>
-<h3 id="科普一个热知识："><a href="#科普一个热知识：" class="headerlink" title="科普一个热知识："></a>科普一个热知识：</h3><p>可能有些同学对于 <code>s.insert(max(&#123;juli(i,j,1,1),juli(i,j,1,m),juli(i,j,n,1),juli(i,j,n,m)&#125;)); </code> 这一行有疑惑，本机运行可能报错。其实这是C++20新语法，之前求多个最大值要写很多 <code>max()</code>，现在只需 <code>max(&#123;&#125;)</code>，在大括号里写上多个值，如这样：</p>
-<p>求 a,b,c,d 的最大值</p>
-<p>正常代码 <code>cout&lt;&lt;max(max(a,b),max(c,d))&lt;&lt;endl;</code> 要写3个 <code>max()</code>，现在只需 <code>cout&lt;&lt;max(&#123;a,b,c,d&#125;)&lt;&lt;endl;</code> 即可。</p>
+		<h3 id="2022"><a href="#2022" class="headerlink" title="2022"></a>2022</h3><h4 id="2022-4-25"><a href="#2022-4-25" class="headerlink" title="2022.4.25"></a>2022.4.25</h4><p>[$\color</p>
 
 	</div>
 
@@ -710,7 +683,7 @@
 	
 		<div class="post-tags">
 			<i class="fa fa-tags" aria-hidden="true"></i>
-			<a class="tag badge badge-secondary post-meta-detail-tag -none-link" href="/tags/C/" rel="tag">C++</a><a class="tag badge badge-secondary post-meta-detail-tag -none-link" href="/tags/Codeforces/" rel="tag">Codeforces</a>
+			<a class="tag badge badge-secondary post-meta-detail-tag -none-link" href="/tags/Atcoder/" rel="tag">Atcoder</a><a class="tag badge badge-secondary post-meta-detail-tag -none-link" href="/tags/C/" rel="tag">C++</a><a class="tag badge badge-secondary post-meta-detail-tag -none-link" href="/tags/Codeforces/" rel="tag">Codeforces</a><a class="tag badge badge-secondary post-meta-detail-tag -none-link" href="/tags/%E6%B4%9B%E8%B0%B7/" rel="tag">洛谷</a>
 		</div>
 	
 </article>
@@ -752,7 +725,7 @@
 				<span class="btn-inner--icon"><i class="fa fa-twitter"></i></span>
 			</button>
 		</a>
-		<a target="_blank" class="no-pjax icon-telegram" href="https://telegram.me/share/url?url=https://chenyuxuan2009.github.io/2022/03/22/CF1627B/&text=CF1627B Not Sitting" tooltip="分享到 Telegram">
+		<a target="_blank" class="no-pjax icon-telegram" href="https://telegram.me/share/url?url=https://chenyuxuan2009.github.io/2022/04/30/live-problemset/&text=直播卷题题单" tooltip="分享到 Telegram">
 			<button class="btn btn-icon btn-primary" style="background: #42a5f5;border: none;">
 				<span class="btn-inner--icon"><i class="fa fa-telegram"></i></span>
 			</button>
@@ -769,11 +742,12 @@
 </div>
 <script type="text/javascript">
 	socialShare("#share", {
-	    title : 'CF1627B Not Sitting',
-	    description : '题目翻译A 和 B 两个人，在 $n \times m$ 的教室找位置。A 想和 B 坐得近，B 想...',
+	    title : '直播卷题题单',
+	    description : '20222022.4.25[$\color
+',
 	    wechatQrcodeTitle : "分享到微信",
 	    wechatQrcodeHelper : '微信扫描二维码',
-	    source : 'https://chenyuxuan2009.github.io/2022/03/22/CF1627B/'
+	    source : 'https://chenyuxuan2009.github.io/2022/04/30/live-problemset/'
 	});
 	$("#share_show")[0].onclick = function(){
 		$("#share_container").addClass("opened");
@@ -839,7 +813,7 @@
 
 
 
-<div class="post-navigation card shadow-sm"><div class="post-navigation-item post-navigation-pre"><span class="page-navigation-extra-text"><i class="fa fa-arrow-circle-o-left" aria-hidden="true"></i>上一篇</span><a href="/2022/03/22/CF1633B/" rel="prev"> CF1633B Minority</a></div><div class="post-navigation-item post-navigation-next"><span class="page-navigation-extra-text">下一篇 <i class="fa fa-arrow-circle-o-right" aria-hidden="true"></i></span><a href="/2022/03/22/CF1621A/" rel="next"> CF1621A Stable Arrangement of Rooks</a></div></div>
+<div class="post-navigation card shadow-sm"><div class="post-navigation-item post-navigation-pre"></div><div class="post-navigation-item post-navigation-next"><span class="page-navigation-extra-text">下一篇 <i class="fa fa-arrow-circle-o-right" aria-hidden="true"></i></span><a href="/2022/04/24/fft2/" rel="next"> 《四叉树》第二集 | 上课报道</a></div></div>
 
 
 
