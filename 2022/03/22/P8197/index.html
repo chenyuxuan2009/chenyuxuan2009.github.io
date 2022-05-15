@@ -17,7 +17,7 @@
 <meta property="og:description" content="题目思路从交换相邻这里，我们可以明显看出来，这有些类似冒泡排序。 但是，我们要来思考一下怎样情况输出 NO。 我们就用冒泡排序的代码来分析一下。为了方便分析，就用 for 循环版的。 for(int i&#x3D;1;i&lt;&#x3D;n-1;i++) &amp;#123; 	for(int j&#x3D;1;j&lt;&#x3D;n-i;j++) 	&amp;#123; 		if(a[j]&lt;a[j+1]) 		&amp;#123; 			swap(">
 <meta property="og:locale" content="zh_CN">
 <meta property="article:published_time" content="2022-03-22T12:38:59.511Z">
-<meta property="article:modified_time" content="2022-03-23T09:37:20.760Z">
+<meta property="article:modified_time" content="2022-05-15T06:20:24.250Z">
 <meta property="article:author" content="CYX">
 <meta property="article:tag" content="C++">
 <meta property="article:tag" content="洛谷">
@@ -523,7 +523,7 @@
 							<nav class="site-state">
 								<div class="site-state-item site-state-posts">
 									<a href="/archives">
-										<span class="site-state-item-count">38</span>
+										<span class="site-state-item-count">39</span>
 										<span class="site-state-item-name">文章</span>
 									</a>
 								</div>
@@ -629,7 +629,7 @@
 						
 						<div class="post-meta-detail post-meta-detail-time">
 							<i class="fa fa-clock-o" aria-hidden="true"></i>
-							<time title="发布于 2022-3-22 20:38:59 | 编辑于 2022-3-23 17:37:20">2022-3-22 20:38
+							<time title="发布于 2022-3-22 20:38:59 | 编辑于 2022-5-15 14:20:24">2022-3-22 20:38
 							</time>
 						</div>
 					
@@ -715,7 +715,7 @@
 <span class="keyword">for</span>(<span class="type">int</span> i=<span class="number">1</span>;i&lt;=n;i++)<span class="comment">//循环b的元素</span>
 &#123;
 	<span class="type">int</span> x;
-	<span class="keyword">for</span>(<span class="type">int</span> j=<span class="number">1</span>;j&lt;=n;j++)
+	<span class="keyword">for</span>(<span class="type">int</span> j=i;j&lt;=n;j++)
 	&#123;
 		<span class="keyword">if</span>(a[j]==b[i])
 		&#123;
