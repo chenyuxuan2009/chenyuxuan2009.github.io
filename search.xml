@@ -4,19 +4,13 @@
   
     
     <entry>
-      <title>hello world</title>
-      <link href="/2022/05/15/password-test/"/>
-      <url>/2022/05/15/password-test/</url>
+      <title>『考试搞他人心态指南』</title>
+      <link href="/2022/05/15/gao-xin-tai/"/>
+      <url>/2022/05/15/gao-xin-tai/</url>
       
-        <content type="html"><![CDATA[<div class="hbe hbe-container" id="hexo-blog-encrypt" data-wpm="Oh, this is an invalid password. Check and try again, please." data-whm="OOPS, these decrypted content may changed, but you can still have a look.">  <script id="hbeData" type="hbeData" data-hmacdigest="92c17503e99c256f1d41fd846af334edbef608add63df0742e56520e178e7dc6">1e0e73741e06b0129e61c2ad316ca7f75a9dd5cfc1f506b0f0c8f0f80b6a5df98697f27b712c7fdae8f77c11acfb801b</script>  <div class="hbe hbe-content">    <div class="hbe hbe-input hbe-input-default">      <input class="hbe hbe-input-field hbe-input-field-default" type="password" id="hbePass">      <label class="hbe hbe-input-label hbe-input-label-default" for="hbePass">        <span class="hbe hbe-input-label-content hbe-input-label-content-default">Welcome to my blog, enter password to read.</span>      </label>    </div>  </div></div><script data-pjax src="/lib/hbe.js"></script><link href="/css/hbe.style.css" rel="stylesheet" type="text/css">]]></content>
+        <content type="html"><![CDATA[<p>test</p>]]></content>
       
       
-      
-        <tags>
-            
-            <tag> fdsafsdaf </tag>
-            
-        </tags>
       
     </entry>
     
