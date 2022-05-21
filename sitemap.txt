@@ -1,3 +1,4 @@
+https://chenyuxuan2009.github.io/2022/03/26/change/
 https://chenyuxuan2009.github.io/2022/05/19/hexo-blog/
 https://chenyuxuan2009.github.io/2022/05/05/abc061_c/
 https://chenyuxuan2009.github.io/2022/03/22/abc142_d/
@@ -22,7 +23,6 @@ https://chenyuxuan2009.github.io/2022/03/22/CF1644B/
 https://chenyuxuan2009.github.io/2022/03/22/CF1651B/
 https://chenyuxuan2009.github.io/2022/03/28/CF1654A/
 https://chenyuxuan2009.github.io/2022/04/05/CF1656B/
-https://chenyuxuan2009.github.io/2022/03/26/change/
 https://chenyuxuan2009.github.io/2022/03/25/code/
 https://chenyuxuan2009.github.io/2022/05/12/CZOI2022/
 https://chenyuxuan2009.github.io/2022/03/23/ternary/
