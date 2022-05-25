@@ -4,6 +4,25 @@
   
     
     <entry>
+      <title>【置顶】如何快速白嫖顶级域名</title>
+      <link href="/2022/05/25/get-domain/"/>
+      <url>/2022/05/25/get-domain/</url>
+      
+        <content type="html"><![CDATA[<p>开篇先提示：由于是白嫖的，如果别人也要你的域名，别人交钱，你的就会给到别人，尽量选择不太抢手的域名。</p><h3 id="选择域名"><a href="#选择域名" class="headerlink" title="选择域名"></a>选择域名</h3><p>首先进入 <a href="https://www.freenom.com/zh/index.html?lang=zh">Freenom</a>。</p><p><img src="https://s1.ax1x.com/2022/05/25/Xk2zbF.png"></p><p>在中间的框里输入你想要的域名，这里以 <code>chen2009.ml</code> 为例。</p><p>输入后，按下回车或点击旁边的蓝色圆圈，进入选择页面。</p><p><img src="https://s1.ax1x.com/2022/05/25/Xk4PeK.png"></p><p>如果出现了这样的情况，代表域名可用；反之，需要更换。</p><p>进去后，会默认给你选上，选上的话，旁边会有一个减号。</p><p>然后点上方绿色的小方框完成操作。</p><p>中文是 <code>完成</code>。</p><p>英文是 <code>Checkout</code>。</p><p><img src="https://s1.ax1x.com/2022/05/25/Xk4mQI.png"></p><p>进入此页面，选择免费，十二月。</p><p>域名快到期前，会提醒你是否续费，<del>所以把你注册的这天当做纪念日吧</del>。</p><p><strong>Continue</strong>。</p><p><strong>如果之前注册过域名，会直接加入。</strong></p><p>进去后，会到达这样的页面。</p><p><img src="https://s1.ax1x.com/2022/05/25/XkWAij.png"></p><p>注意，如果你的网页<strong>正在加载</strong>，请务必等待加载结束。</p><p><strong>等到加载完毕再填写信息！！！</strong></p><p><img src="https://s1.ax1x.com/2022/05/25/XkWMeU.png"></p><p>上图这样既可。</p><p>然后选择用邮件，即左边。如果有 Google 账号，可以选择右边。</p><p><img src="https://s1.ax1x.com/2022/05/25/XkW0Te.png"></p><p>尽量使用 QQ 邮箱或外国邮箱，<strong>其他的可能受不到邮件</strong>。</p><p><strong>Verify My Email Address</strong>。</p><p>之后会收到邮件，进入邮件地址，填写信息。</p><p><img src="https://s1.ax1x.com/2022/05/25/XkfA0O.png"></p><p>PS：如果出现上图的 Attention，就代表不能用，换一个域名，这是我第一次踩坑的错误示范&#x2F;kk。</p><p>之后还是一样，多等等，等到加载完成。</p><p>接着去网站下方，<a href="https://my.freenom.com/clientarea.php?action=domains">My Domains</a>，应该能看到你的域名了。</p><h3 id="控制域名"><a href="#控制域名" class="headerlink" title="控制域名"></a>控制域名</h3><p><img src="https://s1.ax1x.com/2022/05/25/Xk5zb6.png"></p><p>如果出现这样子，有了你的域名即可。</p><p>点击 **Manage Domain-Management Tools-Nameservers-Use custom nameservers (enter below)**。</p><p><img src="https://s1.ax1x.com/2022/05/25/XkI6qx.png"></p><p>先别关闭，还有用。</p><p>注册 腾讯云 账号，登录 <a href="https://www.dnspod.cn/">dnspod</a>。</p><p>管理 <a href="https://console.dnspod.cn/dns/list">我的域名</a>。</p><p>添加你自己的域名，会出现 DNS 不正确。</p><p>点进去。</p><p><img src="/"><img src="C:\Users\admin\AppData\Roaming\Typora\typora-user-images\image-20220525192250628.png" alt="image-20220525192250628"></p><p><strong>查看详情</strong>。</p><p><img src="https://s1.ax1x.com/2022/05/25/XkoeSJ.png"></p><p>复制两个绿色的服务器。</p><p>前往<img src="https://s1.ax1x.com/2022/05/25/XkI6qx.png"></p><p>填写服务器。</p><p><img src="https://s1.ax1x.com/2022/05/25/XkoYSH.png"></p><p>点蓝色的框，确认。</p><p>之后等待几秒，回到 DNSPOD 重新验证。</p><h3 id="绑定域名"><a href="#绑定域名" class="headerlink" title="绑定域名"></a>绑定域名</h3><p>前往 Github 注册一个仓库，当网站。</p><p>添加 CNAME 文件，其中填写你的域名，此例为 <code>chen2009.ml</code>。</p><p>然后分别添加记录值为 <code>192.30.252.153</code> 和 <code>192.30.252.154</code> 的记录。</p><p><img src="https://s1.ax1x.com/2022/05/25/Xk7Lo6.png"></p><p>如果你是 hexo 博客，可以考虑在 source 文件夹添加 CNAME，因为 source 文件夹不清空，便能把 CNAME 传至 Github 仓库。</p><p>可以参考 <a href="http://blog.chen2009.tk/2022/05/19/hexo-blog/">【置顶】如何快速上手 Hexo 博客</a>。</p><link rel="stylesheet" href="/css/bilicard.css" type="text/css">]]></content>
+      
+      
+      <categories>
+          
+          <category> 讲解 </category>
+          
+      </categories>
+      
+      
+    </entry>
+    
+    
+    
+    <entry>
       <title>abc252做题笔记</title>
       <link href="/2022/05/21/abc252/"/>
       <url>/2022/05/21/abc252/</url>
@@ -189,9 +208,9 @@
             
             <tag> Codeforces </tag>
             
-            <tag> Atcoder </tag>
-            
             <tag> 洛谷 </tag>
+            
+            <tag> Atcoder </tag>
             
         </tags>
       
@@ -465,19 +484,6 @@
             <tag> Codeforces </tag>
             
         </tags>
-      
-    </entry>
-    
-    
-    
-    <entry>
-      <title>【置顶】网站更新日志</title>
-      <link href="/2022/03/26/change/"/>
-      <url>/2022/03/26/change/</url>
-      
-        <content type="html"><![CDATA[<h3 id="2022"><a href="#2022" class="headerlink" title="2022"></a>2022</h3><h4 id="2022-3-22"><a href="#2022-3-22" class="headerlink" title="2022.3.22"></a>2022.3.22</h4><p>创建此网站。</p><p>新增文章《<a href="https://chenyuxuan2009.github.io/2022/03/22/abc105_c/">ABC105C | AT4239 Base -2 Number</a>》；</p><p>新增文章《<a href="https://chenyuxuan2009.github.io/2022/03/22/abc142_d/">ABC142D | AT4875 Disjoint Set of Common Divisors</a>》；</p><p>新增文章《<a href="https://chenyuxuan2009.github.io/2022/03/22/CF1555A/">CF1555A PizzaForces</a>》；</p><p>新增文章《<a href="https://chenyuxuan2009.github.io/2022/03/22/CF1613B/">CF1613B Absent Remainder</a>》；</p><p>新增文章《<a href="https://chenyuxuan2009.github.io/2022/03/22/CF1615A/">CF1615A Closing The Gap</a>》；</p><p>新增文章《<a href="https://chenyuxuan2009.github.io/2022/03/22/CF1621A/">CF1621A Stable Arrangement of Rooks</a>》；</p><p>新增文章《<a href="https://chenyuxuan2009.github.io/2022/03/22/CF1627B/">CF1627B Not Sitting</a>》；</p><p>新增文章《<a href="https://chenyuxuan2009.github.io/2022/03/22/CF1633B/">CF1633B Minority</a>》；</p><p>新增文章《<a href="https://chenyuxuan2009.github.io/2022/03/22/CF1633C/">CF1633C Kill the Monster</a>》；</p><p>新增文章《<a href="https://chenyuxuan2009.github.io/2022/03/22/CF1644B/">CF1644B Anti-Fibonacci Permutation</a>》；</p><p>新增文章《<a href="https://chenyuxuan2009.github.io/2022/03/22/CF1646B/">CF1646B Quality vs Quantity</a>》；</p><p>新增文章《<a href="https://chenyuxuan2009.github.io/2022/03/22/CF1648A/">CF1648A Weird Sum</a>》；</p><p>新增文章《<a href="https://chenyuxuan2009.github.io/2022/03/22/CF1651B/">CF1651B Prove Him Wrong</a>》；</p><p>新增文章《<a href="https://chenyuxuan2009.github.io/2022/03/22/cf17_final_a/">CF17 FINAL A | AT3602 AKIBA</a>》；</p><p>新增文章《<a href="https://chenyuxuan2009.github.io/2022/03/22/CF630E/">CF630E A rectangle</a>》；</p><p>新增文章《<a href="https://chenyuxuan2009.github.io/2022/03/22/P8197/">P8197 排排队</a>》；</p><h4 id="2022-3-23"><a href="#2022-3-23" class="headerlink" title="2022.3.23"></a>2022.3.23</h4><p>新增文章《<a href="https://chenyuxuan2009.github.io/2022/03/23/%E4%B8%89%E7%9B%AE%E8%BF%90%E7%AE%97%E7%AC%A6%E8%AE%B2%E8%A7%A3/">三目运算符讲解</a>》；</p><p>新增文章《<a href="https://chenyuxuan2009.github.io/2022/03/23/top/">【置顶】公告</a>》；</p><p>添加评论功能；</p><h4 id="2022-3-24"><a href="#2022-3-24" class="headerlink" title="2022.3.24"></a>2022.3.24</h4><p>新增文章《<a href="https://chenyuxuan2009.github.io/2022/03/24/freopen%E8%AE%B2%E8%A7%A3/">freopen讲解</a>》</p><h4 id="2022-3-25"><a href="#2022-3-25" class="headerlink" title="2022.3.25"></a>2022.3.25</h4><p>新增文章《<a href="https://chenyuxuan2009.github.io/2022/03/25/code/">【置顶】我的码风</a>》</p><h4 id="2022-3-26"><a href="#2022-3-26" class="headerlink" title="2022.3.26"></a>2022.3.26</h4><p>优化代码块显示；</p><p>新增文章《<a href="https://chenyuxuan2009.github.io/2022/03/26/change/">【置顶】网站更新日志</a>》；</p><h4 id="2022-3-30"><a href="#2022-3-30" class="headerlink" title="2022.3.30"></a>2022.3.30</h4><p>新增文章《<a href="https://chenyuxuan2009.github.io/2022/03/30/OI/">【置顶】信息学行内黑话</a>》；</p><h4 id="2022-4-5"><a href="#2022-4-5" class="headerlink" title="2022.4.5"></a>2022.4.5</h4><p>新增文章《<a href="https://chenyuxuan2009.github.io/2022/04/05/pycharm/">Pycharm讲解</a>》；</p><p>新增文章《<a href="https://chenyuxuan2009.github.io/2022/04/05/CF727C/">CF727C Guess the Array</a>》；</p><p>新增文章《<a href="https://chenyuxuan2009.github.io/2022/04/05/CF1656B/">CF1656B Subtract Operation</a>》；</p><h4 id="2022-4-5-1"><a href="#2022-4-5-1" class="headerlink" title="2022.4.5"></a>2022.4.5</h4><p>修改文章末尾介绍；</p><p>新增鼠标点击特效；</p><h4 id="2022-4-9"><a href="#2022-4-9" class="headerlink" title="2022.4.9"></a>2022.4.9</h4><p>新增文章《<a href="https://chenyuxuan2009.github.io/2022/04/09/math1/">洛谷题单117 | 基础数学问题</a>》；</p><h4 id="2022-4-10"><a href="#2022-4-10" class="headerlink" title="2022.4.10"></a>2022.4.10</h4><p>新增文章《<a href="https://chenyuxuan2009.github.io/2022/04/10/abc247/">abc247做题笔记</a>》；</p><h4 id="2022-4-13"><a href="#2022-4-13" class="headerlink" title="2022.4.13"></a>2022.4.13</h4><p>新增文章《<a href="https://chenyuxuan2009.github.io/2022/04/13/fft1/">《四叉树》第一集 | 转世重生</a>》；</p><h4 id="2022-4-23"><a href="#2022-4-23" class="headerlink" title="2022.4.23"></a>2022.4.23</h4><p>新增文章《<a href="https://chenyuxuan2009.github.io/2022/04/23/abc249/">abc249做题笔记</a>》；</p><h4 id="2022-4-27"><a href="#2022-4-27" class="headerlink" title="2022.4.27"></a>2022.4.27</h4><p>新增文章《<a href="https://chenyuxuan2009.github.io/2022/04/24/fft2/">《四叉树》第二集 | 上课报道</a>》；</p><p>新增爱发电链接。</p><h4 id="2022-4-30"><a href="#2022-4-30" class="headerlink" title="2022.4.30"></a>2022.4.30</h4><p>新增文章《<a href="https://chenyuxuan2009.github.io/2022/04/30/live-problemset/">直播卷题题单</a>》；</p><p>取消文章《<a href="https://chenyuxuan2009.github.io/2022/03/30/OI/">【置顶】信息学行内黑话</a>》的置顶效果，改为《<a href="https://chenyuxuan2009.github.io/2022/03/30/OI/">信息学行内黑话</a>》</p><h4 id="2022-5-2"><a href="#2022-5-2" class="headerlink" title="2022.5.2"></a>2022.5.2</h4><p>新增文章《<a href="https://chenyuxuan2009.github.io/2022/05/02/luogu-beginner/">【置顶】入门洛谷</a>》；</p><h4 id="2022-5-5"><a href="#2022-5-5" class="headerlink" title="2022.5.5"></a>2022.5.5</h4><p>新增文章《<a href="https://chenyuxuan2009.github.io/2022/05/05/abc061_c/">ABC061C | AT2561 Big Array</a>》；</p><p>新增 github 项目链接。</p><h4 id="2022-5-8"><a href="#2022-5-8" class="headerlink" title="2022.5.8"></a>2022.5.8</h4><p>新增文章《<a href="https://chenyuxuan2009.github.io/2022/05/08/abc250/">abc250做题笔记</a>》；</p><h4 id="2022-5-12"><a href="#2022-5-12" class="headerlink" title="2022.5.12"></a>2022.5.12</h4><p>新增文章《<a href="https://chenyuxuan2009.github.io/2022/05/12/CZOI2022/">CZOI2022游记</a>》；</p><h4 id="2022-5-14"><a href="#2022-5-14" class="headerlink" title="2022.5.14"></a>2022.5.14</h4><p>新增文章《<a href="https://chenyuxuan2009.github.io/2022/05/14/abc251/">abc251做题笔记</a>》；</p><h4 id="2022-5-19"><a href="#2022-5-19" class="headerlink" title="2022.5.19"></a>2022.5.19</h4><p>新增文章《<a href="https://chenyuxuan2009.github.io/2022/05/19/hexo-blog/">【置顶】如何快速上手 Hexo 博客</a>》；</p><h4 id="2022-5-21"><a href="#2022-5-21" class="headerlink" title="2022.5.21"></a>2022.5.21</h4><p>新增文章《<a href="https://chenyuxuan2009.github.io/2022/05/21/abc252/">abc252做题笔记</a>》；</p><link rel="stylesheet" href="/css/bilicard.css" type="text/css">]]></content>
-      
-      
       
     </entry>
     
