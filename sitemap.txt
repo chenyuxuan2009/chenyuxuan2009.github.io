@@ -1,8 +1,8 @@
+https://chenyuxuan2009.github.io/data/argon.json
 https://chenyuxuan2009.github.io/judgement/index.html
 https://chenyuxuan2009.github.io/2022/05/25/get-domain/
 https://chenyuxuan2009.github.io/2022/05/28/abc253/
 https://chenyuxuan2009.github.io/2022/05/19/hexo-blog/
-https://chenyuxuan2009.github.io/data/argon.json
 https://chenyuxuan2009.github.io/2022/05/21/abc252/
 https://chenyuxuan2009.github.io/2022/04/30/live-problemset/
 https://chenyuxuan2009.github.io/2022/03/22/abc105_c/
