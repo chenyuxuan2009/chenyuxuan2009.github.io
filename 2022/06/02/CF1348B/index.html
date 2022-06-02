@@ -19,7 +19,7 @@
 <meta property="og:description" content="题目翻译有一个长度为 $n$ 的数组，里面有 $n$ 个元素，$a_1,a_2,a_3,…a_n$。 给定一个 $k$，可以通过在 $a$ 数组中插入 $[1,n]$ 之间的数字，使任意 $k$ 个连续的元素之和相等。 如无解，输出 $-1$。 题目思路我们可以考虑，把这个数组分成很多段，也就变成 $b_1,b_2,b_3,…,b_k,b_1,b_2,b_3,…,b_k,b_1,b_2,b_3……">
 <meta property="og:locale" content="zh_CN">
 <meta property="article:published_time" content="2022-06-02T08:32:48.898Z">
-<meta property="article:modified_time" content="2022-06-02T08:33:14.342Z">
+<meta property="article:modified_time" content="2022-06-02T11:07:09.470Z">
 <meta property="article:author" content="CYX">
 <meta property="article:tag" content="C++">
 <meta property="article:tag" content="Codeforces">
@@ -619,7 +619,7 @@
 						
 						<div class="post-meta-detail post-meta-detail-time">
 							<i class="fa fa-clock-o" aria-hidden="true"></i>
-							<time title="发布于 2022-6-2 16:32:48 | 编辑于 2022-6-2 16:33:14">2022-6-2 16:32
+							<time title="发布于 2022-6-2 16:32:48 | 编辑于 2022-6-2 19:07:09">2022-6-2 16:32
 							</time>
 						</div>
 					
@@ -672,7 +672,7 @@
 <p>那么我们需要输出几次 $b_1,…b_k$ 呢？</p>
 <p>答案很简单，$n$ 次。</p>
 <p>我们用一个例子解释一下。</p>
-<pre><code class="highlight text">5 5
+<pre><code class="highlight txt">5 5
 5 3 2 4 1</code></pre>
 
 <pre><code class="highlight tap">注：原数组元素会在下方标注，‘|’分割每组
@@ -680,10 +680,10 @@
         ^     ^       ^             ^   ^</code></pre>
 
 <p>当然，我们要进行去重。</p>
-<pre><code class="highlight text">5 5
+<pre><code class="highlight txt">5 5
 5 5 5 5 5</code></pre>
 
-<pre><code class="highlight text">5|5|5|5|5
+<pre><code class="highlight txt">5|5|5|5|5
 ^</code></pre>
 
 <p>但是，不要忘了刚才说的：</p>
@@ -691,7 +691,7 @@
 <p>如果我们输入的 $a$，<strong>去重</strong>后元素数量大于 $k$，肯定无法构造。</p>
 </blockquote>
 <p>所以，像下组数据：</p>
-<pre><code class="highlight text">5 3
+<pre><code class="highlight txt">5 3
 5 3 2 4 1</code></pre>
 
 <p>就得输出 $-1$。</p>
