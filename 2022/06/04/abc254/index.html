@@ -19,7 +19,7 @@
 <meta property="og:description" content="abc254_a题目翻译输入一个数，输出它的后两位。 题目思路思路一int 读入，要特判前导零。 思路二char 读入，直接输出。 我写的是 int 读入。 AC 代码#include&lt;bits&#x2F;stdc++.h&gt; using namespace std; int main() &amp;#123;     int n;     cin &gt;&gt; n;     if (n &#x2F; 10 %">
 <meta property="og:locale" content="zh_CN">
 <meta property="article:published_time" content="2022-06-04T13:42:13.651Z">
-<meta property="article:modified_time" content="2022-06-04T13:51:07.114Z">
+<meta property="article:modified_time" content="2022-06-04T13:54:47.124Z">
 <meta property="article:author" content="CYX">
 <meta property="article:tag" content="C++">
 <meta property="article:tag" content="Atcoder">
@@ -619,7 +619,7 @@
 						
 						<div class="post-meta-detail post-meta-detail-time">
 							<i class="fa fa-clock-o" aria-hidden="true"></i>
-							<time title="发布于 2022-6-4 21:42:13 | 编辑于 2022-6-4 21:51:07">2022-6-4 21:42
+							<time title="发布于 2022-6-4 21:42:13 | 编辑于 2022-6-4 21:54:47">2022-6-4 21:42
 							</time>
 						</div>
 					
@@ -654,7 +654,7 @@
 						
 						<div class="post-meta-detail post-meta-detail-readingtime">
 							<i class="fa fa-hourglass-end" aria-hidden="true"></i>
-							5 分钟
+							6 分钟
 						</div>
 					
 		</div>
@@ -767,6 +767,14 @@
 <p>枚举后，自然也会发现，这里的 $\gcd(i,j)$ 会有很多选择。</p>
 <p>$\gcd(i,j)$ 最大的可能是 $\left\lfloor\dfrac{n}{\max(x,y)}\right\rfloor$。</p>
 <p>所以，我们枚举每组 $x,y$，加上 $\left\lfloor\dfrac{n}{\max(x,y)}\right\rfloor$ 即为答案。</p>
+<p>放个伪代码：</p>
+<pre><code class="highlight stylus"><span class="function"><span class="title">for</span><span class="params">(<span class="number">1</span>~sqrt(n)</span></span>)
+	生成完全平方数
+<span class="function"><span class="title">for</span><span class="params">(<span class="number">1</span>~完全平方数个数)</span></span>
+	<span class="built_in">for</span>(<span class="number">1</span>~完全平方数个数) 
+		<span class="built_in">if</span>(两个完全平方数互质)
+			加上可能的gcd，也就是 n/较大的完全平方数</code></pre>
+
 <h4 id="AC-代码-3"><a href="#AC-代码-3" class="headerlink" title="AC 代码"></a>AC 代码</h4><pre><code class="highlight cpp"><span class="meta">#<span class="keyword">include</span><span class="string">&lt;bits/stdc++.h&gt;</span></span>
 <span class="keyword">using</span> <span class="keyword">namespace</span> std;
 <span class="type">int</span> a[<span class="number">1000</span>],sz;
