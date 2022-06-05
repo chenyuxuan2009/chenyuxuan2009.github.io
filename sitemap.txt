@@ -1,9 +1,9 @@
 https://chenyuxuan2009.github.io/user-links/index.html
+https://chenyuxuan2009.github.io/data/argon.json
 https://chenyuxuan2009.github.io/judgement/index.html
 https://chenyuxuan2009.github.io/2022/06/04/abc254/
 https://chenyuxuan2009.github.io/2022/06/02/CF1348B/
 https://chenyuxuan2009.github.io/2022/05/25/get-domain/
-https://chenyuxuan2009.github.io/data/argon.json
 https://chenyuxuan2009.github.io/2022/05/28/abc253/
 https://chenyuxuan2009.github.io/2022/05/19/hexo-blog/
 https://chenyuxuan2009.github.io/2022/05/21/abc252/

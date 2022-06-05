@@ -11,6 +11,15 @@
   </url>
   
   <url>
+    <loc>https://chenyuxuan2009.github.io/data/argon.json</loc>
+    
+    <lastmod>2022-06-05</lastmod>
+    
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
     <loc>https://chenyuxuan2009.github.io/judgement/index.html</loc>
     
     <lastmod>2022-06-04</lastmod>
@@ -39,15 +48,6 @@
   
   <url>
     <loc>https://chenyuxuan2009.github.io/2022/05/25/get-domain/</loc>
-    
-    <lastmod>2022-05-29</lastmod>
-    
-    <changefreq>monthly</changefreq>
-    <priority>0.6</priority>
-  </url>
-  
-  <url>
-    <loc>https://chenyuxuan2009.github.io/data/argon.json</loc>
     
     <lastmod>2022-05-29</lastmod>
     
