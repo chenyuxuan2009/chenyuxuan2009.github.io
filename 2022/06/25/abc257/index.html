@@ -19,7 +19,7 @@
 <meta property="og:description" content="由于作者代码风格有变，头文件较长，以下代码均舍去头文件。 abc257_a题目翻译给定一个 $n$，生成一个字符串，内容为 $n$ 个 $\tt{A}$，$n$ 个 $\tt{B}$，一直到 $n$ 个 $\tt{Z}$。 输出第 $k$ 位。 题目思路直接模拟到第 $n$ 位。 这是最暴力的写法。 也可以用数学知识算一下当前是哪个字符。 我采用了最暴力的。 AC 代码int main() &amp;#1">
 <meta property="og:locale" content="zh_CN">
 <meta property="article:published_time" content="2022-06-25T14:04:15.904Z">
-<meta property="article:modified_time" content="2022-06-25T14:11:57.309Z">
+<meta property="article:modified_time" content="2022-06-25T14:30:03.430Z">
 <meta property="article:author" content="CYX">
 <meta property="article:tag" content="C++">
 <meta property="article:tag" content="Atcoder">
@@ -627,7 +627,7 @@
 						
 						<div class="post-meta-detail post-meta-detail-time">
 							<i class="fa fa-clock-o" aria-hidden="true"></i>
-							<time title="发布于 2022-6-25 22:04:15 | 编辑于 2022-6-25 22:11:57">2022-6-25 22:04
+							<time title="发布于 2022-6-25 22:04:15 | 编辑于 2022-6-25 22:30:03">2022-6-25 22:04
 							</time>
 						</div>
 					
@@ -654,7 +654,7 @@
 						
 						<div class="post-meta-detail post-meta-detail-words">
 							<i class="fa fa-file-word-o" aria-hidden="true"></i>
-							1k 字
+							1.3k 字
 						</div>
 					
 						
@@ -662,7 +662,7 @@
 						
 						<div class="post-meta-detail post-meta-detail-readingtime">
 							<i class="fa fa-hourglass-end" aria-hidden="true"></i>
-							5 分钟
+							6 分钟
 						</div>
 					
 		</div>
@@ -743,7 +743,65 @@
     <span class="keyword">return</span> <span class="number">0</span>;
 &#125;</code></pre>
 
-<h3 id="abc257-c"><a href="#abc257-c" class="headerlink" title="abc257_c"></a><a target="_blank" rel="noopener" href="https://atcoder.jp/contests/abc257/tasks/abc257_c">abc257_c</a></h3><h4 id="题目翻译-2"><a href="#题目翻译-2" class="headerlink" title="题目翻译"></a>题目翻译</h4><h4 id="题目思路-2"><a href="#题目思路-2" class="headerlink" title="题目思路"></a>题目思路</h4><h4 id="AC-代码-2"><a href="#AC-代码-2" class="headerlink" title="AC 代码"></a>AC 代码</h4><pre><code class="highlight cpp"></code></pre>
+<h3 id="abc257-c"><a href="#abc257-c" class="headerlink" title="abc257_c"></a><a target="_blank" rel="noopener" href="https://atcoder.jp/contests/abc257/tasks/abc257_c">abc257_c</a></h3><h4 id="题目翻译-2"><a href="#题目翻译-2" class="headerlink" title="题目翻译"></a>题目翻译</h4><p>有 $n$ 个人，每个人有个体重 $w_i$，以及 $\tt{0}$ 代表他是小孩，$\tt{1}$ 代表成人。</p>
+<p>我们认为，比 $X$ 轻的是小孩，反之是成人。</p>
+<p>请选择一个 $X$，使身份匹配正确的人数最多。</p>
+<h4 id="题目思路-2"><a href="#题目思路-2" class="headerlink" title="题目思路"></a>题目思路</h4><p>把这些人按体重排序，相同体重成人在前。</p>
+<p>统计这里一共多少成人。</p>
+<p>对于每个 $[1,i]$ 的区间，算一下类似前缀和的操作。</p>
+<p>是小孩，之前统计的加 $1$，反之 $-1$。</p>
+<h4 id="AC-代码-2"><a href="#AC-代码-2" class="headerlink" title="AC 代码"></a>AC 代码</h4><pre><code class="highlight cpp"><span class="keyword">struct</span> <span class="title class_">node</span>
+&#123;
+    <span class="type">bool</span> f;
+    <span class="type">int</span> w;
+&#125; a[<span class="number">200005</span>];
+<span class="function"><span class="type">bool</span> <span class="title">cmp</span> <span class="params">(node x, node y)</span></span>
+<span class="function"></span>&#123;
+    <span class="keyword">if</span> (x.w == y.w)
+    &#123;
+        <span class="keyword">return</span> x.f &gt; y.f;
+    &#125;
+    <span class="keyword">return</span> x.w &lt; y.w;
+&#125;
+<span class="function"><span class="type">int</span> <span class="title">main</span><span class="params">()</span></span>
+<span class="function"></span>&#123;
+    <span class="type">int</span> n, ch = <span class="number">0</span>, ans;
+    cin &gt;&gt; n;
+    <span class="type">char</span> c;
+    <span class="keyword">for</span> (<span class="type">int</span> i = <span class="number">1</span>; i &lt;= n; i++)
+    &#123;
+        cin &gt;&gt; c;
+        <span class="keyword">if</span> (c == <span class="string">&#x27;0&#x27;</span>)
+        &#123;
+            a[i].f = <span class="number">0</span>;
+        &#125;
+        <span class="keyword">else</span>
+        &#123;
+            a[i].f = <span class="number">1</span>;
+            ch++;
+        &#125;
+    &#125;
+    <span class="keyword">for</span> (<span class="type">int</span> i = <span class="number">1</span>; i &lt;= n; i++)
+    &#123;
+        cin &gt;&gt; a[i].w;
+    &#125;
+    <span class="built_in">sort</span> (a + <span class="number">1</span>, a + n + <span class="number">1</span>, cmp);
+    ans = ch;
+    <span class="keyword">for</span> (<span class="type">int</span> i = <span class="number">1</span>; i &lt;= n; i++)
+    &#123;
+        <span class="keyword">if</span> (a[i].f == <span class="number">0</span>)
+        &#123;
+            ch++;
+        &#125;
+        <span class="keyword">else</span>
+        &#123;
+            ch--;
+        &#125;
+        ans = <span class="built_in">max</span> (ans, ch);
+    &#125;
+    cout &lt;&lt; ans &lt;&lt; endl;
+    <span class="keyword">return</span> <span class="number">0</span>;
+&#125;</code></pre>
 
 <h3 id="abc257-d"><a href="#abc257-d" class="headerlink" title="abc257_d"></a><a target="_blank" rel="noopener" href="https://atcoder.jp/contests/abc257/tasks/abc257_d">abc257_d</a></h3><h4 id="题目翻译-3"><a href="#题目翻译-3" class="headerlink" title="题目翻译"></a>题目翻译</h4><p>有 $n$ 个蹦床，每个蹦床坐标为 $(x_i,y_i)$，并拥有主场 buff $p_i$ 加持。</p>
 <p>（这样说是不是通俗易懂</p>
