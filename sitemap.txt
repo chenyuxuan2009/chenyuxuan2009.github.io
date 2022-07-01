@@ -1,3 +1,4 @@
+https://chenyuxuan2009.github.io/2022/05/12/CZOI2022/
 https://chenyuxuan2009.github.io/2022/06/25/abc257/
 https://chenyuxuan2009.github.io/friends/index.html
 https://chenyuxuan2009.github.io/2022/04/30/live-problemset/
@@ -33,7 +34,6 @@ https://chenyuxuan2009.github.io/2022/03/22/CF1648A/
 https://chenyuxuan2009.github.io/2022/03/22/CF1651B/
 https://chenyuxuan2009.github.io/2022/03/28/CF1654A/
 https://chenyuxuan2009.github.io/2022/04/05/CF1656B/
-https://chenyuxuan2009.github.io/2022/05/12/CZOI2022/
 https://chenyuxuan2009.github.io/2022/04/24/fft2/
 https://chenyuxuan2009.github.io/2022/04/13/fft1/
 https://chenyuxuan2009.github.io/2022/03/24/freopen/
@@ -48,8 +48,8 @@ https://chenyuxuan2009.github.io/2022/03/23/top/
 https://chenyuxuan2009.github.io/404.html
 https://chenyuxuan2009.github.io/
 https://chenyuxuan2009.github.io/tags/C/
-https://chenyuxuan2009.github.io/tags/Python/
 https://chenyuxuan2009.github.io/tags/Codeforces/
+https://chenyuxuan2009.github.io/tags/Python/
 https://chenyuxuan2009.github.io/tags/%E6%B4%9B%E8%B0%B7/
 https://chenyuxuan2009.github.io/tags/Atcoder/
 https://chenyuxuan2009.github.io/tags/%E5%B0%8F%E8%AF%B4/
