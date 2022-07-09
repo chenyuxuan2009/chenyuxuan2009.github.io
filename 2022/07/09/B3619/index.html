@@ -14,23 +14,23 @@
 	<script src="//cdnjs.cloudflare.com/ajax/libs/highlight.js/11.1.0/highlight.min.js"></script>
 	<script type="text/javascript" src="/assets/js/click-live.js"></script>
 	
-	<title>CF1615A Closing The Gap - chenyuxuan__2009的博客</title>
+	<title>B3619 10 进制转 x 进制 - chenyuxuan__2009的博客</title>
 	<meta charset="utf-8">
 	
 		<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=5">
 	
-	<meta name="description" content="题目翻译：有 $n$ 个数，每个数为 $a_i$  ，你可以每次选 $2$ 个数 $a$ 和 $b$ ，把 $a$ 高度 $-1$ ，把 $b$ 高度 $+1$。在经历无限次操作后，求 $max(a)-min(a)$ 的值。  题目思路：其实就是求平均数，如果求出的和是 $n$ 的倍数，那么意味数组 $a$ 中的每个值相等且均为正整数，那么相差都为 $0$。反之不是 $n$ 的倍数，那么总会有数多">
+	<meta name="description" content="题目思路就是进制转换啦。 进制转换，肯定要讲一下短除法。就是每次看余数并做除法。 比如 $10$ 转换 $2$ 进制。 $13\bmod2&#x3D;1$。 $6 \bmod 2&#x3D;0$。 $3 \bmod2&#x3D;1$。 $1\bmod2&#x3D;1$。 最后倒序枚举余数即可。 那么，我们可以有两种方案，递归和存数组。 存数组，字面意思，把余数存下来，最后翻转，输出。 递归，每次准">
 <meta property="og:type" content="article">
-<meta property="og:title" content="CF1615A Closing The Gap">
-<meta property="og:url" content="https://chenyuxuan2009.github.io/2022/03/22/CF1615A/index.html">
+<meta property="og:title" content="B3619 10 进制转 x 进制">
+<meta property="og:url" content="https://chenyuxuan2009.github.io/2022/07/09/B3619/index.html">
 <meta property="og:site_name" content="chenyuxuan__2009的博客">
-<meta property="og:description" content="题目翻译：有 $n$ 个数，每个数为 $a_i$  ，你可以每次选 $2$ 个数 $a$ 和 $b$ ，把 $a$ 高度 $-1$ ，把 $b$ 高度 $+1$。在经历无限次操作后，求 $max(a)-min(a)$ 的值。  题目思路：其实就是求平均数，如果求出的和是 $n$ 的倍数，那么意味数组 $a$ 中的每个值相等且均为正整数，那么相差都为 $0$。反之不是 $n$ 的倍数，那么总会有数多">
+<meta property="og:description" content="题目思路就是进制转换啦。 进制转换，肯定要讲一下短除法。就是每次看余数并做除法。 比如 $10$ 转换 $2$ 进制。 $13\bmod2&#x3D;1$。 $6 \bmod 2&#x3D;0$。 $3 \bmod2&#x3D;1$。 $1\bmod2&#x3D;1$。 最后倒序枚举余数即可。 那么，我们可以有两种方案，递归和存数组。 存数组，字面意思，把余数存下来，最后翻转，输出。 递归，每次准">
 <meta property="og:locale" content="zh_CN">
-<meta property="article:published_time" content="2022-03-22T12:38:59.467Z">
-<meta property="article:modified_time" content="2022-05-21T07:08:15.642Z">
+<meta property="article:published_time" content="2022-07-09T02:25:28.575Z">
+<meta property="article:modified_time" content="2022-07-09T02:25:28.576Z">
 <meta property="article:author" content="CYX">
 <meta property="article:tag" content="C++">
-<meta property="article:tag" content="Codeforces">
+<meta property="article:tag" content="洛谷">
 <meta name="twitter:card" content="summary">
 
 	<meta name="theme-color" content="#5e72e4">
@@ -629,13 +629,13 @@
 	<article class="post post-full card bg-white shadow-sm border-0 post-preview">
 	<header class="post-header text-center">
 		
-		<a class="post-title" href="/2022/03/22/CF1615A/">CF1615A Closing The Gap</a>
+		<a class="post-title" href="/2022/07/09/B3619/">B3619 10 进制转 x 进制</a>
 		<div class="post-meta">
 			
 						
 						<div class="post-meta-detail post-meta-detail-time">
 							<i class="fa fa-clock-o" aria-hidden="true"></i>
-							<time title="发布于 2022-3-22 20:38:59 | 编辑于 2022-5-21 15:08:15">2022-3-22 20:38
+							<time title="发布于 2022-7-9 10:25:28 | 编辑于 2022-7-9 10:25:28">2022-7-9 10:25
 							</time>
 						</div>
 					
@@ -662,7 +662,7 @@
 						
 						<div class="post-meta-detail post-meta-detail-words">
 							<i class="fa fa-file-word-o" aria-hidden="true"></i>
-							327 字
+							226 字
 						</div>
 					
 						
@@ -678,41 +678,33 @@
 	</header>
 
 	<div class="post-content" id="post_content">
-		<h4 id="题目翻译："><a href="#题目翻译：" class="headerlink" title="题目翻译："></a>题目翻译：</h4><p>有 $n$ 个数，每个数为 $a_i$  ，你可以每次选 $2$ 个数 $a$ 和 $b$ ，把 $a$ 高度 $-1$ ，把 $b$ 高度 $+1$。在经历无限次操作后，求 $max(a)-min(a)$ 的值。 </p>
-<h4 id="题目思路："><a href="#题目思路：" class="headerlink" title="题目思路："></a>题目思路：</h4><p>其实就是求平均数，如果求出的和是 $n$ 的倍数，那么意味数组 $a$ 中的每个值<strong>相等</strong>且均为<strong>正整数</strong>，那么相差<strong>都为 $0$<strong>。反之不是 $n$ 的倍数，那么总会有数多出 $1$ ，那么最大与最小的差</strong>就为 $1$</strong> 。这个想法非常好证明，取模之后的数比 $n$ 要小，那么每个数添上 $1$ 总会有没添上的，那么差就是为 $1$。</p>
-<h4 id="题目代码："><a href="#题目代码：" class="headerlink" title="题目代码："></a>题目代码：</h4><pre><code class="highlight cpp"><span class="function"><span class="type">void</span> <span class="title">solve</span><span class="params">()</span></span>
+		<h3 id="题目思路"><a href="#题目思路" class="headerlink" title="题目思路"></a>题目思路</h3><p>就是进制转换啦。</p>
+<p>进制转换，肯定要讲一下短除法。就是每次看余数并做除法。</p>
+<p>比如 $10$ 转换 $2$ 进制。</p>
+<p>$13\bmod2&#x3D;1$。</p>
+<p>$6 \bmod 2&#x3D;0$。</p>
+<p>$3 \bmod2&#x3D;1$。</p>
+<p>$1\bmod2&#x3D;1$。</p>
+<p>最后倒序枚举余数即可。</p>
+<p>那么，我们可以有两种方案，<strong>递归</strong>和<strong>存数组</strong>。</p>
+<p>存数组，字面意思，把余数存下来，最后翻转，输出。</p>
+<p>递归，每次准备着输出数，但先递归后面的余数，最后返回来输出。</p>
+<h3 id="题目代码"><a href="#题目代码" class="headerlink" title="题目代码"></a>题目代码</h3><p>我用的是递归。</p>
+<pre><code class="highlight cpp"><span class="meta">#<span class="keyword">include</span><span class="string">&lt;bits/stdc++.h&gt;</span></span>
+<span class="keyword">typedef</span> <span class="type">long</span> <span class="type">long</span> ll;
+<span class="keyword">using</span> <span class="keyword">namespace</span> std;
+string c=<span class="string">&quot;0123456789ABCDEFGHIJKLMNOPQRSTUVWXYZ&quot;</span>;<span class="comment">//存数</span>
+<span class="function"><span class="type">void</span> <span class="title">f</span><span class="params">(ll x,ll m)</span></span>&#123;<span class="keyword">if</span>(x/m)<span class="built_in">f</span>(x/m,m);cout&lt;&lt;c[x%m];&#125;<span class="comment">//递归</span>
+<span class="function"><span class="type">int</span> <span class="title">main</span><span class="params">()</span></span>
 <span class="function"></span>&#123;
-	<span class="type">int</span> n,sum=<span class="number">0</span>; 
-	cin&gt;&gt;n;
-	<span class="keyword">for</span>(<span class="type">int</span> i=<span class="number">1</span>;i&lt;=n;i++)
-	&#123;
-		<span class="type">int</span> x;
-		cin&gt;&gt;x;<span class="comment">//输入 </span>
-		sum+=x;<span class="comment">//求和 </span>
-	&#125;
-	cout&lt;&lt;(sum%n==<span class="number">0</span>?<span class="number">0</span>:<span class="number">1</span>)&lt;&lt;endl;<span class="comment">//判断 输出 </span>
+	ll n,x;
+	cin&gt;&gt;n&gt;&gt;x;
+	<span class="keyword">if</span>(x==<span class="number">0</span>)&#123;<span class="built_in">puts</span>(<span class="string">&quot;0&quot;</span>);<span class="keyword">return</span>;&#125;
+	<span class="built_in">f</span>(n,x);
+    <span class="keyword">return</span> <span class="number">0</span>;
 &#125;</code></pre>
-<p>或者不会三步运算符可用 $if … else…$ 代替</p>
-<pre><code class="highlight cpp"><span class="function"><span class="type">void</span> <span class="title">solve</span><span class="params">()</span></span>
-<span class="function"></span>&#123;
-	<span class="type">int</span> n,sum=<span class="number">0</span>; 
-	cin&gt;&gt;n;
-	<span class="keyword">for</span>(<span class="type">int</span> i=<span class="number">1</span>;i&lt;=n;i++)
-	&#123;
-		<span class="type">int</span> x;
-		cin&gt;&gt;x;<span class="comment">//输入 </span>
-		sum+=x;<span class="comment">//求和 </span>
-	&#125;
-	<span class="keyword">if</span>(sum%n==<span class="number">0</span>)<span class="comment">//如果是第一种情况 </span>
-	&#123;
-		cout&lt;&lt;<span class="number">0</span>&lt;&lt;endl;
-	&#125; 
-	<span class="keyword">else</span><span class="comment">//如果是第二种情况</span>
-	&#123;
-		cout&lt;&lt;<span class="number">1</span>&lt;&lt;endl;
-	&#125;
-&#125;</code></pre>
-<p>多组数据，代码未全。请勿copy，当心踩坑。</p>
+
+<p><a target="_blank" rel="noopener" href="https://www.luogu.com.cn/problem/B2143">想了解其他做法，可以参考B2143。</a></p>
 <link rel="stylesheet" href="/css/bilicard.css" type="text/css">
 	</div>
 
@@ -725,7 +717,7 @@
 	
 		<div class="post-tags">
 			<i class="fa fa-tags" aria-hidden="true"></i>
-			<a class="tag badge badge-secondary post-meta-detail-tag -none-link" href="/tags/C/" rel="tag">C++</a><a class="tag badge badge-secondary post-meta-detail-tag -none-link" href="/tags/Codeforces/" rel="tag">Codeforces</a>
+			<a class="tag badge badge-secondary post-meta-detail-tag -none-link" href="/tags/C/" rel="tag">C++</a><a class="tag badge badge-secondary post-meta-detail-tag -none-link" href="/tags/%E6%B4%9B%E8%B0%B7/" rel="tag">洛谷</a>
 		</div>
 	
 </article>
@@ -767,7 +759,7 @@
 				<span class="btn-inner--icon"><i class="fa fa-twitter"></i></span>
 			</button>
 		</a>
-		<a target="_blank" class="no-pjax icon-telegram" href="https://telegram.me/share/url?url=https://chenyuxuan2009.github.io/2022/03/22/CF1615A/&text=CF1615A Closing The Gap" tooltip="分享到 Telegram">
+		<a target="_blank" class="no-pjax icon-telegram" href="https://telegram.me/share/url?url=https://chenyuxuan2009.github.io/2022/07/09/B3619/&text=B3619 10 进制转 x 进制" tooltip="分享到 Telegram">
 			<button class="btn btn-icon btn-primary" style="background: #42a5f5;border: none;">
 				<span class="btn-inner--icon"><i class="fa fa-telegram"></i></span>
 			</button>
@@ -784,11 +776,13 @@
 </div>
 <script type="text/javascript">
 	socialShare("#share", {
-	    title : 'CF1615A Closing The Gap',
-	    description : '题目翻译：有 $n$ 个数，每个数为 $a_i$  ，你可以每次选 $2$ 个数 $a$ 和 $b$...',
+	    title : 'B3619 10 进制转 x 进制',
+	    description : '题目思路就是进制转换啦。
+进制转换，肯定要讲一下短除法。就是每次看余数并做除法。
+比如 $10$ 转...',
 	    wechatQrcodeTitle : "分享到微信",
 	    wechatQrcodeHelper : '微信扫描二维码',
-	    source : 'https://chenyuxuan2009.github.io/2022/03/22/CF1615A/'
+	    source : 'https://chenyuxuan2009.github.io/2022/07/09/B3619/'
 	});
 	$("#share_show")[0].onclick = function(){
 		$("#share_container").addClass("opened");
@@ -854,7 +848,7 @@
 
 
 
-<div class="post-navigation card shadow-sm"><div class="post-navigation-item post-navigation-pre"><span class="page-navigation-extra-text"><i class="fa fa-arrow-circle-o-left" aria-hidden="true"></i>上一篇</span><a href="/2022/03/22/CF1621A/" rel="prev"> CF1621A Stable Arrangement of Rooks</a></div><div class="post-navigation-item post-navigation-next"><span class="page-navigation-extra-text">下一篇 <i class="fa fa-arrow-circle-o-right" aria-hidden="true"></i></span><a href="/2022/03/22/CF1613B/" rel="next"> CF1613B Absent Remainder</a></div></div>
+<div class="post-navigation card shadow-sm"><div class="post-navigation-item post-navigation-pre"></div><div class="post-navigation-item post-navigation-next"><span class="page-navigation-extra-text">下一篇 <i class="fa fa-arrow-circle-o-right" aria-hidden="true"></i></span><a href="/2022/07/09/CF1657B/" rel="next"> CF1657B XY Sequence</a></div></div>
 
 
 

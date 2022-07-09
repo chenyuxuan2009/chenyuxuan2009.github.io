@@ -14,20 +14,20 @@
 	<script src="//cdnjs.cloudflare.com/ajax/libs/highlight.js/11.1.0/highlight.min.js"></script>
 	<script type="text/javascript" src="/assets/js/click-live.js"></script>
 	
-	<title>CF1615A Closing The Gap - chenyuxuan__2009的博客</title>
+	<title>CF1657B XY Sequence - chenyuxuan__2009的博客</title>
 	<meta charset="utf-8">
 	
 		<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=5">
 	
-	<meta name="description" content="题目翻译：有 $n$ 个数，每个数为 $a_i$  ，你可以每次选 $2$ 个数 $a$ 和 $b$ ，把 $a$ 高度 $-1$ ，把 $b$ 高度 $+1$。在经历无限次操作后，求 $max(a)-min(a)$ 的值。  题目思路：其实就是求平均数，如果求出的和是 $n$ 的倍数，那么意味数组 $a$ 中的每个值相等且均为正整数，那么相差都为 $0$。反之不是 $n$ 的倍数，那么总会有数多">
+	<meta name="description" content="题目翻译四个整数，$n,B,x,y$，每次可以选择 $a_i&#x3D;a_{i-1}+x$ 或者 $a_i&#x3D;a_{i-1}-y$，必须保证 $a_i\leq B$，问 $a$ 数组的元素和。 题目思路这道题可以贪心。 每次尽可能加上 $x$，如果超过就减掉 $y$。 这肯定是对的贪心策略； 因为，这样肯定保证多加上少减去。 每次都是加 $x$，减 $y$，所以多加少减肯定正确。 AC">
 <meta property="og:type" content="article">
-<meta property="og:title" content="CF1615A Closing The Gap">
-<meta property="og:url" content="https://chenyuxuan2009.github.io/2022/03/22/CF1615A/index.html">
+<meta property="og:title" content="CF1657B XY Sequence">
+<meta property="og:url" content="https://chenyuxuan2009.github.io/2022/07/09/CF1657B/index.html">
 <meta property="og:site_name" content="chenyuxuan__2009的博客">
-<meta property="og:description" content="题目翻译：有 $n$ 个数，每个数为 $a_i$  ，你可以每次选 $2$ 个数 $a$ 和 $b$ ，把 $a$ 高度 $-1$ ，把 $b$ 高度 $+1$。在经历无限次操作后，求 $max(a)-min(a)$ 的值。  题目思路：其实就是求平均数，如果求出的和是 $n$ 的倍数，那么意味数组 $a$ 中的每个值相等且均为正整数，那么相差都为 $0$。反之不是 $n$ 的倍数，那么总会有数多">
+<meta property="og:description" content="题目翻译四个整数，$n,B,x,y$，每次可以选择 $a_i&#x3D;a_{i-1}+x$ 或者 $a_i&#x3D;a_{i-1}-y$，必须保证 $a_i\leq B$，问 $a$ 数组的元素和。 题目思路这道题可以贪心。 每次尽可能加上 $x$，如果超过就减掉 $y$。 这肯定是对的贪心策略； 因为，这样肯定保证多加上少减去。 每次都是加 $x$，减 $y$，所以多加少减肯定正确。 AC">
 <meta property="og:locale" content="zh_CN">
-<meta property="article:published_time" content="2022-03-22T12:38:59.467Z">
-<meta property="article:modified_time" content="2022-05-21T07:08:15.642Z">
+<meta property="article:published_time" content="2022-07-09T02:21:11.178Z">
+<meta property="article:modified_time" content="2022-07-09T02:21:11.179Z">
 <meta property="article:author" content="CYX">
 <meta property="article:tag" content="C++">
 <meta property="article:tag" content="Codeforces">
@@ -629,13 +629,13 @@
 	<article class="post post-full card bg-white shadow-sm border-0 post-preview">
 	<header class="post-header text-center">
 		
-		<a class="post-title" href="/2022/03/22/CF1615A/">CF1615A Closing The Gap</a>
+		<a class="post-title" href="/2022/07/09/CF1657B/">CF1657B XY Sequence</a>
 		<div class="post-meta">
 			
 						
 						<div class="post-meta-detail post-meta-detail-time">
 							<i class="fa fa-clock-o" aria-hidden="true"></i>
-							<time title="发布于 2022-3-22 20:38:59 | 编辑于 2022-5-21 15:08:15">2022-3-22 20:38
+							<time title="发布于 2022-7-9 10:21:11 | 编辑于 2022-7-9 10:21:11">2022-7-9 10:21
 							</time>
 						</div>
 					
@@ -662,7 +662,7 @@
 						
 						<div class="post-meta-detail post-meta-detail-words">
 							<i class="fa fa-file-word-o" aria-hidden="true"></i>
-							327 字
+							174 字
 						</div>
 					
 						
@@ -678,41 +678,25 @@
 	</header>
 
 	<div class="post-content" id="post_content">
-		<h4 id="题目翻译："><a href="#题目翻译：" class="headerlink" title="题目翻译："></a>题目翻译：</h4><p>有 $n$ 个数，每个数为 $a_i$  ，你可以每次选 $2$ 个数 $a$ 和 $b$ ，把 $a$ 高度 $-1$ ，把 $b$ 高度 $+1$。在经历无限次操作后，求 $max(a)-min(a)$ 的值。 </p>
-<h4 id="题目思路："><a href="#题目思路：" class="headerlink" title="题目思路："></a>题目思路：</h4><p>其实就是求平均数，如果求出的和是 $n$ 的倍数，那么意味数组 $a$ 中的每个值<strong>相等</strong>且均为<strong>正整数</strong>，那么相差<strong>都为 $0$<strong>。反之不是 $n$ 的倍数，那么总会有数多出 $1$ ，那么最大与最小的差</strong>就为 $1$</strong> 。这个想法非常好证明，取模之后的数比 $n$ 要小，那么每个数添上 $1$ 总会有没添上的，那么差就是为 $1$。</p>
-<h4 id="题目代码："><a href="#题目代码：" class="headerlink" title="题目代码："></a>题目代码：</h4><pre><code class="highlight cpp"><span class="function"><span class="type">void</span> <span class="title">solve</span><span class="params">()</span></span>
+		<h3 id="题目翻译"><a href="#题目翻译" class="headerlink" title="题目翻译"></a>题目翻译</h3><p>四个整数，$n,B,x,y$，每次可以选择 $a_i&#x3D;a_{i-1}+x$ 或者 $a_i&#x3D;a_{i-1}-y$，必须保证 $a_i\leq B$，问 $a$ 数组的元素和。</p>
+<h3 id="题目思路"><a href="#题目思路" class="headerlink" title="题目思路"></a>题目思路</h3><p>这道题可以贪心。</p>
+<p>每次尽可能加上 $x$，如果超过就减掉 $y$。</p>
+<p>这肯定是对的贪心策略；</p>
+<p>因为，这样肯定保证多加上少减去。</p>
+<p>每次都是加 $x$，减 $y$，所以多加少减肯定正确。</p>
+<h3 id="AC-代码"><a href="#AC-代码" class="headerlink" title="AC 代码"></a>AC 代码</h3><pre><code class="highlight cpp"><span class="function"><span class="type">void</span> <span class="title">solve</span><span class="params">()</span></span>
 <span class="function"></span>&#123;
-	<span class="type">int</span> n,sum=<span class="number">0</span>; 
-	cin&gt;&gt;n;
+	<span class="type">int</span> n,b,x,y;
+	cin&gt;&gt;n&gt;&gt;b&gt;&gt;x&gt;&gt;y;
+	ll ans=<span class="number">0</span>,last=<span class="number">0</span>;
 	<span class="keyword">for</span>(<span class="type">int</span> i=<span class="number">1</span>;i&lt;=n;i++)
 	&#123;
-		<span class="type">int</span> x;
-		cin&gt;&gt;x;<span class="comment">//输入 </span>
-		sum+=x;<span class="comment">//求和 </span>
+		last=(last+x&gt;b?last-y:last+x);
+		ans+=last;
 	&#125;
-	cout&lt;&lt;(sum%n==<span class="number">0</span>?<span class="number">0</span>:<span class="number">1</span>)&lt;&lt;endl;<span class="comment">//判断 输出 </span>
+	cout&lt;&lt;ans&lt;&lt;endl;
 &#125;</code></pre>
-<p>或者不会三步运算符可用 $if … else…$ 代替</p>
-<pre><code class="highlight cpp"><span class="function"><span class="type">void</span> <span class="title">solve</span><span class="params">()</span></span>
-<span class="function"></span>&#123;
-	<span class="type">int</span> n,sum=<span class="number">0</span>; 
-	cin&gt;&gt;n;
-	<span class="keyword">for</span>(<span class="type">int</span> i=<span class="number">1</span>;i&lt;=n;i++)
-	&#123;
-		<span class="type">int</span> x;
-		cin&gt;&gt;x;<span class="comment">//输入 </span>
-		sum+=x;<span class="comment">//求和 </span>
-	&#125;
-	<span class="keyword">if</span>(sum%n==<span class="number">0</span>)<span class="comment">//如果是第一种情况 </span>
-	&#123;
-		cout&lt;&lt;<span class="number">0</span>&lt;&lt;endl;
-	&#125; 
-	<span class="keyword">else</span><span class="comment">//如果是第二种情况</span>
-	&#123;
-		cout&lt;&lt;<span class="number">1</span>&lt;&lt;endl;
-	&#125;
-&#125;</code></pre>
-<p>多组数据，代码未全。请勿copy，当心踩坑。</p>
+
 <link rel="stylesheet" href="/css/bilicard.css" type="text/css">
 	</div>
 
@@ -767,7 +751,7 @@
 				<span class="btn-inner--icon"><i class="fa fa-twitter"></i></span>
 			</button>
 		</a>
-		<a target="_blank" class="no-pjax icon-telegram" href="https://telegram.me/share/url?url=https://chenyuxuan2009.github.io/2022/03/22/CF1615A/&text=CF1615A Closing The Gap" tooltip="分享到 Telegram">
+		<a target="_blank" class="no-pjax icon-telegram" href="https://telegram.me/share/url?url=https://chenyuxuan2009.github.io/2022/07/09/CF1657B/&text=CF1657B XY Sequence" tooltip="分享到 Telegram">
 			<button class="btn btn-icon btn-primary" style="background: #42a5f5;border: none;">
 				<span class="btn-inner--icon"><i class="fa fa-telegram"></i></span>
 			</button>
@@ -784,11 +768,11 @@
 </div>
 <script type="text/javascript">
 	socialShare("#share", {
-	    title : 'CF1615A Closing The Gap',
-	    description : '题目翻译：有 $n$ 个数，每个数为 $a_i$  ，你可以每次选 $2$ 个数 $a$ 和 $b$...',
+	    title : 'CF1657B XY Sequence',
+	    description : '题目翻译四个整数，$n,B,x,y$，每次可以选择 $a_i&amp;#x3D;a_{i-1}+x$ 或者 ...',
 	    wechatQrcodeTitle : "分享到微信",
 	    wechatQrcodeHelper : '微信扫描二维码',
-	    source : 'https://chenyuxuan2009.github.io/2022/03/22/CF1615A/'
+	    source : 'https://chenyuxuan2009.github.io/2022/07/09/CF1657B/'
 	});
 	$("#share_show")[0].onclick = function(){
 		$("#share_container").addClass("opened");
@@ -854,7 +838,7 @@
 
 
 
-<div class="post-navigation card shadow-sm"><div class="post-navigation-item post-navigation-pre"><span class="page-navigation-extra-text"><i class="fa fa-arrow-circle-o-left" aria-hidden="true"></i>上一篇</span><a href="/2022/03/22/CF1621A/" rel="prev"> CF1621A Stable Arrangement of Rooks</a></div><div class="post-navigation-item post-navigation-next"><span class="page-navigation-extra-text">下一篇 <i class="fa fa-arrow-circle-o-right" aria-hidden="true"></i></span><a href="/2022/03/22/CF1613B/" rel="next"> CF1613B Absent Remainder</a></div></div>
+<div class="post-navigation card shadow-sm"><div class="post-navigation-item post-navigation-pre"><span class="page-navigation-extra-text"><i class="fa fa-arrow-circle-o-left" aria-hidden="true"></i>上一篇</span><a href="/2022/07/09/B3619/" rel="prev"> B3619 10 进制转 x 进制</a></div><div class="post-navigation-item post-navigation-next"><span class="page-navigation-extra-text">下一篇 <i class="fa fa-arrow-circle-o-right" aria-hidden="true"></i></span><a href="/2022/07/08/CF1010B/" rel="next"> CF1010B Rocket</a></div></div>
 
 
 
