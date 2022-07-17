@@ -1,5 +1,6 @@
-https://chenyuxuan2009.github.io/data/argon.json
+https://chenyuxuan2009.github.io/2022/07/17/abc260/
 https://chenyuxuan2009.github.io/2022/07/17/JSOI2022/
+https://chenyuxuan2009.github.io/data/argon.json
 https://chenyuxuan2009.github.io/problem/20220714/calc/index.html
 https://chenyuxuan2009.github.io/problem/20220714/str/index.html
 https://chenyuxuan2009.github.io/problem/20220714/cowmult/index.html

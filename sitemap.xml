@@ -2,7 +2,7 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   
   <url>
-    <loc>https://chenyuxuan2009.github.io/data/argon.json</loc>
+    <loc>https://chenyuxuan2009.github.io/2022/07/17/abc260/</loc>
     
     <lastmod>2022-07-17</lastmod>
     
@@ -12,6 +12,15 @@
   
   <url>
     <loc>https://chenyuxuan2009.github.io/2022/07/17/JSOI2022/</loc>
+    
+    <lastmod>2022-07-17</lastmod>
+    
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
+    <loc>https://chenyuxuan2009.github.io/data/argon.json</loc>
     
     <lastmod>2022-07-17</lastmod>
     
