@@ -14,25 +14,21 @@
 	<script src="//cdnjs.cloudflare.com/ajax/libs/highlight.js/11.1.0/highlight.min.js"></script>
 	<script type="text/javascript" src="/assets/js/click-live.js"></script>
 	
-	<title>直播卷题题单 - chenyuxuan__2009的博客</title>
+	<title>路面修整 - chenyuxuan__2009的博客</title>
 	<meta charset="utf-8">
 	
 		<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=5">
 	
-	<meta name="description" content="以下为直播做题题单。 题目难度均参照原 OJ。Atcoder 由于官方不做评价，所以参考 kenkoooo 的颜色划分。 20222022.4.25   难度 题目 做法简述    普及&#x2F;提高- P5318 【深基18.例3】查找文献 DFS、BFS模板。   普及&#x2F;提高- P1443 马的遍历 BFS。   2022.4.27   难度 题目 做法简述    普及- P160">
-<meta property="og:type" content="article">
-<meta property="og:title" content="直播卷题题单">
-<meta property="og:url" content="https://chenyuxuan2009.github.io/2022/04/30/live-problemset/index.html">
+	<meta name="description" content="路面修整题目描述FJ 打算好好修一下农场中某条凹凸不平的土路。按奶牛们的要求，修好后的路面高度应当单调上升或单调下降，也就是说，高度上升与高度下降的路段不能同时出现在修好的路中。 整条路被分成了 $N$ 段，$N$ 个整数 $A_1,\dots,A_N(1 \leq N \leq 2,000)$ 依次描述了每一段路的高度 $(0 \leq A_i\leq1,000,000,000)$。FJ 希望找">
+<meta property="og:type" content="website">
+<meta property="og:title" content="路面修整">
+<meta property="og:url" content="https://chenyuxuan2009.github.io/problem/20220714/grading/index.html">
 <meta property="og:site_name" content="chenyuxuan__2009的博客">
-<meta property="og:description" content="以下为直播做题题单。 题目难度均参照原 OJ。Atcoder 由于官方不做评价，所以参考 kenkoooo 的颜色划分。 20222022.4.25   难度 题目 做法简述    普及&#x2F;提高- P5318 【深基18.例3】查找文献 DFS、BFS模板。   普及&#x2F;提高- P1443 马的遍历 BFS。   2022.4.27   难度 题目 做法简述    普及- P160">
+<meta property="og:description" content="路面修整题目描述FJ 打算好好修一下农场中某条凹凸不平的土路。按奶牛们的要求，修好后的路面高度应当单调上升或单调下降，也就是说，高度上升与高度下降的路段不能同时出现在修好的路中。 整条路被分成了 $N$ 段，$N$ 个整数 $A_1,\dots,A_N(1 \leq N \leq 2,000)$ 依次描述了每一段路的高度 $(0 \leq A_i\leq1,000,000,000)$。FJ 希望找">
 <meta property="og:locale" content="zh_CN">
-<meta property="article:published_time" content="2022-04-30T07:04:18.804Z">
-<meta property="article:modified_time" content="2022-06-19T06:38:08.458Z">
+<meta property="article:published_time" content="2022-07-18T06:49:54.173Z">
+<meta property="article:modified_time" content="2022-07-18T06:49:54.173Z">
 <meta property="article:author" content="CYX">
-<meta property="article:tag" content="C++">
-<meta property="article:tag" content="Codeforces">
-<meta property="article:tag" content="洛谷">
-<meta property="article:tag" content="Atcoder">
 <meta name="twitter:card" content="summary">
 
 	<meta name="theme-color" content="#5e72e4">
@@ -497,39 +493,18 @@
 		<div id="leftbar_part2" class="widget widget_search card bg-white shadow-sm border-0">
 			<div id="leftbar_part2_inner" class="card-body">
 				
-				<div class="nav-wrapper" style="padding-top: 5px;">
+				<div class="nav-wrapper" style="padding-top: 5px; display:none; ">
 	                <ul class="nav nav-pills nav-fill" role="tablist">
 						
-							<li class="nav-item sidebar-tab-switcher">
-								<a class="active show" id="leftbar_tab_catalog_btn" data-toggle="tab" href="#leftbar_tab_catalog" role="tab" aria-controls="leftbar_tab_catalog" no-pjax>文章目录</a>
-							</li>
-						
 						<li class="nav-item sidebar-tab-switcher">
-							<a class="" id="leftbar_tab_overview_btn" data-toggle="tab" href="#leftbar_tab_overview" role="tab" aria-controls="leftbar_tab_overview" no-pjax>站点概览</a>
+							<a class="active show" id="leftbar_tab_overview_btn" data-toggle="tab" href="#leftbar_tab_overview" role="tab" aria-controls="leftbar_tab_overview" no-pjax>站点概览</a>
 						</li>
 	                </ul>
 				</div>
 				<div>
 					<div class="tab-content" style="padding: 10px 10px 0 10px;">
 						
-							<div class="tab-pane fade active show" id="leftbar_tab_catalog" role="tabpanel" aria-labelledby="leftbar_tab_catalog_btn">
-								<div id="leftbar_catalog"></div>
-								<script type="text/javascript">
-									$(function () {
-										$(document).headIndex({
-											articleWrapSelector: '#post_content',
-											indexBoxSelector: '#leftbar_catalog',
-											subItemBoxClass: "index-subItem-box",
-											itemClass: "index-item",
-											linkClass: "index-link",
-											offset: 80,
-										});
-									})
-								</script>
-								
-							</div>
-						
-						<div class="tab-pane fade text-center" id="leftbar_tab_overview" role="tabpanel" aria-labelledby="leftbar_tab_overview_btn">
+						<div class="tab-pane fade text-center active show" id="leftbar_tab_overview" role="tabpanel" aria-labelledby="leftbar_tab_overview_btn">
 							<img id="leftbar_overview_author_image" src="/assets/img/favicon.ico" class="img-fluid rounded-circle shadow-sm" style="width: 100px;" alt="avatar">
 							<h6 id="leftbar_overview_author_name">CYX</h6>
 							<nav class="site-state">
@@ -628,25 +603,18 @@
 		
 		
 			
+
 	<article class="post post-full card bg-white shadow-sm border-0 post-preview">
 	<header class="post-header text-center">
 		
-		<a class="post-title" href="/2022/04/30/live-problemset/">直播卷题题单</a>
+		<a class="post-title" href="/problem/20220714/grading/index.html">路面修整</a>
 		<div class="post-meta">
 			
 						
 						<div class="post-meta-detail post-meta-detail-time">
 							<i class="fa fa-clock-o" aria-hidden="true"></i>
-							<time title="发布于 2022-4-30 15:04:18 | 编辑于 2022-6-19 14:38:08">2022-4-30 15:04
+							<time title="发布于 2022-7-18 14:49:54 | 编辑于 2022-7-18 14:49:54">2022-7-18 14:49
 							</time>
-						</div>
-					
-						
-							<div class="post-meta-devide">|</div>
-						
-						<div class="post-meta-detail post-meta-detail-categories">
-							<i class="fa fa-bookmark-o" aria-hidden="true"></i>
-							<a class="post-meta-detail-catagory-link" href="/categories/%E5%81%9A%E9%A2%98%E7%AC%94%E8%AE%B0/">做题笔记</a>
 						</div>
 					
 						
@@ -664,7 +632,7 @@
 						
 						<div class="post-meta-detail post-meta-detail-words">
 							<i class="fa fa-file-word-o" aria-hidden="true"></i>
-							546 字
+							441 字
 						</div>
 					
 						
@@ -672,7 +640,7 @@
 						
 						<div class="post-meta-detail post-meta-detail-readingtime">
 							<i class="fa fa-hourglass-end" aria-hidden="true"></i>
-							2 分钟
+							1 分钟
 						</div>
 					
 		</div>
@@ -680,403 +648,32 @@
 	</header>
 
 	<div class="post-content" id="post_content">
-		<p>以下为<a target="_blank" rel="noopener" href="http://whitehat.net.cn/">直播</a>做题题单。</p>
-<p>题目难度均参照原 OJ。Atcoder 由于官方不做评价，所以参考 <a target="_blank" rel="noopener" href="https://kenkoooo.com/atcoder/#/table/">kenkoooo</a> 的颜色划分。</p>
-<h3 id="2022"><a href="#2022" class="headerlink" title="2022"></a>2022</h3><h4 id="2022-4-25"><a href="#2022-4-25" class="headerlink" title="2022.4.25"></a>2022.4.25</h4><table>
-<thead>
-<tr>
-<th align="left">难度</th>
-<th align="left">题目</th>
-<th align="left">做法简述</th>
-</tr>
-</thead>
-<tbody><tr>
-<td align="left">普及&#x2F;提高-</td>
-<td align="left"><a target="_blank" rel="noopener" href="https://www.luogu.com.cn/problem/P5318">P5318 【深基18.例3】查找文献</a></td>
-<td align="left">DFS、BFS模板。</td>
-</tr>
-<tr>
-<td align="left">普及&#x2F;提高-</td>
-<td align="left"><a target="_blank" rel="noopener" href="https://www.luogu.com.cn/problem/P1443">P1443 马的遍历</a></td>
-<td align="left">BFS。</td>
-</tr>
-</tbody></table>
-<h4 id="2022-4-27"><a href="#2022-4-27" class="headerlink" title="2022.4.27"></a>2022.4.27</h4><table>
-<thead>
-<tr>
-<th align="left">难度</th>
-<th align="left">题目</th>
-<th align="left">做法简述</th>
-</tr>
-</thead>
-<tbody><tr>
-<td align="left">普及-</td>
-<td align="left"><a target="_blank" rel="noopener" href="https://www.luogu.com.cn/problem/P1605">P1605 迷宫</a></td>
-<td align="left">DFS。</td>
-</tr>
-<tr>
-<td align="left">普及-</td>
-<td align="left"><a target="_blank" rel="noopener" href="https://www.luogu.com.cn/problem/P2036">P2036 [COCI2008-2009#2] PERKET</a></td>
-<td align="left">DFS。</td>
-</tr>
-</tbody></table>
-<h4 id="2022-5-1"><a href="#2022-5-1" class="headerlink" title="2022.5.1"></a>2022.5.1</h4><table>
-<thead>
-<tr>
-<th align="left">难度</th>
-<th>题目</th>
-<th align="left">做法简述</th>
-</tr>
-</thead>
-<tbody><tr>
-<td align="left">*1200</td>
-<td><a target="_blank" rel="noopener" href="https://codeforces.com/problemset/problem/1352/B">CF1352B Same Parity Summands</a></td>
-<td align="left">分类讨论。</td>
-</tr>
-<tr>
-<td align="left">*1200</td>
-<td><a target="_blank" rel="noopener" href="https://codeforces.com/problemset/problem/1352/C">CF1352C K-th Not Divisible by n</a></td>
-<td align="left">找规律推公式。</td>
-</tr>
-<tr>
-<td align="left">*1300</td>
-<td><a target="_blank" rel="noopener" href="https://codeforces.com/problemset/problem/1352/D">CF1352D Alice, Bob and Candies</a></td>
-<td align="left">双指针。</td>
-</tr>
-<tr>
-<td align="left">*800</td>
-<td><a target="_blank" rel="noopener" href="https://codeforces.com/problemset/problem/1454/A">CF1454A Special Permutation</a></td>
-<td align="left">输出不是 $i$ 的数即可。</td>
-</tr>
-<tr>
-<td align="left">*1500</td>
-<td><a target="_blank" rel="noopener" href="https://codeforces.com/problemset/problem/1352/E">CF1352E Special Elements</a></td>
-<td align="left">枚举区间和。</td>
-</tr>
-<tr>
-<td align="left">*1500</td>
-<td><a target="_blank" rel="noopener" href="https://codeforces.com/problemset/problem/1352/F">CF1352F Binary String Reconstruction</a></td>
-<td align="left">构造，分成 $n_2+1$ 块。</td>
-</tr>
-<tr>
-<td align="left">*1600</td>
-<td><a target="_blank" rel="noopener" href="https://codeforces.com/problemset/problem/1352/G">CF1352G Special Permutation</a></td>
-<td align="left">构造。考虑前半段是奇数后半段是偶数。</td>
-</tr>
-<tr>
-<td align="left">*800</td>
-<td><a target="_blank" rel="noopener" href="https://codeforces.com/problemset/problem/1454/B">CF1454B Unique Bid Auction</a></td>
-<td align="left">存每个数出现的次数。</td>
-</tr>
-<tr>
-<td align="left">*1200</td>
-<td><a target="_blank" rel="noopener" href="https://codeforces.com/problemset/problem/1454/C">CF1454C Sequence Transformation</a></td>
-<td align="left">记录每个数字 <code>unique</code> 后出现次数。</td>
-</tr>
-<tr>
-<td align="left">*1300</td>
-<td><a target="_blank" rel="noopener" href="https://codeforces.com/problemset/problem/1454/C">CF1454C Sequence Transformation</a></td>
-<td align="left">分解质因数。</td>
-</tr>
-</tbody></table>
-<h4 id="2022-5-2"><a href="#2022-5-2" class="headerlink" title="2022.5.2"></a>2022.5.2</h4><table>
-<thead>
-<tr>
-<th align="left">难度</th>
-<th align="left">题目</th>
-<th align="left">做法简述</th>
-</tr>
-</thead>
-<tbody><tr>
-<td align="left">*800</td>
-<td align="left"><a target="_blank" rel="noopener" href="https://codeforces.com/problemset/problem/1490/A">CF1490A Dense Array</a></td>
-<td align="left">较小值一直 $\times 4$。</td>
-</tr>
-<tr>
-<td align="left">*1000</td>
-<td align="left"><a target="_blank" rel="noopener" href="https://codeforces.com/problemset/problem/1490/B">CF1490B Balanced Remainders</a></td>
-<td align="left">分类讨论有几个大于等于平均值。</td>
-</tr>
-<tr>
-<td align="left">*1100</td>
-<td align="left"><a target="_blank" rel="noopener" href="https://codeforces.com/problemset/problem/1490/C">CF1490C Sum of Cubes</a></td>
-<td align="left">枚举所有完全立方数。</td>
-</tr>
-<tr>
-<td align="left">*1200</td>
-<td align="left"><a target="_blank" rel="noopener" href="https://codeforces.com/problemset/problem/1490/D">CF1490D Permutation Transformation</a></td>
-<td align="left">类似二分，模拟题意。</td>
-</tr>
-<tr>
-<td align="left">灰色</td>
-<td align="left"><a target="_blank" rel="noopener" href="https://atcoder.jp/contests/abc148/tasks/abc148_b">abc148_b Strings with the Same Length</a></td>
-<td align="left">模拟题意。</td>
-</tr>
-<tr>
-<td align="left">绿色</td>
-<td align="left"><a target="_blank" rel="noopener" href="https://atcoder.jp/contests/abc061/tasks/abc061_c">abc061_c Big Array</a></td>
-<td align="left">类似 <a target="_blank" rel="noopener" href="https://atcoder.jp/contests/abc247/tasks/abc247_d">abc247_d</a>，<a href="https://chenyuxuan2009.github.io/2022/04/10/abc247/">博客</a>有。</td>
-</tr>
-</tbody></table>
-<h4 id="2022-5-4"><a href="#2022-5-4" class="headerlink" title="2022.5.4"></a>2022.5.4</h4><table>
-<thead>
-<tr>
-<th>难度</th>
-<th align="left">题目</th>
-<th align="left">做法简述</th>
-</tr>
-</thead>
-<tbody><tr>
-<td>*800</td>
-<td align="left"><a target="_blank" rel="noopener" href="https://codeforces.com/problemset/problem/1658/A">CF1658A Marin and Photoshoot</a></td>
-<td align="left">讨论 $\tt{00}$ 和 $\tt{010}$ 的情况增加答案。</td>
-</tr>
-<tr>
-<td>*1000</td>
-<td align="left"><a target="_blank" rel="noopener" href="https://codeforces.com/problemset/problem/1671/B">CF1671B Consecutive Points Segment</a></td>
-<td align="left">看最大最小的差值。</td>
-</tr>
-</tbody></table>
-<h4 id="2022-5-8"><a href="#2022-5-8" class="headerlink" title="2022.5.8"></a>2022.5.8</h4><table>
-<thead>
-<tr>
-<th>难度</th>
-<th align="left">题目</th>
-<th align="left">做法简述</th>
-</tr>
-</thead>
-<tbody><tr>
-<td>*800</td>
-<td align="left"><a target="_blank" rel="noopener" href="https://codeforces.com/problemset/problem/1670/A">CF1670A Prof. Slim</a></td>
-<td align="left">负数在前正数在后。</td>
-</tr>
-<tr>
-<td>*1100</td>
-<td align="left"><a target="_blank" rel="noopener" href="https://codeforces.com/problemset/problem/1670/B">CF1670B Dorms War</a></td>
-<td align="left">找特殊字符位置。</td>
-</tr>
-<tr>
-<td>*1700</td>
-<td align="left"><a target="_blank" rel="noopener" href="https://codeforces.com/problemset/problem/1670/D">CF1670D Very Suspicious</a></td>
-<td align="left">推公式。</td>
-</tr>
-</tbody></table>
-<h4 id="2022-5-9"><a href="#2022-5-9" class="headerlink" title="2022.5.9"></a>2022.5.9</h4><table>
-<thead>
-<tr>
-<th>难度</th>
-<th align="left">题目</th>
-<th align="left">做法简述</th>
-</tr>
-</thead>
-<tbody><tr>
-<td>*800</td>
-<td align="left"><a target="_blank" rel="noopener" href="https://codeforces.com/problemset/problem/1675/A">CF1675A Food for Animals</a></td>
-<td align="left">判断个数。</td>
-</tr>
-<tr>
-<td>*900</td>
-<td align="left"><a target="_blank" rel="noopener" href="https://codeforces.com/problemset/problem/1675/B">CF1675B Make It Increasing</a></td>
-<td align="left">一直 $\times2$。</td>
-</tr>
-<tr>
-<td>*1100</td>
-<td align="left"><a target="_blank" rel="noopener" href="https://codeforces.com/problemset/problem/1675/C">CF1675C Detective Task</a></td>
-<td align="left">记录 $\tt{1}$ 和 $\tt{0}$ 的位置。</td>
-</tr>
-</tbody></table>
-<h4 id="2022-5-21"><a href="#2022-5-21" class="headerlink" title="2022.5.21"></a>2022.5.21</h4><table>
-<thead>
-<tr>
-<th>难度</th>
-<th align="left">题目</th>
-<th align="left">做法简述</th>
-</tr>
-</thead>
-<tbody><tr>
-<td>普及-</td>
-<td align="left"><a target="_blank" rel="noopener" href="https://www.spoj.com/problems/SUMITR/">SP237 SUMITR - Sums in a Triangle</a></td>
-<td align="left">数字三角形压行。</td>
-</tr>
-<tr>
-<td>普及-</td>
-<td align="left"><a target="_blank" rel="noopener" href="https://www.luogu.com.cn/problem/B3622">B3622 枚举子集</a></td>
-<td align="left">dfs 基础。</td>
-</tr>
-</tbody></table>
-<h4 id="2022-6-19"><a href="#2022-6-19" class="headerlink" title="2022.6.19"></a>2022.6.19</h4><table>
-<thead>
-<tr>
-<th>难度</th>
-<th align="left">题目</th>
-<th align="left">做法简述</th>
-</tr>
-</thead>
-<tbody><tr>
-<td>*800</td>
-<td align="left"><a target="_blank" rel="noopener" href="https://codeforces.com/problemset/problem/1692/A">CF1692A Marathon</a></td>
-<td align="left">统计有哪些比自己大的。</td>
-</tr>
-<tr>
-<td>*800</td>
-<td align="left"><a target="_blank" rel="noopener" href="https://codeforces.com/problemset/problem/1692/B">CF1692B All Distinct</a></td>
-<td align="left">去重后数组元素个数。</td>
-</tr>
-<tr>
-<td>*800</td>
-<td align="left"><a target="_blank" rel="noopener" href="https://codeforces.com/problemset/problem/1692/C">CF1692C Where’s the Bishop?</a></td>
-<td align="left">枚举 bishop 在哪个点。</td>
-</tr>
-<tr>
-<td>*1100</td>
-<td align="left"><a target="_blank" rel="noopener" href="https://codeforces.com/problemset/problem/1692/D">CF1692D The Clock</a></td>
-<td align="left">模拟。</td>
-</tr>
-</tbody></table>
+		<h1 id="路面修整"><a href="#路面修整" class="headerlink" title="路面修整"></a>路面修整</h1><h2 id="题目描述"><a href="#题目描述" class="headerlink" title="题目描述"></a>题目描述</h2><p>FJ 打算好好修一下农场中某条凹凸不平的土路。按奶牛们的要求，修好后的路面高度应当单调上升或单调下降，也就是说，高度上升与高度下降的路段不能同时出现在修好的路中。</p>
+<p>整条路被分成了 $N$ 段，$N$ 个整数 $A_1,\dots,A_N(1 \leq N \leq 2,000)$ 依次描述了每一段路的高度 $(0 \leq A_i\leq1,000,000,000)$。FJ 希望找到一个恰好含 $N$ 个元素的不上升或不下降序列 $B_1,\dots,B_N$，作为修过的路中每个路段的高度。</p>
+<p>由于将每一段路垫高或挖低一个单位的花费相同，修路的总支出可以表示为：</p>
+<p>$\left|A_1-B_1\right|+\left|A_2-B_2\right|+\dots+\left|A_N-B_N\right|$。</p>
+<p> 请你计算一下，FJ 在这项工程上的最小支出是多少。FJ 向你保证，这个支出不会超过 $2^{31}-1$。</p>
+<h2 id="输入格式"><a href="#输入格式" class="headerlink" title="输入格式"></a>输入格式</h2><p>第 $1$ 行：输入 $1$ 个整数：$N$。</p>
+<p>第 $2\dots N+1$ 行：第 $i+1$ 行为 $1$ 个整数：$A_i$。</p>
+<h2 id="输出格式"><a href="#输出格式" class="headerlink" title="输出格式"></a>输出格式</h2><p>第 $1$ 行：输出 $1$ 个正整数，表示 FJ 把路修成高度不上升或高度不下降的最小花费。</p>
+<h2 id="样例-1"><a href="#样例-1" class="headerlink" title="样例 #1"></a>样例 #1</h2><h3 id="样例输入-1"><a href="#样例输入-1" class="headerlink" title="样例输入 #1"></a>样例输入 #1</h3><pre><code class="highlight">7
+1
+3
+2
+4
+5
+3
+9</code></pre>
+
+<h3 id="样例输出-1"><a href="#样例输出-1" class="headerlink" title="样例输出 #1"></a>样例输出 #1</h3><pre><code class="highlight">3</code></pre>
+
+<h2 id="提示"><a href="#提示" class="headerlink" title="提示"></a>提示</h2><p>FJ 将第一个高度为 $3$ 的路段的高度减少为 $2$，将第二个高度为 $3$ 的路段的高度增加到 5，总花费为 $\left|2-3\right|+\left|5-3\right|&#x3D;3$，并且各路段的高度为一个不下降序列 $1,2,2,4,5,5,9$。</p>
+<p>对于百分之 $30$ 数据，$N\leq 50$。</p>
+<p>对于百分之 $60$% 数据，$N\leq 500$。</p>
+<p>对于百分之 $100$ 数据，$N\leq2000$。</p>
 <link rel="stylesheet" href="/css/bilicard.css" type="text/css">
 	</div>
-
-	
-
-	
-			<div class='additional-content-after-post'>文章加载可能有点慢，重新刷新一下就好。刷新之后评论应该出来了，欢迎大家来留言！<br/>点一点右下角的分享，推送给更多好友吧！</div>
-		
-
-	
-		<div class="post-tags">
-			<i class="fa fa-tags" aria-hidden="true"></i>
-			<a class="tag badge badge-secondary post-meta-detail-tag -none-link" href="/tags/Atcoder/" rel="tag">Atcoder</a><a class="tag badge badge-secondary post-meta-detail-tag -none-link" href="/tags/C/" rel="tag">C++</a><a class="tag badge badge-secondary post-meta-detail-tag -none-link" href="/tags/Codeforces/" rel="tag">Codeforces</a><a class="tag badge badge-secondary post-meta-detail-tag -none-link" href="/tags/%E6%B4%9B%E8%B0%B7/" rel="tag">洛谷</a>
-		</div>
-	
 </article>
-
-	<div id="share_container">
-	<div id="share" data-initialized="true">
-		<a class="no-pjax icon-wechat" tooltip="分享到微信">
-			<button class="btn btn-icon btn-success">
-				<span class="btn-inner--icon"><i class="fa fa-weixin"></i></span>
-			</button>
-		</a>
-		<a target="_blank" class="no-pjax icon-douban" tooltip="分享到豆瓣">
-			<button class="btn btn-icon btn-primary" style="background: #209261;border: none;">
-				豆
-			</button>
-		</a>
-		<a target="_blank" class="no-pjax icon-qq" tooltip="分享到 QQ">
-			<button class="btn btn-icon btn-primary" style="background: #2196f3;border: none;">
-				<span class="btn-inner--icon"><i class="fa fa-qq"></i></span>
-			</button>
-		</a>
-		<a target="_blank" class="no-pjax icon-qzone" tooltip="分享到 QQ 空间">
-			<button class="btn btn-icon btn-primary" style="background: #ffc107;border: none;">
-				<span class="btn-inner--icon"><i class="fa fa-star"></i></span>
-			</button>
-		</a>
-		<a target="_blank" class="no-pjax icon-weibo" tooltip="分享到微博">
-			<button class="btn btn-icon btn-warning">
-				<span class="btn-inner--icon"><i class="fa fa-weibo"></i></span>
-			</button>
-		</a>
-		<a target="_blank" class="no-pjax icon-facebook" tooltip="分享到 Facebook">
-			<button class="btn btn-icon btn-primary" style="background: #283593;border: none;">
-				<span class="btn-inner--icon"><i class="fa fa-facebook"></i></span>
-			</button>
-		</a>
-		<a target="_blank" class="no-pjax icon-twitter" tooltip="分享到 Twitter">
-			<button class="btn btn-icon btn-primary" style="background: #03a9f4;border: none;">
-				<span class="btn-inner--icon"><i class="fa fa-twitter"></i></span>
-			</button>
-		</a>
-		<a target="_blank" class="no-pjax icon-telegram" href="https://telegram.me/share/url?url=https://chenyuxuan2009.github.io/2022/04/30/live-problemset/&text=直播卷题题单" tooltip="分享到 Telegram">
-			<button class="btn btn-icon btn-primary" style="background: #42a5f5;border: none;">
-				<span class="btn-inner--icon"><i class="fa fa-telegram"></i></span>
-			</button>
-		</a>
-		<a target="_blank" class="no-pjax icon-copy-link" id="share_copy_link" tooltip="复制链接">
-			<button class="btn btn-icon btn-default">
-				<span class="btn-inner--icon"><i class="fa fa-link"></i></span>
-			</button>
-		</a>
-	</div>
-	<button id="share_show" class="btn btn-icon btn-primary" tooltip="分享">
-		<span class="btn-inner--icon"><i class="fa fa-share"></i></span>
-	</button>
-</div>
-<script type="text/javascript">
-	socialShare("#share", {
-	    title : '直播卷题题单',
-	    description : '以下为直播做题题单。
-题目难度均参照原 OJ。Atcoder 由于官方不做评价，所以参考 kenko...',
-	    wechatQrcodeTitle : "分享到微信",
-	    wechatQrcodeHelper : '微信扫描二维码',
-	    source : 'https://chenyuxuan2009.github.io/2022/04/30/live-problemset/'
-	});
-	$("#share_show")[0].onclick = function(){
-		$("#share_container").addClass("opened");
-	};
-	$("#share_copy_link")[0].onclick = function(){
-		let input = document.createElement('input');
-		document.body.appendChild(input);
-		input.setAttribute("value", window.location.href);
-		input.setAttribute("readonly", "readonly");
-		input.setAttribute("style", "opacity: 0;mouse-events:none;");
-		input.select();
-		if (document.execCommand('copy')){
-			iziToast.show({
-				title: '链接已复制',
-				message: "链接已复制到剪贴板",
-				class: 'shadow',
-				position: 'topRight',
-				backgroundColor: '#2dce89',
-				titleColor: '#ffffff',
-				messageColor: '#ffffff',
-				iconColor: '#ffffff',
-				progressBarColor: '#ffffff',
-				icon: 'fa fa-check',
-				timeout: 5000
-			});
-		}else{
-			iziToast.show({
-				title: '复制失败',
-				message: "请手动复制链接",
-				class: 'shadow',
-				position: 'topRight',
-				backgroundColor: '#f5365c',
-				titleColor: '#ffffff',
-				messageColor: '#ffffff',
-				iconColor: '#ffffff',
-				progressBarColor: '#ffffff',
-				icon: 'fa fa-close',
-				timeout: 5000
-			});
-		}
-		document.body.removeChild(input);
-	};
-</script>
-
-
-
-	<div id="post_comment" class="card shadow-sm">
-		<div id="giscus"></div>
-<script src="https://giscus.app/client.js"
-        data-repo="chenyuxuan2009/blogtalk"
-        data-repo-id="R_kgDOHDKqeg"
-        data-category="General"
-        data-category-id="DIC_kwDOHDKqes4COOnc"
-        data-mapping="pathname"
-        data-input-position="top"
-        data-theme="light"
-        data-lang="zh-CN"
-        crossorigin="anonymous"
-        async>
-</script>
-
-	</div>
-
-
-
-<div class="post-navigation card shadow-sm"><div class="post-navigation-item post-navigation-pre"><span class="page-navigation-extra-text"><i class="fa fa-arrow-circle-o-left" aria-hidden="true"></i>上一篇</span><a href="/2022/05/05/abc061_c/" rel="prev"> ABC061C | AT2561 Big Array</a></div><div class="post-navigation-item post-navigation-next"><span class="page-navigation-extra-text">下一篇 <i class="fa fa-arrow-circle-o-right" aria-hidden="true"></i></span><a href="/2022/04/24/fft2/" rel="next"> 《四叉树》第二集 | 上课报道</a></div></div>
-
 
 
 <!-- <script type="text/javascript" src="/assets/codeBlock/codeBlockFuction.js"></script>

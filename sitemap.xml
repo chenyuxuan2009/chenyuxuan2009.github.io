@@ -2,6 +2,51 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   
   <url>
+    <loc>https://chenyuxuan2009.github.io/problem/20220714/grading/index.html</loc>
+    
+    <lastmod>2022-07-18</lastmod>
+    
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
+    <loc>https://chenyuxuan2009.github.io/problem/20220714/tri/index.html</loc>
+    
+    <lastmod>2022-07-18</lastmod>
+    
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
+    <loc>https://chenyuxuan2009.github.io/problem/20220714/str/index.html</loc>
+    
+    <lastmod>2022-07-18</lastmod>
+    
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
+    <loc>https://chenyuxuan2009.github.io/problem/20220714/meteor/index.html</loc>
+    
+    <lastmod>2022-07-18</lastmod>
+    
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
+    <loc>https://chenyuxuan2009.github.io/problem/20220714/calc/index.html</loc>
+    
+    <lastmod>2022-07-18</lastmod>
+    
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
     <loc>https://chenyuxuan2009.github.io/2022/07/17/JSOI2022/</loc>
     
     <lastmod>2022-07-18</lastmod>
@@ -21,24 +66,6 @@
   
   <url>
     <loc>https://chenyuxuan2009.github.io/data/argon.json</loc>
-    
-    <lastmod>2022-07-17</lastmod>
-    
-    <changefreq>monthly</changefreq>
-    <priority>0.6</priority>
-  </url>
-  
-  <url>
-    <loc>https://chenyuxuan2009.github.io/problem/20220714/calc/index.html</loc>
-    
-    <lastmod>2022-07-17</lastmod>
-    
-    <changefreq>monthly</changefreq>
-    <priority>0.6</priority>
-  </url>
-  
-  <url>
-    <loc>https://chenyuxuan2009.github.io/problem/20220714/str/index.html</loc>
     
     <lastmod>2022-07-17</lastmod>
     
@@ -549,14 +576,14 @@
   </url>
   
   <url>
-    <loc>https://chenyuxuan2009.github.io/tags/%E6%B4%9B%E8%B0%B7/</loc>
+    <loc>https://chenyuxuan2009.github.io/tags/Codeforces/</loc>
     <lastmod>2022-07-18</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
   </url>
   
   <url>
-    <loc>https://chenyuxuan2009.github.io/tags/Codeforces/</loc>
+    <loc>https://chenyuxuan2009.github.io/tags/%E6%B4%9B%E8%B0%B7/</loc>
     <lastmod>2022-07-18</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
