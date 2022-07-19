@@ -1,3 +1,4 @@
+https://chenyuxuan2009.github.io/2022/07/10/2022-7-10/
 https://chenyuxuan2009.github.io/friends/index.html
 https://chenyuxuan2009.github.io/2022/07/18/2022-7-14-cfs-contest/
 https://chenyuxuan2009.github.io/problem/20220714/grading/index.html
@@ -11,7 +12,6 @@ https://chenyuxuan2009.github.io/data/argon.json
 https://chenyuxuan2009.github.io/problem/20220714/cowmult/index.html
 https://chenyuxuan2009.github.io/problem/20220714/index.html
 https://chenyuxuan2009.github.io/problem/index.html
-https://chenyuxuan2009.github.io/2022/07/10/2022-7-10/
 https://chenyuxuan2009.github.io/2022/07/09/B3619/
 https://chenyuxuan2009.github.io/2022/07/09/CF1657B/
 https://chenyuxuan2009.github.io/2022/07/08/CF1010B/
