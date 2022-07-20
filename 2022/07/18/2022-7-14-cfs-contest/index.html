@@ -19,15 +19,15 @@
 	
 		<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=5">
 	
-	<meta name="description" content="题目列表奶牛式乘法题目很简单，就是每位数字相乘做加法。 下列描述中，均将两个数字 $A,B$ 分别用字符串 $S,T$ 表示，$n&#x3D;\left|S\right|,m&#x3D;\left|T\right|$。 很显然，有一种 $\mathcal O(nm)$ 的写法，直接模拟题意。 代码如下： 回文串计算流星雨三角形路面修整">
+	<meta name="description" content="题目列表奶牛式乘法题目很简单，就是每位数字相乘做加法。 下列描述中，均将两个数字 $A,B$ 分别用字符串 $S,T$ 表示，$n&#x3D;\left|S\right|,m&#x3D;\left|T\right|$。 很显然，有一种 $\mathcal O(nm)$ 的写法，直接模拟题意。 代码如下： #include&lt;bits&#x2F;stdc++.h&gt; using namespace s">
 <meta property="og:type" content="article">
 <meta property="og:title" content="JSOI2022考前模拟赛">
 <meta property="og:url" content="https://chenyuxuan2009.github.io/2022/07/18/2022-7-14-cfs-contest/index.html">
 <meta property="og:site_name" content="chenyuxuan__2009的博客">
-<meta property="og:description" content="题目列表奶牛式乘法题目很简单，就是每位数字相乘做加法。 下列描述中，均将两个数字 $A,B$ 分别用字符串 $S,T$ 表示，$n&#x3D;\left|S\right|,m&#x3D;\left|T\right|$。 很显然，有一种 $\mathcal O(nm)$ 的写法，直接模拟题意。 代码如下： 回文串计算流星雨三角形路面修整">
+<meta property="og:description" content="题目列表奶牛式乘法题目很简单，就是每位数字相乘做加法。 下列描述中，均将两个数字 $A,B$ 分别用字符串 $S,T$ 表示，$n&#x3D;\left|S\right|,m&#x3D;\left|T\right|$。 很显然，有一种 $\mathcal O(nm)$ 的写法，直接模拟题意。 代码如下： #include&lt;bits&#x2F;stdc++.h&gt; using namespace s">
 <meta property="og:locale" content="zh_CN">
 <meta property="article:published_time" content="2022-07-18T06:54:31.588Z">
-<meta property="article:modified_time" content="2022-07-18T07:18:33.559Z">
+<meta property="article:modified_time" content="2022-07-20T05:54:29.161Z">
 <meta property="article:author" content="CYX">
 <meta property="article:tag" content="C++">
 <meta property="article:tag" content="CFS">
@@ -635,7 +635,7 @@
 						
 						<div class="post-meta-detail post-meta-detail-time">
 							<i class="fa fa-clock-o" aria-hidden="true"></i>
-							<time title="发布于 2022-7-18 14:54:31 | 编辑于 2022-7-18 15:18:33">2022-7-18 14:54
+							<time title="发布于 2022-7-18 14:54:31 | 编辑于 2022-7-20 13:54:29">2022-7-18 14:54
 							</time>
 						</div>
 					
@@ -662,7 +662,7 @@
 						
 						<div class="post-meta-detail post-meta-detail-words">
 							<i class="fa fa-file-word-o" aria-hidden="true"></i>
-							95 字
+							642 字
 						</div>
 					
 						
@@ -670,7 +670,7 @@
 						
 						<div class="post-meta-detail post-meta-detail-readingtime">
 							<i class="fa fa-hourglass-end" aria-hidden="true"></i>
-							1 分钟
+							3 分钟
 						</div>
 					
 		</div>
@@ -682,7 +682,158 @@
 <p>下列描述中，均将两个数字 $A,B$ 分别用字符串 $S,T$ 表示，$n&#x3D;\left|S\right|,m&#x3D;\left|T\right|$。</p>
 <p>很显然，有一种 $\mathcal O(nm)$ 的写法，直接模拟题意。</p>
 <p>代码如下：</p>
-<h4 id="回文串"><a href="#回文串" class="headerlink" title="回文串"></a><a href="/problem/20220714/str">回文串</a></h4><h4 id="计算"><a href="#计算" class="headerlink" title="计算"></a><a href="/problem/20220714/calc">计算</a></h4><h4 id="流星雨"><a href="#流星雨" class="headerlink" title="流星雨"></a><a href="/problem/20220714/meteor">流星雨</a></h4><h4 id="三角形"><a href="#三角形" class="headerlink" title="三角形"></a><a href="/problem/20220714/tri">三角形</a></h4><h4 id="路面修整"><a href="#路面修整" class="headerlink" title="路面修整"></a><a href="/problem/20220714/grading">路面修整</a></h4><link rel="stylesheet" href="/css/bilicard.css" type="text/css">
+<pre><code class="highlight cpp"><span class="meta">#<span class="keyword">include</span><span class="string">&lt;bits/stdc++.h&gt;</span></span>
+<span class="keyword">using</span> <span class="keyword">namespace</span> std;
+string a,b;
+<span class="type">int</span> ans;
+<span class="function"><span class="type">int</span> <span class="title">main</span><span class="params">()</span></span>
+<span class="function"></span>&#123;
+	cin&gt;&gt;a&gt;&gt;b;
+	<span class="keyword">for</span>(<span class="type">int</span> i=<span class="number">0</span>;i&lt;a.<span class="built_in">size</span>();i++)
+	&#123;
+		<span class="keyword">for</span>(<span class="type">int</span> j=<span class="number">0</span>;j&lt;b.<span class="built_in">size</span>();j++)
+		&#123;
+			ans+=(<span class="type">int</span>)(a[i]-<span class="string">&#x27;0&#x27;</span>)*(<span class="type">int</span>)(b[j]-<span class="string">&#x27;0&#x27;</span>);
+		&#125;
+	&#125;
+	cout&lt;&lt;ans&lt;&lt;endl;
+	<span class="keyword">return</span> <span class="number">0</span>;
+&#125;</code></pre>
+
+<p>当然，我们做一个乘法分配律的逆运用。</p>
+<p>$S_1\times T_1 + S1 \times T_2 + \dots +S_n\times T_1 + S_n \times \dots + S_n\times T_m$。</p>
+<p>然后会发现，上式即为 $(S_1+\dots+S_n)\times T_1+(S_1+\dots+S_n)\times T_2+\dots +(S_1+\dots+S_n)\times T_m$。</p>
+<p>再次合并，即为 $(S_1+\dots +S_n)\times (T_1+\dots+T_m)$，也就是数字和相乘。</p>
+<p>复杂度仅为 $\mathcal O(n+m)$。</p>
+<pre><code class="highlight cpp"><span class="meta">#<span class="keyword">include</span><span class="string">&lt;bits/stdc++.h&gt;</span></span>
+<span class="keyword">using</span> <span class="keyword">namespace</span> std;
+string a,b;
+<span class="type">int</span> suma,sumb;
+<span class="function"><span class="type">int</span> <span class="title">main</span><span class="params">()</span></span>
+<span class="function"></span>&#123;
+	cin&gt;&gt;a&gt;&gt;b;
+	<span class="keyword">for</span>(<span class="type">int</span> i=<span class="number">0</span>;i&lt;a.<span class="built_in">size</span>();i++)
+	&#123;
+		suma+=a[i]-<span class="string">&#x27;0&#x27;</span>;
+	&#125;
+	<span class="keyword">for</span>(<span class="type">int</span> i=<span class="number">0</span>;i&lt;b.<span class="built_in">size</span>();i++)
+	&#123;
+		sumb+=b[i]-<span class="string">&#x27;0&#x27;</span>;
+	&#125;
+	cout&lt;&lt;suma*sumb&lt;&lt;endl;
+	<span class="keyword">return</span> <span class="number">0</span>;
+&#125;</code></pre>
+
+<p>最后提供一种 $\mathcal O(1)$ 的写法：</p>
+<pre><code class="highlight cpp"><span class="meta">#<span class="keyword">include</span><span class="string">&lt;bits/stdc++.h&gt;</span></span>
+<span class="keyword">using</span> <span class="keyword">namespace</span> std;
+string a,b;
+<span class="type">int</span> suma,sumb;
+<span class="function"><span class="type">int</span> <span class="title">main</span><span class="params">()</span></span>
+<span class="function"></span>&#123;
+	cin&gt;&gt;a&gt;&gt;b;
+    <span class="keyword">if</span>(a==<span class="string">&quot;1&quot;</span>)
+    &#123;
+        <span class="keyword">if</span>(b==<span class="string">&quot;1&quot;</span>)<span class="built_in">puts</span>(<span class="string">&quot;1&quot;</span>);
+        <span class="keyword">else</span> <span class="keyword">if</span>(b==<span class="string">&quot;2&quot;</span>)<span class="built_in">puts</span>(<span class="string">&quot;2&quot;</span>);
+        <span class="keyword">else</span> ....
+        <span class="keyword">else</span> <span class="built_in">puts</span>(<span class="string">&quot;1&quot;</span>);
+    &#125;
+    <span class="keyword">else</span> <span class="keyword">if</span>(a==<span class="string">&quot;2&quot;</span>)
+    &#123;
+        ...
+    &#125;
+    <span class="keyword">else</span>
+    &#123;
+        ...
+    &#125;
+	<span class="keyword">return</span> <span class="number">0</span>;
+&#125;</code></pre>
+
+<p>没事，一共才 $10^9 \times 10^9&#x3D;10^{18}$ 次打表（（（</p>
+<h4 id="回文串"><a href="#回文串" class="headerlink" title="回文串"></a><a href="/problem/20220714/str">回文串</a></h4><p>双指针，分类讨论。</p>
+<p>对于对应的两个字符，有一下情况：</p>
+<ul>
+<li><p>$s_l=\tt{*}$</p> 
+
+<ul>
+<li><p>$s_r=\tt{*}$</p> 
+
+<p>  为了字典序最小，我们选择最小的 $\tt{A}$。</p>
+</li>
+<li><p>$s_r \neq \tt{*}$</p> 
+  
+<p>  为了保持回文，我们把 $s_l$ 换为 $s_r$。</p>
+</li>
+</ul>
+</li>
+<li><p>$s_r=\tt{*}$</p> 
+
+<ul>
+<li><p>$s_l=\tt{*}$</p> 
+
+<p>  为了字典序最小，我们选择最小的 $\tt{A}$。</p>
+</li>
+<li><p>$s_l \neq \tt{*}$</p> 
+  
+<p>  为了保持回文，我们把 $s_r$ 换为 $s_l$。</p>
+</li>
+</ul>
+</li>
+<li><p>上述条件均不满足</p> 
+
+<ul>
+<li>无解。</li>
+</ul>
+</li>
+</ul>
+<pre><code class="highlight cpp"><span class="meta">#<span class="keyword">include</span><span class="string">&lt;bits/stdc++.h&gt;</span></span>
+<span class="keyword">using</span> <span class="keyword">namespace</span> std;
+string s;
+<span class="type">int</span> len,l,r;
+<span class="function"><span class="type">int</span> <span class="title">main</span><span class="params">()</span></span>
+<span class="function"></span>&#123;
+	cin&gt;&gt;s;
+	len=s.<span class="built_in">size</span>();
+	l=<span class="number">0</span>;
+	r=len<span class="number">-1</span>;
+	<span class="keyword">while</span>(l&lt;r)
+	&#123;
+		<span class="keyword">if</span>(s[l]==<span class="string">&#x27;*&#x27;</span>)
+		&#123;
+			<span class="keyword">if</span>(s[r]==<span class="string">&#x27;*&#x27;</span>)
+			&#123;
+				s[l]=s[r]=<span class="string">&#x27;a&#x27;</span>;
+			&#125;
+			<span class="keyword">else</span>
+			&#123;
+				s[l]=s[r];
+			&#125;
+		&#125;
+		<span class="keyword">else</span> <span class="keyword">if</span>(s[r]==<span class="string">&#x27;*&#x27;</span>)
+		&#123;
+			<span class="keyword">if</span>(s[l]==<span class="string">&#x27;*&#x27;</span>)
+			&#123;
+				s[l]=s[r]=<span class="string">&#x27;a&#x27;</span>;
+			&#125;
+			<span class="keyword">else</span>
+			&#123;
+				s[r]=s[l];
+			&#125;
+		&#125;
+		<span class="keyword">else</span> <span class="keyword">if</span>(s[l]!=s[r])
+		&#123;
+			<span class="built_in">puts</span>(<span class="string">&quot;-1&quot;</span>);
+			<span class="keyword">return</span> <span class="number">0</span>;
+		&#125;
+		l++;
+		r--;
+	&#125;
+	cout&lt;&lt;s&lt;&lt;endl;
+	<span class="keyword">return</span> <span class="number">0</span>;
+&#125;</code></pre>
+
+<h4 id="计算"><a href="#计算" class="headerlink" title="计算"></a><a href="/problem/20220714/calc">计算</a></h4><h4 id="流星雨"><a href="#流星雨" class="headerlink" title="流星雨"></a><a href="/problem/20220714/meteor">流星雨</a></h4><h4 id="三角形"><a href="#三角形" class="headerlink" title="三角形"></a><a href="/problem/20220714/tri">三角形</a></h4><h4 id="路面修整"><a href="#路面修整" class="headerlink" title="路面修整"></a><a href="/problem/20220714/grading">路面修整</a></h4><link rel="stylesheet" href="/css/bilicard.css" type="text/css">
 	</div>
 
 	

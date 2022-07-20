@@ -26,8 +26,8 @@
 <meta property="og:site_name" content="chenyuxuan__2009的博客">
 <meta property="og:description" content="路面修整题目描述FJ 打算好好修一下农场中某条凹凸不平的土路。按奶牛们的要求，修好后的路面高度应当单调上升或单调下降，也就是说，高度上升与高度下降的路段不能同时出现在修好的路中。 整条路被分成了 $N$ 段，$N$ 个整数 $A_1,\dots,A_N(1 \leq N \leq 2,000)$ 依次描述了每一段路的高度 $(0 \leq A_i\leq1,000,000,000)$。FJ 希望找">
 <meta property="og:locale" content="zh_CN">
-<meta property="article:published_time" content="2022-07-18T06:49:54.173Z">
-<meta property="article:modified_time" content="2022-07-18T06:49:54.173Z">
+<meta property="article:published_time" content="2022-07-20T05:22:33.665Z">
+<meta property="article:modified_time" content="2022-07-20T05:22:33.665Z">
 <meta property="article:author" content="CYX">
 <meta name="twitter:card" content="summary">
 
@@ -613,7 +613,7 @@
 						
 						<div class="post-meta-detail post-meta-detail-time">
 							<i class="fa fa-clock-o" aria-hidden="true"></i>
-							<time title="发布于 2022-7-18 14:49:54 | 编辑于 2022-7-18 14:49:54">2022-7-18 14:49
+							<time title="发布于 2022-7-20 13:22:33 | 编辑于 2022-7-20 13:22:33">2022-7-20 13:22
 							</time>
 						</div>
 					
@@ -632,7 +632,7 @@
 						
 						<div class="post-meta-detail post-meta-detail-words">
 							<i class="fa fa-file-word-o" aria-hidden="true"></i>
-							441 字
+							432 字
 						</div>
 					
 						
@@ -656,22 +656,23 @@
 <h2 id="输入格式"><a href="#输入格式" class="headerlink" title="输入格式"></a>输入格式</h2><p>第 $1$ 行：输入 $1$ 个整数：$N$。</p>
 <p>第 $2\dots N+1$ 行：第 $i+1$ 行为 $1$ 个整数：$A_i$。</p>
 <h2 id="输出格式"><a href="#输出格式" class="headerlink" title="输出格式"></a>输出格式</h2><p>第 $1$ 行：输出 $1$ 个正整数，表示 FJ 把路修成高度不上升或高度不下降的最小花费。</p>
-<h2 id="样例-1"><a href="#样例-1" class="headerlink" title="样例 #1"></a>样例 #1</h2><h3 id="样例输入-1"><a href="#样例输入-1" class="headerlink" title="样例输入 #1"></a>样例输入 #1</h3><pre><code class="highlight">7
-1
-3
-2
-4
-5
-3
-9</code></pre>
+<h2 id="样例-1"><a href="#样例-1" class="headerlink" title="样例 #1"></a>样例 #1</h2><h3 id="样例输入-1"><a href="#样例输入-1" class="headerlink" title="样例输入 #1"></a>样例输入 #1</h3><pre><code class="highlight cpp"><span class="number">7</span>
+<span class="number">1</span>
+<span class="number">3</span>
+<span class="number">2</span>
+<span class="number">4</span>
+<span class="number">5</span>
+<span class="number">3</span>
+<span class="number">9</span></code></pre>
 
-<h3 id="样例输出-1"><a href="#样例输出-1" class="headerlink" title="样例输出 #1"></a>样例输出 #1</h3><pre><code class="highlight">3</code></pre>
+<h3 id="样例输出-1"><a href="#样例输出-1" class="headerlink" title="样例输出 #1"></a>样例输出 #1</h3><pre><code class="highlight cpp"><span class="number">3</span></code></pre>
 
 <h2 id="提示"><a href="#提示" class="headerlink" title="提示"></a>提示</h2><p>FJ 将第一个高度为 $3$ 的路段的高度减少为 $2$，将第二个高度为 $3$ 的路段的高度增加到 5，总花费为 $\left|2-3\right|+\left|5-3\right|&#x3D;3$，并且各路段的高度为一个不下降序列 $1,2,2,4,5,5,9$。</p>
-<p>对于百分之 $30$ 数据，$N\leq 50$。</p>
-<p>对于百分之 $60$% 数据，$N\leq 500$。</p>
-<p>对于百分之 $100$ 数据，$N\leq2000$。</p>
-<link rel="stylesheet" href="/css/bilicard.css" type="text/css">
+<p>对于 $30\%$ 数据，$N\leq 50$。</p>
+
+<p>对于 $60\%$ 数据，$N\leq 500$。</p>
+
+<p>对于 $100\%$ 数据，$N\leq2000$。</p><link rel="stylesheet" href="/css/bilicard.css" type="text/css">
 	</div>
 </article>
 
