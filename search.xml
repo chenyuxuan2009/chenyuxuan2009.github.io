@@ -4,6 +4,52 @@
   
     
     <entry>
+      <title>【置顶】hexo的argon主题代码块样式更改</title>
+      <link href="/2022/07/23/argon-code-hljs/"/>
+      <url>/2022/07/23/argon-code-hljs/</url>
+      
+        <content type="html"><![CDATA[<p>rt，目前 hexo 的 argon 主题，用 highlight.js 代码块样式出现以下问题可以按本指南操作：</p><ul><li><p>有三个点挡住代码第一行</p></li><li><p>行号挡住半个字符左右</p></li></ul><p>那么，有个很简单的解决方法：</p><ol><li>进入<a href="https://solstice23.top/">原作者博客</a>，找到一篇含代码的文章，选中代码部分，检查，便能获得 css。</li><li>打开你的 style.css，更改前面几百行左右不同的。</li><li>进行部署</li></ol><p>还有个更简单的方法：</p><p>打开 <a href="http://blog.chen2009.tk/style.css">http://blog.chen2009.tk/style.css</a>，复制，替换你的 style.css</p><p>完成！</p><link rel="stylesheet" href="/css/bilicard.css" type="text/css">]]></content>
+      
+      
+      <categories>
+          
+          <category> 讲解 </category>
+          
+      </categories>
+      
+      
+    </entry>
+    
+    
+    
+    <entry>
+      <title>abc261做题笔记</title>
+      <link href="/2022/07/23/abc261/"/>
+      <url>/2022/07/23/abc261/</url>
+      
+        <content type="html"><![CDATA[<h3 id="abc261-a"><a href="#abc261-a" class="headerlink" title="abc261_a"></a><a href="https://atcoder.jp/contests/abc261/tasks/abc261_a">abc261_a</a></h3><h4 id="题目翻译"><a href="#题目翻译" class="headerlink" title="题目翻译"></a>题目翻译</h4><p>问<strong>数轴上</strong> $[l_1,r_1]$ 和 $[l_2,r_2]$ 重叠长度。</p><h4 id="题目思路"><a href="#题目思路" class="headerlink" title="题目思路"></a>题目思路</h4><p>注意数轴上，不是问重叠数字个数。</p><p>罚时带来的教训。</p><h4 id="AC-代码"><a href="#AC-代码" class="headerlink" title="AC 代码"></a>AC 代码</h4><pre><code class="highlight cpp"><span class="meta">#<span class="keyword">include</span><span class="string">&lt;bits/stdc++.h&gt;</span></span><span class="keyword">using</span> <span class="keyword">namespace</span> std;<span class="function"><span class="type">int</span> <span class="title">main</span><span class="params">()</span></span><span class="function"></span>&#123;<span class="type">int</span> l1,r1,l2,r2,ans=<span class="number">0</span>;cin&gt;&gt;l1&gt;&gt;r1&gt;&gt;l2&gt;&gt;r2;<span class="keyword">for</span>(<span class="type">int</span> i=l1;i&lt;=r1;i++)&#123;<span class="keyword">if</span>(l2&lt;=i&amp;&amp;i&lt;=r2)ans++;&#125;cout&lt;&lt;<span class="built_in">max</span>(<span class="number">0</span>,ans<span class="number">-1</span>)&lt;&lt;endl;<span class="keyword">return</span> <span class="number">0</span>;&#125;</code></pre><h3 id="abc261-b"><a href="#abc261-b" class="headerlink" title="abc261_b"></a><a href="https://atcoder.jp/contests/abc261/tasks/abc261_b">abc261_b</a></h3><h4 id="题目翻译-1"><a href="#题目翻译-1" class="headerlink" title="题目翻译"></a>题目翻译</h4><p>有 $n$ 个人对局，生成了 $n \times n$ 大小的结果表。</p><p>$a_{i,j}$ 即为第 $i$ 人对第 $j$ 人的结果。</p><p><code>W</code> 为胜利。</p><p><code>L</code> 为失败。</p><p><code>-</code> 为未知，任何结果都可能。</p><p><code>D</code> 为平局。</p><p>问结果表是否合法。</p><h4 id="题目思路-1"><a href="#题目思路-1" class="headerlink" title="题目思路"></a>题目思路</h4><p>直接扫一遍。</p><h4 id="AC-代码-1"><a href="#AC-代码-1" class="headerlink" title="AC 代码"></a>AC 代码</h4><pre><code class="highlight cpp"><span class="meta">#<span class="keyword">include</span><span class="string">&lt;bits/stdc++.h&gt;</span></span><span class="keyword">using</span> <span class="keyword">namespace</span> std;<span class="type">char</span> a[<span class="number">1020</span>][<span class="number">1020</span>];<span class="function"><span class="type">int</span> <span class="title">main</span><span class="params">()</span></span><span class="function"></span>&#123;<span class="type">int</span> n;<span class="type">bool</span> f=<span class="number">0</span>;cin&gt;&gt;n;<span class="keyword">for</span>(<span class="type">int</span> i=<span class="number">1</span>;i&lt;=n;i++)&#123;<span class="keyword">for</span>(<span class="type">int</span> j=<span class="number">1</span>;j&lt;=n;j++)&#123;cin&gt;&gt;a[i][j];&#125;&#125;<span class="keyword">for</span>(<span class="type">int</span> i=<span class="number">1</span>;i&lt;=n;i++)&#123;<span class="keyword">for</span>(<span class="type">int</span> j=<span class="number">1</span>;j&lt;=n;j++)&#123;<span class="keyword">if</span>(a[j][i]==<span class="string">&#x27;D&#x27;</span>&amp;&amp;a[i][j]==<span class="string">&#x27;D&#x27;</span>||a[j][i]==<span class="string">&#x27;W&#x27;</span>&amp;&amp;a[i][j]==<span class="string">&#x27;L&#x27;</span>||a[j][i]==<span class="string">&#x27;L&#x27;</span>&amp;&amp;a[i][j]==<span class="string">&#x27;W&#x27;</span>||a[j][i]==<span class="string">&#x27;-&#x27;</span>||a[i][j]==<span class="string">&#x27;-&#x27;</span>)&#123;&#125;<span class="keyword">else</span>&#123;f=<span class="number">1</span>;&#125;&#125;&#125;<span class="built_in">puts</span>(f==<span class="number">1</span>?<span class="string">&quot;incorrect&quot;</span>:<span class="string">&quot;correct&quot;</span>);<span class="keyword">return</span> <span class="number">0</span>;&#125;</code></pre><h3 id="abc261-c"><a href="#abc261-c" class="headerlink" title="abc261_c"></a><a href="https://atcoder.jp/contests/abc261/tasks/abc261_c">abc261_c</a></h3><h4 id="题目翻译-2"><a href="#题目翻译-2" class="headerlink" title="题目翻译"></a>题目翻译</h4><p>新建文件或文件夹时，若名字重复，往往会命名为 <code>新建文件夹(1)</code> 的名字。</p><p>给出创建的文件，输出最后命名。</p><h4 id="题目思路-2"><a href="#题目思路-2" class="headerlink" title="题目思路"></a>题目思路</h4><p><code>map</code> 练习题，很裸，不多说。</p><h4 id="AC-代码-2"><a href="#AC-代码-2" class="headerlink" title="AC 代码"></a>AC 代码</h4><pre><code class="highlight cpp"><span class="meta">#<span class="keyword">include</span><span class="string">&lt;bits/stdc++.h&gt;</span></span><span class="keyword">using</span> <span class="keyword">namespace</span> std;map&lt;string,<span class="type">int</span>&gt;m;<span class="function"><span class="type">int</span> <span class="title">main</span><span class="params">()</span></span><span class="function"></span>&#123;<span class="type">int</span> n;cin&gt;&gt;n;<span class="keyword">while</span>(n--)&#123;string s;cin&gt;&gt;s;m[s]++;<span class="keyword">if</span>(m[s]==<span class="number">1</span>)cout&lt;&lt;s&lt;&lt;endl;<span class="keyword">else</span> cout&lt;&lt;s&lt;&lt;<span class="string">&quot;(&quot;</span>&lt;&lt;(m[s]<span class="number">-1</span>)&lt;&lt;<span class="string">&quot;)&quot;</span>&lt;&lt;endl;&#125;<span class="keyword">return</span> <span class="number">0</span>;&#125;</code></pre><h3 id="abc261-d"><a href="#abc261-d" class="headerlink" title="abc261_d"></a><a href="https://atcoder.jp/contests/abc261/tasks/abc261_d">abc261_d</a></h3><h4 id="题目翻译-3"><a href="#题目翻译-3" class="headerlink" title="题目翻译"></a>题目翻译</h4><p>有 $n$ 个数 $a_1,a_2,\dots a_n$。</p><p>你可以抛 $n$ 次硬币，第 $i$ 次正面可以获得 $a_i$ 的分数，并记录连击。</p><p>连击数达到指定值时，会获得连击奖励。</p><h4 id="题目思路-3"><a href="#题目思路-3" class="headerlink" title="题目思路"></a>题目思路</h4><p>我们用 $f_{i,j}$ 表示前 $i$ 次<strong>最后</strong>连击次数。</p><p>分两种情况：</p><ul><li><p>延续连击：$f_{i,j}&#x3D;f_{i-1,j-1}+连击奖励+分数$</p></li><li><p>停止连击：$f_{i,0}&#x3D;\max(f_{i,0},f_{i-1,j})$</p></li></ul><h4 id="AC-代码-3"><a href="#AC-代码-3" class="headerlink" title="AC 代码"></a>AC 代码</h4><pre><code class="highlight cpp"><span class="meta">#<span class="keyword">include</span><span class="string">&lt;bits/stdc++.h&gt;</span></span><span class="keyword">using</span> <span class="keyword">namespace</span> std;<span class="type">int</span> a[<span class="number">5020</span>];<span class="type">int</span> b[<span class="number">5020</span>];<span class="type">long</span> <span class="type">long</span> f[<span class="number">5020</span>][<span class="number">5020</span>];<span class="function"><span class="type">int</span> <span class="title">main</span><span class="params">()</span></span><span class="function"></span>&#123;<span class="type">int</span> n,m;<span class="type">long</span> <span class="type">long</span> ans=<span class="number">0</span>;cin&gt;&gt;n&gt;&gt;m;<span class="keyword">for</span>(<span class="type">int</span> i=<span class="number">1</span>;i&lt;=n;i++)&#123;cin&gt;&gt;a[i];&#125;<span class="keyword">while</span>(m--)&#123;<span class="type">int</span> x,y;cin&gt;&gt;x&gt;&gt;y;b[x]=y;&#125;f[<span class="number">1</span>][<span class="number">1</span>]=a[<span class="number">1</span>]+b[<span class="number">1</span>];<span class="keyword">for</span>(<span class="type">int</span> i=<span class="number">1</span>;i&lt;=n;i++)&#123;<span class="keyword">for</span>(<span class="type">int</span> j=<span class="number">0</span>;j&lt;i;j++)&#123;f[i][j]=f[i<span class="number">-1</span>][j<span class="number">-1</span>]+b[j]+a[i];f[i][<span class="number">0</span>]=<span class="built_in">max</span>(f[i][<span class="number">0</span>],f[i<span class="number">-1</span>][j]);&#125;f[i][i]=f[i<span class="number">-1</span>][i<span class="number">-1</span>]+a[i]+b[i];&#125;<span class="keyword">for</span>(<span class="type">int</span> i=<span class="number">0</span>;i&lt;=n;i++)ans=<span class="built_in">max</span>(ans,f[n][i]);cout&lt;&lt;ans&lt;&lt;endl;<span class="keyword">return</span> <span class="number">0</span>;&#125;</code></pre><link rel="stylesheet" href="/css/bilicard.css" type="text/css">]]></content>
+      
+      
+      <categories>
+          
+          <category> 做题笔记 </category>
+          
+      </categories>
+      
+      
+        <tags>
+            
+            <tag> C++ </tag>
+            
+            <tag> Atcoder </tag>
+            
+        </tags>
+      
+    </entry>
+    
+    
+    
+    <entry>
       <title>JSOI2022考前模拟赛解题报告</title>
       <link href="/2022/07/18/2022-7-14-cfs-contest/"/>
       <url>/2022/07/18/2022-7-14-cfs-contest/</url>
@@ -495,9 +541,9 @@
             
             <tag> C++ </tag>
             
-            <tag> 洛谷 </tag>
-            
             <tag> Codeforces </tag>
+            
+            <tag> 洛谷 </tag>
             
             <tag> Atcoder </tag>
             
