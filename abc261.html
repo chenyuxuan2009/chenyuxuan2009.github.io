@@ -14,23 +14,23 @@
 	<script src="//cdnjs.cloudflare.com/ajax/libs/highlight.js/11.1.0/highlight.min.js"></script>
 	<script type="text/javascript" src="/assets/js/click-live.js"></script>
 	
-	<title>CF1621A Stable Arrangement of Rooks - chenyuxuan__2009的博客</title>
+	<title>abc261做题笔记 - chenyuxuan__2009的博客</title>
 	<meta charset="utf-8">
 	
 		<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=5">
 	
-	<meta name="description" content="题目翻译：有 $n \times n$ 大小的棋盘，一共放 $k$ 辆车，使得这个棋盘稳定。 稳定的概念是：所有的车移动至相邻四格（上下左右）不会出现一行一列有 $\ge 2$ 辆车。 做题思路:我们可以考虑，移动之后没有同一行一列有多辆车，那么就让它移动之后还是只有它一辆车，换句话说，每辆车之间至少空一行和一列，也就是在对角线上放是最优想法。如果对角线放不下 $k$ 辆车了，无解输出 -1 。">
-<meta property="og:type" content="article">
-<meta property="og:title" content="CF1621A Stable Arrangement of Rooks">
-<meta property="og:url" content="https://chenyuxuan2009.github.io/2022/03/22/CF1621A/index.html">
+	<meta name="description" content="abc260_a题目翻译题目思路AC 代码  abc260_b题目翻译题目思路AC 代码  abc260_c题目翻译题目思路AC 代码  abc260_d题目翻译题目思路AC 代码">
+<meta property="og:type" content="website">
+<meta property="og:title" content="abc261做题笔记">
+<meta property="og:url" content="https://chenyuxuan2009.github.io/abc261.html">
 <meta property="og:site_name" content="chenyuxuan__2009的博客">
-<meta property="og:description" content="题目翻译：有 $n \times n$ 大小的棋盘，一共放 $k$ 辆车，使得这个棋盘稳定。 稳定的概念是：所有的车移动至相邻四格（上下左右）不会出现一行一列有 $\ge 2$ 辆车。 做题思路:我们可以考虑，移动之后没有同一行一列有多辆车，那么就让它移动之后还是只有它一辆车，换句话说，每辆车之间至少空一行和一列，也就是在对角线上放是最优想法。如果对角线放不下 $k$ 辆车了，无解输出 -1 。">
+<meta property="og:description" content="abc260_a题目翻译题目思路AC 代码  abc260_b题目翻译题目思路AC 代码  abc260_c题目翻译题目思路AC 代码  abc260_d题目翻译题目思路AC 代码">
 <meta property="og:locale" content="zh_CN">
-<meta property="article:published_time" content="2022-03-22T12:38:59.470Z">
-<meta property="article:modified_time" content="2022-05-21T07:08:11.293Z">
+<meta property="article:published_time" content="2022-07-23T10:22:58.830Z">
+<meta property="article:modified_time" content="2022-07-23T10:22:58.801Z">
 <meta property="article:author" content="CYX">
 <meta property="article:tag" content="C++">
-<meta property="article:tag" content="Codeforces">
+<meta property="article:tag" content="Atcoder">
 <meta name="twitter:card" content="summary">
 
 	<meta name="theme-color" content="#5e72e4">
@@ -495,39 +495,18 @@
 		<div id="leftbar_part2" class="widget widget_search card bg-white shadow-sm border-0">
 			<div id="leftbar_part2_inner" class="card-body">
 				
-				<div class="nav-wrapper" style="padding-top: 5px;">
+				<div class="nav-wrapper" style="padding-top: 5px; display:none; ">
 	                <ul class="nav nav-pills nav-fill" role="tablist">
 						
-							<li class="nav-item sidebar-tab-switcher">
-								<a class="active show" id="leftbar_tab_catalog_btn" data-toggle="tab" href="#leftbar_tab_catalog" role="tab" aria-controls="leftbar_tab_catalog" no-pjax>文章目录</a>
-							</li>
-						
 						<li class="nav-item sidebar-tab-switcher">
-							<a class="" id="leftbar_tab_overview_btn" data-toggle="tab" href="#leftbar_tab_overview" role="tab" aria-controls="leftbar_tab_overview" no-pjax>站点概览</a>
+							<a class="active show" id="leftbar_tab_overview_btn" data-toggle="tab" href="#leftbar_tab_overview" role="tab" aria-controls="leftbar_tab_overview" no-pjax>站点概览</a>
 						</li>
 	                </ul>
 				</div>
 				<div>
 					<div class="tab-content" style="padding: 10px 10px 0 10px;">
 						
-							<div class="tab-pane fade active show" id="leftbar_tab_catalog" role="tabpanel" aria-labelledby="leftbar_tab_catalog_btn">
-								<div id="leftbar_catalog"></div>
-								<script type="text/javascript">
-									$(function () {
-										$(document).headIndex({
-											articleWrapSelector: '#post_content',
-											indexBoxSelector: '#leftbar_catalog',
-											subItemBoxClass: "index-subItem-box",
-											itemClass: "index-item",
-											linkClass: "index-link",
-											offset: 80,
-										});
-									})
-								</script>
-								
-							</div>
-						
-						<div class="tab-pane fade text-center" id="leftbar_tab_overview" role="tabpanel" aria-labelledby="leftbar_tab_overview_btn">
+						<div class="tab-pane fade text-center active show" id="leftbar_tab_overview" role="tabpanel" aria-labelledby="leftbar_tab_overview_btn">
 							<img id="leftbar_overview_author_image" src="/assets/img/favicon.ico" class="img-fluid rounded-circle shadow-sm" style="width: 100px;" alt="avatar">
 							<h6 id="leftbar_overview_author_name">CYX</h6>
 							<nav class="site-state">
@@ -626,25 +605,18 @@
 		
 		
 			
+
 	<article class="post post-full card bg-white shadow-sm border-0 post-preview">
 	<header class="post-header text-center">
 		
-		<a class="post-title" href="/2022/03/22/CF1621A/">CF1621A Stable Arrangement of Rooks</a>
+		<a class="post-title" href="/abc261.html">abc261做题笔记</a>
 		<div class="post-meta">
 			
 						
 						<div class="post-meta-detail post-meta-detail-time">
 							<i class="fa fa-clock-o" aria-hidden="true"></i>
-							<time title="发布于 2022-3-22 20:38:59 | 编辑于 2022-5-21 15:08:11">2022-3-22 20:38
+							<time title="发布于 2022-7-23 18:22:58 | 编辑于 2022-7-23 18:22:58">2022-7-23 18:22
 							</time>
-						</div>
-					
-						
-							<div class="post-meta-devide">|</div>
-						
-						<div class="post-meta-detail post-meta-detail-categories">
-							<i class="fa fa-bookmark-o" aria-hidden="true"></i>
-							<a class="post-meta-detail-catagory-link" href="/categories/%E9%A2%98%E8%A7%A3/">题解</a>
 						</div>
 					
 						
@@ -662,7 +634,7 @@
 						
 						<div class="post-meta-detail post-meta-detail-words">
 							<i class="fa fa-file-word-o" aria-hidden="true"></i>
-							372 字
+							44 字
 						</div>
 					
 						
@@ -678,182 +650,15 @@
 	</header>
 
 	<div class="post-content" id="post_content">
-		<h4 id="题目翻译："><a href="#题目翻译：" class="headerlink" title="题目翻译："></a>题目翻译：</h4><p>有 $n \times n$ 大小的棋盘，一共放 $k$ 辆车，使得这个棋盘稳定。</p>
-<p>稳定的概念是：所有的车移动至相邻四格（上下左右）不会出现一行一列有 $\ge 2$ 辆车。</p>
-<h4 id="做题思路"><a href="#做题思路" class="headerlink" title="做题思路:"></a>做题思路:</h4><p>我们可以考虑，移动之后没有同一行一列有多辆车，那么就让它移动之后还是只有它一辆车，换句话说，每辆车之间至少空一行和一列，也就是在对角线上放是最优想法。如果对角线放不下 $k$ 辆车了，无解输出 <code>-1</code> 。</p>
-<h4 id="深入思考（此分析大佬跳过）"><a href="#深入思考（此分析大佬跳过）" class="headerlink" title="深入思考（此分析大佬跳过）"></a>深入思考（此分析大佬跳过）</h4><p>在怎样的情况下 $n \times n$ 的棋盘放不下 $k$ 辆车呢？</p>
-<p>很显然，每两行两列放一辆车，那么最多可以放 $\left\lfloor\dfrac{n+1}{2}\right\rfloor$ 辆车（大多数语言整数除法自动下取整），所以只要判断 $\dfrac{n+1}{2}$ 与 $k$ 的大小关系。</p>
-<h4 id="AC代码"><a href="#AC代码" class="headerlink" title="AC代码"></a>AC代码</h4><pre><code class="highlight cpp"><span class="function"><span class="type">void</span> <span class="title">solve</span><span class="params">()</span></span>
-<span class="function"></span>&#123;
-	<span class="type">int</span> n,k;
-	cin&gt;&gt;n&gt;&gt;k;
-	<span class="keyword">if</span>((n+<span class="number">1</span>)/<span class="number">2</span>&lt;k)<span class="comment">//判断是否放得下</span>
-	&#123;
-		cout&lt;&lt;<span class="number">-1</span>&lt;&lt;endl;
-		<span class="keyword">return</span>;
-	&#125;
-	<span class="keyword">for</span>(<span class="type">int</span> i=<span class="number">1</span>;i&lt;=n;i++)
-	&#123;
-		<span class="keyword">for</span>(<span class="type">int</span> j=<span class="number">1</span>;j&lt;=n;j++)
-		&#123;
-			<span class="keyword">if</span>(i==j&amp;&amp;i%<span class="number">2</span>!=<span class="number">0</span>&amp;&amp;k&gt;<span class="number">0</span>)<span class="comment">//判断分别为：对角线、隔一行一列、还可以放车</span>
-			&#123;
-				cout&lt;&lt;<span class="string">&#x27;R&#x27;</span>;
-				k--;<span class="comment">//放完一辆</span>
-			&#125;
-			<span class="keyword">else</span>
-			&#123;
-				cout&lt;&lt;<span class="string">&#x27;.&#x27;</span>;
-			&#125;
-		&#125;
-		cout&lt;&lt;endl;
-	&#125;
-&#125;</code></pre>
-<p>多组数据，代码未全。请勿copy，当心踩坑！</p>
-<link rel="stylesheet" href="/css/bilicard.css" type="text/css">
+		<h3 id="abc260-a"><a href="#abc260-a" class="headerlink" title="abc260_a"></a><a target="_blank" rel="noopener" href="https://atcoder.jp/contests/abc260/tasks/abc260_a">abc260_a</a></h3><h4 id="题目翻译"><a href="#题目翻译" class="headerlink" title="题目翻译"></a>题目翻译</h4><h4 id="题目思路"><a href="#题目思路" class="headerlink" title="题目思路"></a>题目思路</h4><h4 id="AC-代码"><a href="#AC-代码" class="headerlink" title="AC 代码"></a>AC 代码</h4><pre><code class="highlight cpp"></code></pre>
+
+<h3 id="abc260-b"><a href="#abc260-b" class="headerlink" title="abc260_b"></a><a target="_blank" rel="noopener" href="https://atcoder.jp/contests/abc260/tasks/abc260_b">abc260_b</a></h3><h4 id="题目翻译-1"><a href="#题目翻译-1" class="headerlink" title="题目翻译"></a>题目翻译</h4><h4 id="题目思路-1"><a href="#题目思路-1" class="headerlink" title="题目思路"></a>题目思路</h4><h4 id="AC-代码-1"><a href="#AC-代码-1" class="headerlink" title="AC 代码"></a>AC 代码</h4><pre><code class="highlight cpp"></code></pre>
+
+<h3 id="abc260-c"><a href="#abc260-c" class="headerlink" title="abc260_c"></a><a target="_blank" rel="noopener" href="https://atcoder.jp/contests/abc260/tasks/abc260_c">abc260_c</a></h3><h4 id="题目翻译-2"><a href="#题目翻译-2" class="headerlink" title="题目翻译"></a>题目翻译</h4><h4 id="题目思路-2"><a href="#题目思路-2" class="headerlink" title="题目思路"></a>题目思路</h4><h4 id="AC-代码-2"><a href="#AC-代码-2" class="headerlink" title="AC 代码"></a>AC 代码</h4><pre><code class="highlight cpp"></code></pre>
+
+<h3 id="abc260-d"><a href="#abc260-d" class="headerlink" title="abc260_d"></a><a target="_blank" rel="noopener" href="https://atcoder.jp/contests/abc260/tasks/abc260_d">abc260_d</a></h3><h4 id="题目翻译-3"><a href="#题目翻译-3" class="headerlink" title="题目翻译"></a>题目翻译</h4><h4 id="题目思路-3"><a href="#题目思路-3" class="headerlink" title="题目思路"></a>题目思路</h4><h4 id="AC-代码-3"><a href="#AC-代码-3" class="headerlink" title="AC 代码"></a>AC 代码</h4><pre><code class="highlight cpp"></code></pre><link rel="stylesheet" href="/css/bilicard.css" type="text/css">
 	</div>
-
-	
-
-	
-			<div class='additional-content-after-post'>文章加载可能有点慢，重新刷新一下就好。刷新之后评论应该出来了，欢迎大家来留言！<br/>点一点右下角的分享，推送给更多好友吧！</div>
-		
-
-	
-		<div class="post-tags">
-			<i class="fa fa-tags" aria-hidden="true"></i>
-			<a class="tag badge badge-secondary post-meta-detail-tag -none-link" href="/tags/C/" rel="tag">C++</a><a class="tag badge badge-secondary post-meta-detail-tag -none-link" href="/tags/Codeforces/" rel="tag">Codeforces</a>
-		</div>
-	
 </article>
-
-	<div id="share_container">
-	<div id="share" data-initialized="true">
-		<a class="no-pjax icon-wechat" tooltip="分享到微信">
-			<button class="btn btn-icon btn-success">
-				<span class="btn-inner--icon"><i class="fa fa-weixin"></i></span>
-			</button>
-		</a>
-		<a target="_blank" class="no-pjax icon-douban" tooltip="分享到豆瓣">
-			<button class="btn btn-icon btn-primary" style="background: #209261;border: none;">
-				豆
-			</button>
-		</a>
-		<a target="_blank" class="no-pjax icon-qq" tooltip="分享到 QQ">
-			<button class="btn btn-icon btn-primary" style="background: #2196f3;border: none;">
-				<span class="btn-inner--icon"><i class="fa fa-qq"></i></span>
-			</button>
-		</a>
-		<a target="_blank" class="no-pjax icon-qzone" tooltip="分享到 QQ 空间">
-			<button class="btn btn-icon btn-primary" style="background: #ffc107;border: none;">
-				<span class="btn-inner--icon"><i class="fa fa-star"></i></span>
-			</button>
-		</a>
-		<a target="_blank" class="no-pjax icon-weibo" tooltip="分享到微博">
-			<button class="btn btn-icon btn-warning">
-				<span class="btn-inner--icon"><i class="fa fa-weibo"></i></span>
-			</button>
-		</a>
-		<a target="_blank" class="no-pjax icon-facebook" tooltip="分享到 Facebook">
-			<button class="btn btn-icon btn-primary" style="background: #283593;border: none;">
-				<span class="btn-inner--icon"><i class="fa fa-facebook"></i></span>
-			</button>
-		</a>
-		<a target="_blank" class="no-pjax icon-twitter" tooltip="分享到 Twitter">
-			<button class="btn btn-icon btn-primary" style="background: #03a9f4;border: none;">
-				<span class="btn-inner--icon"><i class="fa fa-twitter"></i></span>
-			</button>
-		</a>
-		<a target="_blank" class="no-pjax icon-telegram" href="https://telegram.me/share/url?url=https://chenyuxuan2009.github.io/2022/03/22/CF1621A/&text=CF1621A Stable Arrangement of Rooks" tooltip="分享到 Telegram">
-			<button class="btn btn-icon btn-primary" style="background: #42a5f5;border: none;">
-				<span class="btn-inner--icon"><i class="fa fa-telegram"></i></span>
-			</button>
-		</a>
-		<a target="_blank" class="no-pjax icon-copy-link" id="share_copy_link" tooltip="复制链接">
-			<button class="btn btn-icon btn-default">
-				<span class="btn-inner--icon"><i class="fa fa-link"></i></span>
-			</button>
-		</a>
-	</div>
-	<button id="share_show" class="btn btn-icon btn-primary" tooltip="分享">
-		<span class="btn-inner--icon"><i class="fa fa-share"></i></span>
-	</button>
-</div>
-<script type="text/javascript">
-	socialShare("#share", {
-	    title : 'CF1621A Stable Arrangement of Rooks',
-	    description : '题目翻译：有 $n \times n$ 大小的棋盘，一共放 $k$ 辆车，使得这个棋盘稳定。
-稳定的...',
-	    wechatQrcodeTitle : "分享到微信",
-	    wechatQrcodeHelper : '微信扫描二维码',
-	    source : 'https://chenyuxuan2009.github.io/2022/03/22/CF1621A/'
-	});
-	$("#share_show")[0].onclick = function(){
-		$("#share_container").addClass("opened");
-	};
-	$("#share_copy_link")[0].onclick = function(){
-		let input = document.createElement('input');
-		document.body.appendChild(input);
-		input.setAttribute("value", window.location.href);
-		input.setAttribute("readonly", "readonly");
-		input.setAttribute("style", "opacity: 0;mouse-events:none;");
-		input.select();
-		if (document.execCommand('copy')){
-			iziToast.show({
-				title: '链接已复制',
-				message: "链接已复制到剪贴板",
-				class: 'shadow',
-				position: 'topRight',
-				backgroundColor: '#2dce89',
-				titleColor: '#ffffff',
-				messageColor: '#ffffff',
-				iconColor: '#ffffff',
-				progressBarColor: '#ffffff',
-				icon: 'fa fa-check',
-				timeout: 5000
-			});
-		}else{
-			iziToast.show({
-				title: '复制失败',
-				message: "请手动复制链接",
-				class: 'shadow',
-				position: 'topRight',
-				backgroundColor: '#f5365c',
-				titleColor: '#ffffff',
-				messageColor: '#ffffff',
-				iconColor: '#ffffff',
-				progressBarColor: '#ffffff',
-				icon: 'fa fa-close',
-				timeout: 5000
-			});
-		}
-		document.body.removeChild(input);
-	};
-</script>
-
-
-
-	<div id="post_comment" class="card shadow-sm">
-		<div id="giscus"></div>
-<script src="https://giscus.app/client.js"
-        data-repo="chenyuxuan2009/blogtalk"
-        data-repo-id="R_kgDOHDKqeg"
-        data-category="General"
-        data-category-id="DIC_kwDOHDKqes4COOnc"
-        data-mapping="pathname"
-        data-input-position="top"
-        data-theme="light"
-        data-lang="zh-CN"
-        crossorigin="anonymous"
-        async>
-</script>
-
-	</div>
-
-
-
-<div class="post-navigation card shadow-sm"><div class="post-navigation-item post-navigation-pre"><span class="page-navigation-extra-text"><i class="fa fa-arrow-circle-o-left" aria-hidden="true"></i>上一篇</span><a href="/2022/03/22/CF1627B/" rel="prev"> CF1627B Not Sitting</a></div><div class="post-navigation-item post-navigation-next"><span class="page-navigation-extra-text">下一篇 <i class="fa fa-arrow-circle-o-right" aria-hidden="true"></i></span><a href="/2022/03/22/CF1615A/" rel="next"> CF1615A Closing The Gap</a></div></div>
-
 
 
 <!-- <script type="text/javascript" src="/assets/codeBlock/codeBlockFuction.js"></script>
