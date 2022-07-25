@@ -27,7 +27,7 @@
 <meta property="og:description" content="洛谷CFATDP_A用 $f_i$ 记录跳到第 $i$ 个位置的最小花费。 注意，是从 $1$ 号开始，看错这个调了好久。 那么，每一步的最小应该是前两步和前一步分别加上差的绝对值取 $\min$。 转移方程：$f_i&#x3D;\min(f_{i-1}+\vert a_i-a_{i-1} \vert,f_{i-2}+\vert a_i-a_{i-2} \vert)$。 #include&lt;b">
 <meta property="og:locale" content="zh_CN">
 <meta property="article:published_time" content="2022-07-24T13:56:51.423Z">
-<meta property="article:modified_time" content="2022-07-24T17:24:58.851Z">
+<meta property="article:modified_time" content="2022-07-25T04:27:43.457Z">
 <meta property="article:author" content="CYX">
 <meta property="article:tag" content="C++">
 <meta property="article:tag" content="洛谷">
@@ -637,7 +637,7 @@
 						
 						<div class="post-meta-detail post-meta-detail-time">
 							<i class="fa fa-clock-o" aria-hidden="true"></i>
-							<time title="发布于 2022-7-24 21:56:51 | 编辑于 2022-7-25 1:24:58">2022-7-24 21:56
+							<time title="发布于 2022-7-24 21:56:51 | 编辑于 2022-7-25 12:27:43">2022-7-24 21:56
 							</time>
 						</div>
 					
@@ -664,7 +664,7 @@
 						
 						<div class="post-meta-detail post-meta-detail-words">
 							<i class="fa fa-file-word-o" aria-hidden="true"></i>
-							504 字
+							790 字
 						</div>
 					
 						
@@ -672,7 +672,7 @@
 						
 						<div class="post-meta-detail post-meta-detail-readingtime">
 							<i class="fa fa-hourglass-end" aria-hidden="true"></i>
-							2 分钟
+							4 分钟
 						</div>
 					
 		</div>
@@ -757,7 +757,72 @@
 	&#125;
 	cout&lt;&lt;<span class="built_in">max</span>(f[n][<span class="number">0</span>],<span class="built_in">max</span>(f[n][<span class="number">1</span>],f[n][<span class="number">2</span>]))&lt;&lt;endl;
 	<span class="keyword">return</span> <span class="number">0</span>;
-&#125;</code></pre><link rel="stylesheet" href="/css/bilicard.css" type="text/css">
+&#125;</code></pre>
+
+<h4 id="DP-D"><a href="#DP-D" class="headerlink" title="DP_D"></a><a target="_blank" rel="noopener" href="https://atcoder.jp/contests/dp/tasks/dp_d">DP_D</a></h4><p>最基础的01背包。</p>
+<p>注意开 <code>long long</code>。</p>
+<pre><code class="highlight cpp"><span class="meta">#<span class="keyword">include</span><span class="string">&lt;bits/stdc++.h&gt;</span></span>
+<span class="keyword">using</span> <span class="keyword">namespace</span> std;
+<span class="type">long</span> <span class="type">long</span> f[<span class="number">100020</span>];
+<span class="type">int</span> a[<span class="number">120</span>];
+<span class="type">int</span> b[<span class="number">120</span>];
+<span class="function"><span class="type">int</span> <span class="title">main</span><span class="params">()</span></span>
+<span class="function"></span>&#123;
+	<span class="type">int</span> v,n;
+	cin&gt;&gt;n&gt;&gt;v;
+	<span class="keyword">for</span>(<span class="type">int</span> i=<span class="number">1</span>;i&lt;=n;i++)
+	&#123;
+		cin&gt;&gt;a[i]&gt;&gt;b[i];
+	&#125;
+	<span class="keyword">for</span>(<span class="type">int</span> i=<span class="number">1</span>;i&lt;=n;i++)
+	&#123;
+		<span class="keyword">for</span>(<span class="type">int</span> j=v;j&gt;=a[i];j--)
+		&#123;
+			f[j]=<span class="built_in">max</span>(f[j],f[j-a[i]]+b[i]);
+		&#125;
+	&#125;
+	cout&lt;&lt;f[v]&lt;&lt;endl;
+	<span class="keyword">return</span> <span class="number">0</span>;
+&#125;</code></pre>
+
+<h4 id="DP-E"><a href="#DP-E" class="headerlink" title="DP_E"></a><a target="_blank" rel="noopener" href="https://atcoder.jp/contests/dp/tasks/dp_e">DP_E</a></h4><p>和上题一致，01背包，只是数据范围做了调整。</p>
+<p>$f$ 数组不能记录每个重量的最大收益了，要记录每个收益最小重量。</p>
+<p>注意这里初始化 $f$ 数组很关键。</p>
+<pre><code class="highlight cpp"><span class="meta">#<span class="keyword">include</span><span class="string">&lt;bits/stdc++.h&gt;</span></span>
+<span class="keyword">using</span> <span class="keyword">namespace</span> std;
+<span class="type">long</span> <span class="type">long</span> f[<span class="number">100020</span>];
+<span class="type">int</span> a[<span class="number">120</span>];
+<span class="type">int</span> b[<span class="number">120</span>];
+<span class="function"><span class="type">int</span> <span class="title">main</span><span class="params">()</span></span>
+<span class="function"></span>&#123;
+	<span class="built_in">memset</span>(f,<span class="number">0x3f</span>,<span class="built_in">sizeof</span>(f));
+	f[<span class="number">0</span>]=<span class="number">0</span>;
+	<span class="type">int</span> v,n;
+	cin&gt;&gt;n&gt;&gt;v;
+	<span class="keyword">for</span>(<span class="type">int</span> i=<span class="number">1</span>;i&lt;=n;i++)
+	&#123;
+		cin&gt;&gt;a[i]&gt;&gt;b[i];
+	&#125;
+	<span class="keyword">for</span>(<span class="type">int</span> i=<span class="number">1</span>;i&lt;=n;i++)
+	&#123;
+		<span class="keyword">for</span>(<span class="type">int</span> j=<span class="number">100000</span>;j&gt;=b[i];j--)
+		&#123;
+			f[j]=<span class="built_in">min</span>(f[j],f[j-b[i]]+a[i]);
+		&#125;
+	&#125;
+	<span class="keyword">for</span>(<span class="type">int</span> i=<span class="number">100000</span>;i&gt;=<span class="number">0</span>;i--)
+	&#123;
+		<span class="keyword">if</span>(f[i]&lt;=v)
+		&#123;
+			cout&lt;&lt;i&lt;&lt;endl;
+			<span class="keyword">return</span> <span class="number">0</span>;
+		&#125;
+	&#125;
+	<span class="keyword">return</span> <span class="number">0</span>;
+&#125;
+</code></pre>
+
+<link rel="stylesheet" href="/css/bilicard.css" type="text/css">
 	</div>
 
 	
