@@ -27,7 +27,7 @@
 <meta property="og:description" content="洛谷P1091导弹拦截第一问做两遍，$n$ 规模较小 $\mathcal O(n^2)$ 的写法可过。 从左到右，从右到左各做一次，看能拦截多少“导弹”，最后减一下即为“拦截不住”即“该出列的学生”。 #include&lt;bits&#x2F;stdc++.h&gt; using namespace std; int f[120]; int g[120]; int a[120]; int main() &amp;">
 <meta property="og:locale" content="zh_CN">
 <meta property="article:published_time" content="2022-07-24T13:56:51.423Z">
-<meta property="article:modified_time" content="2022-07-26T12:26:56.877Z">
+<meta property="article:modified_time" content="2022-07-26T12:30:03.343Z">
 <meta property="article:author" content="CYX">
 <meta property="article:tag" content="C++">
 <meta property="article:tag" content="洛谷">
@@ -637,7 +637,7 @@
 						
 						<div class="post-meta-detail post-meta-detail-time">
 							<i class="fa fa-clock-o" aria-hidden="true"></i>
-							<time title="发布于 2022-7-24 21:56:51 | 编辑于 2022-7-26 20:26:56">2022-7-24 21:56
+							<time title="发布于 2022-7-24 21:56:51 | 编辑于 2022-7-26 20:30:03">2022-7-24 21:56
 							</time>
 						</div>
 					
@@ -890,7 +890,7 @@
 <p>$f_{i,0}&#x3D;\max(f_{i-1,0},f_{i-1,1},f_{i-1,2})$。</p>
 <p>$f_{i,1}&#x3D;\max(f_{i-1,0},f_{i-1,2})+a_i$。</p>
 <p>$f_{i,2}&#x3D;\max(f_{i-1,0},f_{i-1,1})+b_i$。</p>
-<p>$\Huge 不开 long\ long 见祖宗$。</p>
+<p>$\Huge 不开 long\ long 见祖宗！！！$</p>
 <pre><code class="highlight cpp"><span class="meta">#<span class="keyword">include</span><span class="string">&lt;bits/stdc++.h&gt;</span></span>
 <span class="keyword">using</span> <span class="keyword">namespace</span> std;
 <span class="type">int</span> a[<span class="number">100020</span>];
