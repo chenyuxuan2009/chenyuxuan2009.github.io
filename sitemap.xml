@@ -2,6 +2,15 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   
   <url>
+    <loc>https://chenyuxuan2009.github.io/2022/07/24/dp/</loc>
+    
+    <lastmod>2022-07-26</lastmod>
+    
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
     <loc>https://chenyuxuan2009.github.io/2022/07/10/2022-7-10/</loc>
     
     <lastmod>2022-07-26</lastmod>
@@ -21,15 +30,6 @@
   
   <url>
     <loc>https://chenyuxuan2009.github.io/2022/04/30/live-problemset/</loc>
-    
-    <lastmod>2022-07-26</lastmod>
-    
-    <changefreq>monthly</changefreq>
-    <priority>0.6</priority>
-  </url>
-  
-  <url>
-    <loc>https://chenyuxuan2009.github.io/2022/07/24/dp/</loc>
     
     <lastmod>2022-07-26</lastmod>
     
@@ -592,14 +592,14 @@
   </url>
   
   <url>
-    <loc>https://chenyuxuan2009.github.io/tags/Codeforces/</loc>
+    <loc>https://chenyuxuan2009.github.io/tags/%E6%B4%9B%E8%B0%B7/</loc>
     <lastmod>2022-07-26</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
   </url>
   
   <url>
-    <loc>https://chenyuxuan2009.github.io/tags/%E6%B4%9B%E8%B0%B7/</loc>
+    <loc>https://chenyuxuan2009.github.io/tags/Codeforces/</loc>
     <lastmod>2022-07-26</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
