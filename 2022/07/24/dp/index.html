@@ -19,15 +19,15 @@
 	
 		<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=5">
 	
-	<meta name="description" content="洛谷P1091导弹拦截第一问做两遍，$n$ 规模较小 $\mathcal O(n^2)$ 的写法可过。 从左到右，从右到左各做一次，看能拦截多少“导弹”，最后减一下即为“拦截不住”即“该出列的学生”。 #include&lt;bits&#x2F;stdc++.h&gt; using namespace std; int f[120]; int g[120]; int a[120]; int main() &amp;">
+	<meta name="description" content="洛谷P1002没什么好说的，注意一下细节。 如果马的掌控范围不在棋盘内，特判防 RE。 $\Huge 不开 long\ long 见祖宗！！！$ #include&lt;bits&#x2F;stdc++.h&gt; using namespace std; long long f[50][50];  int dx[]&#x3D;&amp;#123;1,1,-1,-1,2,-2,2,-2,0&amp;#125;; int dy[]&#x3D;&amp;">
 <meta property="og:type" content="article">
 <meta property="og:title" content="动态规划做题笔记">
 <meta property="og:url" content="https://chenyuxuan2009.github.io/2022/07/24/dp/index.html">
 <meta property="og:site_name" content="chenyuxuan__2009的博客">
-<meta property="og:description" content="洛谷P1091导弹拦截第一问做两遍，$n$ 规模较小 $\mathcal O(n^2)$ 的写法可过。 从左到右，从右到左各做一次，看能拦截多少“导弹”，最后减一下即为“拦截不住”即“该出列的学生”。 #include&lt;bits&#x2F;stdc++.h&gt; using namespace std; int f[120]; int g[120]; int a[120]; int main() &amp;">
+<meta property="og:description" content="洛谷P1002没什么好说的，注意一下细节。 如果马的掌控范围不在棋盘内，特判防 RE。 $\Huge 不开 long\ long 见祖宗！！！$ #include&lt;bits&#x2F;stdc++.h&gt; using namespace std; long long f[50][50];  int dx[]&#x3D;&amp;#123;1,1,-1,-1,2,-2,2,-2,0&amp;#125;; int dy[]&#x3D;&amp;">
 <meta property="og:locale" content="zh_CN">
 <meta property="article:published_time" content="2022-07-24T13:56:51.423Z">
-<meta property="article:modified_time" content="2022-07-27T12:54:55.658Z">
+<meta property="article:modified_time" content="2022-07-28T02:15:08.055Z">
 <meta property="article:author" content="CYX">
 <meta property="article:tag" content="C++">
 <meta property="article:tag" content="Codeforces">
@@ -637,7 +637,7 @@
 						
 						<div class="post-meta-detail post-meta-detail-time">
 							<i class="fa fa-clock-o" aria-hidden="true"></i>
-							<time title="发布于 2022-7-24 21:56:51 | 编辑于 2022-7-27 20:54:55">2022-7-24 21:56
+							<time title="发布于 2022-7-24 21:56:51 | 编辑于 2022-7-28 10:15:08">2022-7-24 21:56
 							</time>
 						</div>
 					
@@ -664,7 +664,7 @@
 						
 						<div class="post-meta-detail post-meta-detail-words">
 							<i class="fa fa-file-word-o" aria-hidden="true"></i>
-							3.1k 字
+							3.3k 字
 						</div>
 					
 						
@@ -672,7 +672,7 @@
 						
 						<div class="post-meta-detail post-meta-detail-readingtime">
 							<i class="fa fa-hourglass-end" aria-hidden="true"></i>
-							17 分钟
+							18 分钟
 						</div>
 					
 		</div>
@@ -680,7 +680,46 @@
 	</header>
 
 	<div class="post-content" id="post_content">
-		<h3 id="洛谷"><a href="#洛谷" class="headerlink" title="洛谷"></a>洛谷</h3><h4 id="P1091"><a href="#P1091" class="headerlink" title="P1091"></a><a target="_blank" rel="noopener" href="https://www.luogu.com.cn/problem/P1091">P1091</a></h4><p>导弹拦截第一问做两遍，$n$ 规模较小 $\mathcal O(n^2)$ 的写法可过。</p>
+		<h3 id="洛谷"><a href="#洛谷" class="headerlink" title="洛谷"></a>洛谷</h3><h4 id="P1002"><a href="#P1002" class="headerlink" title="P1002"></a><a target="_blank" rel="noopener" href="https://www.luogu.com.cn/problem/P1002">P1002</a></h4><p>没什么好说的，注意一下细节。</p>
+<p>如果马的掌控范围不在棋盘内，特判防 RE。</p>
+<p>$\Huge 不开 long\ long 见祖宗！！！$</p>
+<pre><code class="highlight cpp"><span class="meta">#<span class="keyword">include</span><span class="string">&lt;bits/stdc++.h&gt;</span></span>
+<span class="keyword">using</span> <span class="keyword">namespace</span> std;
+<span class="type">long</span> <span class="type">long</span> f[<span class="number">50</span>][<span class="number">50</span>]; 
+<span class="type">int</span> dx[]=&#123;<span class="number">1</span>,<span class="number">1</span>,<span class="number">-1</span>,<span class="number">-1</span>,<span class="number">2</span>,<span class="number">-2</span>,<span class="number">2</span>,<span class="number">-2</span>,<span class="number">0</span>&#125;;
+<span class="type">int</span> dy[]=&#123;<span class="number">2</span>,<span class="number">-2</span>,<span class="number">2</span>,<span class="number">-2</span>,<span class="number">1</span>,<span class="number">1</span>,<span class="number">-1</span>,<span class="number">-1</span>,<span class="number">0</span>&#125;;
+<span class="function"><span class="type">int</span> <span class="title">main</span><span class="params">()</span></span>
+<span class="function"></span>&#123;
+	<span class="type">int</span> n,m,x,y;
+	cin&gt;&gt;n&gt;&gt;m&gt;&gt;x&gt;&gt;y;
+	x++;
+	y++;
+	n++;
+	m++;
+	f[<span class="number">1</span>][<span class="number">1</span>]=<span class="number">1</span>;
+	<span class="keyword">for</span>(<span class="type">int</span> i=<span class="number">0</span>;i&lt;=<span class="number">8</span>;i++)
+	&#123;
+		<span class="type">int</span> X=dx[i]+x,Y=dy[i]+y;
+		<span class="keyword">if</span>(X&gt;<span class="number">0</span>&amp;&amp;Y&gt;<span class="number">0</span>)f[X][Y]=<span class="number">-1</span>;
+	&#125;
+	<span class="keyword">for</span>(<span class="type">int</span> i=<span class="number">1</span>;i&lt;=n;i++)
+	&#123;
+		<span class="keyword">for</span>(<span class="type">int</span> j=<span class="number">1</span>;j&lt;=m;j++)
+		&#123;
+			<span class="keyword">if</span>(i==<span class="number">1</span>&amp;&amp;j==<span class="number">1</span>)<span class="keyword">continue</span>;
+			<span class="keyword">if</span>(f[i][j]==<span class="number">-1</span>)
+			&#123;
+				f[i][j]=<span class="number">0</span>;
+				<span class="keyword">continue</span>;
+			&#125;
+			f[i][j]=f[i<span class="number">-1</span>][j]+f[i][j<span class="number">-1</span>];
+		&#125;
+	&#125;
+	cout&lt;&lt;f[n][m]&lt;&lt;endl;
+	<span class="keyword">return</span> <span class="number">0</span>;
+&#125;</code></pre>
+
+<h4 id="P1091"><a href="#P1091" class="headerlink" title="P1091"></a><a target="_blank" rel="noopener" href="https://www.luogu.com.cn/problem/P1091">P1091</a></h4><p>导弹拦截第一问做两遍，$n$ 规模较小 $\mathcal O(n^2)$ 的写法可过。</p>
 <p>从左到右，从右到左各做一次，看能拦截多少“导弹”，最后减一下即为“拦截不住”即“该出列的学生”。</p>
 <pre><code class="highlight cpp"><span class="meta">#<span class="keyword">include</span><span class="string">&lt;bits/stdc++.h&gt;</span></span>
 <span class="keyword">using</span> <span class="keyword">namespace</span> std;
@@ -1380,7 +1419,9 @@
 <script type="text/javascript">
 	socialShare("#share", {
 	    title : '动态规划做题笔记',
-	    description : '洛谷P1091导弹拦截第一问做两遍，$n$ 规模较小 $\mathcal O(n^2)$ 的写法可过...',
+	    description : '洛谷P1002没什么好说的，注意一下细节。
+如果马的掌控范围不在棋盘内，特判防 RE。
+$\Huge...',
 	    wechatQrcodeTitle : "分享到微信",
 	    wechatQrcodeHelper : '微信扫描二维码',
 	    source : 'https://chenyuxuan2009.github.io/2022/07/24/dp/'
