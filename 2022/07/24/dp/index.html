@@ -19,15 +19,15 @@
 	
 		<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=5">
 	
-	<meta name="description" content="洛谷P1002没什么好说的，注意一下细节。 如果马的掌控范围不在棋盘内，特判防 RE。 $\Huge 不开 long\ long 见祖宗！！！$ #include&lt;bits&#x2F;stdc++.h&gt; using namespace std; long long f[50][50];  int dx[]&#x3D;&amp;#123;1,1,-1,-1,2,-2,2,-2,0&amp;#125;; int dy[]&#x3D;&amp;">
+	<meta name="description" content="总计 $30$ 题。 洛谷总计 $17$ 题。 P1002没什么好说的，注意一下细节。 如果马的掌控范围不在棋盘内，特判防 RE。 $\Huge 不开 long\ long 见祖宗！！！$ #include&lt;bits&#x2F;stdc++.h&gt; using namespace std; long long f[50][50];  int dx[]&#x3D;&amp;#123;1,1,-1,-1,2,-2,2,">
 <meta property="og:type" content="article">
 <meta property="og:title" content="动态规划做题笔记">
 <meta property="og:url" content="https://chenyuxuan2009.github.io/2022/07/24/dp/index.html">
 <meta property="og:site_name" content="chenyuxuan__2009的博客">
-<meta property="og:description" content="洛谷P1002没什么好说的，注意一下细节。 如果马的掌控范围不在棋盘内，特判防 RE。 $\Huge 不开 long\ long 见祖宗！！！$ #include&lt;bits&#x2F;stdc++.h&gt; using namespace std; long long f[50][50];  int dx[]&#x3D;&amp;#123;1,1,-1,-1,2,-2,2,-2,0&amp;#125;; int dy[]&#x3D;&amp;">
+<meta property="og:description" content="总计 $30$ 题。 洛谷总计 $17$ 题。 P1002没什么好说的，注意一下细节。 如果马的掌控范围不在棋盘内，特判防 RE。 $\Huge 不开 long\ long 见祖宗！！！$ #include&lt;bits&#x2F;stdc++.h&gt; using namespace std; long long f[50][50];  int dx[]&#x3D;&amp;#123;1,1,-1,-1,2,-2,2,">
 <meta property="og:locale" content="zh_CN">
 <meta property="article:published_time" content="2022-07-24T13:56:51.423Z">
-<meta property="article:modified_time" content="2022-07-30T06:31:13.112Z">
+<meta property="article:modified_time" content="2022-07-30T07:49:22.775Z">
 <meta property="article:author" content="CYX">
 <meta property="article:tag" content="C++">
 <meta property="article:tag" content="洛谷">
@@ -637,7 +637,7 @@
 						
 						<div class="post-meta-detail post-meta-detail-time">
 							<i class="fa fa-clock-o" aria-hidden="true"></i>
-							<time title="发布于 2022-7-24 21:56:51 | 编辑于 2022-7-30 14:31:13">2022-7-24 21:56
+							<time title="发布于 2022-7-24 21:56:51 | 编辑于 2022-7-30 15:49:22">2022-7-24 21:56
 							</time>
 						</div>
 					
@@ -664,7 +664,7 @@
 						
 						<div class="post-meta-detail post-meta-detail-words">
 							<i class="fa fa-file-word-o" aria-hidden="true"></i>
-							4.7k 字
+							5.2k 字
 						</div>
 					
 						
@@ -672,7 +672,7 @@
 						
 						<div class="post-meta-detail post-meta-detail-readingtime">
 							<i class="fa fa-hourglass-end" aria-hidden="true"></i>
-							26 分钟
+							28 分钟
 						</div>
 					
 		</div>
@@ -680,7 +680,9 @@
 	</header>
 
 	<div class="post-content" id="post_content">
-		<h3 id="洛谷"><a href="#洛谷" class="headerlink" title="洛谷"></a>洛谷</h3><h4 id="P1002"><a href="#P1002" class="headerlink" title="P1002"></a><a target="_blank" rel="noopener" href="https://www.luogu.com.cn/problem/P1002">P1002</a></h4><p>没什么好说的，注意一下细节。</p>
+		<p>总计 $30$ 题。</p>
+<h3 id="洛谷"><a href="#洛谷" class="headerlink" title="洛谷"></a>洛谷</h3><p>总计 $17$ 题。</p>
+<h4 id="P1002"><a href="#P1002" class="headerlink" title="P1002"></a><a target="_blank" rel="noopener" href="https://www.luogu.com.cn/problem/P1002">P1002</a></h4><p>没什么好说的，注意一下细节。</p>
 <p>如果马的掌控范围不在棋盘内，特判防 RE。</p>
 <p>$\Huge 不开 long\ long 见祖宗！！！$</p>
 <pre><code class="highlight cpp"><span class="meta">#<span class="keyword">include</span><span class="string">&lt;bits/stdc++.h&gt;</span></span>
@@ -737,6 +739,61 @@
 		&#125;
 	&#125;
 	cout&lt;&lt;f[n]&lt;&lt;endl;
+	<span class="keyword">return</span> <span class="number">0</span>;
+&#125;</code></pre>
+
+<h4 id="P1057"><a href="#P1057" class="headerlink" title="P1057"></a><a target="_blank" rel="noopener" href="https://www.luogu.com.cn/problem/P1057">P1057</a></h4><p>$f_{i,j}$ 表示第 $i$ 次传球，球在 $j$ 号同学的手中方案数。</p>
+<p>每次往左往右加一下。</p>
+<pre><code class="highlight cpp"><span class="meta">#<span class="keyword">include</span><span class="string">&lt;bits/stdc++.h&gt;</span></span>
+<span class="keyword">using</span> <span class="keyword">namespace</span> std;
+<span class="type">int</span> f[<span class="number">50</span>][<span class="number">50</span>];
+<span class="function"><span class="type">int</span> <span class="title">main</span><span class="params">()</span></span>
+<span class="function"></span>&#123;
+	<span class="type">int</span> n,m;
+	cin&gt;&gt;n&gt;&gt;m;
+	f[<span class="number">0</span>][<span class="number">1</span>]=<span class="number">1</span>;
+	<span class="keyword">for</span>(<span class="type">int</span> i=<span class="number">1</span>;i&lt;=m;i++)
+	&#123;
+		<span class="keyword">for</span>(<span class="type">int</span> j=<span class="number">1</span>;j&lt;=n;j++)
+		&#123;
+			<span class="keyword">if</span>(j==<span class="number">1</span>)f[i][n]+=f[i<span class="number">-1</span>][j];
+			<span class="keyword">else</span> f[i][j<span class="number">-1</span>]+=f[i<span class="number">-1</span>][j];
+			<span class="keyword">if</span>(j==n)f[i][<span class="number">1</span>]+=f[i<span class="number">-1</span>][j];
+			<span class="keyword">else</span> f[i][j+<span class="number">1</span>]+=f[i<span class="number">-1</span>][j];
+		&#125;
+	&#125;
+	cout&lt;&lt;f[m][<span class="number">1</span>]&lt;&lt;endl;
+	<span class="keyword">return</span> <span class="number">0</span>;
+&#125;</code></pre>
+
+<h4 id="P1077"><a href="#P1077" class="headerlink" title="P1077"></a><a href="">P1077</a></h4><p>$f_{i,j}$ 表示 $n$ 种花选 $m$ 盆的最大值。</p>
+<p>然后直接多重背包。</p>
+<pre><code class="highlight cpp"><span class="meta">#<span class="keyword">include</span><span class="string">&lt;bits/stdc++.h&gt;</span></span>
+<span class="keyword">using</span> <span class="keyword">namespace</span> std;
+<span class="type">int</span> f[<span class="number">120</span>][<span class="number">120</span>];
+<span class="type">int</span> a[<span class="number">120</span>];
+<span class="type">const</span> <span class="type">int</span> mod=<span class="number">1e6</span>+<span class="number">7</span>;
+<span class="function"><span class="type">int</span> <span class="title">main</span><span class="params">()</span></span>
+<span class="function"></span>&#123;
+	<span class="type">int</span> n,m;
+	cin&gt;&gt;n&gt;&gt;m;
+	<span class="keyword">for</span>(<span class="type">int</span> i=<span class="number">1</span>;i&lt;=n;i++)
+	&#123;
+		cin&gt;&gt;a[i];
+	&#125;
+	f[<span class="number">0</span>][<span class="number">0</span>]=<span class="number">1</span>;
+	<span class="keyword">for</span>(<span class="type">int</span> i=<span class="number">1</span>;i&lt;=n;i++)
+	&#123;
+		<span class="keyword">for</span>(<span class="type">int</span> j=<span class="number">0</span>;j&lt;=m;j++)
+		&#123;
+			<span class="keyword">for</span>(<span class="type">int</span> k=<span class="number">0</span>;k&lt;=<span class="built_in">min</span>(a[i],j);k++)
+			&#123;
+				f[i][j]+=f[i<span class="number">-1</span>][j-k];
+				f[i][j]%=mod;
+			&#125;
+		&#125;
+	&#125;
+	cout&lt;&lt;f[n][m]&lt;&lt;endl;
 	<span class="keyword">return</span> <span class="number">0</span>;
 &#125;</code></pre>
 
@@ -1210,7 +1267,50 @@ bitset&lt;1020&gt;b;
 	<span class="keyword">return</span> <span class="number">0</span>;
 &#125;</code></pre>
 
-<h3 id="CF"><a href="#CF" class="headerlink" title="CF"></a>CF</h3><h4 id="CF417A"><a href="#CF417A" class="headerlink" title="CF417A"></a><a target="_blank" rel="noopener" href="https://codeforces.com/problemset/problem/417/A">CF417A</a></h4><p>无限背包。</p>
+<h3 id="CF"><a href="#CF" class="headerlink" title="CF"></a>CF</h3><p>总计 $6$ 题。</p>
+<h4 id="CF414B"><a href="#CF414B" class="headerlink" title="CF414B"></a><a target="_blank" rel="noopener" href="https://codeforces.com/problemset/problem/414/B">CF414B</a></h4><p>又是个小清新题！</p>
+<p>$f_{i,j}$ 表示最大 $i$，长度 $j$ 的序列个数。</p>
+<p>伪代码如下：</p>
+<pre><code class="highlight pseudocode">枚举数列长度
+	枚举最大值
+		枚举与前一项的商</code></pre>
+
+<p>但显然，复杂度 $\mathcal O(n^2k)$，然而本题 $n\leq 2000,k\leq 2000$ 明显不行。</p>
+<p>考虑优化，如果前一项乘上商已经比 $n$ 大，就可以换一个最大值枚举了。</p>
+<pre><code class="highlight cpp"><span class="meta">#<span class="keyword">include</span><span class="string">&lt;bits/stdc++.h&gt;</span></span>
+<span class="keyword">using</span> <span class="keyword">namespace</span> std;
+<span class="type">int</span> f[<span class="number">2020</span>][<span class="number">2020</span>];
+<span class="type">const</span> <span class="type">int</span> mod=<span class="number">1e9</span>+<span class="number">7</span>;
+<span class="function"><span class="type">int</span> <span class="title">main</span><span class="params">()</span></span>
+<span class="function"></span>&#123;
+	<span class="type">int</span> n,k;
+	cin&gt;&gt;n&gt;&gt;k;
+	<span class="keyword">for</span>(<span class="type">int</span> i=<span class="number">1</span>;i&lt;=n;i++)
+	&#123;
+		f[i][<span class="number">1</span>]=<span class="number">1</span>;
+	&#125;
+	<span class="keyword">for</span>(<span class="type">int</span> j=<span class="number">2</span>;j&lt;=k;j++)
+	&#123;
+		<span class="keyword">for</span>(<span class="type">int</span> i=<span class="number">1</span>;i&lt;=n;i++)
+		&#123;
+			<span class="keyword">for</span>(<span class="type">int</span> _=<span class="number">1</span>;_*i&lt;=n;_++)
+			&#123;
+				f[i*_][j]+=f[i][j<span class="number">-1</span>];
+				f[i*_][j]%=mod;
+			&#125;
+		&#125;
+	&#125;
+	<span class="type">int</span> ans=<span class="number">0</span>;
+	<span class="keyword">for</span>(<span class="type">int</span> i=<span class="number">1</span>;i&lt;=n;i++)
+	&#123;
+		ans+=f[i][k];
+		ans%=mod;
+	&#125;
+	cout&lt;&lt;ans&lt;&lt;endl;
+	<span class="keyword">return</span> <span class="number">0</span>;
+&#125;</code></pre>
+
+<h4 id="CF417A"><a href="#CF417A" class="headerlink" title="CF417A"></a><a target="_blank" rel="noopener" href="https://codeforces.com/problemset/problem/417/A">CF417A</a></h4><p>无限背包。</p>
 <p>题意很复杂，什么保送，什么赛制。</p>
 <p>其实就是做无限背包后求 $\min\limits_{x \in [0,2]}\{f_{n\times m-x}\}$ 。</p>
 
@@ -1358,12 +1458,11 @@ bitset&lt;1020&gt;b;
 <p>得到的最长不下降，一定是 $111\dots222\dots111\dots222$ 这种排列的。</p>
 <p>我们用 $f_{i,j}$ 表示前 $i$ 个第 $j$ 段的答案。</p>
 <p>那么可以得出：</p>
-<p>$f_{i,1}=f_{i-1,1}+\begin{cases}1&a_i=1\\0&a_i=2\end{cases}$<p>
-<p>$f_{i,2}=\max(f_{i-1,1},f_{i-1,2}+\begin{cases}1&a_i=2\\0&a_i=1\end{cases})$<p>
-<p>$f_{i,3}=\max(f_{i-1,2},f_{i-1,3}+\begin{cases}1&a_i=1\\0&a_i=2\end{cases})$</p>
-<p>$f_{i,4}=\max(f_{i-1,3},f_{i-1,4}+\begin{cases}1&a_i=2\\0&a_i=1\end{cases})$</p>
+<p>$f_{i,1}=f_{i-1,1}+[a_i=1]$<p>
+<p>$f_{i,2}=\max(f_{i-1,1},f_{i-1,2}+[a_i=2])$<p>
+<p>$f_{i,3}=\max(f_{i-1,2},f_{i-1,3}+[a_i=1])$</p>
+<p>$f_{i,4}=\max(f_{i-1,3},f_{i-1,4}+[a_i=2])$</p>
 然后压掉第一维。
-
 
 <pre><code class="highlight cpp"><span class="meta">#<span class="keyword">include</span><span class="string">&lt;bits/stdc++.h&gt;</span></span>
 <span class="keyword">using</span> <span class="keyword">namespace</span> std;
@@ -1423,7 +1522,8 @@ bitset&lt;1020&gt;b;
 &#125;</code></pre>
 
 
-<h3 id="AT"><a href="#AT" class="headerlink" title="AT"></a>AT</h3><h4 id="DP-A"><a href="#DP-A" class="headerlink" title="DP_A"></a><a target="_blank" rel="noopener" href="https://atcoder.jp/contests/dp/tasks/dp_a">DP_A</a></h4><p>用 $f_i$ 记录跳到第 $i$ 个位置的最小花费。</p>
+<h3 id="AT"><a href="#AT" class="headerlink" title="AT"></a>AT</h3><p>总计 $7$ 题。</p>
+<h4 id="DP-A"><a href="#DP-A" class="headerlink" title="DP_A"></a><a target="_blank" rel="noopener" href="https://atcoder.jp/contests/dp/tasks/dp_a">DP_A</a></h4><p>用 $f_i$ 记录跳到第 $i$ 个位置的最小花费。</p>
 <p>注意，是从 $1$ 号开始，<del>看错这个调了好久</del>。</p>
 <p>那么，每一步的最小应该是前两步和前一步分别加上差的绝对值取 $\min$。</p>
 <p>转移方程：$f_i&#x3D;\min(f_{i-1}+\vert a_i-a_{i-1} \vert,f_{i-2}+\vert a_i-a_{i-2} \vert)$。</p>
@@ -1743,9 +1843,10 @@ bitset&lt;1020&gt;b;
 <script type="text/javascript">
 	socialShare("#share", {
 	    title : '动态规划做题笔记',
-	    description : '洛谷P1002没什么好说的，注意一下细节。
-如果马的掌控范围不在棋盘内，特判防 RE。
-$\Huge...',
+	    description : '总计 $30$ 题。
+洛谷总计 $17$ 题。
+P1002没什么好说的，注意一下细节。
+如果马的掌控...',
 	    wechatQrcodeTitle : "分享到微信",
 	    wechatQrcodeHelper : '微信扫描二维码',
 	    source : 'https://chenyuxuan2009.github.io/2022/07/24/dp/'
