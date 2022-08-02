@@ -1,3 +1,4 @@
+https://chenyuxuan2009.github.io/friends/index.html
 https://chenyuxuan2009.github.io/archives/abc262
 https://chenyuxuan2009.github.io/archives/dp
 https://chenyuxuan2009.github.io/archives/hexo-blog
@@ -14,7 +15,6 @@ https://chenyuxuan2009.github.io/problem/20220714/meteor/index.html
 https://chenyuxuan2009.github.io/problem/20220714/grading/index.html
 https://chenyuxuan2009.github.io/problem/20220714/str/index.html
 https://chenyuxuan2009.github.io/problem/20220714/cowmult/index.html
-https://chenyuxuan2009.github.io/friends/index.html
 https://chenyuxuan2009.github.io/archives/JSOI2022
 https://chenyuxuan2009.github.io/archives/abc260
 https://chenyuxuan2009.github.io/problem/20220714/index.html
