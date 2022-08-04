@@ -10253,3 +10253,24 @@ html.using-safari #blog_setting_card_radius_to_default:before {
 html.using-safari .friend-link-description:after {
 	display: none;
 }
+/* giscus */
+.giscus {
+	padding: 1.5rem;
+}
+/* 评论表情 */
+#comment_emotion_btn {
+	border-radius: 100px;
+	width: 42px;
+	height: 42px;
+	padding: 0;
+	font-size: 25px;
+	background: transparent !important;
+	box-shadow: none;
+	color: inherit;
+	border: none;
+	transform: none;
+	opacity: .8;
+	margin-top: 6px;
+	margin-right: 10px;
+	transition: all .3s ease;
+}
