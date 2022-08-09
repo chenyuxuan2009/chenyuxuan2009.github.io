@@ -1,3 +1,4 @@
+https://chenyuxuan2009.github.io/friends/index.html
 https://chenyuxuan2009.github.io/problem/20220808/index.html
 https://chenyuxuan2009.github.io/problem/index.html
 https://chenyuxuan2009.github.io/2022/08/09/2022-8-8-cfs-contest/
@@ -6,7 +7,6 @@ https://chenyuxuan2009.github.io/problem/20220808/relocation/index.html
 https://chenyuxuan2009.github.io/problem/20220808/ball/index.html
 https://chenyuxuan2009.github.io/problem/20220808/iphone/index.html
 https://chenyuxuan2009.github.io/2022/07/18/2022-7-14-cfs-contest/
-https://chenyuxuan2009.github.io/friends/index.html
 https://chenyuxuan2009.github.io/2022/07/31/abc262/
 https://chenyuxuan2009.github.io/2022/07/24/dp/
 https://chenyuxuan2009.github.io/2022/05/19/hexo-blog/
@@ -72,8 +72,8 @@ https://chenyuxuan2009.github.io/
 https://chenyuxuan2009.github.io/tags/C/
 https://chenyuxuan2009.github.io/tags/CFS/
 https://chenyuxuan2009.github.io/tags/%E6%B4%9B%E8%B0%B7/
-https://chenyuxuan2009.github.io/tags/Python/
 https://chenyuxuan2009.github.io/tags/Codeforces/
+https://chenyuxuan2009.github.io/tags/Python/
 https://chenyuxuan2009.github.io/tags/Atcoder/
 https://chenyuxuan2009.github.io/tags/%E5%B0%8F%E8%AF%B4/
 https://chenyuxuan2009.github.io/categories/%E9%97%B2%E8%AF%9D/

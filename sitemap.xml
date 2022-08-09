@@ -2,6 +2,15 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   
   <url>
+    <loc>https://chenyuxuan2009.github.io/friends/index.html</loc>
+    
+    <lastmod>2022-08-09</lastmod>
+    
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
     <loc>https://chenyuxuan2009.github.io/problem/20220808/index.html</loc>
     
     <lastmod>2022-08-09</lastmod>
@@ -68,15 +77,6 @@
     <loc>https://chenyuxuan2009.github.io/2022/07/18/2022-7-14-cfs-contest/</loc>
     
     <lastmod>2022-08-08</lastmod>
-    
-    <changefreq>monthly</changefreq>
-    <priority>0.6</priority>
-  </url>
-  
-  <url>
-    <loc>https://chenyuxuan2009.github.io/friends/index.html</loc>
-    
-    <lastmod>2022-08-02</lastmod>
     
     <changefreq>monthly</changefreq>
     <priority>0.6</priority>
@@ -662,14 +662,14 @@
   </url>
   
   <url>
-    <loc>https://chenyuxuan2009.github.io/tags/Python/</loc>
+    <loc>https://chenyuxuan2009.github.io/tags/Codeforces/</loc>
     <lastmod>2022-08-09</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
   </url>
   
   <url>
-    <loc>https://chenyuxuan2009.github.io/tags/Codeforces/</loc>
+    <loc>https://chenyuxuan2009.github.io/tags/Python/</loc>
     <lastmod>2022-08-09</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
