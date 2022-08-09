@@ -19,15 +19,15 @@
 	
 		<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=5">
 	
-	<meta name="description" content="题目列表手机  方方游戏  传球  找位置">
+	<meta name="description" content="题目列表手机直接打表即可。 注意输入用 getline，判断空格。 #include&lt;bits&#x2F;stdc++.h&gt; using namespace std; string s; char c; int main() &amp;#123; 	freopen(&quot;iphone.in&quot;,&quot;r&quot;,stdin); 	freopen(&quot;iphone.out&amp;">
 <meta property="og:type" content="article">
 <meta property="og:title" content="CSP2022考前模拟赛解题报告">
 <meta property="og:url" content="https://chenyuxuan2009.github.io/2022/08/09/2022-8-8-cfs-contest/index.html">
 <meta property="og:site_name" content="chenyuxuan__2009的博客">
-<meta property="og:description" content="题目列表手机  方方游戏  传球  找位置">
+<meta property="og:description" content="题目列表手机直接打表即可。 注意输入用 getline，判断空格。 #include&lt;bits&#x2F;stdc++.h&gt; using namespace std; string s; char c; int main() &amp;#123; 	freopen(&quot;iphone.in&quot;,&quot;r&quot;,stdin); 	freopen(&quot;iphone.out&amp;">
 <meta property="og:locale" content="zh_CN">
 <meta property="article:published_time" content="2022-08-09T00:43:10.863Z">
-<meta property="article:modified_time" content="2022-08-09T00:50:16.241Z">
+<meta property="article:modified_time" content="2022-08-09T13:13:01.215Z">
 <meta property="article:author" content="CYX">
 <meta property="article:tag" content="C++">
 <meta property="article:tag" content="CFS">
@@ -638,7 +638,7 @@
 						
 						<div class="post-meta-detail post-meta-detail-time">
 							<i class="fa fa-clock-o" aria-hidden="true"></i>
-							<time title="发布于 2022-8-9 8:43:10 | 编辑于 2022-8-9 8:50:16">2022-8-9 8:43
+							<time title="发布于 2022-8-9 8:43:10 | 编辑于 2022-8-9 21:13:01">2022-8-9 8:43
 							</time>
 						</div>
 					
@@ -665,7 +665,7 @@
 						
 						<div class="post-meta-detail post-meta-detail-words">
 							<i class="fa fa-file-word-o" aria-hidden="true"></i>
-							15 字
+							1.3k 字
 						</div>
 					
 						
@@ -673,7 +673,7 @@
 						
 						<div class="post-meta-detail post-meta-detail-readingtime">
 							<i class="fa fa-hourglass-end" aria-hidden="true"></i>
-							1 分钟
+							7 分钟
 						</div>
 					
 		</div>
@@ -681,13 +681,248 @@
 	</header>
 
 	<div class="post-content" id="post_content">
-		<h4 id="题目列表"><a href="#题目列表" class="headerlink" title="题目列表"></a><a href="/problem/20220808">题目列表</a></h4><h4 id="手机"><a href="#手机" class="headerlink" title="手机"></a><a href="/problem/20220808/iphone">手机</a></h4><pre><code class="highlight cpp"></code></pre>
+		<h4 id="题目列表"><a href="#题目列表" class="headerlink" title="题目列表"></a><a href="/problem/20220808">题目列表</a></h4><h4 id="手机"><a href="#手机" class="headerlink" title="手机"></a><a href="/problem/20220808/iphone">手机</a></h4><p>直接打表即可。</p>
+<p>注意输入用 <code>getline</code>，判断空格。</p>
+<pre><code class="highlight cpp"><span class="meta">#<span class="keyword">include</span><span class="string">&lt;bits/stdc++.h&gt;</span></span>
+<span class="keyword">using</span> <span class="keyword">namespace</span> std;
+string s;
+<span class="type">char</span> c;
+<span class="function"><span class="type">int</span> <span class="title">main</span><span class="params">()</span></span>
+<span class="function"></span>&#123;
+	<span class="built_in">freopen</span>(<span class="string">&quot;iphone.in&quot;</span>,<span class="string">&quot;r&quot;</span>,stdin);
+	<span class="built_in">freopen</span>(<span class="string">&quot;iphone.out&quot;</span>,<span class="string">&quot;w&quot;</span>,stdout);
+	<span class="built_in">getline</span>(cin,s);
+	<span class="keyword">for</span>(<span class="type">int</span> i=<span class="number">0</span>;i&lt;s.<span class="built_in">size</span>();i++)
+	&#123;
+		c=s[i];
+		<span class="keyword">if</span>(c==<span class="string">&#x27;A&#x27;</span>)cout&lt;&lt;<span class="string">&quot;2&quot;</span>;
+		<span class="keyword">else</span> <span class="keyword">if</span>(c==<span class="string">&#x27;B&#x27;</span>)cout&lt;&lt;<span class="string">&quot;22&quot;</span>;
+		<span class="keyword">else</span> <span class="keyword">if</span>(c==<span class="string">&#x27;C&#x27;</span>)cout&lt;&lt;<span class="string">&quot;222&quot;</span>;
+		<span class="keyword">else</span> <span class="keyword">if</span>(c==<span class="string">&#x27;D&#x27;</span>)cout&lt;&lt;<span class="string">&quot;3&quot;</span>;
+		<span class="keyword">else</span> <span class="keyword">if</span>(c==<span class="string">&#x27;E&#x27;</span>)cout&lt;&lt;<span class="string">&quot;33&quot;</span>;
+		<span class="keyword">else</span> <span class="keyword">if</span>(c==<span class="string">&#x27;F&#x27;</span>)cout&lt;&lt;<span class="string">&quot;333&quot;</span>;
+		<span class="keyword">else</span> <span class="keyword">if</span>(c==<span class="string">&#x27;G&#x27;</span>)cout&lt;&lt;<span class="string">&quot;4&quot;</span>;
+		<span class="keyword">else</span> <span class="keyword">if</span>(c==<span class="string">&#x27;H&#x27;</span>)cout&lt;&lt;<span class="string">&quot;44&quot;</span>;
+		<span class="keyword">else</span> <span class="keyword">if</span>(c==<span class="string">&#x27;I&#x27;</span>)cout&lt;&lt;<span class="string">&quot;444&quot;</span>;
+		<span class="keyword">else</span> <span class="keyword">if</span>(c==<span class="string">&#x27;J&#x27;</span>)cout&lt;&lt;<span class="string">&quot;5&quot;</span>;
+		<span class="keyword">else</span> <span class="keyword">if</span>(c==<span class="string">&#x27;K&#x27;</span>)cout&lt;&lt;<span class="string">&quot;55&quot;</span>;
+		<span class="keyword">else</span> <span class="keyword">if</span>(c==<span class="string">&#x27;L&#x27;</span>)cout&lt;&lt;<span class="string">&quot;555&quot;</span>;
+		<span class="keyword">else</span> <span class="keyword">if</span>(c==<span class="string">&#x27;M&#x27;</span>)cout&lt;&lt;<span class="string">&quot;6&quot;</span>;
+		<span class="keyword">else</span> <span class="keyword">if</span>(c==<span class="string">&#x27;N&#x27;</span>)cout&lt;&lt;<span class="string">&quot;66&quot;</span>;
+		<span class="keyword">else</span> <span class="keyword">if</span>(c==<span class="string">&#x27;O&#x27;</span>)cout&lt;&lt;<span class="string">&quot;666&quot;</span>;
+		<span class="keyword">else</span> <span class="keyword">if</span>(c==<span class="string">&#x27;P&#x27;</span>)cout&lt;&lt;<span class="string">&quot;7&quot;</span>;
+		<span class="keyword">else</span> <span class="keyword">if</span>(c==<span class="string">&#x27;Q&#x27;</span>)cout&lt;&lt;<span class="string">&quot;77&quot;</span>;
+		<span class="keyword">else</span> <span class="keyword">if</span>(c==<span class="string">&#x27;R&#x27;</span>)cout&lt;&lt;<span class="string">&quot;777&quot;</span>;
+		<span class="keyword">else</span> <span class="keyword">if</span>(c==<span class="string">&#x27;S&#x27;</span>)cout&lt;&lt;<span class="string">&quot;7777&quot;</span>;
+		<span class="keyword">else</span> <span class="keyword">if</span>(c==<span class="string">&#x27;T&#x27;</span>)cout&lt;&lt;<span class="string">&quot;8&quot;</span>;
+		<span class="keyword">else</span> <span class="keyword">if</span>(c==<span class="string">&#x27;U&#x27;</span>)cout&lt;&lt;<span class="string">&quot;88&quot;</span>;
+		<span class="keyword">else</span> <span class="keyword">if</span>(c==<span class="string">&#x27;V&#x27;</span>)cout&lt;&lt;<span class="string">&quot;888&quot;</span>;
+		<span class="keyword">else</span> <span class="keyword">if</span>(c==<span class="string">&#x27;W&#x27;</span>)cout&lt;&lt;<span class="string">&quot;9&quot;</span>;
+		<span class="keyword">else</span> <span class="keyword">if</span>(c==<span class="string">&#x27;X&#x27;</span>)cout&lt;&lt;<span class="string">&quot;99&quot;</span>;
+		<span class="keyword">else</span> <span class="keyword">if</span>(c==<span class="string">&#x27;Y&#x27;</span>)cout&lt;&lt;<span class="string">&quot;999&quot;</span>;
+		<span class="keyword">else</span> <span class="keyword">if</span>(c==<span class="string">&#x27;Z&#x27;</span>)cout&lt;&lt;<span class="string">&quot;9999&quot;</span>;
+		<span class="keyword">else</span> <span class="keyword">if</span>(c==<span class="string">&#x27; &#x27;</span>)cout&lt;&lt;<span class="string">&quot;0&quot;</span>;
+	&#125;
+	<span class="keyword">return</span> <span class="number">0</span>;
+&#125;</code></pre>
 
-<h4 id="方方游戏"><a href="#方方游戏" class="headerlink" title="方方游戏"></a><a href="/problem/20220808/square">方方游戏</a></h4><pre><code class="highlight cpp"></code></pre>
+<h4 id="方方游戏"><a href="#方方游戏" class="headerlink" title="方方游戏"></a><a href="/problem/20220808/square">方方游戏</a></h4><p>模拟。</p>
+<p>对于将下落的方块，找出最先触碰底方块的，然后直接下移。</p>
+<p>注意细节，比如最底层先铺上方块，初始方块高度大概放三四百。</p>
+<pre><code class="highlight cpp"><span class="meta">#<span class="keyword">include</span><span class="string">&lt;bits/stdc++.h&gt;</span></span>
+<span class="meta">#<span class="keyword">define</span> min(x,y) x&lt;y?x:y</span>
+<span class="meta">#<span class="keyword">define</span> max(x,y) x&gt;y?x:y</span>
+<span class="keyword">using</span> <span class="keyword">namespace</span> std;
+<span class="type">int</span> mp[<span class="number">400</span>][<span class="number">200</span>];
+<span class="type">int</span> y,x,dx,ux,ly,ry,cnt,num=<span class="number">400</span>,w,n,m;
+<span class="function"><span class="type">void</span> <span class="title">down</span><span class="params">()</span></span>
+<span class="function"></span>&#123;
+	<span class="keyword">for</span>(<span class="type">int</span> j=<span class="number">1</span>;j&lt;=w;j++)
+	&#123;
+		<span class="type">int</span> _x_=<span class="number">400</span>;
+		<span class="keyword">for</span>(<span class="type">int</span> i=dx;i&lt;=ux;i++)
+		&#123;
+			<span class="keyword">if</span>(mp[i][j]==<span class="number">2</span>)
+			&#123;
+				_x_=i;
+				<span class="keyword">break</span>;
+			&#125;
+		&#125;
+		<span class="keyword">for</span>(<span class="type">int</span> i=<span class="number">100</span>;i&gt;=<span class="number">0</span>;i--)
+		&#123;
+			<span class="keyword">if</span>(mp[i][j]==<span class="number">1</span>)
+			&#123;
+				num=<span class="built_in">min</span>(num,_x_-i);
+				<span class="keyword">break</span>;
+			&#125;	
+		&#125; 
+	&#125;
+	<span class="keyword">for</span>(<span class="type">int</span> i=dx;i&lt;=ux;i++)
+	&#123;
+		<span class="keyword">for</span>(<span class="type">int</span> j=ly;j&lt;=ry;j++)
+		&#123;
+			<span class="keyword">if</span>(mp[i][j]==<span class="number">2</span>)
+			&#123;
+				mp[i-num+<span class="number">1</span>][j]=<span class="number">1</span>;
+			&#125;
+		&#125;
+	&#125;
+	<span class="keyword">for</span>(<span class="type">int</span> i=<span class="number">1</span>;i&lt;=<span class="number">100</span>;i++)
+	&#123;
+		<span class="type">bool</span> f=<span class="number">0</span>;
+		<span class="keyword">for</span>(<span class="type">int</span> j=<span class="number">1</span>;j&lt;=w;j++)
+		&#123;
+			<span class="keyword">if</span>(mp[i][j]!=<span class="number">1</span>)
+			&#123;
+				f=<span class="number">1</span>;
+				<span class="keyword">break</span>;
+			&#125;
+		&#125;
+		<span class="keyword">if</span>(f==<span class="number">0</span>)cnt++;
+	&#125;
+	cout&lt;&lt;cnt&lt;&lt;endl;
+&#125;
+<span class="function"><span class="type">int</span> <span class="title">main</span><span class="params">()</span></span>
+<span class="function"></span>&#123;
+	<span class="built_in">freopen</span>(<span class="string">&quot;square.in&quot;</span>,<span class="string">&quot;r&quot;</span>,stdin);
+	<span class="built_in">freopen</span>(<span class="string">&quot;square.out&quot;</span>,<span class="string">&quot;w&quot;</span>,stdout);
+	cin&gt;&gt;w&gt;&gt;n&gt;&gt;m;
+	<span class="keyword">for</span>(<span class="type">int</span> i=<span class="number">0</span>;i&lt;=w;i++)
+	&#123;
+		mp[<span class="number">0</span>][i]=<span class="number">1</span>;
+	&#125;
+	<span class="keyword">for</span>(<span class="type">int</span> i=<span class="number">1</span>;i&lt;=n;i++)
+	&#123;
+		<span class="type">int</span> x_,y_;
+		cin&gt;&gt;x_&gt;&gt;y_;
+		mp[x_][y_]=<span class="number">1</span>;
+	&#125;
+	cin&gt;&gt;y;
+	ly=ry=y;
+	ux=dx=x=<span class="number">220</span>;
+	mp[x][y]=<span class="number">2</span>;
+	<span class="keyword">for</span>(<span class="type">int</span> i=<span class="number">1</span>;i&lt;m;i++)
+	&#123;
+		<span class="type">int</span> _x,_y;
+		cin&gt;&gt;_x&gt;&gt;_y;
+		mp[x+_x][y+_y]=<span class="number">2</span>;
+		ly=<span class="built_in">min</span>(ly,y+_y);ry=<span class="built_in">max</span>(ry,y+_y);
+		dx=<span class="built_in">min</span>(dx,x+_x);ux=<span class="built_in">max</span>(ux,x+_x);
+	&#125;
+	<span class="built_in">down</span>();
+	<span class="keyword">return</span> <span class="number">0</span>;
+&#125;</code></pre>
 
-<h4 id="传球"><a href="#传球" class="headerlink" title="传球"></a><a href="/problem//20220808/ball">传球</a></h4><pre><code class="highlight cpp"></code></pre>
+<h4 id="传球"><a href="#传球" class="headerlink" title="传球"></a><a href="/problem//20220808/ball">传球</a></h4><p>NOIp……原……原题？</p>
+<p><a target="_blank" rel="noopener" href="https://www.luogu.com.cn/problem/P1057">洛谷 P1057</a>。</p>
+<p>$f_{i,j}$ 表示第 $i$ 轮求球在 $j$ 手上方案数。</p>
+<pre><code class="highlight cpp"><span class="meta">#<span class="keyword">include</span><span class="string">&lt;bits/stdc++.h&gt;</span></span>
+<span class="keyword">using</span> <span class="keyword">namespace</span> std;
+<span class="type">long</span> <span class="type">long</span> f[<span class="number">50</span>][<span class="number">50</span>];
+<span class="function"><span class="type">int</span> <span class="title">main</span><span class="params">()</span></span>
+<span class="function"></span>&#123;
+	<span class="built_in">freopen</span>(<span class="string">&quot;ball.in&quot;</span>,<span class="string">&quot;r&quot;</span>,stdin);
+	<span class="built_in">freopen</span>(<span class="string">&quot;ball.out&quot;</span>,<span class="string">&quot;w&quot;</span>,stdout);
+	<span class="type">int</span> n,m;
+	cin&gt;&gt;n&gt;&gt;m;
+	f[<span class="number">0</span>][n]=<span class="number">1</span>;
+	<span class="keyword">for</span>(<span class="type">int</span> i=<span class="number">1</span>;i&lt;=m;i++)
+	&#123;
+		<span class="keyword">for</span>(<span class="type">int</span> j=<span class="number">1</span>;j&lt;=n;j++)
+		&#123;
+			<span class="keyword">if</span>(j==<span class="number">1</span>)f[i][j]+=f[i<span class="number">-1</span>][n];
+			<span class="keyword">else</span> f[i][j]+=f[i<span class="number">-1</span>][j<span class="number">-1</span>];
+			<span class="keyword">if</span>(j==n)f[i][j]+=f[i<span class="number">-1</span>][<span class="number">1</span>];
+			<span class="keyword">else</span> f[i][j]+=f[i<span class="number">-1</span>][j+<span class="number">1</span>];
+		&#125;
+	&#125;
+	cout&lt;&lt;f[m][n]&lt;&lt;endl;
+	<span class="keyword">return</span> <span class="number">0</span>;
+&#125;</code></pre>
 
-<h4 id="找位置"><a href="#找位置" class="headerlink" title="找位置"></a><a href="/problem//20220808/relocation">找位置</a></h4><pre><code class="highlight cpp"></code></pre>
+<h4 id="找位置"><a href="#找位置" class="headerlink" title="找位置"></a><a href="/problem//20220808/relocation">找位置</a></h4><p>最短路。</p>
+<p>找到了所有商店到其他店的最短路径，由于 $k\leq5$，所以直接全排列枚举路线。</p>
+<p><del>tnnd，一个最短路调一晚上。</del></p>
+<pre><code class="highlight cpp"><span class="meta">#<span class="keyword">include</span><span class="string">&lt;bits/stdc++.h&gt;</span></span>
+<span class="meta">#<span class="keyword">define</span> min(x,y) x&lt;y?x:y</span>
+<span class="meta">#<span class="keyword">define</span> max(x,y) x&gt;y?x:y</span>
+<span class="keyword">using</span> <span class="keyword">namespace</span> std;
+<span class="type">bool</span> b[<span class="number">10020</span>];
+<span class="type">bool</span> vis[<span class="number">10020</span>];
+<span class="type">int</span> p[<span class="number">20</span>],order[<span class="number">20</span>];
+<span class="type">int</span> f[<span class="number">20</span>][<span class="number">10020</span>];
+<span class="type">int</span> u,v,w;
+<span class="type">int</span> n,m,k;
+<span class="keyword">struct</span> <span class="title class_">node</span>
+&#123;
+	<span class="type">int</span> v,w;	
+&#125;;
+vector&lt;node&gt;a[<span class="number">10020</span>];
+<span class="function"><span class="type">void</span> <span class="title">dijk</span><span class="params">(<span class="type">int</span> s)</span></span>
+<span class="function"></span>&#123;
+	<span class="built_in">memset</span>(vis,<span class="number">0</span>,<span class="built_in">sizeof</span>(vis));
+	priority_queue&lt;pair&lt;<span class="type">int</span>,<span class="type">int</span>&gt;,vector&lt;pair&lt;<span class="type">int</span>,<span class="type">int</span>&gt;&gt;,greater&lt;pair&lt;<span class="type">int</span>,<span class="type">int</span>&gt;&gt;&gt;q;
+	f[s][p[s]]=<span class="number">0</span>;
+	q.<span class="built_in">push</span>(<span class="built_in">make_pair</span>(<span class="number">0</span>,p[s]));
+	<span class="keyword">while</span>(!q.<span class="built_in">empty</span>())
+	&#123;
+		u=q.<span class="built_in">top</span>().second;
+		q.<span class="built_in">pop</span>();
+		<span class="keyword">if</span>(vis[u])<span class="keyword">continue</span>;
+		vis[u]=<span class="number">1</span>;
+		<span class="keyword">for</span>(<span class="keyword">auto</span> i:a[u])
+		&#123;
+			v=i.v;
+			w=i.w;
+			<span class="keyword">if</span>(f[s][u]+w&lt;f[s][v])
+			&#123;
+				f[s][v]=f[s][u]+w;
+				q.<span class="built_in">push</span>(<span class="built_in">make_pair</span>(f[s][v],v));
+			&#125;
+		&#125;
+	&#125;
+&#125;
+<span class="function"><span class="type">int</span> <span class="title">main</span><span class="params">()</span></span>
+<span class="function"></span>&#123;
+	<span class="built_in">freopen</span>(<span class="string">&quot;relocation.in&quot;</span>,<span class="string">&quot;r&quot;</span>,stdin);
+	<span class="built_in">freopen</span>(<span class="string">&quot;relocation.out&quot;</span>,<span class="string">&quot;w&quot;</span>,stdout);
+	<span class="built_in">memset</span>(f,<span class="number">0x3f</span>,<span class="built_in">sizeof</span>(f));
+	cin&gt;&gt;n&gt;&gt;m&gt;&gt;k;
+	<span class="keyword">for</span>(<span class="type">int</span> i=<span class="number">1</span>;i&lt;=k;i++)
+	&#123;
+		cin&gt;&gt;p[i];
+		b[p[i]]=<span class="number">1</span>;
+		order[i]=i;
+	&#125;
+	<span class="keyword">for</span>(<span class="type">int</span> i=<span class="number">1</span>;i&lt;=m;i++)
+	&#123;
+		cin&gt;&gt;u&gt;&gt;v&gt;&gt;w;
+		a[u].<span class="built_in">push_back</span>(&#123;v,w&#125;);
+		a[v].<span class="built_in">push_back</span>(&#123;u,w&#125;);
+	&#125;
+	<span class="keyword">for</span>(<span class="type">int</span> i=<span class="number">1</span>;i&lt;=k;i++)
+	&#123;
+		<span class="built_in">dijk</span>(i);
+	&#125;
+	<span class="type">int</span> ans=INT_MAX;
+	<span class="keyword">do</span>
+	&#123;
+		<span class="keyword">for</span>(<span class="type">int</span> i=<span class="number">1</span>;i&lt;=n;i++)
+		&#123;
+			<span class="type">int</span> sum=<span class="number">0</span>;
+			<span class="keyword">if</span>(b[i])<span class="keyword">continue</span>;
+			sum+=f[order[<span class="number">1</span>]][i];
+			<span class="keyword">for</span>(<span class="type">int</span> j=<span class="number">2</span>;j&lt;=k;j++)
+			&#123;
+				sum+=f[order[j<span class="number">-1</span>]][p[order[j]]];
+			&#125;
+			sum+=f[order[k]][i];
+			ans=<span class="built_in">min</span>(ans,sum);
+		&#125;
+	&#125;<span class="keyword">while</span>(<span class="built_in">next_permutation</span>(order+<span class="number">1</span>,order+k+<span class="number">1</span>));
+	cout&lt;&lt;ans&lt;&lt;endl;
+	<span class="keyword">return</span> <span class="number">0</span>;
+&#125;</code></pre>
 
 <link rel="stylesheet" href="/css/bilicard.css" type="text/css">
 	</div>
@@ -761,15 +996,9 @@
 <script type="text/javascript">
 	socialShare("#share", {
 	    title : 'CSP2022考前模拟赛解题报告',
-	    description : '题目列表手机
-
-方方游戏
-
-传球
-
-找位置
-
-',
+	    description : '题目列表手机直接打表即可。
+注意输入用 getline，判断空格。
+#include&amp;lt;bits...',
 	    wechatQrcodeTitle : "分享到微信",
 	    wechatQrcodeHelper : '微信扫描二维码',
 	    source : 'https://chenyuxuan2009.github.io/2022/08/09/2022-8-8-cfs-contest/'
