@@ -1,3 +1,4 @@
+https://chenyuxuan2009.github.io/2022/07/18/2022-7-14-cfs-contest/
 https://chenyuxuan2009.github.io/2022/08/09/2022-8-9-cfs-contest/
 https://chenyuxuan2009.github.io/problem/20220809/jump/index.html
 https://chenyuxuan2009.github.io/2022/08/09/2022-8-8-cfs-contest/
@@ -12,7 +13,6 @@ https://chenyuxuan2009.github.io/problem/20220808/square/index.html
 https://chenyuxuan2009.github.io/problem/20220808/relocation/index.html
 https://chenyuxuan2009.github.io/problem/20220808/ball/index.html
 https://chenyuxuan2009.github.io/problem/20220808/iphone/index.html
-https://chenyuxuan2009.github.io/2022/07/18/2022-7-14-cfs-contest/
 https://chenyuxuan2009.github.io/2022/07/31/abc262/
 https://chenyuxuan2009.github.io/2022/07/24/dp/
 https://chenyuxuan2009.github.io/2022/05/19/hexo-blog/
