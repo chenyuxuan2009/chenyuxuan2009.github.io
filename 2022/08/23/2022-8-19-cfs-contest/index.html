@@ -14,21 +14,23 @@
 	<script src="//cdnjs.cloudflare.com/ajax/libs/highlight.js/11.1.0/highlight.min.js"></script>
 	<script type="text/javascript" src="/assets/js/click-live.js"></script>
 	
-	<title>20220808 | CSP2022考前模拟赛 - chenyuxuan__2009的博客</title>
+	<title>20220819 | CSP2022考前模拟赛解题报告 - chenyuxuan__2009的博客</title>
 	<meta charset="utf-8">
 	
 		<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=5">
 	
-	<meta name="description" content="手机方方游戏传球游戏找位置">
-<meta property="og:type" content="website">
-<meta property="og:title" content="20220808 | CSP2022考前模拟赛">
-<meta property="og:url" content="https://chenyuxuan2009.github.io/problem/20220808/index.html">
+	<meta name="description" content="题目列表乒乓比赛先咕着  代码     #### 麻将  先咕着  &lt;details&gt; &lt;summary&gt;代码&lt;&#x2F;summary&gt; &#96;&#96;&#96;cpp     #### 三角田地  先咕着  &lt;details&gt; &lt;summary&gt;代码&lt;&#x2F;summary&gt; &#96;&#96;&#96;cpp     #### 跳芭蕾  先咕着  &lt;details&amp;g">
+<meta property="og:type" content="article">
+<meta property="og:title" content="20220819 | CSP2022考前模拟赛解题报告">
+<meta property="og:url" content="https://chenyuxuan2009.github.io/2022/08/23/2022-8-19-cfs-contest/index.html">
 <meta property="og:site_name" content="chenyuxuan__2009的博客">
-<meta property="og:description" content="手机方方游戏传球游戏找位置">
+<meta property="og:description" content="题目列表乒乓比赛先咕着  代码     #### 麻将  先咕着  &lt;details&gt; &lt;summary&gt;代码&lt;&#x2F;summary&gt; &#96;&#96;&#96;cpp     #### 三角田地  先咕着  &lt;details&gt; &lt;summary&gt;代码&lt;&#x2F;summary&gt; &#96;&#96;&#96;cpp     #### 跳芭蕾  先咕着  &lt;details&amp;g">
 <meta property="og:locale" content="zh_CN">
-<meta property="article:published_time" content="2022-08-09T00:50:43.471Z">
-<meta property="article:modified_time" content="2022-08-09T00:50:43.471Z">
+<meta property="article:published_time" content="2022-08-23T11:52:49.775Z">
+<meta property="article:modified_time" content="2022-08-23T12:50:48.644Z">
 <meta property="article:author" content="CYX">
+<meta property="article:tag" content="C++">
+<meta property="article:tag" content="CFS">
 <meta name="twitter:card" content="summary">
 
 	<meta name="theme-color" content="#5e72e4">
@@ -496,24 +498,45 @@
 		<div id="leftbar_part2" class="widget widget_search card bg-white shadow-sm border-0">
 			<div id="leftbar_part2_inner" class="card-body">
 				
-				<div class="nav-wrapper" style="padding-top: 5px; display:none; ">
+				<div class="nav-wrapper" style="padding-top: 5px;">
 	                <ul class="nav nav-pills nav-fill" role="tablist">
 						
+							<li class="nav-item sidebar-tab-switcher">
+								<a class="active show" id="leftbar_tab_catalog_btn" data-toggle="tab" href="#leftbar_tab_catalog" role="tab" aria-controls="leftbar_tab_catalog" no-pjax>文章目录</a>
+							</li>
+						
 						<li class="nav-item sidebar-tab-switcher">
-							<a class="active show" id="leftbar_tab_overview_btn" data-toggle="tab" href="#leftbar_tab_overview" role="tab" aria-controls="leftbar_tab_overview" no-pjax>站点概览</a>
+							<a class="" id="leftbar_tab_overview_btn" data-toggle="tab" href="#leftbar_tab_overview" role="tab" aria-controls="leftbar_tab_overview" no-pjax>站点概览</a>
 						</li>
 	                </ul>
 				</div>
 				<div>
 					<div class="tab-content" style="padding: 10px 10px 0 10px;">
 						
-						<div class="tab-pane fade text-center active show" id="leftbar_tab_overview" role="tabpanel" aria-labelledby="leftbar_tab_overview_btn">
+							<div class="tab-pane fade active show" id="leftbar_tab_catalog" role="tabpanel" aria-labelledby="leftbar_tab_catalog_btn">
+								<div id="leftbar_catalog"></div>
+								<script type="text/javascript">
+									$(function () {
+										$(document).headIndex({
+											articleWrapSelector: '#post_content',
+											indexBoxSelector: '#leftbar_catalog',
+											subItemBoxClass: "index-subItem-box",
+											itemClass: "index-item",
+											linkClass: "index-link",
+											offset: 80,
+										});
+									})
+								</script>
+								
+							</div>
+						
+						<div class="tab-pane fade text-center" id="leftbar_tab_overview" role="tabpanel" aria-labelledby="leftbar_tab_overview_btn">
 							<img id="leftbar_overview_author_image" src="/assets/img/favicon.ico" class="img-fluid rounded-circle shadow-sm" style="width: 100px;" alt="avatar">
 							<h6 id="leftbar_overview_author_name">CYX</h6>
 							<nav class="site-state">
 								<div class="site-state-item site-state-posts">
 									<a href="/archives">
-										<span class="site-state-item-count">53</span>
+										<span class="site-state-item-count">56</span>
 										<span class="site-state-item-name">文章</span>
 									</a>
 								</div>
@@ -579,7 +602,7 @@
 				</button>
 			</div>
 			<div class="modal-body">
-				<a class="badge badge-secondary tag" href="/categories/%E3%80%8A%E5%9B%9B%E5%8F%89%E6%A0%91%E3%80%8B/" rel="tag">《四叉树》 <span class="tag-num">2</span></a><a class="badge badge-secondary tag" href="/categories/%E5%81%9A%E9%A2%98%E7%AC%94%E8%AE%B0/" rel="tag">做题笔记 <span class="tag-num">19</span></a><a class="badge badge-secondary tag" href="/categories/%E6%B8%B8%E8%AE%B0/" rel="tag">游记 <span class="tag-num">2</span></a><a class="badge badge-secondary tag" href="/categories/%E8%AE%B2%E8%A7%A3/" rel="tag">讲解 <span class="tag-num">5</span></a><a class="badge badge-secondary tag" href="/categories/%E9%97%B2%E8%AF%9D/" rel="tag">闲话 <span class="tag-num">1</span></a><a class="badge badge-secondary tag" href="/categories/%E9%A2%98%E8%A7%A3/" rel="tag">题解 <span class="tag-num">24</span></a>
+				<a class="badge badge-secondary tag" href="/categories/%E3%80%8A%E5%9B%9B%E5%8F%89%E6%A0%91%E3%80%8B/" rel="tag">《四叉树》 <span class="tag-num">2</span></a><a class="badge badge-secondary tag" href="/categories/%E5%81%9A%E9%A2%98%E7%AC%94%E8%AE%B0/" rel="tag">做题笔记 <span class="tag-num">22</span></a><a class="badge badge-secondary tag" href="/categories/%E6%B8%B8%E8%AE%B0/" rel="tag">游记 <span class="tag-num">2</span></a><a class="badge badge-secondary tag" href="/categories/%E8%AE%B2%E8%A7%A3/" rel="tag">讲解 <span class="tag-num">5</span></a><a class="badge badge-secondary tag" href="/categories/%E9%97%B2%E8%AF%9D/" rel="tag">闲话 <span class="tag-num">1</span></a><a class="badge badge-secondary tag" href="/categories/%E9%A2%98%E8%A7%A3/" rel="tag">题解 <span class="tag-num">24</span></a>
 			</div>
 		</div>
 	</div>
@@ -594,7 +617,7 @@
 				</button>
 			</div>
 			<div class="modal-body">
-				<a class="badge badge-secondary tag" href="/tags/Atcoder/" rel="tag">Atcoder <span class="tag-num">19</span></a><a class="badge badge-secondary tag" href="/tags/C/" rel="tag">C++ <span class="tag-num">45</span></a><a class="badge badge-secondary tag" href="/tags/CFS/" rel="tag">CFS <span class="tag-num">3</span></a><a class="badge badge-secondary tag" href="/tags/Codeforces/" rel="tag">Codeforces <span class="tag-num">20</span></a><a class="badge badge-secondary tag" href="/tags/Python/" rel="tag">Python <span class="tag-num">1</span></a><a class="badge badge-secondary tag" href="/tags/%E5%B0%8F%E8%AF%B4/" rel="tag">小说 <span class="tag-num">2</span></a><a class="badge badge-secondary tag" href="/tags/%E6%B4%9B%E8%B0%B7/" rel="tag">洛谷 <span class="tag-num">5</span></a>
+				<a class="badge badge-secondary tag" href="/tags/Atcoder/" rel="tag">Atcoder <span class="tag-num">19</span></a><a class="badge badge-secondary tag" href="/tags/C/" rel="tag">C++ <span class="tag-num">48</span></a><a class="badge badge-secondary tag" href="/tags/CFS/" rel="tag">CFS <span class="tag-num">6</span></a><a class="badge badge-secondary tag" href="/tags/Codeforces/" rel="tag">Codeforces <span class="tag-num">20</span></a><a class="badge badge-secondary tag" href="/tags/Python/" rel="tag">Python <span class="tag-num">1</span></a><a class="badge badge-secondary tag" href="/tags/%E5%B0%8F%E8%AF%B4/" rel="tag">小说 <span class="tag-num">2</span></a><a class="badge badge-secondary tag" href="/tags/%E6%B4%9B%E8%B0%B7/" rel="tag">洛谷 <span class="tag-num">5</span></a>
 			</div>
 		</div>
 	</div>
@@ -606,18 +629,25 @@
 		
 		
 			
-
 	<article class="post post-full card bg-white shadow-sm border-0 post-preview">
 	<header class="post-header text-center">
 		
-		<a class="post-title" href="/problem/20220808/index.html">20220808 | CSP2022考前模拟赛</a>
+		<a class="post-title" href="/2022/08/23/2022-8-19-cfs-contest/">20220819 | CSP2022考前模拟赛解题报告</a>
 		<div class="post-meta">
 			
 						
 						<div class="post-meta-detail post-meta-detail-time">
 							<i class="fa fa-clock-o" aria-hidden="true"></i>
-							<time title="发布于 2022-8-9 8:50:43 | 编辑于 2022-8-9 8:50:43">2022-8-9 8:50
+							<time title="发布于 2022-8-23 19:52:49 | 编辑于 2022-8-23 20:50:48">2022-8-23 19:52
 							</time>
+						</div>
+					
+						
+							<div class="post-meta-devide">|</div>
+						
+						<div class="post-meta-detail post-meta-detail-categories">
+							<i class="fa fa-bookmark-o" aria-hidden="true"></i>
+							<a class="post-meta-detail-catagory-link" href="/categories/%E5%81%9A%E9%A2%98%E7%AC%94%E8%AE%B0/">做题笔记</a>
 						</div>
 					
 						
@@ -635,7 +665,7 @@
 						
 						<div class="post-meta-detail post-meta-detail-words">
 							<i class="fa fa-file-word-o" aria-hidden="true"></i>
-							13 字
+							67 字
 						</div>
 					
 						
@@ -651,9 +681,199 @@
 	</header>
 
 	<div class="post-content" id="post_content">
-		<h4 id="手机"><a href="#手机" class="headerlink" title="手机"></a><a href="/problem/20220808/iphone">手机</a></h4><h4 id="方方游戏"><a href="#方方游戏" class="headerlink" title="方方游戏"></a><a href="/problem/20220808/square">方方游戏</a></h4><h4 id="传球游戏"><a href="#传球游戏" class="headerlink" title="传球游戏"></a><a href="/problem/20220808/ball">传球游戏</a></h4><h4 id="找位置"><a href="#找位置" class="headerlink" title="找位置"></a><a href="/problem/20220808/relocation">找位置</a></h4><link rel="stylesheet" href="/css/bilicard.css" type="text/css">
+		<h4 id="题目列表"><a href="#题目列表" class="headerlink" title="题目列表"></a><a href="/problem/20220819/task.docx">题目列表</a></h4><h4 id="乒乓比赛"><a href="#乒乓比赛" class="headerlink" title="乒乓比赛"></a>乒乓比赛</h4><p>先咕着</p>
+<details>
+<summary>代码</summary>
+<pre><code class="highlight cpp"></code></pre>
+</details>
+<pre><code class="highlight clean">
+
+#### 麻将
+
+先咕着
+
+&lt;details&gt;
+&lt;summary&gt;代码&lt;/summary&gt;
+```cpp
+</code></pre>
+</details>
+<pre><code class="highlight clean">
+
+#### 三角田地
+
+先咕着
+
+&lt;details&gt;
+&lt;summary&gt;代码&lt;/summary&gt;
+```cpp
+</code></pre>
+</details>
+<pre><code class="highlight clean">
+
+#### 跳芭蕾
+
+先咕着
+
+&lt;details&gt;
+&lt;summary&gt;代码&lt;/summary&gt;
+```cpp
+</code></pre>
+</details>
+```<link rel="stylesheet" href="/css/bilicard.css" type="text/css">
 	</div>
+
+	
+
+	
+			<div class='additional-content-after-post'>文章加载可能有点慢，重新刷新一下就好。刷新之后评论应该出来了，欢迎大家来留言！<br/>点一点右下角的分享，推送给更多好友吧！</div>
+		
+
+	
+		<div class="post-tags">
+			<i class="fa fa-tags" aria-hidden="true"></i>
+			<a class="tag badge badge-secondary post-meta-detail-tag -none-link" href="/tags/C/" rel="tag">C++</a><a class="tag badge badge-secondary post-meta-detail-tag -none-link" href="/tags/CFS/" rel="tag">CFS</a>
+		</div>
+	
 </article>
+
+	<div id="share_container">
+	<div id="share" data-initialized="true">
+		<a class="no-pjax icon-wechat" tooltip="分享到微信">
+			<button class="btn btn-icon btn-success">
+				<span class="btn-inner--icon"><i class="fa fa-weixin"></i></span>
+			</button>
+		</a>
+		<a target="_blank" class="no-pjax icon-douban" tooltip="分享到豆瓣">
+			<button class="btn btn-icon btn-primary" style="background: #209261;border: none;">
+				豆
+			</button>
+		</a>
+		<a target="_blank" class="no-pjax icon-qq" tooltip="分享到 QQ">
+			<button class="btn btn-icon btn-primary" style="background: #2196f3;border: none;">
+				<span class="btn-inner--icon"><i class="fa fa-qq"></i></span>
+			</button>
+		</a>
+		<a target="_blank" class="no-pjax icon-qzone" tooltip="分享到 QQ 空间">
+			<button class="btn btn-icon btn-primary" style="background: #ffc107;border: none;">
+				<span class="btn-inner--icon"><i class="fa fa-star"></i></span>
+			</button>
+		</a>
+		<a target="_blank" class="no-pjax icon-weibo" tooltip="分享到微博">
+			<button class="btn btn-icon btn-warning">
+				<span class="btn-inner--icon"><i class="fa fa-weibo"></i></span>
+			</button>
+		</a>
+		<a target="_blank" class="no-pjax icon-facebook" tooltip="分享到 Facebook">
+			<button class="btn btn-icon btn-primary" style="background: #283593;border: none;">
+				<span class="btn-inner--icon"><i class="fa fa-facebook"></i></span>
+			</button>
+		</a>
+		<a target="_blank" class="no-pjax icon-twitter" tooltip="分享到 Twitter">
+			<button class="btn btn-icon btn-primary" style="background: #03a9f4;border: none;">
+				<span class="btn-inner--icon"><i class="fa fa-twitter"></i></span>
+			</button>
+		</a>
+		<a target="_blank" class="no-pjax icon-telegram" href="https://telegram.me/share/url?url=https://chenyuxuan2009.github.io/2022/08/23/2022-8-19-cfs-contest/&text=20220819 | CSP2022考前模拟赛解题报告" tooltip="分享到 Telegram">
+			<button class="btn btn-icon btn-primary" style="background: #42a5f5;border: none;">
+				<span class="btn-inner--icon"><i class="fa fa-telegram"></i></span>
+			</button>
+		</a>
+		<a target="_blank" class="no-pjax icon-copy-link" id="share_copy_link" tooltip="复制链接">
+			<button class="btn btn-icon btn-default">
+				<span class="btn-inner--icon"><i class="fa fa-link"></i></span>
+			</button>
+		</a>
+	</div>
+	<button id="share_show" class="btn btn-icon btn-primary" tooltip="分享">
+		<span class="btn-inner--icon"><i class="fa fa-share"></i></span>
+	</button>
+</div>
+<script type="text/javascript">
+	socialShare("#share", {
+	    title : '20220819 | CSP2022考前模拟赛解题报告',
+	    description : '题目列表乒乓比赛先咕着
+
+代码
+
+
+
+
+#### 麻将
+
+先咕着
+
+&amp;lt;details&amp;gt;
+...',
+	    wechatQrcodeTitle : "分享到微信",
+	    wechatQrcodeHelper : '微信扫描二维码',
+	    source : 'https://chenyuxuan2009.github.io/2022/08/23/2022-8-19-cfs-contest/'
+	});
+	$("#share_show")[0].onclick = function(){
+		$("#share_container").addClass("opened");
+	};
+	$("#share_copy_link")[0].onclick = function(){
+		let input = document.createElement('input');
+		document.body.appendChild(input);
+		input.setAttribute("value", window.location.href);
+		input.setAttribute("readonly", "readonly");
+		input.setAttribute("style", "opacity: 0;mouse-events:none;");
+		input.select();
+		if (document.execCommand('copy')){
+			iziToast.show({
+				title: '链接已复制',
+				message: "链接已复制到剪贴板",
+				class: 'shadow',
+				position: 'topRight',
+				backgroundColor: '#2dce89',
+				titleColor: '#ffffff',
+				messageColor: '#ffffff',
+				iconColor: '#ffffff',
+				progressBarColor: '#ffffff',
+				icon: 'fa fa-check',
+				timeout: 5000
+			});
+		}else{
+			iziToast.show({
+				title: '复制失败',
+				message: "请手动复制链接",
+				class: 'shadow',
+				position: 'topRight',
+				backgroundColor: '#f5365c',
+				titleColor: '#ffffff',
+				messageColor: '#ffffff',
+				iconColor: '#ffffff',
+				progressBarColor: '#ffffff',
+				icon: 'fa fa-close',
+				timeout: 5000
+			});
+		}
+		document.body.removeChild(input);
+	};
+</script>
+
+
+
+	<div id="post_comment" class="card shadow-sm">
+		<div id="giscus"></div>
+<script src="https://giscus.app/client.js"
+        data-repo="chenyuxuan2009/blogtalk"
+        data-repo-id="R_kgDOHDKqeg"
+        data-category="General"
+        data-category-id="DIC_kwDOHDKqes4COOnc"
+        data-mapping="pathname"
+        data-input-position="top"
+        data-theme="light"
+        data-lang="zh-CN"
+        crossorigin="anonymous"
+        async>
+</script>
+
+	</div>
+
+
+
+<div class="post-navigation card shadow-sm"><div class="post-navigation-item post-navigation-pre"></div><div class="post-navigation-item post-navigation-next"><span class="page-navigation-extra-text">下一篇 <i class="fa fa-arrow-circle-o-right" aria-hidden="true"></i></span><a href="/2022/08/23/2022-8-12-cfs-contest/" rel="next"> 20220812 | CSP2022考前模拟赛解题报告</a></div></div>
+
 
 
 <!-- <script type="text/javascript" src="/assets/codeBlock/codeBlockFuction.js"></script>
