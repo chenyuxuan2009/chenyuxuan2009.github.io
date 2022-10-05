@@ -29,7 +29,7 @@
 <meta property="og:description" content="题目列表排名一开始不明白为什么一堆大佬死这题了。 一翻代码：年级从大到小。 …… 正文开始： 首先排序，首先按成绩大到小，其次按年级小到大。 然后可以开个 hash 数组统计到目前为止每个年级的人数，输出直接输出自己年级之前的总和。  代码 #include&lt;bits&#x2F;stdc++.h&gt; using namespace std; struct node &amp;#123; 	int Scr,">
 <meta property="og:locale" content="zh_CN">
 <meta property="article:published_time" content="2022-10-04T10:04:31.870Z">
-<meta property="article:modified_time" content="2022-10-04T11:36:56.691Z">
+<meta property="article:modified_time" content="2022-10-05T03:33:39.071Z">
 <meta property="article:author" content="CYX">
 <meta property="article:tag" content="C++">
 <meta property="article:tag" content="CFS">
@@ -640,7 +640,7 @@
 						
 						<div class="post-meta-detail post-meta-detail-time">
 							<i class="fa fa-clock-o" aria-hidden="true"></i>
-							<time title="发布于 2022-10-4 18:04:31 | 编辑于 2022-10-4 19:36:56">2022-10-4 18:04
+							<time title="发布于 2022-10-4 18:04:31 | 编辑于 2022-10-5 11:33:39">2022-10-4 18:04
 							</time>
 						</div>
 					
@@ -667,7 +667,7 @@
 						
 						<div class="post-meta-detail post-meta-detail-words">
 							<i class="fa fa-file-word-o" aria-hidden="true"></i>
-							468 字
+							897 字
 						</div>
 					
 						
@@ -675,7 +675,7 @@
 						
 						<div class="post-meta-detail post-meta-detail-readingtime">
 							<i class="fa fa-hourglass-end" aria-hidden="true"></i>
-							2 分钟
+							4 分钟
 						</div>
 					
 		</div>
@@ -724,39 +724,144 @@
     <span class="keyword">return</span> <span class="number">0</span>;
 &#125;</code></pre>
 </details>
+### 旅游
 
-<h3 id="旅游"><a href="#旅游" class="headerlink" title="旅游"></a>旅游</h3><p>先咕着。</p>
-<h3 id="遗址"><a href="#遗址" class="headerlink" title="遗址"></a>遗址</h3><p><a target="_blank" rel="noopener" href="https://www.luogu.com.cn/blog/516346/solution-p1959">P1959 - chenyuxuan__2009 的博客 - 洛谷博客 (luogu.com.cn)</a></p>
-<h3 id="愤怒的小鸟"><a href="#愤怒的小鸟" class="headerlink" title="愤怒的小鸟"></a>愤怒的小鸟</h3><p>题目改了，可以连续爆炸。</p>
-<p>那么我们只需要找出两两之间的差，除掉前 $k-1$ 个最大的，之后的最大即为答案。</p>
-<p>显然过程是 <code>排序整个数组</code>-<code>得到两两间的差</code>-<code>找出答案</code>。</p>
+<p>一道搜索。</p>
+<p>对于每个点，我们扫一遍看它是山还是湖。</p>
+<p>后记：调了一上午，发现是本地栈空间没有机房开得大……</p>
+<p>吃席！</p>
 <details>
 <summary>代码</summary>
 <pre><code class="highlight cpp"><span class="meta">#<span class="keyword">include</span><span class="string">&lt;bits/stdc++.h&gt;</span></span>
 <span class="keyword">using</span> <span class="keyword">namespace</span> std;
-<span class="type">int</span> n,k;
-<span class="type">int</span> a[<span class="number">50020</span>];
-priority_queue&lt;<span class="type">int</span>&gt;q;
+<span class="type">int</span> n,m;
+<span class="type">bool</span> hill,lake;
+<span class="type">int</span> mp[<span class="number">1020</span>][<span class="number">1020</span>];
+<span class="type">bool</span> f[<span class="number">1020</span>][<span class="number">1020</span>];
+<span class="type">int</span> dx[]=&#123;<span class="number">0</span>,<span class="number">0</span>,<span class="number">1</span>,<span class="number">-1</span>&#125;;
+<span class="type">int</span> dy[]=&#123;<span class="number">1</span>,<span class="number">-1</span>,<span class="number">0</span>,<span class="number">0</span>&#125;;
+<span class="comment">// int dx[]=&#123;-1,0,0,1&#125;;</span>
+<span class="comment">// int dy[]=&#123;0,-1,1,0&#125;;</span>
+<span class="type">int</span> cnt;
+<span class="function"><span class="type">bool</span> <span class="title">ok</span><span class="params">(<span class="type">int</span> x,<span class="type">int</span> y)</span></span>
+<span class="function"></span>&#123;
+	<span class="keyword">return</span> <span class="number">1</span>&lt;=x&amp;&amp;x&lt;=n&amp;&amp;<span class="number">1</span>&lt;=y&amp;&amp;y&lt;=m;
+&#125;
+<span class="function"><span class="type">void</span> <span class="title">dfs</span><span class="params">(<span class="type">int</span> x,<span class="type">int</span> y)</span></span>
+<span class="function"></span>&#123;
+	<span class="comment">// cout&lt;&lt;++cnt&lt;&lt;endl;</span>
+	<span class="comment">// cout&lt;&lt;x&lt;&lt;&quot; &quot;&lt;&lt;y&lt;&lt;endl;</span>
+	f[x][y]=<span class="number">1</span>;
+	<span class="keyword">for</span>(<span class="type">int</span> i=<span class="number">0</span>;i&lt;<span class="number">4</span>;i++)
+	&#123;
+		<span class="type">int</span> X=dx[i]+x,Y=dy[i]+y;
+		<span class="keyword">if</span>(!<span class="built_in">ok</span>(X,Y)||(f[X][Y]&amp;&amp;mp[X][Y]==mp[x][y]))<span class="keyword">continue</span>;
+		<span class="keyword">if</span>(mp[X][Y]&gt;mp[x][y])&#123;lake=<span class="number">1</span>;<span class="keyword">continue</span>;&#125;
+		<span class="keyword">if</span>(mp[X][Y]&lt;mp[x][y])&#123;hill=<span class="number">1</span>;<span class="keyword">continue</span>;&#125;
+		<span class="comment">// cout&lt;&lt;X&lt;&lt;&quot; &quot;&lt;&lt;Y&lt;&lt;endl;</span>
+		<span class="built_in">dfs</span>(X,Y);
+	&#125;
+&#125;
 <span class="function"><span class="type">int</span> <span class="title">main</span><span class="params">()</span></span>
 <span class="function"></span>&#123;
-	<span class="built_in">freopen</span>(<span class="string">&quot;angry.in&quot;</span>,<span class="string">&quot;r&quot;</span>,stdin);
-	<span class="built_in">freopen</span>(<span class="string">&quot;angry.out&quot;</span>,<span class="string">&quot;w&quot;</span>,stdout);
-	cin&gt;&gt;n&gt;&gt;k;
+	<span class="built_in">freopen</span>(<span class="string">&quot;seek.in&quot;</span>,<span class="string">&quot;r&quot;</span>,stdin);
+	<span class="built_in">freopen</span>(<span class="string">&quot;seek.out&quot;</span>,<span class="string">&quot;w&quot;</span>,stdout);
+	cin&gt;&gt;n&gt;&gt;m;
 	<span class="keyword">for</span>(<span class="type">int</span> i=<span class="number">1</span>;i&lt;=n;i++)
+	&#123;
+		<span class="keyword">for</span>(<span class="type">int</span> j=<span class="number">1</span>;j&lt;=m;j++)
+		&#123;
+			cin&gt;&gt;mp[i][j];
+		&#125;
+	&#125;
+	<span class="type">int</span> ansf=<span class="number">0</span>,ansg=<span class="number">0</span>;
+	<span class="keyword">for</span>(<span class="type">int</span> i=<span class="number">1</span>;i&lt;=n;i++)
+	&#123;
+		<span class="keyword">for</span>(<span class="type">int</span> j=<span class="number">1</span>;j&lt;=m;j++)
+		&#123;
+			<span class="keyword">if</span>(!f[i][j])
+			&#123;
+				hill=lake=<span class="number">0</span>;
+				<span class="built_in">dfs</span>(i,j);
+				<span class="keyword">if</span>(hill&amp;&amp;lake)<span class="keyword">continue</span>;
+				ansf+=lake;
+				ansg+=hill;
+			&#125;
+
+		&#125;
+	&#125;
+	cout&lt;&lt;ansf&lt;&lt;<span class="string">&quot; &quot;</span>&lt;&lt;ansg&lt;&lt;endl;
+	<span class="keyword">return</span> <span class="number">0</span>;
+&#125;
+<span class="comment">/*</span>
+<span class="comment">2 2</span>
+<span class="comment">1 2</span>
+<span class="comment">1 1</span>
+<span class="comment"></span>
+<span class="comment">3 4</span>
+<span class="comment">1 3 2 6</span>
+<span class="comment">1 2 2 7</span>
+<span class="comment">3 2 2 5</span>
+<span class="comment"></span>
+<span class="comment">3 3</span>
+<span class="comment">1 1 1</span>
+<span class="comment">1 2 1</span>
+<span class="comment">1 1 1</span>
+<span class="comment"></span>
+<span class="comment">3 3</span>
+<span class="comment">2 2 2</span>
+<span class="comment">2 1 2</span>
+<span class="comment">2 2 2</span>
+<span class="comment"></span>
+<span class="comment">3 3</span>
+<span class="comment">1 2 0</span>
+<span class="comment">4 4 1</span>
+<span class="comment">4 4 1</span>
+<span class="comment">*/</span>
+</code></pre>
+</details>
+<pre><code class="highlight csharp">
+
+<span class="meta">### 遗址</span>
+
+[<span class="meta">P1959 - chenyuxuan__2009 的博客 - 洛谷博客 (luogu.com.cn)</span>](https:<span class="comment">//www.luogu.com.cn/blog/516346/solution-p1959)</span>
+
+<span class="meta">### 愤怒的小鸟</span>
+
+题目改了，可以连续爆炸。
+
+那么我们只需要找出两两之间的差，除掉前 $k<span class="number">-1</span>$ 个最大的，之后的最大即为答案。
+
+显然过程是 `排序整个数组`-`得到两两间的差`-`找出答案`。
+
+&lt;details&gt;
+&lt;summary&gt;代码&lt;/summary&gt;
+```cpp
+<span class="meta">#include&lt;bits/stdc++.h&gt;</span>
+<span class="keyword">using</span> <span class="keyword">namespace</span> <span class="title">std</span>;
+<span class="built_in">int</span> n,k;
+<span class="built_in">int</span> a[<span class="number">50020</span>];
+priority_queue&lt;<span class="built_in">int</span>&gt;q;
+<span class="function"><span class="built_in">int</span> <span class="title">main</span>()</span>
+&#123;
+	freopen(<span class="string">&quot;angry.in&quot;</span>,<span class="string">&quot;r&quot;</span>,stdin);
+	freopen(<span class="string">&quot;angry.out&quot;</span>,<span class="string">&quot;w&quot;</span>,stdout);
+	cin&gt;&gt;n&gt;&gt;k;
+	<span class="keyword">for</span>(<span class="built_in">int</span> i=<span class="number">1</span>;i&lt;=n;i++)
 	&#123;
 		cin&gt;&gt;a[i];
 	&#125;
-	<span class="built_in">sort</span>(a+<span class="number">1</span>,a+n+<span class="number">1</span>);
-	<span class="keyword">for</span>(<span class="type">int</span> i=<span class="number">2</span>;i&lt;=n;i++)&#123;
-	<span class="comment">/*cout&lt;&lt;a[i]-a[i-1]&lt;&lt;&quot; &quot;;*/</span>q.<span class="built_in">push</span>(a[i]-a[i<span class="number">-1</span>]);
+	sort(a+<span class="number">1</span>,a+n+<span class="number">1</span>);
+	<span class="keyword">for</span>(<span class="built_in">int</span> i=<span class="number">2</span>;i&lt;=n;i++)&#123;
+	<span class="comment">/*cout&lt;&lt;a[i]-a[i-1]&lt;&lt;&quot; &quot;;*/</span>q.push(a[i]-a[i<span class="number">-1</span>]);
 	&#125;
 <span class="comment">//	cout&lt;&lt;endl;</span>
 	<span class="keyword">while</span>(k!=<span class="number">1</span>)
 	&#123;
-		q.<span class="built_in">pop</span>();
+		q.pop();
 		k--;
 	&#125;
-	cout&lt;&lt;q.<span class="built_in">top</span>()&lt;&lt;endl;
+	cout&lt;&lt;q.top()&lt;&lt;endl;
     <span class="keyword">return</span> <span class="number">0</span>;
 &#125;
 <span class="comment">/*</span>
