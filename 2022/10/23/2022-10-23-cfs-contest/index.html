@@ -29,7 +29,7 @@
 <meta property="og:description" content="题目列表赛后感言本来能 $400\tt{\ pts}$ 的，T3 边界写错扣十分，这个问题不大，加个判断就过了。T4 真的扣的分真伤，打错了两个数字废了。 痛失 U 盘！  比赛点评：一道送分一道板，一道模拟一道原。 四则混合运算题目很简单，扫描两遍字符串，第一遍处理乘除符号，第二遍处理加减符号。 时间复杂度 $\mathcal O(\left|S\right|)$。 插一句题外话，像这种题最好不">
 <meta property="og:locale" content="zh_CN">
 <meta property="article:published_time" content="2022-10-23T10:57:42.147Z">
-<meta property="article:modified_time" content="2022-10-23T11:34:20.528Z">
+<meta property="article:modified_time" content="2022-10-23T11:38:38.751Z">
 <meta property="article:author" content="CYX">
 <meta property="article:tag" content="C++">
 <meta property="article:tag" content="CFS">
@@ -640,7 +640,7 @@
 						
 						<div class="post-meta-detail post-meta-detail-time">
 							<i class="fa fa-clock-o" aria-hidden="true"></i>
-							<time title="发布于 2022-10-23 18:57:42 | 编辑于 2022-10-23 19:34:20">2022-10-23 18:57
+							<time title="发布于 2022-10-23 18:57:42 | 编辑于 2022-10-23 19:38:38">2022-10-23 18:57
 							</time>
 						</div>
 					
@@ -873,7 +873,8 @@ string s;
 </details>
 
 
-<h3 id="密码锁"><a href="#密码锁" class="headerlink" title="密码锁"></a>密码锁</h3><p>实际很简单，最暴力的方法九重循环枚举就能过。</p>
+<h3 id="密码锁"><a href="#密码锁" class="headerlink" title="密码锁"></a>密码锁</h3><p>性质：每个按钮最多转四次，旋转先后顺序没有影响。</p>
+<p>实际很简单，最暴力的方法九重循环枚举就能过。</p>
 <p>像我一样 dfs 也可以，dfs 还可以用于 $n$ 个锁的情况。</p>
 <p>bfs 也可以，但当心队列 <code>push</code> 过多爆空间。</p>
 <details>
@@ -969,9 +970,9 @@ vector&lt;<span class="type">int</span>&gt;b[<span class="number">20</span>];
 <span class="comment">8 789</span>
 <span class="comment">9 5689</span>
 <span class="comment"></span>
-<span class="comment">1¡¢Ã¿¸ö°´Å¥×î¶àÖ»Ðè°´¶àÉÙ´Î£¿</span>
-<span class="comment">2¡¢°´Å¥µÄ°´¶¯´ÎÐòÊÇ·ñ»áÓ°Ïì½á¹û£¿ 0</span>
-<span class="comment">3¡¢Ã¿ÖÖ×´Ì¬ÔÚÎÞ¶àÓà°´¼üºÍ²»¿¼ÂÇ°´¼üË³ÐòµÄÇé¿öÏÂÓÐ¶àÉÙÖÖ¿ªËø·½°¸£¿</span>
+<span class="comment">1、每个按钮最多只需按多少次？</span>
+<span class="comment">2、按钮的按动次序是否会影响结果？ 0</span>
+<span class="comment">3、每种状态在无多余按键和不考虑按键顺序的情况下有多少种开锁方案？</span>
 <span class="comment">*/</span></code></pre>
 </details>
 
