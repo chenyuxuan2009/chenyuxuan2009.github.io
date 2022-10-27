@@ -1,3 +1,4 @@
+https://chenyuxuan2009.github.io/2022/09/17/CSP2022/
 https://chenyuxuan2009.github.io/2022/10/23/2022-10-23-cfs-contest/
 https://chenyuxuan2009.github.io/2022/10/04/todolist/
 https://chenyuxuan2009.github.io/2022/10/22/abc029_a/
@@ -7,7 +8,6 @@ https://chenyuxuan2009.github.io/2022/10/06/2022-10-6-cfs-contest/
 https://chenyuxuan2009.github.io/2022/10/05/2022-10-5-cfs-contest/
 https://chenyuxuan2009.github.io/2022/10/04/2022-9-21-cfs-contest/
 https://chenyuxuan2009.github.io/friends/index.html
-https://chenyuxuan2009.github.io/2022/09/17/CSP2022/
 https://chenyuxuan2009.github.io/judgement/index.html
 https://chenyuxuan2009.github.io/2022/08/23/2022-8-19-cfs-contest/
 https://chenyuxuan2009.github.io/2022/08/23/2022-8-12-cfs-contest/
