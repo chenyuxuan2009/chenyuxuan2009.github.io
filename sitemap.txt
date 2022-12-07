@@ -1,3 +1,4 @@
+https://chenyuxuan2009.github.io/2022/12/06/2022-12-3-scz-contest/
 https://chenyuxuan2009.github.io/friends/index.html
 https://chenyuxuan2009.github.io/2022/09/17/CSP2022/
 https://chenyuxuan2009.github.io/2022/10/23/2022-10-23-cfs-contest/
@@ -71,6 +72,7 @@ https://chenyuxuan2009.github.io/404.html
 https://chenyuxuan2009.github.io/
 https://chenyuxuan2009.github.io/tags/C/
 https://chenyuxuan2009.github.io/tags/CFS/
+https://chenyuxuan2009.github.io/tags/SCZ/
 https://chenyuxuan2009.github.io/tags/%E6%B4%9B%E8%B0%B7/
 https://chenyuxuan2009.github.io/tags/Codeforces/
 https://chenyuxuan2009.github.io/tags/Python/
