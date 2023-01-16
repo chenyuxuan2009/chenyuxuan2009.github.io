@@ -1,3 +1,4 @@
+https://chenyuxuan2009.github.io/2022/10/04/todolist/
 https://chenyuxuan2009.github.io/2022/04/16/abc248/
 https://chenyuxuan2009.github.io/2023/01/06/2023-1-6/
 https://chenyuxuan2009.github.io/2022/12/16/CF1744C/
@@ -49,7 +50,6 @@ https://chenyuxuan2009.github.io/2022/04/09/math1/
 https://chenyuxuan2009.github.io/2022/10/08/P1959/
 https://chenyuxuan2009.github.io/2022/03/22/P8197/
 https://chenyuxuan2009.github.io/2022/03/23/ternary/
-https://chenyuxuan2009.github.io/2022/10/04/todolist/
 https://chenyuxuan2009.github.io/2022/07/10/2022-7-10/
 https://chenyuxuan2009.github.io/2022/07/18/2022-7-14-cfs-contest/
 https://chenyuxuan2009.github.io/2022/08/09/2022-8-8-cfs-contest/
