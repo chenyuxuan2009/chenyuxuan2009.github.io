@@ -4,6 +4,31 @@
   
     
     <entry>
+      <title>矩阵快速幂做题笔记</title>
+      <link href="/archives/matrix-fast-power/"/>
+      <url>/archives/matrix-fast-power/</url>
+      
+        <content type="html"><![CDATA[<h2 id="矩阵是什么"><a href="#矩阵是什么" class="headerlink" title="矩阵是什么"></a>矩阵是什么</h2><p>顾名思义，矩阵就是一个长方形，里面布满了各种东西。一般表达为：</p><p>$$\begin{pmatrix}a&c\newlineb&d\end{pmatrix}$$</p><p>对于一个 $n$ 行 $m$ 列的矩阵，称为 $n\times m$ 矩阵。</p><p>矩阵的实现：</p><pre><code class="highlight cpp"><span class="keyword">struct</span> <span class="title class_">Matrix</span>&#123;    <span class="type">int</span> a[<span class="number">120</span>][<span class="number">120</span>];<span class="comment">//这里显然a数组大小不会过大，在后文矩阵乘法中会提到。</span>    <span class="type">int</span> n,m;    <span class="built_in">Matrix</span>()    &#123;        <span class="built_in">memset</span>(a,<span class="number">0</span>,<span class="built_in">sizeof</span>(a));    &#125;    <span class="function"><span class="type">void</span> <span class="title">print</span><span class="params">()</span></span><span class="function">    </span>&#123;        <span class="keyword">for</span>(<span class="type">int</span> i=<span class="number">0</span>;i&lt;n;i++)<span class="keyword">for</span>(<span class="type">int</span> j=<span class="number">0</span>;j&lt;m;j++)cout&lt;&lt;a[i][j]&lt;&lt;<span class="string">&quot; \n&quot;</span>[j==m<span class="number">-1</span>];    &#125;&#125;;</code></pre><h2 id="矩阵乘法"><a href="#矩阵乘法" class="headerlink" title="矩阵乘法"></a>矩阵乘法</h2><p>先举一个最基础的例子：</p><p>$$\begin{pmatrix}a_1&c_1\newlineb_1&d_1\end{pmatrix}\times\begin{pmatrix}a_2&c_2\newlineb_2&d_2\end{pmatrix}=\begin{pmatrix}a_1\times a_2+c_1\times b_2&a_1\times c_2+c_1\times d_2\newlineb_1\times a_2+d_1\times b_2&b_1\times c_2+d_1\times d_2\end{pmatrix}$$</p><p>显然，$n\times m$ 矩阵只能与 $m\times p$ 矩阵相乘。且结果为 $n\times p$ 的矩阵。</p><p>矩阵乘法还有两个性质：</p><p>$$A\times B\neq B\times A\newline(A\times B)\times C=A\times (B\times C)$$</p><p>我们不难发现，这个矩阵乘法其实复杂度是 $\mathcal O(n^3)$ 的。因此，矩阵乘法相关的题，这个矩阵不会过大。</p><p>矩阵乘法实现：</p><pre><code class="highlight cpp">Matrix <span class="keyword">operator</span> *(<span class="type">const</span> Matrix &amp;x,<span class="type">const</span> Matrix &amp;y)&#123;Matrix z;    z.n=x.n;z.m=y.m;<span class="keyword">for</span>(<span class="type">int</span> i=<span class="number">0</span>;i&lt;z.n;i++)<span class="keyword">for</span>(<span class="type">int</span> j=<span class="number">0</span>;j&lt;z.m;j++)z.a[i][j]=<span class="number">0</span>;<span class="keyword">for</span>(<span class="type">int</span> i=<span class="number">0</span>;i&lt;x.n;i++)<span class="keyword">for</span>(<span class="type">int</span> j=<span class="number">0</span>;j&lt;y.m;j++)<span class="keyword">for</span>(<span class="type">int</span> k=<span class="number">0</span>;k&lt;x.m;k++) (z.a[i][j]+=x.a[i][k]*y.a[k][j]%p)%=p;<span class="keyword">return</span> z;&#125;</code></pre><h2 id="矩阵快速幂"><a href="#矩阵快速幂" class="headerlink" title="矩阵快速幂"></a>矩阵快速幂</h2><p>同正常的快速幂。</p><p>$g(A,x)=\begin{cases}g(A,\dfrac{x}{2})\times g(A,\dfrac{x}{2})&x\ even\\g(A,\left\lfloor\frac{x}{2}\right\rfloor)\times g(A,\left\lfloor\frac{x}{2}\right\rfloor)\times A&x\ odd\end{cases}$</p><p>代码实现：</p><pre><code class="highlight cpp"><span class="function">Matrix <span class="title">qpow</span><span class="params">(Matrix x,<span class="type">long</span> <span class="type">long</span> y)</span></span><span class="function"></span>&#123;    Matrix re;    re.n=re.m=<span class="number">2</span>;    re.a[<span class="number">0</span>][<span class="number">0</span>]=re.a[<span class="number">1</span>][<span class="number">1</span>]=<span class="number">1</span>;re.a[<span class="number">0</span>][<span class="number">1</span>]=re.a[<span class="number">1</span>][<span class="number">0</span>]=<span class="number">0</span>;<span class="keyword">for</span>(;y&gt;<span class="number">0</span>;y&gt;&gt;=<span class="number">1</span>)&#123;<span class="keyword">if</span>(y&amp;<span class="number">1</span>)re=re*x;x=x*x;&#125;<span class="keyword">return</span> re;&#125;</code></pre><link rel="stylesheet" href="/css/bilicard.css" type="text/css">]]></content>
+      
+      
+      <categories>
+          
+          <category> 做题笔记 </category>
+          
+      </categories>
+      
+      
+        <tags>
+            
+            <tag> C++ </tag>
+            
+        </tags>
+      
+    </entry>
+    
+    
+    
+    <entry>
       <title>2023.1.6闲话</title>
       <link href="/archives/2023-1-6/"/>
       <url>/archives/2023-1-6/</url>
@@ -104,7 +129,7 @@
     
     
     <entry>
-      <title>ABC061_C Big Array</title>
+      <title>ABC029_A 複数形</title>
       <link href="/archives/abc029_a/"/>
       <url>/archives/abc029_a/</url>
       
@@ -433,7 +458,7 @@
     
     
     <entry>
-      <title>abc262做题笔记</title>
+      <title>ABC262 做题笔记</title>
       <link href="/archives/abc262/"/>
       <url>/archives/abc262/</url>
       
@@ -510,7 +535,7 @@
     
     
     <entry>
-      <title>abc261做题笔记</title>
+      <title>ABC261 做题笔记</title>
       <link href="/archives/abc261/"/>
       <url>/archives/abc261/</url>
       
@@ -564,7 +589,7 @@
     
     
     <entry>
-      <title>abc260做题笔记</title>
+      <title>ABC260 做题笔记</title>
       <link href="/archives/abc260/"/>
       <url>/archives/abc260/</url>
       
@@ -710,7 +735,7 @@
     
     
     <entry>
-      <title>abc258做题笔记</title>
+      <title>ABC258 做题笔记</title>
       <link href="/archives/abc258/"/>
       <url>/archives/abc258/</url>
       
@@ -737,7 +762,7 @@
     
     
     <entry>
-      <title>abc257做题笔记</title>
+      <title>ABC257 做题笔记</title>
       <link href="/archives/abc257/"/>
       <url>/archives/abc257/</url>
       
@@ -764,7 +789,7 @@
     
     
     <entry>
-      <title>abc254做题笔记</title>
+      <title>ABC254 做题笔记</title>
       <link href="/archives/abc254/"/>
       <url>/archives/abc254/</url>
       
@@ -818,7 +843,7 @@
     
     
     <entry>
-      <title>abc253做题笔记</title>
+      <title>ABC253 做题笔记</title>
       <link href="/archives/abc253/"/>
       <url>/archives/abc253/</url>
       
@@ -864,7 +889,7 @@
     
     
     <entry>
-      <title>abc252做题笔记</title>
+      <title>ABC252 做题笔记</title>
       <link href="/archives/abc252/"/>
       <url>/archives/abc252/</url>
       
@@ -910,7 +935,7 @@
     
     
     <entry>
-      <title>abc251做题笔记</title>
+      <title>ABC251 做题笔记</title>
       <link href="/archives/abc251/"/>
       <url>/archives/abc251/</url>
       
@@ -956,7 +981,7 @@
     
     
     <entry>
-      <title>abc250做题笔记</title>
+      <title>ABC250 做题笔记</title>
       <link href="/archives/abc250/"/>
       <url>/archives/abc250/</url>
       
@@ -1010,7 +1035,7 @@
     
     
     <entry>
-      <title>abc249做题笔记</title>
+      <title>ABC249 做题笔记</title>
       <link href="/archives/abc249/"/>
       <url>/archives/abc249/</url>
       
@@ -1037,7 +1062,7 @@
     
     
     <entry>
-      <title>abc248做题笔记</title>
+      <title>ABC248 做题笔记</title>
       <link href="/archives/abc248/"/>
       <url>/archives/abc248/</url>
       
@@ -1064,7 +1089,7 @@
     
     
     <entry>
-      <title>abc247做题笔记</title>
+      <title>ABC247 做题笔记</title>
       <link href="/archives/abc247/"/>
       <url>/archives/abc247/</url>
       
@@ -1618,9 +1643,9 @@
             
             <tag> C++ </tag>
             
-            <tag> Codeforces </tag>
-            
             <tag> Python </tag>
+            
+            <tag> Codeforces </tag>
             
         </tags>
       
