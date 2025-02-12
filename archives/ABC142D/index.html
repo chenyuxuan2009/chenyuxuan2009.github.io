@@ -22,12 +22,12 @@
 	
 		<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=5">
 	
-	<meta name="description" content="题目翻译给定两个数 $a$ 和 $b$ ，求能同时整除 $a$ 和 $b$ 的数的个数，且这些数需要两两互质。 题目分析两两互质，也就说明有以下几种情况：  均为不同的质数。 相邻 。 一个是质数，另一个不是他的倍数。 所有数和 $1$。 相邻奇数 较大数是质数。……  这是常见的情况，其实还有很多。那么我们肯定不能全写到程序里。我们只选择第 $1$ 个性质：均为不同的质数。 确保了找的答案是质数">
+	<meta name="description" content="题目翻译 给定两个数 aaa 和 bbb ，求能同时整除 aaa 和 bbb 的数的个数，且这些数需要两两互质。  题目分析 两两互质，也就说明有以下几种情况：  均为不同的质数。 相邻 。 一个是质数，另一个不是他的倍数。 所有数和 111。 相邻奇数 较大数是质数。 ……  这是常见的情况，其实还有很多。那么我们肯定不能全写到程序里。我们只选择第 111 个性质：均为不同的质数。 确保了找的">
 <meta property="og:type" content="article">
 <meta property="og:title" content="[题解] ABC142D Disjoint Set of Common Divisors">
 <meta property="og:url" content="http://blog.cyx2009.top/archives/ABC142D/index.html">
 <meta property="og:site_name" content="沉石鱼惊旋 的博客">
-<meta property="og:description" content="题目翻译给定两个数 $a$ 和 $b$ ，求能同时整除 $a$ 和 $b$ 的数的个数，且这些数需要两两互质。 题目分析两两互质，也就说明有以下几种情况：  均为不同的质数。 相邻 。 一个是质数，另一个不是他的倍数。 所有数和 $1$。 相邻奇数 较大数是质数。……  这是常见的情况，其实还有很多。那么我们肯定不能全写到程序里。我们只选择第 $1$ 个性质：均为不同的质数。 确保了找的答案是质数">
+<meta property="og:description" content="题目翻译 给定两个数 aaa 和 bbb ，求能同时整除 aaa 和 bbb 的数的个数，且这些数需要两两互质。  题目分析 两两互质，也就说明有以下几种情况：  均为不同的质数。 相邻 。 一个是质数，另一个不是他的倍数。 所有数和 111。 相邻奇数 较大数是质数。 ……  这是常见的情况，其实还有很多。那么我们肯定不能全写到程序里。我们只选择第 111 个性质：均为不同的质数。 确保了找的">
 <meta property="og:locale" content="zh_CN">
 <meta property="article:published_time" content="2022-02-10T04:12:00.000Z">
 <meta property="article:modified_time" content="2025-02-12T05:33:04.634Z">
@@ -673,7 +673,7 @@
 						
 						<div class="post-meta-detail post-meta-detail-words">
 							<i class="fa fa-file-word-o" aria-hidden="true"></i>
-							517 字
+							519 字
 						</div>
 					
 						
@@ -689,21 +689,25 @@
 	</header>
 
 	<div class="post-content" id="post_content">
-		<h3 id="题目翻译"><a href="#题目翻译" class="headerlink" title="题目翻译"></a>题目翻译</h3><p>给定两个数 $a$ 和 $b$ ，求能同时整除 $a$ 和 $b$ 的数的个数，且这些数需要两两互质。</p>
-<h3 id="题目分析"><a href="#题目分析" class="headerlink" title="题目分析"></a>题目分析</h3><p>两两互质，也就说明有以下几种情况：</p>
+		<h3 id="题目翻译"><a class="markdownIt-Anchor" href="#题目翻译"></a> 题目翻译</h3>
+<p>给定两个数 <span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>a</mi></mrow><annotation encoding="application/x-tex">a</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.43056em;vertical-align:0em;"></span><span class="mord mathnormal">a</span></span></span></span> 和 <span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>b</mi></mrow><annotation encoding="application/x-tex">b</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.69444em;vertical-align:0em;"></span><span class="mord mathnormal">b</span></span></span></span> ，求能同时整除 <span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>a</mi></mrow><annotation encoding="application/x-tex">a</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.43056em;vertical-align:0em;"></span><span class="mord mathnormal">a</span></span></span></span> 和 <span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>b</mi></mrow><annotation encoding="application/x-tex">b</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.69444em;vertical-align:0em;"></span><span class="mord mathnormal">b</span></span></span></span> 的数的个数，且这些数需要两两互质。</p>
+<h3 id="题目分析"><a class="markdownIt-Anchor" href="#题目分析"></a> 题目分析</h3>
+<p>两两互质，也就说明有以下几种情况：</p>
 <ol>
 <li>均为不同的质数。</li>
 <li>相邻 。</li>
 <li>一个是质数，另一个不是他的倍数。</li>
-<li>所有数和 $1$。</li>
+<li>所有数和 <span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mn>1</mn></mrow><annotation encoding="application/x-tex">1</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.64444em;vertical-align:0em;"></span><span class="mord">1</span></span></span></span>。</li>
 <li>相邻奇数</li>
-<li>较大数是质数。<br>……</li>
+<li>较大数是质数。
+……</li>
 </ol>
-<p>这是常见的情况，其实还有很多。那么我们肯定不能全写到程序里。我们只选择第 $1$ 个性质：均为不同的质数。</p>
+<p>这是常见的情况，其实还有很多。那么我们肯定不能全写到程序里。我们只选择第 <span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mn>1</mn></mrow><annotation encoding="application/x-tex">1</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.64444em;vertical-align:0em;"></span><span class="mord">1</span></span></span></span> 个性质：均为不同的质数。</p>
 <p>确保了找的答案是质数，然后确保它是这两个数的因数（因为能整除），那么我们只要找到两个数<strong>共同的质因数</strong>。</p>
 <p>共同的质因数，一定是两个数最大公因数的质因数。</p>
-<p>所以找出最大公因数，再找出所有最大公因数的质因数（还要算上特殊的”1”），即为答案。</p>
-<h3 id="题目代码"><a href="#题目代码" class="headerlink" title="题目代码"></a>题目代码</h3><pre><code class="highlight cpp"><span class="meta">#<span class="keyword">include</span><span class="string">&lt;bits/stdc++.h&gt;</span></span>
+<p>所以找出最大公因数，再找出所有最大公因数的质因数（还要算上特殊的&quot;1&quot;），即为答案。</p>
+<h3 id="题目代码"><a class="markdownIt-Anchor" href="#题目代码"></a> 题目代码</h3>
+<pre><code class="highlight cpp"><span class="meta">#<span class="keyword">include</span><span class="string">&lt;bits/stdc++.h&gt;</span></span>
 <span class="meta">#<span class="keyword">define</span> ll long long<span class="comment">//数据很大，要long long</span></span>
 <span class="keyword">using</span> <span class="keyword">namespace</span> std;
 ll a,b,s=<span class="number">1</span>;<span class="comment">//1一定是两个数的公因数</span>
@@ -725,12 +729,12 @@ ll a,b,s=<span class="number">1</span>;<span class="comment">//1一定是两个�
 	&#125;
 	cout&lt;&lt;(g!=<span class="number">1</span>?++s:s);<span class="comment">//如果有剩余的质因数，再加上1</span>
 &#125;</code></pre>
-
-<h3 id="补充说明"><a href="#补充说明" class="headerlink" title="补充说明"></a>补充说明</h3><p>第 $15$ 行 <code>if(g%i==0)</code> 解释</p>
-<p>找到了$g$ 最小能整除的数 $i$，那么 $i$ <strong>肯定是个质数</strong>，不用加以判断。</p>
+<h3 id="补充说明"><a class="markdownIt-Anchor" href="#补充说明"></a> 补充说明</h3>
+<p>第 <span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mn>15</mn></mrow><annotation encoding="application/x-tex">15</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.64444em;vertical-align:0em;"></span><span class="mord">1</span><span class="mord">5</span></span></span></span> 行 <code>if(g%i==0)</code> 解释</p>
+<p>找到了<span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>g</mi></mrow><annotation encoding="application/x-tex">g</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.625em;vertical-align:-0.19444em;"></span><span class="mord mathnormal" style="margin-right:0.03588em;">g</span></span></span></span> 最小能整除的数 <span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>i</mi></mrow><annotation encoding="application/x-tex">i</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.65952em;vertical-align:0em;"></span><span class="mord mathnormal">i</span></span></span></span>，那么 <span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>i</mi></mrow><annotation encoding="application/x-tex">i</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.65952em;vertical-align:0em;"></span><span class="mord mathnormal">i</span></span></span></span> <strong>肯定是个质数</strong>，不用加以判断。</p>
 <p>举个不成功的反例验证一下结论。</p>
-<p>如果 $i$ 不是质数，说明 $i$ 还有其他因数，那么 $i$ 的因数也就是 $g$ 的因数了，$i$ 肯定不是最小能被整除的数了。</p>
-<p>所以得出结论，$i$ 肯定是个质数，不用加上质数判断。</p>
+<p>如果 <span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>i</mi></mrow><annotation encoding="application/x-tex">i</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.65952em;vertical-align:0em;"></span><span class="mord mathnormal">i</span></span></span></span> 不是质数，说明 <span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>i</mi></mrow><annotation encoding="application/x-tex">i</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.65952em;vertical-align:0em;"></span><span class="mord mathnormal">i</span></span></span></span> 还有其他因数，那么 <span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>i</mi></mrow><annotation encoding="application/x-tex">i</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.65952em;vertical-align:0em;"></span><span class="mord mathnormal">i</span></span></span></span> 的因数也就是 <span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>g</mi></mrow><annotation encoding="application/x-tex">g</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.625em;vertical-align:-0.19444em;"></span><span class="mord mathnormal" style="margin-right:0.03588em;">g</span></span></span></span> 的因数了，<span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>i</mi></mrow><annotation encoding="application/x-tex">i</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.65952em;vertical-align:0em;"></span><span class="mord mathnormal">i</span></span></span></span> 肯定不是最小能被整除的数了。</p>
+<p>所以得出结论，<span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>i</mi></mrow><annotation encoding="application/x-tex">i</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.65952em;vertical-align:0em;"></span><span class="mord mathnormal">i</span></span></span></span> 肯定是个质数，不用加上质数判断。</p>
 
 	</div>
 
@@ -805,7 +809,8 @@ ll a,b,s=<span class="number">1</span>;<span class="comment">//1一定是两个�
 <script type="text/javascript">
 	socialShare("#share", {
 	    title : '[题解] ABC142D Disjoint Set of Common Divisors',
-	    description : '题目翻译给定两个数 $a$ 和 $b$ ，求能同时整除 $a$ 和 $b$ 的数的个数，且这些数需要...',
+	    description : ' 题目翻译
+给定两个数 aaa 和 bbb ，求能同时整除 aaa 和 bbb 的数的个数，且这些数...',
 	    wechatQrcodeTitle : "分享到微信",
 	    wechatQrcodeHelper : '微信扫描二维码',
 	    source : 'http://blog.cyx2009.top/archives/ABC142D/'
@@ -894,30 +899,30 @@ ll a,b,s=<span class="number">1</span>;<span class="comment">//1一定是两个�
 		
 		
 
-					<footer id="footer" class="site-footer card shadow-sm border-0">
-						
-						<div>Theme <a target="_blank" rel="noopener" href="https://github.com/solstice23/hexo-theme-argon"><strong>Argon</strong></a> | Powered by Hexo</div>
-						<span id="busuanzi_container_site_uv">
-							本站访客数 <span id="busuanzi_value_site_uv"></span> 人次
-						</span>
-						<span id="timeDate">载入时间...</span>
-						<script>
-						    var now = new Date(); 
-						    function createtime() { 
-						        var grt= new Date("03/28/2022 20:00:00");//在此处修改你的建站时间
-						        now.setTime(now.getTime()+250); 
-						        days = (now - grt ) / 1000 / 60 / 60 / 24; dnum = Math.floor(days); 
-						        hours = (now - grt ) / 1000 / 60 / 60 - (24 * dnum); hnum = Math.floor(hours); 
-						        if(String(hnum).length ==1 ){hnum = "0" + hnum;} minutes = (now - grt ) / 1000 /60 - (24 * 60 * dnum) - (60 * hnum); 
-						        mnum = Math.floor(minutes); if(String(mnum).length ==1 ){mnum = "0" + mnum;} 
-						        seconds = (now - grt ) / 1000 - (24 * 60 * 60 * dnum) - (60 * 60 * hnum) - (60 * mnum); 
-						        snum = Math.round(seconds); if(String(snum).length ==1 ){snum = "0" + snum;} 
-						        document.getElementById("timeDate").innerHTML = "本站已安全运行 "+dnum+" 天 "+ hnum + " 小时 " + mnum + " 分 " + snum + " 秒"; 
-						        // document.getElementById("times").innerHTML = hnum + " 小时 " + mnum + " 分 " + snum + " 秒"; 
-						    } 
-						setInterval("createtime()",250);
-						</script>
-						<script>
+                    <footer id="footer" class="site-footer card shadow-sm border-0">
+                        
+                        <div>Theme <a target="_blank" rel="noopener" href="https://github.com/solstice23/hexo-theme-argon"><strong>Argon</strong></a> | Powered by Hexo</div>
+                        <span id="busuanzi_container_site_uv">
+                            本站访客数 <span id="busuanzi_value_site_uv"></span> 人次
+                        </span>
+                        <span id="timeDate">载入时间...</span>
+                        <script>
+                            var now = new Date(); 
+                            function createtime() { 
+                                var grt= new Date("03/28/2022 20:00:00");//在此处修改你的建站时间
+                                now.setTime(now.getTime()+250); 
+                                days = (now - grt ) / 1000 / 60 / 60 / 24; dnum = Math.floor(days); 
+                                hours = (now - grt ) / 1000 / 60 / 60 - (24 * dnum); hnum = Math.floor(hours); 
+                                if(String(hnum).length ==1 ){hnum = "0" + hnum;} minutes = (now - grt ) / 1000 /60 - (24 * 60 * dnum) - (60 * hnum); 
+                                mnum = Math.floor(minutes); if(String(mnum).length ==1 ){mnum = "0" + mnum;} 
+                                seconds = (now - grt ) / 1000 - (24 * 60 * 60 * dnum) - (60 * 60 * hnum) - (60 * mnum); 
+                                snum = Math.round(seconds); if(String(snum).length ==1 ){snum = "0" + snum;} 
+                                document.getElementById("timeDate").innerHTML = "本站已安全运行 "+dnum+" 天 "+ hnum + " 小时 " + mnum + " 分 " + snum + " 秒"; 
+                                // document.getElementById("times").innerHTML = hnum + " 小时 " + mnum + " 分 " + snum + " 秒"; 
+                            } 
+                        setInterval("createtime()",250);
+                        </script>
+                        <script>
         window.onload = (() => {
             //定义点击出现文字类
             function ClickFrontShow() {
@@ -1054,49 +1059,54 @@ ll a,b,s=<span class="number">1</span>;<span class="comment">//1一定是两个�
             //第二个参数是颜色数组，必须是数组类型！
             frontShow.init();
         })();
-						</script>
-					</footer>
-				</main>
-			</div>
-		</div>
-		
+                        </script>
+                    </footer>
+                </main>
+            </div>
+        </div>
+        
 <script src="/argontheme.js"></script>
 
-		
-		
-		
-			<link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/KaTeX/0.15.6/katex.min.css">
-			<script src="//cdnjs.cloudflare.com/ajax/libs/KaTeX/0.15.6/katex.min.js"></script>
-			<script src="//cdnjs.cloudflare.com/ajax/libs/KaTeX/0.15.6/contrib/auto-render.min.js"></script>
-			<script>
-				document.addEventListener("DOMContentLoaded", function() {
-					renderMathInElement(document.body,{
-						delimiters: [
-							{left: "$$", right: "$$", display: true},
-							{left: "$", right: "$", display: false},
-							{left: "\\(", right: "\\)", display: false}
-						]
-					});
-				});
-			</script>
-		
+        
+        
+        
+            <link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/KaTeX/0.16.9/katex.min.css">
+            <script src="//cdnjs.cloudflare.com/ajax/libs/KaTeX/0.16.9/katex.min.js"></script>
+            <script src="//cdnjs.cloudflare.com/ajax/libs/KaTeX/0.16.9/contrib/auto-render.min.js"></script>
+            <script>
+                document.addEventListener("DOMContentLoaded", function() {
+                    renderMathInElement(document.body, {
+                      // customised options
+                      // • auto-render specific keys, e.g.:
+                      delimiters: [
+                          {left: '$$', right: '$$', display: true},
+                          {left: '$', right: '$', display: false},
+                          {left: '\\(', right: '\\)', display: false},
+                          {left: '\\[', right: '\\]', display: true}
+                      ],
+                      // • rendering keys, e.g.:
+                      throwOnError : false
+                    });
+                });
+            </script>
+        
 
-		
-			<script>
-				var argonEnableCodeHighlight = true;
-			</script>
-			
+        
+            <script>
+                var argonEnableCodeHighlight = true;
+            </script>
+            
 <link rel="stylesheet" href="/assets/vendor/highlight/styles/vs2015.css">
 
-		
+        
 
-	</div>
+    </div>
 </div>
 <noscript>
-	<style>
-		article img.lazyload[src^="data:image/svg+xml;base64,PCEtLUFyZ29uTG9hZGluZy0tPg"]{display: none;}
-		.comment-item-text .comment-sticker.lazyload{display: none;}
-	</style>
+    <style>
+        article img.lazyload[src^="data:image/svg+xml;base64,PCEtLUFyZ29uTG9hZGluZy0tPg"]{display: none;}
+        .comment-item-text .comment-sticker.lazyload{display: none;}
+    </style>
 </noscript>
 </body>
 

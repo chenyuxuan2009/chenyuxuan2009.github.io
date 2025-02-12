@@ -22,12 +22,12 @@
 	
 		<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=5">
 	
-	<meta name="description" content="排名一开始不明白为什么一堆大佬死这题了。 一翻代码：年级从大到小。 …… 正文开始： 首先排序，首先按成绩大到小，其次按年级小到大。 然后可以开个 hash 数组统计到目前为止每个年级的人数，输出直接输出自己年级之前的总和。 #include&lt;bits&#x2F;stdc++.h&gt; using namespace std; struct node &#123; 	int Scr,Grd; &amp;#1">
+	<meta name="description" content="排名 一开始不明白为什么一堆大佬死这题了。 一翻代码：年级从大到小。 …… 正文开始： 首先排序，首先按成绩大到小，其次按年级小到大。 然后可以开个 hash 数组统计到目前为止每个年级的人数，输出直接输出自己年级之前的总和。 #include&lt;bits&#x2F;stdc++.h&gt; using namespace std; struct node &#123; 	int Scr,Grd; &amp;">
 <meta property="og:type" content="article">
 <meta property="og:title" content="[题解] 20221004 | CSP2022 考前模拟赛 做题笔记">
 <meta property="og:url" content="http://blog.cyx2009.top/archives/20221004_mock/index.html">
 <meta property="og:site_name" content="沉石鱼惊旋 的博客">
-<meta property="og:description" content="排名一开始不明白为什么一堆大佬死这题了。 一翻代码：年级从大到小。 …… 正文开始： 首先排序，首先按成绩大到小，其次按年级小到大。 然后可以开个 hash 数组统计到目前为止每个年级的人数，输出直接输出自己年级之前的总和。 #include&lt;bits&#x2F;stdc++.h&gt; using namespace std; struct node &#123; 	int Scr,Grd; &amp;#1">
+<meta property="og:description" content="排名 一开始不明白为什么一堆大佬死这题了。 一翻代码：年级从大到小。 …… 正文开始： 首先排序，首先按成绩大到小，其次按年级小到大。 然后可以开个 hash 数组统计到目前为止每个年级的人数，输出直接输出自己年级之前的总和。 #include&lt;bits&#x2F;stdc++.h&gt; using namespace std; struct node &#123; 	int Scr,Grd; &amp;">
 <meta property="og:locale" content="zh_CN">
 <meta property="article:published_time" content="2022-10-04T10:04:00.000Z">
 <meta property="article:modified_time" content="2025-02-12T13:23:50.800Z">
@@ -690,7 +690,8 @@
 	</header>
 
 	<div class="post-content" id="post_content">
-		<h3 id="排名"><a href="#排名" class="headerlink" title="排名"></a>排名</h3><p>一开始不明白为什么一堆大佬死这题了。</p>
+		<h3 id="排名"><a class="markdownIt-Anchor" href="#排名"></a> 排名</h3>
+<p>一开始不明白为什么一堆大佬死这题了。</p>
 <p>一翻代码：年级从大到小。</p>
 <p>……</p>
 <p>正文开始：</p>
@@ -728,10 +729,8 @@
 	&#125;
     <span class="keyword">return</span> <span class="number">0</span>;
 &#125;</code></pre>
-
-
-
-<h3 id="旅游"><a href="#旅游" class="headerlink" title="旅游"></a>旅游</h3><p>一道搜索。</p>
+<h3 id="旅游"><a class="markdownIt-Anchor" href="#旅游"></a> 旅游</h3>
+<p>一道搜索。</p>
 <p>对于每个点，我们扫一遍看它是山还是湖。</p>
 <p>后记：调了一上午，发现是本地栈空间没有机房开得大……</p>
 <p>吃席！</p>
@@ -790,16 +789,17 @@
 				ansf+=lake;
 				ansg+=hill;
 			&#125;</code></pre>
-
-<p>}<br>}<br>cout&lt;&lt;ansf&lt;&lt;” “&lt;&lt;ansg&lt;&lt;endl;<br>return 0;</p>
+<p>}
+}
+cout&lt;&lt;ansf&lt;&lt;&quot; &quot;&lt;&lt;ansg&lt;&lt;endl;
+return 0;</p>
 <pre><code class="highlight">&#125;</code></pre>
-
-
-
-<h3 id="遗址"><a href="#遗址" class="headerlink" title="遗址"></a>遗址</h3><p><a target="_blank" rel="noopener" href="https://www.luogu.com.cn/blog/516346/solution-p8197">https://www.luogu.com.cn/blog/516346/solution-p8197</a></p>
-<p>[post cid&#x3D;”84” cover&#x3D;”” size&#x3D;””&#x2F;]</p>
-<h3 id="愤怒的小鸟"><a href="#愤怒的小鸟" class="headerlink" title="愤怒的小鸟"></a>愤怒的小鸟</h3><p>题目改了，可以连续爆炸。</p>
-<p>那么我们只需要找出两两之间的差，除掉前 $k-1$ 个最大的，之后的最大即为答案。</p>
+<h3 id="遗址"><a class="markdownIt-Anchor" href="#遗址"></a> 遗址</h3>
+<p><a target="_blank" rel="noopener" href="https://www.luogu.com.cn/blog/516346/solution-p8197">https://www.luogu.com.cn/blog/516346/solution-p8197</a></p>
+<p>[post cid=“84” cover=“” size=“”/]</p>
+<h3 id="愤怒的小鸟"><a class="markdownIt-Anchor" href="#愤怒的小鸟"></a> 愤怒的小鸟</h3>
+<p>题目改了，可以连续爆炸。</p>
+<p>那么我们只需要找出两两之间的差，除掉前 <span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>k</mi><mo>−</mo><mn>1</mn></mrow><annotation encoding="application/x-tex">k-1</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.77777em;vertical-align:-0.08333em;"></span><span class="mord mathnormal" style="margin-right:0.03148em;">k</span><span class="mspace" style="margin-right:0.2222222222222222em;"></span><span class="mbin">−</span><span class="mspace" style="margin-right:0.2222222222222222em;"></span></span><span class="base"><span class="strut" style="height:0.64444em;vertical-align:0em;"></span><span class="mord">1</span></span></span></span> 个最大的，之后的最大即为答案。</p>
 <p>显然过程是 <code>排序整个数组</code>-<code>得到两两间的差</code>-<code>找出答案</code>。</p>
 <pre><code class="highlight cpp"><span class="meta">#<span class="keyword">include</span><span class="string">&lt;bits/stdc++.h&gt;</span></span>
 <span class="keyword">using</span> <span class="keyword">namespace</span> std;
@@ -840,7 +840,6 @@ priority_queue&lt;<span class="type">int</span>&gt;q;
 <span class="comment"></span>
 <span class="comment">1 3 8 10 18 20 25</span>
 <span class="comment">*/</span></code></pre>
-
 
 	</div>
 
@@ -920,11 +919,12 @@ priority_queue&lt;<span class="type">int</span>&gt;q;
 <script type="text/javascript">
 	socialShare("#share", {
 	    title : '[题解] 20221004 | CSP2022 考前模拟赛 做题笔记',
-	    description : '排名一开始不明白为什么一堆大佬死这题了。
+	    description : ' 排名
+一开始不明白为什么一堆大佬死这题了。
 一翻代码：年级从大到小。
 ……
 正文开始：
-首先排序，首先...',
+首先排序，...',
 	    wechatQrcodeTitle : "分享到微信",
 	    wechatQrcodeHelper : '微信扫描二维码',
 	    source : 'http://blog.cyx2009.top/archives/20221004_mock/'
@@ -1013,30 +1013,30 @@ priority_queue&lt;<span class="type">int</span>&gt;q;
 		
 		
 
-					<footer id="footer" class="site-footer card shadow-sm border-0">
-						
-						<div>Theme <a target="_blank" rel="noopener" href="https://github.com/solstice23/hexo-theme-argon"><strong>Argon</strong></a> | Powered by Hexo</div>
-						<span id="busuanzi_container_site_uv">
-							本站访客数 <span id="busuanzi_value_site_uv"></span> 人次
-						</span>
-						<span id="timeDate">载入时间...</span>
-						<script>
-						    var now = new Date(); 
-						    function createtime() { 
-						        var grt= new Date("03/28/2022 20:00:00");//在此处修改你的建站时间
-						        now.setTime(now.getTime()+250); 
-						        days = (now - grt ) / 1000 / 60 / 60 / 24; dnum = Math.floor(days); 
-						        hours = (now - grt ) / 1000 / 60 / 60 - (24 * dnum); hnum = Math.floor(hours); 
-						        if(String(hnum).length ==1 ){hnum = "0" + hnum;} minutes = (now - grt ) / 1000 /60 - (24 * 60 * dnum) - (60 * hnum); 
-						        mnum = Math.floor(minutes); if(String(mnum).length ==1 ){mnum = "0" + mnum;} 
-						        seconds = (now - grt ) / 1000 - (24 * 60 * 60 * dnum) - (60 * 60 * hnum) - (60 * mnum); 
-						        snum = Math.round(seconds); if(String(snum).length ==1 ){snum = "0" + snum;} 
-						        document.getElementById("timeDate").innerHTML = "本站已安全运行 "+dnum+" 天 "+ hnum + " 小时 " + mnum + " 分 " + snum + " 秒"; 
-						        // document.getElementById("times").innerHTML = hnum + " 小时 " + mnum + " 分 " + snum + " 秒"; 
-						    } 
-						setInterval("createtime()",250);
-						</script>
-						<script>
+                    <footer id="footer" class="site-footer card shadow-sm border-0">
+                        
+                        <div>Theme <a target="_blank" rel="noopener" href="https://github.com/solstice23/hexo-theme-argon"><strong>Argon</strong></a> | Powered by Hexo</div>
+                        <span id="busuanzi_container_site_uv">
+                            本站访客数 <span id="busuanzi_value_site_uv"></span> 人次
+                        </span>
+                        <span id="timeDate">载入时间...</span>
+                        <script>
+                            var now = new Date(); 
+                            function createtime() { 
+                                var grt= new Date("03/28/2022 20:00:00");//在此处修改你的建站时间
+                                now.setTime(now.getTime()+250); 
+                                days = (now - grt ) / 1000 / 60 / 60 / 24; dnum = Math.floor(days); 
+                                hours = (now - grt ) / 1000 / 60 / 60 - (24 * dnum); hnum = Math.floor(hours); 
+                                if(String(hnum).length ==1 ){hnum = "0" + hnum;} minutes = (now - grt ) / 1000 /60 - (24 * 60 * dnum) - (60 * hnum); 
+                                mnum = Math.floor(minutes); if(String(mnum).length ==1 ){mnum = "0" + mnum;} 
+                                seconds = (now - grt ) / 1000 - (24 * 60 * 60 * dnum) - (60 * 60 * hnum) - (60 * mnum); 
+                                snum = Math.round(seconds); if(String(snum).length ==1 ){snum = "0" + snum;} 
+                                document.getElementById("timeDate").innerHTML = "本站已安全运行 "+dnum+" 天 "+ hnum + " 小时 " + mnum + " 分 " + snum + " 秒"; 
+                                // document.getElementById("times").innerHTML = hnum + " 小时 " + mnum + " 分 " + snum + " 秒"; 
+                            } 
+                        setInterval("createtime()",250);
+                        </script>
+                        <script>
         window.onload = (() => {
             //定义点击出现文字类
             function ClickFrontShow() {
@@ -1173,49 +1173,54 @@ priority_queue&lt;<span class="type">int</span>&gt;q;
             //第二个参数是颜色数组，必须是数组类型！
             frontShow.init();
         })();
-						</script>
-					</footer>
-				</main>
-			</div>
-		</div>
-		
+                        </script>
+                    </footer>
+                </main>
+            </div>
+        </div>
+        
 <script src="/argontheme.js"></script>
 
-		
-		
-		
-			<link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/KaTeX/0.15.6/katex.min.css">
-			<script src="//cdnjs.cloudflare.com/ajax/libs/KaTeX/0.15.6/katex.min.js"></script>
-			<script src="//cdnjs.cloudflare.com/ajax/libs/KaTeX/0.15.6/contrib/auto-render.min.js"></script>
-			<script>
-				document.addEventListener("DOMContentLoaded", function() {
-					renderMathInElement(document.body,{
-						delimiters: [
-							{left: "$$", right: "$$", display: true},
-							{left: "$", right: "$", display: false},
-							{left: "\\(", right: "\\)", display: false}
-						]
-					});
-				});
-			</script>
-		
+        
+        
+        
+            <link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/KaTeX/0.16.9/katex.min.css">
+            <script src="//cdnjs.cloudflare.com/ajax/libs/KaTeX/0.16.9/katex.min.js"></script>
+            <script src="//cdnjs.cloudflare.com/ajax/libs/KaTeX/0.16.9/contrib/auto-render.min.js"></script>
+            <script>
+                document.addEventListener("DOMContentLoaded", function() {
+                    renderMathInElement(document.body, {
+                      // customised options
+                      // • auto-render specific keys, e.g.:
+                      delimiters: [
+                          {left: '$$', right: '$$', display: true},
+                          {left: '$', right: '$', display: false},
+                          {left: '\\(', right: '\\)', display: false},
+                          {left: '\\[', right: '\\]', display: true}
+                      ],
+                      // • rendering keys, e.g.:
+                      throwOnError : false
+                    });
+                });
+            </script>
+        
 
-		
-			<script>
-				var argonEnableCodeHighlight = true;
-			</script>
-			
+        
+            <script>
+                var argonEnableCodeHighlight = true;
+            </script>
+            
 <link rel="stylesheet" href="/assets/vendor/highlight/styles/vs2015.css">
 
-		
+        
 
-	</div>
+    </div>
 </div>
 <noscript>
-	<style>
-		article img.lazyload[src^="data:image/svg+xml;base64,PCEtLUFyZ29uTG9hZGluZy0tPg"]{display: none;}
-		.comment-item-text .comment-sticker.lazyload{display: none;}
-	</style>
+    <style>
+        article img.lazyload[src^="data:image/svg+xml;base64,PCEtLUFyZ29uTG9hZGluZy0tPg"]{display: none;}
+        .comment-item-text .comment-sticker.lazyload{display: none;}
+    </style>
 </noscript>
 </body>
 

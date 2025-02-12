@@ -22,12 +22,12 @@
 	
 		<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=5">
 	
-	<meta name="description" content="神秘能量原理在于，对于自然数 $i$，在 $n$ 以内，一定有 $\left\lfloor\frac{n}{i}\right\rfloor$ 个数字是 $i$ 的倍数。 很好解释，$i$ 的倍数 $i$ 个一循环。 然后容斥，$[l,r]$ 的答案是 $[1,r]-[1,l-1]$。 做完可以做一下洛谷 P1403。 #include&lt;bits&#x2F;stdc++.h&gt; using name">
+	<meta name="description" content="神秘能量 原理在于，对于自然数 iii，在 nnn 以内，一定有 ⌊ni⌋\left\lfloor\frac{n}{i}\right\rfloor⌊in​⌋ 个数字是 iii 的倍数。 很好解释，iii 的倍数 iii 个一循环。 然后容斥，[l,r][l,r][l,r] 的答案是 [1,r]−[1,l−1][1,r]-[1,l-1][1,r]−[1,l−1]。 做完可以做一下洛谷 P1403。">
 <meta property="og:type" content="article">
 <meta property="og:title" content="[题解] 20220809 | CSP2022 考前模拟赛 做题笔记">
 <meta property="og:url" content="http://blog.cyx2009.top/archives/20220809_mock/index.html">
 <meta property="og:site_name" content="沉石鱼惊旋 的博客">
-<meta property="og:description" content="神秘能量原理在于，对于自然数 $i$，在 $n$ 以内，一定有 $\left\lfloor\frac{n}{i}\right\rfloor$ 个数字是 $i$ 的倍数。 很好解释，$i$ 的倍数 $i$ 个一循环。 然后容斥，$[l,r]$ 的答案是 $[1,r]-[1,l-1]$。 做完可以做一下洛谷 P1403。 #include&lt;bits&#x2F;stdc++.h&gt; using name">
+<meta property="og:description" content="神秘能量 原理在于，对于自然数 iii，在 nnn 以内，一定有 ⌊ni⌋\left\lfloor\frac{n}{i}\right\rfloor⌊in​⌋ 个数字是 iii 的倍数。 很好解释，iii 的倍数 iii 个一循环。 然后容斥，[l,r][l,r][l,r] 的答案是 [1,r]−[1,l−1][1,r]-[1,l-1][1,r]−[1,l−1]。 做完可以做一下洛谷 P1403。">
 <meta property="og:locale" content="zh_CN">
 <meta property="article:published_time" content="2022-08-09T13:20:00.000Z">
 <meta property="article:modified_time" content="2025-02-12T13:23:42.023Z">
@@ -674,7 +674,7 @@
 						
 						<div class="post-meta-detail post-meta-detail-words">
 							<i class="fa fa-file-word-o" aria-hidden="true"></i>
-							976 字
+							992 字
 						</div>
 					
 						
@@ -690,9 +690,10 @@
 	</header>
 
 	<div class="post-content" id="post_content">
-		<h4 id="神秘能量"><a href="#神秘能量" class="headerlink" title="神秘能量"></a>神秘能量</h4><p>原理在于，对于自然数 $i$，在 $n$ 以内，一定有 $\left\lfloor\frac{n}{i}\right\rfloor$ 个数字是 $i$ 的倍数。</p>
-<p>很好解释，$i$ 的倍数 $i$ 个一循环。</p>
-<p>然后容斥，$[l,r]$ 的答案是 $[1,r]-[1,l-1]$。</p>
+		<h4 id="神秘能量"><a class="markdownIt-Anchor" href="#神秘能量"></a> 神秘能量</h4>
+<p>原理在于，对于自然数 <span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>i</mi></mrow><annotation encoding="application/x-tex">i</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.65952em;vertical-align:0em;"></span><span class="mord mathnormal">i</span></span></span></span>，在 <span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>n</mi></mrow><annotation encoding="application/x-tex">n</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.43056em;vertical-align:0em;"></span><span class="mord mathnormal">n</span></span></span></span> 以内，一定有 <span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mo fence="true">⌊</mo><mfrac><mi>n</mi><mi>i</mi></mfrac><mo fence="true">⌋</mo></mrow><annotation encoding="application/x-tex">\left\lfloor\frac{n}{i}\right\rfloor</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:1.20001em;vertical-align:-0.35001em;"></span><span class="minner"><span class="mopen delimcenter" style="top:0em;"><span class="delimsizing size1">⌊</span></span><span class="mord"><span class="mopen nulldelimiter"></span><span class="mfrac"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist" style="height:0.695392em;"><span style="top:-2.6550000000000002em;"><span class="pstrut" style="height:3em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mtight"><span class="mord mathnormal mtight">i</span></span></span></span><span style="top:-3.23em;"><span class="pstrut" style="height:3em;"></span><span class="frac-line" style="border-bottom-width:0.04em;"></span></span><span style="top:-3.394em;"><span class="pstrut" style="height:3em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mtight"><span class="mord mathnormal mtight">n</span></span></span></span></span><span class="vlist-s">​</span></span><span class="vlist-r"><span class="vlist" style="height:0.345em;"><span></span></span></span></span></span><span class="mclose nulldelimiter"></span></span><span class="mclose delimcenter" style="top:0em;"><span class="delimsizing size1">⌋</span></span></span></span></span></span> 个数字是 <span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>i</mi></mrow><annotation encoding="application/x-tex">i</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.65952em;vertical-align:0em;"></span><span class="mord mathnormal">i</span></span></span></span> 的倍数。</p>
+<p>很好解释，<span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>i</mi></mrow><annotation encoding="application/x-tex">i</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.65952em;vertical-align:0em;"></span><span class="mord mathnormal">i</span></span></span></span> 的倍数 <span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>i</mi></mrow><annotation encoding="application/x-tex">i</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.65952em;vertical-align:0em;"></span><span class="mord mathnormal">i</span></span></span></span> 个一循环。</p>
+<p>然后容斥，<span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mo stretchy="false">[</mo><mi>l</mi><mo separator="true">,</mo><mi>r</mi><mo stretchy="false">]</mo></mrow><annotation encoding="application/x-tex">[l,r]</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:1em;vertical-align:-0.25em;"></span><span class="mopen">[</span><span class="mord mathnormal" style="margin-right:0.01968em;">l</span><span class="mpunct">,</span><span class="mspace" style="margin-right:0.16666666666666666em;"></span><span class="mord mathnormal" style="margin-right:0.02778em;">r</span><span class="mclose">]</span></span></span></span> 的答案是 <span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mo stretchy="false">[</mo><mn>1</mn><mo separator="true">,</mo><mi>r</mi><mo stretchy="false">]</mo><mo>−</mo><mo stretchy="false">[</mo><mn>1</mn><mo separator="true">,</mo><mi>l</mi><mo>−</mo><mn>1</mn><mo stretchy="false">]</mo></mrow><annotation encoding="application/x-tex">[1,r]-[1,l-1]</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:1em;vertical-align:-0.25em;"></span><span class="mopen">[</span><span class="mord">1</span><span class="mpunct">,</span><span class="mspace" style="margin-right:0.16666666666666666em;"></span><span class="mord mathnormal" style="margin-right:0.02778em;">r</span><span class="mclose">]</span><span class="mspace" style="margin-right:0.2222222222222222em;"></span><span class="mbin">−</span><span class="mspace" style="margin-right:0.2222222222222222em;"></span></span><span class="base"><span class="strut" style="height:1em;vertical-align:-0.25em;"></span><span class="mopen">[</span><span class="mord">1</span><span class="mpunct">,</span><span class="mspace" style="margin-right:0.16666666666666666em;"></span><span class="mord mathnormal" style="margin-right:0.01968em;">l</span><span class="mspace" style="margin-right:0.2222222222222222em;"></span><span class="mbin">−</span><span class="mspace" style="margin-right:0.2222222222222222em;"></span></span><span class="base"><span class="strut" style="height:1em;vertical-align:-0.25em;"></span><span class="mord">1</span><span class="mclose">]</span></span></span></span>。</p>
 <p>做完可以做一下<a target="_blank" rel="noopener" href="https://www.luogu.com.cn/problem/P1403">洛谷 P1403</a>。</p>
 <pre><code class="highlight cpp"><span class="meta">#<span class="keyword">include</span><span class="string">&lt;bits/stdc++.h&gt;</span></span>
 <span class="keyword">using</span> <span class="keyword">namespace</span> std;
@@ -711,9 +712,8 @@
 	cout&lt;&lt;ans&lt;&lt;endl;
 	<span class="keyword">return</span> <span class="number">0</span>;
 &#125;</code></pre>
-
-
-<h4 id="城市联盟"><a href="#城市联盟" class="headerlink" title="城市联盟"></a>城市联盟</h4><p>我们考虑贪心，只要不满足条件的，直接踢出去，同时把其他和它有联系的城市也删减一个边。</p>
+<h4 id="城市联盟"><a class="markdownIt-Anchor" href="#城市联盟"></a> 城市联盟</h4>
+<p>我们考虑贪心，只要不满足条件的，直接踢出去，同时把其他和它有联系的城市也删减一个边。</p>
 <pre><code class="highlight cpp"><span class="meta">#<span class="keyword">include</span><span class="string">&lt;bits/stdc++.h&gt;</span></span>
 <span class="keyword">using</span> <span class="keyword">namespace</span> std;
 <span class="type">bool</span> f[<span class="number">520</span>];
@@ -762,9 +762,8 @@ set&lt;<span class="type">int</span>&gt;a[<span class="number">520</span>];
 	cout&lt;&lt;sum&lt;&lt;endl;
 	<span class="keyword">return</span> <span class="number">0</span>;
 &#125;</code></pre>
-
-
-<h4 id="花园计划"><a href="#花园计划" class="headerlink" title="花园计划"></a>花园计划</h4><p>01背包改版，可以选择 取第一种\取第二种\不取</p>
+<h4 id="花园计划"><a class="markdownIt-Anchor" href="#花园计划"></a> 花园计划</h4>
+<p>01背包改版，可以选择 取第一种\取第二种\不取</p>
 <pre><code class="highlight cpp"><span class="meta">#<span class="keyword">include</span><span class="string">&lt;bits/stdc++.h&gt;</span></span>
 <span class="keyword">using</span> <span class="keyword">namespace</span> std;
 <span class="type">int</span> a[<span class="number">220</span>];
@@ -799,9 +798,8 @@ set&lt;<span class="type">int</span>&gt;a[<span class="number">520</span>];
 	cout&lt;&lt;f1[m]+s&lt;&lt;endl;
 	<span class="keyword">return</span> <span class="number">0</span>;
 &#125;</code></pre>
-
-
-<h4 id="爬塔游戏"><a href="#爬塔游戏" class="headerlink" title="爬塔游戏"></a>爬塔游戏</h4><p>一个 Floyd。</p>
+<h4 id="爬塔游戏"><a class="markdownIt-Anchor" href="#爬塔游戏"></a> 爬塔游戏</h4>
+<p>一个 Floyd。</p>
 <p>先找出直接到的，然后再看一下有没有跳跃能更快的，最后做一遍最短路找最短时间。</p>
 <p>建图注意，大楼两边互建，跳的时候只能往一边建。</p>
 <p>注意很多开根号啥的，很烦。</p>
@@ -956,7 +954,8 @@ set&lt;<span class="type">int</span>&gt;a[<span class="number">520</span>];
 <script type="text/javascript">
 	socialShare("#share", {
 	    title : '[题解] 20220809 | CSP2022 考前模拟赛 做题笔记',
-	    description : '神秘能量原理在于，对于自然数 $i$，在 $n$ 以内，一定有 $\left\lfloor\frac...',
+	    description : ' 神秘能量
+原理在于，对于自然数 iii，在 nnn 以内，一定有 ⌊ni⌋\left\lfloor...',
 	    wechatQrcodeTitle : "分享到微信",
 	    wechatQrcodeHelper : '微信扫描二维码',
 	    source : 'http://blog.cyx2009.top/archives/20220809_mock/'
@@ -1045,30 +1044,30 @@ set&lt;<span class="type">int</span>&gt;a[<span class="number">520</span>];
 		
 		
 
-					<footer id="footer" class="site-footer card shadow-sm border-0">
-						
-						<div>Theme <a target="_blank" rel="noopener" href="https://github.com/solstice23/hexo-theme-argon"><strong>Argon</strong></a> | Powered by Hexo</div>
-						<span id="busuanzi_container_site_uv">
-							本站访客数 <span id="busuanzi_value_site_uv"></span> 人次
-						</span>
-						<span id="timeDate">载入时间...</span>
-						<script>
-						    var now = new Date(); 
-						    function createtime() { 
-						        var grt= new Date("03/28/2022 20:00:00");//在此处修改你的建站时间
-						        now.setTime(now.getTime()+250); 
-						        days = (now - grt ) / 1000 / 60 / 60 / 24; dnum = Math.floor(days); 
-						        hours = (now - grt ) / 1000 / 60 / 60 - (24 * dnum); hnum = Math.floor(hours); 
-						        if(String(hnum).length ==1 ){hnum = "0" + hnum;} minutes = (now - grt ) / 1000 /60 - (24 * 60 * dnum) - (60 * hnum); 
-						        mnum = Math.floor(minutes); if(String(mnum).length ==1 ){mnum = "0" + mnum;} 
-						        seconds = (now - grt ) / 1000 - (24 * 60 * 60 * dnum) - (60 * 60 * hnum) - (60 * mnum); 
-						        snum = Math.round(seconds); if(String(snum).length ==1 ){snum = "0" + snum;} 
-						        document.getElementById("timeDate").innerHTML = "本站已安全运行 "+dnum+" 天 "+ hnum + " 小时 " + mnum + " 分 " + snum + " 秒"; 
-						        // document.getElementById("times").innerHTML = hnum + " 小时 " + mnum + " 分 " + snum + " 秒"; 
-						    } 
-						setInterval("createtime()",250);
-						</script>
-						<script>
+                    <footer id="footer" class="site-footer card shadow-sm border-0">
+                        
+                        <div>Theme <a target="_blank" rel="noopener" href="https://github.com/solstice23/hexo-theme-argon"><strong>Argon</strong></a> | Powered by Hexo</div>
+                        <span id="busuanzi_container_site_uv">
+                            本站访客数 <span id="busuanzi_value_site_uv"></span> 人次
+                        </span>
+                        <span id="timeDate">载入时间...</span>
+                        <script>
+                            var now = new Date(); 
+                            function createtime() { 
+                                var grt= new Date("03/28/2022 20:00:00");//在此处修改你的建站时间
+                                now.setTime(now.getTime()+250); 
+                                days = (now - grt ) / 1000 / 60 / 60 / 24; dnum = Math.floor(days); 
+                                hours = (now - grt ) / 1000 / 60 / 60 - (24 * dnum); hnum = Math.floor(hours); 
+                                if(String(hnum).length ==1 ){hnum = "0" + hnum;} minutes = (now - grt ) / 1000 /60 - (24 * 60 * dnum) - (60 * hnum); 
+                                mnum = Math.floor(minutes); if(String(mnum).length ==1 ){mnum = "0" + mnum;} 
+                                seconds = (now - grt ) / 1000 - (24 * 60 * 60 * dnum) - (60 * 60 * hnum) - (60 * mnum); 
+                                snum = Math.round(seconds); if(String(snum).length ==1 ){snum = "0" + snum;} 
+                                document.getElementById("timeDate").innerHTML = "本站已安全运行 "+dnum+" 天 "+ hnum + " 小时 " + mnum + " 分 " + snum + " 秒"; 
+                                // document.getElementById("times").innerHTML = hnum + " 小时 " + mnum + " 分 " + snum + " 秒"; 
+                            } 
+                        setInterval("createtime()",250);
+                        </script>
+                        <script>
         window.onload = (() => {
             //定义点击出现文字类
             function ClickFrontShow() {
@@ -1205,49 +1204,54 @@ set&lt;<span class="type">int</span>&gt;a[<span class="number">520</span>];
             //第二个参数是颜色数组，必须是数组类型！
             frontShow.init();
         })();
-						</script>
-					</footer>
-				</main>
-			</div>
-		</div>
-		
+                        </script>
+                    </footer>
+                </main>
+            </div>
+        </div>
+        
 <script src="/argontheme.js"></script>
 
-		
-		
-		
-			<link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/KaTeX/0.15.6/katex.min.css">
-			<script src="//cdnjs.cloudflare.com/ajax/libs/KaTeX/0.15.6/katex.min.js"></script>
-			<script src="//cdnjs.cloudflare.com/ajax/libs/KaTeX/0.15.6/contrib/auto-render.min.js"></script>
-			<script>
-				document.addEventListener("DOMContentLoaded", function() {
-					renderMathInElement(document.body,{
-						delimiters: [
-							{left: "$$", right: "$$", display: true},
-							{left: "$", right: "$", display: false},
-							{left: "\\(", right: "\\)", display: false}
-						]
-					});
-				});
-			</script>
-		
+        
+        
+        
+            <link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/KaTeX/0.16.9/katex.min.css">
+            <script src="//cdnjs.cloudflare.com/ajax/libs/KaTeX/0.16.9/katex.min.js"></script>
+            <script src="//cdnjs.cloudflare.com/ajax/libs/KaTeX/0.16.9/contrib/auto-render.min.js"></script>
+            <script>
+                document.addEventListener("DOMContentLoaded", function() {
+                    renderMathInElement(document.body, {
+                      // customised options
+                      // • auto-render specific keys, e.g.:
+                      delimiters: [
+                          {left: '$$', right: '$$', display: true},
+                          {left: '$', right: '$', display: false},
+                          {left: '\\(', right: '\\)', display: false},
+                          {left: '\\[', right: '\\]', display: true}
+                      ],
+                      // • rendering keys, e.g.:
+                      throwOnError : false
+                    });
+                });
+            </script>
+        
 
-		
-			<script>
-				var argonEnableCodeHighlight = true;
-			</script>
-			
+        
+            <script>
+                var argonEnableCodeHighlight = true;
+            </script>
+            
 <link rel="stylesheet" href="/assets/vendor/highlight/styles/vs2015.css">
 
-		
+        
 
-	</div>
+    </div>
 </div>
 <noscript>
-	<style>
-		article img.lazyload[src^="data:image/svg+xml;base64,PCEtLUFyZ29uTG9hZGluZy0tPg"]{display: none;}
-		.comment-item-text .comment-sticker.lazyload{display: none;}
-	</style>
+    <style>
+        article img.lazyload[src^="data:image/svg+xml;base64,PCEtLUFyZ29uTG9hZGluZy0tPg"]{display: none;}
+        .comment-item-text .comment-sticker.lazyload{display: none;}
+    </style>
 </noscript>
 </body>
 

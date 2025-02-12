@@ -719,7 +719,7 @@
 						
 						<div class="post-meta-detail post-meta-detail-words">
 							<i class="fa fa-file-word-o" aria-hidden="true"></i>
-							1.4k 字
+							1.6k 字
 						</div>
 					
 						
@@ -727,7 +727,7 @@
 						
 						<div class="post-meta-detail post-meta-detail-readingtime">
 							<i class="fa fa-hourglass-end" aria-hidden="true"></i>
-							6 分钟
+							7 分钟
 						</div>
 					
 		</div>
@@ -737,9 +737,11 @@
 	<div class="post-content">
 		
 			
-				前言赛时一直在做这题但是没推出来呜呜，下次还是不能懒，多打表。一些东西也不要随便化简，可能化简之后反而看不出结论了。
+				 前言
+赛时一直在做这题但是没推出来呜呜，下次还是不能懒，多打表。一些东西也不要随便化简，可能化简之后反而看不出结论了。
 感谢 ciuim 和 NaCly_Fish 等大神在 LA 群教会我做这题。
-题目翻译给定 $n$，求 $(\sum\limits_{j&#x3D;1}^n\sum \limits_{i&#x3D;j}^n(C(i,j)\bmod ...
+ 题目翻译
+给定 nnn，求 (∑j=1n∑i=jn(C(i,j) mod j)) mod p(\sum\limits_{j=1}^n\sum \li...
 			
 		
 	</div>
@@ -784,7 +786,7 @@
 						
 						<div class="post-meta-detail post-meta-detail-words">
 							<i class="fa fa-file-word-o" aria-hidden="true"></i>
-							656 字
+							674 字
 						</div>
 					
 						
@@ -805,9 +807,9 @@
 				天知道我是在怎样的精神状态下写出来的。
 感觉是很新奇的随机化做法（）
 
-前 $0.45$ 秒，第一个排列开始找 next_permutation 并且 check。
-前 $0.45\sim 0.9$ 秒，最后一个排列开始找 prev_permutation 并且 check。
-前 $0.9\sim 0.995$ 秒，对于排列随机交换位置，然后如果答...
+前 0.450.450.45 秒，第一个排列开始找 next_permutation 并且 check。
+前 0.45∼0.90.45\sim 0.90.45∼0.9 秒，最后一个排列开始找 prev_permutation 并且 check。
+前 0.9∼0.9950.9\s...
 			
 		
 	</div>
@@ -880,10 +882,10 @@
 	<div class="post-content">
 		
 			
-				题目翻译平面直角坐标系中，有 $n$ 个木乃伊，分别为 $(x_i,y_i)$。你在原点 $(0,0)$ 上。
-每一个时刻你可以往 $8$ 个相邻位置逃跑，或者待在原地。之后，木乃伊会向 $8$ 个方向移动到最靠近你（距离为欧几里得距离）的位置。多只木乃伊可以在一个格子。
-问你多久可以不被木乃伊抓住。当然，也可能有永远不被抓住。
-放一张样例的最佳走...
+				 题目翻译
+平面直角坐标系中，有 nnn 个木乃伊，分别为 (xi,yi)(x_i,y_i)(xi​,yi​)。你在原点 (0,0)(0,0)(0,0) 上。
+每一个时刻你可以往 888 个相邻位置逃跑，或者待在原地。之后，木乃伊会向 888 个方向移动到最靠近你（距离为欧几里得距离）的位置。多只木乃伊可以在一个格子。
+问你多久可以不被木乃伊抓住。...
 			
 		
 	</div>
@@ -931,7 +933,7 @@
 						
 						<div class="post-meta-detail post-meta-detail-words">
 							<i class="fa fa-file-word-o" aria-hidden="true"></i>
-							984 字
+							1.1k 字
 						</div>
 					
 						
@@ -951,12 +953,13 @@
 	<div class="post-content">
 		
 			
-				题目思路原来这种多边形转成笛卡尔树建树是常见 trick。练的太少导致的。
+				 题目思路
+原来这种多边形转成笛卡尔树建树是常见 trick。练的太少导致的。
 但是这题其实不用笛卡尔树建树，因为 DP 部分复杂度较高其实这个优化（至少在我的程序上）没有太大作用。
 
 为了方便描述，定义中国象棋中的『車』为题目中的颜色，本质一样。
 考虑把这个多边形转成树，分割方式就是以底层开割。
-机房电脑的 NOI Linux 2.0 没有好用的画图...
+机房电脑的 NOI Linux 2.0 没有好用的...
 			
 		
 	</div>
@@ -1001,7 +1004,7 @@
 						
 						<div class="post-meta-detail post-meta-detail-words">
 							<i class="fa fa-file-word-o" aria-hidden="true"></i>
-							1.6k 字
+							1.7k 字
 						</div>
 					
 						
@@ -1019,12 +1022,10 @@
 	<div class="post-content">
 		
 			
-				题目翻译给定 $x&#x3D;(00001111)_2,y&#x3D;(00110011)_2,z&#x3D;(01010101)_2$。
+				 题目翻译
+给定 x=(00001111)2,y=(00110011)2,z=(01010101)2x=(00001111)_2,y=(00110011)_2,z=(01010101)_2x=(00001111)2​,y=(00110011)2​,z=(01010101)2​。
 你有二元运算符『与』和『或』，以及一元运算符『取反』。
-与：表示二进制下按位与，字符是 &amp;。
-或：表示二进制下按位或，字符是 |。
-取反：表示二进制下按位取反，字符是 !。
-优先级从大到小排列是：取反，...
+与：表示二进制...
 			
 		
 	</div>
@@ -1041,30 +1042,30 @@
 		
 		
 
-					<footer id="footer" class="site-footer card shadow-sm border-0">
-						
-						<div>Theme <a target="_blank" rel="noopener" href="https://github.com/solstice23/hexo-theme-argon"><strong>Argon</strong></a> | Powered by Hexo</div>
-						<span id="busuanzi_container_site_uv">
-							本站访客数 <span id="busuanzi_value_site_uv"></span> 人次
-						</span>
-						<span id="timeDate">载入时间...</span>
-						<script>
-						    var now = new Date(); 
-						    function createtime() { 
-						        var grt= new Date("03/28/2022 20:00:00");//在此处修改你的建站时间
-						        now.setTime(now.getTime()+250); 
-						        days = (now - grt ) / 1000 / 60 / 60 / 24; dnum = Math.floor(days); 
-						        hours = (now - grt ) / 1000 / 60 / 60 - (24 * dnum); hnum = Math.floor(hours); 
-						        if(String(hnum).length ==1 ){hnum = "0" + hnum;} minutes = (now - grt ) / 1000 /60 - (24 * 60 * dnum) - (60 * hnum); 
-						        mnum = Math.floor(minutes); if(String(mnum).length ==1 ){mnum = "0" + mnum;} 
-						        seconds = (now - grt ) / 1000 - (24 * 60 * 60 * dnum) - (60 * 60 * hnum) - (60 * mnum); 
-						        snum = Math.round(seconds); if(String(snum).length ==1 ){snum = "0" + snum;} 
-						        document.getElementById("timeDate").innerHTML = "本站已安全运行 "+dnum+" 天 "+ hnum + " 小时 " + mnum + " 分 " + snum + " 秒"; 
-						        // document.getElementById("times").innerHTML = hnum + " 小时 " + mnum + " 分 " + snum + " 秒"; 
-						    } 
-						setInterval("createtime()",250);
-						</script>
-						<script>
+                    <footer id="footer" class="site-footer card shadow-sm border-0">
+                        
+                        <div>Theme <a target="_blank" rel="noopener" href="https://github.com/solstice23/hexo-theme-argon"><strong>Argon</strong></a> | Powered by Hexo</div>
+                        <span id="busuanzi_container_site_uv">
+                            本站访客数 <span id="busuanzi_value_site_uv"></span> 人次
+                        </span>
+                        <span id="timeDate">载入时间...</span>
+                        <script>
+                            var now = new Date(); 
+                            function createtime() { 
+                                var grt= new Date("03/28/2022 20:00:00");//在此处修改你的建站时间
+                                now.setTime(now.getTime()+250); 
+                                days = (now - grt ) / 1000 / 60 / 60 / 24; dnum = Math.floor(days); 
+                                hours = (now - grt ) / 1000 / 60 / 60 - (24 * dnum); hnum = Math.floor(hours); 
+                                if(String(hnum).length ==1 ){hnum = "0" + hnum;} minutes = (now - grt ) / 1000 /60 - (24 * 60 * dnum) - (60 * hnum); 
+                                mnum = Math.floor(minutes); if(String(mnum).length ==1 ){mnum = "0" + mnum;} 
+                                seconds = (now - grt ) / 1000 - (24 * 60 * 60 * dnum) - (60 * 60 * hnum) - (60 * mnum); 
+                                snum = Math.round(seconds); if(String(snum).length ==1 ){snum = "0" + snum;} 
+                                document.getElementById("timeDate").innerHTML = "本站已安全运行 "+dnum+" 天 "+ hnum + " 小时 " + mnum + " 分 " + snum + " 秒"; 
+                                // document.getElementById("times").innerHTML = hnum + " 小时 " + mnum + " 分 " + snum + " 秒"; 
+                            } 
+                        setInterval("createtime()",250);
+                        </script>
+                        <script>
         window.onload = (() => {
             //定义点击出现文字类
             function ClickFrontShow() {
@@ -1201,49 +1202,54 @@
             //第二个参数是颜色数组，必须是数组类型！
             frontShow.init();
         })();
-						</script>
-					</footer>
-				</main>
-			</div>
-		</div>
-		
+                        </script>
+                    </footer>
+                </main>
+            </div>
+        </div>
+        
 <script src="/argontheme.js"></script>
 
-		
-		
-		
-			<link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/KaTeX/0.15.6/katex.min.css">
-			<script src="//cdnjs.cloudflare.com/ajax/libs/KaTeX/0.15.6/katex.min.js"></script>
-			<script src="//cdnjs.cloudflare.com/ajax/libs/KaTeX/0.15.6/contrib/auto-render.min.js"></script>
-			<script>
-				document.addEventListener("DOMContentLoaded", function() {
-					renderMathInElement(document.body,{
-						delimiters: [
-							{left: "$$", right: "$$", display: true},
-							{left: "$", right: "$", display: false},
-							{left: "\\(", right: "\\)", display: false}
-						]
-					});
-				});
-			</script>
-		
+        
+        
+        
+            <link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/KaTeX/0.16.9/katex.min.css">
+            <script src="//cdnjs.cloudflare.com/ajax/libs/KaTeX/0.16.9/katex.min.js"></script>
+            <script src="//cdnjs.cloudflare.com/ajax/libs/KaTeX/0.16.9/contrib/auto-render.min.js"></script>
+            <script>
+                document.addEventListener("DOMContentLoaded", function() {
+                    renderMathInElement(document.body, {
+                      // customised options
+                      // • auto-render specific keys, e.g.:
+                      delimiters: [
+                          {left: '$$', right: '$$', display: true},
+                          {left: '$', right: '$', display: false},
+                          {left: '\\(', right: '\\)', display: false},
+                          {left: '\\[', right: '\\]', display: true}
+                      ],
+                      // • rendering keys, e.g.:
+                      throwOnError : false
+                    });
+                });
+            </script>
+        
 
-		
-			<script>
-				var argonEnableCodeHighlight = true;
-			</script>
-			
+        
+            <script>
+                var argonEnableCodeHighlight = true;
+            </script>
+            
 <link rel="stylesheet" href="/assets/vendor/highlight/styles/vs2015.css">
 
-		
+        
 
-	</div>
+    </div>
 </div>
 <noscript>
-	<style>
-		article img.lazyload[src^="data:image/svg+xml;base64,PCEtLUFyZ29uTG9hZGluZy0tPg"]{display: none;}
-		.comment-item-text .comment-sticker.lazyload{display: none;}
-	</style>
+    <style>
+        article img.lazyload[src^="data:image/svg+xml;base64,PCEtLUFyZ29uTG9hZGluZy0tPg"]{display: none;}
+        .comment-item-text .comment-sticker.lazyload{display: none;}
+    </style>
 </noscript>
 </body>
 

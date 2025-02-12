@@ -22,12 +22,12 @@
 	
 		<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=5">
 	
-	<meta name="description" content="赌徒数学题，分类讨论。不多说。 #include &lt;bits&#x2F;stdc++.h&gt; using namespace std; template &lt;typename T&gt; void gmx(T &amp;x, T y) &#123; x &#x3D; max(x, y); &#125; template &lt;typename T&gt; void gmn(T &amp;x, T y)">
+	<meta name="description" content="赌徒 数学题，分类讨论。不多说。 #include &lt;bits&#x2F;stdc++.h&gt; using namespace std; template &lt;typename T&gt; void gmx(T &amp;x, T y) &#123; x &#x3D; max(x, y); &#125; template &lt;typename T&gt; void gmn(T &amp;x, T">
 <meta property="og:type" content="article">
 <meta property="og:title" content="[题解] 20230818 | CSP2023 考前模拟赛 做题笔记">
 <meta property="og:url" content="http://blog.cyx2009.top/archives/20230818_mock/index.html">
 <meta property="og:site_name" content="沉石鱼惊旋 的博客">
-<meta property="og:description" content="赌徒数学题，分类讨论。不多说。 #include &lt;bits&#x2F;stdc++.h&gt; using namespace std; template &lt;typename T&gt; void gmx(T &amp;x, T y) &#123; x &#x3D; max(x, y); &#125; template &lt;typename T&gt; void gmn(T &amp;x, T y)">
+<meta property="og:description" content="赌徒 数学题，分类讨论。不多说。 #include &lt;bits&#x2F;stdc++.h&gt; using namespace std; template &lt;typename T&gt; void gmx(T &amp;x, T y) &#123; x &#x3D; max(x, y); &#125; template &lt;typename T&gt; void gmn(T &amp;x, T">
 <meta property="og:locale" content="zh_CN">
 <meta property="article:published_time" content="2023-08-18T23:08:00.000Z">
 <meta property="article:modified_time" content="2025-02-12T13:24:19.437Z">
@@ -690,7 +690,8 @@
 	</header>
 
 	<div class="post-content" id="post_content">
-		<h1 id="赌徒"><a href="#赌徒" class="headerlink" title="赌徒"></a>赌徒</h1><p>数学题，分类讨论。不多说。</p>
+		<h1 id="赌徒"><a class="markdownIt-Anchor" href="#赌徒"></a> 赌徒</h1>
+<p>数学题，分类讨论。不多说。</p>
 <pre><code class="highlight cpp"><span class="meta">#<span class="keyword">include</span> <span class="string">&lt;bits/stdc++.h&gt;</span></span>
 <span class="keyword">using</span> <span class="keyword">namespace</span> std;
 <span class="keyword">template</span> &lt;<span class="keyword">typename</span> T&gt;
@@ -718,25 +719,25 @@
 		<span class="built_in">solve</span>();
 	<span class="keyword">return</span> <span class="number">0</span>;
 &#125;</code></pre>
-
-<h1 id="残片"><a href="#残片" class="headerlink" title="残片"></a>残片</h1><p>没改好。</p>
+<h1 id="残片"><a class="markdownIt-Anchor" href="#残片"></a> 残片</h1>
+<p>没改好。</p>
 <pre><code class="highlight cpp"></code></pre>
-
-<h1 id="护手"><a href="#护手" class="headerlink" title="护手"></a>护手</h1><p>没有强制在线，我只用莫队！！1</p>
+<h1 id="护手"><a class="markdownIt-Anchor" href="#护手"></a> 护手</h1>
+<p>没有强制在线，我只用莫队！！1</p>
 <p>首先你会发现这道题长了一脸莫队的样子，区间询问又是可以离线的。</p>
-<p>然后你直接拍一个莫队上去，会发现 $T&#x3D;0$ 奇数分是很好拿的。因为我们知道 $x \oplus x&#x3D;0,x\oplus 0&#x3D;x$，那么奇数次出现就是区间所有的异或起来。只拿这个分甚至可以维护前缀直接异或直接 $\mathcal O(1)$ 回答问题。</p>
-<p><del>但事实上我考场是凑了半天发现不用判断是第几次出现直接异或就可以的。</del></p>
+<p>然后你直接拍一个莫队上去，会发现 <span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>T</mi><mo>=</mo><mn>0</mn></mrow><annotation encoding="application/x-tex">T=0</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.68333em;vertical-align:0em;"></span><span class="mord mathnormal" style="margin-right:0.13889em;">T</span><span class="mspace" style="margin-right:0.2777777777777778em;"></span><span class="mrel">=</span><span class="mspace" style="margin-right:0.2777777777777778em;"></span></span><span class="base"><span class="strut" style="height:0.64444em;vertical-align:0em;"></span><span class="mord">0</span></span></span></span> 奇数分是很好拿的。因为我们知道 <span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>x</mi><mo>⊕</mo><mi>x</mi><mo>=</mo><mn>0</mn><mo separator="true">,</mo><mi>x</mi><mo>⊕</mo><mn>0</mn><mo>=</mo><mi>x</mi></mrow><annotation encoding="application/x-tex">x \oplus x=0,x\oplus 0=x</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.66666em;vertical-align:-0.08333em;"></span><span class="mord mathnormal">x</span><span class="mspace" style="margin-right:0.2222222222222222em;"></span><span class="mbin">⊕</span><span class="mspace" style="margin-right:0.2222222222222222em;"></span></span><span class="base"><span class="strut" style="height:0.43056em;vertical-align:0em;"></span><span class="mord mathnormal">x</span><span class="mspace" style="margin-right:0.2777777777777778em;"></span><span class="mrel">=</span><span class="mspace" style="margin-right:0.2777777777777778em;"></span></span><span class="base"><span class="strut" style="height:0.8388800000000001em;vertical-align:-0.19444em;"></span><span class="mord">0</span><span class="mpunct">,</span><span class="mspace" style="margin-right:0.16666666666666666em;"></span><span class="mord mathnormal">x</span><span class="mspace" style="margin-right:0.2222222222222222em;"></span><span class="mbin">⊕</span><span class="mspace" style="margin-right:0.2222222222222222em;"></span></span><span class="base"><span class="strut" style="height:0.64444em;vertical-align:0em;"></span><span class="mord">0</span><span class="mspace" style="margin-right:0.2777777777777778em;"></span><span class="mrel">=</span><span class="mspace" style="margin-right:0.2777777777777778em;"></span></span><span class="base"><span class="strut" style="height:0.43056em;vertical-align:0em;"></span><span class="mord mathnormal">x</span></span></span></span>，那么奇数次出现就是区间所有的异或起来。只拿这个分甚至可以维护前缀直接异或直接 <span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi mathvariant="script">O</mi><mo stretchy="false">(</mo><mn>1</mn><mo stretchy="false">)</mo></mrow><annotation encoding="application/x-tex">\mathcal O(1)</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:1em;vertical-align:-0.25em;"></span><span class="mord mathcal" style="margin-right:0.02778em;">O</span><span class="mopen">(</span><span class="mord">1</span><span class="mclose">)</span></span></span></span> 回答问题。</p>
+<p><s>但事实上我考场是凑了半天发现不用判断是第几次出现直接异或就可以的。</s></p>
 <p>然后你考虑偶数的怎么搞，你想，区间里非重复元素的集合减去出现奇数次元素集合不就是出现偶数次元素集合吗！</p>
 <p>所以你维护某个区间去重之后的元素的异或，把偶数当成奇数做，最后和上树的去重元素异或异或一下就好。</p>
-<p>去重元素异或维护很容易，统计每个数出现次数，删去之后全都没了和加上之后是第一次都异或起来。得分 $83\ \text{pts}$。</p>
+<p>去重元素异或维护很容易，统计每个数出现次数，删去之后全都没了和加上之后是第一次都异或起来。得分 <span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mn>83</mn><mtext> pts</mtext></mrow><annotation encoding="application/x-tex">83\ \text{pts}</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.8388800000000001em;vertical-align:-0.19444em;"></span><span class="mord">8</span><span class="mord">3</span><span class="mspace"> </span><span class="mord text"><span class="mord">pts</span></span></span></span></span>。</p>
 <p>怎么回事呢？</p>
 <p>考虑进行卡常。</p>
 <p>我们会发现我们 <strong>不在意每个数具体出现多少次，只在意他前面和后面出现的位置。</strong> 因为我们只需要判断是否在区间内出现过。</p>
-<p>考虑维护 $pre_i$ 表示第 $i$ 个位置上一个与其相等元素位置，$nxt_i$ 表示第 $i$ 个位置下一个与其相等元素位置。</p>
-<p>然后莫队区间移动只需要判断 $pre,nxt,l,r$ 的大小关系了。本地测试最长点耗时 $1.7\ \text{s}$。</p>
-<hr>
-<p>再插一嘴，你要是 $nxt,pre$ 或者是 $83\ \text{pts}$ 做法维护的数字出现次数的数组，用 <code>map/unordered_map</code> 是真的要死。<code>map</code> 稳定 $\log$，<code>unordered_map</code> 均摊常数实则会被卡到线性。</p>
-<p>你复杂度再乘上一个 $\log$ 你卡的过去？？？</p>
+<p>考虑维护 <span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>p</mi><mi>r</mi><msub><mi>e</mi><mi>i</mi></msub></mrow><annotation encoding="application/x-tex">pre_i</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.625em;vertical-align:-0.19444em;"></span><span class="mord mathnormal">p</span><span class="mord mathnormal" style="margin-right:0.02778em;">r</span><span class="mord"><span class="mord mathnormal">e</span><span class="msupsub"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist" style="height:0.31166399999999994em;"><span style="top:-2.5500000000000003em;margin-left:0em;margin-right:0.05em;"><span class="pstrut" style="height:2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mathnormal mtight">i</span></span></span></span><span class="vlist-s">​</span></span><span class="vlist-r"><span class="vlist" style="height:0.15em;"><span></span></span></span></span></span></span></span></span></span> 表示第 <span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>i</mi></mrow><annotation encoding="application/x-tex">i</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.65952em;vertical-align:0em;"></span><span class="mord mathnormal">i</span></span></span></span> 个位置上一个与其相等元素位置，<span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>n</mi><mi>x</mi><msub><mi>t</mi><mi>i</mi></msub></mrow><annotation encoding="application/x-tex">nxt_i</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.76508em;vertical-align:-0.15em;"></span><span class="mord mathnormal">n</span><span class="mord mathnormal">x</span><span class="mord"><span class="mord mathnormal">t</span><span class="msupsub"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist" style="height:0.31166399999999994em;"><span style="top:-2.5500000000000003em;margin-left:0em;margin-right:0.05em;"><span class="pstrut" style="height:2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mathnormal mtight">i</span></span></span></span><span class="vlist-s">​</span></span><span class="vlist-r"><span class="vlist" style="height:0.15em;"><span></span></span></span></span></span></span></span></span></span> 表示第 <span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>i</mi></mrow><annotation encoding="application/x-tex">i</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.65952em;vertical-align:0em;"></span><span class="mord mathnormal">i</span></span></span></span> 个位置下一个与其相等元素位置。</p>
+<p>然后莫队区间移动只需要判断 <span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>p</mi><mi>r</mi><mi>e</mi><mo separator="true">,</mo><mi>n</mi><mi>x</mi><mi>t</mi><mo separator="true">,</mo><mi>l</mi><mo separator="true">,</mo><mi>r</mi></mrow><annotation encoding="application/x-tex">pre,nxt,l,r</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.8888799999999999em;vertical-align:-0.19444em;"></span><span class="mord mathnormal">p</span><span class="mord mathnormal" style="margin-right:0.02778em;">r</span><span class="mord mathnormal">e</span><span class="mpunct">,</span><span class="mspace" style="margin-right:0.16666666666666666em;"></span><span class="mord mathnormal">n</span><span class="mord mathnormal">x</span><span class="mord mathnormal">t</span><span class="mpunct">,</span><span class="mspace" style="margin-right:0.16666666666666666em;"></span><span class="mord mathnormal" style="margin-right:0.01968em;">l</span><span class="mpunct">,</span><span class="mspace" style="margin-right:0.16666666666666666em;"></span><span class="mord mathnormal" style="margin-right:0.02778em;">r</span></span></span></span> 的大小关系了。本地测试最长点耗时 <span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mn>1.7</mn><mtext> s</mtext></mrow><annotation encoding="application/x-tex">1.7\ \text{s}</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.64444em;vertical-align:0em;"></span><span class="mord">1</span><span class="mord">.</span><span class="mord">7</span><span class="mspace"> </span><span class="mord text"><span class="mord">s</span></span></span></span></span>。</p>
+<hr />
+<p>再插一嘴，你要是 <span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>n</mi><mi>x</mi><mi>t</mi><mo separator="true">,</mo><mi>p</mi><mi>r</mi><mi>e</mi></mrow><annotation encoding="application/x-tex">nxt,pre</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.80952em;vertical-align:-0.19444em;"></span><span class="mord mathnormal">n</span><span class="mord mathnormal">x</span><span class="mord mathnormal">t</span><span class="mpunct">,</span><span class="mspace" style="margin-right:0.16666666666666666em;"></span><span class="mord mathnormal">p</span><span class="mord mathnormal" style="margin-right:0.02778em;">r</span><span class="mord mathnormal">e</span></span></span></span> 或者是 <span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mn>83</mn><mtext> pts</mtext></mrow><annotation encoding="application/x-tex">83\ \text{pts}</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.8388800000000001em;vertical-align:-0.19444em;"></span><span class="mord">8</span><span class="mord">3</span><span class="mspace"> </span><span class="mord text"><span class="mord">pts</span></span></span></span></span> 做法维护的数字出现次数的数组，用 <code>map/unordered_map</code> 是真的要死。<code>map</code> 稳定 <span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>log</mi><mo>⁡</mo></mrow><annotation encoding="application/x-tex">\log</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.8888799999999999em;vertical-align:-0.19444em;"></span><span class="mop">lo<span style="margin-right:0.01389em;">g</span></span></span></span></span>，<code>unordered_map</code> 均摊常数实则会被卡到线性。</p>
+<p>你复杂度再乘上一个 <span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>log</mi><mo>⁡</mo></mrow><annotation encoding="application/x-tex">\log</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.8888799999999999em;vertical-align:-0.19444em;"></span><span class="mop">lo<span style="margin-right:0.01389em;">g</span></span></span></span></span> 你卡的过去？？？</p>
 <p>离散化，离散化，离散化！</p>
 <pre><code class="highlight inform7">#include &lt;bits/stdc++.h&gt;
 using namespace std;
@@ -863,8 +864,8 @@ inline void del(int i)
 		X ^= p<span class="comment">[a<span class="comment">[i]</span>]</span>;
 &#125;
 */</code></pre>
-
-<h1 id="无量"><a href="#无量" class="headerlink" title="无量"></a>无量</h1><pre><code class="highlight cpp"></code></pre>
+<h1 id="无量"><a class="markdownIt-Anchor" href="#无量"></a> 无量</h1>
+<pre><code class="highlight cpp"></code></pre>
 	</div>
 
 	
@@ -943,9 +944,10 @@ inline void del(int i)
 <script type="text/javascript">
 	socialShare("#share", {
 	    title : '[题解] 20230818 | CSP2023 考前模拟赛 做题笔记',
-	    description : '赌徒数学题，分类讨论。不多说。
+	    description : ' 赌徒
+数学题，分类讨论。不多说。
 #include &amp;lt;bits/stdc++.h&amp;gt;
-usi...',
+u...',
 	    wechatQrcodeTitle : "分享到微信",
 	    wechatQrcodeHelper : '微信扫描二维码',
 	    source : 'http://blog.cyx2009.top/archives/20230818_mock/'
@@ -1034,30 +1036,30 @@ usi...',
 		
 		
 
-					<footer id="footer" class="site-footer card shadow-sm border-0">
-						
-						<div>Theme <a target="_blank" rel="noopener" href="https://github.com/solstice23/hexo-theme-argon"><strong>Argon</strong></a> | Powered by Hexo</div>
-						<span id="busuanzi_container_site_uv">
-							本站访客数 <span id="busuanzi_value_site_uv"></span> 人次
-						</span>
-						<span id="timeDate">载入时间...</span>
-						<script>
-						    var now = new Date(); 
-						    function createtime() { 
-						        var grt= new Date("03/28/2022 20:00:00");//在此处修改你的建站时间
-						        now.setTime(now.getTime()+250); 
-						        days = (now - grt ) / 1000 / 60 / 60 / 24; dnum = Math.floor(days); 
-						        hours = (now - grt ) / 1000 / 60 / 60 - (24 * dnum); hnum = Math.floor(hours); 
-						        if(String(hnum).length ==1 ){hnum = "0" + hnum;} minutes = (now - grt ) / 1000 /60 - (24 * 60 * dnum) - (60 * hnum); 
-						        mnum = Math.floor(minutes); if(String(mnum).length ==1 ){mnum = "0" + mnum;} 
-						        seconds = (now - grt ) / 1000 - (24 * 60 * 60 * dnum) - (60 * 60 * hnum) - (60 * mnum); 
-						        snum = Math.round(seconds); if(String(snum).length ==1 ){snum = "0" + snum;} 
-						        document.getElementById("timeDate").innerHTML = "本站已安全运行 "+dnum+" 天 "+ hnum + " 小时 " + mnum + " 分 " + snum + " 秒"; 
-						        // document.getElementById("times").innerHTML = hnum + " 小时 " + mnum + " 分 " + snum + " 秒"; 
-						    } 
-						setInterval("createtime()",250);
-						</script>
-						<script>
+                    <footer id="footer" class="site-footer card shadow-sm border-0">
+                        
+                        <div>Theme <a target="_blank" rel="noopener" href="https://github.com/solstice23/hexo-theme-argon"><strong>Argon</strong></a> | Powered by Hexo</div>
+                        <span id="busuanzi_container_site_uv">
+                            本站访客数 <span id="busuanzi_value_site_uv"></span> 人次
+                        </span>
+                        <span id="timeDate">载入时间...</span>
+                        <script>
+                            var now = new Date(); 
+                            function createtime() { 
+                                var grt= new Date("03/28/2022 20:00:00");//在此处修改你的建站时间
+                                now.setTime(now.getTime()+250); 
+                                days = (now - grt ) / 1000 / 60 / 60 / 24; dnum = Math.floor(days); 
+                                hours = (now - grt ) / 1000 / 60 / 60 - (24 * dnum); hnum = Math.floor(hours); 
+                                if(String(hnum).length ==1 ){hnum = "0" + hnum;} minutes = (now - grt ) / 1000 /60 - (24 * 60 * dnum) - (60 * hnum); 
+                                mnum = Math.floor(minutes); if(String(mnum).length ==1 ){mnum = "0" + mnum;} 
+                                seconds = (now - grt ) / 1000 - (24 * 60 * 60 * dnum) - (60 * 60 * hnum) - (60 * mnum); 
+                                snum = Math.round(seconds); if(String(snum).length ==1 ){snum = "0" + snum;} 
+                                document.getElementById("timeDate").innerHTML = "本站已安全运行 "+dnum+" 天 "+ hnum + " 小时 " + mnum + " 分 " + snum + " 秒"; 
+                                // document.getElementById("times").innerHTML = hnum + " 小时 " + mnum + " 分 " + snum + " 秒"; 
+                            } 
+                        setInterval("createtime()",250);
+                        </script>
+                        <script>
         window.onload = (() => {
             //定义点击出现文字类
             function ClickFrontShow() {
@@ -1194,49 +1196,54 @@ usi...',
             //第二个参数是颜色数组，必须是数组类型！
             frontShow.init();
         })();
-						</script>
-					</footer>
-				</main>
-			</div>
-		</div>
-		
+                        </script>
+                    </footer>
+                </main>
+            </div>
+        </div>
+        
 <script src="/argontheme.js"></script>
 
-		
-		
-		
-			<link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/KaTeX/0.15.6/katex.min.css">
-			<script src="//cdnjs.cloudflare.com/ajax/libs/KaTeX/0.15.6/katex.min.js"></script>
-			<script src="//cdnjs.cloudflare.com/ajax/libs/KaTeX/0.15.6/contrib/auto-render.min.js"></script>
-			<script>
-				document.addEventListener("DOMContentLoaded", function() {
-					renderMathInElement(document.body,{
-						delimiters: [
-							{left: "$$", right: "$$", display: true},
-							{left: "$", right: "$", display: false},
-							{left: "\\(", right: "\\)", display: false}
-						]
-					});
-				});
-			</script>
-		
+        
+        
+        
+            <link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/KaTeX/0.16.9/katex.min.css">
+            <script src="//cdnjs.cloudflare.com/ajax/libs/KaTeX/0.16.9/katex.min.js"></script>
+            <script src="//cdnjs.cloudflare.com/ajax/libs/KaTeX/0.16.9/contrib/auto-render.min.js"></script>
+            <script>
+                document.addEventListener("DOMContentLoaded", function() {
+                    renderMathInElement(document.body, {
+                      // customised options
+                      // • auto-render specific keys, e.g.:
+                      delimiters: [
+                          {left: '$$', right: '$$', display: true},
+                          {left: '$', right: '$', display: false},
+                          {left: '\\(', right: '\\)', display: false},
+                          {left: '\\[', right: '\\]', display: true}
+                      ],
+                      // • rendering keys, e.g.:
+                      throwOnError : false
+                    });
+                });
+            </script>
+        
 
-		
-			<script>
-				var argonEnableCodeHighlight = true;
-			</script>
-			
+        
+            <script>
+                var argonEnableCodeHighlight = true;
+            </script>
+            
 <link rel="stylesheet" href="/assets/vendor/highlight/styles/vs2015.css">
 
-		
+        
 
-	</div>
+    </div>
 </div>
 <noscript>
-	<style>
-		article img.lazyload[src^="data:image/svg+xml;base64,PCEtLUFyZ29uTG9hZGluZy0tPg"]{display: none;}
-		.comment-item-text .comment-sticker.lazyload{display: none;}
-	</style>
+    <style>
+        article img.lazyload[src^="data:image/svg+xml;base64,PCEtLUFyZ29uTG9hZGluZy0tPg"]{display: none;}
+        .comment-item-text .comment-sticker.lazyload{display: none;}
+    </style>
 </noscript>
 </body>
 

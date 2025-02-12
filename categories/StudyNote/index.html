@@ -655,7 +655,7 @@
 						
 						<div class="post-meta-detail post-meta-detail-words">
 							<i class="fa fa-file-word-o" aria-hidden="true"></i>
-							124 字
+							131 字
 						</div>
 					
 						
@@ -675,11 +675,14 @@
 			
 				这里是 hack 时的常见注意事项。
 
-带了 $T$ 组 memset 的可能真能过，看一眼 test2 是不是卡满了 $T$ 组。
+
+带了 TTT 组 memset 的可能真能过，看一眼 test2 是不是卡满了 TTT 组。
+
 
 sqrt 在 CF 的某个 C++ 版本上精度是和 sqrtll 一样的。聊天记录找不到了。改天有空自己测一下补一下细节。
 
-multiset.count() 虽然复杂度是 $\mathcal O(\log n+a...
+
+multiset.count() 虽然复杂度是 O(log⁡n+ans)\math...
 			
 		
 	</div>
@@ -697,7 +700,7 @@ multiset.count() 虽然复杂度是 $\mathcal O(\log n+a...
 						
 						<div class="post-meta-detail post-meta-detail-time">
 							<i class="fa fa-clock-o" aria-hidden="true"></i>
-							<time title="发布于 2025-1-16 16:50:00 | 编辑于 2025-2-12 21:58:04">2025-1-16 16:50
+							<time title="发布于 2025-1-16 16:50:00 | 编辑于 2025-2-13 7:17:11">2025-1-16 16:50
 							</time>
 						</div>
 					
@@ -724,7 +727,7 @@ multiset.count() 虽然复杂度是 $\mathcal O(\log n+a...
 						
 						<div class="post-meta-detail post-meta-detail-words">
 							<i class="fa fa-file-word-o" aria-hidden="true"></i>
-							575 字
+							609 字
 						</div>
 					
 						
@@ -744,13 +747,13 @@ multiset.count() 虽然复杂度是 $\mathcal O(\log n+a...
 			
 				考虑到我脑子不太好，一些简单的东西发现不了，还容易忘，遂记录。
 
-曼哈顿距离，等价于每一个 $2^k$ 种正负号的选择的最大值。
+曼哈顿距离，等价于每一个 2k2^k2k 种正负号的选择的最大值。
 求所有点对最大值可以考虑建若干个点表示符号情况然后连边。最小值不适用。
 AT_agc034_d 没补
 CF1093G 没补
 POJ2926 太棒了我写了这篇专栏后两天就做到了。直接用这个就过了。
 
-$a\operator...
+aop⁡b={aa...
 			
 		
 	</div>
@@ -798,7 +801,7 @@ $a\operator...
 						
 						<div class="post-meta-detail post-meta-detail-words">
 							<i class="fa fa-file-word-o" aria-hidden="true"></i>
-							2k 字
+							2.2k 字
 						</div>
 					
 						
@@ -806,7 +809,7 @@ $a\operator...
 						
 						<div class="post-meta-detail post-meta-detail-readingtime">
 							<i class="fa fa-hourglass-end" aria-hidden="true"></i>
-							9 分钟
+							10 分钟
 						</div>
 					
 		</div>
@@ -819,11 +822,14 @@ $a\operator...
 		
 			
 				蒸馍身边一群大神不会普通莫队。
-现在每天半夜不写点根号算法都睡不着。根号算法个个是优雅的算法&#x2F;se
-莫队处理离线区间询问。
+现在每天半夜不写点根号算法都睡不着。根号算法个个是优雅的算法/se
+ 莫队
+处理离线区间询问。
 名字由来是因为是莫涛整理的。
-普通莫队简介可以较优复杂度从 $[l\pm1,r\pm1]$ 转到 $[l,r]$。
-当 $n,q$ 同阶时，若转移为 $\mathcal O(1)$，总复杂度即为 $\mathcal ...
+ 普通莫队
+ 简介
+可以较优复杂度从 [l±1,r±1][l\pm1,r\pm1][l±1,r±1] 转到 [l,r][l,r][l,r]。
+当 n,qn,qn,q 同阶时，若转移为 O(1)...
 			
 		
 	</div>
@@ -841,7 +847,7 @@ $a\operator...
 						
 						<div class="post-meta-detail post-meta-detail-time">
 							<i class="fa fa-clock-o" aria-hidden="true"></i>
-							<time title="发布于 2023-12-25 21:41:00 | 编辑于 2025-2-12 20:27:43">2023-12-25 21:41
+							<time title="发布于 2023-12-25 21:41:00 | 编辑于 2025-2-13 7:38:04">2023-12-25 21:41
 							</time>
 						</div>
 					
@@ -868,7 +874,7 @@ $a\operator...
 						
 						<div class="post-meta-detail post-meta-detail-words">
 							<i class="fa fa-file-word-o" aria-hidden="true"></i>
-							531 字
+							809 字
 						</div>
 					
 						
@@ -876,7 +882,7 @@ $a\operator...
 						
 						<div class="post-meta-detail post-meta-detail-readingtime">
 							<i class="fa fa-hourglass-end" aria-hidden="true"></i>
-							2 分钟
+							4 分钟
 						</div>
 					
 		</div>
@@ -886,9 +892,8 @@ $a\operator...
 	<div class="post-content">
 		
 			
-				已知 $p\text{ is prime},\gcd(a,p)&#x3D;1$ 证明 $a^p\equiv a\pmod p$。
-考虑一个引理：若 $p$ 是质数，$p\mid\dbinom{p}{i},\forall i\in[1,p-1],i\in \mathbb Z$。
-$$\because \dbinom{p}{i}&#x3D;\dfrac...
+				已知 p is prime,gcd⁡(a,p)=1p\text{ is prime},\gcd(a,p)=1p is prime,gcd(a,p)=1 证明 ap≡a(modp)a^p\equiv a\pmod pap≡a(modp)。
+考虑一个引理：若 ppp 是质数，p∣(pi),∀i∈[1,p−1],i∈Zp\mid\dbinom{p}{i}...
 			
 		
 	</div>
@@ -903,30 +908,30 @@ $$\because \dbinom{p}{i}&#x3D;\dfrac...
 
 		
 
-					<footer id="footer" class="site-footer card shadow-sm border-0">
-						
-						<div>Theme <a target="_blank" rel="noopener" href="https://github.com/solstice23/hexo-theme-argon"><strong>Argon</strong></a> | Powered by Hexo</div>
-						<span id="busuanzi_container_site_uv">
-							本站访客数 <span id="busuanzi_value_site_uv"></span> 人次
-						</span>
-						<span id="timeDate">载入时间...</span>
-						<script>
-						    var now = new Date(); 
-						    function createtime() { 
-						        var grt= new Date("03/28/2022 20:00:00");//在此处修改你的建站时间
-						        now.setTime(now.getTime()+250); 
-						        days = (now - grt ) / 1000 / 60 / 60 / 24; dnum = Math.floor(days); 
-						        hours = (now - grt ) / 1000 / 60 / 60 - (24 * dnum); hnum = Math.floor(hours); 
-						        if(String(hnum).length ==1 ){hnum = "0" + hnum;} minutes = (now - grt ) / 1000 /60 - (24 * 60 * dnum) - (60 * hnum); 
-						        mnum = Math.floor(minutes); if(String(mnum).length ==1 ){mnum = "0" + mnum;} 
-						        seconds = (now - grt ) / 1000 - (24 * 60 * 60 * dnum) - (60 * 60 * hnum) - (60 * mnum); 
-						        snum = Math.round(seconds); if(String(snum).length ==1 ){snum = "0" + snum;} 
-						        document.getElementById("timeDate").innerHTML = "本站已安全运行 "+dnum+" 天 "+ hnum + " 小时 " + mnum + " 分 " + snum + " 秒"; 
-						        // document.getElementById("times").innerHTML = hnum + " 小时 " + mnum + " 分 " + snum + " 秒"; 
-						    } 
-						setInterval("createtime()",250);
-						</script>
-						<script>
+                    <footer id="footer" class="site-footer card shadow-sm border-0">
+                        
+                        <div>Theme <a target="_blank" rel="noopener" href="https://github.com/solstice23/hexo-theme-argon"><strong>Argon</strong></a> | Powered by Hexo</div>
+                        <span id="busuanzi_container_site_uv">
+                            本站访客数 <span id="busuanzi_value_site_uv"></span> 人次
+                        </span>
+                        <span id="timeDate">载入时间...</span>
+                        <script>
+                            var now = new Date(); 
+                            function createtime() { 
+                                var grt= new Date("03/28/2022 20:00:00");//在此处修改你的建站时间
+                                now.setTime(now.getTime()+250); 
+                                days = (now - grt ) / 1000 / 60 / 60 / 24; dnum = Math.floor(days); 
+                                hours = (now - grt ) / 1000 / 60 / 60 - (24 * dnum); hnum = Math.floor(hours); 
+                                if(String(hnum).length ==1 ){hnum = "0" + hnum;} minutes = (now - grt ) / 1000 /60 - (24 * 60 * dnum) - (60 * hnum); 
+                                mnum = Math.floor(minutes); if(String(mnum).length ==1 ){mnum = "0" + mnum;} 
+                                seconds = (now - grt ) / 1000 - (24 * 60 * 60 * dnum) - (60 * 60 * hnum) - (60 * mnum); 
+                                snum = Math.round(seconds); if(String(snum).length ==1 ){snum = "0" + snum;} 
+                                document.getElementById("timeDate").innerHTML = "本站已安全运行 "+dnum+" 天 "+ hnum + " 小时 " + mnum + " 分 " + snum + " 秒"; 
+                                // document.getElementById("times").innerHTML = hnum + " 小时 " + mnum + " 分 " + snum + " 秒"; 
+                            } 
+                        setInterval("createtime()",250);
+                        </script>
+                        <script>
         window.onload = (() => {
             //定义点击出现文字类
             function ClickFrontShow() {
@@ -1063,49 +1068,54 @@ $$\because \dbinom{p}{i}&#x3D;\dfrac...
             //第二个参数是颜色数组，必须是数组类型！
             frontShow.init();
         })();
-						</script>
-					</footer>
-				</main>
-			</div>
-		</div>
-		
+                        </script>
+                    </footer>
+                </main>
+            </div>
+        </div>
+        
 <script src="/argontheme.js"></script>
 
-		
-		
-		
-			<link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/KaTeX/0.15.6/katex.min.css">
-			<script src="//cdnjs.cloudflare.com/ajax/libs/KaTeX/0.15.6/katex.min.js"></script>
-			<script src="//cdnjs.cloudflare.com/ajax/libs/KaTeX/0.15.6/contrib/auto-render.min.js"></script>
-			<script>
-				document.addEventListener("DOMContentLoaded", function() {
-					renderMathInElement(document.body,{
-						delimiters: [
-							{left: "$$", right: "$$", display: true},
-							{left: "$", right: "$", display: false},
-							{left: "\\(", right: "\\)", display: false}
-						]
-					});
-				});
-			</script>
-		
+        
+        
+        
+            <link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/KaTeX/0.16.9/katex.min.css">
+            <script src="//cdnjs.cloudflare.com/ajax/libs/KaTeX/0.16.9/katex.min.js"></script>
+            <script src="//cdnjs.cloudflare.com/ajax/libs/KaTeX/0.16.9/contrib/auto-render.min.js"></script>
+            <script>
+                document.addEventListener("DOMContentLoaded", function() {
+                    renderMathInElement(document.body, {
+                      // customised options
+                      // • auto-render specific keys, e.g.:
+                      delimiters: [
+                          {left: '$$', right: '$$', display: true},
+                          {left: '$', right: '$', display: false},
+                          {left: '\\(', right: '\\)', display: false},
+                          {left: '\\[', right: '\\]', display: true}
+                      ],
+                      // • rendering keys, e.g.:
+                      throwOnError : false
+                    });
+                });
+            </script>
+        
 
-		
-			<script>
-				var argonEnableCodeHighlight = true;
-			</script>
-			
+        
+            <script>
+                var argonEnableCodeHighlight = true;
+            </script>
+            
 <link rel="stylesheet" href="/assets/vendor/highlight/styles/vs2015.css">
 
-		
+        
 
-	</div>
+    </div>
 </div>
 <noscript>
-	<style>
-		article img.lazyload[src^="data:image/svg+xml;base64,PCEtLUFyZ29uTG9hZGluZy0tPg"]{display: none;}
-		.comment-item-text .comment-sticker.lazyload{display: none;}
-	</style>
+    <style>
+        article img.lazyload[src^="data:image/svg+xml;base64,PCEtLUFyZ29uTG9hZGluZy0tPg"]{display: none;}
+        .comment-item-text .comment-sticker.lazyload{display: none;}
+    </style>
 </noscript>
 </body>
 

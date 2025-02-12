@@ -22,12 +22,12 @@
 	
 		<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=5">
 	
-	<meta name="description" content="A - Long Loong模拟。 #include &lt;bits&#x2F;stdc++.h&gt; using namespace std; int main() &#123;     int x;     cin &gt;&gt; x;     cout &lt;&lt; &quot;L&quot;;     while (x--)         cout &lt;&lt; &quot;o&amp;qu">
+	<meta name="description" content="A - Long Loong 模拟。 #include &lt;bits&#x2F;stdc++.h&gt; using namespace std; int main() &#123;     int x;     cin &gt;&gt; x;     cout &lt;&lt; &quot;L&quot;;     while (x--)         cout &lt;&lt; &quot;o&amp;">
 <meta property="og:type" content="article">
 <meta property="og:title" content="[题解] ABC336 做题笔记">
 <meta property="og:url" content="http://blog.cyx2009.top/archives/ABC336/index.html">
 <meta property="og:site_name" content="沉石鱼惊旋 的博客">
-<meta property="og:description" content="A - Long Loong模拟。 #include &lt;bits&#x2F;stdc++.h&gt; using namespace std; int main() &#123;     int x;     cin &gt;&gt; x;     cout &lt;&lt; &quot;L&quot;;     while (x--)         cout &lt;&lt; &quot;o&amp;qu">
+<meta property="og:description" content="A - Long Loong 模拟。 #include &lt;bits&#x2F;stdc++.h&gt; using namespace std; int main() &#123;     int x;     cin &gt;&gt; x;     cout &lt;&lt; &quot;L&quot;;     while (x--)         cout &lt;&lt; &quot;o&amp;">
 <meta property="og:locale" content="zh_CN">
 <meta property="article:published_time" content="2024-01-14T14:06:00.000Z">
 <meta property="article:modified_time" content="2025-02-12T12:13:48.973Z">
@@ -689,7 +689,8 @@
 	</header>
 
 	<div class="post-content" id="post_content">
-		<h1 id="A-Long-Loong"><a href="#A-Long-Loong" class="headerlink" title="A - Long Loong"></a>A - Long Loong</h1><p>模拟。</p>
+		<h1 id="a-long-loong"><a class="markdownIt-Anchor" href="#a-long-loong"></a> A - Long Loong</h1>
+<p>模拟。</p>
 <pre><code class="highlight cpp"><span class="meta">#<span class="keyword">include</span> <span class="string">&lt;bits/stdc++.h&gt;</span></span>
 <span class="keyword">using</span> <span class="keyword">namespace</span> std;
 <span class="function"><span class="type">int</span> <span class="title">main</span><span class="params">()</span></span>
@@ -702,8 +703,8 @@
     cout &lt;&lt; <span class="string">&quot;ng&quot;</span> &lt;&lt; endl;
     <span class="keyword">return</span> <span class="number">0</span>;
 &#125;</code></pre>
-
-<h1 id="B-CTZ"><a href="#B-CTZ" class="headerlink" title="B - CTZ"></a>B - CTZ</h1><p>对自带函数的运用。</p>
+<h1 id="b-ctz"><a class="markdownIt-Anchor" href="#b-ctz"></a> B - CTZ</h1>
+<p>对自带函数的运用。</p>
 <pre><code class="highlight cpp"><span class="meta">#<span class="keyword">include</span> <span class="string">&lt;bits/stdc++.h&gt;</span></span>
 <span class="keyword">using</span> <span class="keyword">namespace</span> std;
 <span class="function"><span class="type">int</span> <span class="title">main</span><span class="params">()</span></span>
@@ -713,8 +714,8 @@
     cout &lt;&lt; __builtin_ctz(x) &lt;&lt; endl;
     <span class="keyword">return</span> <span class="number">0</span>;
 &#125;</code></pre>
-
-<h1 id="C-Even-Digits"><a href="#C-Even-Digits" class="headerlink" title="C - Even Digits"></a>C - Even Digits</h1><p>转五进制，重载一下每一位具体数字。主播在 CF1811E Living Sequence 中做过类似 trick。</p>
+<h1 id="c-even-digits"><a class="markdownIt-Anchor" href="#c-even-digits"></a> C - Even Digits</h1>
+<p>转五进制，重载一下每一位具体数字。主播在 CF1811E Living Sequence 中做过类似 trick。</p>
 <pre><code class="highlight cpp"><span class="meta">#<span class="keyword">include</span> <span class="string">&lt;bits/stdc++.h&gt;</span></span>
 <span class="keyword">typedef</span> <span class="type">long</span> <span class="type">long</span> ll;
 <span class="keyword">using</span> <span class="keyword">namespace</span> std;
@@ -732,8 +733,8 @@ string c = <span class="string">&quot;02468&quot;</span>;
     <span class="built_in">f</span>(n - <span class="number">1</span>, <span class="number">5</span>);
     <span class="keyword">return</span> <span class="number">0</span>;
 &#125;</code></pre>
-
-<h1 id="D-Pyramid"><a href="#D-Pyramid" class="headerlink" title="D - Pyramid"></a>D - Pyramid</h1><p>扫两遍看一下自己最大能装到多大。</p>
+<h1 id="d-pyramid"><a class="markdownIt-Anchor" href="#d-pyramid"></a> D - Pyramid</h1>
+<p>扫两遍看一下自己最大能装到多大。</p>
 <pre><code class="highlight cpp"><span class="meta">#<span class="keyword">include</span> <span class="string">&lt;bits/stdc++.h&gt;</span></span>
 <span class="keyword">using</span> <span class="keyword">namespace</span> std;
 <span class="keyword">template</span> &lt;<span class="keyword">typename</span> T&gt;
@@ -757,8 +758,8 @@ string c = <span class="string">&quot;02468&quot;</span>;
     cout &lt;&lt; ans &lt;&lt; endl;
     <span class="keyword">return</span> <span class="number">0</span>;
 &#125;</code></pre>
-
-<h1 id="E-Digit-Sum-Divisible"><a href="#E-Digit-Sum-Divisible" class="headerlink" title="E - Digit Sum Divisible"></a>E - Digit Sum Divisible</h1><p>原题 P4127 [AHOI2009] 同类分布，数位 DP。</p>
+<h1 id="e-digit-sum-divisible"><a class="markdownIt-Anchor" href="#e-digit-sum-divisible"></a> E - Digit Sum Divisible</h1>
+<p>原题 P4127 [AHOI2009] 同类分布，数位 DP。</p>
 <pre><code class="highlight cpp"><span class="meta">#<span class="keyword">include</span> <span class="string">&lt;bits/stdc++.h&gt;</span></span>
 <span class="keyword">using</span> <span class="keyword">namespace</span> std;
 <span class="keyword">typedef</span> <span class="type">long</span> <span class="type">long</span> ll;
@@ -801,8 +802,8 @@ ll p;
     cout &lt;&lt; <span class="built_in">calc</span>(n) &lt;&lt; endl;
     <span class="keyword">return</span> <span class="number">0</span>;
 &#125;</code></pre>
-
-<h1 id="F-Rotation-Puzzle"><a href="#F-Rotation-Puzzle" class="headerlink" title="F - Rotation Puzzle"></a>F - Rotation Puzzle</h1><p>发现每一次只能选择 $4$ 个位置，直接搜复杂度 $4^{20}$ 显然不可行。考虑折半搜索，从头开始搜 $4^{10}$ 个从尾开始搜 $4^{10}$ 个然后合并起来。</p>
+<h1 id="f-rotation-puzzle"><a class="markdownIt-Anchor" href="#f-rotation-puzzle"></a> F - Rotation Puzzle</h1>
+<p>发现每一次只能选择 <span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mn>4</mn></mrow><annotation encoding="application/x-tex">4</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.64444em;vertical-align:0em;"></span><span class="mord">4</span></span></span></span> 个位置，直接搜复杂度 <span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><msup><mn>4</mn><mn>20</mn></msup></mrow><annotation encoding="application/x-tex">4^{20}</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.8141079999999999em;vertical-align:0em;"></span><span class="mord"><span class="mord">4</span><span class="msupsub"><span class="vlist-t"><span class="vlist-r"><span class="vlist" style="height:0.8141079999999999em;"><span style="top:-3.063em;margin-right:0.05em;"><span class="pstrut" style="height:2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mtight"><span class="mord mtight">2</span><span class="mord mtight">0</span></span></span></span></span></span></span></span></span></span></span></span> 显然不可行。考虑折半搜索，从头开始搜 <span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><msup><mn>4</mn><mn>10</mn></msup></mrow><annotation encoding="application/x-tex">4^{10}</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.8141079999999999em;vertical-align:0em;"></span><span class="mord"><span class="mord">4</span><span class="msupsub"><span class="vlist-t"><span class="vlist-r"><span class="vlist" style="height:0.8141079999999999em;"><span style="top:-3.063em;margin-right:0.05em;"><span class="pstrut" style="height:2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mtight"><span class="mord mtight">1</span><span class="mord mtight">0</span></span></span></span></span></span></span></span></span></span></span></span> 个从尾开始搜 <span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><msup><mn>4</mn><mn>10</mn></msup></mrow><annotation encoding="application/x-tex">4^{10}</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.8141079999999999em;vertical-align:0em;"></span><span class="mord"><span class="mord">4</span><span class="msupsub"><span class="vlist-t"><span class="vlist-r"><span class="vlist" style="height:0.8141079999999999em;"><span style="top:-3.063em;margin-right:0.05em;"><span class="pstrut" style="height:2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mtight"><span class="mord mtight">1</span><span class="mord mtight">0</span></span></span></span></span></span></span></span></span></span></span></span> 个然后合并起来。</p>
 <pre><code class="highlight cpp"><span class="meta">#<span class="keyword">include</span> <span class="string">&lt;bits/stdc++.h&gt;</span></span>
 <span class="keyword">using</span> <span class="keyword">namespace</span> std;
 <span class="keyword">typedef</span> vector&lt;vector&lt;<span class="type">int</span>&gt;&gt; mtx;
@@ -991,9 +992,9 @@ queue&lt;pair&lt;mtx, <span class="type">int</span>&gt;&gt; q; <span class="comm
 <script type="text/javascript">
 	socialShare("#share", {
 	    title : '[题解] ABC336 做题笔记',
-	    description : 'A - Long Loong模拟。
-#include &amp;lt;bits/stdc++.h&amp;gt;
-u...',
+	    description : ' A - Long Loong
+模拟。
+#include &amp;lt;bits/stdc++.h&amp;gt;...',
 	    wechatQrcodeTitle : "分享到微信",
 	    wechatQrcodeHelper : '微信扫描二维码',
 	    source : 'http://blog.cyx2009.top/archives/ABC336/'
@@ -1082,30 +1083,30 @@ u...',
 		
 		
 
-					<footer id="footer" class="site-footer card shadow-sm border-0">
-						
-						<div>Theme <a target="_blank" rel="noopener" href="https://github.com/solstice23/hexo-theme-argon"><strong>Argon</strong></a> | Powered by Hexo</div>
-						<span id="busuanzi_container_site_uv">
-							本站访客数 <span id="busuanzi_value_site_uv"></span> 人次
-						</span>
-						<span id="timeDate">载入时间...</span>
-						<script>
-						    var now = new Date(); 
-						    function createtime() { 
-						        var grt= new Date("03/28/2022 20:00:00");//在此处修改你的建站时间
-						        now.setTime(now.getTime()+250); 
-						        days = (now - grt ) / 1000 / 60 / 60 / 24; dnum = Math.floor(days); 
-						        hours = (now - grt ) / 1000 / 60 / 60 - (24 * dnum); hnum = Math.floor(hours); 
-						        if(String(hnum).length ==1 ){hnum = "0" + hnum;} minutes = (now - grt ) / 1000 /60 - (24 * 60 * dnum) - (60 * hnum); 
-						        mnum = Math.floor(minutes); if(String(mnum).length ==1 ){mnum = "0" + mnum;} 
-						        seconds = (now - grt ) / 1000 - (24 * 60 * 60 * dnum) - (60 * 60 * hnum) - (60 * mnum); 
-						        snum = Math.round(seconds); if(String(snum).length ==1 ){snum = "0" + snum;} 
-						        document.getElementById("timeDate").innerHTML = "本站已安全运行 "+dnum+" 天 "+ hnum + " 小时 " + mnum + " 分 " + snum + " 秒"; 
-						        // document.getElementById("times").innerHTML = hnum + " 小时 " + mnum + " 分 " + snum + " 秒"; 
-						    } 
-						setInterval("createtime()",250);
-						</script>
-						<script>
+                    <footer id="footer" class="site-footer card shadow-sm border-0">
+                        
+                        <div>Theme <a target="_blank" rel="noopener" href="https://github.com/solstice23/hexo-theme-argon"><strong>Argon</strong></a> | Powered by Hexo</div>
+                        <span id="busuanzi_container_site_uv">
+                            本站访客数 <span id="busuanzi_value_site_uv"></span> 人次
+                        </span>
+                        <span id="timeDate">载入时间...</span>
+                        <script>
+                            var now = new Date(); 
+                            function createtime() { 
+                                var grt= new Date("03/28/2022 20:00:00");//在此处修改你的建站时间
+                                now.setTime(now.getTime()+250); 
+                                days = (now - grt ) / 1000 / 60 / 60 / 24; dnum = Math.floor(days); 
+                                hours = (now - grt ) / 1000 / 60 / 60 - (24 * dnum); hnum = Math.floor(hours); 
+                                if(String(hnum).length ==1 ){hnum = "0" + hnum;} minutes = (now - grt ) / 1000 /60 - (24 * 60 * dnum) - (60 * hnum); 
+                                mnum = Math.floor(minutes); if(String(mnum).length ==1 ){mnum = "0" + mnum;} 
+                                seconds = (now - grt ) / 1000 - (24 * 60 * 60 * dnum) - (60 * 60 * hnum) - (60 * mnum); 
+                                snum = Math.round(seconds); if(String(snum).length ==1 ){snum = "0" + snum;} 
+                                document.getElementById("timeDate").innerHTML = "本站已安全运行 "+dnum+" 天 "+ hnum + " 小时 " + mnum + " 分 " + snum + " 秒"; 
+                                // document.getElementById("times").innerHTML = hnum + " 小时 " + mnum + " 分 " + snum + " 秒"; 
+                            } 
+                        setInterval("createtime()",250);
+                        </script>
+                        <script>
         window.onload = (() => {
             //定义点击出现文字类
             function ClickFrontShow() {
@@ -1242,49 +1243,54 @@ u...',
             //第二个参数是颜色数组，必须是数组类型！
             frontShow.init();
         })();
-						</script>
-					</footer>
-				</main>
-			</div>
-		</div>
-		
+                        </script>
+                    </footer>
+                </main>
+            </div>
+        </div>
+        
 <script src="/argontheme.js"></script>
 
-		
-		
-		
-			<link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/KaTeX/0.15.6/katex.min.css">
-			<script src="//cdnjs.cloudflare.com/ajax/libs/KaTeX/0.15.6/katex.min.js"></script>
-			<script src="//cdnjs.cloudflare.com/ajax/libs/KaTeX/0.15.6/contrib/auto-render.min.js"></script>
-			<script>
-				document.addEventListener("DOMContentLoaded", function() {
-					renderMathInElement(document.body,{
-						delimiters: [
-							{left: "$$", right: "$$", display: true},
-							{left: "$", right: "$", display: false},
-							{left: "\\(", right: "\\)", display: false}
-						]
-					});
-				});
-			</script>
-		
+        
+        
+        
+            <link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/KaTeX/0.16.9/katex.min.css">
+            <script src="//cdnjs.cloudflare.com/ajax/libs/KaTeX/0.16.9/katex.min.js"></script>
+            <script src="//cdnjs.cloudflare.com/ajax/libs/KaTeX/0.16.9/contrib/auto-render.min.js"></script>
+            <script>
+                document.addEventListener("DOMContentLoaded", function() {
+                    renderMathInElement(document.body, {
+                      // customised options
+                      // • auto-render specific keys, e.g.:
+                      delimiters: [
+                          {left: '$$', right: '$$', display: true},
+                          {left: '$', right: '$', display: false},
+                          {left: '\\(', right: '\\)', display: false},
+                          {left: '\\[', right: '\\]', display: true}
+                      ],
+                      // • rendering keys, e.g.:
+                      throwOnError : false
+                    });
+                });
+            </script>
+        
 
-		
-			<script>
-				var argonEnableCodeHighlight = true;
-			</script>
-			
+        
+            <script>
+                var argonEnableCodeHighlight = true;
+            </script>
+            
 <link rel="stylesheet" href="/assets/vendor/highlight/styles/vs2015.css">
 
-		
+        
 
-	</div>
+    </div>
 </div>
 <noscript>
-	<style>
-		article img.lazyload[src^="data:image/svg+xml;base64,PCEtLUFyZ29uTG9hZGluZy0tPg"]{display: none;}
-		.comment-item-text .comment-sticker.lazyload{display: none;}
-	</style>
+    <style>
+        article img.lazyload[src^="data:image/svg+xml;base64,PCEtLUFyZ29uTG9hZGluZy0tPg"]{display: none;}
+        .comment-item-text .comment-sticker.lazyload{display: none;}
+    </style>
 </noscript>
 </body>
 

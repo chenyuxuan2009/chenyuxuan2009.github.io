@@ -22,12 +22,12 @@
 	
 		<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=5">
 	
-	<meta name="description" content="E - Paint我都见到这题三次了。 考虑正难则反，操作逆序。 此时你先涂的颜色后面不能更改了。 但是显然的你可以知道现在有多少行多少列被涂过了。 那么你把剩下的加进答案就好了。 然后这题有个很逆天的 corner case 是一开始全是颜色 $0$。如果这个 corner case 判错了也会寄的。 typedef long long ll; int h, w, q; struct Query">
+	<meta name="description" content="E - Paint 我都见到这题三次了。 考虑正难则反，操作逆序。 此时你先涂的颜色后面不能更改了。 但是显然的你可以知道现在有多少行多少列被涂过了。 那么你把剩下的加进答案就好了。 然后这题有个很逆天的 corner case 是一开始全是颜色 000。如果这个 corner case 判错了也会寄的。 typedef long long ll; int h, w, q; struct Que">
 <meta property="og:type" content="article">
 <meta property="og:title" content="[题解] ABC346 EFG 简单题解">
 <meta property="og:url" content="http://blog.cyx2009.top/archives/ABC346/index.html">
 <meta property="og:site_name" content="沉石鱼惊旋 的博客">
-<meta property="og:description" content="E - Paint我都见到这题三次了。 考虑正难则反，操作逆序。 此时你先涂的颜色后面不能更改了。 但是显然的你可以知道现在有多少行多少列被涂过了。 那么你把剩下的加进答案就好了。 然后这题有个很逆天的 corner case 是一开始全是颜色 $0$。如果这个 corner case 判错了也会寄的。 typedef long long ll; int h, w, q; struct Query">
+<meta property="og:description" content="E - Paint 我都见到这题三次了。 考虑正难则反，操作逆序。 此时你先涂的颜色后面不能更改了。 但是显然的你可以知道现在有多少行多少列被涂过了。 那么你把剩下的加进答案就好了。 然后这题有个很逆天的 corner case 是一开始全是颜色 000。如果这个 corner case 判错了也会寄的。 typedef long long ll; int h, w, q; struct Que">
 <meta property="og:locale" content="zh_CN">
 <meta property="article:published_time" content="2024-03-23T16:11:00.000Z">
 <meta property="article:modified_time" content="2025-02-12T12:53:11.090Z">
@@ -673,7 +673,7 @@
 						
 						<div class="post-meta-detail post-meta-detail-words">
 							<i class="fa fa-file-word-o" aria-hidden="true"></i>
-							1.5k 字
+							1.6k 字
 						</div>
 					
 						
@@ -689,12 +689,13 @@
 	</header>
 
 	<div class="post-content" id="post_content">
-		<h1 id="E-Paint"><a href="#E-Paint" class="headerlink" title="E - Paint"></a>E - Paint</h1><p>我都见到这题三次了。</p>
+		<h1 id="e-paint"><a class="markdownIt-Anchor" href="#e-paint"></a> E - Paint</h1>
+<p>我都见到这题三次了。</p>
 <p>考虑正难则反，操作逆序。</p>
 <p>此时你先涂的颜色<strong>后面不能更改了</strong>。</p>
 <p>但是显然的你可以知道现在有多少行多少列被涂过了。</p>
 <p>那么你把剩下的加进答案就好了。</p>
-<p>然后这题有个很逆天的 corner case 是一开始全是颜色 $0$。如果这个 corner case 判错了也会寄的。</p>
+<p>然后这题有个很逆天的 corner case 是一开始全是颜色 <span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mn>0</mn></mrow><annotation encoding="application/x-tex">0</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.64444em;vertical-align:0em;"></span><span class="mord">0</span></span></span></span>。如果这个 corner case 判错了也会寄的。</p>
 <pre><code class="highlight cpp"><span class="keyword">typedef</span> <span class="type">long</span> <span class="type">long</span> ll;
 <span class="type">int</span> h, w, q;
 <span class="keyword">struct</span> <span class="title class_">Query</span>
@@ -749,12 +750,12 @@ ll sum;
         cout &lt;&lt; i &lt;&lt; <span class="string">&quot; &quot;</span> &lt;&lt; (!i ? sum : cnt[i]) &lt;&lt; <span class="string">&#x27;\n&#x27;</span>;
     <span class="keyword">return</span> <span class="number">0</span>;
 &#125;</code></pre>
-
-<h1 id="F-SSttrriinngg-in-StringString"><a href="#F-SSttrriinngg-in-StringString" class="headerlink" title="F - SSttrriinngg in StringString"></a>F - SSttrriinngg in StringString</h1><p>首先，最大化答案，一眼二分答案。</p>
+<h1 id="f-ssttrriinngg-in-stringstring"><a class="markdownIt-Anchor" href="#f-ssttrriinngg-in-stringstring"></a> F - SSttrriinngg in StringString</h1>
+<p>首先，最大化答案，一眼二分答案。</p>
 <p>然后考虑 check。这个 check 我只能说是大家都会口胡吧。</p>
-<p>你就考虑你现在指针跑到哪里了，已经过了几轮。整轮能跳的显然要 $\mathcal O(1)$ 维护过了几轮。</p>
+<p>你就考虑你现在指针跑到哪里了，已经过了几轮。整轮能跳的显然要 <span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi mathvariant="script">O</mi><mo stretchy="false">(</mo><mn>1</mn><mo stretchy="false">)</mo></mrow><annotation encoding="application/x-tex">\mathcal O(1)</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:1em;vertical-align:-0.25em;"></span><span class="mord mathcal" style="margin-right:0.02778em;">O</span><span class="mopen">(</span><span class="mord">1</span><span class="mclose">)</span></span></span></span> 维护过了几轮。</p>
 <p>然后不满一轮的判断也是很简单的，但是要注意不满一轮也可能要新开一轮的。这个大家实现的时候自己对着样例调一下就行。</p>
-<p>另外如果样例 3 挂了调不出来可以拍一下 $N&#x3D;5,|S|,|T|\leq 5,\alpha \leq 3$ 的点，其中 $\alpha$ 表示字符集大小。其实不需要几组就能拍出小 hack 的，我拍了一个小数据很快就调过去了。</p>
+<p>另外如果样例 3 挂了调不出来可以拍一下 <span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>N</mi><mo>=</mo><mn>5</mn><mo separator="true">,</mo><mi mathvariant="normal">∣</mi><mi>S</mi><mi mathvariant="normal">∣</mi><mo separator="true">,</mo><mi mathvariant="normal">∣</mi><mi>T</mi><mi mathvariant="normal">∣</mi><mo>≤</mo><mn>5</mn><mo separator="true">,</mo><mi>α</mi><mo>≤</mo><mn>3</mn></mrow><annotation encoding="application/x-tex">N=5,|S|,|T|\leq 5,\alpha \leq 3</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.68333em;vertical-align:0em;"></span><span class="mord mathnormal" style="margin-right:0.10903em;">N</span><span class="mspace" style="margin-right:0.2777777777777778em;"></span><span class="mrel">=</span><span class="mspace" style="margin-right:0.2777777777777778em;"></span></span><span class="base"><span class="strut" style="height:1em;vertical-align:-0.25em;"></span><span class="mord">5</span><span class="mpunct">,</span><span class="mspace" style="margin-right:0.16666666666666666em;"></span><span class="mord">∣</span><span class="mord mathnormal" style="margin-right:0.05764em;">S</span><span class="mord">∣</span><span class="mpunct">,</span><span class="mspace" style="margin-right:0.16666666666666666em;"></span><span class="mord">∣</span><span class="mord mathnormal" style="margin-right:0.13889em;">T</span><span class="mord">∣</span><span class="mspace" style="margin-right:0.2777777777777778em;"></span><span class="mrel">≤</span><span class="mspace" style="margin-right:0.2777777777777778em;"></span></span><span class="base"><span class="strut" style="height:0.8388800000000001em;vertical-align:-0.19444em;"></span><span class="mord">5</span><span class="mpunct">,</span><span class="mspace" style="margin-right:0.16666666666666666em;"></span><span class="mord mathnormal" style="margin-right:0.0037em;">α</span><span class="mspace" style="margin-right:0.2777777777777778em;"></span><span class="mrel">≤</span><span class="mspace" style="margin-right:0.2777777777777778em;"></span></span><span class="base"><span class="strut" style="height:0.64444em;vertical-align:0em;"></span><span class="mord">3</span></span></span></span> 的点，其中 <span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>α</mi></mrow><annotation encoding="application/x-tex">\alpha</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.43056em;vertical-align:0em;"></span><span class="mord mathnormal" style="margin-right:0.0037em;">α</span></span></span></span> 表示字符集大小。其实不需要几组就能拍出小 hack 的，我拍了一个小数据很快就调过去了。</p>
 <pre><code class="highlight cpp"><span class="keyword">typedef</span> <span class="type">long</span> <span class="type">long</span> ll;
 <span class="keyword">typedef</span> __int128 LL;
 <span class="type">int</span> n, m;
@@ -816,14 +817,14 @@ string s, t;
     cout &lt;&lt; ans &lt;&lt; endl;
     <span class="keyword">return</span> <span class="number">0</span>;
 &#125;</code></pre>
-
-<p>另外这题根据实现的不同可能有的方法会炸 long long，自己注意一下。但是我的写法是不会的。<del>尽管我写了个 typedef。</del></p>
-<h1 id="G-Alone"><a href="#G-Alone" class="headerlink" title="G - Alone"></a>G - Alone</h1><p>考虑到你的序列长 $[\tt T,{\color{red}{x}},T,T,T,{\color{red}{x}},T,T,T,T,{\color{red}{x}},T,T,T,{\color{red}{x}},T,T,T]$ 这样子。</p>
-<p>其中 $\tt\color{red}x$ 表示某个颜色相同的数，$\tt T$ 表示其他数。</p>
-<p>那么你对于 $[\tt T_1,T_2,T_3,{\color{red}{x_4}},T_5,T_6,T_7]$ 这样的一个序列（下标表示在序列中的位置），你如果想要得到一组合法的 $[L,R]$ 就需要满足 $L\in [1,3],R\in [5,7]$，也就是要分布在这个 $x$ 的两侧。</p>
-<p>但是这个会导致计算重复的 $[L,R]$。不是很好处理。</p>
-<p>考虑把数对 $(L,R)$ 映射到平面直角坐标系上，$x$ 轴表示左端点，$y$ 轴表示右端点，那么你的每个 $(L,R)$ 都会成为平面上第一象限的一个点。</p>
-<p>而你的 $L$ 和 $R$ 都是有取值范围的，每个 $x$ 贡献的所有 $L$ 和 $R$ 对应点会组成一个矩形。若干个 $x$ 就组成若干矩形，但是有交。</p>
+<p>另外这题根据实现的不同可能有的方法会炸 long long，自己注意一下。但是我的写法是不会的。<s>尽管我写了个 typedef。</s></p>
+<h1 id="g-alone"><a class="markdownIt-Anchor" href="#g-alone"></a> G - Alone</h1>
+<p>考虑到你的序列长 <span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mo stretchy="false">[</mo><mrow><mi mathvariant="monospace">T</mi><mo separator="true">,</mo><mstyle mathcolor="red"><mi mathvariant="monospace">x</mi></mstyle><mo separator="true">,</mo><mi mathvariant="monospace">T</mi><mo separator="true">,</mo><mi mathvariant="monospace">T</mi><mo separator="true">,</mo><mi mathvariant="monospace">T</mi><mo separator="true">,</mo><mstyle mathcolor="red"><mi mathvariant="monospace">x</mi></mstyle><mo separator="true">,</mo><mi mathvariant="monospace">T</mi><mo separator="true">,</mo><mi mathvariant="monospace">T</mi><mo separator="true">,</mo><mi mathvariant="monospace">T</mi><mo separator="true">,</mo><mi mathvariant="monospace">T</mi><mo separator="true">,</mo><mstyle mathcolor="red"><mi mathvariant="monospace">x</mi></mstyle><mo separator="true">,</mo><mi mathvariant="monospace">T</mi><mo separator="true">,</mo><mi mathvariant="monospace">T</mi><mo separator="true">,</mo><mi mathvariant="monospace">T</mi><mo separator="true">,</mo><mstyle mathcolor="red"><mi mathvariant="monospace">x</mi></mstyle><mo separator="true">,</mo><mi mathvariant="monospace">T</mi><mo separator="true">,</mo><mi mathvariant="monospace">T</mi><mo separator="true">,</mo><mi mathvariant="monospace">T</mi><mo stretchy="false">]</mo></mrow></mrow><annotation encoding="application/x-tex">[\tt T,{\color{red}{x}},T,T,T,{\color{red}{x}},T,T,T,T,{\color{red}{x}},T,T,T,{\color{red}{x}},T,T,T]</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:1em;vertical-align:-0.25em;"></span><span class="mopen">[</span><span class="mord"><span class="mord mathtt">T</span><span class="mpunct">,</span><span class="mspace" style="margin-right:0.16666666666666666em;"></span><span class="mord"><span class="mord" style="color:red;"><span class="mord mathtt" style="color:red;">x</span></span></span><span class="mpunct">,</span><span class="mspace" style="margin-right:0.16666666666666666em;"></span><span class="mord mathtt">T</span><span class="mpunct">,</span><span class="mspace" style="margin-right:0.16666666666666666em;"></span><span class="mord mathtt">T</span><span class="mpunct">,</span><span class="mspace" style="margin-right:0.16666666666666666em;"></span><span class="mord mathtt">T</span><span class="mpunct">,</span><span class="mspace" style="margin-right:0.16666666666666666em;"></span><span class="mord"><span class="mord" style="color:red;"><span class="mord mathtt" style="color:red;">x</span></span></span><span class="mpunct">,</span><span class="mspace" style="margin-right:0.16666666666666666em;"></span><span class="mord mathtt">T</span><span class="mpunct">,</span><span class="mspace" style="margin-right:0.16666666666666666em;"></span><span class="mord mathtt">T</span><span class="mpunct">,</span><span class="mspace" style="margin-right:0.16666666666666666em;"></span><span class="mord mathtt">T</span><span class="mpunct">,</span><span class="mspace" style="margin-right:0.16666666666666666em;"></span><span class="mord mathtt">T</span><span class="mpunct">,</span><span class="mspace" style="margin-right:0.16666666666666666em;"></span><span class="mord"><span class="mord" style="color:red;"><span class="mord mathtt" style="color:red;">x</span></span></span><span class="mpunct">,</span><span class="mspace" style="margin-right:0.16666666666666666em;"></span><span class="mord mathtt">T</span><span class="mpunct">,</span><span class="mspace" style="margin-right:0.16666666666666666em;"></span><span class="mord mathtt">T</span><span class="mpunct">,</span><span class="mspace" style="margin-right:0.16666666666666666em;"></span><span class="mord mathtt">T</span><span class="mpunct">,</span><span class="mspace" style="margin-right:0.16666666666666666em;"></span><span class="mord"><span class="mord" style="color:red;"><span class="mord mathtt" style="color:red;">x</span></span></span><span class="mpunct">,</span><span class="mspace" style="margin-right:0.16666666666666666em;"></span><span class="mord mathtt">T</span><span class="mpunct">,</span><span class="mspace" style="margin-right:0.16666666666666666em;"></span><span class="mord mathtt">T</span><span class="mpunct">,</span><span class="mspace" style="margin-right:0.16666666666666666em;"></span><span class="mord mathtt">T</span><span class="mclose">]</span></span></span></span></span> 这样子。</p>
+<p>其中 <span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mstyle mathcolor="red"><mi mathvariant="monospace">x</mi></mstyle></mrow><annotation encoding="application/x-tex">\tt\color{red}x</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.43056em;vertical-align:0em;"></span><span class="mord"><span class="mord mathtt" style="color:red;">x</span></span></span></span></span> 表示某个颜色相同的数，<span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi mathvariant="monospace">T</mi></mrow><annotation encoding="application/x-tex">\tt T</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.61111em;vertical-align:0em;"></span><span class="mord"><span class="mord mathtt">T</span></span></span></span></span> 表示其他数。</p>
+<p>那么你对于 <span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mo stretchy="false">[</mo><mrow><msub><mi mathvariant="monospace">T</mi><mn mathvariant="monospace">1</mn></msub><mo separator="true">,</mo><msub><mi mathvariant="monospace">T</mi><mn mathvariant="monospace">2</mn></msub><mo separator="true">,</mo><msub><mi mathvariant="monospace">T</mi><mn mathvariant="monospace">3</mn></msub><mo separator="true">,</mo><mstyle mathcolor="red"><msub><mi mathvariant="monospace">x</mi><mn mathvariant="monospace">4</mn></msub></mstyle><mo separator="true">,</mo><msub><mi mathvariant="monospace">T</mi><mn mathvariant="monospace">5</mn></msub><mo separator="true">,</mo><msub><mi mathvariant="monospace">T</mi><mn mathvariant="monospace">6</mn></msub><mo separator="true">,</mo><msub><mi mathvariant="monospace">T</mi><mn mathvariant="monospace">7</mn></msub><mo stretchy="false">]</mo></mrow></mrow><annotation encoding="application/x-tex">[\tt T_1,T_2,T_3,{\color{red}{x_4}},T_5,T_6,T_7]</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:1em;vertical-align:-0.25em;"></span><span class="mopen">[</span><span class="mord"><span class="mord"><span class="mord mathtt">T</span><span class="msupsub"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist" style="height:0.27777700000000005em;"><span style="top:-2.5500000000000003em;margin-left:0em;margin-right:0.05em;"><span class="pstrut" style="height:2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mathtt mtight">1</span></span></span></span><span class="vlist-s">​</span></span><span class="vlist-r"><span class="vlist" style="height:0.15em;"><span></span></span></span></span></span></span><span class="mpunct">,</span><span class="mspace" style="margin-right:0.16666666666666666em;"></span><span class="mord"><span class="mord mathtt">T</span><span class="msupsub"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist" style="height:0.27777700000000005em;"><span style="top:-2.5500000000000003em;margin-left:0em;margin-right:0.05em;"><span class="pstrut" style="height:2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mathtt mtight">2</span></span></span></span><span class="vlist-s">​</span></span><span class="vlist-r"><span class="vlist" style="height:0.15em;"><span></span></span></span></span></span></span><span class="mpunct">,</span><span class="mspace" style="margin-right:0.16666666666666666em;"></span><span class="mord"><span class="mord mathtt">T</span><span class="msupsub"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist" style="height:0.27777700000000005em;"><span style="top:-2.5500000000000003em;margin-left:0em;margin-right:0.05em;"><span class="pstrut" style="height:2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mathtt mtight">3</span></span></span></span><span class="vlist-s">​</span></span><span class="vlist-r"><span class="vlist" style="height:0.15em;"><span></span></span></span></span></span></span><span class="mpunct">,</span><span class="mspace" style="margin-right:0.16666666666666666em;"></span><span class="mord"><span class="mord" style="color:red;"><span class="mord" style="color:red;"><span class="mord mathtt" style="color:red;">x</span><span class="msupsub"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist" style="height:0.27777700000000005em;"><span style="top:-2.5500000000000003em;margin-left:0em;margin-right:0.05em;"><span class="pstrut" style="height:2.7em;"></span><span class="sizing reset-size6 size3 mtight" style="color:red;"><span class="mord mathtt mtight" style="color:red;">4</span></span></span></span><span class="vlist-s">​</span></span><span class="vlist-r"><span class="vlist" style="height:0.15em;"><span></span></span></span></span></span></span></span></span><span class="mpunct">,</span><span class="mspace" style="margin-right:0.16666666666666666em;"></span><span class="mord"><span class="mord mathtt">T</span><span class="msupsub"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist" style="height:0.27777700000000005em;"><span style="top:-2.5500000000000003em;margin-left:0em;margin-right:0.05em;"><span class="pstrut" style="height:2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mathtt mtight">5</span></span></span></span><span class="vlist-s">​</span></span><span class="vlist-r"><span class="vlist" style="height:0.15em;"><span></span></span></span></span></span></span><span class="mpunct">,</span><span class="mspace" style="margin-right:0.16666666666666666em;"></span><span class="mord"><span class="mord mathtt">T</span><span class="msupsub"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist" style="height:0.27777700000000005em;"><span style="top:-2.5500000000000003em;margin-left:0em;margin-right:0.05em;"><span class="pstrut" style="height:2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mathtt mtight">6</span></span></span></span><span class="vlist-s">​</span></span><span class="vlist-r"><span class="vlist" style="height:0.15em;"><span></span></span></span></span></span></span><span class="mpunct">,</span><span class="mspace" style="margin-right:0.16666666666666666em;"></span><span class="mord"><span class="mord mathtt">T</span><span class="msupsub"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist" style="height:0.27777700000000005em;"><span style="top:-2.5500000000000003em;margin-left:0em;margin-right:0.05em;"><span class="pstrut" style="height:2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mathtt mtight">7</span></span></span></span><span class="vlist-s">​</span></span><span class="vlist-r"><span class="vlist" style="height:0.15em;"><span></span></span></span></span></span></span><span class="mclose">]</span></span></span></span></span> 这样的一个序列（下标表示在序列中的位置），你如果想要得到一组合法的 <span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mo stretchy="false">[</mo><mi>L</mi><mo separator="true">,</mo><mi>R</mi><mo stretchy="false">]</mo></mrow><annotation encoding="application/x-tex">[L,R]</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:1em;vertical-align:-0.25em;"></span><span class="mopen">[</span><span class="mord mathnormal">L</span><span class="mpunct">,</span><span class="mspace" style="margin-right:0.16666666666666666em;"></span><span class="mord mathnormal" style="margin-right:0.00773em;">R</span><span class="mclose">]</span></span></span></span> 就需要满足 <span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>L</mi><mo>∈</mo><mo stretchy="false">[</mo><mn>1</mn><mo separator="true">,</mo><mn>3</mn><mo stretchy="false">]</mo><mo separator="true">,</mo><mi>R</mi><mo>∈</mo><mo stretchy="false">[</mo><mn>5</mn><mo separator="true">,</mo><mn>7</mn><mo stretchy="false">]</mo></mrow><annotation encoding="application/x-tex">L\in [1,3],R\in [5,7]</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.72243em;vertical-align:-0.0391em;"></span><span class="mord mathnormal">L</span><span class="mspace" style="margin-right:0.2777777777777778em;"></span><span class="mrel">∈</span><span class="mspace" style="margin-right:0.2777777777777778em;"></span></span><span class="base"><span class="strut" style="height:1em;vertical-align:-0.25em;"></span><span class="mopen">[</span><span class="mord">1</span><span class="mpunct">,</span><span class="mspace" style="margin-right:0.16666666666666666em;"></span><span class="mord">3</span><span class="mclose">]</span><span class="mpunct">,</span><span class="mspace" style="margin-right:0.16666666666666666em;"></span><span class="mord mathnormal" style="margin-right:0.00773em;">R</span><span class="mspace" style="margin-right:0.2777777777777778em;"></span><span class="mrel">∈</span><span class="mspace" style="margin-right:0.2777777777777778em;"></span></span><span class="base"><span class="strut" style="height:1em;vertical-align:-0.25em;"></span><span class="mopen">[</span><span class="mord">5</span><span class="mpunct">,</span><span class="mspace" style="margin-right:0.16666666666666666em;"></span><span class="mord">7</span><span class="mclose">]</span></span></span></span>，也就是要分布在这个 <span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>x</mi></mrow><annotation encoding="application/x-tex">x</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.43056em;vertical-align:0em;"></span><span class="mord mathnormal">x</span></span></span></span> 的两侧。</p>
+<p>但是这个会导致计算重复的 <span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mo stretchy="false">[</mo><mi>L</mi><mo separator="true">,</mo><mi>R</mi><mo stretchy="false">]</mo></mrow><annotation encoding="application/x-tex">[L,R]</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:1em;vertical-align:-0.25em;"></span><span class="mopen">[</span><span class="mord mathnormal">L</span><span class="mpunct">,</span><span class="mspace" style="margin-right:0.16666666666666666em;"></span><span class="mord mathnormal" style="margin-right:0.00773em;">R</span><span class="mclose">]</span></span></span></span>。不是很好处理。</p>
+<p>考虑把数对 <span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mo stretchy="false">(</mo><mi>L</mi><mo separator="true">,</mo><mi>R</mi><mo stretchy="false">)</mo></mrow><annotation encoding="application/x-tex">(L,R)</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:1em;vertical-align:-0.25em;"></span><span class="mopen">(</span><span class="mord mathnormal">L</span><span class="mpunct">,</span><span class="mspace" style="margin-right:0.16666666666666666em;"></span><span class="mord mathnormal" style="margin-right:0.00773em;">R</span><span class="mclose">)</span></span></span></span> 映射到平面直角坐标系上，<span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>x</mi></mrow><annotation encoding="application/x-tex">x</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.43056em;vertical-align:0em;"></span><span class="mord mathnormal">x</span></span></span></span> 轴表示左端点，<span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>y</mi></mrow><annotation encoding="application/x-tex">y</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.625em;vertical-align:-0.19444em;"></span><span class="mord mathnormal" style="margin-right:0.03588em;">y</span></span></span></span> 轴表示右端点，那么你的每个 <span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mo stretchy="false">(</mo><mi>L</mi><mo separator="true">,</mo><mi>R</mi><mo stretchy="false">)</mo></mrow><annotation encoding="application/x-tex">(L,R)</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:1em;vertical-align:-0.25em;"></span><span class="mopen">(</span><span class="mord mathnormal">L</span><span class="mpunct">,</span><span class="mspace" style="margin-right:0.16666666666666666em;"></span><span class="mord mathnormal" style="margin-right:0.00773em;">R</span><span class="mclose">)</span></span></span></span> 都会成为平面上第一象限的一个点。</p>
+<p>而你的 <span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>L</mi></mrow><annotation encoding="application/x-tex">L</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.68333em;vertical-align:0em;"></span><span class="mord mathnormal">L</span></span></span></span> 和 <span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>R</mi></mrow><annotation encoding="application/x-tex">R</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.68333em;vertical-align:0em;"></span><span class="mord mathnormal" style="margin-right:0.00773em;">R</span></span></span></span> 都是有取值范围的，每个 <span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>x</mi></mrow><annotation encoding="application/x-tex">x</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.43056em;vertical-align:0em;"></span><span class="mord mathnormal">x</span></span></span></span> 贡献的所有 <span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>L</mi></mrow><annotation encoding="application/x-tex">L</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.68333em;vertical-align:0em;"></span><span class="mord mathnormal">L</span></span></span></span> 和 <span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>R</mi></mrow><annotation encoding="application/x-tex">R</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.68333em;vertical-align:0em;"></span><span class="mord mathnormal" style="margin-right:0.00773em;">R</span></span></span></span> 对应点会组成一个矩形。若干个 <span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>x</mi></mrow><annotation encoding="application/x-tex">x</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.43056em;vertical-align:0em;"></span><span class="mord mathnormal">x</span></span></span></span> 就组成若干矩形，但是有交。</p>
 <p>那么题目就变成了平面直角坐标系中若干矩形求面积并，这是扫描线板子。</p>
 <pre><code class="highlight cpp"><span class="type">int</span> n, w, h;
 <span class="keyword">struct</span> <span class="title class_">Seg</span>
@@ -975,10 +976,10 @@ vector&lt;<span class="type">int</span>&gt; col[<span class="number">200020</spa
 <script type="text/javascript">
 	socialShare("#share", {
 	    title : '[题解] ABC346 EFG 简单题解',
-	    description : 'E - Paint我都见到这题三次了。
+	    description : ' E - Paint
+我都见到这题三次了。
 考虑正难则反，操作逆序。
-此时你先涂的颜色后面不能更改了。
-...',
+此时你先涂的颜色后面不能更改了...',
 	    wechatQrcodeTitle : "分享到微信",
 	    wechatQrcodeHelper : '微信扫描二维码',
 	    source : 'http://blog.cyx2009.top/archives/ABC346/'
@@ -1067,30 +1068,30 @@ vector&lt;<span class="type">int</span>&gt; col[<span class="number">200020</spa
 		
 		
 
-					<footer id="footer" class="site-footer card shadow-sm border-0">
-						
-						<div>Theme <a target="_blank" rel="noopener" href="https://github.com/solstice23/hexo-theme-argon"><strong>Argon</strong></a> | Powered by Hexo</div>
-						<span id="busuanzi_container_site_uv">
-							本站访客数 <span id="busuanzi_value_site_uv"></span> 人次
-						</span>
-						<span id="timeDate">载入时间...</span>
-						<script>
-						    var now = new Date(); 
-						    function createtime() { 
-						        var grt= new Date("03/28/2022 20:00:00");//在此处修改你的建站时间
-						        now.setTime(now.getTime()+250); 
-						        days = (now - grt ) / 1000 / 60 / 60 / 24; dnum = Math.floor(days); 
-						        hours = (now - grt ) / 1000 / 60 / 60 - (24 * dnum); hnum = Math.floor(hours); 
-						        if(String(hnum).length ==1 ){hnum = "0" + hnum;} minutes = (now - grt ) / 1000 /60 - (24 * 60 * dnum) - (60 * hnum); 
-						        mnum = Math.floor(minutes); if(String(mnum).length ==1 ){mnum = "0" + mnum;} 
-						        seconds = (now - grt ) / 1000 - (24 * 60 * 60 * dnum) - (60 * 60 * hnum) - (60 * mnum); 
-						        snum = Math.round(seconds); if(String(snum).length ==1 ){snum = "0" + snum;} 
-						        document.getElementById("timeDate").innerHTML = "本站已安全运行 "+dnum+" 天 "+ hnum + " 小时 " + mnum + " 分 " + snum + " 秒"; 
-						        // document.getElementById("times").innerHTML = hnum + " 小时 " + mnum + " 分 " + snum + " 秒"; 
-						    } 
-						setInterval("createtime()",250);
-						</script>
-						<script>
+                    <footer id="footer" class="site-footer card shadow-sm border-0">
+                        
+                        <div>Theme <a target="_blank" rel="noopener" href="https://github.com/solstice23/hexo-theme-argon"><strong>Argon</strong></a> | Powered by Hexo</div>
+                        <span id="busuanzi_container_site_uv">
+                            本站访客数 <span id="busuanzi_value_site_uv"></span> 人次
+                        </span>
+                        <span id="timeDate">载入时间...</span>
+                        <script>
+                            var now = new Date(); 
+                            function createtime() { 
+                                var grt= new Date("03/28/2022 20:00:00");//在此处修改你的建站时间
+                                now.setTime(now.getTime()+250); 
+                                days = (now - grt ) / 1000 / 60 / 60 / 24; dnum = Math.floor(days); 
+                                hours = (now - grt ) / 1000 / 60 / 60 - (24 * dnum); hnum = Math.floor(hours); 
+                                if(String(hnum).length ==1 ){hnum = "0" + hnum;} minutes = (now - grt ) / 1000 /60 - (24 * 60 * dnum) - (60 * hnum); 
+                                mnum = Math.floor(minutes); if(String(mnum).length ==1 ){mnum = "0" + mnum;} 
+                                seconds = (now - grt ) / 1000 - (24 * 60 * 60 * dnum) - (60 * 60 * hnum) - (60 * mnum); 
+                                snum = Math.round(seconds); if(String(snum).length ==1 ){snum = "0" + snum;} 
+                                document.getElementById("timeDate").innerHTML = "本站已安全运行 "+dnum+" 天 "+ hnum + " 小时 " + mnum + " 分 " + snum + " 秒"; 
+                                // document.getElementById("times").innerHTML = hnum + " 小时 " + mnum + " 分 " + snum + " 秒"; 
+                            } 
+                        setInterval("createtime()",250);
+                        </script>
+                        <script>
         window.onload = (() => {
             //定义点击出现文字类
             function ClickFrontShow() {
@@ -1227,49 +1228,54 @@ vector&lt;<span class="type">int</span>&gt; col[<span class="number">200020</spa
             //第二个参数是颜色数组，必须是数组类型！
             frontShow.init();
         })();
-						</script>
-					</footer>
-				</main>
-			</div>
-		</div>
-		
+                        </script>
+                    </footer>
+                </main>
+            </div>
+        </div>
+        
 <script src="/argontheme.js"></script>
 
-		
-		
-		
-			<link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/KaTeX/0.15.6/katex.min.css">
-			<script src="//cdnjs.cloudflare.com/ajax/libs/KaTeX/0.15.6/katex.min.js"></script>
-			<script src="//cdnjs.cloudflare.com/ajax/libs/KaTeX/0.15.6/contrib/auto-render.min.js"></script>
-			<script>
-				document.addEventListener("DOMContentLoaded", function() {
-					renderMathInElement(document.body,{
-						delimiters: [
-							{left: "$$", right: "$$", display: true},
-							{left: "$", right: "$", display: false},
-							{left: "\\(", right: "\\)", display: false}
-						]
-					});
-				});
-			</script>
-		
+        
+        
+        
+            <link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/KaTeX/0.16.9/katex.min.css">
+            <script src="//cdnjs.cloudflare.com/ajax/libs/KaTeX/0.16.9/katex.min.js"></script>
+            <script src="//cdnjs.cloudflare.com/ajax/libs/KaTeX/0.16.9/contrib/auto-render.min.js"></script>
+            <script>
+                document.addEventListener("DOMContentLoaded", function() {
+                    renderMathInElement(document.body, {
+                      // customised options
+                      // • auto-render specific keys, e.g.:
+                      delimiters: [
+                          {left: '$$', right: '$$', display: true},
+                          {left: '$', right: '$', display: false},
+                          {left: '\\(', right: '\\)', display: false},
+                          {left: '\\[', right: '\\]', display: true}
+                      ],
+                      // • rendering keys, e.g.:
+                      throwOnError : false
+                    });
+                });
+            </script>
+        
 
-		
-			<script>
-				var argonEnableCodeHighlight = true;
-			</script>
-			
+        
+            <script>
+                var argonEnableCodeHighlight = true;
+            </script>
+            
 <link rel="stylesheet" href="/assets/vendor/highlight/styles/vs2015.css">
 
-		
+        
 
-	</div>
+    </div>
 </div>
 <noscript>
-	<style>
-		article img.lazyload[src^="data:image/svg+xml;base64,PCEtLUFyZ29uTG9hZGluZy0tPg"]{display: none;}
-		.comment-item-text .comment-sticker.lazyload{display: none;}
-	</style>
+    <style>
+        article img.lazyload[src^="data:image/svg+xml;base64,PCEtLUFyZ29uTG9hZGluZy0tPg"]{display: none;}
+        .comment-item-text .comment-sticker.lazyload{display: none;}
+    </style>
 </noscript>
 </body>
 

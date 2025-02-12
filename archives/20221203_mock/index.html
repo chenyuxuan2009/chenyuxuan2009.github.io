@@ -22,12 +22,12 @@
 	
 		<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=5">
 	
-	<meta name="description" content="题意很明确了，大意就是一棵树，染色，距离 $\le 2$ 不得染同色，问染色方案。 首先我们要明确，距离 $\le 2$，具体是什么情况呢？ 显然，分两个大类：  一条链往下  某节点和它的儿子 某节点和它的孙子   非一条链往下  某节点和它的兄弟    那么我们就梳理出了 $3$ 中不能涂同一种颜色的情况。 读到这里，我想应该正解慢慢出来了。 其次我们要知道，总染色方案就是每个点染色方案之积。">
+	<meta name="description" content="题意很明确了，大意就是一棵树，染色，距离 ≤2\le 2≤2 不得染同色，问染色方案。 首先我们要明确，距离 ≤2\le 2≤2，具体是什么情况呢？ 显然，分两个大类：   一条链往下  某节点和它的儿子 某节点和它的孙子    非一条链往下  某节点和它的兄弟    那么我们就梳理出了 333 中不能涂同一种颜色的情况。 读到这里，我想应该正解慢慢出来了。 其次我们要知道，总染色方案就是每个点染">
 <meta property="og:type" content="article">
 <meta property="og:title" content="[题解] 20221203 | SCZ-QZS 模拟赛 T5">
 <meta property="og:url" content="http://blog.cyx2009.top/archives/20221203_mock/index.html">
 <meta property="og:site_name" content="沉石鱼惊旋 的博客">
-<meta property="og:description" content="题意很明确了，大意就是一棵树，染色，距离 $\le 2$ 不得染同色，问染色方案。 首先我们要明确，距离 $\le 2$，具体是什么情况呢？ 显然，分两个大类：  一条链往下  某节点和它的儿子 某节点和它的孙子   非一条链往下  某节点和它的兄弟    那么我们就梳理出了 $3$ 中不能涂同一种颜色的情况。 读到这里，我想应该正解慢慢出来了。 其次我们要知道，总染色方案就是每个点染色方案之积。">
+<meta property="og:description" content="题意很明确了，大意就是一棵树，染色，距离 ≤2\le 2≤2 不得染同色，问染色方案。 首先我们要明确，距离 ≤2\le 2≤2，具体是什么情况呢？ 显然，分两个大类：   一条链往下  某节点和它的儿子 某节点和它的孙子    非一条链往下  某节点和它的兄弟    那么我们就梳理出了 333 中不能涂同一种颜色的情况。 读到这里，我想应该正解慢慢出来了。 其次我们要知道，总染色方案就是每个点染">
 <meta property="og:locale" content="zh_CN">
 <meta property="article:published_time" content="2022-12-06T13:06:00.000Z">
 <meta property="article:modified_time" content="2025-02-12T13:24:11.072Z">
@@ -674,7 +674,7 @@
 						
 						<div class="post-meta-detail post-meta-detail-words">
 							<i class="fa fa-file-word-o" aria-hidden="true"></i>
-							520 字
+							526 字
 						</div>
 					
 						
@@ -690,26 +690,28 @@
 	</header>
 
 	<div class="post-content" id="post_content">
-		<p>题意很明确了，大意就是一棵树，染色，距离 $\le 2$ 不得染同色，问染色方案。</p>
-<p>首先我们要明确，距离 $\le 2$，具体是什么情况呢？</p>
+		<p>题意很明确了，大意就是一棵树，染色，距离 <span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mo>≤</mo><mn>2</mn></mrow><annotation encoding="application/x-tex">\le 2</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.7719400000000001em;vertical-align:-0.13597em;"></span><span class="mrel">≤</span><span class="mspace" style="margin-right:0.2777777777777778em;"></span></span><span class="base"><span class="strut" style="height:0.64444em;vertical-align:0em;"></span><span class="mord">2</span></span></span></span> 不得染同色，问染色方案。</p>
+<p>首先我们要明确，距离 <span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mo>≤</mo><mn>2</mn></mrow><annotation encoding="application/x-tex">\le 2</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.7719400000000001em;vertical-align:-0.13597em;"></span><span class="mrel">≤</span><span class="mspace" style="margin-right:0.2777777777777778em;"></span></span><span class="base"><span class="strut" style="height:0.64444em;vertical-align:0em;"></span><span class="mord">2</span></span></span></span>，具体是什么情况呢？</p>
 <p>显然，分两个大类：</p>
 <ul>
-<li><p>一条链往下</p>
+<li>
+<p>一条链往下</p>
 <ul>
 <li>某节点和它的儿子</li>
 <li>某节点和它的孙子</li>
 </ul>
 </li>
-<li><p>非一条链往下</p>
+<li>
+<p>非一条链往下</p>
 <ul>
 <li>某节点和它的兄弟</li>
 </ul>
 </li>
 </ul>
-<p>那么我们就梳理出了 $3$ 中不能涂同一种颜色的情况。</p>
+<p>那么我们就梳理出了 <span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mn>3</mn></mrow><annotation encoding="application/x-tex">3</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.64444em;vertical-align:0em;"></span><span class="mord">3</span></span></span></span> 中不能涂同一种颜色的情况。</p>
 <p>读到这里，我想应该正解慢慢出来了。</p>
 <p>其次我们要知道，总染色方案就是每个点染色方案之积。</p>
-<p>那么每个点最初有 $k$ 种选择，我们看一下它是否存在爷爷，若存在最多只有 $k-2$ 种，因为有爷爷必然有爸爸。</p>
+<p>那么每个点最初有 <span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>k</mi></mrow><annotation encoding="application/x-tex">k</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.69444em;vertical-align:0em;"></span><span class="mord mathnormal" style="margin-right:0.03148em;">k</span></span></span></span> 种选择，我们看一下它是否存在爷爷，若存在最多只有 <span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>k</mi><mo>−</mo><mn>2</mn></mrow><annotation encoding="application/x-tex">k-2</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.77777em;vertical-align:-0.08333em;"></span><span class="mord mathnormal" style="margin-right:0.03148em;">k</span><span class="mspace" style="margin-right:0.2222222222222222em;"></span><span class="mbin">−</span><span class="mspace" style="margin-right:0.2222222222222222em;"></span></span><span class="base"><span class="strut" style="height:0.64444em;vertical-align:0em;"></span><span class="mord">2</span></span></span></span> 种，因为有爷爷必然有爸爸。</p>
 <p><strong>一条链往下</strong>的方案已经考虑完了，接下来考虑兄弟。</p>
 <p>兄弟就很简单了，记一个变量，自己的父亲每往下搜索一次加一，既能得到兄弟的个数。</p>
 <p>详情见代码。</p>
@@ -828,8 +830,8 @@ vector&lt;<span class="type">int</span>&gt;a[<span class="number">100020</span>]
 <script type="text/javascript">
 	socialShare("#share", {
 	    title : '[题解] 20221203 | SCZ-QZS 模拟赛 T5',
-	    description : '题意很明确了，大意就是一棵树，染色，距离 $\le 2$ 不得染同色，问染色方案。
-首先我们要明确，...',
+	    description : '题意很明确了，大意就是一棵树，染色，距离 ≤2\le 2≤2 不得染同色，问染色方案。
+首先我们要明...',
 	    wechatQrcodeTitle : "分享到微信",
 	    wechatQrcodeHelper : '微信扫描二维码',
 	    source : 'http://blog.cyx2009.top/archives/20221203_mock/'
@@ -918,30 +920,30 @@ vector&lt;<span class="type">int</span>&gt;a[<span class="number">100020</span>]
 		
 		
 
-					<footer id="footer" class="site-footer card shadow-sm border-0">
-						
-						<div>Theme <a target="_blank" rel="noopener" href="https://github.com/solstice23/hexo-theme-argon"><strong>Argon</strong></a> | Powered by Hexo</div>
-						<span id="busuanzi_container_site_uv">
-							本站访客数 <span id="busuanzi_value_site_uv"></span> 人次
-						</span>
-						<span id="timeDate">载入时间...</span>
-						<script>
-						    var now = new Date(); 
-						    function createtime() { 
-						        var grt= new Date("03/28/2022 20:00:00");//在此处修改你的建站时间
-						        now.setTime(now.getTime()+250); 
-						        days = (now - grt ) / 1000 / 60 / 60 / 24; dnum = Math.floor(days); 
-						        hours = (now - grt ) / 1000 / 60 / 60 - (24 * dnum); hnum = Math.floor(hours); 
-						        if(String(hnum).length ==1 ){hnum = "0" + hnum;} minutes = (now - grt ) / 1000 /60 - (24 * 60 * dnum) - (60 * hnum); 
-						        mnum = Math.floor(minutes); if(String(mnum).length ==1 ){mnum = "0" + mnum;} 
-						        seconds = (now - grt ) / 1000 - (24 * 60 * 60 * dnum) - (60 * 60 * hnum) - (60 * mnum); 
-						        snum = Math.round(seconds); if(String(snum).length ==1 ){snum = "0" + snum;} 
-						        document.getElementById("timeDate").innerHTML = "本站已安全运行 "+dnum+" 天 "+ hnum + " 小时 " + mnum + " 分 " + snum + " 秒"; 
-						        // document.getElementById("times").innerHTML = hnum + " 小时 " + mnum + " 分 " + snum + " 秒"; 
-						    } 
-						setInterval("createtime()",250);
-						</script>
-						<script>
+                    <footer id="footer" class="site-footer card shadow-sm border-0">
+                        
+                        <div>Theme <a target="_blank" rel="noopener" href="https://github.com/solstice23/hexo-theme-argon"><strong>Argon</strong></a> | Powered by Hexo</div>
+                        <span id="busuanzi_container_site_uv">
+                            本站访客数 <span id="busuanzi_value_site_uv"></span> 人次
+                        </span>
+                        <span id="timeDate">载入时间...</span>
+                        <script>
+                            var now = new Date(); 
+                            function createtime() { 
+                                var grt= new Date("03/28/2022 20:00:00");//在此处修改你的建站时间
+                                now.setTime(now.getTime()+250); 
+                                days = (now - grt ) / 1000 / 60 / 60 / 24; dnum = Math.floor(days); 
+                                hours = (now - grt ) / 1000 / 60 / 60 - (24 * dnum); hnum = Math.floor(hours); 
+                                if(String(hnum).length ==1 ){hnum = "0" + hnum;} minutes = (now - grt ) / 1000 /60 - (24 * 60 * dnum) - (60 * hnum); 
+                                mnum = Math.floor(minutes); if(String(mnum).length ==1 ){mnum = "0" + mnum;} 
+                                seconds = (now - grt ) / 1000 - (24 * 60 * 60 * dnum) - (60 * 60 * hnum) - (60 * mnum); 
+                                snum = Math.round(seconds); if(String(snum).length ==1 ){snum = "0" + snum;} 
+                                document.getElementById("timeDate").innerHTML = "本站已安全运行 "+dnum+" 天 "+ hnum + " 小时 " + mnum + " 分 " + snum + " 秒"; 
+                                // document.getElementById("times").innerHTML = hnum + " 小时 " + mnum + " 分 " + snum + " 秒"; 
+                            } 
+                        setInterval("createtime()",250);
+                        </script>
+                        <script>
         window.onload = (() => {
             //定义点击出现文字类
             function ClickFrontShow() {
@@ -1078,49 +1080,54 @@ vector&lt;<span class="type">int</span>&gt;a[<span class="number">100020</span>]
             //第二个参数是颜色数组，必须是数组类型！
             frontShow.init();
         })();
-						</script>
-					</footer>
-				</main>
-			</div>
-		</div>
-		
+                        </script>
+                    </footer>
+                </main>
+            </div>
+        </div>
+        
 <script src="/argontheme.js"></script>
 
-		
-		
-		
-			<link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/KaTeX/0.15.6/katex.min.css">
-			<script src="//cdnjs.cloudflare.com/ajax/libs/KaTeX/0.15.6/katex.min.js"></script>
-			<script src="//cdnjs.cloudflare.com/ajax/libs/KaTeX/0.15.6/contrib/auto-render.min.js"></script>
-			<script>
-				document.addEventListener("DOMContentLoaded", function() {
-					renderMathInElement(document.body,{
-						delimiters: [
-							{left: "$$", right: "$$", display: true},
-							{left: "$", right: "$", display: false},
-							{left: "\\(", right: "\\)", display: false}
-						]
-					});
-				});
-			</script>
-		
+        
+        
+        
+            <link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/KaTeX/0.16.9/katex.min.css">
+            <script src="//cdnjs.cloudflare.com/ajax/libs/KaTeX/0.16.9/katex.min.js"></script>
+            <script src="//cdnjs.cloudflare.com/ajax/libs/KaTeX/0.16.9/contrib/auto-render.min.js"></script>
+            <script>
+                document.addEventListener("DOMContentLoaded", function() {
+                    renderMathInElement(document.body, {
+                      // customised options
+                      // • auto-render specific keys, e.g.:
+                      delimiters: [
+                          {left: '$$', right: '$$', display: true},
+                          {left: '$', right: '$', display: false},
+                          {left: '\\(', right: '\\)', display: false},
+                          {left: '\\[', right: '\\]', display: true}
+                      ],
+                      // • rendering keys, e.g.:
+                      throwOnError : false
+                    });
+                });
+            </script>
+        
 
-		
-			<script>
-				var argonEnableCodeHighlight = true;
-			</script>
-			
+        
+            <script>
+                var argonEnableCodeHighlight = true;
+            </script>
+            
 <link rel="stylesheet" href="/assets/vendor/highlight/styles/vs2015.css">
 
-		
+        
 
-	</div>
+    </div>
 </div>
 <noscript>
-	<style>
-		article img.lazyload[src^="data:image/svg+xml;base64,PCEtLUFyZ29uTG9hZGluZy0tPg"]{display: none;}
-		.comment-item-text .comment-sticker.lazyload{display: none;}
-	</style>
+    <style>
+        article img.lazyload[src^="data:image/svg+xml;base64,PCEtLUFyZ29uTG9hZGluZy0tPg"]{display: none;}
+        .comment-item-text .comment-sticker.lazyload{display: none;}
+    </style>
 </noscript>
 </body>
 

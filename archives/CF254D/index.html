@@ -22,12 +22,12 @@
 	
 		<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=5">
 	
-	<meta name="description" content="前言凭什么有人觉得这题难写来着，多分析一点就很好写了&#x2F;fendou 题目翻译$n\times m$ 的网格，有若干个老鼠 $\tt R$。墙是 $\tt X$。普通地面是 $\tt .$。选择两个位置投放炸弹，炸弹每个时刻往四联通扩张一次。炸弹不可以越过墙。炸弹投放时间为 $0$，$d$ 秒之后炸弹就会停止扩张。问选择哪两个位置各投放一个炸弹才能让所有老鼠都被炸到。无解输出 -1。 要求">
+	<meta name="description" content="前言 凭什么有人觉得这题难写来着，多分析一点就很好写了&#x2F;fendou  题目翻译 n×mn\times mn×m 的网格，有若干个老鼠 R\tt RR。墙是 X\tt XX。普通地面是 .\tt ..。选择两个位置投放炸弹，炸弹每个时刻往四联通扩张一次。炸弹不可以越过墙。炸弹投放时间为 000，ddd 秒之后炸弹就会停止扩张。问选择哪两个位置各投放一个炸弹才能让所有老鼠都被炸到。无解输出 -1。">
 <meta property="og:type" content="article">
 <meta property="og:title" content="[题解] CF254D Rats">
 <meta property="og:url" content="http://blog.cyx2009.top/archives/CF254D/index.html">
 <meta property="og:site_name" content="沉石鱼惊旋 的博客">
-<meta property="og:description" content="前言凭什么有人觉得这题难写来着，多分析一点就很好写了&#x2F;fendou 题目翻译$n\times m$ 的网格，有若干个老鼠 $\tt R$。墙是 $\tt X$。普通地面是 $\tt .$。选择两个位置投放炸弹，炸弹每个时刻往四联通扩张一次。炸弹不可以越过墙。炸弹投放时间为 $0$，$d$ 秒之后炸弹就会停止扩张。问选择哪两个位置各投放一个炸弹才能让所有老鼠都被炸到。无解输出 -1。 要求">
+<meta property="og:description" content="前言 凭什么有人觉得这题难写来着，多分析一点就很好写了&#x2F;fendou  题目翻译 n×mn\times mn×m 的网格，有若干个老鼠 R\tt RR。墙是 X\tt XX。普通地面是 .\tt ..。选择两个位置投放炸弹，炸弹每个时刻往四联通扩张一次。炸弹不可以越过墙。炸弹投放时间为 000，ddd 秒之后炸弹就会停止扩张。问选择哪两个位置各投放一个炸弹才能让所有老鼠都被炸到。无解输出 -1。">
 <meta property="og:locale" content="zh_CN">
 <meta property="article:published_time" content="2025-01-15T10:16:00.000Z">
 <meta property="article:modified_time" content="2025-02-12T13:53:56.684Z">
@@ -689,17 +689,21 @@
 	</header>
 
 	<div class="post-content" id="post_content">
-		<h1 id="前言"><a href="#前言" class="headerlink" title="前言"></a>前言</h1><p>凭什么有人觉得这题难写来着，多分析一点就很好写了&#x2F;fendou</p>
-<h1 id="题目翻译"><a href="#题目翻译" class="headerlink" title="题目翻译"></a>题目翻译</h1><p>$n\times m$ 的网格，有若干个老鼠 $\tt R$。墙是 $\tt X$。普通地面是 $\tt .$。选择两个位置投放炸弹，炸弹每个时刻往四联通扩张一次。炸弹不可以越过墙。炸弹投放时间为 $0$，$d$ 秒之后炸弹就会停止扩张。问选择哪两个位置各投放一个炸弹才能让所有老鼠都被炸到。无解输出 <code>-1</code>。</p>
+		<h1 id="前言"><a class="markdownIt-Anchor" href="#前言"></a> 前言</h1>
+<p>凭什么有人觉得这题难写来着，多分析一点就很好写了/fendou</p>
+<h1 id="题目翻译"><a class="markdownIt-Anchor" href="#题目翻译"></a> 题目翻译</h1>
+<p><span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>n</mi><mo>×</mo><mi>m</mi></mrow><annotation encoding="application/x-tex">n\times m</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.66666em;vertical-align:-0.08333em;"></span><span class="mord mathnormal">n</span><span class="mspace" style="margin-right:0.2222222222222222em;"></span><span class="mbin">×</span><span class="mspace" style="margin-right:0.2222222222222222em;"></span></span><span class="base"><span class="strut" style="height:0.43056em;vertical-align:0em;"></span><span class="mord mathnormal">m</span></span></span></span> 的网格，有若干个老鼠 <span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi mathvariant="monospace">R</mi></mrow><annotation encoding="application/x-tex">\tt R</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.61111em;vertical-align:0em;"></span><span class="mord"><span class="mord mathtt">R</span></span></span></span></span>。墙是 <span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi mathvariant="monospace">X</mi></mrow><annotation encoding="application/x-tex">\tt X</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.61111em;vertical-align:0em;"></span><span class="mord"><span class="mord mathtt">X</span></span></span></span></span>。普通地面是 <span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi mathvariant="monospace">.</mi></mrow><annotation encoding="application/x-tex">\tt .</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.125em;vertical-align:0em;"></span><span class="mord"><span class="mord mathtt">.</span></span></span></span></span>。选择两个位置投放炸弹，炸弹每个时刻往四联通扩张一次。炸弹不可以越过墙。炸弹投放时间为 <span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mn>0</mn></mrow><annotation encoding="application/x-tex">0</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.64444em;vertical-align:0em;"></span><span class="mord">0</span></span></span></span>，<span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>d</mi></mrow><annotation encoding="application/x-tex">d</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.69444em;vertical-align:0em;"></span><span class="mord mathnormal">d</span></span></span></span> 秒之后炸弹就会停止扩张。问选择哪两个位置各投放一个炸弹才能让所有老鼠都被炸到。无解输出 <code>-1</code>。</p>
 <p>要求构造的答案炸弹初始不在墙上，不可以两个炸弹初始在同一个位置。</p>
-<p>$1\leq n,m\leq 1000$，$1\leq d\leq 8$。</p>
-<h1 id="题目思路"><a href="#题目思路" class="headerlink" title="题目思路"></a>题目思路</h1><p>$d$ 很小，从这里考虑。发现一个炸弹有效范围大概是 $\mathcal O(d^2)$ 的，无遮挡的情况下曼哈顿距离小于等于 $d$ 的是可炸的。</p>
-<p>枚举第一只老鼠周围曼哈顿距离不超过 $d$ 的格子，作为第一个炸弹的候选点。找到另一只老鼠，与第一只老鼠曼哈顿距离最大，再把它周围曼哈顿距离不超过 $d$ 的格子作为第二个炸弹的候选点。枚举所有候选点组合，搜索一遍记录炸掉的老鼠个数。</p>
-<p>复杂度 $\mathcal O(d^6)$。极其好写。写一个 BFS 调用两次即可。</p>
-<p>这个做法看起来有点不靠谱。<del>但是他过了</del>。尝试构造 hack。大概 hack 思路是有一个老鼠和第一只的距离很近，但是被封住了导致没法在规定时间炸到。曼哈顿最远的反而能被炸到。</p>
+<p><span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mn>1</mn><mo>≤</mo><mi>n</mi><mo separator="true">,</mo><mi>m</mi><mo>≤</mo><mn>1000</mn></mrow><annotation encoding="application/x-tex">1\leq n,m\leq 1000</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.78041em;vertical-align:-0.13597em;"></span><span class="mord">1</span><span class="mspace" style="margin-right:0.2777777777777778em;"></span><span class="mrel">≤</span><span class="mspace" style="margin-right:0.2777777777777778em;"></span></span><span class="base"><span class="strut" style="height:0.8304100000000001em;vertical-align:-0.19444em;"></span><span class="mord mathnormal">n</span><span class="mpunct">,</span><span class="mspace" style="margin-right:0.16666666666666666em;"></span><span class="mord mathnormal">m</span><span class="mspace" style="margin-right:0.2777777777777778em;"></span><span class="mrel">≤</span><span class="mspace" style="margin-right:0.2777777777777778em;"></span></span><span class="base"><span class="strut" style="height:0.64444em;vertical-align:0em;"></span><span class="mord">1</span><span class="mord">0</span><span class="mord">0</span><span class="mord">0</span></span></span></span>，<span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mn>1</mn><mo>≤</mo><mi>d</mi><mo>≤</mo><mn>8</mn></mrow><annotation encoding="application/x-tex">1\leq d\leq 8</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.78041em;vertical-align:-0.13597em;"></span><span class="mord">1</span><span class="mspace" style="margin-right:0.2777777777777778em;"></span><span class="mrel">≤</span><span class="mspace" style="margin-right:0.2777777777777778em;"></span></span><span class="base"><span class="strut" style="height:0.83041em;vertical-align:-0.13597em;"></span><span class="mord mathnormal">d</span><span class="mspace" style="margin-right:0.2777777777777778em;"></span><span class="mrel">≤</span><span class="mspace" style="margin-right:0.2777777777777778em;"></span></span><span class="base"><span class="strut" style="height:0.64444em;vertical-align:0em;"></span><span class="mord">8</span></span></span></span>。</p>
+<h1 id="题目思路"><a class="markdownIt-Anchor" href="#题目思路"></a> 题目思路</h1>
+<p><span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>d</mi></mrow><annotation encoding="application/x-tex">d</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.69444em;vertical-align:0em;"></span><span class="mord mathnormal">d</span></span></span></span> 很小，从这里考虑。发现一个炸弹有效范围大概是 <span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi mathvariant="script">O</mi><mo stretchy="false">(</mo><msup><mi>d</mi><mn>2</mn></msup><mo stretchy="false">)</mo></mrow><annotation encoding="application/x-tex">\mathcal O(d^2)</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:1.064108em;vertical-align:-0.25em;"></span><span class="mord mathcal" style="margin-right:0.02778em;">O</span><span class="mopen">(</span><span class="mord"><span class="mord mathnormal">d</span><span class="msupsub"><span class="vlist-t"><span class="vlist-r"><span class="vlist" style="height:0.8141079999999999em;"><span style="top:-3.063em;margin-right:0.05em;"><span class="pstrut" style="height:2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mtight">2</span></span></span></span></span></span></span></span><span class="mclose">)</span></span></span></span> 的，无遮挡的情况下曼哈顿距离小于等于 <span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>d</mi></mrow><annotation encoding="application/x-tex">d</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.69444em;vertical-align:0em;"></span><span class="mord mathnormal">d</span></span></span></span> 的是可炸的。</p>
+<p>枚举第一只老鼠周围曼哈顿距离不超过 <span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>d</mi></mrow><annotation encoding="application/x-tex">d</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.69444em;vertical-align:0em;"></span><span class="mord mathnormal">d</span></span></span></span> 的格子，作为第一个炸弹的候选点。找到另一只老鼠，与第一只老鼠曼哈顿距离最大，再把它周围曼哈顿距离不超过 <span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>d</mi></mrow><annotation encoding="application/x-tex">d</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.69444em;vertical-align:0em;"></span><span class="mord mathnormal">d</span></span></span></span> 的格子作为第二个炸弹的候选点。枚举所有候选点组合，搜索一遍记录炸掉的老鼠个数。</p>
+<p>复杂度 <span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi mathvariant="script">O</mi><mo stretchy="false">(</mo><msup><mi>d</mi><mn>6</mn></msup><mo stretchy="false">)</mo></mrow><annotation encoding="application/x-tex">\mathcal O(d^6)</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:1.064108em;vertical-align:-0.25em;"></span><span class="mord mathcal" style="margin-right:0.02778em;">O</span><span class="mopen">(</span><span class="mord"><span class="mord mathnormal">d</span><span class="msupsub"><span class="vlist-t"><span class="vlist-r"><span class="vlist" style="height:0.8141079999999999em;"><span style="top:-3.063em;margin-right:0.05em;"><span class="pstrut" style="height:2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mtight">6</span></span></span></span></span></span></span></span><span class="mclose">)</span></span></span></span>。极其好写。写一个 BFS 调用两次即可。</p>
+<p>这个做法看起来有点不靠谱。<s>但是他过了</s>。尝试构造 hack。大概 hack 思路是有一个老鼠和第一只的距离很近，但是被封住了导致没法在规定时间炸到。曼哈顿最远的反而能被炸到。</p>
 <p>感性理解一下，这种形式的 hack，这只老鼠本身就会成为第一个炸弹的候选点之一，肯定是会被炸到的。第一只老鼠和最远的老鼠，又可以通过枚举第二个炸弹的位置被同时炸到。不管怎样这样的做法肯定是对的。</p>
-<p>另外我一开始用 <code>std::map</code> 存访问位置多带了 $\log$ 被卡常了。搜索的时候标记套路性地打成颜色标记即可。</p>
-<h1 id="完整代码"><a href="#完整代码" class="headerlink" title="完整代码"></a>完整代码</h1><p><a target="_blank" rel="noopener" href="https://codeforces.com/contest/254/submission/301081506">CF submission 301081506</a></p>
+<p>另外我一开始用 <code>std::map</code> 存访问位置多带了 <span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>log</mi><mo>⁡</mo></mrow><annotation encoding="application/x-tex">\log</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.8888799999999999em;vertical-align:-0.19444em;"></span><span class="mop">lo<span style="margin-right:0.01389em;">g</span></span></span></span></span> 被卡常了。搜索的时候标记套路性地打成颜色标记即可。</p>
+<h1 id="完整代码"><a class="markdownIt-Anchor" href="#完整代码"></a> 完整代码</h1>
+<p><a target="_blank" rel="noopener" href="https://codeforces.com/contest/254/submission/301081506">CF submission 301081506</a></p>
 <pre><code class="highlight cpp"><span class="meta">#<span class="keyword">include</span> <span class="string">&lt;bits/stdc++.h&gt;</span></span>
 <span class="keyword">using</span> <span class="keyword">namespace</span> std;
 <span class="type">int</span> n, m, k;
@@ -870,8 +874,10 @@ set&lt;array&lt;<span class="type">int</span>, 2&gt;&gt; s;
 <script type="text/javascript">
 	socialShare("#share", {
 	    title : '[题解] CF254D Rats',
-	    description : '前言凭什么有人觉得这题难写来着，多分析一点就很好写了&amp;#x2F;fendou
-题目翻译$n\time...',
+	    description : ' 前言
+凭什么有人觉得这题难写来着，多分析一点就很好写了/fendou
+ 题目翻译
+n×mn\tim...',
 	    wechatQrcodeTitle : "分享到微信",
 	    wechatQrcodeHelper : '微信扫描二维码',
 	    source : 'http://blog.cyx2009.top/archives/CF254D/'
@@ -960,30 +966,30 @@ set&lt;array&lt;<span class="type">int</span>, 2&gt;&gt; s;
 		
 		
 
-					<footer id="footer" class="site-footer card shadow-sm border-0">
-						
-						<div>Theme <a target="_blank" rel="noopener" href="https://github.com/solstice23/hexo-theme-argon"><strong>Argon</strong></a> | Powered by Hexo</div>
-						<span id="busuanzi_container_site_uv">
-							本站访客数 <span id="busuanzi_value_site_uv"></span> 人次
-						</span>
-						<span id="timeDate">载入时间...</span>
-						<script>
-						    var now = new Date(); 
-						    function createtime() { 
-						        var grt= new Date("03/28/2022 20:00:00");//在此处修改你的建站时间
-						        now.setTime(now.getTime()+250); 
-						        days = (now - grt ) / 1000 / 60 / 60 / 24; dnum = Math.floor(days); 
-						        hours = (now - grt ) / 1000 / 60 / 60 - (24 * dnum); hnum = Math.floor(hours); 
-						        if(String(hnum).length ==1 ){hnum = "0" + hnum;} minutes = (now - grt ) / 1000 /60 - (24 * 60 * dnum) - (60 * hnum); 
-						        mnum = Math.floor(minutes); if(String(mnum).length ==1 ){mnum = "0" + mnum;} 
-						        seconds = (now - grt ) / 1000 - (24 * 60 * 60 * dnum) - (60 * 60 * hnum) - (60 * mnum); 
-						        snum = Math.round(seconds); if(String(snum).length ==1 ){snum = "0" + snum;} 
-						        document.getElementById("timeDate").innerHTML = "本站已安全运行 "+dnum+" 天 "+ hnum + " 小时 " + mnum + " 分 " + snum + " 秒"; 
-						        // document.getElementById("times").innerHTML = hnum + " 小时 " + mnum + " 分 " + snum + " 秒"; 
-						    } 
-						setInterval("createtime()",250);
-						</script>
-						<script>
+                    <footer id="footer" class="site-footer card shadow-sm border-0">
+                        
+                        <div>Theme <a target="_blank" rel="noopener" href="https://github.com/solstice23/hexo-theme-argon"><strong>Argon</strong></a> | Powered by Hexo</div>
+                        <span id="busuanzi_container_site_uv">
+                            本站访客数 <span id="busuanzi_value_site_uv"></span> 人次
+                        </span>
+                        <span id="timeDate">载入时间...</span>
+                        <script>
+                            var now = new Date(); 
+                            function createtime() { 
+                                var grt= new Date("03/28/2022 20:00:00");//在此处修改你的建站时间
+                                now.setTime(now.getTime()+250); 
+                                days = (now - grt ) / 1000 / 60 / 60 / 24; dnum = Math.floor(days); 
+                                hours = (now - grt ) / 1000 / 60 / 60 - (24 * dnum); hnum = Math.floor(hours); 
+                                if(String(hnum).length ==1 ){hnum = "0" + hnum;} minutes = (now - grt ) / 1000 /60 - (24 * 60 * dnum) - (60 * hnum); 
+                                mnum = Math.floor(minutes); if(String(mnum).length ==1 ){mnum = "0" + mnum;} 
+                                seconds = (now - grt ) / 1000 - (24 * 60 * 60 * dnum) - (60 * 60 * hnum) - (60 * mnum); 
+                                snum = Math.round(seconds); if(String(snum).length ==1 ){snum = "0" + snum;} 
+                                document.getElementById("timeDate").innerHTML = "本站已安全运行 "+dnum+" 天 "+ hnum + " 小时 " + mnum + " 分 " + snum + " 秒"; 
+                                // document.getElementById("times").innerHTML = hnum + " 小时 " + mnum + " 分 " + snum + " 秒"; 
+                            } 
+                        setInterval("createtime()",250);
+                        </script>
+                        <script>
         window.onload = (() => {
             //定义点击出现文字类
             function ClickFrontShow() {
@@ -1120,49 +1126,54 @@ set&lt;array&lt;<span class="type">int</span>, 2&gt;&gt; s;
             //第二个参数是颜色数组，必须是数组类型！
             frontShow.init();
         })();
-						</script>
-					</footer>
-				</main>
-			</div>
-		</div>
-		
+                        </script>
+                    </footer>
+                </main>
+            </div>
+        </div>
+        
 <script src="/argontheme.js"></script>
 
-		
-		
-		
-			<link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/KaTeX/0.15.6/katex.min.css">
-			<script src="//cdnjs.cloudflare.com/ajax/libs/KaTeX/0.15.6/katex.min.js"></script>
-			<script src="//cdnjs.cloudflare.com/ajax/libs/KaTeX/0.15.6/contrib/auto-render.min.js"></script>
-			<script>
-				document.addEventListener("DOMContentLoaded", function() {
-					renderMathInElement(document.body,{
-						delimiters: [
-							{left: "$$", right: "$$", display: true},
-							{left: "$", right: "$", display: false},
-							{left: "\\(", right: "\\)", display: false}
-						]
-					});
-				});
-			</script>
-		
+        
+        
+        
+            <link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/KaTeX/0.16.9/katex.min.css">
+            <script src="//cdnjs.cloudflare.com/ajax/libs/KaTeX/0.16.9/katex.min.js"></script>
+            <script src="//cdnjs.cloudflare.com/ajax/libs/KaTeX/0.16.9/contrib/auto-render.min.js"></script>
+            <script>
+                document.addEventListener("DOMContentLoaded", function() {
+                    renderMathInElement(document.body, {
+                      // customised options
+                      // • auto-render specific keys, e.g.:
+                      delimiters: [
+                          {left: '$$', right: '$$', display: true},
+                          {left: '$', right: '$', display: false},
+                          {left: '\\(', right: '\\)', display: false},
+                          {left: '\\[', right: '\\]', display: true}
+                      ],
+                      // • rendering keys, e.g.:
+                      throwOnError : false
+                    });
+                });
+            </script>
+        
 
-		
-			<script>
-				var argonEnableCodeHighlight = true;
-			</script>
-			
+        
+            <script>
+                var argonEnableCodeHighlight = true;
+            </script>
+            
 <link rel="stylesheet" href="/assets/vendor/highlight/styles/vs2015.css">
 
-		
+        
 
-	</div>
+    </div>
 </div>
 <noscript>
-	<style>
-		article img.lazyload[src^="data:image/svg+xml;base64,PCEtLUFyZ29uTG9hZGluZy0tPg"]{display: none;}
-		.comment-item-text .comment-sticker.lazyload{display: none;}
-	</style>
+    <style>
+        article img.lazyload[src^="data:image/svg+xml;base64,PCEtLUFyZ29uTG9hZGluZy0tPg"]{display: none;}
+        .comment-item-text .comment-sticker.lazyload{display: none;}
+    </style>
 </noscript>
 </body>
 

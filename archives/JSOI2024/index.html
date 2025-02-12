@@ -22,12 +22,12 @@
 	
 		<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=5">
 	
-	<meta name="description" content="幸运数字一个很小朋友的做法是把每个数转二进制字符串或者用数组存下来判断。这里给一个时间复杂度为 $\mathcal O(n\log V)$ 但空间复杂度为 $\mathcal O(1)$ 的写法：使用位运算，通过 x &gt;&gt; i &amp; 1 获得 $x$ 在二进制下的第 $i$ 位。 #include &lt;bits&#x2F;stdc++.h&gt; using namespace std">
+	<meta name="description" content="幸运数字 一个很小朋友的做法是把每个数转二进制字符串或者用数组存下来判断。这里给一个时间复杂度为 O(nlog⁡V)\mathcal O(n\log V)O(nlogV) 但空间复杂度为 O(1)\mathcal O(1)O(1) 的写法：使用位运算，通过 x &gt;&gt; i &amp; 1 获得 xxx 在二进制下的第 iii 位。 #include &lt;bits&#x2F;stdc++.h&amp;">
 <meta property="og:type" content="article">
 <meta property="og:title" content="[题解] 信息与未来 2024 做题笔记">
 <meta property="og:url" content="http://blog.cyx2009.top/archives/JSOI2024/index.html">
 <meta property="og:site_name" content="沉石鱼惊旋 的博客">
-<meta property="og:description" content="幸运数字一个很小朋友的做法是把每个数转二进制字符串或者用数组存下来判断。这里给一个时间复杂度为 $\mathcal O(n\log V)$ 但空间复杂度为 $\mathcal O(1)$ 的写法：使用位运算，通过 x &gt;&gt; i &amp; 1 获得 $x$ 在二进制下的第 $i$ 位。 #include &lt;bits&#x2F;stdc++.h&gt; using namespace std">
+<meta property="og:description" content="幸运数字 一个很小朋友的做法是把每个数转二进制字符串或者用数组存下来判断。这里给一个时间复杂度为 O(nlog⁡V)\mathcal O(n\log V)O(nlogV) 但空间复杂度为 O(1)\mathcal O(1)O(1) 的写法：使用位运算，通过 x &gt;&gt; i &amp; 1 获得 xxx 在二进制下的第 iii 位。 #include &lt;bits&#x2F;stdc++.h&amp;">
 <meta property="og:locale" content="zh_CN">
 <meta property="article:published_time" content="2024-06-06T04:45:00.000Z">
 <meta property="article:modified_time" content="2025-02-12T13:06:29.941Z">
@@ -681,7 +681,7 @@
 						
 						<div class="post-meta-detail post-meta-detail-readingtime">
 							<i class="fa fa-hourglass-end" aria-hidden="true"></i>
-							16 分钟
+							17 分钟
 						</div>
 					
 		</div>
@@ -689,7 +689,8 @@
 	</header>
 
 	<div class="post-content" id="post_content">
-		<h1 id="幸运数字"><a href="#幸运数字" class="headerlink" title="幸运数字"></a>幸运数字</h1><p>一个很小朋友的做法是把每个数转二进制字符串或者用数组存下来判断。这里给一个时间复杂度为 $\mathcal O(n\log V)$ 但空间复杂度为 $\mathcal O(1)$ 的写法：使用位运算，通过 <code>x &gt;&gt; i &amp; 1</code> 获得 $x$ 在二进制下的第 $i$ 位。</p>
+		<h1 id="幸运数字"><a class="markdownIt-Anchor" href="#幸运数字"></a> 幸运数字</h1>
+<p>一个很小朋友的做法是把每个数转二进制字符串或者用数组存下来判断。这里给一个时间复杂度为 <span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi mathvariant="script">O</mi><mo stretchy="false">(</mo><mi>n</mi><mi>log</mi><mo>⁡</mo><mi>V</mi><mo stretchy="false">)</mo></mrow><annotation encoding="application/x-tex">\mathcal O(n\log V)</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:1em;vertical-align:-0.25em;"></span><span class="mord mathcal" style="margin-right:0.02778em;">O</span><span class="mopen">(</span><span class="mord mathnormal">n</span><span class="mspace" style="margin-right:0.16666666666666666em;"></span><span class="mop">lo<span style="margin-right:0.01389em;">g</span></span><span class="mspace" style="margin-right:0.16666666666666666em;"></span><span class="mord mathnormal" style="margin-right:0.22222em;">V</span><span class="mclose">)</span></span></span></span> 但空间复杂度为 <span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi mathvariant="script">O</mi><mo stretchy="false">(</mo><mn>1</mn><mo stretchy="false">)</mo></mrow><annotation encoding="application/x-tex">\mathcal O(1)</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:1em;vertical-align:-0.25em;"></span><span class="mord mathcal" style="margin-right:0.02778em;">O</span><span class="mopen">(</span><span class="mord">1</span><span class="mclose">)</span></span></span></span> 的写法：使用位运算，通过 <code>x &gt;&gt; i &amp; 1</code> 获得 <span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>x</mi></mrow><annotation encoding="application/x-tex">x</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.43056em;vertical-align:0em;"></span><span class="mord mathnormal">x</span></span></span></span> 在二进制下的第 <span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>i</mi></mrow><annotation encoding="application/x-tex">i</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.65952em;vertical-align:0em;"></span><span class="mord mathnormal">i</span></span></span></span> 位。</p>
 <pre><code class="highlight cpp"><span class="meta">#<span class="keyword">include</span> <span class="string">&lt;bits/stdc++.h&gt;</span></span>
 <span class="keyword">using</span> <span class="keyword">namespace</span> std;
 <span class="type">int</span> a, b;
@@ -711,8 +712,8 @@
     cout &lt;&lt; ans &lt;&lt; endl;
     <span class="keyword">return</span> <span class="number">0</span>;
 &#125;</code></pre>
-
-<h1 id="红绿灯"><a href="#红绿灯" class="headerlink" title="红绿灯"></a>红绿灯</h1><p>如果一个数应该亮的位置没亮，说明一定不亮。</p>
+<h1 id="红绿灯"><a class="markdownIt-Anchor" href="#红绿灯"></a> 红绿灯</h1>
+<p>如果一个数应该亮的位置没亮，说明一定不亮。</p>
 <p>如果一个数不该亮的位置亮了，说明一定常亮。</p>
 <p>我们根据生活常识把每种灯应该点亮的位置存下来，对于这两种情况判断即可。</p>
 <p>表格如下。请自行在程序内根据这个表格判断。</p>
@@ -726,7 +727,6 @@
 <span class="number">7</span><span class="operator">:</span> <span class="variable">A</span> <span class="variable">B</span> <span class="built_in">C</span> 
 <span class="number">8</span><span class="operator">:</span> <span class="variable">A</span> <span class="variable">B</span> <span class="built_in">C</span> <span class="built_in">D</span> <span class="built_in">E</span> <span class="variable">F</span> <span class="variable">G</span> 
 <span class="number">9</span><span class="operator">:</span> <span class="variable">A</span> <span class="variable">B</span> <span class="built_in">C</span> <span class="built_in">D</span> <span class="variable">F</span> <span class="variable">G</span></code></pre>
-
 <pre><code class="highlight cpp"><span class="meta">#<span class="keyword">include</span> <span class="string">&lt;bits/stdc++.h&gt;</span></span>
 <span class="keyword">using</span> <span class="keyword">namespace</span> std;
 vector&lt;<span class="type">int</span>&gt; a[<span class="number">10</span>];
@@ -772,9 +772,9 @@ string ans = <span class="string">&quot;-------&quot;</span>;
     cout &lt;&lt; ans &lt;&lt; endl;
     <span class="keyword">return</span> <span class="number">0</span>;
 &#125;</code></pre>
-
-<h1 id="间谍卫星"><a href="#间谍卫星" class="headerlink" title="间谍卫星"></a>间谍卫星</h1><p>通过观察图片我们发现除了平行于坐标轴的正方形，其他的情况，一定存在一个编号最小的行，满足行内只有一个正方形的顶点。不妨钦定这个点，找到另外的和它在一条边上的另一个顶点计算边长。那么由于正方形的四个角都是直角，所以我们只需要找到编号最小的列，满足行内只有一个正方形的顶点，就可以了。证明显然。</p>
-<p>接下来我们考虑怎么把这个代码写得更加优美：如果正方形边都垂直于坐标轴，那么就是找行里最右边的和列里最上面的。<del>干脆直接特判也可以吧。</del></p>
+<h1 id="间谍卫星"><a class="markdownIt-Anchor" href="#间谍卫星"></a> 间谍卫星</h1>
+<p>通过观察图片我们发现除了平行于坐标轴的正方形，其他的情况，一定存在一个编号最小的行，满足行内只有一个正方形的顶点。不妨钦定这个点，找到另外的和它在一条边上的另一个顶点计算边长。那么由于正方形的四个角都是直角，所以我们只需要找到编号最小的列，满足行内只有一个正方形的顶点，就可以了。证明显然。</p>
+<p>接下来我们考虑怎么把这个代码写得更加优美：如果正方形边都垂直于坐标轴，那么就是找行里最右边的和列里最上面的。<s>干脆直接特判也可以吧。</s></p>
 <pre><code class="highlight cpp"><span class="meta">#<span class="keyword">include</span> <span class="string">&lt;bits/stdc++.h&gt;</span></span>
 <span class="keyword">using</span> <span class="keyword">namespace</span> std;
 <span class="type">const</span> <span class="type">int</span> n = <span class="number">128</span>;
@@ -808,10 +808,10 @@ string s[<span class="number">150</span>];
         <span class="built_in">solve</span>();
     <span class="keyword">return</span> <span class="number">0</span>;
 &#125;</code></pre>
-
-<h1 id="图灵完备"><a href="#图灵完备" class="headerlink" title="图灵完备"></a>图灵完备</h1><p>这个 $5000$ 的限制就很烦，否则我们可以构造一个 $1$ 然后拼在一起。</p>
+<h1 id="图灵完备"><a class="markdownIt-Anchor" href="#图灵完备"></a> 图灵完备</h1>
+<p>这个 <span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mn>5000</mn></mrow><annotation encoding="application/x-tex">5000</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.64444em;vertical-align:0em;"></span><span class="mord">5</span><span class="mord">0</span><span class="mord">0</span><span class="mord">0</span></span></span></span> 的限制就很烦，否则我们可以构造一个 <span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mn>1</mn></mrow><annotation encoding="application/x-tex">1</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.64444em;vertical-align:0em;"></span><span class="mord">1</span></span></span></span> 然后拼在一起。</p>
 <p>但是这启发我们，答案一定是用什么东西拼起来的。正常的什么二进制不行，因为本题没有乘法操作，只能加法凑。</p>
-<p>但是我们根据已有的 JavaScript 语法经验或者单纯对于给出的字符组合，发现 <code>+[]</code> 返回一个 Number，<code>[]+[]</code> 返回一个 String。执行 <code>+([]+[])</code> 对一个空字符串求值又得到了一个 $0$。也就是说，我们把 $n$ 的每一位用 String 表示出来拼接在一起，然后转成 Number 类型即可。一个 <code>+!![]</code> 就是 $1$，每一位最多拼接 $9$ 次。长度显然不会超过 $5000$。</p>
+<p>但是我们根据已有的 JavaScript 语法经验或者单纯对于给出的字符组合，发现 <code>+[]</code> 返回一个 Number，<code>[]+[]</code> 返回一个 String。执行 <code>+([]+[])</code> 对一个空字符串求值又得到了一个 <span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mn>0</mn></mrow><annotation encoding="application/x-tex">0</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.64444em;vertical-align:0em;"></span><span class="mord">0</span></span></span></span>。也就是说，我们把 <span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>n</mi></mrow><annotation encoding="application/x-tex">n</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.43056em;vertical-align:0em;"></span><span class="mord mathnormal">n</span></span></span></span> 的每一位用 String 表示出来拼接在一起，然后转成 Number 类型即可。一个 <code>+!![]</code> 就是 <span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mn>1</mn></mrow><annotation encoding="application/x-tex">1</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.64444em;vertical-align:0em;"></span><span class="mord">1</span></span></span></span>，每一位最多拼接 <span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mn>9</mn></mrow><annotation encoding="application/x-tex">9</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.64444em;vertical-align:0em;"></span><span class="mord">9</span></span></span></span> 次。长度显然不会超过 <span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mn>5000</mn></mrow><annotation encoding="application/x-tex">5000</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.64444em;vertical-align:0em;"></span><span class="mord">5</span><span class="mord">0</span><span class="mord">0</span><span class="mord">0</span></span></span></span>。</p>
 <p>Fun Fact：有一个为本题而生的网站 <a target="_blank" rel="noopener" href="https://jsfuck.com/">https://jsfuck.com/</a>。也许下面的信息可以对于做这题给出一些启发。</p>
 <pre><code class="highlight cpp"><span class="meta">#<span class="keyword">include</span> <span class="string">&lt;bits/stdc++.h&gt;</span></span>
 <span class="keyword">using</span> <span class="keyword">namespace</span> std;
@@ -834,11 +834,11 @@ string s;
     cout &lt;&lt; endl;
     <span class="keyword">return</span> <span class="number">0</span>;
 &#125;</code></pre>
-
-<h1 id="数据排序"><a href="#数据排序" class="headerlink" title="数据排序"></a>数据排序</h1><p>码量一般的模拟。</p>
-<p>把表头和学生信息以 <code>,</code> 为分隔符拎出来，存起来。由于（据我所知）不同类型数组不能开在一起，所以信息存的是 $3$ 个内容，分别表示为数还是字符串，以及数字的值和字符串的值。</p>
+<h1 id="数据排序"><a class="markdownIt-Anchor" href="#数据排序"></a> 数据排序</h1>
+<p>码量一般的模拟。</p>
+<p>把表头和学生信息以 <code>,</code> 为分隔符拎出来，存起来。由于（据我所知）不同类型数组不能开在一起，所以信息存的是 <span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mn>3</mn></mrow><annotation encoding="application/x-tex">3</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.64444em;vertical-align:0em;"></span><span class="mord">3</span></span></span></span> 个内容，分别表示为数还是字符串，以及数字的值和字符串的值。</p>
 <p>排序部分，把排序方式先离线下来。比较两个元素时，按顺序遍历排序方式，判断升序降序，为数还是字符串，然后进行比较。</p>
-<p>由于给定排序方法相同需要按照原顺序，所以多加一个 $id$ 用来判断全部一样时的先后顺序。</p>
+<p>由于给定排序方法相同需要按照原顺序，所以多加一个 <span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>i</mi><mi>d</mi></mrow><annotation encoding="application/x-tex">id</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.69444em;vertical-align:0em;"></span><span class="mord mathnormal">i</span><span class="mord mathnormal">d</span></span></span></span> 用来判断全部一样时的先后顺序。</p>
 <pre><code class="highlight cpp"><span class="meta">#<span class="keyword">include</span> <span class="string">&lt;bits/stdc++.h&gt;</span></span>
 <span class="keyword">using</span> <span class="keyword">namespace</span> std;
 <span class="type">int</span> n, m, c;
@@ -959,18 +959,18 @@ vector&lt;node&gt; a[<span class="number">120</span>];
     &#125;
     <span class="keyword">return</span> <span class="number">0</span>;
 &#125;</code></pre>
-
-<h1 id="AI-机器人"><a href="#AI-机器人" class="headerlink" title="AI 机器人"></a>AI 机器人</h1><p>真神啊。不低于省选难度吧？</p>
+<h1 id="ai-机器人"><a class="markdownIt-Anchor" href="#ai-机器人"></a> AI 机器人</h1>
+<p>真神啊。不低于省选难度吧？</p>
 <p>我们每一步移动的本质，其实是相当于有若干个一样的机器人在很多位置移动，按操作方法移动到了一个位置。最后答案就是这些机器人移动位置的交集。</p>
-<p>然而我们发现，对于一个位置 $(x_1,y_1)$，这上面的机器人所能移动到的位置 $(x_2,y_2)$ 是固定的。因此可以用一个大小为 $(n\times m)\times (n\times m)$ 的 01 矩阵，$a_{i,j}$ 表示编号 $i$ 的点能否到达编号 $j$ 的点。我们这里需要把矩形空间压缩成线性空间，把一个点对映射成一个编号。</p>
-<p>我们不妨对于 $\tt{U,L,D,R}$ 每种操作先处理出每种操作，所有位置经过操作时候能到达的位置。这是可以读入了这个矩形空间就能解决的。</p>
+<p>然而我们发现，对于一个位置 <span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mo stretchy="false">(</mo><msub><mi>x</mi><mn>1</mn></msub><mo separator="true">,</mo><msub><mi>y</mi><mn>1</mn></msub><mo stretchy="false">)</mo></mrow><annotation encoding="application/x-tex">(x_1,y_1)</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:1em;vertical-align:-0.25em;"></span><span class="mopen">(</span><span class="mord"><span class="mord mathnormal">x</span><span class="msupsub"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist" style="height:0.30110799999999993em;"><span style="top:-2.5500000000000003em;margin-left:0em;margin-right:0.05em;"><span class="pstrut" style="height:2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mtight">1</span></span></span></span><span class="vlist-s">​</span></span><span class="vlist-r"><span class="vlist" style="height:0.15em;"><span></span></span></span></span></span></span><span class="mpunct">,</span><span class="mspace" style="margin-right:0.16666666666666666em;"></span><span class="mord"><span class="mord mathnormal" style="margin-right:0.03588em;">y</span><span class="msupsub"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist" style="height:0.30110799999999993em;"><span style="top:-2.5500000000000003em;margin-left:-0.03588em;margin-right:0.05em;"><span class="pstrut" style="height:2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mtight">1</span></span></span></span><span class="vlist-s">​</span></span><span class="vlist-r"><span class="vlist" style="height:0.15em;"><span></span></span></span></span></span></span><span class="mclose">)</span></span></span></span>，这上面的机器人所能移动到的位置 <span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mo stretchy="false">(</mo><msub><mi>x</mi><mn>2</mn></msub><mo separator="true">,</mo><msub><mi>y</mi><mn>2</mn></msub><mo stretchy="false">)</mo></mrow><annotation encoding="application/x-tex">(x_2,y_2)</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:1em;vertical-align:-0.25em;"></span><span class="mopen">(</span><span class="mord"><span class="mord mathnormal">x</span><span class="msupsub"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist" style="height:0.30110799999999993em;"><span style="top:-2.5500000000000003em;margin-left:0em;margin-right:0.05em;"><span class="pstrut" style="height:2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mtight">2</span></span></span></span><span class="vlist-s">​</span></span><span class="vlist-r"><span class="vlist" style="height:0.15em;"><span></span></span></span></span></span></span><span class="mpunct">,</span><span class="mspace" style="margin-right:0.16666666666666666em;"></span><span class="mord"><span class="mord mathnormal" style="margin-right:0.03588em;">y</span><span class="msupsub"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist" style="height:0.30110799999999993em;"><span style="top:-2.5500000000000003em;margin-left:-0.03588em;margin-right:0.05em;"><span class="pstrut" style="height:2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mtight">2</span></span></span></span><span class="vlist-s">​</span></span><span class="vlist-r"><span class="vlist" style="height:0.15em;"><span></span></span></span></span></span></span><span class="mclose">)</span></span></span></span> 是固定的。因此可以用一个大小为 <span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mo stretchy="false">(</mo><mi>n</mi><mo>×</mo><mi>m</mi><mo stretchy="false">)</mo><mo>×</mo><mo stretchy="false">(</mo><mi>n</mi><mo>×</mo><mi>m</mi><mo stretchy="false">)</mo></mrow><annotation encoding="application/x-tex">(n\times m)\times (n\times m)</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:1em;vertical-align:-0.25em;"></span><span class="mopen">(</span><span class="mord mathnormal">n</span><span class="mspace" style="margin-right:0.2222222222222222em;"></span><span class="mbin">×</span><span class="mspace" style="margin-right:0.2222222222222222em;"></span></span><span class="base"><span class="strut" style="height:1em;vertical-align:-0.25em;"></span><span class="mord mathnormal">m</span><span class="mclose">)</span><span class="mspace" style="margin-right:0.2222222222222222em;"></span><span class="mbin">×</span><span class="mspace" style="margin-right:0.2222222222222222em;"></span></span><span class="base"><span class="strut" style="height:1em;vertical-align:-0.25em;"></span><span class="mopen">(</span><span class="mord mathnormal">n</span><span class="mspace" style="margin-right:0.2222222222222222em;"></span><span class="mbin">×</span><span class="mspace" style="margin-right:0.2222222222222222em;"></span></span><span class="base"><span class="strut" style="height:1em;vertical-align:-0.25em;"></span><span class="mord mathnormal">m</span><span class="mclose">)</span></span></span></span> 的 01 矩阵，<span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><msub><mi>a</mi><mrow><mi>i</mi><mo separator="true">,</mo><mi>j</mi></mrow></msub></mrow><annotation encoding="application/x-tex">a_{i,j}</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.716668em;vertical-align:-0.286108em;"></span><span class="mord"><span class="mord mathnormal">a</span><span class="msupsub"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist" style="height:0.311664em;"><span style="top:-2.5500000000000003em;margin-left:0em;margin-right:0.05em;"><span class="pstrut" style="height:2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mtight"><span class="mord mathnormal mtight">i</span><span class="mpunct mtight">,</span><span class="mord mathnormal mtight" style="margin-right:0.05724em;">j</span></span></span></span></span><span class="vlist-s">​</span></span><span class="vlist-r"><span class="vlist" style="height:0.286108em;"><span></span></span></span></span></span></span></span></span></span> 表示编号 <span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>i</mi></mrow><annotation encoding="application/x-tex">i</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.65952em;vertical-align:0em;"></span><span class="mord mathnormal">i</span></span></span></span> 的点能否到达编号 <span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>j</mi></mrow><annotation encoding="application/x-tex">j</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.85396em;vertical-align:-0.19444em;"></span><span class="mord mathnormal" style="margin-right:0.05724em;">j</span></span></span></span> 的点。我们这里需要把矩形空间压缩成线性空间，把一个点对映射成一个编号。</p>
+<p>我们不妨对于 <span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi mathvariant="monospace">U</mi><mo separator="true">,</mo><mi mathvariant="monospace">L</mi><mo separator="true">,</mo><mi mathvariant="monospace">D</mi><mo separator="true">,</mo><mi mathvariant="monospace">R</mi></mrow><annotation encoding="application/x-tex">\tt{U,L,D,R}</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.80555em;vertical-align:-0.19444em;"></span><span class="mord"><span class="mord"><span class="mord mathtt">U</span><span class="mpunct">,</span><span class="mspace" style="margin-right:0.16666666666666666em;"></span><span class="mord mathtt">L</span><span class="mpunct">,</span><span class="mspace" style="margin-right:0.16666666666666666em;"></span><span class="mord mathtt">D</span><span class="mpunct">,</span><span class="mspace" style="margin-right:0.16666666666666666em;"></span><span class="mord mathtt">R</span></span></span></span></span></span> 每种操作先处理出每种操作，所有位置经过操作时候能到达的位置。这是可以读入了这个矩形空间就能解决的。</p>
 <p>接下来我们可以递归（或者用栈处理）这个表达式。</p>
 <p>我们简单定义一下以后说到的操作：</p>
 <ol>
 <li>矩阵乘法：此处为广义的。我们的矩阵由于维护的是是否可达，所以就是乘法改成做一个 bit_or 运算。也就是 <code>c[i][j] = a[i][k] | b[k][j];</code>。</li>
 <li>矩阵加法：还是，广义……？其实表达成矩阵 bit_or 更合适，但是和上文有些重复，还是表述成矩阵加法吧。这里加法也改成 bit_or。也就是 <code>c[i][j] = a[i][j] | b[i][j];</code>。</li>
 </ol>
-<p>众所周知，矩阵乘法可以算图上行走 $k$ 步的方案数。类比过来，这里的矩阵乘法可以让我们知道走 $k$ 步能到哪里。而这里的矩阵加法是用来合并路径的。</p>
+<p>众所周知，矩阵乘法可以算图上行走 <span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>k</mi></mrow><annotation encoding="application/x-tex">k</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.69444em;vertical-align:0em;"></span><span class="mord mathnormal" style="margin-right:0.03148em;">k</span></span></span></span> 步的方案数。类比过来，这里的矩阵乘法可以让我们知道走 <span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>k</mi></mrow><annotation encoding="application/x-tex">k</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.69444em;vertical-align:0em;"></span><span class="mord mathnormal" style="margin-right:0.03148em;">k</span></span></span></span> 步能到哪里。而这里的矩阵加法是用来合并路径的。</p>
 <p>单次操作是简单的，我们把目前的操作得到的结果和目前这个单次操作做一个矩阵乘法即可。</p>
 <p>带有括号不好处理。我们先来讲固定次数怎么做。</p>
 <p>在我们已知括号内的操作时，直接循环这么多次，每次用已有操作序列做矩阵乘法，然后路径做一个矩阵加法。</p>
@@ -987,15 +987,14 @@ vector&lt;node&gt; a[<span class="number">120</span>];
 #########.
 ..........
 (RD)*</code></pre>
-
-<p>这样的话最坏情况就是 $(1,1)\to (1,n)\to(n,m)$ 得到 $18$ 的长度（第一个点默认走过）。</p>
-<p>所以星号跑 $18$ 次，把结果全凑一起就行。</p>
+<p>这样的话最坏情况就是 <span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mo stretchy="false">(</mo><mn>1</mn><mo separator="true">,</mo><mn>1</mn><mo stretchy="false">)</mo><mo>→</mo><mo stretchy="false">(</mo><mn>1</mn><mo separator="true">,</mo><mi>n</mi><mo stretchy="false">)</mo><mo>→</mo><mo stretchy="false">(</mo><mi>n</mi><mo separator="true">,</mo><mi>m</mi><mo stretchy="false">)</mo></mrow><annotation encoding="application/x-tex">(1,1)\to (1,n)\to(n,m)</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:1em;vertical-align:-0.25em;"></span><span class="mopen">(</span><span class="mord">1</span><span class="mpunct">,</span><span class="mspace" style="margin-right:0.16666666666666666em;"></span><span class="mord">1</span><span class="mclose">)</span><span class="mspace" style="margin-right:0.2777777777777778em;"></span><span class="mrel">→</span><span class="mspace" style="margin-right:0.2777777777777778em;"></span></span><span class="base"><span class="strut" style="height:1em;vertical-align:-0.25em;"></span><span class="mopen">(</span><span class="mord">1</span><span class="mpunct">,</span><span class="mspace" style="margin-right:0.16666666666666666em;"></span><span class="mord mathnormal">n</span><span class="mclose">)</span><span class="mspace" style="margin-right:0.2777777777777778em;"></span><span class="mrel">→</span><span class="mspace" style="margin-right:0.2777777777777778em;"></span></span><span class="base"><span class="strut" style="height:1em;vertical-align:-0.25em;"></span><span class="mopen">(</span><span class="mord mathnormal">n</span><span class="mpunct">,</span><span class="mspace" style="margin-right:0.16666666666666666em;"></span><span class="mord mathnormal">m</span><span class="mclose">)</span></span></span></span> 得到 <span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mn>18</mn></mrow><annotation encoding="application/x-tex">18</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.64444em;vertical-align:0em;"></span><span class="mord">1</span><span class="mord">8</span></span></span></span> 的长度（第一个点默认走过）。</p>
+<p>所以星号跑 <span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mn>18</mn></mrow><annotation encoding="application/x-tex">18</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.64444em;vertical-align:0em;"></span><span class="mord">1</span><span class="mord">8</span></span></span></span> 次，把结果全凑一起就行。</p>
 <p>然而还构造出要跑更多次的数据，所以这个方法这个方法太菜了。我们可以做到更好的复杂度。</p>
 <p>先对目前括号内的操作序列做一个传递闭包，相当于得到了每个点能前往的所有点。然后相当于对这个做一次行走即可。</p>
 <p>那么接下来我们求出括号内操作序列即可。对于每个 <code>(</code> 找到与之匹配的 <code>)</code>，递归搜出这两个中间的操作序列即可。</p>
-<p>最后，这题矩阵运算有一个技巧。因为是 01 矩阵，可以用 bitset 优化，这样矩阵乘法复杂度就是 $\mathcal O(\frac{n^3}{w})$ 的。但是，又发现这题矩阵大小至多 $100\times 100$，可以用状压的思想把一行压成一个数。这样理论上针对这题的矩阵乘法复杂度就是 $\mathcal O(n^2)$。可以用 C++ 中的 <code>__int128</code> 储存。</p>
+<p>最后，这题矩阵运算有一个技巧。因为是 01 矩阵，可以用 bitset 优化，这样矩阵乘法复杂度就是 <span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi mathvariant="script">O</mi><mo stretchy="false">(</mo><mfrac><msup><mi>n</mi><mn>3</mn></msup><mi>w</mi></mfrac><mo stretchy="false">)</mo></mrow><annotation encoding="application/x-tex">\mathcal O(\frac{n^3}{w})</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:1.36292em;vertical-align:-0.345em;"></span><span class="mord mathcal" style="margin-right:0.02778em;">O</span><span class="mopen">(</span><span class="mord"><span class="mopen nulldelimiter"></span><span class="mfrac"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist" style="height:1.01792em;"><span style="top:-2.6550000000000002em;"><span class="pstrut" style="height:3em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mtight"><span class="mord mathnormal mtight" style="margin-right:0.02691em;">w</span></span></span></span><span style="top:-3.23em;"><span class="pstrut" style="height:3em;"></span><span class="frac-line" style="border-bottom-width:0.04em;"></span></span><span style="top:-3.394em;"><span class="pstrut" style="height:3em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mtight"><span class="mord mtight"><span class="mord mathnormal mtight">n</span><span class="msupsub"><span class="vlist-t"><span class="vlist-r"><span class="vlist" style="height:0.8913142857142857em;"><span style="top:-2.931em;margin-right:0.07142857142857144em;"><span class="pstrut" style="height:2.5em;"></span><span class="sizing reset-size3 size1 mtight"><span class="mord mtight">3</span></span></span></span></span></span></span></span></span></span></span></span><span class="vlist-s">​</span></span><span class="vlist-r"><span class="vlist" style="height:0.345em;"><span></span></span></span></span></span><span class="mclose nulldelimiter"></span></span><span class="mclose">)</span></span></span></span> 的。但是，又发现这题矩阵大小至多 <span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mn>100</mn><mo>×</mo><mn>100</mn></mrow><annotation encoding="application/x-tex">100\times 100</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.72777em;vertical-align:-0.08333em;"></span><span class="mord">1</span><span class="mord">0</span><span class="mord">0</span><span class="mspace" style="margin-right:0.2222222222222222em;"></span><span class="mbin">×</span><span class="mspace" style="margin-right:0.2222222222222222em;"></span></span><span class="base"><span class="strut" style="height:0.64444em;vertical-align:0em;"></span><span class="mord">1</span><span class="mord">0</span><span class="mord">0</span></span></span></span>，可以用状压的思想把一行压成一个数。这样理论上针对这题的矩阵乘法复杂度就是 <span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi mathvariant="script">O</mi><mo stretchy="false">(</mo><msup><mi>n</mi><mn>2</mn></msup><mo stretchy="false">)</mo></mrow><annotation encoding="application/x-tex">\mathcal O(n^2)</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:1.064108em;vertical-align:-0.25em;"></span><span class="mord mathcal" style="margin-right:0.02778em;">O</span><span class="mopen">(</span><span class="mord"><span class="mord mathnormal">n</span><span class="msupsub"><span class="vlist-t"><span class="vlist-r"><span class="vlist" style="height:0.8141079999999999em;"><span style="top:-3.063em;margin-right:0.05em;"><span class="pstrut" style="height:2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mtight">2</span></span></span></span></span></span></span></span><span class="mclose">)</span></span></span></span>。可以用 C++ 中的 <code>__int128</code> 储存。</p>
 <p>这个方法甚至星号不是瓶颈，有界限的循环才是瓶颈。</p>
-<p>时间复杂度 $\mathcal O(|s|(nm)^2k)$，其中 $k&#x3D;9$。可以通过。并且不可能卡满，因此实际效率非常快。</p>
+<p>时间复杂度 <span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi mathvariant="script">O</mi><mo stretchy="false">(</mo><mi mathvariant="normal">∣</mi><mi>s</mi><mi mathvariant="normal">∣</mi><mo stretchy="false">(</mo><mi>n</mi><mi>m</mi><msup><mo stretchy="false">)</mo><mn>2</mn></msup><mi>k</mi><mo stretchy="false">)</mo></mrow><annotation encoding="application/x-tex">\mathcal O(|s|(nm)^2k)</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:1.064108em;vertical-align:-0.25em;"></span><span class="mord mathcal" style="margin-right:0.02778em;">O</span><span class="mopen">(</span><span class="mord">∣</span><span class="mord mathnormal">s</span><span class="mord">∣</span><span class="mopen">(</span><span class="mord mathnormal">n</span><span class="mord mathnormal">m</span><span class="mclose"><span class="mclose">)</span><span class="msupsub"><span class="vlist-t"><span class="vlist-r"><span class="vlist" style="height:0.8141079999999999em;"><span style="top:-3.063em;margin-right:0.05em;"><span class="pstrut" style="height:2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mtight">2</span></span></span></span></span></span></span></span><span class="mord mathnormal" style="margin-right:0.03148em;">k</span><span class="mclose">)</span></span></span></span>，其中 <span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>k</mi><mo>=</mo><mn>9</mn></mrow><annotation encoding="application/x-tex">k=9</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.69444em;vertical-align:0em;"></span><span class="mord mathnormal" style="margin-right:0.03148em;">k</span><span class="mspace" style="margin-right:0.2777777777777778em;"></span><span class="mrel">=</span><span class="mspace" style="margin-right:0.2777777777777778em;"></span></span><span class="base"><span class="strut" style="height:0.64444em;vertical-align:0em;"></span><span class="mord">9</span></span></span></span>。可以通过。并且不可能卡满，因此实际效率非常快。</p>
 <pre><code class="highlight cpp"><span class="meta">#<span class="keyword">include</span> <span class="string">&lt;bits/stdc++.h&gt;</span></span>
 <span class="keyword">using</span> <span class="keyword">namespace</span> std;
 <span class="keyword">typedef</span> array&lt;__int128, 100&gt; Matrix;
@@ -1136,8 +1135,8 @@ string s;
     &#125;
     <span class="keyword">return</span> <span class="number">0</span>;
 &#125;</code></pre>
-
-<h1 id="尾声"><a href="#尾声" class="headerlink" title="尾声"></a>尾声</h1><p>对于 p6 研究了很久，发现赛时通过的同学代码有误，特地写了份报告发给了 jyy 老师。</p>
+<h1 id="尾声"><a class="markdownIt-Anchor" href="#尾声"></a> 尾声</h1>
+<p>对于 p6 研究了很久，发现赛时通过的同学代码有误，特地写了份报告发给了 jyy 老师。</p>
 <blockquote>
 <p>OI 之外还有一个很大的世界（但你们可能暂时理解不到这一层），这个活动更深层次的目的是能够通过一些测试数据看一看选手们的解题直觉，因此不必如此较真。</p>
 </blockquote>
@@ -1215,7 +1214,8 @@ string s;
 <script type="text/javascript">
 	socialShare("#share", {
 	    title : '[题解] 信息与未来 2024 做题笔记',
-	    description : '幸运数字一个很小朋友的做法是把每个数转二进制字符串或者用数组存下来判断。这里给一个时间复杂度为 $\...',
+	    description : ' 幸运数字
+一个很小朋友的做法是把每个数转二进制字符串或者用数组存下来判断。这里给一个时间复杂度为 ...',
 	    wechatQrcodeTitle : "分享到微信",
 	    wechatQrcodeHelper : '微信扫描二维码',
 	    source : 'http://blog.cyx2009.top/archives/JSOI2024/'
@@ -1304,30 +1304,30 @@ string s;
 		
 		
 
-					<footer id="footer" class="site-footer card shadow-sm border-0">
-						
-						<div>Theme <a target="_blank" rel="noopener" href="https://github.com/solstice23/hexo-theme-argon"><strong>Argon</strong></a> | Powered by Hexo</div>
-						<span id="busuanzi_container_site_uv">
-							本站访客数 <span id="busuanzi_value_site_uv"></span> 人次
-						</span>
-						<span id="timeDate">载入时间...</span>
-						<script>
-						    var now = new Date(); 
-						    function createtime() { 
-						        var grt= new Date("03/28/2022 20:00:00");//在此处修改你的建站时间
-						        now.setTime(now.getTime()+250); 
-						        days = (now - grt ) / 1000 / 60 / 60 / 24; dnum = Math.floor(days); 
-						        hours = (now - grt ) / 1000 / 60 / 60 - (24 * dnum); hnum = Math.floor(hours); 
-						        if(String(hnum).length ==1 ){hnum = "0" + hnum;} minutes = (now - grt ) / 1000 /60 - (24 * 60 * dnum) - (60 * hnum); 
-						        mnum = Math.floor(minutes); if(String(mnum).length ==1 ){mnum = "0" + mnum;} 
-						        seconds = (now - grt ) / 1000 - (24 * 60 * 60 * dnum) - (60 * 60 * hnum) - (60 * mnum); 
-						        snum = Math.round(seconds); if(String(snum).length ==1 ){snum = "0" + snum;} 
-						        document.getElementById("timeDate").innerHTML = "本站已安全运行 "+dnum+" 天 "+ hnum + " 小时 " + mnum + " 分 " + snum + " 秒"; 
-						        // document.getElementById("times").innerHTML = hnum + " 小时 " + mnum + " 分 " + snum + " 秒"; 
-						    } 
-						setInterval("createtime()",250);
-						</script>
-						<script>
+                    <footer id="footer" class="site-footer card shadow-sm border-0">
+                        
+                        <div>Theme <a target="_blank" rel="noopener" href="https://github.com/solstice23/hexo-theme-argon"><strong>Argon</strong></a> | Powered by Hexo</div>
+                        <span id="busuanzi_container_site_uv">
+                            本站访客数 <span id="busuanzi_value_site_uv"></span> 人次
+                        </span>
+                        <span id="timeDate">载入时间...</span>
+                        <script>
+                            var now = new Date(); 
+                            function createtime() { 
+                                var grt= new Date("03/28/2022 20:00:00");//在此处修改你的建站时间
+                                now.setTime(now.getTime()+250); 
+                                days = (now - grt ) / 1000 / 60 / 60 / 24; dnum = Math.floor(days); 
+                                hours = (now - grt ) / 1000 / 60 / 60 - (24 * dnum); hnum = Math.floor(hours); 
+                                if(String(hnum).length ==1 ){hnum = "0" + hnum;} minutes = (now - grt ) / 1000 /60 - (24 * 60 * dnum) - (60 * hnum); 
+                                mnum = Math.floor(minutes); if(String(mnum).length ==1 ){mnum = "0" + mnum;} 
+                                seconds = (now - grt ) / 1000 - (24 * 60 * 60 * dnum) - (60 * 60 * hnum) - (60 * mnum); 
+                                snum = Math.round(seconds); if(String(snum).length ==1 ){snum = "0" + snum;} 
+                                document.getElementById("timeDate").innerHTML = "本站已安全运行 "+dnum+" 天 "+ hnum + " 小时 " + mnum + " 分 " + snum + " 秒"; 
+                                // document.getElementById("times").innerHTML = hnum + " 小时 " + mnum + " 分 " + snum + " 秒"; 
+                            } 
+                        setInterval("createtime()",250);
+                        </script>
+                        <script>
         window.onload = (() => {
             //定义点击出现文字类
             function ClickFrontShow() {
@@ -1464,49 +1464,54 @@ string s;
             //第二个参数是颜色数组，必须是数组类型！
             frontShow.init();
         })();
-						</script>
-					</footer>
-				</main>
-			</div>
-		</div>
-		
+                        </script>
+                    </footer>
+                </main>
+            </div>
+        </div>
+        
 <script src="/argontheme.js"></script>
 
-		
-		
-		
-			<link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/KaTeX/0.15.6/katex.min.css">
-			<script src="//cdnjs.cloudflare.com/ajax/libs/KaTeX/0.15.6/katex.min.js"></script>
-			<script src="//cdnjs.cloudflare.com/ajax/libs/KaTeX/0.15.6/contrib/auto-render.min.js"></script>
-			<script>
-				document.addEventListener("DOMContentLoaded", function() {
-					renderMathInElement(document.body,{
-						delimiters: [
-							{left: "$$", right: "$$", display: true},
-							{left: "$", right: "$", display: false},
-							{left: "\\(", right: "\\)", display: false}
-						]
-					});
-				});
-			</script>
-		
+        
+        
+        
+            <link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/KaTeX/0.16.9/katex.min.css">
+            <script src="//cdnjs.cloudflare.com/ajax/libs/KaTeX/0.16.9/katex.min.js"></script>
+            <script src="//cdnjs.cloudflare.com/ajax/libs/KaTeX/0.16.9/contrib/auto-render.min.js"></script>
+            <script>
+                document.addEventListener("DOMContentLoaded", function() {
+                    renderMathInElement(document.body, {
+                      // customised options
+                      // • auto-render specific keys, e.g.:
+                      delimiters: [
+                          {left: '$$', right: '$$', display: true},
+                          {left: '$', right: '$', display: false},
+                          {left: '\\(', right: '\\)', display: false},
+                          {left: '\\[', right: '\\]', display: true}
+                      ],
+                      // • rendering keys, e.g.:
+                      throwOnError : false
+                    });
+                });
+            </script>
+        
 
-		
-			<script>
-				var argonEnableCodeHighlight = true;
-			</script>
-			
+        
+            <script>
+                var argonEnableCodeHighlight = true;
+            </script>
+            
 <link rel="stylesheet" href="/assets/vendor/highlight/styles/vs2015.css">
 
-		
+        
 
-	</div>
+    </div>
 </div>
 <noscript>
-	<style>
-		article img.lazyload[src^="data:image/svg+xml;base64,PCEtLUFyZ29uTG9hZGluZy0tPg"]{display: none;}
-		.comment-item-text .comment-sticker.lazyload{display: none;}
-	</style>
+    <style>
+        article img.lazyload[src^="data:image/svg+xml;base64,PCEtLUFyZ29uTG9hZGluZy0tPg"]{display: none;}
+        .comment-item-text .comment-sticker.lazyload{display: none;}
+    </style>
 </noscript>
 </body>
 

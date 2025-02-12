@@ -747,7 +747,7 @@
 						
 						<div class="post-meta-detail post-meta-detail-words">
 							<i class="fa fa-file-word-o" aria-hidden="true"></i>
-							442 字
+							450 字
 						</div>
 					
 						
@@ -765,12 +765,9 @@
 	<div class="post-content">
 		
 			
-				众所周知，$2009,2010,1119,0119$ 都不是质数。
+				众所周知，2009,2010,1119,01192009,2010,1119,01192009,2010,1119,0119 都不是质数。
 但是组合起来能得到很多质数。
-$20091119$ 是一个质数，$20102009$ 是一个质数，$11190119$ 是一个质数。
-这有什么用呢，好吧在 OI 中除了可以多做一个被卡概率很大的 Hash 模数没什么用。
-但！是！
-$2010111901192009$ 也是一个质数...
+200911192009111920091119 是一个质数，201020092010200920102009 是一个质数，111901191119011911190119 是一个...
 			
 		
 	</div>
@@ -820,7 +817,7 @@ $2010111901192009$ 也是一个质数...
 						
 						<div class="post-meta-detail post-meta-detail-words">
 							<i class="fa fa-file-word-o" aria-hidden="true"></i>
-							1.6k 字
+							1.7k 字
 						</div>
 					
 						
@@ -828,7 +825,7 @@ $2010111901192009$ 也是一个质数...
 						
 						<div class="post-meta-detail post-meta-detail-readingtime">
 							<i class="fa fa-hourglass-end" aria-hidden="true"></i>
-							8 分钟
+							9 分钟
 						</div>
 					
 		</div>
@@ -838,9 +835,9 @@ $2010111901192009$ 也是一个质数...
 	<div class="post-content">
 		
 			
-				题目翻译给定 $n\times m$ 的网格，每个格子里有一个正整数 $a_{i,j}$。你需要在从 $(sx,sy)$ 开始，执行 $k$ 次操作。每一操作可以选择不动或者走到任意一个四联通（上下左右）的格子。操作之后，可以获得所在格子的 $a_{i,j}$ 的收益。
-$1\leq n,m\leq 50$
-题目思路可以证明，选择的路线一定是，移动...
+				 题目翻译
+给定 n×mn\times mn×m 的网格，每个格子里有一个正整数 ai,ja_{i,j}ai,j​。你需要在从 (sx,sy)(sx,sy)(sx,sy) 开始，执行 kkk 次操作。每一操作可以选择不动或者走到任意一个四联通（上下左右）的格子。操作之后，可以获得所在格子的 ai,ja_{i,j}ai,j​ 的收益。
+1≤n,m≤5...
 			
 		
 	</div>
@@ -893,7 +890,7 @@ $1\leq n,m\leq 50$
 						
 						<div class="post-meta-detail post-meta-detail-readingtime">
 							<i class="fa fa-hourglass-end" aria-hidden="true"></i>
-							16 分钟
+							17 分钟
 						</div>
 					
 		</div>
@@ -903,8 +900,9 @@ $1\leq n,m\leq 50$
 	<div class="post-content">
 		
 			
-				幸运数字一个很小朋友的做法是把每个数转二进制字符串或者用数组存下来判断。这里给一个时间复杂度为 $\mathcal O(n\log V)$ 但空间复杂度为 $\mathcal O(1)$ 的写法：使用位运算，通过 x &gt;&gt; i &amp; 1 获得 $x$ 在二进制下的第 $i$ 位。
-#include &lt;bits/stdc++....
+				 幸运数字
+一个很小朋友的做法是把每个数转二进制字符串或者用数组存下来判断。这里给一个时间复杂度为 O(nlog⁡V)\mathcal O(n\log V)O(nlogV) 但空间复杂度为 O(1)\mathcal O(1)O(1) 的写法：使用位运算，通过 x &gt;&gt; i &amp; 1 获得 xxx 在二进制下的第 iii 位。
+#i...
 			
 		
 	</div>
@@ -921,30 +919,30 @@ $1\leq n,m\leq 50$
 		
 		
 
-					<footer id="footer" class="site-footer card shadow-sm border-0">
-						
-						<div>Theme <a target="_blank" rel="noopener" href="https://github.com/solstice23/hexo-theme-argon"><strong>Argon</strong></a> | Powered by Hexo</div>
-						<span id="busuanzi_container_site_uv">
-							本站访客数 <span id="busuanzi_value_site_uv"></span> 人次
-						</span>
-						<span id="timeDate">载入时间...</span>
-						<script>
-						    var now = new Date(); 
-						    function createtime() { 
-						        var grt= new Date("03/28/2022 20:00:00");//在此处修改你的建站时间
-						        now.setTime(now.getTime()+250); 
-						        days = (now - grt ) / 1000 / 60 / 60 / 24; dnum = Math.floor(days); 
-						        hours = (now - grt ) / 1000 / 60 / 60 - (24 * dnum); hnum = Math.floor(hours); 
-						        if(String(hnum).length ==1 ){hnum = "0" + hnum;} minutes = (now - grt ) / 1000 /60 - (24 * 60 * dnum) - (60 * hnum); 
-						        mnum = Math.floor(minutes); if(String(mnum).length ==1 ){mnum = "0" + mnum;} 
-						        seconds = (now - grt ) / 1000 - (24 * 60 * 60 * dnum) - (60 * 60 * hnum) - (60 * mnum); 
-						        snum = Math.round(seconds); if(String(snum).length ==1 ){snum = "0" + snum;} 
-						        document.getElementById("timeDate").innerHTML = "本站已安全运行 "+dnum+" 天 "+ hnum + " 小时 " + mnum + " 分 " + snum + " 秒"; 
-						        // document.getElementById("times").innerHTML = hnum + " 小时 " + mnum + " 分 " + snum + " 秒"; 
-						    } 
-						setInterval("createtime()",250);
-						</script>
-						<script>
+                    <footer id="footer" class="site-footer card shadow-sm border-0">
+                        
+                        <div>Theme <a target="_blank" rel="noopener" href="https://github.com/solstice23/hexo-theme-argon"><strong>Argon</strong></a> | Powered by Hexo</div>
+                        <span id="busuanzi_container_site_uv">
+                            本站访客数 <span id="busuanzi_value_site_uv"></span> 人次
+                        </span>
+                        <span id="timeDate">载入时间...</span>
+                        <script>
+                            var now = new Date(); 
+                            function createtime() { 
+                                var grt= new Date("03/28/2022 20:00:00");//在此处修改你的建站时间
+                                now.setTime(now.getTime()+250); 
+                                days = (now - grt ) / 1000 / 60 / 60 / 24; dnum = Math.floor(days); 
+                                hours = (now - grt ) / 1000 / 60 / 60 - (24 * dnum); hnum = Math.floor(hours); 
+                                if(String(hnum).length ==1 ){hnum = "0" + hnum;} minutes = (now - grt ) / 1000 /60 - (24 * 60 * dnum) - (60 * hnum); 
+                                mnum = Math.floor(minutes); if(String(mnum).length ==1 ){mnum = "0" + mnum;} 
+                                seconds = (now - grt ) / 1000 - (24 * 60 * 60 * dnum) - (60 * 60 * hnum) - (60 * mnum); 
+                                snum = Math.round(seconds); if(String(snum).length ==1 ){snum = "0" + snum;} 
+                                document.getElementById("timeDate").innerHTML = "本站已安全运行 "+dnum+" 天 "+ hnum + " 小时 " + mnum + " 分 " + snum + " 秒"; 
+                                // document.getElementById("times").innerHTML = hnum + " 小时 " + mnum + " 分 " + snum + " 秒"; 
+                            } 
+                        setInterval("createtime()",250);
+                        </script>
+                        <script>
         window.onload = (() => {
             //定义点击出现文字类
             function ClickFrontShow() {
@@ -1081,49 +1079,54 @@ $1\leq n,m\leq 50$
             //第二个参数是颜色数组，必须是数组类型！
             frontShow.init();
         })();
-						</script>
-					</footer>
-				</main>
-			</div>
-		</div>
-		
+                        </script>
+                    </footer>
+                </main>
+            </div>
+        </div>
+        
 <script src="/argontheme.js"></script>
 
-		
-		
-		
-			<link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/KaTeX/0.15.6/katex.min.css">
-			<script src="//cdnjs.cloudflare.com/ajax/libs/KaTeX/0.15.6/katex.min.js"></script>
-			<script src="//cdnjs.cloudflare.com/ajax/libs/KaTeX/0.15.6/contrib/auto-render.min.js"></script>
-			<script>
-				document.addEventListener("DOMContentLoaded", function() {
-					renderMathInElement(document.body,{
-						delimiters: [
-							{left: "$$", right: "$$", display: true},
-							{left: "$", right: "$", display: false},
-							{left: "\\(", right: "\\)", display: false}
-						]
-					});
-				});
-			</script>
-		
+        
+        
+        
+            <link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/KaTeX/0.16.9/katex.min.css">
+            <script src="//cdnjs.cloudflare.com/ajax/libs/KaTeX/0.16.9/katex.min.js"></script>
+            <script src="//cdnjs.cloudflare.com/ajax/libs/KaTeX/0.16.9/contrib/auto-render.min.js"></script>
+            <script>
+                document.addEventListener("DOMContentLoaded", function() {
+                    renderMathInElement(document.body, {
+                      // customised options
+                      // • auto-render specific keys, e.g.:
+                      delimiters: [
+                          {left: '$$', right: '$$', display: true},
+                          {left: '$', right: '$', display: false},
+                          {left: '\\(', right: '\\)', display: false},
+                          {left: '\\[', right: '\\]', display: true}
+                      ],
+                      // • rendering keys, e.g.:
+                      throwOnError : false
+                    });
+                });
+            </script>
+        
 
-		
-			<script>
-				var argonEnableCodeHighlight = true;
-			</script>
-			
+        
+            <script>
+                var argonEnableCodeHighlight = true;
+            </script>
+            
 <link rel="stylesheet" href="/assets/vendor/highlight/styles/vs2015.css">
 
-		
+        
 
-	</div>
+    </div>
 </div>
 <noscript>
-	<style>
-		article img.lazyload[src^="data:image/svg+xml;base64,PCEtLUFyZ29uTG9hZGluZy0tPg"]{display: none;}
-		.comment-item-text .comment-sticker.lazyload{display: none;}
-	</style>
+    <style>
+        article img.lazyload[src^="data:image/svg+xml;base64,PCEtLUFyZ29uTG9hZGluZy0tPg"]{display: none;}
+        .comment-item-text .comment-sticker.lazyload{display: none;}
+    </style>
 </noscript>
 </body>
 

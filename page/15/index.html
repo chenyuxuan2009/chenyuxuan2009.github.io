@@ -637,7 +637,7 @@
 						
 						<div class="post-meta-detail post-meta-detail-words">
 							<i class="fa fa-file-word-o" aria-hidden="true"></i>
-							339 字
+							343 字
 						</div>
 					
 						
@@ -655,10 +655,11 @@
 	<div class="post-content">
 		
 			
-				题目翻译$n$ 次操作，每次两个数 $a_i,b_i$，在一个初始为空的序列里插入 $b_i$ 个 $a_i$，操作结束后问第 $k$ 小是什么。
-题目思路类似于 ABC247D 的写法，还是个弱化版。
-我们不用真的插入 $b_i$ 个 $a_i$，只需记录 $b_i$ 有多少即可，因为很多的数都用不到。
-这是很多个一添，同理，我们可以很多个一删。...
+				 题目翻译
+nnn 次操作，每次两个数 ai,bia_i,b_iai​,bi​，在一个初始为空的序列里插入 bib_ibi​ 个 aia_iai​，操作结束后问第 kkk 小是什么。
+ 题目思路
+类似于 ABC247D 的写法，还是个弱化版。
+我们不用真的插入 bib_ibi​ 个 aia_iai​，只需记录 bib_ibi​ 有多少即可，因为很多...
 			
 		
 	</div>
@@ -703,7 +704,7 @@
 						
 						<div class="post-meta-detail post-meta-detail-words">
 							<i class="fa fa-file-word-o" aria-hidden="true"></i>
-							701 字
+							717 字
 						</div>
 					
 						
@@ -721,12 +722,15 @@
 	<div class="post-content">
 		
 			
-				abc249_a题目翻译两个人走路，一个 $a$ 秒走 $b$ 米，休息 $c$ 秒，一个 $d$ 秒走 $e$ 米，休息 $f$ 秒。问 $x$ 秒后，谁走得多。
-题目思路小学数学题。$a+c$ 为一循环，$d+f$ 为一循环。之后再处理剩余秒数。
-AC 代码void solve()
+				 abc249_a
+ 题目翻译
+两个人走路，一个 aaa 秒走 bbb 米，休息 ccc 秒，一个 ddd 秒走 eee 米，休息 fff 秒。问 xxx 秒后，谁走得多。
+ 题目思路
+小学数学题。a+ca+ca+c 为一循环，d+fd+fd+f 为一循环。之后再处理剩余秒数。
+ AC 代码
+void solve()
 &#123;
-	int a,b,c,d,e,f,x;
-	cin...
+	int a,b...
 			
 		
 	</div>
@@ -771,7 +775,7 @@ AC 代码void solve()
 						
 						<div class="post-meta-detail post-meta-detail-words">
 							<i class="fa fa-file-word-o" aria-hidden="true"></i>
-							774 字
+							801 字
 						</div>
 					
 						
@@ -789,16 +793,20 @@ AC 代码void solve()
 	<div class="post-content">
 		
 			
-				abc248_a题目翻译有一个字符串 $s$，找出 $0$ 到 $9$ 中没出现的数。
-题目思路直接开数组存出现次数。
-AC 代码int a[10];
+				 abc248_a
+ 题目翻译
+有一个字符串 sss，找出 000 到 999 中没出现的数。
+ 题目思路
+直接开数组存出现次数。
+ AC 代码
+int a[10];
 void solve()
 &#123;
 	string s;
 	cin&gt;&gt;s;
 	for(int i=0;i&lt;9;i++)
 	&#123;
-		a[s[i]-&#x27;0&#x2...
+		a[s[i]-&#x...
 			
 		
 	</div>
@@ -843,7 +851,7 @@ void solve()
 						
 						<div class="post-meta-detail post-meta-detail-words">
 							<i class="fa fa-file-word-o" aria-hidden="true"></i>
-							174 字
+							192 字
 						</div>
 					
 						
@@ -861,12 +869,11 @@ void solve()
 	<div class="post-content">
 		
 			
-				题目翻译四个整数，$n,B,x,y$，每次可以选择 $a_i&#x3D;a_{i-1}+x$ 或者 $a_i&#x3D;a_{i-1}-y$，必须保证 $a_i\leq B$，问 $a$ 数组的元素和。
-题目思路这道题可以贪心。
-每次尽可能加上 $x$，如果超过就减掉 $y$。
-这肯定是对的贪心策略；
-因为，这样肯定保证多加上少减去。
-每次都是加 ...
+				 题目翻译
+四个整数，n,B,x,yn,B,x,yn,B,x,y，每次可以选择 ai=ai−1+xa_i=a_{i-1}+xai​=ai−1​+x 或者 ai=ai−1−ya_i=a_{i-1}-yai​=ai−1​−y，必须保证 ai≤Ba_i\leq Bai​≤B，问 aaa 数组的元素和。
+ 题目思路
+这道题可以贪心。
+每次尽可能加上 xxx...
 			
 		
 	</div>
@@ -919,7 +926,7 @@ void solve()
 						
 						<div class="post-meta-detail post-meta-detail-readingtime">
 							<i class="fa fa-hourglass-end" aria-hidden="true"></i>
-							5 分钟
+							6 分钟
 						</div>
 					
 		</div>
@@ -929,13 +936,17 @@ void solve()
 	<div class="post-content">
 		
 			
-				abc247_a题目翻译一个字符串，输出向左移 $1$ 位的结果，第四个位置移完后消失。
-题目思路直接输出前一个位置。
-AC 代码void solve()
+				 abc247_a
+ 题目翻译
+一个字符串，输出向左移 111 位的结果，第四个位置移完后消失。
+ 题目思路
+直接输出前一个位置。
+ AC 代码
+void solve()
 &#123;
 	char c1,c2,c3,c4;
 	cin&gt;&gt;c1&gt;&gt;c2&gt;&gt;c3&gt;&gt;c4;
-	cout&lt;&lt;0&lt;&lt;c1&...
+	cout&lt;&lt;0&lt...
 			
 		
 	</div>
@@ -980,7 +991,7 @@ AC 代码void solve()
 						
 						<div class="post-meta-detail post-meta-detail-words">
 							<i class="fa fa-file-word-o" aria-hidden="true"></i>
-							2.9k 字
+							3k 字
 						</div>
 					
 						
@@ -988,7 +999,7 @@ AC 代码void solve()
 						
 						<div class="post-meta-detail post-meta-detail-readingtime">
 							<i class="fa fa-hourglass-end" aria-hidden="true"></i>
-							15 分钟
+							16 分钟
 						</div>
 					
 		</div>
@@ -999,7 +1010,8 @@ AC 代码void solve()
 		
 			
 				题目都超链接了，可以直接点开。
-P1143 进制转换十进制与 $n$ 进制的互相转换，板子题，不多说。
+ P1143 进制转换
+十进制与 nnn 进制的互相转换，板子题，不多说。
 string c=&quot;0123456789ABCDEF&quot;;
 void f(int x,int m)
 &#123;
@@ -1007,7 +1019,7 @@ void f(int x,int m)
 	&#123;
 		f(x/m,m);
 	&#125;
-	cout&lt;&lt;c[x%m];...
+	cout&lt;&lt;c[x%m...
 			
 		
 	</div>
@@ -1052,7 +1064,7 @@ void f(int x,int m)
 						
 						<div class="post-meta-detail post-meta-detail-words">
 							<i class="fa fa-file-word-o" aria-hidden="true"></i>
-							226 字
+							238 字
 						</div>
 					
 						
@@ -1070,16 +1082,14 @@ void f(int x,int m)
 	<div class="post-content">
 		
 			
-				题目思路就是进制转换啦。
+				 题目思路
+就是进制转换啦。
 进制转换，肯定要讲一下短除法。就是每次看余数并做除法。
-比如 $10$ 转换 $2$ 进制。
-$13\bmod2&#x3D;1$。
-$6 \bmod 2&#x3D;0$。
-$3 \bmod2&#x3D;1$。
-$1\bmod2&#x3D;1$。
-最后倒序枚举余数即可。
-那么，我们可以有两种方案，递归和存数组。
-存数组，字面...
+比如 101010 转换 222 进制。
+13 mod 2=113\bmod2=113mod2=1。
+6 mod 2=06 \bmod 2=06mod2=0。
+3 mod 2=13 \bmod2=13mod2=1。
+1 mod 2=11\bmod2=11mod2=...
 			
 		
 	</div>
@@ -1124,7 +1134,7 @@ $1\bmod2&#x3D;1$。
 						
 						<div class="post-meta-detail post-meta-detail-words">
 							<i class="fa fa-file-word-o" aria-hidden="true"></i>
-							453 字
+							465 字
 						</div>
 					
 						
@@ -1142,13 +1152,14 @@ $1\bmod2&#x3D;1$。
 	<div class="post-content">
 		
 			
-				题目翻译一个长度为 $n$ 的数组，最多 $n$ 次询问，输出数组元素。
-询问：每次输出 ? x y，返回 $x+y$ 的值。
+				 题目翻译
+一个长度为 nnn 的数组，最多 nnn 次询问，输出数组元素。
+询问：每次输出 ? x y，返回 x+yx+yx+y 的值。
 输出：输出  ! 之后空一格，正常输出数组元素。
-题目思路小学数学知识。
-我们先询问 $x+y$ 的值，在询问 $x+z$ 的值，最后询问 $y+z$ 的值。
-恰好每个数出现两次，把总和除以二，得到 $x+y+z$。
-知道...
+ 题目思路
+小学数学知识。
+我们先询问 x+yx+yx+y 的值，在询问 x+zx+zx+z 的值，最后询问 y+zy+zy+z 的值。
+恰好每个数出现两次，把...
 			
 		
 	</div>
@@ -1216,13 +1227,15 @@ $1\bmod2&#x3D;1$。
 	<div class="post-content">
 		
 			
-				题目翻译有 $n$ 个数，每次选一个删掉，其他数都减去删掉的数，问最后一个数会不会等于 $k$。
-题目分析这题一看就是结论题。我们先把 $a$ 数组假设为删除数字顺序定下来的数组，看最后结果。
+				 题目翻译
+有 nnn 个数，每次选一个删掉，其他数都减去删掉的数，问最后一个数会不会等于 kkk。
+ 题目分析
+这题一看就是结论题。我们先把 aaa 数组假设为删除数字顺序定下来的数组，看最后结果。
 
 上述过程每步已经化简。
 那么，很容易看出，最后答案是两个数的差。
-这题便成为了：$n$ 个数里，是否有两个数字差为 $k$。
-那么我想到是用 map 和 ...
+这题便成为了：nnn 个数里，是否有两个数字差为 kkk。
+那么我想到是用 ma...
 			
 		
 	</div>
@@ -1267,7 +1280,7 @@ $1\bmod2&#x3D;1$。
 						
 						<div class="post-meta-detail post-meta-detail-words">
 							<i class="fa fa-file-word-o" aria-hidden="true"></i>
-							217 字
+							225 字
 						</div>
 					
 						
@@ -1285,17 +1298,16 @@ $1\bmod2&#x3D;1$。
 	<div class="post-content">
 		
 			
-				题目翻译有 $n$ 个数，可以选择一个区间 $[l,r]$ 进行一次翻转。最大的相邻两个数的和是多少。
-题目思路最大的和，肯定就是最大加次大。而次大肯定能翻转到最大旁边，所以答案就是次大加最大。
+				 题目翻译
+有 nnn 个数，可以选择一个区间 [l,r][l,r][l,r] 进行一次翻转。最大的相邻两个数的和是多少。
+ 题目思路
+最大的和，肯定就是最大加次大。而次大肯定能翻转到最大旁边，所以答案就是次大加最大。
 为什么次大肯定翻转到最大旁边：用样例解释一下。
 6
 5 2 1 4 7 3
-
-翻转 $[1,4]$。
+翻转 [1,4][1,4][1,4]。
 6
-4 1 2 5 7 3
-
-最大是 $7$，次大是...
+4 1 2...
 			
 		
 	</div>
@@ -1314,30 +1326,30 @@ $1\bmod2&#x3D;1$。
 		
 		
 
-					<footer id="footer" class="site-footer card shadow-sm border-0">
-						
-						<div>Theme <a target="_blank" rel="noopener" href="https://github.com/solstice23/hexo-theme-argon"><strong>Argon</strong></a> | Powered by Hexo</div>
-						<span id="busuanzi_container_site_uv">
-							本站访客数 <span id="busuanzi_value_site_uv"></span> 人次
-						</span>
-						<span id="timeDate">载入时间...</span>
-						<script>
-						    var now = new Date(); 
-						    function createtime() { 
-						        var grt= new Date("03/28/2022 20:00:00");//在此处修改你的建站时间
-						        now.setTime(now.getTime()+250); 
-						        days = (now - grt ) / 1000 / 60 / 60 / 24; dnum = Math.floor(days); 
-						        hours = (now - grt ) / 1000 / 60 / 60 - (24 * dnum); hnum = Math.floor(hours); 
-						        if(String(hnum).length ==1 ){hnum = "0" + hnum;} minutes = (now - grt ) / 1000 /60 - (24 * 60 * dnum) - (60 * hnum); 
-						        mnum = Math.floor(minutes); if(String(mnum).length ==1 ){mnum = "0" + mnum;} 
-						        seconds = (now - grt ) / 1000 - (24 * 60 * 60 * dnum) - (60 * 60 * hnum) - (60 * mnum); 
-						        snum = Math.round(seconds); if(String(snum).length ==1 ){snum = "0" + snum;} 
-						        document.getElementById("timeDate").innerHTML = "本站已安全运行 "+dnum+" 天 "+ hnum + " 小时 " + mnum + " 分 " + snum + " 秒"; 
-						        // document.getElementById("times").innerHTML = hnum + " 小时 " + mnum + " 分 " + snum + " 秒"; 
-						    } 
-						setInterval("createtime()",250);
-						</script>
-						<script>
+                    <footer id="footer" class="site-footer card shadow-sm border-0">
+                        
+                        <div>Theme <a target="_blank" rel="noopener" href="https://github.com/solstice23/hexo-theme-argon"><strong>Argon</strong></a> | Powered by Hexo</div>
+                        <span id="busuanzi_container_site_uv">
+                            本站访客数 <span id="busuanzi_value_site_uv"></span> 人次
+                        </span>
+                        <span id="timeDate">载入时间...</span>
+                        <script>
+                            var now = new Date(); 
+                            function createtime() { 
+                                var grt= new Date("03/28/2022 20:00:00");//在此处修改你的建站时间
+                                now.setTime(now.getTime()+250); 
+                                days = (now - grt ) / 1000 / 60 / 60 / 24; dnum = Math.floor(days); 
+                                hours = (now - grt ) / 1000 / 60 / 60 - (24 * dnum); hnum = Math.floor(hours); 
+                                if(String(hnum).length ==1 ){hnum = "0" + hnum;} minutes = (now - grt ) / 1000 /60 - (24 * 60 * dnum) - (60 * hnum); 
+                                mnum = Math.floor(minutes); if(String(mnum).length ==1 ){mnum = "0" + mnum;} 
+                                seconds = (now - grt ) / 1000 - (24 * 60 * 60 * dnum) - (60 * 60 * hnum) - (60 * mnum); 
+                                snum = Math.round(seconds); if(String(snum).length ==1 ){snum = "0" + snum;} 
+                                document.getElementById("timeDate").innerHTML = "本站已安全运行 "+dnum+" 天 "+ hnum + " 小时 " + mnum + " 分 " + snum + " 秒"; 
+                                // document.getElementById("times").innerHTML = hnum + " 小时 " + mnum + " 分 " + snum + " 秒"; 
+                            } 
+                        setInterval("createtime()",250);
+                        </script>
+                        <script>
         window.onload = (() => {
             //定义点击出现文字类
             function ClickFrontShow() {
@@ -1474,49 +1486,54 @@ $1\bmod2&#x3D;1$。
             //第二个参数是颜色数组，必须是数组类型！
             frontShow.init();
         })();
-						</script>
-					</footer>
-				</main>
-			</div>
-		</div>
-		
+                        </script>
+                    </footer>
+                </main>
+            </div>
+        </div>
+        
 <script src="/argontheme.js"></script>
 
-		
-		
-		
-			<link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/KaTeX/0.15.6/katex.min.css">
-			<script src="//cdnjs.cloudflare.com/ajax/libs/KaTeX/0.15.6/katex.min.js"></script>
-			<script src="//cdnjs.cloudflare.com/ajax/libs/KaTeX/0.15.6/contrib/auto-render.min.js"></script>
-			<script>
-				document.addEventListener("DOMContentLoaded", function() {
-					renderMathInElement(document.body,{
-						delimiters: [
-							{left: "$$", right: "$$", display: true},
-							{left: "$", right: "$", display: false},
-							{left: "\\(", right: "\\)", display: false}
-						]
-					});
-				});
-			</script>
-		
+        
+        
+        
+            <link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/KaTeX/0.16.9/katex.min.css">
+            <script src="//cdnjs.cloudflare.com/ajax/libs/KaTeX/0.16.9/katex.min.js"></script>
+            <script src="//cdnjs.cloudflare.com/ajax/libs/KaTeX/0.16.9/contrib/auto-render.min.js"></script>
+            <script>
+                document.addEventListener("DOMContentLoaded", function() {
+                    renderMathInElement(document.body, {
+                      // customised options
+                      // • auto-render specific keys, e.g.:
+                      delimiters: [
+                          {left: '$$', right: '$$', display: true},
+                          {left: '$', right: '$', display: false},
+                          {left: '\\(', right: '\\)', display: false},
+                          {left: '\\[', right: '\\]', display: true}
+                      ],
+                      // • rendering keys, e.g.:
+                      throwOnError : false
+                    });
+                });
+            </script>
+        
 
-		
-			<script>
-				var argonEnableCodeHighlight = true;
-			</script>
-			
+        
+            <script>
+                var argonEnableCodeHighlight = true;
+            </script>
+            
 <link rel="stylesheet" href="/assets/vendor/highlight/styles/vs2015.css">
 
-		
+        
 
-	</div>
+    </div>
 </div>
 <noscript>
-	<style>
-		article img.lazyload[src^="data:image/svg+xml;base64,PCEtLUFyZ29uTG9hZGluZy0tPg"]{display: none;}
-		.comment-item-text .comment-sticker.lazyload{display: none;}
-	</style>
+    <style>
+        article img.lazyload[src^="data:image/svg+xml;base64,PCEtLUFyZ29uTG9hZGluZy0tPg"]{display: none;}
+        .comment-item-text .comment-sticker.lazyload{display: none;}
+    </style>
 </noscript>
 </body>
 

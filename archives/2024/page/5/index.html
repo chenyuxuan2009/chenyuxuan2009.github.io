@@ -671,10 +671,10 @@
 	<div class="post-content">
 		
 			
-				题目翻译平面直角坐标系中，有 $n$ 个木乃伊，分别为 $(x_i,y_i)$。你在原点 $(0,0)$ 上。
-每一个时刻你可以往 $8$ 个相邻位置逃跑，或者待在原地。之后，木乃伊会向 $8$ 个方向移动到最靠近你（距离为欧几里得距离）的位置。多只木乃伊可以在一个格子。
-问你多久可以不被木乃伊抓住。当然，也可能有永远不被抓住。
-放一张样例的最佳走...
+				 题目翻译
+平面直角坐标系中，有 nnn 个木乃伊，分别为 (xi,yi)(x_i,y_i)(xi​,yi​)。你在原点 (0,0)(0,0)(0,0) 上。
+每一个时刻你可以往 888 个相邻位置逃跑，或者待在原地。之后，木乃伊会向 888 个方向移动到最靠近你（距离为欧几里得距离）的位置。多只木乃伊可以在一个格子。
+问你多久可以不被木乃伊抓住。...
 			
 		
 	</div>
@@ -722,7 +722,7 @@
 						
 						<div class="post-meta-detail post-meta-detail-words">
 							<i class="fa fa-file-word-o" aria-hidden="true"></i>
-							984 字
+							1.1k 字
 						</div>
 					
 						
@@ -742,12 +742,13 @@
 	<div class="post-content">
 		
 			
-				题目思路原来这种多边形转成笛卡尔树建树是常见 trick。练的太少导致的。
+				 题目思路
+原来这种多边形转成笛卡尔树建树是常见 trick。练的太少导致的。
 但是这题其实不用笛卡尔树建树，因为 DP 部分复杂度较高其实这个优化（至少在我的程序上）没有太大作用。
 
 为了方便描述，定义中国象棋中的『車』为题目中的颜色，本质一样。
 考虑把这个多边形转成树，分割方式就是以底层开割。
-机房电脑的 NOI Linux 2.0 没有好用的画图...
+机房电脑的 NOI Linux 2.0 没有好用的...
 			
 		
 	</div>
@@ -792,7 +793,7 @@
 						
 						<div class="post-meta-detail post-meta-detail-words">
 							<i class="fa fa-file-word-o" aria-hidden="true"></i>
-							1.6k 字
+							1.7k 字
 						</div>
 					
 						
@@ -810,12 +811,10 @@
 	<div class="post-content">
 		
 			
-				题目翻译给定 $x&#x3D;(00001111)_2,y&#x3D;(00110011)_2,z&#x3D;(01010101)_2$。
+				 题目翻译
+给定 x=(00001111)2,y=(00110011)2,z=(01010101)2x=(00001111)_2,y=(00110011)_2,z=(01010101)_2x=(00001111)2​,y=(00110011)2​,z=(01010101)2​。
 你有二元运算符『与』和『或』，以及一元运算符『取反』。
-与：表示二进制下按位与，字符是 &amp;。
-或：表示二进制下按位或，字符是 |。
-取反：表示二进制下按位取反，字符是 !。
-优先级从大到小排列是：取反，...
+与：表示二进制...
 			
 		
 	</div>
@@ -860,7 +859,7 @@
 						
 						<div class="post-meta-detail post-meta-detail-words">
 							<i class="fa fa-file-word-o" aria-hidden="true"></i>
-							1.5k 字
+							1.6k 字
 						</div>
 					
 						
@@ -878,14 +877,14 @@
 	<div class="post-content">
 		
 			
-				E - Paint我都见到这题三次了。
+				 E - Paint
+我都见到这题三次了。
 考虑正难则反，操作逆序。
 此时你先涂的颜色后面不能更改了。
 但是显然的你可以知道现在有多少行多少列被涂过了。
 那么你把剩下的加进答案就好了。
-然后这题有个很逆天的 corner case 是一开始全是颜色 $0$。如果这个 corner case 判错了也会寄的。
-typedef long long ll;
-...
+然后这题有个很逆天的 corner case 是一开始全是颜色 000。如果这个 corner case 判错了也会寄的。
+typedef long long ll...
 			
 		
 	</div>
@@ -930,7 +929,7 @@ typedef long long ll;
 						
 						<div class="post-meta-detail post-meta-detail-words">
 							<i class="fa fa-file-word-o" aria-hidden="true"></i>
-							340 字
+							369 字
 						</div>
 					
 						
@@ -948,10 +947,12 @@ typedef long long ll;
 	<div class="post-content">
 		
 			
-				题目翻译给定 $n(n\leq 2000)$ 个串，选定 $k$ 个串，求出最大两两 LCP。
-题目思路首先把给定串按字典序排序，保证相邻 LCP 最大。
-考虑 dp，$f_{l,r,x}$ 表示选择 $[l,r]$ 中有 $x$ 个串的最大两两 LCP。
-类似分治，转移的时候枚举相邻 LCP 最小的点 $m$，一定是在 $m$ 断开最优。转移枚举...
+				 题目翻译
+给定 n(n≤2000)n(n\leq 2000)n(n≤2000) 个串，选定 kkk 个串，求出最大两两 LCP。
+ 题目思路
+首先把给定串按字典序排序，保证相邻 LCP 最大。
+考虑 dp，fl,r,xf_{l,r,x}fl,r,x​ 表示选择 [l,r][l,r][l,r] 中有 xxx 个串的最大两两 LCP。
+类似分治，转移...
 			
 		
 	</div>
@@ -996,7 +997,7 @@ typedef long long ll;
 						
 						<div class="post-meta-detail post-meta-detail-words">
 							<i class="fa fa-file-word-o" aria-hidden="true"></i>
-							345 字
+							458 字
 						</div>
 					
 						
@@ -1004,7 +1005,7 @@ typedef long long ll;
 						
 						<div class="post-meta-detail post-meta-detail-readingtime">
 							<i class="fa fa-hourglass-end" aria-hidden="true"></i>
-							1 分钟
+							2 分钟
 						</div>
 					
 		</div>
@@ -1014,9 +1015,9 @@ typedef long long ll;
 	<div class="post-content">
 		
 			
-				题目翻译给定 $a,b,c,d$，重复执行 $a\gets a-b$。但是操作完后如果 $a\leq c$ 将会执行 $a\gets a+d$，问是否可以保证 $a\gt 0$ 的情况喜爱无限次执行。
-多测，$1\leq t\leq 300,1\leq a,b,c,d\leq 10^{18}$。
-题目思路特殊情况是 $a\lt b$ 表示第一天买完...
+				 题目翻译
+给定 a,b,c,da,b,c,da,b,c,d，重复执行 a←a−ba\gets a-ba←a−b。但是操作完后如果 a≤ca\leq ca≤c 将会执行 a←a+da\gets a+da←a+d，问是否可以保证 a&gt;0a\gt 0a&gt;0 的情况喜爱无限次执行。
+多测，1≤t≤300,1≤a,b,c,d≤10181\leq...
 			
 		
 	</div>
@@ -1061,7 +1062,7 @@ typedef long long ll;
 						
 						<div class="post-meta-detail post-meta-detail-words">
 							<i class="fa fa-file-word-o" aria-hidden="true"></i>
-							196 字
+							218 字
 						</div>
 					
 						
@@ -1079,9 +1080,10 @@ typedef long long ll;
 	<div class="post-content">
 		
 			
-				题目翻译给出 $n(1\leq n\leq 2\times 10^5$，构造一个排列使得 $\operatorname{len(LIS)+len(LDS)}$ 最小。
-题目思路样例提示我们分块操作，设分了 $x$ 块，每块块长为 $\frac{n}{x}$。我们这里为了方便书写先只讨论整除的情况，不整除是一样的。
-那么我们就是最小化 $x+\fra...
+				 题目翻译
+给出 n(1≤n≤2×105n(1\leq n\leq 2\times 10^5n(1≤n≤2×105，构造一个排列使得 len(LIS)+len(LDS)⁡\operatorname{len(LIS)+len(LDS)}len(LIS)+len(LDS) 最小。
+ 题目思路
+样例提示我们分块操作，设分了 xxx 块，每块块长为 nx\...
 			
 		
 	</div>
@@ -1126,7 +1128,7 @@ typedef long long ll;
 						
 						<div class="post-meta-detail post-meta-detail-words">
 							<i class="fa fa-file-word-o" aria-hidden="true"></i>
-							488 字
+							581 字
 						</div>
 					
 						
@@ -1134,7 +1136,7 @@ typedef long long ll;
 						
 						<div class="post-meta-detail post-meta-detail-readingtime">
 							<i class="fa fa-hourglass-end" aria-hidden="true"></i>
-							2 分钟
+							3 分钟
 						</div>
 					
 		</div>
@@ -1144,7 +1146,8 @@ typedef long long ll;
 	<div class="post-content">
 		
 			
-				题目翻译有一个长度为 $n(n\leq 500)$ 的序列，你可以砍 $m(0\leq m\lt n)$ 刀将其分为 $m+1$ 段，令每一段 $[l,r]$ 的贡献为 $\sum\limits_{i&#x3D;l}^r \sum\limits_{j&#x3D;i+1}^r a_i\times a_j$，一个序列的答案是每一段的贡献之和，求最小的答...
+				 题目翻译
+有一个长度为 n(n≤500)n(n\leq 500)n(n≤500) 的序列，你可以砍 m(0≤m&lt;n)m(0\leq m\lt n)m(0≤m&lt;n) 刀将其分为 m+1m+1m+1 段，令每一段 [l,r][l,r][l,r] 的贡献为 ∑i=lr∑j=i+1rai×aj\sum\limits_{i=l}^r \sum\...
 			
 		
 	</div>
@@ -1189,7 +1192,7 @@ typedef long long ll;
 						
 						<div class="post-meta-detail post-meta-detail-words">
 							<i class="fa fa-file-word-o" aria-hidden="true"></i>
-							537 字
+							637 字
 						</div>
 					
 						
@@ -1197,7 +1200,7 @@ typedef long long ll;
 						
 						<div class="post-meta-detail post-meta-detail-readingtime">
 							<i class="fa fa-hourglass-end" aria-hidden="true"></i>
-							2 分钟
+							3 分钟
 						</div>
 					
 		</div>
@@ -1207,8 +1210,9 @@ typedef long long ll;
 	<div class="post-content">
 		
 			
-				题目翻译定义字符串的费用是 $(i,j)$ 的个数满足 $1\leq i\lt j\leq n,s_i&#x3D;s_j,s_{i+1}&#x3D;s_{j+1}$。
-给定 $n\leq 2\times 10^5$ 和字符集大小 $k(k\leq 26)$，用字母表前 $k$ 个小写字母组成的长度为 $n$ 的字符串中，找任意一种费用最小的字符串。...
+				 题目翻译
+定义字符串的费用是 (i,j)(i,j)(i,j) 的个数满足 1≤i&lt;j≤n,si=sj,si+1=sj+11\leq i\lt j\leq n,s_i=s_j,s_{i+1}=s_{j+1}1≤i&lt;j≤n,si​=sj​,si+1​=sj+1​。
+给定 n≤2×105n\leq 2\times 10^5n≤2×105 和...
 			
 		
 	</div>
@@ -1253,7 +1257,7 @@ typedef long long ll;
 						
 						<div class="post-meta-detail post-meta-detail-words">
 							<i class="fa fa-file-word-o" aria-hidden="true"></i>
-							603 字
+							663 字
 						</div>
 					
 						
@@ -1261,7 +1265,7 @@ typedef long long ll;
 						
 						<div class="post-meta-detail post-meta-detail-readingtime">
 							<i class="fa fa-hourglass-end" aria-hidden="true"></i>
-							2 分钟
+							3 分钟
 						</div>
 					
 		</div>
@@ -1271,8 +1275,8 @@ typedef long long ll;
 	<div class="post-content">
 		
 			
-				题目翻译给定 $n(n\leq 100)$ 个字符串 $s_i$，满足 $\sum |s_i|\leq 100$，再给出 $m(m\leq 100)$ 个新串，给定 $x,y$，新串为 $s_x+s_y$。对于这 $m$ 个串，找到最大的 $k$，使得所有长度为 $k$ 的 01 串均被其包含。
-题目思路设子串长度是 $L$，因为 $\sum |s...
+				 题目翻译
+给定 n(n≤100)n(n\leq 100)n(n≤100) 个字符串 sis_isi​，满足 ∑∣si∣≤100\sum |s_i|\leq 100∑∣si​∣≤100，再给出 m(m≤100)m(m\leq 100)m(m≤100) 个新串，给定 x,yx,yx,y，新串为 sx+sys_x+s_ysx​+sy​。对于这 mmm ...
 			
 		
 	</div>
@@ -1289,30 +1293,30 @@ typedef long long ll;
 		
 		
 
-					<footer id="footer" class="site-footer card shadow-sm border-0">
-						
-						<div>Theme <a target="_blank" rel="noopener" href="https://github.com/solstice23/hexo-theme-argon"><strong>Argon</strong></a> | Powered by Hexo</div>
-						<span id="busuanzi_container_site_uv">
-							本站访客数 <span id="busuanzi_value_site_uv"></span> 人次
-						</span>
-						<span id="timeDate">载入时间...</span>
-						<script>
-						    var now = new Date(); 
-						    function createtime() { 
-						        var grt= new Date("03/28/2022 20:00:00");//在此处修改你的建站时间
-						        now.setTime(now.getTime()+250); 
-						        days = (now - grt ) / 1000 / 60 / 60 / 24; dnum = Math.floor(days); 
-						        hours = (now - grt ) / 1000 / 60 / 60 - (24 * dnum); hnum = Math.floor(hours); 
-						        if(String(hnum).length ==1 ){hnum = "0" + hnum;} minutes = (now - grt ) / 1000 /60 - (24 * 60 * dnum) - (60 * hnum); 
-						        mnum = Math.floor(minutes); if(String(mnum).length ==1 ){mnum = "0" + mnum;} 
-						        seconds = (now - grt ) / 1000 - (24 * 60 * 60 * dnum) - (60 * 60 * hnum) - (60 * mnum); 
-						        snum = Math.round(seconds); if(String(snum).length ==1 ){snum = "0" + snum;} 
-						        document.getElementById("timeDate").innerHTML = "本站已安全运行 "+dnum+" 天 "+ hnum + " 小时 " + mnum + " 分 " + snum + " 秒"; 
-						        // document.getElementById("times").innerHTML = hnum + " 小时 " + mnum + " 分 " + snum + " 秒"; 
-						    } 
-						setInterval("createtime()",250);
-						</script>
-						<script>
+                    <footer id="footer" class="site-footer card shadow-sm border-0">
+                        
+                        <div>Theme <a target="_blank" rel="noopener" href="https://github.com/solstice23/hexo-theme-argon"><strong>Argon</strong></a> | Powered by Hexo</div>
+                        <span id="busuanzi_container_site_uv">
+                            本站访客数 <span id="busuanzi_value_site_uv"></span> 人次
+                        </span>
+                        <span id="timeDate">载入时间...</span>
+                        <script>
+                            var now = new Date(); 
+                            function createtime() { 
+                                var grt= new Date("03/28/2022 20:00:00");//在此处修改你的建站时间
+                                now.setTime(now.getTime()+250); 
+                                days = (now - grt ) / 1000 / 60 / 60 / 24; dnum = Math.floor(days); 
+                                hours = (now - grt ) / 1000 / 60 / 60 - (24 * dnum); hnum = Math.floor(hours); 
+                                if(String(hnum).length ==1 ){hnum = "0" + hnum;} minutes = (now - grt ) / 1000 /60 - (24 * 60 * dnum) - (60 * hnum); 
+                                mnum = Math.floor(minutes); if(String(mnum).length ==1 ){mnum = "0" + mnum;} 
+                                seconds = (now - grt ) / 1000 - (24 * 60 * 60 * dnum) - (60 * 60 * hnum) - (60 * mnum); 
+                                snum = Math.round(seconds); if(String(snum).length ==1 ){snum = "0" + snum;} 
+                                document.getElementById("timeDate").innerHTML = "本站已安全运行 "+dnum+" 天 "+ hnum + " 小时 " + mnum + " 分 " + snum + " 秒"; 
+                                // document.getElementById("times").innerHTML = hnum + " 小时 " + mnum + " 分 " + snum + " 秒"; 
+                            } 
+                        setInterval("createtime()",250);
+                        </script>
+                        <script>
         window.onload = (() => {
             //定义点击出现文字类
             function ClickFrontShow() {
@@ -1449,49 +1453,54 @@ typedef long long ll;
             //第二个参数是颜色数组，必须是数组类型！
             frontShow.init();
         })();
-						</script>
-					</footer>
-				</main>
-			</div>
-		</div>
-		
+                        </script>
+                    </footer>
+                </main>
+            </div>
+        </div>
+        
 <script src="/argontheme.js"></script>
 
-		
-		
-		
-			<link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/KaTeX/0.15.6/katex.min.css">
-			<script src="//cdnjs.cloudflare.com/ajax/libs/KaTeX/0.15.6/katex.min.js"></script>
-			<script src="//cdnjs.cloudflare.com/ajax/libs/KaTeX/0.15.6/contrib/auto-render.min.js"></script>
-			<script>
-				document.addEventListener("DOMContentLoaded", function() {
-					renderMathInElement(document.body,{
-						delimiters: [
-							{left: "$$", right: "$$", display: true},
-							{left: "$", right: "$", display: false},
-							{left: "\\(", right: "\\)", display: false}
-						]
-					});
-				});
-			</script>
-		
+        
+        
+        
+            <link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/KaTeX/0.16.9/katex.min.css">
+            <script src="//cdnjs.cloudflare.com/ajax/libs/KaTeX/0.16.9/katex.min.js"></script>
+            <script src="//cdnjs.cloudflare.com/ajax/libs/KaTeX/0.16.9/contrib/auto-render.min.js"></script>
+            <script>
+                document.addEventListener("DOMContentLoaded", function() {
+                    renderMathInElement(document.body, {
+                      // customised options
+                      // • auto-render specific keys, e.g.:
+                      delimiters: [
+                          {left: '$$', right: '$$', display: true},
+                          {left: '$', right: '$', display: false},
+                          {left: '\\(', right: '\\)', display: false},
+                          {left: '\\[', right: '\\]', display: true}
+                      ],
+                      // • rendering keys, e.g.:
+                      throwOnError : false
+                    });
+                });
+            </script>
+        
 
-		
-			<script>
-				var argonEnableCodeHighlight = true;
-			</script>
-			
+        
+            <script>
+                var argonEnableCodeHighlight = true;
+            </script>
+            
 <link rel="stylesheet" href="/assets/vendor/highlight/styles/vs2015.css">
 
-		
+        
 
-	</div>
+    </div>
 </div>
 <noscript>
-	<style>
-		article img.lazyload[src^="data:image/svg+xml;base64,PCEtLUFyZ29uTG9hZGluZy0tPg"]{display: none;}
-		.comment-item-text .comment-sticker.lazyload{display: none;}
-	</style>
+    <style>
+        article img.lazyload[src^="data:image/svg+xml;base64,PCEtLUFyZ29uTG9hZGluZy0tPg"]{display: none;}
+        .comment-item-text .comment-sticker.lazyload{display: none;}
+    </style>
 </noscript>
 </body>
 

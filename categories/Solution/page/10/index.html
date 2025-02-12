@@ -655,7 +655,7 @@
 						
 						<div class="post-meta-detail post-meta-detail-words">
 							<i class="fa fa-file-word-o" aria-hidden="true"></i>
-							431 字
+							438 字
 						</div>
 					
 						
@@ -673,10 +673,11 @@
 	<div class="post-content">
 		
 			
-				题目翻译依次摸 $n$ 张卡片，第 $i$ 个卡片上写的 $p_i$，$p_i$ 是 $1$ 到 $n$ 的一个排列。
-维护一些牌堆，如果 $p_i$ 大于所有堆顶的牌，那么新开一堆只有 $p_i$。
-否则在所有堆顶的牌，找到大于 $p_i$ 最小的一张，把 $p_i$ 放到这个堆的堆顶。
-如果这一堆有恰好 $K$ 张牌，把这 $K$ 个牌的数字都...
+				 题目翻译
+依次摸 nnn 张卡片，第 iii 个卡片上写的 pip_ipi​，pip_ipi​ 是 111 到 nnn 的一个排列。
+维护一些牌堆，如果 pip_ipi​ 大于所有堆顶的牌，那么新开一堆只有 pip_ipi​。
+否则在所有堆顶的牌，找到大于 pip_ipi​ 最小的一张，把 pip_ipi​ 放到这个堆的堆顶。
+如果这一堆有恰好 ...
 			
 		
 	</div>
@@ -694,7 +695,7 @@
 						
 						<div class="post-meta-detail post-meta-detail-time">
 							<i class="fa fa-clock-o" aria-hidden="true"></i>
-							<time title="发布于 2023-1-9 15:21:00 | 编辑于 2025-2-12 15:54:03">2023-1-9 15:21
+							<time title="发布于 2023-1-9 15:21:00 | 编辑于 2025-2-13 7:36:04">2023-1-9 15:21
 							</time>
 						</div>
 					
@@ -721,7 +722,7 @@
 						
 						<div class="post-meta-detail post-meta-detail-words">
 							<i class="fa fa-file-word-o" aria-hidden="true"></i>
-							462 字
+							608 字
 						</div>
 					
 						
@@ -729,7 +730,7 @@
 						
 						<div class="post-meta-detail post-meta-detail-readingtime">
 							<i class="fa fa-hourglass-end" aria-hidden="true"></i>
-							2 分钟
+							3 分钟
 						</div>
 					
 		</div>
@@ -739,9 +740,10 @@
 	<div class="post-content">
 		
 			
-				题目翻译有一个 $H\times W$ 的国际象棋棋盘，求一个车从 $(x_1,y_1)$ 走到 $(x_2,y_2)$ 正好用 $K$ 步的方案数。
-题目思路首先看到题，很显然是动态规划。$f_{k,i,j}$ 表示走到 $(i,j)$ 正好 $k$ 步的方案。但时间复杂度过高，考虑进行优化。
-我们可以不记录具体走到哪个点位，我们只需知道当前在不...
+				 题目翻译
+有一个 H×WH\times WH×W 的国际象棋棋盘，求一个车从 (x1,y1)(x_1,y_1)(x1​,y1​) 走到 (x2,y2)(x_2,y_2)(x2​,y2​) 正好用 KKK 步的方案数。
+ 题目思路
+首先看到题，很显然是动态规划。fk,i,jf_{k,i,j}fk,i,j​ 表示走到 (i,j)(i,j)(i,j) ...
 			
 		
 	</div>
@@ -786,7 +788,7 @@
 						
 						<div class="post-meta-detail post-meta-detail-words">
 							<i class="fa fa-file-word-o" aria-hidden="true"></i>
-							381 字
+							391 字
 						</div>
 					
 						
@@ -804,9 +806,11 @@
 	<div class="post-content">
 		
 			
-				闲话原题 P1334 瑞瑞的木板。刚好不久前做过，赛时直接贺了自己的代码过掉的。
-题目翻译为方便和瑞瑞的木板联系起来，下文翻译不采用原题中的“面包”而是使用“木板”。
-有一根长度为 $L$ 的木板，切成 $n$ 根小木板。第 $i$ 根小木板的长度为 $l_i$，每次切下长度为 $x$ 的小木板需要耗费 $x$ 的体力。允许有剩余，也就是说不保证 ...
+				 闲话
+原题 P1334 瑞瑞的木板。刚好不久前做过，赛时直接贺了自己的代码过掉的。
+ 题目翻译
+为方便和瑞瑞的木板联系起来，下文翻译不采用原题中的“面包”而是使用“木板”。
+有一根长度为 LLL 的木板，切成 nnn 根小木板。第 iii 根小木板的长度为 lil_ili​，每次切下长度为 xxx 的小木板需要耗费 xxx 的体力。允许有剩余，也...
 			
 		
 	</div>
@@ -851,7 +855,7 @@
 						
 						<div class="post-meta-detail post-meta-detail-words">
 							<i class="fa fa-file-word-o" aria-hidden="true"></i>
-							473 字
+							491 字
 						</div>
 					
 						
@@ -869,10 +873,11 @@
 	<div class="post-content">
 		
 			
-				题目翻译我们定义前缀或的意思是 $or_i&#x3D;or_{i-1} \operatorname{or} a_i$。
-重排数组 $a$，使得它的前缀或数组的字典序最大。
-题目思路通过观察和思考可得，第一位一定放 $\max\limits_{1\leq i\leq n}{a_i}$ 才能让第一位最大，接着保证字典序最大。
-那么我们考虑，对于之后每一...
+				 题目翻译
+我们定义前缀或的意思是 ori=ori−1or⁡aior_i=or_{i-1} \operatorname{or} a_iori​=ori−1​orai​。
+重排数组 aaa，使得它的前缀或数组的字典序最大。
+ 题目思路
+通过观察和思考可得，第一位一定放 max⁡1≤i≤n{ai}\max\limits_{1\leq i\leq n}\...
 			
 		
 	</div>
@@ -917,7 +922,7 @@
 						
 						<div class="post-meta-detail post-meta-detail-words">
 							<i class="fa fa-file-word-o" aria-hidden="true"></i>
-							319 字
+							327 字
 						</div>
 					
 						
@@ -935,13 +940,14 @@
 	<div class="post-content">
 		
 			
-				题目翻译问当前字符后的第一个 $\tt{g}$ 与它的距离最大是多少。
+				 题目翻译
+问当前字符后的第一个 g\tt{g}g 与它的距离最大是多少。
 当前字符可能有很多个。
-题目思路我们把目前找到的当前字符的位置记录下来，找到最早的，记录一下时间差，取个最大。
+ 题目思路
+我们把目前找到的当前字符的位置记录下来，找到最早的，记录一下时间差，取个最大。
 但显然我们不能对每一个去找，必须几个打包一找。
 我用 queue 模拟题意，详情见代码。
-由于当前的可能要到下一个循环才能看见 $\tt{g}$，所以要循环两次。
-时...
+由于当前的可能要到下一个循环才能看见 g\tt{g}g，所以要循环两...
 			
 		
 	</div>
@@ -986,7 +992,7 @@
 						
 						<div class="post-meta-detail post-meta-detail-words">
 							<i class="fa fa-file-word-o" aria-hidden="true"></i>
-							520 字
+							526 字
 						</div>
 					
 						
@@ -1004,14 +1010,16 @@
 	<div class="post-content">
 		
 			
-				题意很明确了，大意就是一棵树，染色，距离 $\le 2$ 不得染同色，问染色方案。
-首先我们要明确，距离 $\le 2$，具体是什么情况呢？
+				题意很明确了，大意就是一棵树，染色，距离 ≤2\le 2≤2 不得染同色，问染色方案。
+首先我们要明确，距离 ≤2\le 2≤2，具体是什么情况呢？
 显然，分两个大类：
+
 
 一条链往下
 
 某节点和它的儿子
 某节点和它的孙子
+
 
 
 非一条链往下
@@ -1020,9 +1028,8 @@
 
 
 
-那么我们就梳理出了 $3$ 中不能涂同一种颜色的情况。
-读到这里，我想应该正解慢慢出来了。
-...
+那么我们就梳理出了 333 中不能涂同一种颜色的情况。
+读到这里，我想应该正解慢...
 			
 		
 	</div>
@@ -1090,11 +1097,13 @@
 	<div class="post-content">
 		
 			
-				赛后感言本来能 $400\tt{\ pts}$ 的，T3 边界写错扣十分，这个问题不大，加个判断就过了。T4 真的扣的分真伤，打错了两个数字废了。
+				 赛后感言
+本来能 400 pts400\tt{\ pts}400 pts 的，T3 边界写错扣十分，这个问题不大，加个判断就过了。T4 真的扣的分真伤，打错了两个数字废了。
 痛失 U 盘！
 比赛点评：一道送分一道板，一道模拟一道原。
-四则混合运算题目很简单，扫描两遍字符串，第一遍处理乘除符号，第二遍处理加减符号。
-时间复杂度 $\mathcal O(\left|S\righ...
+ 四则混合运算
+题目很简单，扫描两遍字符串，第一遍处理乘除符号，第二遍处理加减符号。
+时间复杂度 O(∣S∣)\m...
 			
 		
 	</div>
@@ -1162,13 +1171,16 @@
 	<div class="post-content">
 		
 			
-				题目翻译在英语中，大多数单词复数是在末尾加 s。
+				 题目翻译
+在英语中，大多数单词复数是在末尾加 s。
 给你一个单词，输出他的复数形式。
 保证单词复数形式只需加 s。
-题目思路输入单词后直接输出这个单词再输出 s 即可。
+ 题目思路
+输入单词后直接输出这个单词再输出 s 即可。
 注意早期 AT 题目是需要行末输出换行否则不能 AC，所以再输出一个 endl 或者转义 \n。
-完整代码#include&lt;bits/stdc++.h&gt;
-using na...
+ 完整代码
+#include&lt;bits/stdc++.h&gt;
+us...
 			
 		
 	</div>
@@ -1213,7 +1225,7 @@ using na...
 						
 						<div class="post-meta-detail post-meta-detail-words">
 							<i class="fa fa-file-word-o" aria-hidden="true"></i>
-							403 字
+							408 字
 						</div>
 					
 						
@@ -1231,12 +1243,12 @@ using na...
 	<div class="post-content">
 		
 			
-				沙漠旅行一道最短路模板。
-q.push(make_pair(dis[v],v)); 写成 q.push(make_pair(w,v)); 痛失 $80pts$。
+				 沙漠旅行
+一道最短路模板。
+q.push(make_pair(dis[v],v)); 写成 q.push(make_pair(w,v)); 痛失 80pts80pts80pts。
 
-上述的时间复杂度是带 $\log$ 的，光 $\mathcal O(nm)$ 过不了，要堆优化。
-在看完 std 的思路后焕然大悟，若全是边权为 $1$，bfs 跑一下即可。
-这里边权最...
+上述的时间复杂度是带 log⁡\loglog 的，光 O(nm)\mathcal O(nm)O(nm) 过不了，要堆优化。
+在看完 std 的思路后焕然大悟，若全是边...
 			
 		
 	</div>
@@ -1286,7 +1298,7 @@ q.push(make_pair(dis[v],v)); 写成 q.push(make_pair(w,v)); 痛失 $80pts$。
 						
 						<div class="post-meta-detail post-meta-detail-words">
 							<i class="fa fa-file-word-o" aria-hidden="true"></i>
-							2.4k 字
+							2.5k 字
 						</div>
 					
 						
@@ -1304,13 +1316,14 @@ q.push(make_pair(dis[v],v)); 写成 q.push(make_pair(w,v)); 痛失 $80pts$。
 	<div class="post-content">
 		
 			
-				智商测试题目数据有点小问题，$t\leq6000$。
+				 智商测试
+题目数据有点小问题，t≤6000t\leq6000t≤6000。
 但问题不大。
 首先最暴力的办法是枚举每个时间点，模拟题意。
 我就这么做的。
-复杂度 $\mathcal O(t)$ 可以接受。
+复杂度 O(t)\mathcal O(t)O(t) 可以接受。
 其次，如果有吊打我的实力能写数学办法，那就是确定行确定列，随便写写。
-printf(&quot;%d %d\n&quot;,t/n%n+1,t%n+1); 即可，复杂度...
+printf(&quot;%d %d\n&quot;,t/n%...
 			
 		
 	</div>
@@ -1330,30 +1343,30 @@ printf(&quot;%d %d\n&quot;,t/n%n+1,t%n+1); 即可，复杂度...
 
 		
 
-					<footer id="footer" class="site-footer card shadow-sm border-0">
-						
-						<div>Theme <a target="_blank" rel="noopener" href="https://github.com/solstice23/hexo-theme-argon"><strong>Argon</strong></a> | Powered by Hexo</div>
-						<span id="busuanzi_container_site_uv">
-							本站访客数 <span id="busuanzi_value_site_uv"></span> 人次
-						</span>
-						<span id="timeDate">载入时间...</span>
-						<script>
-						    var now = new Date(); 
-						    function createtime() { 
-						        var grt= new Date("03/28/2022 20:00:00");//在此处修改你的建站时间
-						        now.setTime(now.getTime()+250); 
-						        days = (now - grt ) / 1000 / 60 / 60 / 24; dnum = Math.floor(days); 
-						        hours = (now - grt ) / 1000 / 60 / 60 - (24 * dnum); hnum = Math.floor(hours); 
-						        if(String(hnum).length ==1 ){hnum = "0" + hnum;} minutes = (now - grt ) / 1000 /60 - (24 * 60 * dnum) - (60 * hnum); 
-						        mnum = Math.floor(minutes); if(String(mnum).length ==1 ){mnum = "0" + mnum;} 
-						        seconds = (now - grt ) / 1000 - (24 * 60 * 60 * dnum) - (60 * 60 * hnum) - (60 * mnum); 
-						        snum = Math.round(seconds); if(String(snum).length ==1 ){snum = "0" + snum;} 
-						        document.getElementById("timeDate").innerHTML = "本站已安全运行 "+dnum+" 天 "+ hnum + " 小时 " + mnum + " 分 " + snum + " 秒"; 
-						        // document.getElementById("times").innerHTML = hnum + " 小时 " + mnum + " 分 " + snum + " 秒"; 
-						    } 
-						setInterval("createtime()",250);
-						</script>
-						<script>
+                    <footer id="footer" class="site-footer card shadow-sm border-0">
+                        
+                        <div>Theme <a target="_blank" rel="noopener" href="https://github.com/solstice23/hexo-theme-argon"><strong>Argon</strong></a> | Powered by Hexo</div>
+                        <span id="busuanzi_container_site_uv">
+                            本站访客数 <span id="busuanzi_value_site_uv"></span> 人次
+                        </span>
+                        <span id="timeDate">载入时间...</span>
+                        <script>
+                            var now = new Date(); 
+                            function createtime() { 
+                                var grt= new Date("03/28/2022 20:00:00");//在此处修改你的建站时间
+                                now.setTime(now.getTime()+250); 
+                                days = (now - grt ) / 1000 / 60 / 60 / 24; dnum = Math.floor(days); 
+                                hours = (now - grt ) / 1000 / 60 / 60 - (24 * dnum); hnum = Math.floor(hours); 
+                                if(String(hnum).length ==1 ){hnum = "0" + hnum;} minutes = (now - grt ) / 1000 /60 - (24 * 60 * dnum) - (60 * hnum); 
+                                mnum = Math.floor(minutes); if(String(mnum).length ==1 ){mnum = "0" + mnum;} 
+                                seconds = (now - grt ) / 1000 - (24 * 60 * 60 * dnum) - (60 * 60 * hnum) - (60 * mnum); 
+                                snum = Math.round(seconds); if(String(snum).length ==1 ){snum = "0" + snum;} 
+                                document.getElementById("timeDate").innerHTML = "本站已安全运行 "+dnum+" 天 "+ hnum + " 小时 " + mnum + " 分 " + snum + " 秒"; 
+                                // document.getElementById("times").innerHTML = hnum + " 小时 " + mnum + " 分 " + snum + " 秒"; 
+                            } 
+                        setInterval("createtime()",250);
+                        </script>
+                        <script>
         window.onload = (() => {
             //定义点击出现文字类
             function ClickFrontShow() {
@@ -1490,49 +1503,54 @@ printf(&quot;%d %d\n&quot;,t/n%n+1,t%n+1); 即可，复杂度...
             //第二个参数是颜色数组，必须是数组类型！
             frontShow.init();
         })();
-						</script>
-					</footer>
-				</main>
-			</div>
-		</div>
-		
+                        </script>
+                    </footer>
+                </main>
+            </div>
+        </div>
+        
 <script src="/argontheme.js"></script>
 
-		
-		
-		
-			<link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/KaTeX/0.15.6/katex.min.css">
-			<script src="//cdnjs.cloudflare.com/ajax/libs/KaTeX/0.15.6/katex.min.js"></script>
-			<script src="//cdnjs.cloudflare.com/ajax/libs/KaTeX/0.15.6/contrib/auto-render.min.js"></script>
-			<script>
-				document.addEventListener("DOMContentLoaded", function() {
-					renderMathInElement(document.body,{
-						delimiters: [
-							{left: "$$", right: "$$", display: true},
-							{left: "$", right: "$", display: false},
-							{left: "\\(", right: "\\)", display: false}
-						]
-					});
-				});
-			</script>
-		
+        
+        
+        
+            <link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/KaTeX/0.16.9/katex.min.css">
+            <script src="//cdnjs.cloudflare.com/ajax/libs/KaTeX/0.16.9/katex.min.js"></script>
+            <script src="//cdnjs.cloudflare.com/ajax/libs/KaTeX/0.16.9/contrib/auto-render.min.js"></script>
+            <script>
+                document.addEventListener("DOMContentLoaded", function() {
+                    renderMathInElement(document.body, {
+                      // customised options
+                      // • auto-render specific keys, e.g.:
+                      delimiters: [
+                          {left: '$$', right: '$$', display: true},
+                          {left: '$', right: '$', display: false},
+                          {left: '\\(', right: '\\)', display: false},
+                          {left: '\\[', right: '\\]', display: true}
+                      ],
+                      // • rendering keys, e.g.:
+                      throwOnError : false
+                    });
+                });
+            </script>
+        
 
-		
-			<script>
-				var argonEnableCodeHighlight = true;
-			</script>
-			
+        
+            <script>
+                var argonEnableCodeHighlight = true;
+            </script>
+            
 <link rel="stylesheet" href="/assets/vendor/highlight/styles/vs2015.css">
 
-		
+        
 
-	</div>
+    </div>
 </div>
 <noscript>
-	<style>
-		article img.lazyload[src^="data:image/svg+xml;base64,PCEtLUFyZ29uTG9hZGluZy0tPg"]{display: none;}
-		.comment-item-text .comment-sticker.lazyload{display: none;}
-	</style>
+    <style>
+        article img.lazyload[src^="data:image/svg+xml;base64,PCEtLUFyZ29uTG9hZGluZy0tPg"]{display: none;}
+        .comment-item-text .comment-sticker.lazyload{display: none;}
+    </style>
 </noscript>
 </body>
 

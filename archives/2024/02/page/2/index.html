@@ -648,7 +648,7 @@
 						
 						<div class="post-meta-detail post-meta-detail-words">
 							<i class="fa fa-file-word-o" aria-hidden="true"></i>
-							695 字
+							740 字
 						</div>
 					
 						
@@ -666,15 +666,14 @@
 	<div class="post-content">
 		
 			
-				前言在『江莉XCPC民间算法交流枢纽』有群友扔了这题，还挺有趣的。（这里是专有名词中英文之间不加括号没事的吧？）
-题目翻译给定 $u,v,p$，保证 $p$ 是质数，有 $3$ 种操作：
+				 前言
+在『江莉XCPC民间算法交流枢纽』有群友扔了这题，还挺有趣的。（这里是专有名词中英文之间不加括号没事的吧？）
+ 题目翻译
+给定 u,v,pu,v,pu,v,p，保证 ppp 是质数，有 333 种操作：
 
-$u\gets u+1$
-$u\gets u-1$
-$u\gets u^{p-2}$
-
-以上操作过后均对 $p$ 取模。
-求一种不超过 $200$ 次操作使得 ...
+u←u+1u\gets u+1u←u+1
+u←u−1u\gets u-1u←u−1
+u←up−2u\gets u^{p-2}u←up−2...
 			
 		
 	</div>
@@ -719,7 +718,7 @@ $u\gets u^{p-2}$
 						
 						<div class="post-meta-detail post-meta-detail-words">
 							<i class="fa fa-file-word-o" aria-hidden="true"></i>
-							457 字
+							507 字
 						</div>
 					
 						
@@ -737,9 +736,9 @@ $u\gets u^{p-2}$
 	<div class="post-content">
 		
 			
-				题目翻译$n$ 个大数 $a_i$，找三元组 $(i,j,k)$ 个数满足 $1\leq i,j,k\leq n$ 且 $a_i\times a_j&#x3D;a_k$。
-$n\leq 1000,a_i\leq \color{red}{10^{1000}}$。
-题目思路显然可以直接 FFT 高精度乘法。然后喜提 TLE，因为这个 $a_i$ 位数很...
+				 题目翻译
+nnn 个大数 aia_iai​，找三元组 (i,j,k)(i,j,k)(i,j,k) 个数满足 1≤i,j,k≤n1\leq i,j,k\leq n1≤i,j,k≤n 且 ai×aj=aka_i\times a_j=a_kai​×aj​=ak​。
+n≤1000,ai≤101000n\leq 1000,a_i\leq \color{re...
 			
 		
 	</div>
@@ -787,7 +786,7 @@ $n\leq 1000,a_i\leq \color{red}{10^{1000}}$。
 						
 						<div class="post-meta-detail post-meta-detail-words">
 							<i class="fa fa-file-word-o" aria-hidden="true"></i>
-							2k 字
+							2.2k 字
 						</div>
 					
 						
@@ -795,7 +794,7 @@ $n\leq 1000,a_i\leq \color{red}{10^{1000}}$。
 						
 						<div class="post-meta-detail post-meta-detail-readingtime">
 							<i class="fa fa-hourglass-end" aria-hidden="true"></i>
-							9 分钟
+							10 分钟
 						</div>
 					
 		</div>
@@ -808,11 +807,14 @@ $n\leq 1000,a_i\leq \color{red}{10^{1000}}$。
 		
 			
 				蒸馍身边一群大神不会普通莫队。
-现在每天半夜不写点根号算法都睡不着。根号算法个个是优雅的算法&#x2F;se
-莫队处理离线区间询问。
+现在每天半夜不写点根号算法都睡不着。根号算法个个是优雅的算法/se
+ 莫队
+处理离线区间询问。
 名字由来是因为是莫涛整理的。
-普通莫队简介可以较优复杂度从 $[l\pm1,r\pm1]$ 转到 $[l,r]$。
-当 $n,q$ 同阶时，若转移为 $\mathcal O(1)$，总复杂度即为 $\mathcal ...
+ 普通莫队
+ 简介
+可以较优复杂度从 [l±1,r±1][l\pm1,r\pm1][l±1,r±1] 转到 [l,r][l,r][l,r]。
+当 n,qn,qn,q 同阶时，若转移为 O(1)...
 			
 		
 	</div>
@@ -829,30 +831,30 @@ $n\leq 1000,a_i\leq \color{red}{10^{1000}}$。
 		
 		
 
-					<footer id="footer" class="site-footer card shadow-sm border-0">
-						
-						<div>Theme <a target="_blank" rel="noopener" href="https://github.com/solstice23/hexo-theme-argon"><strong>Argon</strong></a> | Powered by Hexo</div>
-						<span id="busuanzi_container_site_uv">
-							本站访客数 <span id="busuanzi_value_site_uv"></span> 人次
-						</span>
-						<span id="timeDate">载入时间...</span>
-						<script>
-						    var now = new Date(); 
-						    function createtime() { 
-						        var grt= new Date("03/28/2022 20:00:00");//在此处修改你的建站时间
-						        now.setTime(now.getTime()+250); 
-						        days = (now - grt ) / 1000 / 60 / 60 / 24; dnum = Math.floor(days); 
-						        hours = (now - grt ) / 1000 / 60 / 60 - (24 * dnum); hnum = Math.floor(hours); 
-						        if(String(hnum).length ==1 ){hnum = "0" + hnum;} minutes = (now - grt ) / 1000 /60 - (24 * 60 * dnum) - (60 * hnum); 
-						        mnum = Math.floor(minutes); if(String(mnum).length ==1 ){mnum = "0" + mnum;} 
-						        seconds = (now - grt ) / 1000 - (24 * 60 * 60 * dnum) - (60 * 60 * hnum) - (60 * mnum); 
-						        snum = Math.round(seconds); if(String(snum).length ==1 ){snum = "0" + snum;} 
-						        document.getElementById("timeDate").innerHTML = "本站已安全运行 "+dnum+" 天 "+ hnum + " 小时 " + mnum + " 分 " + snum + " 秒"; 
-						        // document.getElementById("times").innerHTML = hnum + " 小时 " + mnum + " 分 " + snum + " 秒"; 
-						    } 
-						setInterval("createtime()",250);
-						</script>
-						<script>
+                    <footer id="footer" class="site-footer card shadow-sm border-0">
+                        
+                        <div>Theme <a target="_blank" rel="noopener" href="https://github.com/solstice23/hexo-theme-argon"><strong>Argon</strong></a> | Powered by Hexo</div>
+                        <span id="busuanzi_container_site_uv">
+                            本站访客数 <span id="busuanzi_value_site_uv"></span> 人次
+                        </span>
+                        <span id="timeDate">载入时间...</span>
+                        <script>
+                            var now = new Date(); 
+                            function createtime() { 
+                                var grt= new Date("03/28/2022 20:00:00");//在此处修改你的建站时间
+                                now.setTime(now.getTime()+250); 
+                                days = (now - grt ) / 1000 / 60 / 60 / 24; dnum = Math.floor(days); 
+                                hours = (now - grt ) / 1000 / 60 / 60 - (24 * dnum); hnum = Math.floor(hours); 
+                                if(String(hnum).length ==1 ){hnum = "0" + hnum;} minutes = (now - grt ) / 1000 /60 - (24 * 60 * dnum) - (60 * hnum); 
+                                mnum = Math.floor(minutes); if(String(mnum).length ==1 ){mnum = "0" + mnum;} 
+                                seconds = (now - grt ) / 1000 - (24 * 60 * 60 * dnum) - (60 * 60 * hnum) - (60 * mnum); 
+                                snum = Math.round(seconds); if(String(snum).length ==1 ){snum = "0" + snum;} 
+                                document.getElementById("timeDate").innerHTML = "本站已安全运行 "+dnum+" 天 "+ hnum + " 小时 " + mnum + " 分 " + snum + " 秒"; 
+                                // document.getElementById("times").innerHTML = hnum + " 小时 " + mnum + " 分 " + snum + " 秒"; 
+                            } 
+                        setInterval("createtime()",250);
+                        </script>
+                        <script>
         window.onload = (() => {
             //定义点击出现文字类
             function ClickFrontShow() {
@@ -989,49 +991,54 @@ $n\leq 1000,a_i\leq \color{red}{10^{1000}}$。
             //第二个参数是颜色数组，必须是数组类型！
             frontShow.init();
         })();
-						</script>
-					</footer>
-				</main>
-			</div>
-		</div>
-		
+                        </script>
+                    </footer>
+                </main>
+            </div>
+        </div>
+        
 <script src="/argontheme.js"></script>
 
-		
-		
-		
-			<link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/KaTeX/0.15.6/katex.min.css">
-			<script src="//cdnjs.cloudflare.com/ajax/libs/KaTeX/0.15.6/katex.min.js"></script>
-			<script src="//cdnjs.cloudflare.com/ajax/libs/KaTeX/0.15.6/contrib/auto-render.min.js"></script>
-			<script>
-				document.addEventListener("DOMContentLoaded", function() {
-					renderMathInElement(document.body,{
-						delimiters: [
-							{left: "$$", right: "$$", display: true},
-							{left: "$", right: "$", display: false},
-							{left: "\\(", right: "\\)", display: false}
-						]
-					});
-				});
-			</script>
-		
+        
+        
+        
+            <link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/KaTeX/0.16.9/katex.min.css">
+            <script src="//cdnjs.cloudflare.com/ajax/libs/KaTeX/0.16.9/katex.min.js"></script>
+            <script src="//cdnjs.cloudflare.com/ajax/libs/KaTeX/0.16.9/contrib/auto-render.min.js"></script>
+            <script>
+                document.addEventListener("DOMContentLoaded", function() {
+                    renderMathInElement(document.body, {
+                      // customised options
+                      // • auto-render specific keys, e.g.:
+                      delimiters: [
+                          {left: '$$', right: '$$', display: true},
+                          {left: '$', right: '$', display: false},
+                          {left: '\\(', right: '\\)', display: false},
+                          {left: '\\[', right: '\\]', display: true}
+                      ],
+                      // • rendering keys, e.g.:
+                      throwOnError : false
+                    });
+                });
+            </script>
+        
 
-		
-			<script>
-				var argonEnableCodeHighlight = true;
-			</script>
-			
+        
+            <script>
+                var argonEnableCodeHighlight = true;
+            </script>
+            
 <link rel="stylesheet" href="/assets/vendor/highlight/styles/vs2015.css">
 
-		
+        
 
-	</div>
+    </div>
 </div>
 <noscript>
-	<style>
-		article img.lazyload[src^="data:image/svg+xml;base64,PCEtLUFyZ29uTG9hZGluZy0tPg"]{display: none;}
-		.comment-item-text .comment-sticker.lazyload{display: none;}
-	</style>
+    <style>
+        article img.lazyload[src^="data:image/svg+xml;base64,PCEtLUFyZ29uTG9hZGluZy0tPg"]{display: none;}
+        .comment-item-text .comment-sticker.lazyload{display: none;}
+    </style>
 </noscript>
 </body>
 

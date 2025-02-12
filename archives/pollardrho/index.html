@@ -22,12 +22,12 @@
 	
 		<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=5">
 	
-	<meta name="description" content="https:&#x2F;&#x2F;www.luogu.com.cn&#x2F;record&#x2F;156977790 对于题解中的给出的调用系统函数思路进行了 cpp 风格的封装。 原题解：https:&#x2F;&#x2F;www.luogu.com&#x2F;article&#x2F;y2bnvunz 大致思路就是调用 Linux 的 factor 函数，取出输出内容，然后格式化一下。所有因数会从小到大存在 pr(n, v) 的 $v$ 中。 typedef lon">
+	<meta name="description" content="https:&#x2F;&#x2F;www.luogu.com.cn&#x2F;record&#x2F;156977790 对于题解中的给出的调用系统函数思路进行了 cpp 风格的封装。 原题解：https:&#x2F;&#x2F;www.luogu.com&#x2F;article&#x2F;y2bnvunz 大致思路就是调用 Linux 的 factor 函数，取出输出内容，然后格式化一下。所有因数会从小到大存在 pr(n, v) 的 vvv 中。 typedef lon">
 <meta property="og:type" content="article">
 <meta property="og:title" content="[题解] 逆天 Pollard Rho">
 <meta property="og:url" content="http://blog.cyx2009.top/archives/pollardrho/index.html">
 <meta property="og:site_name" content="沉石鱼惊旋 的博客">
-<meta property="og:description" content="https:&#x2F;&#x2F;www.luogu.com.cn&#x2F;record&#x2F;156977790 对于题解中的给出的调用系统函数思路进行了 cpp 风格的封装。 原题解：https:&#x2F;&#x2F;www.luogu.com&#x2F;article&#x2F;y2bnvunz 大致思路就是调用 Linux 的 factor 函数，取出输出内容，然后格式化一下。所有因数会从小到大存在 pr(n, v) 的 $v$ 中。 typedef lon">
+<meta property="og:description" content="https:&#x2F;&#x2F;www.luogu.com.cn&#x2F;record&#x2F;156977790 对于题解中的给出的调用系统函数思路进行了 cpp 风格的封装。 原题解：https:&#x2F;&#x2F;www.luogu.com&#x2F;article&#x2F;y2bnvunz 大致思路就是调用 Linux 的 factor 函数，取出输出内容，然后格式化一下。所有因数会从小到大存在 pr(n, v) 的 vvv 中。 typedef lon">
 <meta property="og:locale" content="zh_CN">
 <meta property="article:published_time" content="2024-04-25T03:26:00.000Z">
 <meta property="article:modified_time" content="2025-02-12T13:00:12.916Z">
@@ -693,7 +693,7 @@
 		<p><a target="_blank" rel="noopener" href="https://www.luogu.com.cn/record/156977790">https://www.luogu.com.cn/record/156977790</a></p>
 <p>对于题解中的给出的调用系统函数思路进行了 cpp 风格的封装。</p>
 <p>原题解：<a target="_blank" rel="noopener" href="https://www.luogu.com/article/y2bnvunz">https://www.luogu.com/article/y2bnvunz</a></p>
-<p>大致思路就是调用 Linux 的 <code>factor</code> 函数，取出输出内容，然后格式化一下。所有因数会从小到大存在 <code>pr(n, v)</code> 的 $v$ 中。</p>
+<p>大致思路就是调用 Linux 的 <code>factor</code> 函数，取出输出内容，然后格式化一下。所有因数会从小到大存在 <code>pr(n, v)</code> 的 <span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>v</mi></mrow><annotation encoding="application/x-tex">v</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.43056em;vertical-align:0em;"></span><span class="mord mathnormal" style="margin-right:0.03588em;">v</span></span></span></span> 中。</p>
 <pre><code class="highlight cpp"><span class="keyword">typedef</span> <span class="type">long</span> <span class="type">long</span> ll;
 <span class="function"><span class="type">void</span> <span class="title">execCMD</span><span class="params">(<span class="type">const</span> <span class="type">char</span> *cmd, string &amp;result)</span></span>
 <span class="function"></span>&#123;
@@ -894,30 +894,30 @@
 		
 		
 
-					<footer id="footer" class="site-footer card shadow-sm border-0">
-						
-						<div>Theme <a target="_blank" rel="noopener" href="https://github.com/solstice23/hexo-theme-argon"><strong>Argon</strong></a> | Powered by Hexo</div>
-						<span id="busuanzi_container_site_uv">
-							本站访客数 <span id="busuanzi_value_site_uv"></span> 人次
-						</span>
-						<span id="timeDate">载入时间...</span>
-						<script>
-						    var now = new Date(); 
-						    function createtime() { 
-						        var grt= new Date("03/28/2022 20:00:00");//在此处修改你的建站时间
-						        now.setTime(now.getTime()+250); 
-						        days = (now - grt ) / 1000 / 60 / 60 / 24; dnum = Math.floor(days); 
-						        hours = (now - grt ) / 1000 / 60 / 60 - (24 * dnum); hnum = Math.floor(hours); 
-						        if(String(hnum).length ==1 ){hnum = "0" + hnum;} minutes = (now - grt ) / 1000 /60 - (24 * 60 * dnum) - (60 * hnum); 
-						        mnum = Math.floor(minutes); if(String(mnum).length ==1 ){mnum = "0" + mnum;} 
-						        seconds = (now - grt ) / 1000 - (24 * 60 * 60 * dnum) - (60 * 60 * hnum) - (60 * mnum); 
-						        snum = Math.round(seconds); if(String(snum).length ==1 ){snum = "0" + snum;} 
-						        document.getElementById("timeDate").innerHTML = "本站已安全运行 "+dnum+" 天 "+ hnum + " 小时 " + mnum + " 分 " + snum + " 秒"; 
-						        // document.getElementById("times").innerHTML = hnum + " 小时 " + mnum + " 分 " + snum + " 秒"; 
-						    } 
-						setInterval("createtime()",250);
-						</script>
-						<script>
+                    <footer id="footer" class="site-footer card shadow-sm border-0">
+                        
+                        <div>Theme <a target="_blank" rel="noopener" href="https://github.com/solstice23/hexo-theme-argon"><strong>Argon</strong></a> | Powered by Hexo</div>
+                        <span id="busuanzi_container_site_uv">
+                            本站访客数 <span id="busuanzi_value_site_uv"></span> 人次
+                        </span>
+                        <span id="timeDate">载入时间...</span>
+                        <script>
+                            var now = new Date(); 
+                            function createtime() { 
+                                var grt= new Date("03/28/2022 20:00:00");//在此处修改你的建站时间
+                                now.setTime(now.getTime()+250); 
+                                days = (now - grt ) / 1000 / 60 / 60 / 24; dnum = Math.floor(days); 
+                                hours = (now - grt ) / 1000 / 60 / 60 - (24 * dnum); hnum = Math.floor(hours); 
+                                if(String(hnum).length ==1 ){hnum = "0" + hnum;} minutes = (now - grt ) / 1000 /60 - (24 * 60 * dnum) - (60 * hnum); 
+                                mnum = Math.floor(minutes); if(String(mnum).length ==1 ){mnum = "0" + mnum;} 
+                                seconds = (now - grt ) / 1000 - (24 * 60 * 60 * dnum) - (60 * 60 * hnum) - (60 * mnum); 
+                                snum = Math.round(seconds); if(String(snum).length ==1 ){snum = "0" + snum;} 
+                                document.getElementById("timeDate").innerHTML = "本站已安全运行 "+dnum+" 天 "+ hnum + " 小时 " + mnum + " 分 " + snum + " 秒"; 
+                                // document.getElementById("times").innerHTML = hnum + " 小时 " + mnum + " 分 " + snum + " 秒"; 
+                            } 
+                        setInterval("createtime()",250);
+                        </script>
+                        <script>
         window.onload = (() => {
             //定义点击出现文字类
             function ClickFrontShow() {
@@ -1054,49 +1054,54 @@
             //第二个参数是颜色数组，必须是数组类型！
             frontShow.init();
         })();
-						</script>
-					</footer>
-				</main>
-			</div>
-		</div>
-		
+                        </script>
+                    </footer>
+                </main>
+            </div>
+        </div>
+        
 <script src="/argontheme.js"></script>
 
-		
-		
-		
-			<link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/KaTeX/0.15.6/katex.min.css">
-			<script src="//cdnjs.cloudflare.com/ajax/libs/KaTeX/0.15.6/katex.min.js"></script>
-			<script src="//cdnjs.cloudflare.com/ajax/libs/KaTeX/0.15.6/contrib/auto-render.min.js"></script>
-			<script>
-				document.addEventListener("DOMContentLoaded", function() {
-					renderMathInElement(document.body,{
-						delimiters: [
-							{left: "$$", right: "$$", display: true},
-							{left: "$", right: "$", display: false},
-							{left: "\\(", right: "\\)", display: false}
-						]
-					});
-				});
-			</script>
-		
+        
+        
+        
+            <link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/KaTeX/0.16.9/katex.min.css">
+            <script src="//cdnjs.cloudflare.com/ajax/libs/KaTeX/0.16.9/katex.min.js"></script>
+            <script src="//cdnjs.cloudflare.com/ajax/libs/KaTeX/0.16.9/contrib/auto-render.min.js"></script>
+            <script>
+                document.addEventListener("DOMContentLoaded", function() {
+                    renderMathInElement(document.body, {
+                      // customised options
+                      // • auto-render specific keys, e.g.:
+                      delimiters: [
+                          {left: '$$', right: '$$', display: true},
+                          {left: '$', right: '$', display: false},
+                          {left: '\\(', right: '\\)', display: false},
+                          {left: '\\[', right: '\\]', display: true}
+                      ],
+                      // • rendering keys, e.g.:
+                      throwOnError : false
+                    });
+                });
+            </script>
+        
 
-		
-			<script>
-				var argonEnableCodeHighlight = true;
-			</script>
-			
+        
+            <script>
+                var argonEnableCodeHighlight = true;
+            </script>
+            
 <link rel="stylesheet" href="/assets/vendor/highlight/styles/vs2015.css">
 
-		
+        
 
-	</div>
+    </div>
 </div>
 <noscript>
-	<style>
-		article img.lazyload[src^="data:image/svg+xml;base64,PCEtLUFyZ29uTG9hZGluZy0tPg"]{display: none;}
-		.comment-item-text .comment-sticker.lazyload{display: none;}
-	</style>
+    <style>
+        article img.lazyload[src^="data:image/svg+xml;base64,PCEtLUFyZ29uTG9hZGluZy0tPg"]{display: none;}
+        .comment-item-text .comment-sticker.lazyload{display: none;}
+    </style>
 </noscript>
 </body>
 

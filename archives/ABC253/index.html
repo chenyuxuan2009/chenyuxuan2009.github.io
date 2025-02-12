@@ -22,12 +22,12 @@
 	
 		<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=5">
 	
-	<meta name="description" content="abc253_a题目翻译给定 $a,b,c$，问 $b$ 是不是中位数。 题目思路排序，判断。 AC 代码#include&lt;bits&#x2F;stdc++.h&gt; using namespace std; int main() &#123;     int a, b, c, d;     cin &gt;&gt; a &gt;&gt; b &gt;&gt; c;     d &#x3D; b;     i">
+	<meta name="description" content="abc253_a  题目翻译 给定 a,b,ca,b,ca,b,c，问 bbb 是不是中位数。  题目思路 排序，判断。  AC 代码 #include&lt;bits&#x2F;stdc++.h&gt; using namespace std; int main() &#123;     int a, b, c, d;     cin &gt;&gt; a &gt;&gt; b &gt;&gt; c;">
 <meta property="og:type" content="article">
 <meta property="og:title" content="[题解] ABC253 做题笔记">
 <meta property="og:url" content="http://blog.cyx2009.top/archives/ABC253/index.html">
 <meta property="og:site_name" content="沉石鱼惊旋 的博客">
-<meta property="og:description" content="abc253_a题目翻译给定 $a,b,c$，问 $b$ 是不是中位数。 题目思路排序，判断。 AC 代码#include&lt;bits&#x2F;stdc++.h&gt; using namespace std; int main() &#123;     int a, b, c, d;     cin &gt;&gt; a &gt;&gt; b &gt;&gt; c;     d &#x3D; b;     i">
+<meta property="og:description" content="abc253_a  题目翻译 给定 a,b,ca,b,ca,b,c，问 bbb 是不是中位数。  题目思路 排序，判断。  AC 代码 #include&lt;bits&#x2F;stdc++.h&gt; using namespace std; int main() &#123;     int a, b, c, d;     cin &gt;&gt; a &gt;&gt; b &gt;&gt; c;">
 <meta property="og:locale" content="zh_CN">
 <meta property="article:published_time" content="2022-05-28T13:46:00.000Z">
 <meta property="article:modified_time" content="2025-02-12T10:02:26.241Z">
@@ -673,7 +673,7 @@
 						
 						<div class="post-meta-detail post-meta-detail-words">
 							<i class="fa fa-file-word-o" aria-hidden="true"></i>
-							627 字
+							637 字
 						</div>
 					
 						
@@ -689,9 +689,13 @@
 	</header>
 
 	<div class="post-content" id="post_content">
-		<h3 id="abc253-a"><a href="#abc253-a" class="headerlink" title="abc253_a"></a><a target="_blank" rel="noopener" href="https://atcoder.jp/contests/abc253/tasks/abc253_a">abc253_a</a></h3><h4 id="题目翻译"><a href="#题目翻译" class="headerlink" title="题目翻译"></a>题目翻译</h4><p>给定 $a,b,c$，问 $b$ 是不是中位数。</p>
-<h4 id="题目思路"><a href="#题目思路" class="headerlink" title="题目思路"></a>题目思路</h4><p>排序，判断。</p>
-<h4 id="AC-代码"><a href="#AC-代码" class="headerlink" title="AC 代码"></a>AC 代码</h4><pre><code class="highlight cpp"><span class="meta">#<span class="keyword">include</span><span class="string">&lt;bits/stdc++.h&gt;</span></span>
+		<h3 id="abc253_a"><a class="markdownIt-Anchor" href="#abc253_a"></a> <a target="_blank" rel="noopener" href="https://atcoder.jp/contests/abc253/tasks/abc253_a">abc253_a</a></h3>
+<h4 id="题目翻译"><a class="markdownIt-Anchor" href="#题目翻译"></a> 题目翻译</h4>
+<p>给定 <span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>a</mi><mo separator="true">,</mo><mi>b</mi><mo separator="true">,</mo><mi>c</mi></mrow><annotation encoding="application/x-tex">a,b,c</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.8888799999999999em;vertical-align:-0.19444em;"></span><span class="mord mathnormal">a</span><span class="mpunct">,</span><span class="mspace" style="margin-right:0.16666666666666666em;"></span><span class="mord mathnormal">b</span><span class="mpunct">,</span><span class="mspace" style="margin-right:0.16666666666666666em;"></span><span class="mord mathnormal">c</span></span></span></span>，问 <span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>b</mi></mrow><annotation encoding="application/x-tex">b</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.69444em;vertical-align:0em;"></span><span class="mord mathnormal">b</span></span></span></span> 是不是中位数。</p>
+<h4 id="题目思路"><a class="markdownIt-Anchor" href="#题目思路"></a> 题目思路</h4>
+<p>排序，判断。</p>
+<h4 id="ac-代码"><a class="markdownIt-Anchor" href="#ac-代码"></a> AC 代码</h4>
+<pre><code class="highlight cpp"><span class="meta">#<span class="keyword">include</span><span class="string">&lt;bits/stdc++.h&gt;</span></span>
 <span class="keyword">using</span> <span class="keyword">namespace</span> std;
 <span class="function"><span class="type">int</span> <span class="title">main</span><span class="params">()</span></span>
 <span class="function"></span>&#123;
@@ -732,10 +736,13 @@
     &#125;
     <span class="keyword">return</span> <span class="number">0</span>;
 &#125;</code></pre>
-
-<h3 id="abc253-b"><a href="#abc253-b" class="headerlink" title="abc253_b"></a><a target="_blank" rel="noopener" href="https://atcoder.jp/contests/abc253/tasks/abc253_b">abc253_b</a></h3><h4 id="题目翻译-1"><a href="#题目翻译-1" class="headerlink" title="题目翻译"></a>题目翻译</h4><p>给定一个 $n\times m$ 的矩阵，找两个 <code>o</code> 之间的哈夫曼距离。</p>
-<h4 id="题目思路-1"><a href="#题目思路-1" class="headerlink" title="题目思路"></a>题目思路</h4><p>按题意做即可。</p>
-<h4 id="AC-代码-1"><a href="#AC-代码-1" class="headerlink" title="AC 代码"></a>AC 代码</h4><pre><code class="highlight cpp"><span class="meta">#<span class="keyword">include</span><span class="string">&lt;bits/stdc++.h&gt;</span></span>
+<h3 id="abc253_b"><a class="markdownIt-Anchor" href="#abc253_b"></a> <a target="_blank" rel="noopener" href="https://atcoder.jp/contests/abc253/tasks/abc253_b">abc253_b</a></h3>
+<h4 id="题目翻译-2"><a class="markdownIt-Anchor" href="#题目翻译-2"></a> 题目翻译</h4>
+<p>给定一个 <span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>n</mi><mo>×</mo><mi>m</mi></mrow><annotation encoding="application/x-tex">n\times m</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.66666em;vertical-align:-0.08333em;"></span><span class="mord mathnormal">n</span><span class="mspace" style="margin-right:0.2222222222222222em;"></span><span class="mbin">×</span><span class="mspace" style="margin-right:0.2222222222222222em;"></span></span><span class="base"><span class="strut" style="height:0.43056em;vertical-align:0em;"></span><span class="mord mathnormal">m</span></span></span></span> 的矩阵，找两个 <code>o</code> 之间的哈夫曼距离。</p>
+<h4 id="题目思路-2"><a class="markdownIt-Anchor" href="#题目思路-2"></a> 题目思路</h4>
+<p>按题意做即可。</p>
+<h4 id="ac-代码-2"><a class="markdownIt-Anchor" href="#ac-代码-2"></a> AC 代码</h4>
+<pre><code class="highlight cpp"><span class="meta">#<span class="keyword">include</span><span class="string">&lt;bits/stdc++.h&gt;</span></span>
 <span class="keyword">using</span> <span class="keyword">namespace</span> std;
 <span class="function"><span class="type">int</span> <span class="title">main</span><span class="params">()</span></span>
 <span class="function"></span>&#123;
@@ -766,13 +773,16 @@
     cout &lt;&lt; <span class="built_in">abs</span> (i1 - i2) + <span class="built_in">abs</span> (j1 - j2) &lt;&lt; endl;
     <span class="keyword">return</span> <span class="number">0</span>;
 &#125;</code></pre>
-
-<h3 id="abc253-c"><a href="#abc253-c" class="headerlink" title="abc253_c"></a><a target="_blank" rel="noopener" href="https://atcoder.jp/contests/abc253/tasks/abc253_c">abc253_c</a></h3><h4 id="题目翻译-2"><a href="#题目翻译-2" class="headerlink" title="题目翻译"></a>题目翻译</h4><p>有 $q$ 个询问。</p>
-<p><code>1 x</code> 表示插入一个 $x$。</p>
-<p><code>2 x c</code> 表示删去 $c$ 个 $x$，如果 $x$ 数量不够，删完。</p>
+<h3 id="abc253_c"><a class="markdownIt-Anchor" href="#abc253_c"></a> <a target="_blank" rel="noopener" href="https://atcoder.jp/contests/abc253/tasks/abc253_c">abc253_c</a></h3>
+<h4 id="题目翻译-3"><a class="markdownIt-Anchor" href="#题目翻译-3"></a> 题目翻译</h4>
+<p>有 <span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>q</mi></mrow><annotation encoding="application/x-tex">q</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.625em;vertical-align:-0.19444em;"></span><span class="mord mathnormal" style="margin-right:0.03588em;">q</span></span></span></span> 个询问。</p>
+<p><code>1 x</code> 表示插入一个 <span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>x</mi></mrow><annotation encoding="application/x-tex">x</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.43056em;vertical-align:0em;"></span><span class="mord mathnormal">x</span></span></span></span>。</p>
+<p><code>2 x c</code> 表示删去 <span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>c</mi></mrow><annotation encoding="application/x-tex">c</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.43056em;vertical-align:0em;"></span><span class="mord mathnormal">c</span></span></span></span> 个 <span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>x</mi></mrow><annotation encoding="application/x-tex">x</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.43056em;vertical-align:0em;"></span><span class="mord mathnormal">x</span></span></span></span>，如果 <span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>x</mi></mrow><annotation encoding="application/x-tex">x</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.43056em;vertical-align:0em;"></span><span class="mord mathnormal">x</span></span></span></span> 数量不够，删完。</p>
 <p><code>3</code> 输出目前最大值减去最小值。</p>
-<h4 id="题目思路-2"><a href="#题目思路-2" class="headerlink" title="题目思路"></a>题目思路</h4><p>用一个 <code>map</code> 存当前哪个数出现几次，当然，第二种操作需要 <code>erase</code>。</p>
-<h4 id="AC-代码-2"><a href="#AC-代码-2" class="headerlink" title="AC 代码"></a>AC 代码</h4><pre><code class="highlight cpp"><span class="meta">#<span class="keyword">include</span><span class="string">&lt;bits/stdc++.h&gt;</span></span>
+<h4 id="题目思路-3"><a class="markdownIt-Anchor" href="#题目思路-3"></a> 题目思路</h4>
+<p>用一个 <code>map</code> 存当前哪个数出现几次，当然，第二种操作需要 <code>erase</code>。</p>
+<h4 id="ac-代码-3"><a class="markdownIt-Anchor" href="#ac-代码-3"></a> AC 代码</h4>
+<pre><code class="highlight cpp"><span class="meta">#<span class="keyword">include</span><span class="string">&lt;bits/stdc++.h&gt;</span></span>
 <span class="keyword">using</span> <span class="keyword">namespace</span> std;
 map&lt;<span class="type">int</span>, <span class="type">int</span>&gt;m;
 <span class="function"><span class="type">int</span> <span class="title">main</span><span class="params">()</span></span>
@@ -807,15 +817,17 @@ map&lt;<span class="type">int</span>, <span class="type">int</span>&gt;m;
     &#125;
     <span class="keyword">return</span> <span class="number">0</span>;
 &#125;</code></pre>
-
-<h3 id="abc253-d"><a href="#abc253-d" class="headerlink" title="abc253_d"></a><a target="_blank" rel="noopener" href="https://atcoder.jp/contests/abc253/tasks/abc253_d">abc253_d</a></h3><h4 id="题目翻译-3"><a href="#题目翻译-3" class="headerlink" title="题目翻译"></a>题目翻译</h4><p>问 $[1,n]$ 中不是 $a$ 的倍数或 $b$ 的倍数的数之和。</p>
-<h4 id="题目思路-3"><a href="#题目思路-3" class="headerlink" title="题目思路"></a>题目思路</h4><p>容斥原理，答案就是 <code>总和-a的倍数和-b的倍数和+a和b最大公因数的倍数和</code>。</p>
+<h3 id="abc253_d"><a class="markdownIt-Anchor" href="#abc253_d"></a> <a target="_blank" rel="noopener" href="https://atcoder.jp/contests/abc253/tasks/abc253_d">abc253_d</a></h3>
+<h4 id="题目翻译-4"><a class="markdownIt-Anchor" href="#题目翻译-4"></a> 题目翻译</h4>
+<p>问 <span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mo stretchy="false">[</mo><mn>1</mn><mo separator="true">,</mo><mi>n</mi><mo stretchy="false">]</mo></mrow><annotation encoding="application/x-tex">[1,n]</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:1em;vertical-align:-0.25em;"></span><span class="mopen">[</span><span class="mord">1</span><span class="mpunct">,</span><span class="mspace" style="margin-right:0.16666666666666666em;"></span><span class="mord mathnormal">n</span><span class="mclose">]</span></span></span></span> 中不是 <span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>a</mi></mrow><annotation encoding="application/x-tex">a</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.43056em;vertical-align:0em;"></span><span class="mord mathnormal">a</span></span></span></span> 的倍数或 <span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>b</mi></mrow><annotation encoding="application/x-tex">b</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.69444em;vertical-align:0em;"></span><span class="mord mathnormal">b</span></span></span></span> 的倍数的数之和。</p>
+<h4 id="题目思路-4"><a class="markdownIt-Anchor" href="#题目思路-4"></a> 题目思路</h4>
+<p>容斥原理，答案就是 <code>总和-a的倍数和-b的倍数和+a和b最大公因数的倍数和</code>。</p>
 <p>可以用等差数列。</p>
-<p>以 $a$ 的倍数为例：</p>
+<p>以 <span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>a</mi></mrow><annotation encoding="application/x-tex">a</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.43056em;vertical-align:0em;"></span><span class="mord mathnormal">a</span></span></span></span> 的倍数为例：</p>
 <pre><code class="highlight bash">项数=n/a
 和=（首项+末项）*项数/2</code></pre>
-
-<h4 id="AC-代码-3"><a href="#AC-代码-3" class="headerlink" title="AC 代码"></a>AC 代码</h4><pre><code class="highlight cpp"><span class="meta">#<span class="keyword">include</span><span class="string">&lt;bits/stdc++.h&gt;</span></span>
+<h4 id="ac-代码-4"><a class="markdownIt-Anchor" href="#ac-代码-4"></a> AC 代码</h4>
+<pre><code class="highlight cpp"><span class="meta">#<span class="keyword">include</span><span class="string">&lt;bits/stdc++.h&gt;</span></span>
 <span class="keyword">using</span> <span class="keyword">namespace</span> std;
 <span class="keyword">typedef</span> <span class="type">long</span> <span class="type">long</span> ll;
 <span class="function"><span class="type">int</span> <span class="title">main</span><span class="params">()</span></span>
@@ -902,9 +914,10 @@ map&lt;<span class="type">int</span>, <span class="type">int</span>&gt;m;
 <script type="text/javascript">
 	socialShare("#share", {
 	    title : '[题解] ABC253 做题笔记',
-	    description : 'abc253_a题目翻译给定 $a,b,c$，问 $b$ 是不是中位数。
-题目思路排序，判断。
-AC...',
+	    description : ' abc253_a
+ 题目翻译
+给定 a,b,ca,b,ca,b,c，问 bbb 是不是中位数。
+ ...',
 	    wechatQrcodeTitle : "分享到微信",
 	    wechatQrcodeHelper : '微信扫描二维码',
 	    source : 'http://blog.cyx2009.top/archives/ABC253/'
@@ -993,30 +1006,30 @@ AC...',
 		
 		
 
-					<footer id="footer" class="site-footer card shadow-sm border-0">
-						
-						<div>Theme <a target="_blank" rel="noopener" href="https://github.com/solstice23/hexo-theme-argon"><strong>Argon</strong></a> | Powered by Hexo</div>
-						<span id="busuanzi_container_site_uv">
-							本站访客数 <span id="busuanzi_value_site_uv"></span> 人次
-						</span>
-						<span id="timeDate">载入时间...</span>
-						<script>
-						    var now = new Date(); 
-						    function createtime() { 
-						        var grt= new Date("03/28/2022 20:00:00");//在此处修改你的建站时间
-						        now.setTime(now.getTime()+250); 
-						        days = (now - grt ) / 1000 / 60 / 60 / 24; dnum = Math.floor(days); 
-						        hours = (now - grt ) / 1000 / 60 / 60 - (24 * dnum); hnum = Math.floor(hours); 
-						        if(String(hnum).length ==1 ){hnum = "0" + hnum;} minutes = (now - grt ) / 1000 /60 - (24 * 60 * dnum) - (60 * hnum); 
-						        mnum = Math.floor(minutes); if(String(mnum).length ==1 ){mnum = "0" + mnum;} 
-						        seconds = (now - grt ) / 1000 - (24 * 60 * 60 * dnum) - (60 * 60 * hnum) - (60 * mnum); 
-						        snum = Math.round(seconds); if(String(snum).length ==1 ){snum = "0" + snum;} 
-						        document.getElementById("timeDate").innerHTML = "本站已安全运行 "+dnum+" 天 "+ hnum + " 小时 " + mnum + " 分 " + snum + " 秒"; 
-						        // document.getElementById("times").innerHTML = hnum + " 小时 " + mnum + " 分 " + snum + " 秒"; 
-						    } 
-						setInterval("createtime()",250);
-						</script>
-						<script>
+                    <footer id="footer" class="site-footer card shadow-sm border-0">
+                        
+                        <div>Theme <a target="_blank" rel="noopener" href="https://github.com/solstice23/hexo-theme-argon"><strong>Argon</strong></a> | Powered by Hexo</div>
+                        <span id="busuanzi_container_site_uv">
+                            本站访客数 <span id="busuanzi_value_site_uv"></span> 人次
+                        </span>
+                        <span id="timeDate">载入时间...</span>
+                        <script>
+                            var now = new Date(); 
+                            function createtime() { 
+                                var grt= new Date("03/28/2022 20:00:00");//在此处修改你的建站时间
+                                now.setTime(now.getTime()+250); 
+                                days = (now - grt ) / 1000 / 60 / 60 / 24; dnum = Math.floor(days); 
+                                hours = (now - grt ) / 1000 / 60 / 60 - (24 * dnum); hnum = Math.floor(hours); 
+                                if(String(hnum).length ==1 ){hnum = "0" + hnum;} minutes = (now - grt ) / 1000 /60 - (24 * 60 * dnum) - (60 * hnum); 
+                                mnum = Math.floor(minutes); if(String(mnum).length ==1 ){mnum = "0" + mnum;} 
+                                seconds = (now - grt ) / 1000 - (24 * 60 * 60 * dnum) - (60 * 60 * hnum) - (60 * mnum); 
+                                snum = Math.round(seconds); if(String(snum).length ==1 ){snum = "0" + snum;} 
+                                document.getElementById("timeDate").innerHTML = "本站已安全运行 "+dnum+" 天 "+ hnum + " 小时 " + mnum + " 分 " + snum + " 秒"; 
+                                // document.getElementById("times").innerHTML = hnum + " 小时 " + mnum + " 分 " + snum + " 秒"; 
+                            } 
+                        setInterval("createtime()",250);
+                        </script>
+                        <script>
         window.onload = (() => {
             //定义点击出现文字类
             function ClickFrontShow() {
@@ -1153,49 +1166,54 @@ AC...',
             //第二个参数是颜色数组，必须是数组类型！
             frontShow.init();
         })();
-						</script>
-					</footer>
-				</main>
-			</div>
-		</div>
-		
+                        </script>
+                    </footer>
+                </main>
+            </div>
+        </div>
+        
 <script src="/argontheme.js"></script>
 
-		
-		
-		
-			<link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/KaTeX/0.15.6/katex.min.css">
-			<script src="//cdnjs.cloudflare.com/ajax/libs/KaTeX/0.15.6/katex.min.js"></script>
-			<script src="//cdnjs.cloudflare.com/ajax/libs/KaTeX/0.15.6/contrib/auto-render.min.js"></script>
-			<script>
-				document.addEventListener("DOMContentLoaded", function() {
-					renderMathInElement(document.body,{
-						delimiters: [
-							{left: "$$", right: "$$", display: true},
-							{left: "$", right: "$", display: false},
-							{left: "\\(", right: "\\)", display: false}
-						]
-					});
-				});
-			</script>
-		
+        
+        
+        
+            <link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/KaTeX/0.16.9/katex.min.css">
+            <script src="//cdnjs.cloudflare.com/ajax/libs/KaTeX/0.16.9/katex.min.js"></script>
+            <script src="//cdnjs.cloudflare.com/ajax/libs/KaTeX/0.16.9/contrib/auto-render.min.js"></script>
+            <script>
+                document.addEventListener("DOMContentLoaded", function() {
+                    renderMathInElement(document.body, {
+                      // customised options
+                      // • auto-render specific keys, e.g.:
+                      delimiters: [
+                          {left: '$$', right: '$$', display: true},
+                          {left: '$', right: '$', display: false},
+                          {left: '\\(', right: '\\)', display: false},
+                          {left: '\\[', right: '\\]', display: true}
+                      ],
+                      // • rendering keys, e.g.:
+                      throwOnError : false
+                    });
+                });
+            </script>
+        
 
-		
-			<script>
-				var argonEnableCodeHighlight = true;
-			</script>
-			
+        
+            <script>
+                var argonEnableCodeHighlight = true;
+            </script>
+            
 <link rel="stylesheet" href="/assets/vendor/highlight/styles/vs2015.css">
 
-		
+        
 
-	</div>
+    </div>
 </div>
 <noscript>
-	<style>
-		article img.lazyload[src^="data:image/svg+xml;base64,PCEtLUFyZ29uTG9hZGluZy0tPg"]{display: none;}
-		.comment-item-text .comment-sticker.lazyload{display: none;}
-	</style>
+    <style>
+        article img.lazyload[src^="data:image/svg+xml;base64,PCEtLUFyZ29uTG9hZGluZy0tPg"]{display: none;}
+        .comment-item-text .comment-sticker.lazyload{display: none;}
+    </style>
 </noscript>
 </body>
 

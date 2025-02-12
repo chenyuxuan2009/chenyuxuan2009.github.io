@@ -22,12 +22,12 @@
 	
 		<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=5">
 	
-	<meta name="description" content="题目翻译一个 01 串，找到一个它的子串，1 的个数多删所有 0，0 的个数多删所有 1。问最多删几个数。 题目思路首先统计 01 个数是必须的。 之后，分类讨论 3 种情况。 情况1：0 的个数比 1 多。输出 1 的个数。 情况2：1 的个数比 0 多。输出 0 的个数。 情况 3：1 的个数和 0 的个数相等。这里有个小问题。 有人可能问，一样不是输出 $0$ 吗？ 但是，重新审题。找到一个">
+	<meta name="description" content="题目翻译 一个 01 串，找到一个它的子串，1 的个数多删所有 0，0 的个数多删所有 1。问最多删几个数。  题目思路 首先统计 01 个数是必须的。 之后，分类讨论 3 种情况。  情况1：0 的个数比 1 多。 输出 1 的个数。  情况2：1 的个数比 0 多。 输出 0 的个数。  情况 3：1 的个数和 0 的个数相等。 这里有个小问题。 有人可能问，一样不是输出 000 吗？ 但是">
 <meta property="og:type" content="article">
 <meta property="og:title" content="[题解] CF1633B Minority">
 <meta property="og:url" content="http://blog.cyx2009.top/archives/CF1633B/index.html">
 <meta property="og:site_name" content="沉石鱼惊旋 的博客">
-<meta property="og:description" content="题目翻译一个 01 串，找到一个它的子串，1 的个数多删所有 0，0 的个数多删所有 1。问最多删几个数。 题目思路首先统计 01 个数是必须的。 之后，分类讨论 3 种情况。 情况1：0 的个数比 1 多。输出 1 的个数。 情况2：1 的个数比 0 多。输出 0 的个数。 情况 3：1 的个数和 0 的个数相等。这里有个小问题。 有人可能问，一样不是输出 $0$ 吗？ 但是，重新审题。找到一个">
+<meta property="og:description" content="题目翻译 一个 01 串，找到一个它的子串，1 的个数多删所有 0，0 的个数多删所有 1。问最多删几个数。  题目思路 首先统计 01 个数是必须的。 之后，分类讨论 3 种情况。  情况1：0 的个数比 1 多。 输出 1 的个数。  情况2：1 的个数比 0 多。 输出 0 的个数。  情况 3：1 的个数和 0 的个数相等。 这里有个小问题。 有人可能问，一样不是输出 000 吗？ 但是">
 <meta property="og:locale" content="zh_CN">
 <meta property="article:published_time" content="2022-02-02T05:48:00.000Z">
 <meta property="article:modified_time" content="2025-02-12T04:46:03.441Z">
@@ -689,18 +689,24 @@
 	</header>
 
 	<div class="post-content" id="post_content">
-		<h3 id="题目翻译"><a href="#题目翻译" class="headerlink" title="题目翻译"></a>题目翻译</h3><p>一个 01 串，找到一个它的子串，1 的个数多删所有 0，0 的个数多删所有 1。问最多删几个数。</p>
-<h3 id="题目思路"><a href="#题目思路" class="headerlink" title="题目思路"></a>题目思路</h3><p>首先统计 01 个数是必须的。</p>
+		<h3 id="题目翻译"><a class="markdownIt-Anchor" href="#题目翻译"></a> 题目翻译</h3>
+<p>一个 01 串，找到一个它的子串，1 的个数多删所有 0，0 的个数多删所有 1。问最多删几个数。</p>
+<h3 id="题目思路"><a class="markdownIt-Anchor" href="#题目思路"></a> 题目思路</h3>
+<p>首先统计 01 个数是必须的。</p>
 <p>之后，分类讨论 3 种情况。</p>
-<h4 id="情况1：0-的个数比-1-多。"><a href="#情况1：0-的个数比-1-多。" class="headerlink" title="情况1：0 的个数比 1 多。"></a>情况1：0 的个数比 1 多。</h4><p>输出 1 的个数。</p>
-<h4 id="情况2：1-的个数比-0-多。"><a href="#情况2：1-的个数比-0-多。" class="headerlink" title="情况2：1 的个数比 0 多。"></a>情况2：1 的个数比 0 多。</h4><p>输出 0 的个数。</p>
-<h4 id="情况-3：1-的个数和-0-的个数相等。"><a href="#情况-3：1-的个数和-0-的个数相等。" class="headerlink" title="情况 3：1 的个数和 0 的个数相等。"></a>情况 3：1 的个数和 0 的个数相等。</h4><p>这里有个小问题。</p>
-<p>有人可能问，一样不是输出 $0$ 吗？</p>
+<h4 id="情况10-的个数比-1-多"><a class="markdownIt-Anchor" href="#情况10-的个数比-1-多"></a> 情况1：0 的个数比 1 多。</h4>
+<p>输出 1 的个数。</p>
+<h4 id="情况21-的个数比-0-多"><a class="markdownIt-Anchor" href="#情况21-的个数比-0-多"></a> 情况2：1 的个数比 0 多。</h4>
+<p>输出 0 的个数。</p>
+<h4 id="情况-31-的个数和-0-的个数相等"><a class="markdownIt-Anchor" href="#情况-31-的个数和-0-的个数相等"></a> 情况 3：1 的个数和 0 的个数相等。</h4>
+<p>这里有个小问题。</p>
+<p>有人可能问，一样不是输出 <span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mn>0</mn></mrow><annotation encoding="application/x-tex">0</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.64444em;vertical-align:0em;"></span><span class="mord">0</span></span></span></span> 吗？</p>
 <p>但是，重新审题。<strong>找到一个它的子串</strong>，这里划重点。</p>
 <p>也就是说，不用看整个字符串。</p>
 <p>那么我们少拿一个 0 或少拿一个 1，答案就更多了。</p>
 <p>所以，输出 0 的个数 -1。</p>
-<h3 id="题目代码"><a href="#题目代码" class="headerlink" title="题目代码"></a>题目代码</h3><pre><code class="highlight cpp"><span class="function"><span class="type">void</span> <span class="title">solve</span><span class="params">()</span></span>
+<h3 id="题目代码"><a class="markdownIt-Anchor" href="#题目代码"></a> 题目代码</h3>
+<pre><code class="highlight cpp"><span class="function"><span class="type">void</span> <span class="title">solve</span><span class="params">()</span></span>
 <span class="function"></span>&#123;
 	string s;
 	cin&gt;&gt;s;
@@ -713,7 +719,6 @@
 	<span class="keyword">if</span>(cnt0==cnt1)cout&lt;&lt;cnt0<span class="number">-1</span>&lt;&lt;endl;<span class="comment">//分类讨论</span>
 	<span class="keyword">else</span> cout&lt;&lt;<span class="built_in">min</span>(cnt0,cnt1)&lt;&lt;endl;
 &#125;</code></pre>
-
 <p>多组数据，代码未全。请勿copy，当心踩坑！</p>
 
 	</div>
@@ -789,7 +794,8 @@
 <script type="text/javascript">
 	socialShare("#share", {
 	    title : '[题解] CF1633B Minority',
-	    description : '题目翻译一个 01 串，找到一个它的子串，1 的个数多删所有 0，0 的个数多删所有 1。问最多删几...',
+	    description : ' 题目翻译
+一个 01 串，找到一个它的子串，1 的个数多删所有 0，0 的个数多删所有 1。问最多...',
 	    wechatQrcodeTitle : "分享到微信",
 	    wechatQrcodeHelper : '微信扫描二维码',
 	    source : 'http://blog.cyx2009.top/archives/CF1633B/'
@@ -878,30 +884,30 @@
 		
 		
 
-					<footer id="footer" class="site-footer card shadow-sm border-0">
-						
-						<div>Theme <a target="_blank" rel="noopener" href="https://github.com/solstice23/hexo-theme-argon"><strong>Argon</strong></a> | Powered by Hexo</div>
-						<span id="busuanzi_container_site_uv">
-							本站访客数 <span id="busuanzi_value_site_uv"></span> 人次
-						</span>
-						<span id="timeDate">载入时间...</span>
-						<script>
-						    var now = new Date(); 
-						    function createtime() { 
-						        var grt= new Date("03/28/2022 20:00:00");//在此处修改你的建站时间
-						        now.setTime(now.getTime()+250); 
-						        days = (now - grt ) / 1000 / 60 / 60 / 24; dnum = Math.floor(days); 
-						        hours = (now - grt ) / 1000 / 60 / 60 - (24 * dnum); hnum = Math.floor(hours); 
-						        if(String(hnum).length ==1 ){hnum = "0" + hnum;} minutes = (now - grt ) / 1000 /60 - (24 * 60 * dnum) - (60 * hnum); 
-						        mnum = Math.floor(minutes); if(String(mnum).length ==1 ){mnum = "0" + mnum;} 
-						        seconds = (now - grt ) / 1000 - (24 * 60 * 60 * dnum) - (60 * 60 * hnum) - (60 * mnum); 
-						        snum = Math.round(seconds); if(String(snum).length ==1 ){snum = "0" + snum;} 
-						        document.getElementById("timeDate").innerHTML = "本站已安全运行 "+dnum+" 天 "+ hnum + " 小时 " + mnum + " 分 " + snum + " 秒"; 
-						        // document.getElementById("times").innerHTML = hnum + " 小时 " + mnum + " 分 " + snum + " 秒"; 
-						    } 
-						setInterval("createtime()",250);
-						</script>
-						<script>
+                    <footer id="footer" class="site-footer card shadow-sm border-0">
+                        
+                        <div>Theme <a target="_blank" rel="noopener" href="https://github.com/solstice23/hexo-theme-argon"><strong>Argon</strong></a> | Powered by Hexo</div>
+                        <span id="busuanzi_container_site_uv">
+                            本站访客数 <span id="busuanzi_value_site_uv"></span> 人次
+                        </span>
+                        <span id="timeDate">载入时间...</span>
+                        <script>
+                            var now = new Date(); 
+                            function createtime() { 
+                                var grt= new Date("03/28/2022 20:00:00");//在此处修改你的建站时间
+                                now.setTime(now.getTime()+250); 
+                                days = (now - grt ) / 1000 / 60 / 60 / 24; dnum = Math.floor(days); 
+                                hours = (now - grt ) / 1000 / 60 / 60 - (24 * dnum); hnum = Math.floor(hours); 
+                                if(String(hnum).length ==1 ){hnum = "0" + hnum;} minutes = (now - grt ) / 1000 /60 - (24 * 60 * dnum) - (60 * hnum); 
+                                mnum = Math.floor(minutes); if(String(mnum).length ==1 ){mnum = "0" + mnum;} 
+                                seconds = (now - grt ) / 1000 - (24 * 60 * 60 * dnum) - (60 * 60 * hnum) - (60 * mnum); 
+                                snum = Math.round(seconds); if(String(snum).length ==1 ){snum = "0" + snum;} 
+                                document.getElementById("timeDate").innerHTML = "本站已安全运行 "+dnum+" 天 "+ hnum + " 小时 " + mnum + " 分 " + snum + " 秒"; 
+                                // document.getElementById("times").innerHTML = hnum + " 小时 " + mnum + " 分 " + snum + " 秒"; 
+                            } 
+                        setInterval("createtime()",250);
+                        </script>
+                        <script>
         window.onload = (() => {
             //定义点击出现文字类
             function ClickFrontShow() {
@@ -1038,49 +1044,54 @@
             //第二个参数是颜色数组，必须是数组类型！
             frontShow.init();
         })();
-						</script>
-					</footer>
-				</main>
-			</div>
-		</div>
-		
+                        </script>
+                    </footer>
+                </main>
+            </div>
+        </div>
+        
 <script src="/argontheme.js"></script>
 
-		
-		
-		
-			<link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/KaTeX/0.15.6/katex.min.css">
-			<script src="//cdnjs.cloudflare.com/ajax/libs/KaTeX/0.15.6/katex.min.js"></script>
-			<script src="//cdnjs.cloudflare.com/ajax/libs/KaTeX/0.15.6/contrib/auto-render.min.js"></script>
-			<script>
-				document.addEventListener("DOMContentLoaded", function() {
-					renderMathInElement(document.body,{
-						delimiters: [
-							{left: "$$", right: "$$", display: true},
-							{left: "$", right: "$", display: false},
-							{left: "\\(", right: "\\)", display: false}
-						]
-					});
-				});
-			</script>
-		
+        
+        
+        
+            <link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/KaTeX/0.16.9/katex.min.css">
+            <script src="//cdnjs.cloudflare.com/ajax/libs/KaTeX/0.16.9/katex.min.js"></script>
+            <script src="//cdnjs.cloudflare.com/ajax/libs/KaTeX/0.16.9/contrib/auto-render.min.js"></script>
+            <script>
+                document.addEventListener("DOMContentLoaded", function() {
+                    renderMathInElement(document.body, {
+                      // customised options
+                      // • auto-render specific keys, e.g.:
+                      delimiters: [
+                          {left: '$$', right: '$$', display: true},
+                          {left: '$', right: '$', display: false},
+                          {left: '\\(', right: '\\)', display: false},
+                          {left: '\\[', right: '\\]', display: true}
+                      ],
+                      // • rendering keys, e.g.:
+                      throwOnError : false
+                    });
+                });
+            </script>
+        
 
-		
-			<script>
-				var argonEnableCodeHighlight = true;
-			</script>
-			
+        
+            <script>
+                var argonEnableCodeHighlight = true;
+            </script>
+            
 <link rel="stylesheet" href="/assets/vendor/highlight/styles/vs2015.css">
 
-		
+        
 
-	</div>
+    </div>
 </div>
 <noscript>
-	<style>
-		article img.lazyload[src^="data:image/svg+xml;base64,PCEtLUFyZ29uTG9hZGluZy0tPg"]{display: none;}
-		.comment-item-text .comment-sticker.lazyload{display: none;}
-	</style>
+    <style>
+        article img.lazyload[src^="data:image/svg+xml;base64,PCEtLUFyZ29uTG9hZGluZy0tPg"]{display: none;}
+        .comment-item-text .comment-sticker.lazyload{display: none;}
+    </style>
 </noscript>
 </body>
 

@@ -648,7 +648,7 @@
 						
 						<div class="post-meta-detail post-meta-detail-words">
 							<i class="fa fa-file-word-o" aria-hidden="true"></i>
-							1.7k 字
+							1.9k 字
 						</div>
 					
 						
@@ -656,7 +656,7 @@
 						
 						<div class="post-meta-detail post-meta-detail-readingtime">
 							<i class="fa fa-hourglass-end" aria-hidden="true"></i>
-							6 分钟
+							7 分钟
 						</div>
 					
 		</div>
@@ -667,10 +667,11 @@
 		
 			
 				免责声明：本篇题解在比赛结束前属于私有状态，一般用户无法查看。
-A. 竹竿不难发现最多只会左右调换一根竹竿。如果调换了超过一根，一定可以全调回去或者留一根，答案不劣。
+ A. 竹竿
+不难发现最多只会左右调换一根竹竿。如果调换了超过一根，一定可以全调回去或者留一根，答案不劣。
 不妨枚举调换的是哪一根竹竿。
-设 $l_i&#x3D;b_i,r_i&#x3D;a_i-b_i$ 是第 $i$ 根竹竿的左右长度。
-枚举第 $j$ 根竹竿调换了顺序，那么左侧就是 $...
+设 li=bi,ri=ai−bil_i=b_i,r_i=a_i-b_ili​=bi​,ri​=ai​−bi​ 是第 iii 根竹竿的左右长度。
+枚举...
 			
 		
 	</div>
@@ -715,7 +716,7 @@ A. 竹竿不难发现最多只会左右调换一根竹竿。如果调换了超�
 						
 						<div class="post-meta-detail post-meta-detail-words">
 							<i class="fa fa-file-word-o" aria-hidden="true"></i>
-							3.5k 字
+							3.6k 字
 						</div>
 					
 						
@@ -733,10 +734,10 @@ A. 竹竿不难发现最多只会左右调换一根竹竿。如果调换了超�
 	<div class="post-content">
 		
 			
-				考虑离线操作。用 FHQ-Treap 维护，这样拓展成 $\mathcal O(n+q)$ 长度的序列，单点修改。删除就是相当于改为 $0$。
-平衡树节点打上 $del$ 标记表示这个节点是否被删除。
+				考虑离线操作。用 FHQ-Treap 维护，这样拓展成 O(n+q)\mathcal O(n+q)O(n+q) 长度的序列，单点修改。删除就是相当于改为 000。
+平衡树节点打上 deldeldel 标记表示这个节点是否被删除。
 直接 split 出来可能找不到合法点，是一个删除的点。再写一个 find 用来找合法点。
-之后对平衡树做中序遍历搜一遍，时间戳即为对应点在新序列的...
+之后对平衡树做中序遍历搜一遍...
 			
 		
 	</div>
@@ -786,7 +787,7 @@ A. 竹竿不难发现最多只会左右调换一根竹竿。如果调换了超�
 						
 						<div class="post-meta-detail post-meta-detail-words">
 							<i class="fa fa-file-word-o" aria-hidden="true"></i>
-							1.2k 字
+							1.4k 字
 						</div>
 					
 						
@@ -794,7 +795,7 @@ A. 竹竿不难发现最多只会左右调换一根竹竿。如果调换了超�
 						
 						<div class="post-meta-detail post-meta-detail-readingtime">
 							<i class="fa fa-hourglass-end" aria-hidden="true"></i>
-							6 分钟
+							7 分钟
 						</div>
 					
 		</div>
@@ -804,10 +805,11 @@ A. 竹竿不难发现最多只会左右调换一根竹竿。如果调换了超�
 	<div class="post-content">
 		
 			
-				题目翻译给定长度为 $n$ 的序列 $a$，定义一个序列 $b$ 是好的，当且仅当对于所有 $i$ 都有 $b_i\geq i$。
-给出 $q$ 次修改，每次修改给出 $p,x$ 表示 $a_p\gets x$。每次修改之后求出好的子串的数量。
+				 题目翻译
+给定长度为 nnn 的序列 aaa，定义一个序列 bbb 是好的，当且仅当对于所有 iii 都有 bi≥ib_i\geq ibi​≥i。
+给出 qqq 次修改，每次修改给出 p,xp,xp,x 表示 ap←xa_p\gets xap​←x。每次修改之后求出好的子串的数量。
 询问独立，也就是本次修改不影响下一次的序列。
-$1\leq n,q\leq 2\times 10^5$，...
+1≤n,q≤2×1...
 			
 		
 	</div>
@@ -852,7 +854,7 @@ $1\leq n,q\leq 2\times 10^5$，...
 						
 						<div class="post-meta-detail post-meta-detail-words">
 							<i class="fa fa-file-word-o" aria-hidden="true"></i>
-							716 字
+							815 字
 						</div>
 					
 						
@@ -860,7 +862,7 @@ $1\leq n,q\leq 2\times 10^5$，...
 						
 						<div class="post-meta-detail post-meta-detail-readingtime">
 							<i class="fa fa-hourglass-end" aria-hidden="true"></i>
-							3 分钟
+							4 分钟
 						</div>
 					
 		</div>
@@ -870,10 +872,10 @@ $1\leq n,q\leq 2\times 10^5$，...
 	<div class="post-content">
 		
 			
-				题目翻译给定一个长度为 $n$ 的序列 $a$，你可以每次选择一个 $i$ 满足 $a_i\geq x$ 并且执行 $a_i\gets a_i-x$。
-现在给出 $q$ 个询问，每次给出一个 $x$，查询操作之后序列的最小中位数是多少。
-$1\leq n,q,\sum n,\sum q\leq 10^5$，$1\leq a_i,x\leq n$。
-...
+				 题目翻译
+给定一个长度为 nnn 的序列 aaa，你可以每次选择一个 iii 满足 ai≥xa_i\geq xai​≥x 并且执行 ai←ai−xa_i\gets a_i-xai​←ai​−x。
+现在给出 qqq 个询问，每次给出一个 xxx，查询操作之后序列的最小中位数是多少。
+1≤n,q,∑n,∑q≤1051\leq n,q,\sum n,\...
 			
 		
 	</div>
@@ -918,7 +920,7 @@ $1\leq n,q,\sum n,\sum q\leq 10^5$，$1\leq a_i,x\leq n$。
 						
 						<div class="post-meta-detail post-meta-detail-words">
 							<i class="fa fa-file-word-o" aria-hidden="true"></i>
-							1.3k 字
+							1.4k 字
 						</div>
 					
 						
@@ -926,7 +928,7 @@ $1\leq n,q,\sum n,\sum q\leq 10^5$，$1\leq a_i,x\leq n$。
 						
 						<div class="post-meta-detail post-meta-detail-readingtime">
 							<i class="fa fa-hourglass-end" aria-hidden="true"></i>
-							5 分钟
+							6 分钟
 						</div>
 					
 		</div>
@@ -936,11 +938,11 @@ $1\leq n,q,\sum n,\sum q\leq 10^5$，$1\leq a_i,x\leq n$。
 	<div class="post-content">
 		
 			
-				题目翻译有一个长度为 $n$ 的序列 $a$。
+				 题目翻译
+有一个长度为 nnn 的序列 aaa。
 A 和 B 进行决斗。
 决斗指每个人在选择一个数之后删除，全部选完之后比较谁选择的数之和更大。，
-一共进行 $q$ 次，每次决斗范围是 $[l,r]$。也就是两人只可以用 $a_l,a_{l+1},\dots,a_{r-1},a_r$ 这 $r-l+1$ 个数。
-B 先手，判断每次决斗 A 是否不会输...
+一共进行 qqq 次，每次决斗范围是 [l,r][l,r][l,r]。也就是两人只可以用 al,al+1,…,ar−1,ara_l,a_{l+1},\dots,a_{r-1},a_ral​,al+1​...
 			
 		
 	</div>
@@ -985,7 +987,7 @@ B 先手，判断每次决斗 A 是否不会输...
 						
 						<div class="post-meta-detail post-meta-detail-words">
 							<i class="fa fa-file-word-o" aria-hidden="true"></i>
-							1.4k 字
+							1.7k 字
 						</div>
 					
 						
@@ -993,7 +995,7 @@ B 先手，判断每次决斗 A 是否不会输...
 						
 						<div class="post-meta-detail post-meta-detail-readingtime">
 							<i class="fa fa-hourglass-end" aria-hidden="true"></i>
-							7 分钟
+							8 分钟
 						</div>
 					
 		</div>
@@ -1003,9 +1005,9 @@ B 先手，判断每次决斗 A 是否不会输...
 	<div class="post-content">
 		
 			
-				题目翻译给定 $n$ 个点 $m$ 条边的图，定义边权为边连接的端点点权之和。你可以为点权赋值 $0$ 或 $1$，求同时存在至少一条边权为 $0$ 的边，存在至少一条边权为 $1$ 的边，存在至少一条边权为 $2$ 的边的方案数。
-$1\leq n\leq 40$，$0\leq m\leq \dfrac{n(n-1)}{2}$。
-题目思路$m&#...
+				 题目翻译
+给定 nnn 个点 mmm 条边的图，定义边权为边连接的端点点权之和。你可以为点权赋值 000 或 111，求同时存在至少一条边权为 000 的边，存在至少一条边权为 111 的边，存在至少一条边权为 222 的边的方案数。
+1≤n≤401\leq n\leq 401≤n≤40，0≤m≤n(n−1)20\leq m\leq \dfrac...
 			
 		
 	</div>
@@ -1053,7 +1055,7 @@ $1\leq n\leq 40$，$0\leq m\leq \dfrac{n(n-1)}{2}$。
 						
 						<div class="post-meta-detail post-meta-detail-words">
 							<i class="fa fa-file-word-o" aria-hidden="true"></i>
-							2.9k 字
+							3k 字
 						</div>
 					
 						
@@ -1073,13 +1075,14 @@ $1\leq n\leq 40$，$0\leq m\leq \dfrac{n(n-1)}{2}$。
 	<div class="post-content">
 		
 			
-				初赛Day -(1e9+7)好吧我其实忘了 Day -(1e9+7) 和 Day -998244353 的先后顺序。
+				 初赛
+ Day -(1e9+7)
+好吧我其实忘了 Day -(1e9+7) 和 Day -998244353 的先后顺序。
 所以可能这里其实才是 Day -998244353 发生的事情。
 很荣幸收到了 Aya 的私信找我验初赛模拟。
 做了一下感觉选择问题不大。阅读和完善到处开花。
 成功砍下 62.5 分高分。
-好像是验题人倒数第二还是倒数第一来着。
-尺...
+好像是验题人倒数第二还是倒数第一来...
 			
 		
 	</div>
@@ -1124,7 +1127,7 @@ $1\leq n\leq 40$，$0\leq m\leq \dfrac{n(n-1)}{2}$。
 						
 						<div class="post-meta-detail post-meta-detail-words">
 							<i class="fa fa-file-word-o" aria-hidden="true"></i>
-							1.1k 字
+							1.2k 字
 						</div>
 					
 						
@@ -1142,10 +1145,10 @@ $1\leq n\leq 40$，$0\leq m\leq \dfrac{n(n-1)}{2}$。
 	<div class="post-content">
 		
 			
-				题目翻译给定长度为 $n$ 的字符串 $s$，将其分成 $m$ 个非空子串。定义一种划分方式的『代表』，是这 $m$ 个子串种，字典序最小的那个子串。
-求所有分割方式中，所有『代表』按字典序从大到小排的第 $k$ 个『代表』。
-$1\leq n,m\leq 1000$，$1\leq k\leq 10^{18}$。
-题目思路首先可以套路性地二分答案。...
+				 题目翻译
+给定长度为 nnn 的字符串 sss，将其分成 mmm 个非空子串。定义一种划分方式的『代表』，是这 mmm 个子串种，字典序最小的那个子串。
+求所有分割方式中，所有『代表』按字典序从大到小排的第 kkk 个『代表』。
+1≤n,m≤10001\leq n,m\leq 10001≤n,m≤1000，1≤k≤10181\leq k\leq ...
 			
 		
 	</div>
@@ -1193,7 +1196,7 @@ $1\leq n,m\leq 1000$，$1\leq k\leq 10^{18}$。
 						
 						<div class="post-meta-detail post-meta-detail-words">
 							<i class="fa fa-file-word-o" aria-hidden="true"></i>
-							774 字
+							784 字
 						</div>
 					
 						
@@ -1214,15 +1217,14 @@ $1\leq n,m\leq 1000$，$1\leq k\leq 10^{18}$。
 		
 			
 				Ivan 太牛。
-首先那些无法从 $(1,1)$ 到达或者无法到达 $(n,m)$ 的点填任何颜色都无所谓，遇到这样一个就把最后答案 $\times 2$。之后就把他们视作墙即可。
+首先那些无法从 (1,1)(1,1)(1,1) 到达或者无法到达 (n,m)(n,m)(n,m) 的点填任何颜色都无所谓，遇到这样一个就把最后答案 ×2\times 2×2。之后就把他们视作墙即可。
 套路性地把割点转成割边。
 众所周知网格图是平面图。
 
 然后你画出来那个图，长得一脸平面图，又是割，那就对偶。
 By Ivan
 
-然后考虑平面图转对偶图。
-对偶图的边穿过...
+然后...
 			
 		
 	</div>
@@ -1280,7 +1282,7 @@ By Ivan
 						
 						<div class="post-meta-detail post-meta-detail-readingtime">
 							<i class="fa fa-hourglass-end" aria-hidden="true"></i>
-							7 分钟
+							8 分钟
 						</div>
 					
 		</div>
@@ -1290,10 +1292,10 @@ By Ivan
 	<div class="post-content">
 		
 			
-				题目翻译给定 $3\times n$ 的 $\tt{0&#x2F;1}$ 网格图，给定 $q$ 个询问 $[l,r]$，查询 $[l,r]$ 部分有几个 $\tt 1$ 组成的联通块。
+				 题目翻译
+给定 3×n3\times n3×n 的 0/1\tt{0/1}0/1 网格图，给定 qqq 个询问 [l,r][l,r][l,r]，查询 [l,r][l,r][l,r] 部分有几个 1\tt 11 组成的联通块。
 联通是四联通。
-$1\leq n\leq 5\times 10^5$，$1\leq q\leq 3\times 10^5$。
-题目思路可以离线的区间询问，尝试普通莫...
+1≤n≤5×1051\leq n\leq 5\times 10^51≤n≤5×105，1≤q≤3×1051...
 			
 		
 	</div>
@@ -1310,30 +1312,30 @@ $1\leq n\leq 5\times 10^5$，$1\leq q\leq 3\times 10^5$。
 		
 		
 
-					<footer id="footer" class="site-footer card shadow-sm border-0">
-						
-						<div>Theme <a target="_blank" rel="noopener" href="https://github.com/solstice23/hexo-theme-argon"><strong>Argon</strong></a> | Powered by Hexo</div>
-						<span id="busuanzi_container_site_uv">
-							本站访客数 <span id="busuanzi_value_site_uv"></span> 人次
-						</span>
-						<span id="timeDate">载入时间...</span>
-						<script>
-						    var now = new Date(); 
-						    function createtime() { 
-						        var grt= new Date("03/28/2022 20:00:00");//在此处修改你的建站时间
-						        now.setTime(now.getTime()+250); 
-						        days = (now - grt ) / 1000 / 60 / 60 / 24; dnum = Math.floor(days); 
-						        hours = (now - grt ) / 1000 / 60 / 60 - (24 * dnum); hnum = Math.floor(hours); 
-						        if(String(hnum).length ==1 ){hnum = "0" + hnum;} minutes = (now - grt ) / 1000 /60 - (24 * 60 * dnum) - (60 * hnum); 
-						        mnum = Math.floor(minutes); if(String(mnum).length ==1 ){mnum = "0" + mnum;} 
-						        seconds = (now - grt ) / 1000 - (24 * 60 * 60 * dnum) - (60 * 60 * hnum) - (60 * mnum); 
-						        snum = Math.round(seconds); if(String(snum).length ==1 ){snum = "0" + snum;} 
-						        document.getElementById("timeDate").innerHTML = "本站已安全运行 "+dnum+" 天 "+ hnum + " 小时 " + mnum + " 分 " + snum + " 秒"; 
-						        // document.getElementById("times").innerHTML = hnum + " 小时 " + mnum + " 分 " + snum + " 秒"; 
-						    } 
-						setInterval("createtime()",250);
-						</script>
-						<script>
+                    <footer id="footer" class="site-footer card shadow-sm border-0">
+                        
+                        <div>Theme <a target="_blank" rel="noopener" href="https://github.com/solstice23/hexo-theme-argon"><strong>Argon</strong></a> | Powered by Hexo</div>
+                        <span id="busuanzi_container_site_uv">
+                            本站访客数 <span id="busuanzi_value_site_uv"></span> 人次
+                        </span>
+                        <span id="timeDate">载入时间...</span>
+                        <script>
+                            var now = new Date(); 
+                            function createtime() { 
+                                var grt= new Date("03/28/2022 20:00:00");//在此处修改你的建站时间
+                                now.setTime(now.getTime()+250); 
+                                days = (now - grt ) / 1000 / 60 / 60 / 24; dnum = Math.floor(days); 
+                                hours = (now - grt ) / 1000 / 60 / 60 - (24 * dnum); hnum = Math.floor(hours); 
+                                if(String(hnum).length ==1 ){hnum = "0" + hnum;} minutes = (now - grt ) / 1000 /60 - (24 * 60 * dnum) - (60 * hnum); 
+                                mnum = Math.floor(minutes); if(String(mnum).length ==1 ){mnum = "0" + mnum;} 
+                                seconds = (now - grt ) / 1000 - (24 * 60 * 60 * dnum) - (60 * 60 * hnum) - (60 * mnum); 
+                                snum = Math.round(seconds); if(String(snum).length ==1 ){snum = "0" + snum;} 
+                                document.getElementById("timeDate").innerHTML = "本站已安全运行 "+dnum+" 天 "+ hnum + " 小时 " + mnum + " 分 " + snum + " 秒"; 
+                                // document.getElementById("times").innerHTML = hnum + " 小时 " + mnum + " 分 " + snum + " 秒"; 
+                            } 
+                        setInterval("createtime()",250);
+                        </script>
+                        <script>
         window.onload = (() => {
             //定义点击出现文字类
             function ClickFrontShow() {
@@ -1470,49 +1472,54 @@ $1\leq n\leq 5\times 10^5$，$1\leq q\leq 3\times 10^5$。
             //第二个参数是颜色数组，必须是数组类型！
             frontShow.init();
         })();
-						</script>
-					</footer>
-				</main>
-			</div>
-		</div>
-		
+                        </script>
+                    </footer>
+                </main>
+            </div>
+        </div>
+        
 <script src="/argontheme.js"></script>
 
-		
-		
-		
-			<link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/KaTeX/0.15.6/katex.min.css">
-			<script src="//cdnjs.cloudflare.com/ajax/libs/KaTeX/0.15.6/katex.min.js"></script>
-			<script src="//cdnjs.cloudflare.com/ajax/libs/KaTeX/0.15.6/contrib/auto-render.min.js"></script>
-			<script>
-				document.addEventListener("DOMContentLoaded", function() {
-					renderMathInElement(document.body,{
-						delimiters: [
-							{left: "$$", right: "$$", display: true},
-							{left: "$", right: "$", display: false},
-							{left: "\\(", right: "\\)", display: false}
-						]
-					});
-				});
-			</script>
-		
+        
+        
+        
+            <link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/KaTeX/0.16.9/katex.min.css">
+            <script src="//cdnjs.cloudflare.com/ajax/libs/KaTeX/0.16.9/katex.min.js"></script>
+            <script src="//cdnjs.cloudflare.com/ajax/libs/KaTeX/0.16.9/contrib/auto-render.min.js"></script>
+            <script>
+                document.addEventListener("DOMContentLoaded", function() {
+                    renderMathInElement(document.body, {
+                      // customised options
+                      // • auto-render specific keys, e.g.:
+                      delimiters: [
+                          {left: '$$', right: '$$', display: true},
+                          {left: '$', right: '$', display: false},
+                          {left: '\\(', right: '\\)', display: false},
+                          {left: '\\[', right: '\\]', display: true}
+                      ],
+                      // • rendering keys, e.g.:
+                      throwOnError : false
+                    });
+                });
+            </script>
+        
 
-		
-			<script>
-				var argonEnableCodeHighlight = true;
-			</script>
-			
+        
+            <script>
+                var argonEnableCodeHighlight = true;
+            </script>
+            
 <link rel="stylesheet" href="/assets/vendor/highlight/styles/vs2015.css">
 
-		
+        
 
-	</div>
+    </div>
 </div>
 <noscript>
-	<style>
-		article img.lazyload[src^="data:image/svg+xml;base64,PCEtLUFyZ29uTG9hZGluZy0tPg"]{display: none;}
-		.comment-item-text .comment-sticker.lazyload{display: none;}
-	</style>
+    <style>
+        article img.lazyload[src^="data:image/svg+xml;base64,PCEtLUFyZ29uTG9hZGluZy0tPg"]{display: none;}
+        .comment-item-text .comment-sticker.lazyload{display: none;}
+    </style>
 </noscript>
 </body>
 

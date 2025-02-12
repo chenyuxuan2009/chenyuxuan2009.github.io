@@ -22,12 +22,12 @@
 	
 		<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=5">
 	
-	<meta name="description" content="题目都超链接了，可以直接点开。 P1143 进制转换十进制与 $n$ 进制的互相转换，板子题，不多说。 string c&#x3D;&quot;0123456789ABCDEF&quot;; void f(int x,int m) &#123; 	if(x&#x2F;m) 	&#123; 		f(x&#x2F;m,m); 	&#125; 	cout&lt;&lt;c[x%m]; &#125; int fu(string x,i">
+	<meta name="description" content="题目都超链接了，可以直接点开。  P1143 进制转换 十进制与 nnn 进制的互相转换，板子题，不多说。 string c&#x3D;&quot;0123456789ABCDEF&quot;; void f(int x,int m) &#123; 	if(x&#x2F;m) 	&#123; 		f(x&#x2F;m,m); 	&#125; 	cout&lt;&lt;c[x%m]; &#125; int fu(string x">
 <meta property="og:type" content="article">
 <meta property="og:title" content="[题解] 洛谷题单 117 | 基础数学问题 做题笔记">
 <meta property="og:url" content="http://blog.cyx2009.top/archives/math1/index.html">
 <meta property="og:site_name" content="沉石鱼惊旋 的博客">
-<meta property="og:description" content="题目都超链接了，可以直接点开。 P1143 进制转换十进制与 $n$ 进制的互相转换，板子题，不多说。 string c&#x3D;&quot;0123456789ABCDEF&quot;; void f(int x,int m) &#123; 	if(x&#x2F;m) 	&#123; 		f(x&#x2F;m,m); 	&#125; 	cout&lt;&lt;c[x%m]; &#125; int fu(string x,i">
+<meta property="og:description" content="题目都超链接了，可以直接点开。  P1143 进制转换 十进制与 nnn 进制的互相转换，板子题，不多说。 string c&#x3D;&quot;0123456789ABCDEF&quot;; void f(int x,int m) &#123; 	if(x&#x2F;m) 	&#123; 		f(x&#x2F;m,m); 	&#125; 	cout&lt;&lt;c[x%m]; &#125; int fu(string x">
 <meta property="og:locale" content="zh_CN">
 <meta property="article:published_time" content="2022-04-09T04:14:00.000Z">
 <meta property="article:modified_time" content="2025-02-12T09:52:51.934Z">
@@ -673,7 +673,7 @@
 						
 						<div class="post-meta-detail post-meta-detail-words">
 							<i class="fa fa-file-word-o" aria-hidden="true"></i>
-							2.9k 字
+							3k 字
 						</div>
 					
 						
@@ -681,7 +681,7 @@
 						
 						<div class="post-meta-detail post-meta-detail-readingtime">
 							<i class="fa fa-hourglass-end" aria-hidden="true"></i>
-							15 分钟
+							16 分钟
 						</div>
 					
 		</div>
@@ -690,7 +690,8 @@
 
 	<div class="post-content" id="post_content">
 		<p><strong>题目都超链接了，可以直接点开。</strong></p>
-<h4 id="P1143-进制转换"><a href="#P1143-进制转换" class="headerlink" title="P1143 进制转换"></a><a target="_blank" rel="noopener" href="https://www.luogu.com.cn/problem/P1143">P1143 进制转换</a></h4><p>十进制与 $n$ 进制的互相转换，板子题，不多说。</p>
+<h4 id="p1143-进制转换"><a class="markdownIt-Anchor" href="#p1143-进制转换"></a> <a target="_blank" rel="noopener" href="https://www.luogu.com.cn/problem/P1143">P1143 进制转换</a></h4>
+<p>十进制与 <span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>n</mi></mrow><annotation encoding="application/x-tex">n</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.43056em;vertical-align:0em;"></span><span class="mord mathnormal">n</span></span></span></span> 进制的互相转换，板子题，不多说。</p>
 <pre><code class="highlight cpp">string c=<span class="string">&quot;0123456789ABCDEF&quot;</span>;
 <span class="function"><span class="type">void</span> <span class="title">f</span><span class="params">(<span class="type">int</span> x,<span class="type">int</span> m)</span></span>
 <span class="function"></span>&#123;
@@ -718,11 +719,11 @@
 	cin&gt;&gt;n&gt;&gt;s&gt;&gt;m;
 	<span class="built_in">f</span>(<span class="built_in">fu</span>(s,n),m);
 &#125;</code></pre>
-
-<h4 id="P1469-找筷子"><a href="#P1469-找筷子" class="headerlink" title="P1469 找筷子"></a><a target="_blank" rel="noopener" href="https://www.luogu.com.cn/problem/P1469">P1469 找筷子</a></h4><p>清楚两个异或相关的概念。</p>
-<p>相同数异或，结果为 $0$。</p>
-<p>$0$ 与一个数异或，结果等于那一个数。</p>
-<p>恰巧这题 $n$ 范围较大，空间较小，用此概念。</p>
+<h4 id="p1469-找筷子"><a class="markdownIt-Anchor" href="#p1469-找筷子"></a> <a target="_blank" rel="noopener" href="https://www.luogu.com.cn/problem/P1469">P1469 找筷子</a></h4>
+<p>清楚两个异或相关的概念。</p>
+<p>相同数异或，结果为 <span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mn>0</mn></mrow><annotation encoding="application/x-tex">0</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.64444em;vertical-align:0em;"></span><span class="mord">0</span></span></span></span>。</p>
+<p><span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mn>0</mn></mrow><annotation encoding="application/x-tex">0</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.64444em;vertical-align:0em;"></span><span class="mord">0</span></span></span></span> 与一个数异或，结果等于那一个数。</p>
+<p>恰巧这题 <span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>n</mi></mrow><annotation encoding="application/x-tex">n</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.43056em;vertical-align:0em;"></span><span class="mord mathnormal">n</span></span></span></span> 范围较大，空间较小，用此概念。</p>
 <p>答案即为所有数异或。</p>
 <pre><code class="highlight cpp"><span class="function"><span class="type">void</span> <span class="title">solve</span><span class="params">()</span></span>
 <span class="function"></span>&#123;
@@ -735,22 +736,22 @@
 	&#125;
 	cout&lt;&lt;x&lt;&lt;endl;
 &#125;</code></pre>
-
-<h4 id="P1100-高低位交换"><a href="#P1100-高低位交换" class="headerlink" title="P1100 高低位交换"></a><a target="_blank" rel="noopener" href="https://www.luogu.com.cn/problem/P1100">P1100 高低位交换</a></h4><p>位运算。</p>
-<p><code>a&lt;&lt;x</code> 为 $a$ 向左移动 $x$ 位。</p>
-<p><code>a&gt;&gt;x</code> 为 $a$ 向右移动 $x$ 位。</p>
-<p>$2^{32}$ 爆 <code>int</code>，但是用 <code>unsigned int</code> 就够了。</p>
-<p><del>样例是一生一世我爱你可还行，被酸了。</del></p>
+<h4 id="p1100-高低位交换"><a class="markdownIt-Anchor" href="#p1100-高低位交换"></a> <a target="_blank" rel="noopener" href="https://www.luogu.com.cn/problem/P1100">P1100 高低位交换</a></h4>
+<p>位运算。</p>
+<p><code>a&lt;&lt;x</code> 为 <span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>a</mi></mrow><annotation encoding="application/x-tex">a</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.43056em;vertical-align:0em;"></span><span class="mord mathnormal">a</span></span></span></span> 向左移动 <span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>x</mi></mrow><annotation encoding="application/x-tex">x</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.43056em;vertical-align:0em;"></span><span class="mord mathnormal">x</span></span></span></span> 位。</p>
+<p><code>a&gt;&gt;x</code> 为 <span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>a</mi></mrow><annotation encoding="application/x-tex">a</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.43056em;vertical-align:0em;"></span><span class="mord mathnormal">a</span></span></span></span> 向右移动 <span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>x</mi></mrow><annotation encoding="application/x-tex">x</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.43056em;vertical-align:0em;"></span><span class="mord mathnormal">x</span></span></span></span> 位。</p>
+<p><span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><msup><mn>2</mn><mn>32</mn></msup></mrow><annotation encoding="application/x-tex">2^{32}</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.8141079999999999em;vertical-align:0em;"></span><span class="mord"><span class="mord">2</span><span class="msupsub"><span class="vlist-t"><span class="vlist-r"><span class="vlist" style="height:0.8141079999999999em;"><span style="top:-3.063em;margin-right:0.05em;"><span class="pstrut" style="height:2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mtight"><span class="mord mtight">3</span><span class="mord mtight">2</span></span></span></span></span></span></span></span></span></span></span></span> 爆 <code>int</code>，但是用 <code>unsigned int</code> 就够了。</p>
+<p><s>样例是一生一世我爱你可还行，被酸了。</s></p>
 <pre><code class="highlight cpp"><span class="function"><span class="type">void</span> <span class="title">solve</span><span class="params">()</span></span>
 <span class="function"></span>&#123;
 	<span class="type">unsigned</span> <span class="type">int</span> n;
 	cin&gt;&gt;n;
 	cout&lt;&lt;(n&lt;&lt;<span class="number">16</span>)+(n&gt;&gt;<span class="number">16</span>)&lt;&lt;endl;
 &#125;</code></pre>
-
-<h4 id="P1017-NOIP2000-提高组-进制转换"><a href="#P1017-NOIP2000-提高组-进制转换" class="headerlink" title="P1017 [NOIP2000 提高组] 进制转换"></a><a target="_blank" rel="noopener" href="https://www.luogu.com.cn/problem/P1017">P1017 [NOIP2000 提高组] 进制转换</a></h4><p>负数进制与十进制转换。</p>
+<h4 id="p1017-noip2000-提高组-进制转换"><a class="markdownIt-Anchor" href="#p1017-noip2000-提高组-进制转换"></a> <a target="_blank" rel="noopener" href="https://www.luogu.com.cn/problem/P1017">P1017 [NOIP2000 提高组] 进制转换</a></h4>
+<p>负数进制与十进制转换。</p>
 <p>可以去看我的</p>
-<p>[post cid&#x3D;”13” cover&#x3D;”” size&#x3D;””&#x2F;]</p>
+<p>[post cid=“13” cover=“” size=“”/]</p>
 <p>题解，同步发表于<a target="_blank" rel="noopener" href="https://www.luogu.com.cn/blog/516346/solution-at4239">洛谷博客</a>。</p>
 <p>这题就是 <a target="_blank" rel="noopener" href="https://www.luogu.com.cn/problem/AT4239">AT4239</a> 的双倍经验，看我的博客吧，不说了。</p>
 <pre><code class="highlight cpp"><span class="type">int</span> a[<span class="number">100005</span>];
@@ -783,8 +784,8 @@ string c=<span class="string">&quot;0123456789ABCDEFGHIJ&quot;</span>;
 	&#125;
 	<span class="built_in">printf</span>(<span class="string">&quot;(base%lld)&quot;</span>,r);
 &#125;</code></pre>
-
-<h4 id="P1866-编号"><a href="#P1866-编号" class="headerlink" title="P1866 编号"></a><a target="_blank" rel="noopener" href="https://www.luogu.com.cn/problem/P1866">P1866 编号</a></h4><p>排列组合。</p>
+<h4 id="p1866-编号"><a class="markdownIt-Anchor" href="#p1866-编号"></a> <a target="_blank" rel="noopener" href="https://www.luogu.com.cn/problem/P1866">P1866 编号</a></h4>
+<p>排列组合。</p>
 <p>注意，前面兔子选的数，后面不能选，所以要减一下。</p>
 <p>注意答案取模。</p>
 <pre><code class="highlight cpp"><span class="type">int</span> a[<span class="number">55</span>];
@@ -805,9 +806,10 @@ string c=<span class="string">&quot;0123456789ABCDEFGHIJ&quot;</span>;
 	&#125;
 	cout&lt;&lt;ans&lt;&lt;endl;
 &#125;</code></pre>
-
-<h4 id="P2822-NOIP2016-提高组-组合数问题"><a href="#P2822-NOIP2016-提高组-组合数问题" class="headerlink" title="P2822 [NOIP2016 提高组] 组合数问题"></a><a target="_blank" rel="noopener" href="https://www.luogu.com.cn/problem/P2822">P2822 [NOIP2016 提高组] 组合数问题</a></h4><h4 id="P2789-直线交点数"><a href="#P2789-直线交点数" class="headerlink" title="P2789 直线交点数"></a><a target="_blank" rel="noopener" href="https://www.luogu.com.cn/problem/P2789">P2789 直线交点数</a></h4><p>动态规划。</p>
-<p><code>f[i][j]</code> 表示 $i$ 个直线，其中因为平行少了 $j$ 个交点，是否可能（$0$ 或 $1$）。</p>
+<h4 id="p2822-noip2016-提高组-组合数问题"><a class="markdownIt-Anchor" href="#p2822-noip2016-提高组-组合数问题"></a> <a target="_blank" rel="noopener" href="https://www.luogu.com.cn/problem/P2822">P2822 [NOIP2016 提高组] 组合数问题</a></h4>
+<h4 id="p2789-直线交点数"><a class="markdownIt-Anchor" href="#p2789-直线交点数"></a> <a target="_blank" rel="noopener" href="https://www.luogu.com.cn/problem/P2789">P2789 直线交点数</a></h4>
+<p>动态规划。</p>
+<p><code>f[i][j]</code> 表示 <span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>i</mi></mrow><annotation encoding="application/x-tex">i</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.65952em;vertical-align:0em;"></span><span class="mord mathnormal">i</span></span></span></span> 个直线，其中因为平行少了 <span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>j</mi></mrow><annotation encoding="application/x-tex">j</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.85396em;vertical-align:-0.19444em;"></span><span class="mord mathnormal" style="margin-right:0.05724em;">j</span></span></span></span> 个交点，是否可能（<span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mn>0</mn></mrow><annotation encoding="application/x-tex">0</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.64444em;vertical-align:0em;"></span><span class="mord">0</span></span></span></span> 或 <span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mn>1</mn></mrow><annotation encoding="application/x-tex">1</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.64444em;vertical-align:0em;"></span><span class="mord">1</span></span></span></span>）。</p>
 <pre><code class="highlight cpp">bitset&lt;305&gt;f[<span class="number">30</span>];
 <span class="function"><span class="type">void</span> <span class="title">solve</span><span class="params">()</span></span>
 <span class="function"></span>&#123;
@@ -829,8 +831,8 @@ string c=<span class="string">&quot;0123456789ABCDEFGHIJ&quot;</span>;
 	&#125;
 	cout&lt;&lt;f[n].<span class="built_in">count</span>()&lt;&lt;endl;
 &#125;</code></pre>
-
-<h4 id="P3913-车的攻击"><a href="#P3913-车的攻击" class="headerlink" title="P3913 车的攻击"></a><a target="_blank" rel="noopener" href="https://www.luogu.com.cn/problem/P3913">P3913 车的攻击</a></h4><p>没有被打到的，肯定是<strong>总数 $-$ 打到的</strong>。</p>
+<h4 id="p3913-车的攻击"><a class="markdownIt-Anchor" href="#p3913-车的攻击"></a> <a target="_blank" rel="noopener" href="https://www.luogu.com.cn/problem/P3913">P3913 车的攻击</a></h4>
+<p>没有被打到的，肯定是<strong>总数 <span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mo>−</mo></mrow><annotation encoding="application/x-tex">-</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.66666em;vertical-align:-0.08333em;"></span><span class="mord">−</span></span></span></span> 打到的</strong>。</p>
 <p>所以，看有多少被打到的位置就行。</p>
 <p>但可能会一个位置被打多次，要去重。</p>
 <pre><code class="highlight cpp"><span class="type">int</span> x[<span class="number">1000005</span>],y[<span class="number">1000005</span>];
@@ -848,16 +850,16 @@ string c=<span class="string">&quot;0123456789ABCDEFGHIJ&quot;</span>;
 	<span class="type">int</span> yy=<span class="built_in">unique</span>(y<span class="number">+1</span>,y+k<span class="number">+1</span>)-y<span class="number">-1</span>;
 	cout&lt;&lt;n*n-(n-xx)*(n-yy)&lt;&lt;endl;
 &#125;</code></pre>
-
-<h4 id="P2638-安全系统"><a href="#P2638-安全系统" class="headerlink" title="P2638 安全系统"></a><a target="_blank" rel="noopener" href="https://www.luogu.com.cn/problem/P2638">P2638 安全系统</a></h4><h4 id="P1246-编码"><a href="#P1246-编码" class="headerlink" title="P1246 编码"></a><a target="_blank" rel="noopener" href="https://www.luogu.com.cn/problem/P1246">P1246 编码</a></h4><p>由于这题没想到数学写法，索性暴力。</p>
-<p>枚举所有可能，找到比输入的字符串小的，答案加上 $1$。</p>
+<h4 id="p2638-安全系统"><a class="markdownIt-Anchor" href="#p2638-安全系统"></a> <a target="_blank" rel="noopener" href="https://www.luogu.com.cn/problem/P2638">P2638 安全系统</a></h4>
+<h4 id="p1246-编码"><a class="markdownIt-Anchor" href="#p1246-编码"></a> <a target="_blank" rel="noopener" href="https://www.luogu.com.cn/problem/P1246">P1246 编码</a></h4>
+<p>由于这题没想到数学写法，索性暴力。</p>
+<p>枚举所有可能，找到比输入的字符串小的，答案加上 <span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mn>1</mn></mrow><annotation encoding="application/x-tex">1</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.64444em;vertical-align:0em;"></span><span class="mord">1</span></span></span></span>。</p>
 <p>但是，一个迷惑的点，字符串之间比较有点怪。</p>
 <p>下面这两行比较，就不是等价的。</p>
 <pre><code class="highlight cpp">cout&lt;&lt;((string)<span class="string">&quot;z&quot;</span>&lt;(string)<span class="string">&quot;ab&quot;</span>);
 cout&lt;&lt;(<span class="string">&quot;z&quot;</span>&lt;<span class="string">&quot;ab&quot;</span>);</code></pre>
-
 <p>所以我索性自己写了个比较函数。</p>
-<p>有个注意点，自己也算上，所以答案要加 $1$。</p>
+<p>有个注意点，自己也算上，所以答案要加 <span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mn>1</mn></mrow><annotation encoding="application/x-tex">1</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.64444em;vertical-align:0em;"></span><span class="mord">1</span></span></span></span>。</p>
 <pre><code class="highlight cpp"><span class="function"><span class="type">bool</span> <span class="title">check</span><span class="params">(string st,string s)</span></span>
 <span class="function"></span>&#123;
 	<span class="keyword">if</span>(st.<span class="built_in">size</span>()&gt;s.<span class="built_in">size</span>())<span class="keyword">return</span> <span class="number">0</span>;
@@ -993,8 +995,8 @@ cout&lt;&lt;(<span class="string">&quot;z&quot;</span>&lt;<span class="string">&
 	&#125;	
 	cout&lt;&lt;ans<span class="number">+1</span>&lt;&lt;endl;
 &#125;</code></pre>
-
-<h4 id="P2926-USACO08DEC-Patting-Heads-S"><a href="#P2926-USACO08DEC-Patting-Heads-S" class="headerlink" title="P2926 [USACO08DEC]Patting Heads S"></a><a target="_blank" rel="noopener" href="https://www.luogu.com.cn/problem/P2926">P2926 [USACO08DEC]Patting Heads S</a></h4><p>有点类似下一题，线性筛。</p>
+<h4 id="p2926-usaco08decpatting-heads-s"><a class="markdownIt-Anchor" href="#p2926-usaco08decpatting-heads-s"></a> <a target="_blank" rel="noopener" href="https://www.luogu.com.cn/problem/P2926">P2926 [USACO08DEC]Patting Heads S</a></h4>
+<p>有点类似下一题，线性筛。</p>
 <p>枚举每个数，那个数的倍数就答案多一。</p>
 <p>当然，最后输出要减一，因为有自己。</p>
 <pre><code class="highlight cpp"><span class="type">int</span> a[<span class="number">100005</span>],b[<span class="number">1000005</span>],ans[<span class="number">1000005</span>];
@@ -1024,8 +1026,8 @@ cout&lt;&lt;(<span class="string">&quot;z&quot;</span>&lt;<span class="string">&
 		cout&lt;&lt;ans[a[i]]<span class="number">-1</span>&lt;&lt;endl;
 	&#125;
 &#125;</code></pre>
-
-<h4 id="P3383-【模板】线性筛素数"><a href="#P3383-【模板】线性筛素数" class="headerlink" title="P3383 【模板】线性筛素数"></a><a target="_blank" rel="noopener" href="https://www.luogu.com.cn/problem/P3383">P3383 【模板】线性筛素数</a></h4><p>模板题。</p>
+<h4 id="p3383-模板线性筛素数"><a class="markdownIt-Anchor" href="#p3383-模板线性筛素数"></a> <a target="_blank" rel="noopener" href="https://www.luogu.com.cn/problem/P3383">P3383 【模板】线性筛素数</a></h4>
+<p>模板题。</p>
 <p>线性筛，就是把一些数的倍数，打上合数的标签。</p>
 <pre><code class="highlight cpp"><span class="type">bool</span> pri[<span class="number">100000005</span>];
 <span class="type">int</span> a[<span class="number">6000000</span>];
@@ -1062,17 +1064,39 @@ cout&lt;&lt;(<span class="string">&quot;z&quot;</span>&lt;<span class="string">&
 		cout&lt;&lt;a[x]&lt;&lt;endl;
 	&#125;
 &#125;</code></pre>
-
-<h4 id="P1835-素数密度"><a href="#P1835-素数密度" class="headerlink" title="P1835 素数密度"></a><a target="_blank" rel="noopener" href="https://www.luogu.com.cn/problem/P1835">P1835 素数密度</a></h4><p>有一个做法可以直接求 $1$ 到 $n$ 个质数个数。</p>
-<p>注意到 $R-L\leq10^6$。</p>
-<p>注意到 $2^{31}$ 以下的合数，一定有一个 $\leq\sqrt{R}$ 的质因数。</p>
-<p>用一个长度为 $R-L+1$ 的数组存每个数字是否是合数。</p>
-<p><code>f[i]</code> 表示 $i$ 是否是合数。</p>
-<p>如果 <code>f[i] == 1</code> 表示 $L+i$ 是合数。</p>
-<p>如果 <code>f[i] == 0</code> 表示 $L+i$ 是质数。</p>
-<p>枚举所有 $\leq \sqrt{R}$ 的质数 $p$。</p>
-<p>枚举在 $L$ 到 $R$ 之间的，所有 $p$ 的倍数（不包括 $p$ 本身）设为 $i$。</p>
-<p>标记 $i$ 是合数.</p>
+<h4 id="p1835-素数密度"><a class="markdownIt-Anchor" href="#p1835-素数密度"></a> <a target="_blank" rel="noopener" href="https://www.luogu.com.cn/problem/P1835">P1835 素数密度</a></h4>
+<p>有一个做法可以直接求 <span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mn>1</mn></mrow><annotation encoding="application/x-tex">1</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.64444em;vertical-align:0em;"></span><span class="mord">1</span></span></span></span> 到 <span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>n</mi></mrow><annotation encoding="application/x-tex">n</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.43056em;vertical-align:0em;"></span><span class="mord mathnormal">n</span></span></span></span> 个质数个数。</p>
+<p>注意到 <span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>R</mi><mo>−</mo><mi>L</mi><mo>≤</mo><mn>1</mn><msup><mn>0</mn><mn>6</mn></msup></mrow><annotation encoding="application/x-tex">R-L\leq10^6</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.76666em;vertical-align:-0.08333em;"></span><span class="mord mathnormal" style="margin-right:0.00773em;">R</span><span class="mspace" style="margin-right:0.2222222222222222em;"></span><span class="mbin">−</span><span class="mspace" style="margin-right:0.2222222222222222em;"></span></span><span class="base"><span class="strut" style="height:0.8193em;vertical-align:-0.13597em;"></span><span class="mord mathnormal">L</span><span class="mspace" style="margin-right:0.2777777777777778em;"></span><span class="mrel">≤</span><span class="mspace" style="margin-right:0.2777777777777778em;"></span></span><span class="base"><span class="strut" style="height:0.8141079999999999em;vertical-align:0em;"></span><span class="mord">1</span><span class="mord"><span class="mord">0</span><span class="msupsub"><span class="vlist-t"><span class="vlist-r"><span class="vlist" style="height:0.8141079999999999em;"><span style="top:-3.063em;margin-right:0.05em;"><span class="pstrut" style="height:2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mtight">6</span></span></span></span></span></span></span></span></span></span></span>。</p>
+<p>注意到 <span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><msup><mn>2</mn><mn>31</mn></msup></mrow><annotation encoding="application/x-tex">2^{31}</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.8141079999999999em;vertical-align:0em;"></span><span class="mord"><span class="mord">2</span><span class="msupsub"><span class="vlist-t"><span class="vlist-r"><span class="vlist" style="height:0.8141079999999999em;"><span style="top:-3.063em;margin-right:0.05em;"><span class="pstrut" style="height:2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mtight"><span class="mord mtight">3</span><span class="mord mtight">1</span></span></span></span></span></span></span></span></span></span></span></span> 以下的合数，一定有一个 <span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mo>≤</mo><msqrt><mi>R</mi></msqrt></mrow><annotation encoding="application/x-tex">\leq\sqrt{R}</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.7719400000000001em;vertical-align:-0.13597em;"></span><span class="mrel">≤</span><span class="mspace" style="margin-right:0.2777777777777778em;"></span></span><span class="base"><span class="strut" style="height:1.04em;vertical-align:-0.11333499999999996em;"></span><span class="mord sqrt"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist" style="height:0.9266650000000001em;"><span class="svg-align" style="top:-3em;"><span class="pstrut" style="height:3em;"></span><span class="mord" style="padding-left:0.833em;"><span class="mord mathnormal" style="margin-right:0.00773em;">R</span></span></span><span style="top:-2.886665em;"><span class="pstrut" style="height:3em;"></span><span class="hide-tail" style="min-width:0.853em;height:1.08em;"><svg width='400em' height='1.08em' viewBox='0 0 400000 1080' preserveAspectRatio='xMinYMin slice'><path d='M95,702
+c-2.7,0,-7.17,-2.7,-13.5,-8c-5.8,-5.3,-9.5,-10,-9.5,-14
+c0,-2,0.3,-3.3,1,-4c1.3,-2.7,23.83,-20.7,67.5,-54
+c44.2,-33.3,65.8,-50.3,66.5,-51c1.3,-1.3,3,-2,5,-2c4.7,0,8.7,3.3,12,10
+s173,378,173,378c0.7,0,35.3,-71,104,-213c68.7,-142,137.5,-285,206.5,-429
+c69,-144,104.5,-217.7,106.5,-221
+l0 -0
+c5.3,-9.3,12,-14,20,-14
+H400000v40H845.2724
+s-225.272,467,-225.272,467s-235,486,-235,486c-2.7,4.7,-9,7,-19,7
+c-6,0,-10,-1,-12,-3s-194,-422,-194,-422s-65,47,-65,47z
+M834 80h400000v40h-400000z'/></svg></span></span></span><span class="vlist-s">​</span></span><span class="vlist-r"><span class="vlist" style="height:0.11333499999999996em;"><span></span></span></span></span></span></span></span></span> 的质因数。</p>
+<p>用一个长度为 <span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>R</mi><mo>−</mo><mi>L</mi><mo>+</mo><mn>1</mn></mrow><annotation encoding="application/x-tex">R-L+1</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.76666em;vertical-align:-0.08333em;"></span><span class="mord mathnormal" style="margin-right:0.00773em;">R</span><span class="mspace" style="margin-right:0.2222222222222222em;"></span><span class="mbin">−</span><span class="mspace" style="margin-right:0.2222222222222222em;"></span></span><span class="base"><span class="strut" style="height:0.76666em;vertical-align:-0.08333em;"></span><span class="mord mathnormal">L</span><span class="mspace" style="margin-right:0.2222222222222222em;"></span><span class="mbin">+</span><span class="mspace" style="margin-right:0.2222222222222222em;"></span></span><span class="base"><span class="strut" style="height:0.64444em;vertical-align:0em;"></span><span class="mord">1</span></span></span></span> 的数组存每个数字是否是合数。</p>
+<p><code>f[i]</code> 表示 <span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>i</mi></mrow><annotation encoding="application/x-tex">i</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.65952em;vertical-align:0em;"></span><span class="mord mathnormal">i</span></span></span></span> 是否是合数。</p>
+<p>如果 <code>f[i] == 1</code> 表示 <span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>L</mi><mo>+</mo><mi>i</mi></mrow><annotation encoding="application/x-tex">L+i</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.76666em;vertical-align:-0.08333em;"></span><span class="mord mathnormal">L</span><span class="mspace" style="margin-right:0.2222222222222222em;"></span><span class="mbin">+</span><span class="mspace" style="margin-right:0.2222222222222222em;"></span></span><span class="base"><span class="strut" style="height:0.65952em;vertical-align:0em;"></span><span class="mord mathnormal">i</span></span></span></span> 是合数。</p>
+<p>如果 <code>f[i] == 0</code> 表示 <span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>L</mi><mo>+</mo><mi>i</mi></mrow><annotation encoding="application/x-tex">L+i</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.76666em;vertical-align:-0.08333em;"></span><span class="mord mathnormal">L</span><span class="mspace" style="margin-right:0.2222222222222222em;"></span><span class="mbin">+</span><span class="mspace" style="margin-right:0.2222222222222222em;"></span></span><span class="base"><span class="strut" style="height:0.65952em;vertical-align:0em;"></span><span class="mord mathnormal">i</span></span></span></span> 是质数。</p>
+<p>枚举所有 <span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mo>≤</mo><msqrt><mi>R</mi></msqrt></mrow><annotation encoding="application/x-tex">\leq \sqrt{R}</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.7719400000000001em;vertical-align:-0.13597em;"></span><span class="mrel">≤</span><span class="mspace" style="margin-right:0.2777777777777778em;"></span></span><span class="base"><span class="strut" style="height:1.04em;vertical-align:-0.11333499999999996em;"></span><span class="mord sqrt"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist" style="height:0.9266650000000001em;"><span class="svg-align" style="top:-3em;"><span class="pstrut" style="height:3em;"></span><span class="mord" style="padding-left:0.833em;"><span class="mord mathnormal" style="margin-right:0.00773em;">R</span></span></span><span style="top:-2.886665em;"><span class="pstrut" style="height:3em;"></span><span class="hide-tail" style="min-width:0.853em;height:1.08em;"><svg width='400em' height='1.08em' viewBox='0 0 400000 1080' preserveAspectRatio='xMinYMin slice'><path d='M95,702
+c-2.7,0,-7.17,-2.7,-13.5,-8c-5.8,-5.3,-9.5,-10,-9.5,-14
+c0,-2,0.3,-3.3,1,-4c1.3,-2.7,23.83,-20.7,67.5,-54
+c44.2,-33.3,65.8,-50.3,66.5,-51c1.3,-1.3,3,-2,5,-2c4.7,0,8.7,3.3,12,10
+s173,378,173,378c0.7,0,35.3,-71,104,-213c68.7,-142,137.5,-285,206.5,-429
+c69,-144,104.5,-217.7,106.5,-221
+l0 -0
+c5.3,-9.3,12,-14,20,-14
+H400000v40H845.2724
+s-225.272,467,-225.272,467s-235,486,-235,486c-2.7,4.7,-9,7,-19,7
+c-6,0,-10,-1,-12,-3s-194,-422,-194,-422s-65,47,-65,47z
+M834 80h400000v40h-400000z'/></svg></span></span></span><span class="vlist-s">​</span></span><span class="vlist-r"><span class="vlist" style="height:0.11333499999999996em;"><span></span></span></span></span></span></span></span></span> 的质数 <span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>p</mi></mrow><annotation encoding="application/x-tex">p</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.625em;vertical-align:-0.19444em;"></span><span class="mord mathnormal">p</span></span></span></span>。</p>
+<p>枚举在 <span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>L</mi></mrow><annotation encoding="application/x-tex">L</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.68333em;vertical-align:0em;"></span><span class="mord mathnormal">L</span></span></span></span> 到 <span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>R</mi></mrow><annotation encoding="application/x-tex">R</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.68333em;vertical-align:0em;"></span><span class="mord mathnormal" style="margin-right:0.00773em;">R</span></span></span></span> 之间的，所有 <span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>p</mi></mrow><annotation encoding="application/x-tex">p</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.625em;vertical-align:-0.19444em;"></span><span class="mord mathnormal">p</span></span></span></span> 的倍数（不包括 <span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>p</mi></mrow><annotation encoding="application/x-tex">p</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.625em;vertical-align:-0.19444em;"></span><span class="mord mathnormal">p</span></span></span></span> 本身）设为 <span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>i</mi></mrow><annotation encoding="application/x-tex">i</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.65952em;vertical-align:0em;"></span><span class="mord mathnormal">i</span></span></span></span>。</p>
+<p>标记 <span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>i</mi></mrow><annotation encoding="application/x-tex">i</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.65952em;vertical-align:0em;"></span><span class="mord mathnormal">i</span></span></span></span> 是合数.</p>
 <pre><code class="highlight cpp"><span class="type">int</span> pri[<span class="number">1000005</span>];
 <span class="type">int</span> v[<span class="number">1000005</span>];
 <span class="type">long</span> <span class="type">long</span> l,r,sum;
@@ -1093,14 +1117,14 @@ cout&lt;&lt;(<span class="string">&quot;z&quot;</span>&lt;<span class="string">&
 		&#125;
 	&#125;
 &#125;</code></pre>
-
-<h4 id="P1029-NOIP2001-普及组-最大公约数和最小公倍数问题"><a href="#P1029-NOIP2001-普及组-最大公约数和最小公倍数问题" class="headerlink" title="P1029 [NOIP2001 普及组] 最大公约数和最小公倍数问题"></a><a target="_blank" rel="noopener" href="https://www.luogu.com.cn/problem/P1029">P1029 [NOIP2001 普及组] 最大公约数和最小公倍数问题</a></h4><p>我们枚举 $P$。</p>
-<p>判断 $P$ 是否是 $n\times m$ 的因数。</p>
-<p>又因为 $\gcd(a,b)\times\operatorname{lcm}(a,b)&#x3D;a\times b$。</p>
-<p>所以可以算出 $Q$。</p>
-<p>最后判断 $P$ 和 $Q$ 的最大公因数和最小公倍数即可。</p>
-<p>当然，可以互换，答案 $\times 2$。</p>
-<p>如果 $x&#x3D;y$，答案还要 $-1$。</p>
+<h4 id="p1029-noip2001-普及组-最大公约数和最小公倍数问题"><a class="markdownIt-Anchor" href="#p1029-noip2001-普及组-最大公约数和最小公倍数问题"></a> <a target="_blank" rel="noopener" href="https://www.luogu.com.cn/problem/P1029">P1029 [NOIP2001 普及组] 最大公约数和最小公倍数问题</a></h4>
+<p>我们枚举 <span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>P</mi></mrow><annotation encoding="application/x-tex">P</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.68333em;vertical-align:0em;"></span><span class="mord mathnormal" style="margin-right:0.13889em;">P</span></span></span></span>。</p>
+<p>判断 <span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>P</mi></mrow><annotation encoding="application/x-tex">P</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.68333em;vertical-align:0em;"></span><span class="mord mathnormal" style="margin-right:0.13889em;">P</span></span></span></span> 是否是 <span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>n</mi><mo>×</mo><mi>m</mi></mrow><annotation encoding="application/x-tex">n\times m</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.66666em;vertical-align:-0.08333em;"></span><span class="mord mathnormal">n</span><span class="mspace" style="margin-right:0.2222222222222222em;"></span><span class="mbin">×</span><span class="mspace" style="margin-right:0.2222222222222222em;"></span></span><span class="base"><span class="strut" style="height:0.43056em;vertical-align:0em;"></span><span class="mord mathnormal">m</span></span></span></span> 的因数。</p>
+<p>又因为 <span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>gcd</mi><mo>⁡</mo><mo stretchy="false">(</mo><mi>a</mi><mo separator="true">,</mo><mi>b</mi><mo stretchy="false">)</mo><mo>×</mo><mi mathvariant="normal">lcm</mi><mo>⁡</mo><mo stretchy="false">(</mo><mi>a</mi><mo separator="true">,</mo><mi>b</mi><mo stretchy="false">)</mo><mo>=</mo><mi>a</mi><mo>×</mo><mi>b</mi></mrow><annotation encoding="application/x-tex">\gcd(a,b)\times\operatorname{lcm}(a,b)=a\times b</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:1em;vertical-align:-0.25em;"></span><span class="mop"><span style="margin-right:0.01389em;">g</span>cd</span><span class="mopen">(</span><span class="mord mathnormal">a</span><span class="mpunct">,</span><span class="mspace" style="margin-right:0.16666666666666666em;"></span><span class="mord mathnormal">b</span><span class="mclose">)</span><span class="mspace" style="margin-right:0.2222222222222222em;"></span><span class="mbin">×</span><span class="mspace" style="margin-right:0.2222222222222222em;"></span></span><span class="base"><span class="strut" style="height:1em;vertical-align:-0.25em;"></span><span class="mop"><span class="mord mathrm">l</span><span class="mord mathrm">c</span><span class="mord mathrm">m</span></span><span class="mopen">(</span><span class="mord mathnormal">a</span><span class="mpunct">,</span><span class="mspace" style="margin-right:0.16666666666666666em;"></span><span class="mord mathnormal">b</span><span class="mclose">)</span><span class="mspace" style="margin-right:0.2777777777777778em;"></span><span class="mrel">=</span><span class="mspace" style="margin-right:0.2777777777777778em;"></span></span><span class="base"><span class="strut" style="height:0.66666em;vertical-align:-0.08333em;"></span><span class="mord mathnormal">a</span><span class="mspace" style="margin-right:0.2222222222222222em;"></span><span class="mbin">×</span><span class="mspace" style="margin-right:0.2222222222222222em;"></span></span><span class="base"><span class="strut" style="height:0.69444em;vertical-align:0em;"></span><span class="mord mathnormal">b</span></span></span></span>。</p>
+<p>所以可以算出 <span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>Q</mi></mrow><annotation encoding="application/x-tex">Q</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.8777699999999999em;vertical-align:-0.19444em;"></span><span class="mord mathnormal">Q</span></span></span></span>。</p>
+<p>最后判断 <span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>P</mi></mrow><annotation encoding="application/x-tex">P</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.68333em;vertical-align:0em;"></span><span class="mord mathnormal" style="margin-right:0.13889em;">P</span></span></span></span> 和 <span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>Q</mi></mrow><annotation encoding="application/x-tex">Q</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.8777699999999999em;vertical-align:-0.19444em;"></span><span class="mord mathnormal">Q</span></span></span></span> 的最大公因数和最小公倍数即可。</p>
+<p>当然，可以互换，答案 <span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mo>×</mo><mn>2</mn></mrow><annotation encoding="application/x-tex">\times 2</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.72777em;vertical-align:-0.08333em;"></span><span class="mord">×</span><span class="mord">2</span></span></span></span>。</p>
+<p>如果 <span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>x</mi><mo>=</mo><mi>y</mi></mrow><annotation encoding="application/x-tex">x=y</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.43056em;vertical-align:0em;"></span><span class="mord mathnormal">x</span><span class="mspace" style="margin-right:0.2777777777777778em;"></span><span class="mrel">=</span><span class="mspace" style="margin-right:0.2777777777777778em;"></span></span><span class="base"><span class="strut" style="height:0.625em;vertical-align:-0.19444em;"></span><span class="mord mathnormal" style="margin-right:0.03588em;">y</span></span></span></span>，答案还要 <span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mo>−</mo><mn>1</mn></mrow><annotation encoding="application/x-tex">-1</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.72777em;vertical-align:-0.08333em;"></span><span class="mord">−</span><span class="mord">1</span></span></span></span>。</p>
 <pre><code class="highlight cpp"><span class="function"><span class="type">long</span> <span class="type">long</span> <span class="title">gcd</span><span class="params">(<span class="type">long</span> <span class="type">long</span> x,<span class="type">long</span> <span class="type">long</span> y)</span></span>
 <span class="function"></span>&#123;
 	<span class="keyword">return</span> y?<span class="built_in">gcd</span>(y,x%y):x;
@@ -1119,11 +1143,14 @@ cout&lt;&lt;(<span class="string">&quot;z&quot;</span>&lt;<span class="string">&
 	&#125;
 	cout&lt;&lt;(n==m?ans*<span class="number">2</span><span class="number">-1</span>:ans*<span class="number">2</span>)&lt;&lt;endl;
 &#125;</code></pre>
-
-<h4 id="P1072-NOIP2009-提高组-Hankson-的趣味题"><a href="#P1072-NOIP2009-提高组-Hankson-的趣味题" class="headerlink" title="P1072 [NOIP2009 提高组] Hankson 的趣味题"></a><a target="_blank" rel="noopener" href="https://www.luogu.com.cn/problem/P1072">P1072 [NOIP2009 提高组] Hankson 的趣味题</a></h4><h4 id="P1069-NOIP2009-普及组-细胞分裂"><a href="#P1069-NOIP2009-普及组-细胞分裂" class="headerlink" title="P1069 [NOIP2009 普及组] 细胞分裂"></a><a target="_blank" rel="noopener" href="https://www.luogu.com.cn/problem/P1069">P1069 [NOIP2009 普及组] 细胞分裂</a></h4><h4 id="P1572-计算分数"><a href="#P1572-计算分数" class="headerlink" title="P1572 计算分数"></a><a target="_blank" rel="noopener" href="https://www.luogu.com.cn/problem/P1572">P1572 计算分数</a></h4><h4 id="P4057-Code-1-晨跑"><a href="#P4057-Code-1-晨跑" class="headerlink" title="P4057 [Code+#1]晨跑"></a><a target="_blank" rel="noopener" href="https://www.luogu.com.cn/problem/P4057">P4057 [Code+#1]晨跑</a></h4><p>三数的最小公倍数。</p>
-<p>两两算最小公倍数，其实就是 $\operatorname{lcm}(\operatorname{lcm}(a,b),c)$。</p>
-<p>当然，$\operatorname{lcm}(a,b)&#x3D;a\div\gcd(a,b)\times b$。</p>
-<p>所以， $\operatorname{lcm}(\operatorname{lcm}(a,b),c)&#x3D;c\div\gcd(a\div\gcd(a,b)\times b,c)\times a\div\gcd(a,b)\times b$。</p>
+<h4 id="p1072-noip2009-提高组-hankson-的趣味题"><a class="markdownIt-Anchor" href="#p1072-noip2009-提高组-hankson-的趣味题"></a> <a target="_blank" rel="noopener" href="https://www.luogu.com.cn/problem/P1072">P1072 [NOIP2009 提高组] Hankson 的趣味题</a></h4>
+<h4 id="p1069-noip2009-普及组-细胞分裂"><a class="markdownIt-Anchor" href="#p1069-noip2009-普及组-细胞分裂"></a> <a target="_blank" rel="noopener" href="https://www.luogu.com.cn/problem/P1069">P1069 [NOIP2009 普及组] 细胞分裂</a></h4>
+<h4 id="p1572-计算分数"><a class="markdownIt-Anchor" href="#p1572-计算分数"></a> <a target="_blank" rel="noopener" href="https://www.luogu.com.cn/problem/P1572">P1572 计算分数</a></h4>
+<h4 id="p4057-code1晨跑"><a class="markdownIt-Anchor" href="#p4057-code1晨跑"></a> <a target="_blank" rel="noopener" href="https://www.luogu.com.cn/problem/P4057">P4057 [Code+#1]晨跑</a></h4>
+<p>三数的最小公倍数。</p>
+<p>两两算最小公倍数，其实就是 <span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi mathvariant="normal">lcm</mi><mo>⁡</mo><mo stretchy="false">(</mo><mi mathvariant="normal">lcm</mi><mo>⁡</mo><mo stretchy="false">(</mo><mi>a</mi><mo separator="true">,</mo><mi>b</mi><mo stretchy="false">)</mo><mo separator="true">,</mo><mi>c</mi><mo stretchy="false">)</mo></mrow><annotation encoding="application/x-tex">\operatorname{lcm}(\operatorname{lcm}(a,b),c)</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:1em;vertical-align:-0.25em;"></span><span class="mop"><span class="mord mathrm">l</span><span class="mord mathrm">c</span><span class="mord mathrm">m</span></span><span class="mopen">(</span><span class="mop"><span class="mord mathrm">l</span><span class="mord mathrm">c</span><span class="mord mathrm">m</span></span><span class="mopen">(</span><span class="mord mathnormal">a</span><span class="mpunct">,</span><span class="mspace" style="margin-right:0.16666666666666666em;"></span><span class="mord mathnormal">b</span><span class="mclose">)</span><span class="mpunct">,</span><span class="mspace" style="margin-right:0.16666666666666666em;"></span><span class="mord mathnormal">c</span><span class="mclose">)</span></span></span></span>。</p>
+<p>当然，<span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi mathvariant="normal">lcm</mi><mo>⁡</mo><mo stretchy="false">(</mo><mi>a</mi><mo separator="true">,</mo><mi>b</mi><mo stretchy="false">)</mo><mo>=</mo><mi>a</mi><mo>÷</mo><mi>gcd</mi><mo>⁡</mo><mo stretchy="false">(</mo><mi>a</mi><mo separator="true">,</mo><mi>b</mi><mo stretchy="false">)</mo><mo>×</mo><mi>b</mi></mrow><annotation encoding="application/x-tex">\operatorname{lcm}(a,b)=a\div\gcd(a,b)\times b</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:1em;vertical-align:-0.25em;"></span><span class="mop"><span class="mord mathrm">l</span><span class="mord mathrm">c</span><span class="mord mathrm">m</span></span><span class="mopen">(</span><span class="mord mathnormal">a</span><span class="mpunct">,</span><span class="mspace" style="margin-right:0.16666666666666666em;"></span><span class="mord mathnormal">b</span><span class="mclose">)</span><span class="mspace" style="margin-right:0.2777777777777778em;"></span><span class="mrel">=</span><span class="mspace" style="margin-right:0.2777777777777778em;"></span></span><span class="base"><span class="strut" style="height:0.66666em;vertical-align:-0.08333em;"></span><span class="mord mathnormal">a</span><span class="mspace" style="margin-right:0.2222222222222222em;"></span><span class="mbin">÷</span><span class="mspace" style="margin-right:0.2222222222222222em;"></span></span><span class="base"><span class="strut" style="height:1em;vertical-align:-0.25em;"></span><span class="mop"><span style="margin-right:0.01389em;">g</span>cd</span><span class="mopen">(</span><span class="mord mathnormal">a</span><span class="mpunct">,</span><span class="mspace" style="margin-right:0.16666666666666666em;"></span><span class="mord mathnormal">b</span><span class="mclose">)</span><span class="mspace" style="margin-right:0.2222222222222222em;"></span><span class="mbin">×</span><span class="mspace" style="margin-right:0.2222222222222222em;"></span></span><span class="base"><span class="strut" style="height:0.69444em;vertical-align:0em;"></span><span class="mord mathnormal">b</span></span></span></span>。</p>
+<p>所以， <span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi mathvariant="normal">lcm</mi><mo>⁡</mo><mo stretchy="false">(</mo><mi mathvariant="normal">lcm</mi><mo>⁡</mo><mo stretchy="false">(</mo><mi>a</mi><mo separator="true">,</mo><mi>b</mi><mo stretchy="false">)</mo><mo separator="true">,</mo><mi>c</mi><mo stretchy="false">)</mo><mo>=</mo><mi>c</mi><mo>÷</mo><mi>gcd</mi><mo>⁡</mo><mo stretchy="false">(</mo><mi>a</mi><mo>÷</mo><mi>gcd</mi><mo>⁡</mo><mo stretchy="false">(</mo><mi>a</mi><mo separator="true">,</mo><mi>b</mi><mo stretchy="false">)</mo><mo>×</mo><mi>b</mi><mo separator="true">,</mo><mi>c</mi><mo stretchy="false">)</mo><mo>×</mo><mi>a</mi><mo>÷</mo><mi>gcd</mi><mo>⁡</mo><mo stretchy="false">(</mo><mi>a</mi><mo separator="true">,</mo><mi>b</mi><mo stretchy="false">)</mo><mo>×</mo><mi>b</mi></mrow><annotation encoding="application/x-tex">\operatorname{lcm}(\operatorname{lcm}(a,b),c)=c\div\gcd(a\div\gcd(a,b)\times b,c)\times a\div\gcd(a,b)\times b</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:1em;vertical-align:-0.25em;"></span><span class="mop"><span class="mord mathrm">l</span><span class="mord mathrm">c</span><span class="mord mathrm">m</span></span><span class="mopen">(</span><span class="mop"><span class="mord mathrm">l</span><span class="mord mathrm">c</span><span class="mord mathrm">m</span></span><span class="mopen">(</span><span class="mord mathnormal">a</span><span class="mpunct">,</span><span class="mspace" style="margin-right:0.16666666666666666em;"></span><span class="mord mathnormal">b</span><span class="mclose">)</span><span class="mpunct">,</span><span class="mspace" style="margin-right:0.16666666666666666em;"></span><span class="mord mathnormal">c</span><span class="mclose">)</span><span class="mspace" style="margin-right:0.2777777777777778em;"></span><span class="mrel">=</span><span class="mspace" style="margin-right:0.2777777777777778em;"></span></span><span class="base"><span class="strut" style="height:0.66666em;vertical-align:-0.08333em;"></span><span class="mord mathnormal">c</span><span class="mspace" style="margin-right:0.2222222222222222em;"></span><span class="mbin">÷</span><span class="mspace" style="margin-right:0.2222222222222222em;"></span></span><span class="base"><span class="strut" style="height:1em;vertical-align:-0.25em;"></span><span class="mop"><span style="margin-right:0.01389em;">g</span>cd</span><span class="mopen">(</span><span class="mord mathnormal">a</span><span class="mspace" style="margin-right:0.2222222222222222em;"></span><span class="mbin">÷</span><span class="mspace" style="margin-right:0.2222222222222222em;"></span></span><span class="base"><span class="strut" style="height:1em;vertical-align:-0.25em;"></span><span class="mop"><span style="margin-right:0.01389em;">g</span>cd</span><span class="mopen">(</span><span class="mord mathnormal">a</span><span class="mpunct">,</span><span class="mspace" style="margin-right:0.16666666666666666em;"></span><span class="mord mathnormal">b</span><span class="mclose">)</span><span class="mspace" style="margin-right:0.2222222222222222em;"></span><span class="mbin">×</span><span class="mspace" style="margin-right:0.2222222222222222em;"></span></span><span class="base"><span class="strut" style="height:1em;vertical-align:-0.25em;"></span><span class="mord mathnormal">b</span><span class="mpunct">,</span><span class="mspace" style="margin-right:0.16666666666666666em;"></span><span class="mord mathnormal">c</span><span class="mclose">)</span><span class="mspace" style="margin-right:0.2222222222222222em;"></span><span class="mbin">×</span><span class="mspace" style="margin-right:0.2222222222222222em;"></span></span><span class="base"><span class="strut" style="height:0.66666em;vertical-align:-0.08333em;"></span><span class="mord mathnormal">a</span><span class="mspace" style="margin-right:0.2222222222222222em;"></span><span class="mbin">÷</span><span class="mspace" style="margin-right:0.2222222222222222em;"></span></span><span class="base"><span class="strut" style="height:1em;vertical-align:-0.25em;"></span><span class="mop"><span style="margin-right:0.01389em;">g</span>cd</span><span class="mopen">(</span><span class="mord mathnormal">a</span><span class="mpunct">,</span><span class="mspace" style="margin-right:0.16666666666666666em;"></span><span class="mord mathnormal">b</span><span class="mclose">)</span><span class="mspace" style="margin-right:0.2222222222222222em;"></span><span class="mbin">×</span><span class="mspace" style="margin-right:0.2222222222222222em;"></span></span><span class="base"><span class="strut" style="height:0.69444em;vertical-align:0em;"></span><span class="mord mathnormal">b</span></span></span></span>。</p>
 <p>很简单，推一下就好。</p>
 <pre><code class="highlight cpp"><span class="function"><span class="type">void</span> <span class="title">solve</span><span class="params">()</span></span>
 <span class="function"></span>&#123;
@@ -1131,9 +1158,9 @@ cout&lt;&lt;(<span class="string">&quot;z&quot;</span>&lt;<span class="string">&
 	cin&gt;&gt;a&gt;&gt;b&gt;&gt;c;
 	cout&lt;&lt;c/__gcd(a/__gcd(a,b)*b,c)*a/__gcd(a,b)*b&lt;&lt;endl;
 &#125;</code></pre>
-
-<h4 id="P1414-又是毕业季II"><a href="#P1414-又是毕业季II" class="headerlink" title="P1414 又是毕业季II"></a><a target="_blank" rel="noopener" href="https://www.luogu.com.cn/problem/P1414">P1414 又是毕业季II</a></h4><p>我们把 $n$ 个数的因数存下来，存到数组里。</p>
-<p>就从最大的因数开始往下找，找到某个因数，出现次数正好大于等于 $k$，即为当前询问答案。</p>
+<h4 id="p1414-又是毕业季ii"><a class="markdownIt-Anchor" href="#p1414-又是毕业季ii"></a> <a target="_blank" rel="noopener" href="https://www.luogu.com.cn/problem/P1414">P1414 又是毕业季II</a></h4>
+<p>我们把 <span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>n</mi></mrow><annotation encoding="application/x-tex">n</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.43056em;vertical-align:0em;"></span><span class="mord mathnormal">n</span></span></span></span> 个数的因数存下来，存到数组里。</p>
+<p>就从最大的因数开始往下找，找到某个因数，出现次数正好大于等于 <span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>k</mi></mrow><annotation encoding="application/x-tex">k</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.69444em;vertical-align:0em;"></span><span class="mord mathnormal" style="margin-right:0.03148em;">k</span></span></span></span>，即为当前询问答案。</p>
 <pre><code class="highlight cpp"><span class="type">int</span> a[<span class="number">1000005</span>];
 <span class="function"><span class="type">void</span> <span class="title">solve</span><span class="params">()</span></span>
 <span class="function"></span>&#123;
@@ -1166,9 +1193,9 @@ cout&lt;&lt;(<span class="string">&quot;z&quot;</span>&lt;<span class="string">&
 		cout&lt;&lt;maxx&lt;&lt;endl;
 	&#125;
 &#125;</code></pre>
-
-<h4 id="P2651-添加括号III"><a href="#P2651-添加括号III" class="headerlink" title="P2651 添加括号III"></a><a target="_blank" rel="noopener" href="https://www.luogu.com.cn/problem/P2651">P2651 添加括号III</a></h4><p>结论就是判断 $a_1\times a_3\times a_4 \times a_5\times…\times a_n \bmod a_2&#x3D;0$ 是否成立。</p>
-<p>因为最好的办法就是让 $a_2$ 为分母，其他为分子。</p>
+<h4 id="p2651-添加括号iii"><a class="markdownIt-Anchor" href="#p2651-添加括号iii"></a> <a target="_blank" rel="noopener" href="https://www.luogu.com.cn/problem/P2651">P2651 添加括号III</a></h4>
+<p>结论就是判断 <span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><msub><mi>a</mi><mn>1</mn></msub><mo>×</mo><msub><mi>a</mi><mn>3</mn></msub><mo>×</mo><msub><mi>a</mi><mn>4</mn></msub><mo>×</mo><msub><mi>a</mi><mn>5</mn></msub><mo>×</mo><mi mathvariant="normal">.</mi><mi mathvariant="normal">.</mi><mi mathvariant="normal">.</mi><mo>×</mo><msub><mi>a</mi><mi>n</mi></msub><mtext> </mtext><mo lspace="0.22em" rspace="0.22em"><mrow><mi mathvariant="normal">m</mi><mi mathvariant="normal">o</mi><mi mathvariant="normal">d</mi></mrow></mo><mtext> </mtext><msub><mi>a</mi><mn>2</mn></msub><mo>=</mo><mn>0</mn></mrow><annotation encoding="application/x-tex">a_1\times a_3\times a_4 \times a_5\times...\times a_n \bmod a_2=0</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.73333em;vertical-align:-0.15em;"></span><span class="mord"><span class="mord mathnormal">a</span><span class="msupsub"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist" style="height:0.30110799999999993em;"><span style="top:-2.5500000000000003em;margin-left:0em;margin-right:0.05em;"><span class="pstrut" style="height:2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mtight">1</span></span></span></span><span class="vlist-s">​</span></span><span class="vlist-r"><span class="vlist" style="height:0.15em;"><span></span></span></span></span></span></span><span class="mspace" style="margin-right:0.2222222222222222em;"></span><span class="mbin">×</span><span class="mspace" style="margin-right:0.2222222222222222em;"></span></span><span class="base"><span class="strut" style="height:0.73333em;vertical-align:-0.15em;"></span><span class="mord"><span class="mord mathnormal">a</span><span class="msupsub"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist" style="height:0.30110799999999993em;"><span style="top:-2.5500000000000003em;margin-left:0em;margin-right:0.05em;"><span class="pstrut" style="height:2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mtight">3</span></span></span></span><span class="vlist-s">​</span></span><span class="vlist-r"><span class="vlist" style="height:0.15em;"><span></span></span></span></span></span></span><span class="mspace" style="margin-right:0.2222222222222222em;"></span><span class="mbin">×</span><span class="mspace" style="margin-right:0.2222222222222222em;"></span></span><span class="base"><span class="strut" style="height:0.73333em;vertical-align:-0.15em;"></span><span class="mord"><span class="mord mathnormal">a</span><span class="msupsub"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist" style="height:0.30110799999999993em;"><span style="top:-2.5500000000000003em;margin-left:0em;margin-right:0.05em;"><span class="pstrut" style="height:2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mtight">4</span></span></span></span><span class="vlist-s">​</span></span><span class="vlist-r"><span class="vlist" style="height:0.15em;"><span></span></span></span></span></span></span><span class="mspace" style="margin-right:0.2222222222222222em;"></span><span class="mbin">×</span><span class="mspace" style="margin-right:0.2222222222222222em;"></span></span><span class="base"><span class="strut" style="height:0.73333em;vertical-align:-0.15em;"></span><span class="mord"><span class="mord mathnormal">a</span><span class="msupsub"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist" style="height:0.30110799999999993em;"><span style="top:-2.5500000000000003em;margin-left:0em;margin-right:0.05em;"><span class="pstrut" style="height:2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mtight">5</span></span></span></span><span class="vlist-s">​</span></span><span class="vlist-r"><span class="vlist" style="height:0.15em;"><span></span></span></span></span></span></span><span class="mspace" style="margin-right:0.2222222222222222em;"></span><span class="mbin">×</span><span class="mspace" style="margin-right:0.2222222222222222em;"></span></span><span class="base"><span class="strut" style="height:0.66666em;vertical-align:-0.08333em;"></span><span class="mord">.</span><span class="mord">.</span><span class="mord">.</span><span class="mspace" style="margin-right:0.2222222222222222em;"></span><span class="mbin">×</span><span class="mspace" style="margin-right:0.2222222222222222em;"></span></span><span class="base"><span class="strut" style="height:0.84444em;vertical-align:-0.15em;"></span><span class="mord"><span class="mord mathnormal">a</span><span class="msupsub"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist" style="height:0.151392em;"><span style="top:-2.5500000000000003em;margin-left:0em;margin-right:0.05em;"><span class="pstrut" style="height:2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mathnormal mtight">n</span></span></span></span><span class="vlist-s">​</span></span><span class="vlist-r"><span class="vlist" style="height:0.15em;"><span></span></span></span></span></span></span><span class="mspace" style="margin-right:0.05555555555555555em;"></span><span class="mspace" style="margin-right:0.2222222222222222em;"></span><span class="mbin"><span class="mord"><span class="mord mathrm">m</span><span class="mord mathrm">o</span><span class="mord mathrm">d</span></span></span><span class="mspace" style="margin-right:0.05555555555555555em;"></span><span class="mspace" style="margin-right:0.2222222222222222em;"></span></span><span class="base"><span class="strut" style="height:0.58056em;vertical-align:-0.15em;"></span><span class="mord"><span class="mord mathnormal">a</span><span class="msupsub"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist" style="height:0.30110799999999993em;"><span style="top:-2.5500000000000003em;margin-left:0em;margin-right:0.05em;"><span class="pstrut" style="height:2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mtight">2</span></span></span></span><span class="vlist-s">​</span></span><span class="vlist-r"><span class="vlist" style="height:0.15em;"><span></span></span></span></span></span></span><span class="mspace" style="margin-right:0.2777777777777778em;"></span><span class="mrel">=</span><span class="mspace" style="margin-right:0.2777777777777778em;"></span></span><span class="base"><span class="strut" style="height:0.64444em;vertical-align:0em;"></span><span class="mord">0</span></span></span></span> 是否成立。</p>
+<p>因为最好的办法就是让 <span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><msub><mi>a</mi><mn>2</mn></msub></mrow><annotation encoding="application/x-tex">a_2</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.58056em;vertical-align:-0.15em;"></span><span class="mord"><span class="mord mathnormal">a</span><span class="msupsub"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist" style="height:0.30110799999999993em;"><span style="top:-2.5500000000000003em;margin-left:0em;margin-right:0.05em;"><span class="pstrut" style="height:2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mtight">2</span></span></span></span><span class="vlist-s">​</span></span><span class="vlist-r"><span class="vlist" style="height:0.15em;"><span></span></span></span></span></span></span></span></span></span> 为分母，其他为分子。</p>
 <p>注意多组数据。</p>
 <pre><code class="highlight cpp"><span class="function"><span class="type">void</span> <span class="title">solve</span><span class="params">()</span></span>
 <span class="function"></span>&#123;
@@ -1184,8 +1211,8 @@ cout&lt;&lt;(<span class="string">&quot;z&quot;</span>&lt;<span class="string">&
 	&#125;
 	<span class="built_in">puts</span>(a2==<span class="number">1</span>?<span class="string">&quot;Yes&quot;</span>:<span class="string">&quot;No&quot;</span>);
 &#125;</code></pre>
-
-<h4 id="P2660-zzc-种田"><a href="#P2660-zzc-种田" class="headerlink" title="P2660 zzc 种田"></a><a target="_blank" rel="noopener" href="https://www.luogu.com.cn/problem/P2660">P2660 zzc 种田</a></h4><p>每次都种若干个<strong>以宽为边长</strong>的正方形。</p>
+<h4 id="p2660-zzc-种田"><a class="markdownIt-Anchor" href="#p2660-zzc-种田"></a> <a target="_blank" rel="noopener" href="https://www.luogu.com.cn/problem/P2660">P2660 zzc 种田</a></h4>
+<p>每次都种若干个<strong>以宽为边长</strong>的正方形。</p>
 <p>这样子，长变成了宽。</p>
 <p>宽变成了原来的长种完之后剩下的长度。</p>
 <p>过程类似于辗转相除一样。</p>
@@ -1201,8 +1228,8 @@ cout&lt;&lt;(<span class="string">&quot;z&quot;</span>&lt;<span class="string">&
 	&#125;
 	cout&lt;&lt;ans&lt;&lt;endl;
 &#125;</code></pre>
-
-<h4 id="P3601-签到题"><a href="#P3601-签到题" class="headerlink" title="P3601 签到题"></a><a target="_blank" rel="noopener" href="https://www.luogu.com.cn/problem/P3601">P3601 签到题</a></h4><p>和素数密度差不多做法，不多说。</p>
+<h4 id="p3601-签到题"><a class="markdownIt-Anchor" href="#p3601-签到题"></a> <a target="_blank" rel="noopener" href="https://www.luogu.com.cn/problem/P3601">P3601 签到题</a></h4>
+<p>和素数密度差不多做法，不多说。</p>
 <pre><code class="highlight cpp"><span class="type">const</span> <span class="type">int</span> mod=<span class="number">666623333</span>;
 <span class="type">long</span> <span class="type">long</span> a[<span class="number">1000020</span>]; 
 <span class="type">long</span> <span class="type">long</span> f[<span class="number">1000020</span>]; 
@@ -1249,9 +1276,9 @@ cout&lt;&lt;(<span class="string">&quot;z&quot;</span>&lt;<span class="string">&
 	&#125;
 	<span class="built_in">printf</span>(<span class="string">&quot;%lld\n&quot;</span>,(z+mod)%mod);
 &#125;</code></pre>
-
-<h4 id="P1403-AHOI2005-约数研究"><a href="#P1403-AHOI2005-约数研究" class="headerlink" title="P1403 [AHOI2005]约数研究"></a><a target="_blank" rel="noopener" href="https://www.luogu.com.cn/problem/P1403">P1403 [AHOI2005]约数研究</a></h4><p>每 $x$ 个数中，就有 $1$ 个 $x$ 的倍数。</p>
-<p>枚举约数，用 $n$ 去除一下，就知道有多少个倍数。</p>
+<h4 id="p1403-ahoi2005约数研究"><a class="markdownIt-Anchor" href="#p1403-ahoi2005约数研究"></a> <a target="_blank" rel="noopener" href="https://www.luogu.com.cn/problem/P1403">P1403 [AHOI2005]约数研究</a></h4>
+<p>每 <span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>x</mi></mrow><annotation encoding="application/x-tex">x</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.43056em;vertical-align:0em;"></span><span class="mord mathnormal">x</span></span></span></span> 个数中，就有 <span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mn>1</mn></mrow><annotation encoding="application/x-tex">1</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.64444em;vertical-align:0em;"></span><span class="mord">1</span></span></span></span> 个 <span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>x</mi></mrow><annotation encoding="application/x-tex">x</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.43056em;vertical-align:0em;"></span><span class="mord mathnormal">x</span></span></span></span> 的倍数。</p>
+<p>枚举约数，用 <span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>n</mi></mrow><annotation encoding="application/x-tex">n</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.43056em;vertical-align:0em;"></span><span class="mord mathnormal">n</span></span></span></span> 去除一下，就知道有多少个倍数。</p>
 <pre><code class="highlight cpp"><span class="function"><span class="type">void</span> <span class="title">solve</span><span class="params">()</span></span>
 <span class="function"></span>&#123;
 	<span class="type">int</span> n,ans=<span class="number">0</span>;
@@ -1262,8 +1289,8 @@ cout&lt;&lt;(<span class="string">&quot;z&quot;</span>&lt;<span class="string">&
 	&#125;
 	cout&lt;&lt;ans&lt;&lt;endl;
 &#125;</code></pre>
+<h4 id="p1593-因子和"><a class="markdownIt-Anchor" href="#p1593-因子和"></a> <a target="_blank" rel="noopener" href="https://www.luogu.com.cn/problem/P1593">P1593 因子和</a></h4>
 
-<h4 id="P1593-因子和"><a href="#P1593-因子和" class="headerlink" title="P1593 因子和"></a><a target="_blank" rel="noopener" href="https://www.luogu.com.cn/problem/P1593">P1593 因子和</a></h4>
 	</div>
 
 	
@@ -1338,7 +1365,8 @@ cout&lt;&lt;(<span class="string">&quot;z&quot;</span>&lt;<span class="string">&
 	socialShare("#share", {
 	    title : '[题解] 洛谷题单 117 | 基础数学问题 做题笔记',
 	    description : '题目都超链接了，可以直接点开。
-P1143 进制转换十进制与 $n$ 进制的互相转换，板子题，不多说...',
+ P1143 进制转换
+十进制与 nnn 进制的互相转换，板子题，不...',
 	    wechatQrcodeTitle : "分享到微信",
 	    wechatQrcodeHelper : '微信扫描二维码',
 	    source : 'http://blog.cyx2009.top/archives/math1/'
@@ -1427,30 +1455,30 @@ P1143 进制转换十进制与 $n$ 进制的互相转换，板子题，不多说
 		
 		
 
-					<footer id="footer" class="site-footer card shadow-sm border-0">
-						
-						<div>Theme <a target="_blank" rel="noopener" href="https://github.com/solstice23/hexo-theme-argon"><strong>Argon</strong></a> | Powered by Hexo</div>
-						<span id="busuanzi_container_site_uv">
-							本站访客数 <span id="busuanzi_value_site_uv"></span> 人次
-						</span>
-						<span id="timeDate">载入时间...</span>
-						<script>
-						    var now = new Date(); 
-						    function createtime() { 
-						        var grt= new Date("03/28/2022 20:00:00");//在此处修改你的建站时间
-						        now.setTime(now.getTime()+250); 
-						        days = (now - grt ) / 1000 / 60 / 60 / 24; dnum = Math.floor(days); 
-						        hours = (now - grt ) / 1000 / 60 / 60 - (24 * dnum); hnum = Math.floor(hours); 
-						        if(String(hnum).length ==1 ){hnum = "0" + hnum;} minutes = (now - grt ) / 1000 /60 - (24 * 60 * dnum) - (60 * hnum); 
-						        mnum = Math.floor(minutes); if(String(mnum).length ==1 ){mnum = "0" + mnum;} 
-						        seconds = (now - grt ) / 1000 - (24 * 60 * 60 * dnum) - (60 * 60 * hnum) - (60 * mnum); 
-						        snum = Math.round(seconds); if(String(snum).length ==1 ){snum = "0" + snum;} 
-						        document.getElementById("timeDate").innerHTML = "本站已安全运行 "+dnum+" 天 "+ hnum + " 小时 " + mnum + " 分 " + snum + " 秒"; 
-						        // document.getElementById("times").innerHTML = hnum + " 小时 " + mnum + " 分 " + snum + " 秒"; 
-						    } 
-						setInterval("createtime()",250);
-						</script>
-						<script>
+                    <footer id="footer" class="site-footer card shadow-sm border-0">
+                        
+                        <div>Theme <a target="_blank" rel="noopener" href="https://github.com/solstice23/hexo-theme-argon"><strong>Argon</strong></a> | Powered by Hexo</div>
+                        <span id="busuanzi_container_site_uv">
+                            本站访客数 <span id="busuanzi_value_site_uv"></span> 人次
+                        </span>
+                        <span id="timeDate">载入时间...</span>
+                        <script>
+                            var now = new Date(); 
+                            function createtime() { 
+                                var grt= new Date("03/28/2022 20:00:00");//在此处修改你的建站时间
+                                now.setTime(now.getTime()+250); 
+                                days = (now - grt ) / 1000 / 60 / 60 / 24; dnum = Math.floor(days); 
+                                hours = (now - grt ) / 1000 / 60 / 60 - (24 * dnum); hnum = Math.floor(hours); 
+                                if(String(hnum).length ==1 ){hnum = "0" + hnum;} minutes = (now - grt ) / 1000 /60 - (24 * 60 * dnum) - (60 * hnum); 
+                                mnum = Math.floor(minutes); if(String(mnum).length ==1 ){mnum = "0" + mnum;} 
+                                seconds = (now - grt ) / 1000 - (24 * 60 * 60 * dnum) - (60 * 60 * hnum) - (60 * mnum); 
+                                snum = Math.round(seconds); if(String(snum).length ==1 ){snum = "0" + snum;} 
+                                document.getElementById("timeDate").innerHTML = "本站已安全运行 "+dnum+" 天 "+ hnum + " 小时 " + mnum + " 分 " + snum + " 秒"; 
+                                // document.getElementById("times").innerHTML = hnum + " 小时 " + mnum + " 分 " + snum + " 秒"; 
+                            } 
+                        setInterval("createtime()",250);
+                        </script>
+                        <script>
         window.onload = (() => {
             //定义点击出现文字类
             function ClickFrontShow() {
@@ -1587,49 +1615,54 @@ P1143 进制转换十进制与 $n$ 进制的互相转换，板子题，不多说
             //第二个参数是颜色数组，必须是数组类型！
             frontShow.init();
         })();
-						</script>
-					</footer>
-				</main>
-			</div>
-		</div>
-		
+                        </script>
+                    </footer>
+                </main>
+            </div>
+        </div>
+        
 <script src="/argontheme.js"></script>
 
-		
-		
-		
-			<link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/KaTeX/0.15.6/katex.min.css">
-			<script src="//cdnjs.cloudflare.com/ajax/libs/KaTeX/0.15.6/katex.min.js"></script>
-			<script src="//cdnjs.cloudflare.com/ajax/libs/KaTeX/0.15.6/contrib/auto-render.min.js"></script>
-			<script>
-				document.addEventListener("DOMContentLoaded", function() {
-					renderMathInElement(document.body,{
-						delimiters: [
-							{left: "$$", right: "$$", display: true},
-							{left: "$", right: "$", display: false},
-							{left: "\\(", right: "\\)", display: false}
-						]
-					});
-				});
-			</script>
-		
+        
+        
+        
+            <link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/KaTeX/0.16.9/katex.min.css">
+            <script src="//cdnjs.cloudflare.com/ajax/libs/KaTeX/0.16.9/katex.min.js"></script>
+            <script src="//cdnjs.cloudflare.com/ajax/libs/KaTeX/0.16.9/contrib/auto-render.min.js"></script>
+            <script>
+                document.addEventListener("DOMContentLoaded", function() {
+                    renderMathInElement(document.body, {
+                      // customised options
+                      // • auto-render specific keys, e.g.:
+                      delimiters: [
+                          {left: '$$', right: '$$', display: true},
+                          {left: '$', right: '$', display: false},
+                          {left: '\\(', right: '\\)', display: false},
+                          {left: '\\[', right: '\\]', display: true}
+                      ],
+                      // • rendering keys, e.g.:
+                      throwOnError : false
+                    });
+                });
+            </script>
+        
 
-		
-			<script>
-				var argonEnableCodeHighlight = true;
-			</script>
-			
+        
+            <script>
+                var argonEnableCodeHighlight = true;
+            </script>
+            
 <link rel="stylesheet" href="/assets/vendor/highlight/styles/vs2015.css">
 
-		
+        
 
-	</div>
+    </div>
 </div>
 <noscript>
-	<style>
-		article img.lazyload[src^="data:image/svg+xml;base64,PCEtLUFyZ29uTG9hZGluZy0tPg"]{display: none;}
-		.comment-item-text .comment-sticker.lazyload{display: none;}
-	</style>
+    <style>
+        article img.lazyload[src^="data:image/svg+xml;base64,PCEtLUFyZ29uTG9hZGluZy0tPg"]{display: none;}
+        .comment-item-text .comment-sticker.lazyload{display: none;}
+    </style>
 </noscript>
 </body>
 
