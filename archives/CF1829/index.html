@@ -1,0 +1,1446 @@
+<!DOCTYPE html>
+
+<html class="article-header-style-1">
+<head><!-- hexo injector head_begin start -->
+<link rel="stylesheet" href="/css/bilicard.css">
+<!-- hexo injector head_begin end -->
+
+</script>
+	<link rel="stylesheet" type="text/css" href="https://bohanjun.github.io/live2d/waifu.css" />
+	<div class="waifu" id="waifu" style="z-index: 99999999;">
+  	  <div class="waifu-tips"></div>
+   	 <canvas id="live2d" width="280" height="250" class="live2d"></canvas>
+	</div>
+	<script src="https://bohanjun.github.io/live2d/live2d.js"></script>
+	<script src="https://bohanjun.github.io/live2d/waifu-tips.js"></script>
+	<script type="text/javascript">initModel()</script>
+	<link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/highlight.js/11.1.0/styles/a11y-light.min.css">
+	<script src="//cdnjs.cloudflare.com/ajax/libs/highlight.js/11.1.0/highlight.min.js"></script>
+	
+	<title>[题解] CF1829 做题笔记 - 沉石鱼惊旋 的博客</title>
+	<meta charset="utf-8">
+	
+		<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=5">
+	
+	<meta name="description" content="A.Love Story题目翻译 给出一个长度为 $10$ 的字符串，一位一位看问它与 codeforces 差了多少字符。 $t$ 组数据，$1\leq t\leq 1000$。  题目思路按照题意模拟，扫描一遍给出字符串，判断第 $i$ 位与 codeforces 的第 $i$ 位是否相同即可。 完整代码#include&lt;bits&#x2F;stdc++.h&gt; using namespac">
+<meta property="og:type" content="article">
+<meta property="og:title" content="[题解] CF1829 做题笔记">
+<meta property="og:url" content="http://blog.cyx2009.top/archives/CF1829/index.html">
+<meta property="og:site_name" content="沉石鱼惊旋 的博客">
+<meta property="og:description" content="A.Love Story题目翻译 给出一个长度为 $10$ 的字符串，一位一位看问它与 codeforces 差了多少字符。 $t$ 组数据，$1\leq t\leq 1000$。  题目思路按照题意模拟，扫描一遍给出字符串，判断第 $i$ 位与 codeforces 的第 $i$ 位是否相同即可。 完整代码#include&lt;bits&#x2F;stdc++.h&gt; using namespac">
+<meta property="og:locale" content="zh_CN">
+<meta property="og:image" content="https://cdn.luogu.com.cn/upload/vjudge_pic/CF1829F/8093abf53ab9afd4293f2937f4849e3ca604a47a.png">
+<meta property="og:image" content="https://espresso.codeforces.com/3f72320a7f225babc9b2b244a719e59e9e8f028d.png">
+<meta property="article:published_time" content="2023-05-07T01:39:00.000Z">
+<meta property="article:modified_time" content="2025-02-12T11:57:05.286Z">
+<meta property="article:author" content="CYX">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:image" content="https://cdn.luogu.com.cn/upload/vjudge_pic/CF1829F/8093abf53ab9afd4293f2937f4849e3ca604a47a.png">
+
+	<meta name="theme-color" content="#5e72e4">
+	<meta name="theme-color-rgb" content="94,114,228">
+	<meta name="theme-color-origin" content="#5e72e4">
+	<meta name="argon-enable-custom-theme-color" content="true">
+	<meta name="theme-card-radius" content="15">
+	<meta name="theme-version" content="1.0.2">
+	<link rel="icon" href="/assets/img/favicon.ico">
+	<!-- <link rel="shortcut icon" href="/assets/img/favicon.ico"> -->
+	<!-- <link rel="shortcut icon" href="https://s2.loli.net/2022/07/28/dj7Y3yrweQ2MXNb.png"> -->
+	
+<link rel="stylesheet" href="/assets/argon_css_merged.css">
+
+	
+<link rel="stylesheet" href="/style.css">
+
+	
+<link rel="stylesheet" href="//fonts.loli.net/css?family=Open+Sans:300,400,600,700|Noto+Serif+SC:300,600&display=swap.css">
+
+	
+<script src="/assets/argon_js_merged.js"></script>
+
+	
+<script src="/assets/js/argon.min.js"></script>
+
+	
+<script src="//busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js"></script>
+
+
+	
+
+	<script>
+		var argonConfig = {
+			language: "zh_CN",
+			
+				zoomify: {
+					duration: 200,
+					easing: "cubic-bezier(0.4,0,0,1)",
+					scale: 0.9
+				},
+			
+			pangu: "false",
+			
+				lazyload: {
+					threshold: 800,
+					effect: "fadeIn"
+				},
+			
+			disable_pjax: false,
+			headroom: false
+		}
+	</script>
+	<script>
+		var darkmodeAutoSwitch = "false";
+		function setDarkmode(enable){
+			if (enable == true){
+				$("html").addClass("darkmode");
+			}else{
+				$("html").removeClass("darkmode");
+			}
+			$(window).trigger("scroll");
+		}
+		function toggleDarkmode(){
+			if ($("html").hasClass("darkmode")){
+				setDarkmode(false);
+				sessionStorage.setItem("Argon_Enable_Dark_Mode", "false");
+			}else{
+				setDarkmode(true);
+				sessionStorage.setItem("Argon_Enable_Dark_Mode", "true");
+			}
+		}
+		if (sessionStorage.getItem("Argon_Enable_Dark_Mode") == "true"){
+			setDarkmode(true);
+		}
+		function toggleDarkmodeByPrefersColorScheme(media){
+			if (sessionStorage.getItem('Argon_Enable_Dark_Mode') == "false" || sessionStorage.getItem('Argon_Enable_Dark_Mode') == "true"){
+				return;
+			}
+			if (media.matches){
+				setDarkmode(true);
+			}else{
+				setDarkmode(false);
+			}
+		}
+		function toggleDarkmodeByTime(){
+			if (sessionStorage.getItem('Argon_Enable_Dark_Mode') == "false" || sessionStorage.getItem('Argon_Enable_Dark_Mode') == "true"){
+				return;
+			}
+			let hour = new Date().getHours();
+			if (hour < 7 || hour >= 22){
+				setDarkmode(true);
+			}else{
+				setDarkmode(false);
+			}
+		}
+		if (darkmodeAutoSwitch == 'system'){
+			var darkmodeMediaQuery = window.matchMedia("(prefers-color-scheme: dark)");
+			darkmodeMediaQuery.addListener(toggleDarkmodeByPrefersColorScheme);
+			toggleDarkmodeByPrefersColorScheme(darkmodeMediaQuery);
+		}
+		if (darkmodeAutoSwitch == 'time'){
+			toggleDarkmodeByTime();
+		}
+		if (darkmodeAutoSwitch == 'alwayson'){
+			setDarkmode(true);
+		}
+
+		function toggleAmoledDarkMode(){
+			$("html").toggleClass("amoled-dark");
+			if ($("html").hasClass("amoled-dark")){
+				localStorage.setItem("Argon_Enable_Amoled_Dark_Mode", "true");
+			}else{
+				localStorage.setItem("Argon_Enable_Amoled_Dark_Mode", "false");
+			}
+		}
+		if (localStorage.getItem("Argon_Enable_Amoled_Dark_Mode") == "true"){
+			$("html").addClass("amoled-dark");
+		}else if (localStorage.getItem("Argon_Enable_Amoled_Dark_Mode") == "false"){
+			$("html").removeClass("amoled-dark");
+		}
+	</script>
+	<script>
+		if (navigator.userAgent.indexOf("Safari") !== -1 && navigator.userAgent.indexOf("Chrome") === -1){
+			$("html").addClass("using-safari");
+		}
+	</script>
+
+	
+		
+<script src="/assets/vendor/smoothscroll/smoothscroll1.js"></script>
+
+	
+<meta name="generator" content="Hexo 7.3.0"></head>
+
+
+
+<style id="themecolor_css">
+	
+	:root{
+		--themecolor: #5e72e4;
+		--themecolor-dark0: #5368E2;
+		--themecolor-dark: #485FE0;
+		--themecolor-dark2: #324CDD;
+		--themecolor-dark3: #233DD2;
+		--themecolor-light: #8A98EB;
+		--themecolor-rgbstr: 94,114,228;
+		--themecolor-gradient: linear-gradient(150deg,var(--themecolor-light) 15%, var(--themecolor) 70%, var(--themecolor-dark0) 94%);
+
+	}
+</style>
+<style id="theme_cardradius_css">
+	:root{
+		--card-radius: 15px;
+	}
+</style>
+
+<body>
+<div id="toolbar">
+	<!-- <script>
+		window.open('http://img.chen2009.tk/','_blank');
+	</script> -->
+	<header class="header-global">
+		<nav id="navbar-main" class="navbar navbar-main navbar-expand-lg navbar-transparent navbar-light bg-primary headroom--not-bottom headroom--not-top headroom--pinned">
+			<div class="container">
+				
+					<a class="navbar-brand navbar-icon mr-lg-5" href="">
+						<img src="/assets/img/favicon.ico">
+					</a>
+				
+				<button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbar_global" aria-controls="navbar_global" aria-expanded="false" aria-label="Toggle navigation">
+					<span class="navbar-toggler-icon"></span>
+				</button>
+				<a class="navbar-brand" href="/">沉石鱼惊旋 的博客</a>
+				<div class="navbar-collapse collapse" id="navbar_global">
+					<div class="navbar-collapse-header">
+						<div class="row">
+							<div class="col-6 collapse-brand"></div>
+							<div class="col-6 collapse-close">
+								<button type="button" class="navbar-toggler" data-toggle="collapse" data-target="#navbar_global" aria-controls="navbar_global" aria-expanded="false" aria-label="Toggle navigation">
+									<span></span>
+									<span></span>
+								</button>
+							</div>
+						</div>
+					</div>
+					<ul id="navbar_search_btn_mobile" class="navbar-nav align-items-lg-center ml-lg-auto">
+						<li class="nav-item" data-toggle="modal" data-target="#argon_search_modal" style="padding-left: 5px;">
+							<a class="nav-link nav-link-icon">
+								<i class="fa fa-search"></i>
+								<span class="nav-link-inner--text d-lg-none">搜索</span>
+							</a>
+						</li>
+					</ul>
+					
+							<ul class='navbar-nav navbar-nav-hover align-items-lg-center'>
+								
+										<li class='nav-item'>
+											<a href='/' class='nav-link' >
+												<i class='ni ni-book-bookmark d-lg-none'></i>
+												<span class='nav-link-inner--text'>首页</span>
+											</a>
+											
+										</li>
+									
+										<li class='nav-item'>
+											<a href='/archives' class='nav-link' >
+												<i class='ni ni-book-bookmark d-lg-none'></i>
+												<span class='nav-link-inner--text'>归档</span>
+											</a>
+											
+										</li>
+									
+										<li class='nav-item'>
+											<a href='/friends' class='nav-link' >
+												<i class='ni ni-book-bookmark d-lg-none'></i>
+												<span class='nav-link-inner--text'>友链</span>
+											</a>
+											
+										</li>
+									
+							</ul>
+						
+					<ul class="navbar-nav align-items-lg-center ml-lg-auto">
+						<li class="nav-item" data-toggle="modal" data-target="#argon_search_modal" id="navbar_search_btn_pc">
+							<a class="nav-link nav-link-icon">
+								<i class="fa fa-search"></i>
+								<span class="nav-link-inner--text d-lg-none">搜索</span>
+							</a>
+						</li>
+					</ul>
+				</div>
+				
+					<a class="navbar-brand navbar-icon-mobile" href="">
+						<img src="/assets/img/favicon.ico">
+					</a>
+				
+				<div id="navbar_menu_mask" data-toggle="collapse" data-target="#navbar_global"></div>
+			</div>
+		</nav>
+	</header>
+</div>
+<div class="modal fade" id="argon_search_modal" tabindex="-1" role="dialog" aria-labelledby="" aria-hidden="true">
+	<div class="modal-dialog modal-dialog-centered modal-lg" role="document">
+		<div class="modal-content">
+			<div class="modal-header">
+				<h5 class="modal-title">搜索</h5>
+				<button type="button" class="close" data-dismiss="modal" aria-label="Close">
+					<span aria-hidden="true">&times;</span>
+				</button>
+			</div>
+			<div class="modal-body">
+				<!-- TODO -->
+<div class="form-group mb-3">
+	<div class="input-group input-group-alternative">
+		<div class="input-group-prepend">
+			<span class="input-group-text"><i class="fa fa-search"></i></span>
+		</div>
+		<input id="local-search-input" class="form-control" placeholder="搜索什么..." type="text"  autocomplete="off" data-search.path="search.xml" data-config.root="/">
+	</div>
+	<div id="local-search-result"></div>
+</div>
+
+			</div>
+		</div>
+	</div>
+</div>
+<!--Banner-->
+<section id="banner" class="banner section section-lg section-shaped">
+	<div class="shape shape-style-1 shape-primary">
+		<span></span>
+		<span></span>
+		<span></span>
+		<span></span>
+		<span></span>
+		<span></span>
+		<span></span>
+		<span></span>
+		<span></span>
+	</div>
+
+	
+	<div id="banner_container" class="banner-container container text-center">
+		
+			<div class="banner-title text-white" data-text="沉石鱼惊旋 的博客" data-interval=""><span class="banner-title-inner">&nbsp;</span>
+		
+		</div>
+	</div>
+	
+		<style>
+			section.banner{
+				background-image: url(/assets/img/banner.jpg) !important;
+			}
+		</style>
+	
+</section>
+
+
+	<style>
+		#content:before {
+			content: '';
+			display: block;
+			position: fixed;
+			left: 0;
+			right: 0;
+			top: 0;
+			bottom: 0;
+			z-index: -2;
+			background: url(/assets/img/banner.jpg);
+			background-position: center;
+			background-size: cover;
+			background-repeat: no-repeat;
+			opacity: 1;
+			transition: opacity .5s ease;
+		}
+		html.darkmode #content:before{
+			filter: brightness(0.65);
+		}
+		
+			#content:after {
+				content: '';
+				display: block;
+				position: fixed;
+				left: 0;
+				right: 0;
+				top: 0;
+				bottom: 0;
+				z-index: -2;
+				background: url(/assets/img/banner.jpg);
+				background-position: center;
+				background-size: cover;
+				background-repeat: no-repeat;
+				opacity: 0;
+				transition: opacity .5s ease;
+			}
+			html.darkmode #content:after {
+				opacity: 1;
+			}
+			html.darkmode #content:before {
+				opacity: 0;
+			}
+		
+		
+			#banner, #banner .shape {
+				background: transparent !important;
+			}
+		
+	</style>
+
+
+
+
+<div id="float_action_buttons" class="float-action-buttons fabtns-unloaded">
+	<!-- <button id="fabtn_toggle_sides" class="btn btn-icon btn-neutral fabtn shadow-sm" type="button" aria-hidden="true" tooltip-move-to-left="移至左侧" tooltip-move-to-right="移至右侧">
+		<span class="btn-inner--icon fabtn-show-on-right"><i class="fa fa-caret-left"></i></span>
+		<span class="btn-inner--icon fabtn-show-on-left"><i class="fa fa-caret-right"></i></span>
+	</button> -->
+	<button id="fabtn_back_to_top" class="btn btn-icon btn-neutral fabtn shadow-sm" type="button" aria-label="Back To Top" tooltip="回到顶部">
+		<span class="btn-inner--icon"><i class="fa fa-angle-up"></i></span>
+	</button>
+	<button id="fabtn_go_to_comment" class="btn btn-icon btn-neutral fabtn shadow-sm d-none" type="button" <-% theme.fab_show_gotocomment_button ? "" : "style='display: none;'"  aria-label="Comment" tooltip="评论">
+		<span class="btn-inner--icon"><i class="fa fa-comment-o"></i></span>
+	</button>
+	<button id="fabtn_toggle_darkmode" class="btn btn-icon btn-neutral fabtn shadow-sm" type="button" <-% theme.fab_show_darkmode_button ? "" : "style='display: none;'"  aria-label="Toggle Darkmode" tooltip-darkmode="夜间模式" tooltip-blackmode="暗黑模式" tooltip-lightmode="日间模式">
+		<span class="btn-inner--icon"><i class="fa fa-moon-o"></i><i class='fa fa-lightbulb-o'></i></span>
+	</button>
+	<button id="fabtn_toggle_blog_settings_popup" class="btn btn-icon btn-neutral fabtn shadow-sm" type="button" <-% theme.fab_show_settings_button ? "" : "style='display: none;'"  aria-label="Open Blog Settings Menu" tooltip="设置">
+		<span class="btn-inner--icon"><i class="fa fa-cog"></i></span>
+	</button>
+	<div id="fabtn_blog_settings_popup" class="card shadow-sm" style="opacity: 0;" aria-hidden="true">
+		<div id="close_blog_settings"><i class="fa fa-close"></i></div>
+		<div class="blog-setting-item mt-3">
+			<div style="transform: translateY(-4px);"><div id="blog_setting_toggle_darkmode_and_amoledarkmode" tooltip-switch-to-darkmode="切换到夜间模式" tooltip-switch-to-blackmode="切换到暗黑模式"><span>夜间模式</span><span>暗黑模式</span></div></div>
+			<div style="flex: 1;"></div>
+			<label id="blog_setting_darkmode_switch" class="custom-toggle">
+				<span class="custom-toggle-slider rounded-circle"></span>
+			</label>
+		</div>
+		<div class="blog-setting-item mt-3">
+			<div style="flex: 1;">字体</div>
+			<div>
+				<button id="blog_setting_font_sans_serif" type="button" class="blog-setting-font btn btn-outline-primary blog-setting-selector-left">Sans Serif</button><button id="blog_setting_font_serif" type="button" class="blog-setting-font btn btn-outline-primary blog-setting-selector-right">Serif</button>
+			</div>
+		</div>
+		<div class="blog-setting-item mt-3">
+			<div style="flex: 1;">阴影</div>
+			<div>
+				<button id="blog_setting_shadow_small" type="button" class="blog-setting-shadow btn btn-outline-primary blog-setting-selector-left">浅阴影</button><button id="blog_setting_shadow_big" type="button" class="blog-setting-shadow btn btn-outline-primary blog-setting-selector-right">深阴影</button>
+			</div>
+		</div>
+		<div class="blog-setting-item mt-3 mb-3">
+			<div style="flex: 1;">滤镜</div>
+			<div id="blog_setting_filters" class="ml-3">
+				<button id="blog_setting_filter_off" type="button" class="blog-setting-filter-btn ml-0" filter-name="off">关闭</button>
+				<button id="blog_setting_filter_sunset" type="button" class="blog-setting-filter-btn" filter-name="sunset">日落</button>
+				<button id="blog_setting_filter_darkness" type="button" class="blog-setting-filter-btn" filter-name="darkness">暗化</button>
+				<button id="blog_setting_filter_grayscale" type="button" class="blog-setting-filter-btn" filter-name="grayscale">灰度</button>
+			</div>
+		</div>
+		<div class="blog-setting-item mb-3">
+			<div id="blog_setting_card_radius_to_default" style="cursor: pointer;" tooltip="恢复默认">圆角</div>
+			<div style="flex: 1;margin-left: 20px;margin-right: 8px;transform: translateY(2px);">
+				<div id="blog_setting_card_radius"></div>
+			</div>
+		</div>
+		
+			<div class="blog-setting-item mt-1 mb-3">
+				<div style="flex: 1;">主题色</div>
+				<div id="theme-color-picker" class="ml-3"></div>
+			</div>
+		
+	</div>
+	<button id="fabtn_open_sidebar" class="btn btn-icon btn-neutral fabtn shadow-sm" type="button" aria-label="Open Sidebar Menu" tooltip="菜单">
+		<span class="btn-inner--icon"><i class="fa fa-bars"></i></span>
+	</button>
+	<button id="fabtn_reading_progress" class="btn btn-icon btn-neutral fabtn shadow-sm" type="button" aria-hidden="true" tooltip="阅读进度">
+		<div id="fabtn_reading_progress_bar" style="width: 0%;"></div>
+		<span id="fabtn_reading_progress_details">0%</span>
+	</button>
+</div>
+
+<div id="content" class="site-content">
+
+
+
+
+
+
+
+
+
+<div class="page-information-card-container">
+	
+</div>
+
+<div id="sidebar_mask"></div>
+<aside id="leftbar" class="leftbar widget-area" role="complementary">
+		
+			<div id="leftbar_announcement" class="card bg-white shadow-sm border-0">
+				<div class="leftbar-announcement-body">
+					<div class="leftbar-announcement-title text-white">公告</div>
+					<div class="leftbar-announcement-content text-white">个人博客。</div>
+				</div>
+			</div>
+		
+		<div id="leftbar_part1" class="widget widget_search card bg-white shadow-sm border-0">
+			<div class="leftbar-banner card-body">
+				<span class="leftbar-banner-title text-white">沉石鱼惊旋 的博客</span>
+				
+				
+					<span class="leftbar-banner-subtitle text-white"><span class='hitokoto'></span></span>
+				
+			</div>
+			
+			
+				<ul id='leftbar_part1_menu' class='leftbar-menu'>
+					<li class='leftbar-menu-item'><a href='/'>首页</a></li><li class='leftbar-menu-item'><a href='/archives'>归档</a></li><li class='leftbar-menu-item leftbar-menu-item-haschildren'><a no-pjax onclick='return false;'>实用工具</a><ul class='leftbar-menu-item leftbar-menu-subitem shadow-sm'><li class='leftbar-menu-item'><a target="_blank" rel="noopener" href='https://lab.magiconch.com/homo/'>恶臭数学分解器</a></li><li class='leftbar-menu-item'><a target="_blank" rel="noopener" href='https://lab.magiconch.com/nbnhhsh/'>缩写查询</a></li><li class='leftbar-menu-item'><a target="_blank" rel="noopener" href='https://www.luogu.com.cn/blog/IowaBattleship/latex-gong-shi-tai-quan'>$\LaTeX$ 公式大全</a></li><li class='leftbar-menu-item'><a target="_blank" rel="noopener" href='https://zh.numberempire.com/factoringcalculator.php'>因式分解</a></li><li class='leftbar-menu-item'><a target="_blank" rel="noopener" href='https://csacademy.com/app/graph_editor/'>图论绘画</a></li></ul></li><li class='leftbar-menu-item'><a target="_blank" rel="noopener" href='http://cyx2009.top/'>目录</a></li>
+				</ul>
+			
+			<div class="card-body text-center leftbar-search-button">
+				<button id="leftbar_search" class="btn btn-secondary btn-lg active btn-sm btn-block border-0" role="button" data-toggle="modal" data-target="#argon_search_modal" >
+					<i class="menu-item-icon fa fa-search mr-0"></i> 搜索
+				</button>
+			</div>
+		</div>
+		<div id="leftbar_part2" class="widget widget_search card bg-white shadow-sm border-0">
+			<div id="leftbar_part2_inner" class="card-body">
+				
+				<div class="nav-wrapper" style="padding-top: 5px;">
+	                <ul class="nav nav-pills nav-fill" role="tablist">
+						
+							<li class="nav-item sidebar-tab-switcher">
+								<a class="active show" id="leftbar_tab_catalog_btn" data-toggle="tab" href="#leftbar_tab_catalog" role="tab" aria-controls="leftbar_tab_catalog" no-pjax>文章目录</a>
+							</li>
+						
+						<li class="nav-item sidebar-tab-switcher">
+							<a class="" id="leftbar_tab_overview_btn" data-toggle="tab" href="#leftbar_tab_overview" role="tab" aria-controls="leftbar_tab_overview" no-pjax>站点概览</a>
+						</li>
+	                </ul>
+				</div>
+				<div>
+					<div class="tab-content" style="padding: 10px 10px 0 10px;">
+						
+							<div class="tab-pane fade active show" id="leftbar_tab_catalog" role="tabpanel" aria-labelledby="leftbar_tab_catalog_btn">
+								<div id="leftbar_catalog"></div>
+								<script type="text/javascript">
+									$(function () {
+										$(document).headIndex({
+											articleWrapSelector: '#post_content',
+											indexBoxSelector: '#leftbar_catalog',
+											subItemBoxClass: "index-subItem-box",
+											itemClass: "index-item",
+											linkClass: "index-link",
+											offset: 80,
+										});
+									})
+								</script>
+								
+									<style>
+										#leftbar_catalog ul {
+											counter-reset: blog_catalog_number;
+										}
+										#leftbar_catalog li.index-item > a:before {
+											content: counters(blog_catalog_number, '.') " ";
+											counter-increment: blog_catalog_number;
+										}
+									</style>
+								
+							</div>
+						
+						<div class="tab-pane fade text-center" id="leftbar_tab_overview" role="tabpanel" aria-labelledby="leftbar_tab_overview_btn">
+							<img id="leftbar_overview_author_image" src="/assets/img/favicon.ico" class="img-fluid rounded-circle shadow-sm" style="width: 100px;" alt="avatar">
+							<h6 id="leftbar_overview_author_name">沉石鱼惊旋</h6>
+							<nav class="site-state">
+								<div class="site-state-item site-state-posts">
+									<a href="/archives">
+										<span class="site-state-item-count">166</span>
+										<span class="site-state-item-name">文章</span>
+									</a>
+								</div>
+								<div class="site-state-item site-state-categories">
+									<a data-toggle="modal" data-target="#blog_categories">
+										<span class="site-state-item-count">5</span>
+										<span class="site-state-item-name">分类</span>
+									</a>
+								</div>      
+								<div class="site-state-item site-state-tags">
+									<a data-toggle="modal" data-target="#blog_tags">
+										<span class="site-state-item-count">4</span>
+										<span class="site-state-item-name">标签</span>
+									</a>
+								</div>
+							</nav>
+							
+									<div class="site-author-links">
+										
+											<div class='site-author-links-item'>
+												<a href="https://codeforces.com/profile/Caylex" rel='noopener' target='_blank'>CF 账号</a>
+											</div>
+										
+											<div class='site-author-links-item'>
+												<a href="https://atcoder.jp/users/cayaxi09" rel='noopener' target='_blank'>AT 账号</a>
+											</div>
+										
+											<div class='site-author-links-item'>
+												<a href="https://www.luogu.com.cn/user/516346" rel='noopener' target='_blank'>洛谷账号</a>
+											</div>
+										
+									</div>
+								
+							
+									<div class='site-friend-links'>
+										<div class='site-friend-links-title'><i class='fa fa-fw fa-link'></i> Links</div>
+										<ul class='site-friend-links-ul'>
+											
+												<li class='site-friend-links-item'>
+													<a href='http://yin-xin.fun/' rel='noopener' target='_blank'>吟心</a>
+												</li>
+											
+										</ul>
+									</div>
+								
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+</aside>
+<div class="modal fade" id="blog_categories" tabindex="-1" role="dialog" aria-labelledby="" aria-hidden="true">
+	<div class="modal-dialog modal-dialog-centered">
+		<div class="modal-content">
+			<div class="modal-header">
+				<h5 class="modal-title">分类</h5>
+				<button type="button" class="close" data-dismiss="modal" aria-label="Close">
+					<span aria-hidden="true">&times;</span>
+				</button>
+			</div>
+			<div class="modal-body">
+				<a class="badge badge-secondary tag" href="/categories/Essay/" rel="tag">Essay <span class="tag-num">4</span></a><a class="badge badge-secondary tag" href="/categories/Solution/" rel="tag">Solution <span class="tag-num">147</span></a><a class="badge badge-secondary tag" href="/categories/StudyNote/" rel="tag">StudyNote <span class="tag-num">4</span></a><a class="badge badge-secondary tag" href="/categories/Technology/" rel="tag">Technology <span class="tag-num">1</span></a><a class="badge badge-secondary tag" href="/categories/TravelNote/" rel="tag">TravelNote <span class="tag-num">10</span></a>
+			</div>
+		</div>
+	</div>
+</div>
+<div class="modal fade" id="blog_tags" tabindex="-1" role="dialog" aria-labelledby="" aria-hidden="true">
+	<div class="modal-dialog modal-dialog-centered">
+		<div class="modal-content">
+			<div class="modal-header">
+				<h5 class="modal-title">标签</h5>
+				<button type="button" class="close" data-dismiss="modal" aria-label="Close">
+					<span aria-hidden="true">&times;</span>
+				</button>
+			</div>
+			<div class="modal-body">
+				<a class="badge badge-secondary tag" href="/tags/%E4%B9%B1%E6%90%9E/" rel="tag">乱搞 <span class="tag-num">2</span></a><a class="badge badge-secondary tag" href="/tags/%E5%8A%A8%E6%80%81%E8%A7%84%E5%88%92/" rel="tag">动态规划 <span class="tag-num">1</span></a><a class="badge badge-secondary tag" href="/tags/%E6%A8%A1%E6%8B%9F%E8%B5%9B/" rel="tag">模拟赛 <span class="tag-num">20</span></a><a class="badge badge-secondary tag" href="/tags/%E9%AD%94%E6%80%94%E6%9D%AF/" rel="tag">魔怔杯 <span class="tag-num">2</span></a>
+			</div>
+		</div>
+	</div>
+</div>
+
+
+<div id="primary" class="content-area">
+	<main id="main" class="site-main" role="main">
+		
+		
+			
+	<article class="post post-full card bg-white shadow-sm border-0 post-preview">
+	<header class="post-header text-center">
+		
+		<a class="post-title" href="/archives/CF1829/">[题解] CF1829 做题笔记</a>
+		<div class="post-meta">
+			
+						
+						<div class="post-meta-detail post-meta-detail-time">
+							<i class="fa fa-clock-o" aria-hidden="true"></i>
+							<time title="发布于 2023-5-7 9:39:00 | 编辑于 2025-2-12 19:57:05">2023-5-7 9:39
+							</time>
+						</div>
+					
+						
+							<div class="post-meta-devide">|</div>
+						
+						<div class="post-meta-detail post-meta-detail-categories">
+							<i class="fa fa-bookmark-o" aria-hidden="true"></i>
+							<a class="post-meta-detail-catagory-link" href="/categories/Solution/">Solution</a>
+						</div>
+					
+						
+							<div class="post-meta-devide">|</div>
+						
+						<div class="post-meta-detail post-meta-detail-words">
+							<i class="fa fa fa-book" aria-hidden="true"></i>
+							<span id="busuanzi_container_page_pv">
+								阅读<span id="busuanzi_value_page_pv"></span>次
+							</span>
+						</div>
+					
+						
+							<div class="post-meta-devide">|</div>
+						
+						<div class="post-meta-detail post-meta-detail-words">
+							<i class="fa fa-file-word-o" aria-hidden="true"></i>
+							2.4k 字
+						</div>
+					
+						
+							<div class="post-meta-devide">|</div>
+						
+						<div class="post-meta-detail post-meta-detail-readingtime">
+							<i class="fa fa-hourglass-end" aria-hidden="true"></i>
+							12 分钟
+						</div>
+					
+		</div>
+		
+	</header>
+
+	<div class="post-content" id="post_content">
+		<p><img class="lazyload lazyload-style-11" src="data:image/svg+xml;base64,PCEtLUFyZ29uTG9hZGluZy0tPgo8c3ZnIHdpZHRoPSIxIiBoZWlnaHQ9IjEiIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyIgc3Ryb2tlPSIjZmZmZmZmMDAiPjxnPjwvZz4KPC9zdmc+"  data-original="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAABE0AAACICAIAAACdl4JiAAAgAElEQVR4Ae2dC3RV1bnvZ3jIFhMeQppIYh4GEXmVYiHCgaRRLGPQNo1m9JLKsIn13J6OVg+1p9ci9cTd1CJ6ztVL9XT0tscDOd544nUEI+1hDGpqboIHDLSUgiAgkBATSEp4JuLmmfvNOddca661136Sx97Jfw0GWWs+vjnnb+2drG99j5nQ29vb2trKcIAACIAACIAACIAACIAACIBA/BPIyMigRYwKtJAxY8aMHTv2pptuGjVq1MiRIwM1QzkIgMDwJEDvR+QvkeG5fKx6KBHAhzkW7ibuQvC7AD7B+aBWJzAcPi3XxHH58mWfz3fx4kV9+fq5i55Duo1HHKNHjx4xYoTeGucgAAIgAAIgAAIgAAIgAAIgMIgESEOhg4wxpLaQbeazzz67cuUK6T6OKTn1HOqTmJhIag7ZcBISEhytcQkCIAACIAACIAACIAACIAACg0hAKin0P1llSGchbae7u9vfsOM010hLDqlHUHIG8eZhaBAAARAAARAAARAAARAAgeAESGEhPYdMOqTC+Ld00XPIpOPfDiUgAAIgAAIgAAIgAAIgAAIgEIMEyLDjPyunSkOWHP9GKAEBEAABEAABEAABEAABEACB2CTgaqdx6jkIy4nNm4dZgQAIgAAIgAAIgAAIgAAIuBJw1XOc1htXo4+rOBSCAAiAAAiAAAiAAAiAAAiAwKATIFON/xyc9hz/FigBARAAARAAARAAARAAARAAgfgiAD0nvu4XZgsCIDBkCXT8RzHljaGj+D86huwisTAQGCYE2t4wvs8/2zFMVoxlgkAMEoCeE4M3pS+mZP6GpYcm/ZfsBz8Xz1EJP/+gL0aBDBAYzgTUt0n/ipm6il6442fyawcFZjh/XMJau/X5MT4y9KP4jbaw+g7PRiYxvB0Ynh8ArBoEghOAnhOcz5CoLf9n/JkcEjcSi4gxAunZD8kZlb+nXth2vPf2JmOW+5qVUaajeZ8se6h4SWqQNaR+s6ZXHDXfNJopBQlPukGwDZmqHfQW6raH6fPzUNUn8oPQe/IN+ohtWrnB+Hz17efB1BDw2utGP0Pmi0X9reKNCkV/EACBPiAAPacPIMa8iE0rf/iGeuSK+cligiAQLwTS7yv+hpzr7mbjjXtz81tq9m/VvOco/EbxfemqFj9BwE5gx88WPSNKHnrjXx5WnxOh+m5/zt4SVyAAAiAAAmESgJ4TJqi4bVbxHP8b+dbK1wI4qpmv9CwviYSfq5fTfNXaG8SON/6bamW8teIvIOXh5zOgNRYt8Mowbj9DmHggAqnZs2XVJkPPaWvebbX1K5ydbZhplMMbfWvUF1B86bRyxvg3aFG5IX/l7eJb9N+sFxaqo/EFdHOTIyuQ+hqar5nNF8+qX4Im05o7zgaagGn0Y/PUx0RNYeFP/nFhkM+D85PA72yo3+E/20G/2IXtiA/yzEL5abD1UqMPiZ/qm2V86vXPvKrSvoyCoP0vpg3yz35u/OGTckjC7SsNM275IgOlvTtTo1Ct39/KIUEYiwCBWCUAPSdW70yfzeu+x7jnA3vmJesJySm7YrvhJNF7soq/n35mkf3PpGi/aeXt32cv9fZ+UsXFGb/N37uvV3pWsE0P32ZpMvxZ6raVbynvix1c1aI/pfj9Lkjiv6FDYOEDxqv23cJJrWNbDX/cqdi+vYKvURaytmb5DPTcA/S0ajvoW2M+a9oq+EXqw/+3V8qxHJn+78NCU+LaC3V86I2T4psr3vfTV1J/euMS6DtLX0N+Zhzqgey5HeobL7/Oqh4/B4+AqTMLrcPUS60JBfk88I+cuqPBf4dbn4eF/2j86qYR1OfhJ84PqDV6HJ/xV3ULn1GIBJ+3Vt7m9zeOvozfZ/9CGOWX7pmFlrMoKTnye2qAeoBJy5sB5d6fGH8W6VrdiJ/cqxGj7+a79KfS7W+l1gqnIAAC/UEAek5/UI0tmanf/FEQkw73i+AvC+WR+vAP5XPbM+85Xkdxl/Ea7k2Rnj1Ptv1G1cle/ncxdUkx13zMpzp6D/1D8XKr4keG98W9jwn1iW16+70O2Rf/g8DQIHDvffILs+lIMy2o+QjXaB6amp09lX8n5Ad+x7uGO1K2ckYyl64UFXoEiuARs+M/vi+0l+d+ZITxLJTvMpjlKSdHUC8aSLw0CLwkZ/LcfeZDWPrDNYbuZE4KJ4NDYOGj4hWSHFyZBej1v/X+KMC8IvkdTh8FcVi/8wMIHTLFH/xcGEUfqnpU/pkL+DeOvowyLk69vNhUs038vWp74/s8aIqxb1Q9Jr846lsfLiRSfgRw82/lM+/qPhPhikE7EACBKAhAz4kCWtx1MR6DApp0dFcWeu8lDuNVdCRrlY96rO29GvkK2fpTrV4ivtXMHwZxgMDQIZCdLUN0eNaBHe9xNzOebMB4oOEfeOWP1GfBOWaqA7K7GocyCilPuRB4jY4hH6BDiEF13xIgndOwqNvkcqcyF/OOrQ3ro9/hdqFD4Uq9ZSDbpvq2RPo3TtljH3rwPmFNHQpYsAYQGD4EoOcMi3ud+s1/4RaVt1Z+/6Xd9gUL933hW2y8WhY+ZvY2EV6pvwqmBV+9QqSfEby0jnBUNAeBQSGQet+DwpxJtpQPZHDOPG63McyelJ9AZSYwg3NudJpKIHvO9FUyv2I2bxnnQKkPv6RZDMyojJDP0E45uO4/Atw5TR1a+gEroZ//0P3wO9x/kHgtUW8ZtBR2Cm+vmdUw+OI69Ji74E1RCwIgEHsEoOfE3j3plxkZxvpNb8lIATWGaXup2B7mL33VM/BPM9lu4CaoAYEhQyDVcOTc1PyuiMP5RnY2X9vC+yro/001G96Trxb8g3OiJaAsSFH05xYDFWJndkfeeRNFbJ0s/EmvqeqQwhxgcv3xOzzAUHFYbEU9xeHkMWUQAIE+IAA9pw8gxocIFSRjm62yvVBEga38Ri7MAJ5g7yBvZAD0BYFYIqCc9Z8p5z6fpnOLEaJT/ox4taCFxNzo3M1HN/8guvBES21HxVuH1wet+psAmWWCpDsTRkLXKfTH73DXgeKzUH4N+RsHGWwT+SrMoBrDMTtyCegBAiAwiASg5wwi/AEe2oy/1MZVj2gqQ0DHG0akstYm4tOFPzGc355ZpCWA4klvtMuIpaIDCMQoAZuBxUwKrOw8YtKGkSfiBZgh0frr/IX/aLzm11NCicS1VoYot5F4FngtJke59PRZ4JDbmCiLgICIm9LcCM0ddZ7bYXj8unwebuB3uPkEH0U0ZgTLGtSmhs82KTrOjKD6dyHoFM1tskzL5wfvGWGsZj+zjbU7sFmHExAAgcEkAD1nMOkP9NguJp2FP5GJZXmeTTq+zx6U6aNubGqUZ1MG1BpiuWhKemO+6r4x6egNAjFFQIXo8Ek9ZCVVUw+gvDTqCOZ7f3JS5oWXO5wYbwrIo0nmqLVHV4ehsaidUugbybOD8Kg85FuLiU+Tip6y0reI3ZNEnmIr7Mrl83ADv8PJsifeSZEOwH9H+6VajgkwYU9CrUIshf4zviwi5EntbWDU8ZDU8E2sZkZv9XV7lxl/Jq2gO2oj3j6oP3naC4WwF4CGIAAC/UAggby1W1tbTckZGRnmOU5AAARAIBAB+r2BXxeB4KA8vgjgwxwL9ytu7gJlt1PJe/osrjWMGxA3fMJYC5r0N4Fh+2mhhZts5SMK7DkmEJyAAAiAAAiAAAiAgI0A7ROqp/besUFsEMfMDaxsjXEBAiAQUwRGxdRsMBkQAAEQAAEQAAEQiC0C5E/Id8dSh9r6U13jJwiAQIwSgJ4TozcG0wIBEAABEAABEBh0AqnfrOn95qDPAhMAARCIhgD81qKhhj4gAAIgAAIgAAIgAAIgAAKxTAB6TizfHcwNBEAABEAABEAABEAABEAgGgLQc6Khhj4gAAIgAAIgAAIgAAIgAAKxTAB6TizfHcwNBEAABEAABEAABEAABEAgGgLQc6Khhj4gAAIgAAIgAAIgAAIgAAKxTAB6TizfHcwNBEAABEAABEAABEAABEAgGgIJvb29+u6h0chAHxAAARAAARAAARAAARAAARCIDQIZGRk0Eef+OSkpKbExPcwCBEAgpgl0dnbi10VM3yFMLmwC+DCHjaofG+IuBIdLfLoTO4K3QS0ISAJJPanD8w80fU0cnwH4rTmA4BIEQAAEQAAEQAAEQAAEQCDuCUDPiftbiAWAAAiAAAiAAAiAAAiAAAg4CEDPcQDBJQiAAAiAAAiAAAiAAAiAQNwTgJ4T97cQCwABEAABEAABEAABEAABEHAQgJ7jAIJLEAABEAABEAABEAABEACBuCcAPSfubyEWAAIgAAIgAAIgAAIgAAIg4CAAPccBBJcgAAIgAAIgAAIgAAIgAAJxTwB6TtzfQiwABEAABEAABEAABEAABEDAQQB6jgMILkEABEAABEAABEAABPwIdB55bXbjlr1+5SgIkwAAhgmq75qN6jtRkAQCIAACIAACIAACIBArBM5t2bn+xz59NvOr8pbP0QuiPu/Z9Q+7t7Apq/7n1AmRy2j+343//uqEb+2bkx153yHTg0M4HCXAIQOhvxcCPae/CUM+CIAACIAACIAACAwWAc/yugXzU8Toe/f+dGXjyRfmPbY8cbBmg3FBYCAJwG9tIGljLBAAARAAARAAARAYJAJz5nzrcdb242PNfTB+4vz/mfdsVMYcGjz77/KeHd7GnD64AxARBgHYc8KAhCYgAAIgAAIgAAIgEP8EJt7uYczX1cmyU5jhN/UUq1l6oo2W9vi0Z/8ulS+RwkhkCb8I6F1mc7sSXW6rmpdcuXvL73k39mXhkcUtSOfENUvX7EjCoc6j/NY6tsw+TFamYnZAedlpNijGnN53UrIUypx958s5OBzqxDQC+exFw0FbF5+IQmdjwiuEd980BZaXGAdv+Sqdn1g/+wQvMhYl2kuAvNTGgRfgiJAA9JwIgaE5CIAACIAACIAACAwNAr8/sZ5Ugn15VoyNUgkeE2E8/HF89l6lkIRY866VB5bXkZGHmnH1gz/B0+P7vjlcOBd7YNc9yoPOT1Lbj3fXvDDv2X3coY4PunTvZM3go6koXBNY/w9MjwvS+3LBpRO2rDzzcSczvPVI4I5zNJNFQQKTIuKgEKlIp44t/9BDypzF0G91/gVk0foWc8TnqJCnfUbIEyl42zsZkz6H/iJQEgYB+K2FAQlNQAAEQAAEQAAEQCD+CZz9xMe+fOud5qOzzTZCy+vYsvIcGV7UEzw5mE2bz859FF6OtflVphqTevfjpo1CUJvzufnMt/dPPYEQ6tae7IWkMnCjkzwmLF9gzoexxDvv97DfXzyrCdL78mIx1pbaDqNJ55H3XmXp96cG00Mi4eCnNaUuj9Z/T1sEmdE69v6ezS+18jrYF25ri4swCUDPCRMUmoEACIAACIAACIBAHBMg+wD5SulP0s7F7P3rLuaZc4+epSAx+cvsZFtA/cQpoc+ufaeUnsNFkglldqP8J3zbLC3IbcDURS942Kt/lWFI5/50po1NuC+i1AtBOXDfP7L//G+lR7nNIJqylMTbGNu1cucufeHRCEIfiwD81iwWOAMBEAABEAABEACBoUXAt2Vp4xZjSRTvkWd6cwVYpt5eNZlGeo6u/KjygfhphKyYrmsiXCfEwBPuuTWdnXhvS89jy3u2U2btxzMiT2AdkAOZWb71CUXXHP7pq4fFPPoqiiZ1eV3PyaUnrPulwn5CrBbVgQlAzwnMBjUgAAIgAAIgAAIgEN8EIn0Kj7R9P9PZe4wSG5hKTriDpUy97/ET//6HjnPpF8lCtbxI5FcIt7NsF4wDzxf3d7IZj0TaYo8mimwcvXXK1Mf2TZUFQp07/NrtiUgCrhOK9Bx+a5ESQ3sQAAEQAAEQAAEQGIoEQkXRDNKaPclmQFHYM+BBPuRdRtneHs8IZcLyExoBh9TlVVY0kXBps8UO+YkOt2DC8hnLv8zaPhl4j8FwZxgX7aDnxMVtwiRBAARAAARAAARAoL8J8MgWSl+2RUs8QIYF/bK/Z+CU71A59u5VuaedDZ3Xc+4gPYGO+QujMOYE40Dp4HQgIi2BkdphQjql7TbTNjiSRDsnKJQinhfOOCg39z8cOaeujLQE0UzeFIETBr81fAhAAARAAARAAARAAAQ4AQo+efYe2j+n8acWD9pCx7oY8DMetfLa0t0//bEY+fFpq17wrZfnIaaSOHkatQiaTjqwhCAcyFL07ysbd5l99Vxtc+asemHneqOWPN/mLWe7VXCU2cE4MeJ8ZPQUF5I6h+02ttMRTSL21nOOgGuW0Nvb29raapJISYncNGh2xgkIgMCwIdDZ2YlfF8Pmbg/xheLDHAs3GHch+F0gPt2JfZ3gK/iQcV9rbCE6DONbknpSh+cfaPqamB/bjIwMOoc9xwSCExAAARAAARAAARAYCgQunrvyT0t2DIWVRLWGZ/flndvSuotN+JZIJ00JqaMSExOdFj92+/0/iDxdXEzMffAnMcz1nKZ1nvw9lcerV4Rlxep8sySztJbftOKNx6tKwuoz+Ld4sGYQGduBmaW8g0Vh3/GBmZUcpWmtJ7+CeRt9qxcM5LAYCwRAAARAYAgSGDthND3rD8GFhbukDj2d9PBGES6yIdkuPvMQtFeXePSjpLq9/+/OznWZpWzjUR8/YlXJoWdlx1HypmXC639GEY6wc502W9tNJIVEq7JO/ZfDl7y2KayB26tXldaSImGqtW6jrHPKEh82/3HDGjFII7F2XWzuGl9DOfPm+U0giBBUgQAIgAAIgAAIuBBIXb6PUj9HkYHARRaK4pdA/Ok5/Lk2p2xuo9A3xH/HK1lZjmfdzv69C011XlZcVJDWv6P0hXRvg8mm0VtbmhmuGtAXY4cvg+sYeXsMvdHnc9zElBXV5iKMk0YvCZ+bbbeitVe/XBHmmJ3VT5XVFm981GktKTLnQAM1lHvzPR5d/QhTemTNSHfK8/p3yV3T4GXel2NZNfWfNEpAAARAAARAAARAICYJxJues3Odv28PfyY+ujFrAPjOdDxlD8CQNzbEgtVkImAV9U4bxY1J7YvenfWba1n5kyVKb0xZsX5jMfPWBZppZ/V60jM1LUXagnLKhB9hGDPauaGshnlXhfA2JKOKTyiHlqqTVkIql2kCCmOkkE2ExlXu9bo0zH20sqi2dEMgCi49UBSbBHZu2+zZbPxbubtLTfLwWl64LdqXMhF1l43NaWx905yFmg1+ggAIgAAIgMCQJhBfeo7fw655b9JKSqz39J3VKy1PJ6edx+bzlu81JagT3fXLfNilQtKvWAW96+eHKdO1sZBE0SncLGB6RqkutrmRJOuJ1jYxrZzE2fy7wnbTUity/Aw4ZzEBNU/RiY9ruZPxjiurO7V5mnyMIbQqj8eFrWMmbH9zp7MowLW/lrJgtbDzHCftKJxDmOM0NSlIH6EcasqGcSt5D3EjbIgYM7AEEWivalqbWcY2Hl9TYC82rlIWFxUxb320z8GuMlE40ARIyck7aw1a07ZdU3Ws8n48O7zNs/mg3dR5qXT75oGeRj+uEKJBAARAAARAICSBuNJz2utra1hRYYHddcmxRnoqzSybqVy3Gr3ePEst4c+pNp83chPSD66E5O/feFx6Sh3dyEoz5aO8jJ3g6QdElYgUD9jYlEg+Y6vYeilMdBFzo2dcWcS9pPY0y8gi+8SE95RSdagqz0tRJepo8IavHrDO5v2UNSEry5hT6Dmbk3c/qSnLfEotSdg9rId++xJocV53EbI0paCwiJE0U9PjmkzRxtJc104RaCmu/SWHsM1xuUu9jKlbowtcUEAVNqOTcJwLaSYyZZDem1/hbQgS35VWUBTMrmVKwknsEjhcx5WcMZWLCn2FhUfTx9BFzalW+U2/sVlPW1NIMpdY73RcxXXtXnmQz6A4fRFNQPxbVMlnwWraPoIK7coMhSAAAiAAAkORQFzpOeIGOCM07Hel882XKcKhYY16XF6w+nhlkYrtFuag8oZA+aw631xVVqM9g6aVrCcnos317jYH+Vz+ovKDIu8m/ty/Ss+I4MjrZcxNe8bNXVMtHLea1uV5qbE5MRmnIV/q+z3i567WJNhX77wSKyraaE4yjDk7RTiu9URz4qF/j2GSCcHWIYYupbch2S4MG1kea/BJGn5tI9Ql/PpTQUsLOa0tVZ8KtxZ+ZbUtLg+m3K9M9wPsfL+2lnkLQjx3KtlGKovVQeeRkj1TtcfPeCZwaXMrdxRLm7eMaxrL5ikXTX1NdteybYd5HWkp5Nu2dbf6+HW9uZX7nq3llU6/Nd07TjTgAtpbT9XQj4nTq+ZN5tf8mLzinvRirnqF0pFkc/wPAiAAAiAAAkOBQPzpOUGpy6iPAv05MiV7rvFuXpiDAj/sBuhb09LiNqRLWoK0rCLm+nAs+7vINwTvrPeyoqLFKdo4WVnFZFDgGlZWjrB7hJlSjItQmoPHk7m56LimPEQ+Z21GAU5rj7bwmhBs3Tpz+09tkchfx4OI+LQtHzm9Q1Ola/4AvcnAndv9ygLfU/8ZkVMf12bXmyFJ/k1kCb/jEZjsAolB+aARmLZ0Ih+b3NWUfuI6FVJg7K5lZw9yXWVyRiHZXi6del+G03S1br5ExqH0Ur6tt+1weMdVHJS6EGv/lDqw8hR7h8nzqgqXrTAVH5skXMQeAe4ua1nL+2Z+3J7vdDbuG8mQAgIgMNwJXLt2fXtT8z+u3fqVhzfOX7Luu3//H3X1B69cuTboXOJPz1EGhLDRhVA/7HJUBA4F4fAjz+vuv2TvZFylSY3K3fzj2kMrrKWUcdqRSUHzUoUgu4fIJWCYPfSAGa27fmrkWyNDFjmGrQqevOuG5qwPGum5NGEZD/08+p/7udWWPVXtxCeMOaGcFSMdPZz2RVluL+CZ9CtbL+bJtbuAvnaOMbjlp7yhT/MZOEbAZcwQWLDE8BOjGZH64dnsmgNg8opl0qmM/98oVKP9PaTcTF6czBUdaQ6Sxpni5Aznp7Fr93rNO843nfev6CQ9qav5og1E++6tZkaEADOxtcdFAAJGsCXFKNobqCBM5Wlsr43yir/8shmKA8ZVmgPQmyPzcH0vJn5fqRdqXOfRD3+dSq1LtHIItIViUgPn2vXZ8v6O7uaccQICIDBUCPzxz58cP3V5fFrarVNSuz+9svdg5+8bjuzY1TLo64srPUc8YgZ0JAvEsr2llgV4ZvXvUq4Ce1Q0DKXaCvkC3hDT3rzHP/Gx/xDuJbbsxsbgyvtOqAGyTCgDOc4/Kq4ipYLkcKVztryhOTuFRXDtMq5wCfOznnFjDvM+Gd5GrhFMIGhTF8OX1T6lZJWX1dTWtzNhaIok1bhNi873Msazfvu9tW05WsvCDiWy5oWzWCIgdJhF5ComD8oBEDDHmvQ90/MWpM3LJgunCOnpev8Ut+YUZvgZYs58KpzTsg0TzbQl3DtuCdlwJmePjSUSQ24uNWUbbDFOwqjbx6uUbsCWYwKpDTyuT/4R0AJHzWG5XsFdf9Wh/naYDejE9vuKdB4tUpSSTFIgq27qISXH2i+OXkLR7y5NV6G3NqzSjDOV6fh1a3xTvTlbmtHRjUXU3U8/1OeGcxAAgXgnsPdAx87dbYePnupoO/Vp96cn28/+6c9tu/eeJDvP4C4trvQcZgSv2//MCIDt1dX8b49oYE+j3Cm1D3obGsJ24dI3yL3hoeriYddqE0KhCiyfB7rU1r7veEtoCdbOclfzbWTcQuS1RuZp7hpKR0aWIkMvCjHnEHxMqW4nUfV1mOb4873jkMacykd1R0RHk/AuLT/A0O1l7vIgGaiN+1VdXxEyK4Y1Go9Hsh2ksjIKyqIyMy5LtBapI6x+OItfAtxVrNBnaDsXm6UfmrUcGXiztfluy56jKoXnG7muHZZOa8mL/dQc1dLlZ9otPOeAsO3wWiNAqNAyMbn0QVGYBLxe2sxXmnNlDx70yAv78nAYimWAYqOK65OBo1r2edJJhBakGrhPhXQPLbE+BZTqcZ4yyaQVjNq0obRWc7IVf3cqXjajT+m3mW6aFgGl+p+w3NU+bTJiwszvHZb7NFEKAiAQhwSuX+9t/eTsH3d+3NSw5+O9h69cunrlakJH17XWjitXr/b29g7mkuJLz+HB6+TE5f/myZNT1iIwpqx4ksz9+eabJx75Xes1/kLIzUnMVAFkuOfv1M3D6Gt77dS0znZptmVswaNchTD9rMKIvvCX37RWvgOTE8vUPQfoT5e8pBd1enlQU4M2PeM0peTFjTzWX64ixJy5MmCZy0SeN3+JAUpCsHX2Sit5spxbM6ylGTsjaX8d5QvIvjHm8OB+a2nO2VjX3FXDnhPCqrPOcgv45Mvok6YZmrg/fR+8s+SPOJGmTLBmhrMYIMBzOmuJBCYnuieWOPxRKTfVSB3G6Wy2IIX80C6VHmwjo015tlsOg1tv4cais83GrjjaoGkZyaLqoEcmNhBI2nf/iQ+H40YJFJRuLLLecBmGF3uSeKdLmGYnEb8lzD9PYi78d449NJH7uOp7Uvu9QbOCTrkEqZOEehnk5wjnAsJURfzt7WG4fxuxmi5ymcs7LLdmKAMBNwKn//PbubP+eZ9bVVRlf9wwa9Lq/zwRVV90CkCA9JyLFz7tbP6k/dCxi+e6R3jGjUya0js27cqICdcH2ZzD4kzPIcLciUsY7umpUh6ZpXPJXq9eitObpOMb96toFpGRWVVxNel4JVORMKvYi/ydunZQX1/DTEp2bB75ewKmsU4pqdIa55SRHV9/xaWJNU/F3JglP3+/4fXEX/Yf3bgnzxzXQ4uSWbzICEN6nXnwtNf6ezhTdqATkQiOZ3Dmqk7wOVNtg5fnehZHXQE5MwSS6l8eiq2zB7+PwlnCWFreno1HzZsoGgvNpyiQMcdwRueBTGpfo2DufMKW5XA4kVOyRUbJz1Ko+8hy6VmHepdbjiXO5UV7HVkCt2hHQb/+JE12E1QAACAASURBVDAthb/dv9SWY+wTKpINGPqMNq5UVIxm251KiBTCm09cSs5o/sfkeat4SA7fFYerVTKRtAzjITuSCNdhZw+akTk5bULL8Z+Gv2SUBCXA3adryyqbeCOH4cXqp3zMyFxrczMT3rk2jwOZy8TaMZkxXqJHJFouCaZ8XevgOglturXB/Bvh0JpkJ/6CLNjvK27tsXYg8NOsQnhDcCWKFeVkmRO0nbi9w7I1wAUIxAQBoVB9e6vT8h4Tc4v1SYwaNWLcuJvGjh09ctSoUTcnjZl4+83J0yZmTE++PcPjGZmQMJjzTyB7UmtrqzmFlBQ965dZjBMQiHcC9JJVbNAZkZY40Ium1735e0IrzAM9LdfxOjs78evClQwVkk+aprqMST9q5JWmxNCk9kxsFHvgUIYApX6kH72HPbW9rcZqyYzaidNF1I0cyNadivSUa7RbjpZI2m8OPKk08q1JjP7/h/NhJsOLeA+yOpfbuum9THV2pSefgmLW5Kr4GZs5Wo0ifvPQlm4yZoYs/znaSzFhNqft0cyXcYw3oESUVlyoi3BdiDS8U2SpiskR7Sng05JANh/6xcL0UdTk5E+xNHJUM17ViUvmL8GrjaIJEAukjCy2EXm9mAn9JK3PlYwmQ5yGcxecfYbTNfHpTuwYTiuWayX1Y/mPZ/zrhz+a3TdrJ3vOskMv7Fv3lSl9Iy82pST1pA7wH+iN/2f7WzV/2vfRKTZ6/JiUGbekZk+bNvkrf5NYer9nIBHR18QcLiMjg85Hmdc4AYEhTYC78NXmlG1YVWI9UsTYgpvWkiOlt2Fgky7EGIMhMh2eh2CFy1poo89pa1Q5j5yZpy4YqyqcV2VdibgarVbU2LpTyYIlhT6ti/000BzsrXAVOQHuAJxZ+371XIp4aXQPHlSP+KZw2iUgl79E5C67ZfkUCbOC770m/JA3PqptwMWzBVBiRgooDe8Q1h5b1kceLVORTxanEqX58K3baOszbRSb7PbqVaW1tAv2+qh+84hd2ijU0CVjPjfa808799bLd9eRbBPBBQiAQPwSmDF9yp13dRw7efkyGz/CM/6mxKTM22+edvvgaxnx57cWvx8CzHyQCYhwWEdw1yBPSRtePhipWDKtAqcgAAKxRYAnleEResU2FcWYIxlb6LHeSjhGyWBss7d8aF2S5otsAfYdjfmGWm6H3DJbxOo4qnmkpbYHl9MRztZamIYop2WDZuh2k8k7+XumSUMQC5Ex35nGwDYBXMQJgb/8c+6sSca/X//RnLQRPKPVbviLWUknPBhGddRcwnj7b2/9S81qVRs6YMZ9iBNbf2DK5yf20dm+X2u1P6g5rU/NOJczFPE/claG35oM4/mjJd/eXSzcEL76B9/O1Wu7xLo0Si7DDr2iO6d+bmpO8vjxY0eOHj3qptE3j7qUeevVqamDr2UM/gyG3s3GimKWAI+DokzhUb227O9FyezhMWtr6u/lQz4IxBEBkVRGS1+mTV2mwg/mqcXNQcxb1ySD8bRcJuSISIEutm1zSLA964AYyRk/E2R/aiOISG2bo02UTk0lx+FXpsf/yB7+mQkokIg78tWSkmO6zNmlO66CTtLRFpcxRoAUgJXPf7fqdNOH9G9fxYFltsd69vzfNn1JVJ1uqnr6VyuVPsMf95cxoxdVzSj/kqri63unfAP7H1zg6ab/92v249kOFcWOIMAQvNHXK/6fnNjpLS983RqdcRXobw/8eoscgqbNmv2SD3Aftl/9/damAE5x9T/+JXtGrZp9Z7lSXUh9Eq50xrgrZ7xjn+2wvBo/7ubJ48ckjull1y+PGXk58dInySO7bk0cfBbQcwb/HmAGIAACIAACcUWAJ60J+FaiOCsr2GLkHgP5pCQ48qy4Zwvw0zpsmQl4mnuuNWkDtrTUWCnvndnbzHZSySF/NoeSQw389wlwalaGksMz4yvvOFOw/4l0rnPfedm/NUpijcCJrRueZ3+/9dHPy4lNWfbMrwvqvrPZsts8/a/f+aIx6c8/XLH0nfomrlDs2/SdeqsXY1qVaPz1imeKJ8lukxcWLGWH2vzUEEMo/dCH+NJ32Tsn2mXdlGX/69+Wqbz7k77yPavqL2+U12lDMGrpiPBRSo45eWs446zgheeU8ClffODr7MBxbhHqqqn6BftulSVtStrXbV0nF68j5SqwWFvjIXNx7tzFrnNXP7s8euSIkSN9f+3ubDv5SWdXV8+gL3DwPecGHQEmAAIgAAIgAAJ9QoC7pVXU1r9YIjeYblorckLaXde4OYg2PKA8aYt5zI5xcDc2iub3C/iRIT156wqkQiLCaSgeRrXjOdy8pfnrlkq9i7IC6GF+POu0t7FaG0aMZio5mruamgf95DIzS1dVL5bJDJrW5VG6tgZzy2xH3gKtozil1AiUrtPUf2T8j9bd2R7XMU7gxIk6VvCAFrU/OfMuJtSSz2uFxiKmTJnB6tu5xnLiAGN1y3J/YVtdwQO2y764ILvN7PI6S9J3xenpNhp+xhSlAlnV8qz9jdWznmcv7GuKIhtBe3M9+3pB2DF0zqGH2HVPj+/I0b/u+ODYh4dOH26//ulNU8ZOnDBi9Kju812/e6/94KHOmXdNWpibOW3q58aNu3lQ1g49Z1CwY1AQAAEQAIGhSGDB6uOVJZk5njKxOG8j7XNAmR4dhwihmamnk2bS8LLe7emJnFobmCff45VSzMRo8pK742ZTCjhVzU00PMkBP4QjXINfBgLhMsf4fgM1ZaKd8Z8pme8TwKxV2J3TRC5sxjdA85Taehsp18jElJfvqbCquNknJr2FrSnirF8IFPR3WjNyjfsStxo1/a8vigVwE004K6n/xfO82Y+f2ZprmYPC6Yg2NgInTp4/8HHXvsNntta1HG+/eDkh6aYJE24ecfOV6+zStTEtnd0nOroPH+/+6NiFJbnpC+ffnpVpWPBsUvr5AnpOPwOGeBAAARAAgfgnwNWJFe7LUInFjFpnyypfiaOf3A54lTLJ8FqZLWC90/CiOjqGUMXq5wLuRqcurJ/CEa5BH0bWOWdo9bDOArfh+7CV6LkBrU7yTDj1OQsH4VrPemeqcHIeehWVOGpDzZWn0q4tdO6YZwQs2TtHKNneOUaupkxZyn7FTTTKetN1/BBjd6WrS9s0//jHX7CCF6hKGHbe3XH6K8o5zdasby5ON/1nve7SpkmdlD6DsQMnuthsN5OOVMAozOZvv/TPUwIE52jC7Kdp2QWMjEXD/rh69frBI11129vaL4z+5PzN1zy30NY5CSNuunL5OktI6B3hGTE2+cpVX8uZi83/dfrUmUu33DImbcqE0aNHDjA5xOcMMPCBGO7UbysfueMV579X8L0cCPgYYwgToF1xxKacmzev3H1UnG9908jNM4RXjaX1OQGeq8CRq23nhrIauxvbjY8q8rl57dnbblxqvEgQmgxt3SOOoxtZaWbJm+bGGpTXTlVRvaj1rNVjnIKukt+sQA00sWLk2Ex7E2j27uVTlj36NPvFMpUn4MTW575Tv/TXhUa4jq3Pvl8v+xV7eqVwBpv9EA/jMWP3qR3lKFNCbL2ivjCVGSlBjK6EiXCg8ufMHGvk3iaSqql6+jn7O/sqlj7/t7Oc5VoTt1MeTfSOJbmr5p9+bM9DMEzyrV28eOloa/e+Y5+dv3LL+PQ7JuVMm5g1NTE1/aZxk0Yl3jpm4pSbJ2eMmZQ15tbsm27NbukafaztswsXPnMj2r9lsOf0L9/Bk57+9LEH6XVGRMeBV155/tCcl17NT46oGxqDwHAg0L77T6WXYmqhtG1o51Kx5WhMTQuTCU5AppOuLLCZbrhBJni3yGvTSqr9LEmRS4nPHlLHa1T7k/JNBWozSzc0rZAlZHHSrFyitra0vmlNrlbqsnBXi41LuyFX9PkfNVWx3JWTfiVXRn5itiB7UhWEGxivfdra0JOH42eSI5kWokO1fQrn8z/a8sK3l39pUrmQ+t2qrd9lpt8aJR7Yx34we/ms7xhD0rSdgxttaP6UTe5RZ22ga7vkpb/+1xe+Xv9uoMZDt7zn08snT1355OS18SOvZ83N7k24yXcp4fIV1ktL7mXXrrKrl69d/uzapYuXL/X0XP7Mc/bi6HMXPps0aaBTsEHPGbqfQawMBECgzwkUpy+qmkeOEGTb6XPZkQjs2r1ye1sNm7g0kk5oGwsEhrP6MWD8RYK4Ii3YyUzPnasV2qezp7mdWbWUTSHP6/A6U758tPNp/h575yF/RarOhz8KsEpNt3G2+OKjH7rpD1ya3pQ0h9OmgqJX0Pmkr/xb01f0Mi7TvHbWalXkO+cm1tbd3kaflaOZYxo2yft+/R0243tW5AlX8OypR8zpDqWTM2d6zndfuXJt5JXLV0eMvpmc1UZevz5mJEsQi7xO+aWvjbyeOPKyL6HzXNvly77TZ3pPnerJyR7oF+nQc4bSpy6MtXQ0/HTR3qya+1nxH4z8JE/e//oT3PBD3m7Pv0w/9/7wjr1ckCpnf377keI2XkLHctPac6ru8erKu+5/KWvXD1ddoJqlNU+UfkG0Mf/raKjcNaP0a/SZPlD32+Sl/AQHCMQngZ3bNued5VOvadte0zaxsfBu+zrItHLQCryeON23ZBo1aN+9NaftEpuYXnmxTdqCyqcXrplmNiY5S1SMOClO25W9SC83G/MBDS3LUHKo4Gze5s2a6mVKYGIg3oUd3uY5eNaaw8TpR29pDntWQgL+A4E4I2BLvS3nztNze1soG7GLniMzK3izXaoiXbjXTBfBKCGEezq7SGWifawRIAe8zen/ZiTaNtJMfzHWJtnv8xk9OmHczVeTRvV8dpadPXXxplvGJoyQsTfcopOQkDBiFOvtvX79ytWr3R1jmS9x1KRRo6QS1O9z0weAnqPTGErnbc/f8YptPabeQqkeiw89fewJkSnnQOUdf/hpVvKzX0tO/lrp0y1OvzVSfn64ahw1li5w5Nj2w8eZ5dj28h9+ub7k9WMBFZiWVdWPtJAexdrpZKupI9nmhQsQiHcCpKJoSg6t5uzBtYenreGajjjOtplpqSoObq44qMpJS9l2WGhEupJDtaS9bBMqkE3JoQrSsmYmFq651ZRgnjhb0kD7e6TpSbRRcyi+hTo38yJVQqcBZiU64j8QiD8CLUdrGZvrP+89zZ1sgc1hkLeR8TblBTantQCpHfxlmiXK2iMLuM0ns6Yl2I6xZk+cxB+BX5lefIz20jmtNheKv4VEP+PJkxLvmTXxs88+az/DEnrPJlyj/AOjr/Um9JKaQ1pOAhuZQD+vjr+pOyVnZNqEmxfMGX9bSlL040XbE3pOtORivV+w+JylNWbozoz5T/6hruUUY666yoEtqy4srSk143xmfGPO1EUtf+nIX5oq1v/k/aQgBSSRmv/ssRlk9nnk8TkvHXtiPulId7SUbi81+gbshgoQiD0CC5YUHhXGGdN4InQFOdHJK5YVrlBzlpaf/T2UoIDc2+Qh7TNKFZHWHmlmudjDXzAf/ohbcsakH102j94oCyvQ2fW7u6rm6d2VMP5zXtUixoTfmrQIUeyQsCYpQ5AQXtP20ap5pr1oTOWiZSvEjNp362IDz0ofEOcgMFQJiN2BmLfB3PCnbxaau7rR683z1u9cnatstn0jOLakON3GYmt2/TWb4blqJ81Jk8Yt//Ks/L/JOXnyzP6DJ1s7O053s+4roy5dI9+1ETeNvH7L6Ou3Jl1Pyxr1+Vmzb7998i23eLj2M+AH9JwBRx5HA3acamHsSPEr2g5cNPtxfxPBEpKXvvrE58ko9Ery60888fritx9Z9PaUyBMkRDAgmoLAYBEwfducE5iYIh50bs0Zw9glVp4iDD233lLMzsqsTe09F3mXS205m5WHKJluPj1TxaYtnXiw4ix3ThMylRrjHIC1f8ozJJRPV1rNtLsrm8mH7WzdYWY8Y41JXmyqXbJ7qFn5DYKCWCbA04vtdzhK8fTHZTMbfGsY2Ra87rOnnUnlZqBk1uARKVarcupos3BYVQHObGH6g+q1lZVT5DrHudkOYw63utCGrRuPqowFrt2iK6R9hJjX3YIUnUD0AoEYIzBiREJS0lj6N21aeoxNzZoO9ByLBc7cCIy7MQuMCONh5LE2gydze5lLM61DbsOhDATij4D0OiODSaFvMguo7RjrGpPj4nUWcM1kR6I0XEqmHo0TsIt7xdhEshQFPiKbVWA5qIlJAtqGNu3VJTllcxt9q+1GBpGFmR73fSXG54QrAB6n4hRscSqPc7XQjbiKlbmSDVaAikvWAb/MBIyZSo7S9IKtL/K69ubhlqsgckboAQL9TgD75/Q74jgeIDU5i134r13k1RbVQTkP7uC5Cl5/NXnLHSLy5xic1qIiiU4xTcDwOpMGk65mYZuJaMJpiWN5e/JbKyz0mf9EJgMph2s7VD59Il3WnGolVzc2OXGmrBP/p91CpiIKs9m2UxbKKVE2NjNGSGuMUxCwEyA7TH6FZtjhtVw1aii0t+NXpBt41hkfM72WdqSh3TYfVQaglJIXNxbV1Nbzz+pgHDzrQC3POqAOv8wEUsmh7W76R8mhcaVmtdhhQVITwk8QAIEBIQB7zoBgjpNBkrPGsZfPaME6M5avp3Rq1ZXpZi41ss+8P+VVM7wnxMKy1peIAJ4DaZSuIEgkTwgxqAaBWCYgPdDsXmeRzddwM7P5rfGEabfK5NE2YcXJGZplxrTwZJe3US4E08ONdylOv9v+zt4mBxcgYBAQ2cbKG5Qlx+KSu6LEughxlpVVzLyb6ztXlBjP9fwpf+6T2mc1hIC+rU4rebK8LD9vXYFPOKS1V68qrS2qXK/UMFPJCeyu5pZXOugcSWa9MRy1I7sZOQG6UQ0qZMhVfvzB62+fMFZ1172PfH2KWmH3vtfe3WOlh56S/9S9Gaou1E/Z17+LLtO/1lXqiYYXP2APPpR/p1Z7+uDm1w6ctwrCFGV1wFlMEYCeE1O3ow8nEyzfWqBhkr+2vHRrtZGoTeRnoyRsr6dTXmktRIfKA/V3lKfml35NFs1Yapw4WuASBIYAgcnzXkw/VUP5o+kgm8w97CnKEHCq9UUrD0HIRVImg0XMyittZoWeV1WYONOesVrs3kMCZegOlywjedYU3prjIiHk0Ggw7Am0tNSwosKsG+PADTi1OWWZNWV8z5nF9fSU723UN+O8MfGR985d42tg5HvnlV1tO+HsrBelWg5o2ShUSJItAKk000N5FK0wJNL0bAJpRN+K4W3M4UpO99zHHprNt5bhGsXm7Q8ULkrisE+3N7MZhU9NHy/It76ziWrDVHVa39EVJNGfC+TKCVv8wCNSvioO/vP89v2tjDn0q/OHPtHlRDS34MPFca3YkuSItQBnpisRmGBUO3cZ0ftae5Mw254llmQtVkLf1ETLGGy1De+MEsD1trbSjTaOlJTh/bVUHPATBEAgOIHOzk78ugiOCLXxQiDyD7MI8a+x1kfP9LaIF0dMv/U0bHXxPxMhLlqx47FbhNZQvmTboSQHzUOgzBjU0z8+x7/ENoDjgltCmGOxRhNhJCkuInc1MUlyCQtsLXFIFZeR3wU3KUO3jPh0J3bEz/qEdWWyZcM5v/3dze8nBVBmuBZ0frHSggIvUgqZu7h7j00UH6v57tDdTcFCTre8zHDYc8xG8sTQ1h4Q2pqjLnYvk3pS+/APNG0x8ku23MyvK7QaS9Xhl4fUxiFcOblgxXUbezZKnyBj30W5Z6M/O76RydYsuXOJ2NSEKTl8B5S68FQd+pqYkjMyuA4Le44JZIicfPvuX165dC3GF1Pxzors2Z+L8UlieiAAAiDgTqC9vpZtPO5TPlpcq/HsITuGen/fVMetGUrzEUH5npBbqVCIi6YbcPXDJROAJtZ9ahGXpmXPZSxoWjDp5aUJzlNWEsbUfHgbIsAtGFXUki8537PHSuam9cbp8CDQfeY0G3+3sN6IBY+/6/bx739y/jRj3LxjP05f0PzEeJXUQ5wayMcfbH6fzX3s3oxD79pyPHy8f8/ppLl3WWPZpTNukzmUNPcxS1cZv4gsP8oK5Ghtu+ze13iC3XVvfCk5thX0xQW59jyryZmxOJ29fOFEB5tBW4x0NLz1Mu0Un2/sMfKFxaXLqyvfOrBUbLt44K29R5bP+d4XZOfkpY+lVxbvqvvGDLf9ReRGJlIOP5+6vkQ1m1Fac6guYEdtZm6n0HPcqMRz2b999L14nj7mDgIgAAIxTyCtpJo/zatjweqGcm++Fp1CTlOaDUX4dNWUhdpKhUL/tU5pJesra2tLW1qqWD97WYjQmqMtLOA4Wro2kaPMxZ7DPcGKNlox9yklVQ0tNfm173eWKN1PwcLP4UFAqC7jkx26R/eZMy56DrmKnWfBFBWOjDzT3j5Bmg+pHE6l6FQ3m5R0pnbT66REycMWC6QKI/ppRBaRdvTQI/6KWUSi4qKxdBLTbCbCokI7KJrh2eYyTtW91saevN9QQk6eOULbjdxm1iZ/ftk4tvWUiPQ+deIQY3clW9ssfuGupewP7ScZk3swmp0YO/XbXXXk1SY1IrGpSVa61Y+JjpQWa2nkkd7It6ZhxikIgAAIgAAIREegpqUlaEduMzEPMgF5PCVvaiVmlTppOep0UlM1Lj/5jjHOCYjAm5wsl9a2opSCwiJW8XK1lp1M1je9WR1sfroQv/xmeiXOQSAYgdMHG97vZnfN1G0m3N7ylJ4e4ESDCL+xJQxQQs+TnnO6+9aih6gL//fYjPGHPnj9HZX/gCJwvk7lljFH9Qv68857hbR7GalPrx10aFZBe8Zn5RcefL2GrDR/qPyzmP+f3/7hKnIbsys5pAvd8cojd2xhzzxh+p6dartA2ypOcegtW3hGK1Je2rewqVmauiJkt7SJSnGu/hPGnMeUUUiV9slP6Dl9ghFCQAAEQAAEhi0BnlWZFWdlBQDQ+T4PWfHbpDJAa1m8c11+BXmFOUNcvHmkH8mjRNdMUlY8SbtS5q9tMoU2rc2nkifDMKekrFi/sbi2LEcXSH5onny5Pa0pMchJWkER5VvLW2cOH/7oQaSiahgQ4ArM+UkzCq1UbC6Lbn3ng9a77jVyGLjUk43o9gzT6jJpev7iJHZICz137RJWYdLsohnjTx/Y83FYreO70RcefGn9uLriyro/N/y0uG1pjd9GIKQLHXvi9WPL2XOvPPJ4g7+yEvXypTFnueHeRtae/G88yeqK3z5gSvzzIfuG9WZF6BP4rYVmhBYgAAIgAAIgEIhA55svexmlLCsI4GDWtKGU1BxvgZ7mewHtT7PaVaDKRkCxOrofG2PkLOcrMbvwZjmeFisKiLzLjmetzPR4VBNKUWBGEKmyAD/JzcxXsmqdJ8dTZrZwZEEwy91PuITsmVZ+M56ILNzR3SWiNL4JTBpHudS4peVOh+uaviyefqCVlJzHjMRrep3znEw0L+pl3Q0vbqLIGcpVzb3juvSqPj0PayF9OuLgCZNJdyuL91JsTKmpdTjnk7z0mTn/tWjvlj/nB27j7BPsuqPhl6vIQc5mzJnxxBNPs1eM9L/U+cn0pYy1BJMSsA56TkA0qAABEAABEACBEATE3iz0WL8+gOVEWDZcLDOBxFJsj28NVQqLSmBlI3dNg7ci31vXtHqBGdUj1BU9cMh/DLuyZKsPrHppzXisjnZpO1UztxXiYrgSSLp1EmslPYcpPefMufNsytw7FQ+5TU14Sg53PFP96KcjdRvXc97/pPX0dN3zTWt+Y6fugUY3JjPmex9pIWuN09/MmjXfRJ5x97MvJCenj2NM5SSwWsiz5LTlrC64KMbsuQosEaTqvP6EuqS8bS9f+Jv5gaekGvr/hN+aP5M4Kdl5xOP5SPdbiJN5Y5ogAAIgMFQIGLmevQ1VKveafWXSOENbqajca/bqYFe5qxu9rmEzqlNuQTlj+/WgH1WDnyAw+ASSZudNYYf27zNyA5xooA1D7xKJfmluUskha0wASw5pMq+/uKkhTG+xO2fOndS9p1ZF0YiAn4wHrY1HKd/a6y++q2YSHA2lqNbHNdzqLPUseO84rz312y2VW9Kf3j5n6st/+OlvAzum6XkCbrt1KrvAUwuo41TLBfbkXTP4ZfKUuxg7xHMSGAfvOM6mrsh0baEic4QulPV5RxSQkhr8J+w5wfk4a5vWfphf4WnwTTVfoMkWnW9+lLl57PGqTEYnpWzj0bv995Z2yorPa77SUAsMp03Eqye9Ls/nbZwV+eNCxEOhAwiAAAiEJmAqOQE2ijGVHDPfdGiZzha1LZQeIM1ZKq47m/e7lqMQBGKDAIXyP/jB669tMnJAaznQRII1egK2u6KFZ9txW1vS7MceGv/Ops0vGgEdzoTUfn30/XPOv72Jdj8fb+zek5Rxd9IeUWJ00qbtJ2ZoFRi5Bx6kbNHfW9/yw1Vb6ubLEB2+7037Y2ZOggOVi7Rs0TyWZu/zrzUsf1U4nv357ed5mmmh5jA24xtzploebqfqnhMdNXUlkDFHJyu266H9Q22ObXqD4OfYJzQ4H79a96ftjnWerj2V6dUrJvh1cBScq17ZVjZzsm+Ndp8dTcK85DO50u8K1cCM4rLkvgPlIhxFfUAAm/r1AUSIiA0C0XyYpZKjtun0X4dUctT2Mv71oUs63ywRL5WqA7w1M7asuQElKvQcBrJFNHdhIOc32GMRn7jaJ3SweQ3v8SPeJ1TklaawHPtmoKSxcPVG5pi2iGrpp2WhUEWMemcqarFV6BFZSZmjpTokL0UV0wY1RNAPvZffcFYzvzP6mphl2CfURBHJyYLJG4vbyuo6Vi/QFJWdPV42cuPikEpOJAOhLQiAQLwRaFo7hnJkFVVen1s6wismv/HopRI2uiRnRC1dFl8/XnVFhaqPWucZKdvYy0dWrxxVViM603/l13xrrsoLKVxV9Db4LnOrcrsQTpJXJWTmJchaPii3AMghA7LtNQAAD8RJREFUVEtmSFa1ShJ+RkHgxpUcvrWol/zZLC2FSuoKfGuUr4AM+ylvMJUcUpzql+p7j+ZTOrWGAEFBUawJXUAABIYvAZ5LzbZ6PTyG9gl9/Wu2WseF3thRRcnTnj2W7yyU19FVucsKWAq/tYBoAlRMKCg8yUp7mtYw9eeINdX5WHFSgXQt0A0g7cdLcrrnNqZnrW8TDy6eX5b7vkdPMDVdngqeHKSIm4AYWXhqCy1bkHD6Gm24xgkJ/AnJOFxc5lSV9tMYdzLL6/LK4nLLgiTkX7Naa1XcK29/0vFVVzLzfNSg6GUPe5KflOV8WMY7iNH1BfJCbsvy8hN+iBVNYHobed44tjavWy7EaCPaCz9AcSb+M6ua1gpiOqjF5wVMy29N76v5sxmGoAbWRU+c4ggMrf34uvfHr+ZWuI7qNz0loc1x1lRxBgKBCNSWCq1GVJfljCkz29WMWFU4snoFffs0JYdqa0ZkstFCBbIrOVRVMbIkp5e6dL7JNSjtSMhfO8pUgbgEUzWiL+xTowsshUrrhNM+IiDzRLOassyaMl2k0ltEmmnKsJbn8erVpJYE8HDjrRYUePPyPdpdJmk+TY2hHXJsApHQzMYWFyAAAuES+Kipfe03N4XbOpba3ffwrEefK4hoRtBzIsLFG6csHlvEuut3slwjSWhHPX+DOz4lgCRv3smNR2f5jBw458bud/itnQvQTxUXJ1HYjxDOn+DzVx5Xl6pBgJ/evJ4G36zVvJarIiU5HtOtzlQnGNeIbFWspjuT3Op8Uw2p9wT1jhMKFatM90kNgS4ruV7kd1wrW8+O+2ZVUwXv0rYue4IZZmOpKFwjMqpy16RvdIBqt+3TZQuU4jI/LNH9Biu66htniZxFjLcMDG1PaZvnKM9u1EInm8+HydZvgSgAAY2AtNtISwtX/q9KRYV8kGqPcpNL55vCkqNsNcJQM2LDKmZ+KfxNLikrLvlWqCF23uQh083+BDLPm792vI2XeHdZVZPQUmVVqW742WcEUlZUW7fDRSpPSiZ+97rUGUUuyc1C9Ao1aOCxUAMCIAACGoG7c9NoJxytYCifIt9a5Hc3bTzfEK2uw+jJndY8TwY2BXgbbyAnQVpmtaHk0GgTSlZ5WM2VlvCm7G00kyWkPlo5snbzeem0mLLiblPhYWmZT5bTs5emnJBaFXbsUFNld21x0npz7TRb974jN74oVTUKqOUjmvRy11j2GcZ9Atme5lCKHy2//fjLfAc9tcC0zPW0wNIuc4s6Vj7ZfGTMXRoYGk3YRwpVl2flpUd9sxpmdmcihV14ny60CkKgqPA6Vz/SeueKRkWLufk0JbvX7NJyVJxWjPR4xtA/aajZ0zySsWsFhbyKrECyyplQkdQY6qL800yBjPUae7MsuO7VSnEKAiAAAiAAAsOZAPScKO4+ua6NZBU98qmaO62VJ+ZGISbMLmSs8Hzokf+EO1mY/fRmKdmjdQWJXNcMgR5KH6c3jOj8HM/2M3OM+UY5zM5ZOSPZ/ktS6aIuZG9Rk5HefWGIab9Sy0ZmaTmI+ALZlWZKTBTxMaGkatbxwouZaztI6fI1ji7LOWLpSxFLQwcQcBDozdY+qI46/0tut/FdOl5p1HCFZy23upPfGmk4Jc3XqNbXaKlMRrvi3izjzP9HgvpeJLRovm3+7VACAiAAAiAAAkOMAPScaG6ocF3zvfwmWR6405p3aWo0UsLowxUSHuEzy+cT/xo9YXQK3oSc3z7MLKX4H0NmA+3AMGgHOdSJiCBjMulkzxnwQwChnOBrUrnGxVPYKTPRgE8FAw4TAlk5YqHkt0ZKi/on4nYMAFLb8R29XkQFFSOa2KgNpbxKmoY6m418A0brUD94YmI6dhqpEUI1Rz0IgAAIgAAIDBEC0HOiupHS3Ys8wYTTmuExEpWkoJ3O1W++prtgBW0crFJkShidRU3az9fWaB5fwTqFrJuQPZN2qbMsMyE7iAZiUdIKJPPUmS5t4fXnrdJGF7FrxtOb6NXZfIWx0RG9OOf9uK1MhEtVjdlgaFw34GQoZoL/QCAkgZQV17zUSPmtaS5qlJ/A8FjjhTJLW/n1XNabJV4BSH82ivMJ7zB6efOETBdvt/DEoBUIgAAIgAAIxCcB6DlR3jcR9dHN85JF5rTmrxvwEjN4hp68V5WaydAcjTvWRee3tvMIOad5V4kImbQxFDNgxcCIqmAI/DQKvXFuaVJRTfcqbtcSB6kNa1XYkt5OO+9882RZzciNpcICZhcuqsymjrWb5eJEBvnkKQczAa2ocnIU3oNzKYmCiCnKohMrFMo+HK5AoI8JXF3tE6qOEqsSD1D5VZtVk1Ia8LzS10peFLYd0X7jUdGmZkR9CEfNayVV1ihFlddsktXQ+AkCIAACIAACQ5UA8q1Fe2cXJHqZz0uZQyN0WstdM9nr6cqs+ZAGlnnPeG6xlW2ZHl5C+akbeEg9P6XDVkVpnRs93jxZE/p/b96HXtXKymnGUlfT3ho5bZ7SNl5ZPrmh3Jevmrn85CH+H2UaovwSNFMc/1GeP82QRjQaM12EsGsqMzVVjrT2NqXujZRjzZgnKSobi7tqVX8nqMWqQvykWJoG9mG+hMbH1fIZ2BoGvUjLXL1CNkgtMU6CtkclCAQlkLvmkszyJ1pxpcVKurXgsk/L98GYvdYSy5WTkirr2jhLu1Ktd7fa2MudYu2jrLjqItlvKBSAAAiAAAiAwNAgkNDb29va2mouJiUl0qhysytOYoYAz7PMo3rMnGODOTN9L53BnAfG7mMC2Ly8j4FC3OARwId58NhbI+MuWCzczohPd2IIjwm3figbjgSSelKH5/M8fU3M+52RkUHnsOeYQMI6SUzcf/Vqb1hNB6kRZSzQR6ZUZvrlAJ/H1GQiWvt7792xaNHYiLqgMQiAAAiAAAiAAAiAQOwQgJ4T2b3o6aHQ+3g6HJrG4E49piYzuCgwOgiAAAiAAAiAAAiAQL8SgJ7Tr3gHSTjf/nKQhvYfdsFUe1iCfwuUgAAIgAAIgAAIxAOBU4ffq20fu6Tg3ul9NduTH/zmIOtLgX01sRuQIyhd5AImzvnvc7n7FI5BIgA9Z5DAY1gQAAEQAAEQAAEQGCwC1rO4mkHa9K8uv01dxPTP89t3bNuvXugmpS0pmTY+hubb8+Ef2tnM+V9dlBhoUrE9/0Czjsty6DlxedswaRAAARAAARAAARCIjoB8zp68pOA+0yzD1Z7OVnZb7BsfWrfU720nO8lCMdWeD6t3batmfavq8CEuRKs+nTrx127P5+4MqOQMwPyj+1QMyV7YP2dI3lYsCgRAAARAAARAAARcCfR80upjadNtvmfJ0+6LDw+rkyfa2diZU5U+ljjr/rSx3ac/OeW60sEoPH3xIrt5XHKgoWN+/oEmHp/lsOfE533DrEEABEAABEAABECgnwjoXm3ujmHckNIyzubqZjeD8MCbLmN6nqyihbOsR3+9ireYbK1CVLmPKBslJSaxrtYT5xcpX7VQeoU2DS1ahi/w9OesWVnLIWPXXr4Lc/u234jNmAO587kiosJtZ6nz3t/U72Wkj82/z+m9Fun8LTQ4i4IA9JwooKELCIAACIAACIAACMQpgcTbMzwt+w/+7jed7lHy4gnejDAh7WXbby76tZRCNFe3U4ePtLPJS4T6ISRQuoKvSr+4g3t+V7uDSaXCLpwxkYcgApDcgPPXWq6EcC3izhOkV5ADnjLvOAQJrUkpKtxb7zc7Lli6jaOxcTl+0cI550L5rdlXYSEis9iSi7/b9pldr9MHimj+ekecR0MAfmvRUEMfEAABEAABEAABEIhTAvQov2Smh7GzZHb4nfFvj7lnfOuu9otJafcoQ0TG8umT2dkj23scix2/KEsvP//xaep1t1BsuATdL2761Kwk318/5hIcwh0yGbvt3v9e8NXgeQWSk/j2dkketn/X72rbL7KJU8woI7u489tbuijjmUquMH7RbJpGy66T9lbRXDlWEQiRu+iw5+/eHaWREIA9JxJaaAsCIAACIAACIAAC8U+AVJ2vLlLLIHvLNtJ5pK2j58IFxsYlaRnMhKvVuW7GHLH1t01JO7jXcCHjMT9jM6aIXkJCN9mLDqoB+E+x97a/cL1JOOfcRHPRymbG/c3UzJ3dz5/zsaRJ2kISx41j7EL3eXabVujsFca1/yoCIfIXFsH8/TujJFIC0HMiJYb2IAACIAACIAACIDCECEyf+9VJfGOcntOMWVE0oReYMT/tSC3PATD+9JGW7olzlAmIerqFplCx0ygUegxHi4OdXcyTZWUzS5xVMr3nNwe5sSjZoYY5esbGZbzPPzYohj8L+K2FzwotQQAEQAAEQAAEQCDeCZz8YEsQ3y3T6GEus7unm42dkGReWyfJUz4nPMFaj51laSkqSIZLuEh2HqudeSaEm1dRnEwaO5b5uD4WxjF+god1X9Sm4W+HCUOKS5NIEDm6RzJ/R1dcRkEAek4U0NAFBEAABEAABEAABOKWQDs5lVkBOTwZAAW6qOgastKM7W7/kwrIad1CadMmTtVsNdqyE2fNncjaD+5t92TNt/YYlRK2adoU5QD4QHixZdzB28tzkiOEa/J4WoL631Uf1pQTvZbMTaRZsa5t1uSDTE9GEO1V0zi/fV9Lt5onD5IxQoZoAFFlDeSnIFlV8iwSRPa+kczf3hNX0RBI6O3tbW01Y89YSkpKNGLQBwRAYJgR6OzsxK+LYXbPh+xy8WGOhVuLuxD8LhCf7sSO4G0iqRVplCniRh1ONzORT+yirNWzPKtEatreOyKnmd7GkCnKlXxG+QDM/XlEOJCsmbxkOtt2kC0pUAIDSbME0ZnYalOVuAytqvhPfRraHKhGW+PYmdM/13pQS5Ot8VHp2nSh/FzrzvQ58NUFybfGu0Yyf94+0iOpJ3V4/oGmr4nJKiOD2xeh55hAcAICIBABATyURAALTWObAD7MsXB/cBeC3wXi06d6TvDRUBvfBKDn0P2Teg781uL7o4zZgwAIgAAIgAAIgAAIgAAI+BOAnuPPBCUgAAIgAAIgAAIgAAIgAALxTQB6TnzfP8weBEAABEAABEAABEAABEDAnwD0HH8mKAEBEAABEAABEAABEAABEIhvAtBz4vv+YfYgAAIgAAIgAAIgAAIgAAL+BKDn+DNBCQiAAAiAAAiAAAiAAAiAQHwTgJ4T3/cPswcBEAABEAABEAABEAABEPAnAD3HnwlKQAAEQAAEQAAEQAAEQAAE4puAc5/Q+F4NZg8CIAACIAACIAACIAACIDC8Cch9Qkc5IMhSRyEuQQAEQMBBoLW1Fb8uHExwGacE8GGOhRuHuxD8LoBPcD6o1QkM208LLVznQOfwW3MAwSUIgAAIgAAIgAAIgAAIgEDcE/j/ZImPxiPNrcIAAAAASUVORK5CYII=" src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAYAAAAfFcSJAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAADsQAAA7EAZUrDhsAAAANSURBVBhXYzh8+PB/AAffA0nNPuCLAAAAAElFTkSuQmCC"></p>
+
+<h1 id="A-Love-Story"><a href="#A-Love-Story" class="headerlink" title="A.Love Story"></a>A.<a target="_blank" rel="noopener" href="https://codeforces.com/contest/1829/problem/A">Love Story</a></h1><h2 id="题目翻译"><a href="#题目翻译" class="headerlink" title="题目翻译"></a>题目翻译</h2><blockquote>
+<p>给出一个长度为 $10$ 的字符串，一位一位看问它与 <code>codeforces</code> 差了多少字符。</p>
+<p>$t$ 组数据，$1\leq t\leq 1000$。</p>
+</blockquote>
+<h2 id="题目思路"><a href="#题目思路" class="headerlink" title="题目思路"></a>题目思路</h2><p>按照题意模拟，扫描一遍给出字符串，判断第 $i$ 位与 <code>codeforces</code> 的第 $i$ 位是否相同即可。</p>
+<h2 id="完整代码"><a href="#完整代码" class="headerlink" title="完整代码"></a>完整代码</h2><pre><code class="highlight cpp"><span class="meta">#<span class="keyword">include</span><span class="string">&lt;bits/stdc++.h&gt;</span></span>
+<span class="keyword">using</span> <span class="keyword">namespace</span> std;
+<span class="type">const</span> string t=<span class="string">&quot;codeforces&quot;</span>;
+<span class="function"><span class="type">void</span> <span class="title">solve</span><span class="params">()</span></span>
+<span class="function"></span>&#123;
+    string s;
+    <span class="type">int</span> ans=<span class="number">0</span>;
+    cin&gt;&gt;s;
+    <span class="keyword">for</span>(<span class="type">int</span> i=<span class="number">0</span>;i&lt;<span class="number">10</span>;i++)
+    &#123;
+        <span class="keyword">if</span>(s[i]!=t[i])
+        &#123;
+            ans++;
+        &#125;
+    &#125;
+    cout&lt;&lt;ans&lt;&lt;endl;
+&#125;
+<span class="function"><span class="type">int</span> <span class="title">main</span><span class="params">()</span></span>
+<span class="function"></span>&#123;
+    <span class="type">int</span> t;cin&gt;&gt;t;<span class="keyword">while</span>(t--)
+    <span class="built_in">solve</span>();
+    <span class="keyword">return</span> <span class="number">0</span>;
+&#125;</code></pre>
+
+
+<h1 id="B-Blank-Space"><a href="#B-Blank-Space" class="headerlink" title="B.Blank Space"></a>B.<a target="_blank" rel="noopener" href="https://codeforces.com/contest/1829/problem/B">Blank Space</a></h1><h2 id="题目翻译-1"><a href="#题目翻译-1" class="headerlink" title="题目翻译"></a>题目翻译</h2><blockquote>
+<p>给出一个长度为 $n$ 的序列 $a$，问最长连续 $0$ 有多长。</p>
+<p>$1\leq n\leq 100,0\leq a_i\leq 1$。</p>
+<p>$t$ 组数据，$1\leq t\leq 1000$。</p>
+</blockquote>
+<h2 id="题目思路-1"><a href="#题目思路-1" class="headerlink" title="题目思路"></a>题目思路</h2><p>我们遇到一个 $0$，便把长度加上 $1$。如果当前位不是 $0$，说明已经有了一段连续 $0$ 了，计算答案 $ans&#x3D;\max{ans,len}$。</p>
+<p>注意循环结束也要计算一遍，防止最后一个是 $0$ 的情况不会统计长度。</p>
+<h2 id="完整代码-1"><a href="#完整代码-1" class="headerlink" title="完整代码"></a>完整代码</h2><pre><code class="highlight cpp"><span class="meta">#<span class="keyword">include</span><span class="string">&lt;bits/stdc++.h&gt;</span></span>
+<span class="keyword">using</span> <span class="keyword">namespace</span> std;
+<span class="function"><span class="type">void</span> <span class="title">solve</span><span class="params">()</span></span>
+<span class="function"></span>&#123;
+    <span class="type">int</span> n;
+    cin&gt;&gt;n;
+    <span class="type">int</span> len=<span class="number">0</span>,ans=<span class="number">0</span>;
+    <span class="keyword">for</span>(<span class="type">int</span> i=<span class="number">1</span>;i&lt;=n;i++)
+    &#123;
+        <span class="type">int</span> x;
+        cin&gt;&gt;x;
+        <span class="keyword">if</span>(x!=<span class="number">0</span>)
+        &#123;
+            ans=<span class="built_in">max</span>(ans,len);
+            len=<span class="number">0</span>;
+        &#125;
+        <span class="keyword">else</span>
+        &#123;
+            len++;
+        &#125;
+    &#125;
+    ans=<span class="built_in">max</span>(ans,len);
+    cout&lt;&lt;ans&lt;&lt;endl;
+&#125;
+<span class="function"><span class="type">int</span> <span class="title">main</span><span class="params">()</span></span>
+<span class="function"></span>&#123;
+    <span class="type">int</span> t;cin&gt;&gt;t;<span class="keyword">while</span>(t--)
+    <span class="built_in">solve</span>();
+    <span class="keyword">return</span> <span class="number">0</span>;
+&#125;</code></pre>
+
+
+<h1 id="C-Mr-Perfectly-Fine"><a href="#C-Mr-Perfectly-Fine" class="headerlink" title="C.Mr. Perfectly Fine"></a>C.<a target="_blank" rel="noopener" href="https://codeforces.com/contest/1829/problem/C">Mr. Perfectly Fine</a></h1><h2 id="题目翻译-2"><a href="#题目翻译-2" class="headerlink" title="题目翻译"></a>题目翻译</h2><blockquote>
+<p>有 $n$ 本书，每本书耗时 $a_i$。有一个长度为 $2$ 的字符串 $skill$，$skill_j$ 为 $\tt{1&#x2F;0}$ 时表示是否获得了第 $j$ 种技能。问最少耗时多久才能学习所有技能。无解输出 $-1$。</p>
+<p>$n\leq 2\times 10^5,1\leq a_i\leq 2\times 10^5$。</p>
+<p>$t$ 组数据，$1\leq t \leq 1000,\sum_{tt&#x3D;1}^t n\leq 2\times 10^5$。</p>
+</blockquote>
+<h2 id="题目思路-2"><a href="#题目思路-2" class="headerlink" title="题目思路"></a>题目思路</h2><p>我们分两种情况讨论，第一种是看两本书学习两个技能，第二种是看一本书学习所有技能。对于两种情况，答案取最小值。</p>
+<h2 id="完整代码-2"><a href="#完整代码-2" class="headerlink" title="完整代码"></a>完整代码</h2><pre><code class="highlight cpp"><span class="meta">#<span class="keyword">include</span><span class="string">&lt;bits/stdc++.h&gt;</span></span>
+<span class="keyword">using</span> <span class="keyword">namespace</span> std;
+<span class="function"><span class="type">void</span> <span class="title">solve</span><span class="params">()</span></span>
+<span class="function"></span>&#123;
+    <span class="type">int</span> n;
+    cin&gt;&gt;n;
+    <span class="type">int</span> m1,m2,m12;
+    m1=m2=m12=(<span class="number">1</span>&lt;&lt;<span class="number">29</span>);
+    <span class="keyword">while</span>(n--)
+    &#123;
+        <span class="type">int</span> x;
+        string s;
+        cin&gt;&gt;x&gt;&gt;s;
+        <span class="keyword">if</span>(s==<span class="string">&quot;11&quot;</span>)
+        &#123;
+            m12=<span class="built_in">min</span>(m12,x);
+        &#125;
+        <span class="keyword">else</span> <span class="keyword">if</span>(s==<span class="string">&quot;10&quot;</span>)
+        &#123;
+            m1=<span class="built_in">min</span>(m1,x);
+        &#125;
+        <span class="keyword">else</span> <span class="keyword">if</span>(s==<span class="string">&quot;01&quot;</span>)
+        &#123;
+            m2=<span class="built_in">min</span>(m2,x);
+        &#125;
+    &#125;
+    cout&lt;&lt;(<span class="built_in">min</span>(m1+m2,m12)==(<span class="number">1</span>&lt;&lt;<span class="number">29</span>)?<span class="number">-1</span>:<span class="built_in">min</span>(m1+m2,m12))&lt;&lt;endl;
+&#125;
+<span class="function"><span class="type">int</span> <span class="title">main</span><span class="params">()</span></span>
+<span class="function"></span>&#123;
+    <span class="type">int</span> t;cin&gt;&gt;t;<span class="keyword">while</span>(t--)
+    <span class="built_in">solve</span>();
+    <span class="keyword">return</span> <span class="number">0</span>;
+&#125;</code></pre>
+
+
+<h1 id="D-Gold-Rush"><a href="#D-Gold-Rush" class="headerlink" title="D.Gold Rush"></a>D.<a target="_blank" rel="noopener" href="https://codeforces.com/contest/1829/problem/D">Gold Rush</a></h1><h2 id="题目翻译-3"><a href="#题目翻译-3" class="headerlink" title="题目翻译"></a>题目翻译</h2><blockquote>
+<p>有一堆含有 $n$ 个石子的石子堆，你每次可以选择大小为 $k$ 的一堆，将其分成 $\frac{k}{3}$ 与 $\frac{2\times k}{3}$ 两堆，问是否可以得到大小为 $m$ 的堆。</p>
+<p>$1\leq n,m\leq 10^7$。</p>
+<p>$t$ 组数据，$t\leq 1000$。</p>
+</blockquote>
+<h2 id="题目思路-3"><a href="#题目思路-3" class="headerlink" title="题目思路"></a>题目思路</h2><p>我们通过阅读题面，因为这个 $n$ 是要分成三份然后一堆一份一堆两份，显然可以得到 $n,m$ 只有可以表示为 $n&#x3D;3^i\times p,m&#x3D;2^j\times p(0\leq j\leq i,p\geq 0)$ 时，我们才可以分出来。</p>
+<p>考虑到 $n,m$ 都很小，我们枚举这个 $i,j$，判断是否可行即可。</p>
+<h2 id="完整代码-3"><a href="#完整代码-3" class="headerlink" title="完整代码"></a>完整代码</h2><pre><code class="highlight cpp"><span class="meta">#<span class="keyword">include</span><span class="string">&lt;bits/stdc++.h&gt;</span></span>
+<span class="keyword">using</span> <span class="keyword">namespace</span> std;
+<span class="function"><span class="type">void</span> <span class="title">solve</span><span class="params">()</span></span>
+<span class="function"></span>&#123;
+    <span class="type">int</span> n,m,tmp3=<span class="number">1</span>,tmp2;
+    cin&gt;&gt;n&gt;&gt;m;
+    <span class="keyword">for</span>(<span class="type">int</span> i=<span class="number">0</span>;i&lt;=<span class="number">15</span>;i++)
+    &#123;
+        tmp2=<span class="number">1</span>;
+        <span class="keyword">for</span>(<span class="type">int</span> j=<span class="number">0</span>;j&lt;=i;j++)
+        &#123;
+            <span class="keyword">if</span>(n%tmp3==<span class="number">0</span>&amp;&amp;n/tmp3*tmp2==m)
+            &#123;
+                <span class="built_in">puts</span>(<span class="string">&quot;YES&quot;</span>);
+                <span class="keyword">return</span>;
+            &#125;
+            tmp2*=<span class="number">2</span>;
+        &#125;
+        tmp3*=<span class="number">3</span>;
+    &#125;
+    <span class="built_in">puts</span>(<span class="string">&quot;NO&quot;</span>);
+&#125;
+<span class="function"><span class="type">int</span> <span class="title">main</span><span class="params">()</span></span>
+<span class="function"></span>&#123;
+    <span class="type">int</span> t;cin&gt;&gt;t;<span class="keyword">while</span>(t--)
+    <span class="built_in">solve</span>();
+    <span class="keyword">return</span> <span class="number">0</span>;
+&#125;</code></pre>
+
+
+<h1 id="E-The-Lakes"><a href="#E-The-Lakes" class="headerlink" title="E.The Lakes"></a>E.<a target="_blank" rel="noopener" href="https://codeforces.com/contest/1829/problem/E">The Lakes</a></h1><h2 id="题目翻译-4"><a href="#题目翻译-4" class="headerlink" title="题目翻译"></a>题目翻译</h2><blockquote>
+<p>你有一个 $n\times m$ 的矩阵，其中有水坑，水坑的大小为 $a_{i,j}$。若 $a_{i,j}&#x3D;0$ 则不是水坑。问最大的连续水坑大小是多少。</p>
+<p>$1\leq n,m\leq 1000,0\leq a_{i,j}\leq 1000$。</p>
+<p>$t$ 组数据，$1\leq t \leq 1000,\sum_{tt&#x3D;1}^t n\times m\leq 10^6$。</p>
+</blockquote>
+<h2 id="题目思路-4"><a href="#题目思路-4" class="headerlink" title="题目思路"></a>题目思路</h2><p>典型的四方向连通块，使用搜索，深搜广搜均可。</p>
+<p>记录每个水坑是否走过避免回头路。</p>
+<p>注意开始遍历的时候要判断当前位置是否为 $0$。</p>
+<pre><code class="highlight basic"><span class="number">1</span>
+<span class="symbol">2 </span><span class="number">2</span>
+<span class="symbol">0 </span><span class="number">1</span>
+<span class="symbol">1 </span><span class="number">0</span></code></pre>
+
+<p>如果不判断的话会从 $(1,1)$ 开始找到 $(1,2)$ 和 $(2,1)$，但其实这两个点不连通。</p>
+<h2 id="完整代码-4"><a href="#完整代码-4" class="headerlink" title="完整代码"></a>完整代码</h2><pre><code class="highlight cpp"><span class="meta">#<span class="keyword">include</span><span class="string">&lt;bits/stdc++.h&gt;</span></span>
+<span class="keyword">using</span> <span class="keyword">namespace</span> std;
+<span class="type">int</span> n,m;
+<span class="type">bool</span> vis[<span class="number">1020</span>][<span class="number">1020</span>];
+<span class="type">int</span> a[<span class="number">1020</span>][<span class="number">1020</span>];
+<span class="type">int</span> dx[]=&#123;<span class="number">0</span>,<span class="number">0</span>,<span class="number">-1</span>,<span class="number">1</span>&#125;;
+<span class="type">int</span> dy[]=&#123;<span class="number">-1</span>,<span class="number">1</span>,<span class="number">0</span>,<span class="number">0</span>&#125;;
+<span class="function"><span class="type">bool</span> <span class="title">judge</span><span class="params">(<span class="type">int</span> x,<span class="type">int</span> y)</span></span>
+<span class="function"></span>&#123;
+    <span class="keyword">return</span> x&gt;=<span class="number">1</span>&amp;&amp;y&gt;=<span class="number">1</span>&amp;&amp;x&lt;=n&amp;&amp;y&lt;=m&amp;&amp;!vis[x][y]&amp;&amp;a[x][y]&gt;<span class="number">0</span>;
+&#125;
+<span class="function"><span class="type">int</span> <span class="title">dfs</span><span class="params">(<span class="type">int</span> x,<span class="type">int</span> y)</span></span>
+<span class="function"></span>&#123;
+    vis[x][y]=<span class="number">1</span>;
+    <span class="type">int</span> ans=a[x][y];
+    <span class="keyword">for</span>(<span class="type">int</span> i=<span class="number">0</span>;i&lt;<span class="number">4</span>;i++)
+    &#123;
+        <span class="keyword">if</span>(<span class="built_in">judge</span>(x+dx[i],y+dy[i]))
+        &#123;
+            ans+=<span class="built_in">dfs</span>(x+dx[i],y+dy[i]);
+        &#125;
+    &#125;
+    <span class="keyword">return</span> ans;
+&#125;
+<span class="function"><span class="type">void</span> <span class="title">solve</span><span class="params">()</span></span>
+<span class="function"></span>&#123;
+    cin&gt;&gt;n&gt;&gt;m;
+    <span class="built_in">memset</span>(vis,<span class="number">0</span>,<span class="built_in">sizeof</span>(vis));
+    <span class="keyword">for</span>(<span class="type">int</span> i=<span class="number">1</span>;i&lt;=n;i++)
+    &#123;
+        <span class="keyword">for</span>(<span class="type">int</span> j=<span class="number">1</span>;j&lt;=m;j++)
+        &#123;
+            cin&gt;&gt;a[i][j];
+        &#125;
+    &#125;
+    <span class="type">int</span> ans=<span class="number">0</span>;
+    <span class="keyword">for</span>(<span class="type">int</span> i=<span class="number">1</span>;i&lt;=n;i++)
+    &#123;
+        <span class="keyword">for</span>(<span class="type">int</span> j=<span class="number">1</span>;j&lt;=m;j++)
+        &#123;
+            <span class="keyword">if</span>(!vis[i][j]&amp;&amp;a[i][j])
+            &#123;
+                ans=<span class="built_in">max</span>(ans,<span class="built_in">dfs</span>(i,j));
+            &#125;
+        &#125;
+    &#125;
+    cout&lt;&lt;ans&lt;&lt;endl;
+&#125;
+<span class="function"><span class="type">int</span> <span class="title">main</span><span class="params">()</span></span>
+<span class="function"></span>&#123;
+    <span class="type">int</span> t;cin&gt;&gt;t;<span class="keyword">while</span>(t--)
+    <span class="built_in">solve</span>();
+    <span class="keyword">return</span> <span class="number">0</span>;
+&#125;</code></pre>
+
+
+<h1 id="F-Forever-Winter"><a href="#F-Forever-Winter" class="headerlink" title="F.Forever Winter"></a>F.<a target="_blank" rel="noopener" href="https://codeforces.com/contest/1829/problem/F">Forever Winter</a></h1><h2 id="题目翻译-5"><a href="#题目翻译-5" class="headerlink" title="题目翻译"></a>题目翻译</h2><blockquote>
+<p>我们定义大小 $(x,y)$ 的雪花图表示有一个节点 $u$ 连向 $x$ 个节点，这 $x$ 个节点又分别连向不同于 $u$ 的 $y$ 个节点。给定一张 $n$ 节点 $m$ 条边的雪花图，问这张雪花图的大小是什么。</p>
+<p>例如 <img class="lazyload lazyload-style-11" src="data:image/svg+xml;base64,PCEtLUFyZ29uTG9hZGluZy0tPgo8c3ZnIHdpZHRoPSIxIiBoZWlnaHQ9IjEiIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyIgc3Ryb2tlPSIjZmZmZmZmMDAiPjxnPjwvZz4KPC9zdmc+"  data-original="https://cdn.luogu.com.cn/upload/vjudge_pic/CF1829F/8093abf53ab9afd4293f2937f4849e3ca604a47a.png" src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAYAAAAfFcSJAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAADsQAAA7EAZUrDhsAAAANSURBVBhXYzh8+PB/AAffA0nNPuCLAAAAAElFTkSuQmCC"> 就是大小为 $(5,3)$ 的雪花图。</p>
+
+<p>$1\leq n\leq 200,1\leq m\leq \min(\frac{n\times (n-1)}{2},1000)$。</p>
+</blockquote>
+<h2 id="题目思路-5"><a href="#题目思路-5" class="headerlink" title="题目思路"></a>题目思路</h2><p>因为给出的图一定是雪花图，所以我们只需枚举它的大小。然后我们观察样例可得，我们需要有一个度数为 $x$ 的点以及 $x$ 个度数为 $y+1$ 的点（因为连到了 $x$ 个点，每个点还会往中心连一次）。</p>
+<p>但仅仅这些还不够，我们需要判断这个 $(x,y)$ 是否满足有 $n$ 个点，即 $x\times y+1&#x3D;n$。</p>
+<h2 id="完整代码-5"><a href="#完整代码-5" class="headerlink" title="完整代码"></a>完整代码</h2><pre><code class="highlight cpp"><span class="meta">#<span class="keyword">include</span><span class="string">&lt;bits/stdc++.h&gt;</span></span>
+<span class="keyword">using</span> <span class="keyword">namespace</span> std;
+<span class="type">int</span> deg[<span class="number">220</span>];
+<span class="function"><span class="type">void</span> <span class="title">solve</span><span class="params">()</span></span>
+<span class="function"></span>&#123;
+    <span class="built_in">memset</span>(deg,<span class="number">0</span>,<span class="built_in">sizeof</span>(deg));
+    <span class="type">int</span> n,m;
+    cin&gt;&gt;n&gt;&gt;m;
+    <span class="keyword">while</span>(m--)
+    &#123;
+        <span class="type">int</span> u,v;
+        cin&gt;&gt;u&gt;&gt;v;
+        deg[u]++;deg[v]++;
+    &#125;
+    <span class="keyword">for</span>(<span class="type">int</span> x=<span class="number">1</span>;x&lt;=<span class="number">200</span>;x++)
+    &#123;
+        <span class="keyword">for</span>(<span class="type">int</span> y=<span class="number">1</span>;y&lt;=<span class="number">200</span>;y++)
+        &#123;
+            <span class="keyword">if</span>(x*(y<span class="number">+1</span>)<span class="number">+1</span>!=n)<span class="keyword">continue</span>;
+            <span class="type">int</span> sx=<span class="number">0</span>,sy1=<span class="number">0</span>;
+            <span class="keyword">for</span>(<span class="type">int</span> i=<span class="number">1</span>;i&lt;=n;i++)
+            &#123;
+                <span class="keyword">if</span>(deg[i]==x&amp;&amp;!sx)&#123;sx=<span class="number">1</span>;<span class="keyword">continue</span>;&#125;
+                <span class="keyword">if</span>(deg[i]==y<span class="number">+1</span>)&#123;sy1++;&#125;
+            &#125;
+            <span class="keyword">if</span>(sx==<span class="number">1</span>&amp;&amp;sy1==x)
+            &#123;
+                cout&lt;&lt;x&lt;&lt;<span class="string">&quot; &quot;</span>&lt;&lt;y&lt;&lt;endl;
+                <span class="keyword">return</span>;
+            &#125;
+        &#125;
+    &#125;
+&#125;
+<span class="function"><span class="type">int</span> <span class="title">main</span><span class="params">()</span></span>
+<span class="function"></span>&#123;
+    <span class="type">int</span> t;cin&gt;&gt;t;<span class="keyword">while</span>(t--)
+    <span class="built_in">solve</span>();
+    <span class="keyword">return</span> <span class="number">0</span>;
+&#125;</code></pre>
+
+
+<h1 id="G-Hits-Different"><a href="#G-Hits-Different" class="headerlink" title="G.Hits Different"></a>G.<a target="_blank" rel="noopener" href="https://codeforces.com/contest/1829/problem/G">Hits Different</a></h1><h2 id="题目翻译-6"><a href="#题目翻译-6" class="headerlink" title="题目翻译"></a>题目翻译</h2><blockquote>
+<p>你有一个罐子搭成的金字塔，如图<img class="lazyload lazyload-style-11" src="data:image/svg+xml;base64,PCEtLUFyZ29uTG9hZGluZy0tPgo8c3ZnIHdpZHRoPSIxIiBoZWlnaHQ9IjEiIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyIgc3Ryb2tlPSIjZmZmZmZmMDAiPjxnPjwvZz4KPC9zdmc+"  data-original="https://espresso.codeforces.com/3f72320a7f225babc9b2b244a719e59e9e8f028d.png" src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAYAAAAfFcSJAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAADsQAAA7EAZUrDhsAAAANSURBVBhXYzh8+PB/AAffA0nNPuCLAAAAAElFTkSuQmCC">。第 $i$ 个罐子代表数 $i^2$，现在打掉第 $i$ 个罐子，问掉落罐子的数之和为多少。</p>
+
+<p>$1\leq n\leq 10^6$。</p>
+<p>$t$ 组数据，$1\leq t\leq 1000$。</p>
+</blockquote>
+<h2 id="题目思路-6"><a href="#题目思路-6" class="headerlink" title="题目思路"></a>题目思路</h2><p>观察可得，打掉第 $x$ 行第 $y$ 列的罐子，那么第 $x$ 行第 $y-1$ 和第 $x$ 行第 $y$ 列的罐子都会倒塌，然后逐个往上。</p>
+<p>我们做一个预处理，只需找出 $n$ 罐子的位置，一个个往上递推，用前缀和优化记录某一行某一段的和即可。</p>
+<h2 id="完整代码-6"><a href="#完整代码-6" class="headerlink" title="完整代码"></a>完整代码</h2><pre><code class="highlight cpp"><span class="meta">#<span class="keyword">include</span><span class="string">&lt;bits/stdc++.h&gt;</span></span>
+<span class="keyword">using</span> <span class="keyword">namespace</span> std;
+<span class="type">int</span> x,l,r;
+<span class="type">long</span> <span class="type">long</span> a[<span class="number">2020</span>][<span class="number">2020</span>],cnt;
+<span class="type">long</span> <span class="type">long</span> s[<span class="number">2020</span>][<span class="number">2020</span>];
+pair&lt;<span class="type">int</span>,<span class="type">int</span>&gt;fa[<span class="number">3000020</span>];
+<span class="function"><span class="type">long</span> <span class="type">long</span> <span class="title">Sum</span><span class="params">(<span class="type">int</span> i,<span class="type">int</span> l,<span class="type">int</span> r)</span></span>
+<span class="function"></span>&#123;
+    <span class="keyword">if</span>(l&lt;<span class="number">1</span>)l=<span class="number">1</span>;
+    <span class="keyword">if</span>(r&gt;i)r=i;
+    <span class="keyword">return</span> s[i][r]-s[i][l<span class="number">-1</span>];
+&#125;
+<span class="function"><span class="type">void</span> <span class="title">Get</span><span class="params">(<span class="type">int</span> n)</span></span>
+<span class="function"></span>&#123;
+    x=fa[n].first;
+    l=r=fa[n].second;
+&#125;
+<span class="function"><span class="type">void</span> <span class="title">solve</span><span class="params">()</span></span>
+<span class="function"></span>&#123;
+    <span class="type">int</span> n;
+    <span class="type">long</span> <span class="type">long</span> ans=<span class="number">0</span>;
+    cin&gt;&gt;n;
+    <span class="built_in">Get</span>(n);
+    <span class="keyword">while</span>(x&gt;<span class="number">0</span>)
+    &#123;
+        ans+=<span class="built_in">Sum</span>(x,l,r);
+        l--;
+        x--;
+    &#125;
+    cout&lt;&lt;ans&lt;&lt;endl;
+&#125;
+<span class="function"><span class="type">int</span> <span class="title">main</span><span class="params">()</span></span>
+<span class="function"></span>&#123;
+    <span class="keyword">for</span>(<span class="type">int</span> i=<span class="number">1</span>;i&lt;=<span class="number">2000</span>;i++)
+    &#123;
+        <span class="keyword">for</span>(<span class="type">int</span> j=<span class="number">1</span>;j&lt;=i;j++)
+        &#123;
+            a[i][j]=++cnt;
+            s[i][j]=s[i][j<span class="number">-1</span>]+a[i][j]*a[i][j];
+            fa[cnt]=<span class="built_in">make_pair</span>(i,j);
+        &#125;
+    &#125;
+    <span class="type">int</span> t;cin&gt;&gt;t;<span class="keyword">while</span>(t--)
+    <span class="built_in">solve</span>();
+    <span class="keyword">return</span> <span class="number">0</span>;
+&#125;</code></pre>
+
+
+<h1 id="H-Don-t-Blame-Me"><a href="#H-Don-t-Blame-Me" class="headerlink" title="H.Don&#39;t Blame Me"></a>H.<a target="_blank" rel="noopener" href="https://codeforces.com/contest/1829/problem/H">Don&#39;t Blame Me</a></h1><h2 id="题目翻译-7"><a href="#题目翻译-7" class="headerlink" title="题目翻译"></a>题目翻译</h2><blockquote>
+<p>你有一个长度为 $n$ 的数组 $a$，问有多少子序列使得选中数字按位与结果中含有 $k$ 个 $1$，答案对 $10^9+7$ 取模。</p>
+<p>$1\leq n\leq 2\times 10^5,0\leq k\leq 6,0\leq a_i\leq 63$。</p>
+<p>$t$ 组数据，$1\leq t\leq 10^4$。</p>
+</blockquote>
+<h2 id="题目思路-7"><a href="#题目思路-7" class="headerlink" title="题目思路"></a>题目思路</h2><p>这题非常像背包，但是背包的转移是 <code>f[j]=max(f[j],f[j+w[i]]+value[i]);</code>，这题只不过是把所谓体积的转移从加法改成按位与。</p>
+<p>这题 dp 的初值也很有意思，赛时因为最开始的初值赋错导致痛失 AK。</p>
+<p>初值应该写成 <code>f[63]=1</code>，假设先放上一个 $(111111)_2$ 去做按位与。因为 $0$ 按位与答案一定是 $0$，后面就没意义了。</p>
+<p>但是这样有个问题，当 $k&#x3D;6$ 因为加了一个额外的 $(111111)_2$，所以会选择空集。$k&#x3D;6$ 我们最后答案减一即可。</p>
+<h2 id="完整代码-7"><a href="#完整代码-7" class="headerlink" title="完整代码"></a>完整代码</h2><pre><code class="highlight cpp"><span class="meta">#<span class="keyword">include</span><span class="string">&lt;bits/stdc++.h&gt;</span></span>
+<span class="keyword">using</span> <span class="keyword">namespace</span> std;
+<span class="type">const</span> <span class="type">int</span> p=<span class="number">1000000007</span>;
+<span class="function"><span class="type">void</span> <span class="title">solve</span><span class="params">()</span></span>
+<span class="function"></span>&#123;
+    <span class="type">int</span> n,m;
+    <span class="type">long</span> <span class="type">long</span> ANS=<span class="number">0</span>;
+    cin&gt;&gt;n&gt;&gt;m;
+    <span class="type">int</span> a[n<span class="number">+1</span>];
+    <span class="type">long</span> <span class="type">long</span> f[<span class="number">64</span>]=&#123;&#125;,ans[<span class="number">64</span>]=&#123;&#125;;
+    <span class="keyword">for</span>(<span class="type">int</span> i=<span class="number">1</span>;i&lt;=n;i++)
+    &#123;
+        cin&gt;&gt;a[i];
+    &#125;
+    ans[<span class="number">63</span>]=<span class="number">1</span>;
+    <span class="keyword">for</span>(<span class="type">int</span> i=<span class="number">1</span>;i&lt;=n;i++)
+    &#123;
+        <span class="keyword">for</span>(<span class="type">int</span> j=<span class="number">0</span>;j&lt;<span class="number">64</span>;j++)
+        &#123;
+            f[a[i]&amp;j]=(f[a[i]&amp;j]+ans[j])%p;
+        &#125;
+        <span class="keyword">for</span>(<span class="type">int</span> j=<span class="number">0</span>;j&lt;<span class="number">64</span>;j++)
+        &#123;
+            ans[j]+=f[j];
+            f[j]=<span class="number">0</span>;
+        &#125;
+    &#125;  
+    <span class="keyword">for</span>(<span class="type">int</span> i=<span class="number">0</span>;i&lt;<span class="number">64</span>;i++)
+    &#123;
+        <span class="keyword">if</span>(__builtin_popcount(i)==m)
+        &#123;
+            ANS=(ANS+ans[i])%p;
+        &#125;
+    &#125;
+    cout&lt;&lt;ANS-(m==<span class="number">6</span>)&lt;&lt;endl;
+&#125;
+<span class="function"><span class="type">int</span> <span class="title">main</span><span class="params">()</span></span>
+<span class="function"></span>&#123;
+    <span class="type">int</span> t;cin&gt;&gt;t;<span class="keyword">while</span>(t--)
+    <span class="built_in">solve</span>();
+    <span class="keyword">return</span> <span class="number">0</span>;
+&#125;</code></pre>
+
+
+	</div>
+
+	
+		<div class="post-donate">
+			<button class="btn donate-btn btn-danger">赞赏</button>
+			<div class="donate-qrcode card shadow-sm bg-white">
+				<img src="http://img.cyx2009.top/pay_wx.jpg">
+			</div>
+		</div>
+	
+
+	
+			<div class='additional-content-after-post'>爱你宝宝！</div>
+		
+
+	
+</article>
+
+	<div id="share_container">
+	<div id="share" data-initialized="true">
+		<a class="no-pjax icon-wechat" tooltip="分享到微信">
+			<button class="btn btn-icon btn-success">
+				<span class="btn-inner--icon"><i class="fa fa-weixin"></i></span>
+			</button>
+		</a>
+		<a target="_blank" class="no-pjax icon-douban" tooltip="分享到豆瓣">
+			<button class="btn btn-icon btn-primary" style="background: #209261;border: none;">
+				豆
+			</button>
+		</a>
+		<a target="_blank" class="no-pjax icon-qq" tooltip="分享到 QQ">
+			<button class="btn btn-icon btn-primary" style="background: #2196f3;border: none;">
+				<span class="btn-inner--icon"><i class="fa fa-qq"></i></span>
+			</button>
+		</a>
+		<a target="_blank" class="no-pjax icon-qzone" tooltip="分享到 QQ 空间">
+			<button class="btn btn-icon btn-primary" style="background: #ffc107;border: none;">
+				<span class="btn-inner--icon"><i class="fa fa-star"></i></span>
+			</button>
+		</a>
+		<a target="_blank" class="no-pjax icon-weibo" tooltip="分享到微博">
+			<button class="btn btn-icon btn-warning">
+				<span class="btn-inner--icon"><i class="fa fa-weibo"></i></span>
+			</button>
+		</a>
+		<a target="_blank" class="no-pjax icon-facebook" tooltip="分享到 Facebook">
+			<button class="btn btn-icon btn-primary" style="background: #283593;border: none;">
+				<span class="btn-inner--icon"><i class="fa fa-facebook"></i></span>
+			</button>
+		</a>
+		<a target="_blank" class="no-pjax icon-twitter" tooltip="分享到 Twitter">
+			<button class="btn btn-icon btn-primary" style="background: #03a9f4;border: none;">
+				<span class="btn-inner--icon"><i class="fa fa-twitter"></i></span>
+			</button>
+		</a>
+		<a target="_blank" class="no-pjax icon-telegram" href="https://telegram.me/share/url?url=http://blog.cyx2009.top/archives/CF1829/&text=[题解] CF1829 做题笔记" tooltip="分享到 Telegram">
+			<button class="btn btn-icon btn-primary" style="background: #42a5f5;border: none;">
+				<span class="btn-inner--icon"><i class="fa fa-telegram"></i></span>
+			</button>
+		</a>
+		<a target="_blank" class="no-pjax icon-copy-link" id="share_copy_link" tooltip="复制链接">
+			<button class="btn btn-icon btn-default">
+				<span class="btn-inner--icon"><i class="fa fa-link"></i></span>
+			</button>
+		</a>
+	</div>
+	<button id="share_show" class="btn btn-icon btn-primary" tooltip="分享">
+		<span class="btn-inner--icon"><i class="fa fa-share"></i></span>
+	</button>
+</div>
+<script type="text/javascript">
+	socialShare("#share", {
+	    title : '[题解] CF1829 做题笔记',
+	    description : '
+A.Love Story题目翻译
+给出一个长度为 $10$ 的字符串，一位一位看问它与 codef...',
+	    wechatQrcodeTitle : "分享到微信",
+	    wechatQrcodeHelper : '微信扫描二维码',
+	    source : 'http://blog.cyx2009.top/archives/CF1829/'
+	});
+	$("#share_show")[0].onclick = function(){
+		$("#share_container").addClass("opened");
+	};
+	$("#share_copy_link")[0].onclick = function(){
+		let input = document.createElement('input');
+		document.body.appendChild(input);
+		input.setAttribute("value", window.location.href);
+		input.setAttribute("readonly", "readonly");
+		input.setAttribute("style", "opacity: 0;mouse-events:none;");
+		input.select();
+		if (document.execCommand('copy')){
+			iziToast.show({
+				title: '链接已复制',
+				message: "链接已复制到剪贴板",
+				class: 'shadow',
+				position: 'topRight',
+				backgroundColor: '#2dce89',
+				titleColor: '#ffffff',
+				messageColor: '#ffffff',
+				iconColor: '#ffffff',
+				progressBarColor: '#ffffff',
+				icon: 'fa fa-check',
+				timeout: 5000
+			});
+		}else{
+			iziToast.show({
+				title: '复制失败',
+				message: "请手动复制链接",
+				class: 'shadow',
+				position: 'topRight',
+				backgroundColor: '#f5365c',
+				titleColor: '#ffffff',
+				messageColor: '#ffffff',
+				iconColor: '#ffffff',
+				progressBarColor: '#ffffff',
+				icon: 'fa fa-close',
+				timeout: 5000
+			});
+		}
+		document.body.removeChild(input);
+	};
+</script>
+
+
+
+	<div id="post_comment" class="card shadow-sm">
+		<div id="giscus"></div>
+<script src="https://giscus.app/client.js"
+        data-repo="chenyuxuan2009/blogtalk"
+        data-repo-id="R_kgDOHDKqeg"
+        data-category="General"
+        data-category-id="DIC_kwDOHDKqes4COOnc"
+        data-mapping="pathname"
+        data-input-position="top"
+        data-theme="light"
+        data-lang="zh-CN"
+        crossorigin="anonymous"
+        async>
+</script>
+
+	</div>
+
+
+
+<div class="post-navigation card shadow-sm"><div class="post-navigation-item post-navigation-pre"><span class="page-navigation-extra-text"><i class="fa fa-arrow-circle-o-left" aria-hidden="true"></i>上一篇</span><a href="/archives/ABC162D/" rel="prev"> [题解] ABC162D RGB Triplets</a></div><div class="post-navigation-item post-navigation-next"><span class="page-navigation-extra-text">下一篇 <i class="fa fa-arrow-circle-o-right" aria-hidden="true"></i></span><a href="/archives/CF1817A/" rel="next"> [题解] CF1817A Almost Increasing Subsequence</a></div></div>
+
+
+
+<!-- <script type="text/javascript" src="/assets/codeBlock/codeBlockFuction.js"></script>
+<!-- 代码语言 -->
+<script type="text/javascript" src="/assets/codeBlock/codeLang.js"></script>
+<!-- 代码块复制 -->
+<script type="text/javascript" src="/assets/codeBlock/codeCopy.js"></script>
+<script type="text/javascript" src="/assets/codeBlock/clipboard.min.js"></script>
+<!-- 代码块收缩 -->
+<script type="text/javascript" src="/assets/codeBlock/codeShrink.js"></script> 
+<!-- 代码块折行 --> -->
+<style type="text/css">code[class*="language-"], pre[class*="language-"] { white-space: pre !important; }</style>
+
+		
+		
+		
+		
+
+					<footer id="footer" class="site-footer card shadow-sm border-0">
+						
+						<div>Theme <a target="_blank" rel="noopener" href="https://github.com/solstice23/hexo-theme-argon"><strong>Argon</strong></a> | Powered by Hexo</div>
+						<span id="busuanzi_container_site_uv">
+							本站访客数 <span id="busuanzi_value_site_uv"></span> 人次
+						</span>
+						<span id="timeDate">载入时间...</span>
+						<script>
+						    var now = new Date(); 
+						    function createtime() { 
+						        var grt= new Date("03/28/2022 20:00:00");//在此处修改你的建站时间
+						        now.setTime(now.getTime()+250); 
+						        days = (now - grt ) / 1000 / 60 / 60 / 24; dnum = Math.floor(days); 
+						        hours = (now - grt ) / 1000 / 60 / 60 - (24 * dnum); hnum = Math.floor(hours); 
+						        if(String(hnum).length ==1 ){hnum = "0" + hnum;} minutes = (now - grt ) / 1000 /60 - (24 * 60 * dnum) - (60 * hnum); 
+						        mnum = Math.floor(minutes); if(String(mnum).length ==1 ){mnum = "0" + mnum;} 
+						        seconds = (now - grt ) / 1000 - (24 * 60 * 60 * dnum) - (60 * 60 * hnum) - (60 * mnum); 
+						        snum = Math.round(seconds); if(String(snum).length ==1 ){snum = "0" + snum;} 
+						        document.getElementById("timeDate").innerHTML = "本站已安全运行 "+dnum+" 天 "+ hnum + " 小时 " + mnum + " 分 " + snum + " 秒"; 
+						        // document.getElementById("times").innerHTML = hnum + " 小时 " + mnum + " 分 " + snum + " 秒"; 
+						    } 
+						setInterval("createtime()",250);
+						</script>
+						<script>
+        window.onload = (() => {
+            //定义点击出现文字类
+            function ClickFrontShow() {
+                //定义所需文字和颜色
+                this.fron = ['复杂度', '枚举', '模拟', '递归 & 分治', '贪心', '排序',
+                    '前缀和 & 差分', '二分', '倍增', '构造',
+                    'DFS（搜索）', 'BFS（搜索）', '双向搜索', '启发式搜索', 'A*',
+                    '迭代加深搜索', 'IDA*', '回溯法', 'Dancing Links',
+                    'Alpha-Beta 剪枝',
+                    '记忆化搜索', '背包 DP', '区间 DP', 'DAG 上的 DP', '树形 DP',
+                    '状压 DP', '数位 DP', '插头 DP', '计数 DP', '动态 DP',
+                    '概率 DP',
+                    '字符串匹配', '字符串哈希', '字典树 (Trie)', '前缀函数与 KMP 算法',
+                    'Boyer-Moore 算法', 'Z 函数（扩展 KMP）', '自动机',
+                    'AC 自动机', '后缀数组 (SA)', '后缀自动机 (SAM)', '后缀平衡树',
+                    '广义后缀自动机', '后缀树', 'Manacher', '回文树', '序列自动机',
+                    '最小表示法', 'Lyndon 分解', 'Main-Lorentz 算法',
+                    '符号', '进位制', '位运算', '二进制集合操作', '平衡三进制', '高精度计算',
+                    '快速幂', '置换和排列', '弧度制与坐标系', '复数', '数论',
+                    '多项式与生成函数', '组合数学', '线性代数', '线性规划', '群论', '概率论',
+                    '博弈论', '牛顿迭代法', '数值积分', '傅里叶-莫茨金消元法', '序理论',
+                    '杨氏矩阵', 'Schreier–Sims 算法',
+                    'Berlekamp-Massey 算法',
+                    '栈', '队列', '链表', '哈希表', '并查集', '堆', '块状数据结构',
+                    '单调栈', '单调队列', 'ST 表', '树状数组', '线段树', '李超线段树',
+                    '区间最值操作 & 区间历史最值', '划分树', '二叉搜索树 & 平衡树', '跳表',
+                    '可持久化数据结构', '树套树', 'K-D Tree', '动态树', '析合树',
+                    'PQ 树', '手指树', '霍夫曼树',
+                    '图论相关概念', '图的存储', 'DFS（图论）', 'BFS（图论）', '树上问题',
+                    '矩阵树定理', '有向无环图', '拓扑排序', '最小生成树', '斯坦纳树',
+                    '最小树形图', '最小直径生成树', '最短路', '拆点', '差分约束', 'k 短路',
+                    '同余最短路', '连通性相关', '2-SAT', '欧拉图', '哈密顿图', '二分图',
+                    '最小环', '平面图', '图的着色', '网络流', 'Stoer-Wagner 算法',
+                    '图的匹配', 'Prufer 序列', 'LGV 引理', '弦图', '最大团搜索算法',
+                    '二维计算几何基础', '三维计算几何基础', '距离', 'Pick 定理', '三角剖分',
+                    '凸包', '扫描线', '旋转卡壳', '半平面交', '平面最近点对', '随机增量法',
+                    '反演变换', '计算几何杂项',
+                    '离散化', '双指针', '离线算法', '分数规划', '随机化', '悬线法',
+                    '计算理论基础', '字节顺序', '约瑟夫问题', '格雷码', '表达式求值',
+                    '在一台机器上规划任务', '主元素问题', 'Garsia-Wachs 算法',
+                    '15-puzzle', 'Kahan 求和', '珂朵莉树/颜色段均摊',
+                    'RMQ', '并查集应用', '括号序列', '线段树与离线询问'
+                ];
+                this.colo = ['#FF69B4', '#ff6651', 'orange', '#FF00FF',
+                    '#00FF7F', '#00BFFF', '#BA55D3'
+                ];
+                //获取body元素
+                this.elBody = document.getElementsByTagName("body")[0];
+                //初始化randomNum
+                this.randomNum = null;
+                //初始化字体inde
+                this.finde = 0;
+                //初始化className
+                this.cls = 0;
+            }
+
+            //定义初始化
+            ClickFrontShow.prototype.init = function(frontArray,
+                colorArray) {
+                //自定义颜色和字体
+                this.fron = frontArray || this.fron;
+                this.colo = colorArray || this.colo;
+
+                this.listenMouse();
+            }
+
+            //创建文字
+            ClickFrontShow.prototype.createFront = function(classname) {
+                var self = this;
+                let ospan = document.createElement('span');
+                //设置样式
+                let cssText =
+                    // "width: 100%; height: 100%; top: 0; left: 0; z-index: 99999; position: fixed;";
+                    // "position:absolute; cursor: default; transform: translate(-50%,-50%); font-weight: bold; opacity: 1; z-index: 1000; transition: 1s;width: 100%; height: 100%;pointer-events: none;";
+                    // "position:absolute; width: 40px; height: 20px; cursor: default; transform: translate(-50%,-50%); font-weight: bold; opacity: 1; z-index: 1000; transition: 1s;";
+                    "position:fixed; width: 40px; height: 20px; cursor: default; transform: translate(-50%,-50%); font-weight: bold; opacity: 1; z-index: 1000; transition: 1s;";
+                //随机字体和颜色
+                let randomFront = self.fron[Math.round(Math
+                    .random() * (self.fron.length - 1))];
+                let randomColor = self.colo[Math.round(Math
+                    .random() * (self.colo.length - 1))];
+                //字体下标增1
+                self.finde = (self.finde + 1) % self.fron.length;
+                //向body中添加元素
+                self.elBody.appendChild(ospan);
+                //绑定一个classname
+                ospan.className = String(classname);
+                //添加样式
+                ospan.style.cssText = cssText +
+                    "-moz-user-select: none;-webkit-user-select: none;-ms-user-select: none;user-select: none;"
+                ospan.style.color = randomColor;
+                ospan.innerHTML = randomFront;
+            }
+
+
+            //监听鼠标点击
+            ClickFrontShow.prototype.listenMouse = function() {
+                var self = this;
+
+                //鼠标点击事件
+                document.onclick = function(e) {
+                    //避免classname值重复导致出现bug
+                    if (self.cls === 20) {
+                        self.cls = 0;
+                    } else {
+                        self.cls += 1;
+                    }
+                    //创建文字
+                    self.createFront(self.cls);
+                    let el = document.getElementsByClassName(
+                        self.cls)[0];
+
+                    //鼠标点击位置
+
+                    el.style.left = e.clientX + 'px';
+                    el.style.top = e.clientY + 'px';
+                    // alert('x: '+el.style.left+' y: '+el.style.top);
+
+                    //过时改变
+                    setTimeout(function() {
+                        el.style.opacity = 0;
+                        el.style.top = el.offsetTop -
+                            100 + 'px';
+                    }, 100);
+                    //过时清除
+                    setTimeout(function() {
+                        self.elBody.removeChild(el);
+                    }, 2000);
+                }
+            }
+            //实例化
+            var frontShow = new ClickFrontShow();
+            //用户可在此传递参数，默认第一个参数是字体数组；
+            //第二个参数是颜色数组，必须是数组类型！
+            frontShow.init();
+        })();
+						</script>
+					</footer>
+				</main>
+			</div>
+		</div>
+		
+<script src="/argontheme.js"></script>
+
+		
+		
+		
+			<link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/KaTeX/0.15.6/katex.min.css">
+			<script src="//cdnjs.cloudflare.com/ajax/libs/KaTeX/0.15.6/katex.min.js"></script>
+			<script src="//cdnjs.cloudflare.com/ajax/libs/KaTeX/0.15.6/contrib/auto-render.min.js"></script>
+			<script>
+				document.addEventListener("DOMContentLoaded", function() {
+					renderMathInElement(document.body,{
+						delimiters: [
+							{left: "$$", right: "$$", display: true},
+							{left: "$", right: "$", display: false},
+							{left: "\\(", right: "\\)", display: false}
+						]
+					});
+				});
+			</script>
+		
+
+		
+			<script>
+				var argonEnableCodeHighlight = true;
+			</script>
+			
+<link rel="stylesheet" href="/assets/vendor/highlight/styles/vs2015.css">
+
+		
+
+	</div>
+</div>
+<noscript>
+	<style>
+		article img.lazyload[src^="data:image/svg+xml;base64,PCEtLUFyZ29uTG9hZGluZy0tPg"]{display: none;}
+		.comment-item-text .comment-sticker.lazyload{display: none;}
+	</style>
+</noscript>
+</body>
+
+
+
+</html>
+

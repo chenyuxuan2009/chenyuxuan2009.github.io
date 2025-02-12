@@ -1,0 +1,1272 @@
+<!DOCTYPE html>
+
+<html class="article-header-style-1">
+<head><!-- hexo injector head_begin start -->
+<link rel="stylesheet" href="/css/bilicard.css">
+<!-- hexo injector head_begin end -->
+
+</script>
+	<link rel="stylesheet" type="text/css" href="https://bohanjun.github.io/live2d/waifu.css" />
+	<div class="waifu" id="waifu" style="z-index: 99999999;">
+  	  <div class="waifu-tips"></div>
+   	 <canvas id="live2d" width="280" height="250" class="live2d"></canvas>
+	</div>
+	<script src="https://bohanjun.github.io/live2d/live2d.js"></script>
+	<script src="https://bohanjun.github.io/live2d/waifu-tips.js"></script>
+	<script type="text/javascript">initModel()</script>
+	<link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/highlight.js/11.1.0/styles/a11y-light.min.css">
+	<script src="//cdnjs.cloudflare.com/ajax/libs/highlight.js/11.1.0/highlight.min.js"></script>
+	
+	<title>[题解] 2024 ICPC 台中 区域赛 游记 &amp; 题解 | Online Mirror - 沉石鱼惊旋 的博客</title>
+	<meta charset="utf-8">
+	
+		<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=5">
+	
+	<meta name="description" content="奶龙击败贝利亚，我纯躺赢 Rank.8。  本场比赛可以在 2024 ICPC Asia Taichung Regional Contest (Unrated, Online Mirror, ICPC Rules, Preferably Teams) 参与。是 台中区域赛 的镜像赛。 我的队友分别是 夜明 和 IvanZhang2009。 游记本来想单挑的，但是大家都组了队带队友来世贸打，夜明">
+<meta property="og:type" content="article">
+<meta property="og:title" content="[题解] 2024 ICPC 台中 区域赛 游记 &amp; 题解 | Online Mirror">
+<meta property="og:url" content="http://blog.cyx2009.top/archives/ICPC2024RegionalTaichung/index.html">
+<meta property="og:site_name" content="沉石鱼惊旋 的博客">
+<meta property="og:description" content="奶龙击败贝利亚，我纯躺赢 Rank.8。  本场比赛可以在 2024 ICPC Asia Taichung Regional Contest (Unrated, Online Mirror, ICPC Rules, Preferably Teams) 参与。是 台中区域赛 的镜像赛。 我的队友分别是 夜明 和 IvanZhang2009。 游记本来想单挑的，但是大家都组了队带队友来世贸打，夜明">
+<meta property="og:locale" content="zh_CN">
+<meta property="article:published_time" content="2024-11-25T16:01:00.000Z">
+<meta property="article:modified_time" content="2025-02-12T13:45:50.609Z">
+<meta property="article:author" content="CYX">
+<meta name="twitter:card" content="summary">
+
+	<meta name="theme-color" content="#5e72e4">
+	<meta name="theme-color-rgb" content="94,114,228">
+	<meta name="theme-color-origin" content="#5e72e4">
+	<meta name="argon-enable-custom-theme-color" content="true">
+	<meta name="theme-card-radius" content="15">
+	<meta name="theme-version" content="1.0.2">
+	<link rel="icon" href="/assets/img/favicon.ico">
+	<!-- <link rel="shortcut icon" href="/assets/img/favicon.ico"> -->
+	<!-- <link rel="shortcut icon" href="https://s2.loli.net/2022/07/28/dj7Y3yrweQ2MXNb.png"> -->
+	
+<link rel="stylesheet" href="/assets/argon_css_merged.css">
+
+	
+<link rel="stylesheet" href="/style.css">
+
+	
+<link rel="stylesheet" href="//fonts.loli.net/css?family=Open+Sans:300,400,600,700|Noto+Serif+SC:300,600&display=swap.css">
+
+	
+<script src="/assets/argon_js_merged.js"></script>
+
+	
+<script src="/assets/js/argon.min.js"></script>
+
+	
+<script src="//busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js"></script>
+
+
+	
+
+	<script>
+		var argonConfig = {
+			language: "zh_CN",
+			
+				zoomify: {
+					duration: 200,
+					easing: "cubic-bezier(0.4,0,0,1)",
+					scale: 0.9
+				},
+			
+			pangu: "false",
+			
+				lazyload: {
+					threshold: 800,
+					effect: "fadeIn"
+				},
+			
+			disable_pjax: false,
+			headroom: false
+		}
+	</script>
+	<script>
+		var darkmodeAutoSwitch = "false";
+		function setDarkmode(enable){
+			if (enable == true){
+				$("html").addClass("darkmode");
+			}else{
+				$("html").removeClass("darkmode");
+			}
+			$(window).trigger("scroll");
+		}
+		function toggleDarkmode(){
+			if ($("html").hasClass("darkmode")){
+				setDarkmode(false);
+				sessionStorage.setItem("Argon_Enable_Dark_Mode", "false");
+			}else{
+				setDarkmode(true);
+				sessionStorage.setItem("Argon_Enable_Dark_Mode", "true");
+			}
+		}
+		if (sessionStorage.getItem("Argon_Enable_Dark_Mode") == "true"){
+			setDarkmode(true);
+		}
+		function toggleDarkmodeByPrefersColorScheme(media){
+			if (sessionStorage.getItem('Argon_Enable_Dark_Mode') == "false" || sessionStorage.getItem('Argon_Enable_Dark_Mode') == "true"){
+				return;
+			}
+			if (media.matches){
+				setDarkmode(true);
+			}else{
+				setDarkmode(false);
+			}
+		}
+		function toggleDarkmodeByTime(){
+			if (sessionStorage.getItem('Argon_Enable_Dark_Mode') == "false" || sessionStorage.getItem('Argon_Enable_Dark_Mode') == "true"){
+				return;
+			}
+			let hour = new Date().getHours();
+			if (hour < 7 || hour >= 22){
+				setDarkmode(true);
+			}else{
+				setDarkmode(false);
+			}
+		}
+		if (darkmodeAutoSwitch == 'system'){
+			var darkmodeMediaQuery = window.matchMedia("(prefers-color-scheme: dark)");
+			darkmodeMediaQuery.addListener(toggleDarkmodeByPrefersColorScheme);
+			toggleDarkmodeByPrefersColorScheme(darkmodeMediaQuery);
+		}
+		if (darkmodeAutoSwitch == 'time'){
+			toggleDarkmodeByTime();
+		}
+		if (darkmodeAutoSwitch == 'alwayson'){
+			setDarkmode(true);
+		}
+
+		function toggleAmoledDarkMode(){
+			$("html").toggleClass("amoled-dark");
+			if ($("html").hasClass("amoled-dark")){
+				localStorage.setItem("Argon_Enable_Amoled_Dark_Mode", "true");
+			}else{
+				localStorage.setItem("Argon_Enable_Amoled_Dark_Mode", "false");
+			}
+		}
+		if (localStorage.getItem("Argon_Enable_Amoled_Dark_Mode") == "true"){
+			$("html").addClass("amoled-dark");
+		}else if (localStorage.getItem("Argon_Enable_Amoled_Dark_Mode") == "false"){
+			$("html").removeClass("amoled-dark");
+		}
+	</script>
+	<script>
+		if (navigator.userAgent.indexOf("Safari") !== -1 && navigator.userAgent.indexOf("Chrome") === -1){
+			$("html").addClass("using-safari");
+		}
+	</script>
+
+	
+		
+<script src="/assets/vendor/smoothscroll/smoothscroll1.js"></script>
+
+	
+<meta name="generator" content="Hexo 7.3.0"></head>
+
+
+
+<style id="themecolor_css">
+	
+	:root{
+		--themecolor: #5e72e4;
+		--themecolor-dark0: #5368E2;
+		--themecolor-dark: #485FE0;
+		--themecolor-dark2: #324CDD;
+		--themecolor-dark3: #233DD2;
+		--themecolor-light: #8A98EB;
+		--themecolor-rgbstr: 94,114,228;
+		--themecolor-gradient: linear-gradient(150deg,var(--themecolor-light) 15%, var(--themecolor) 70%, var(--themecolor-dark0) 94%);
+
+	}
+</style>
+<style id="theme_cardradius_css">
+	:root{
+		--card-radius: 15px;
+	}
+</style>
+
+<body>
+<div id="toolbar">
+	<!-- <script>
+		window.open('http://img.chen2009.tk/','_blank');
+	</script> -->
+	<header class="header-global">
+		<nav id="navbar-main" class="navbar navbar-main navbar-expand-lg navbar-transparent navbar-light bg-primary headroom--not-bottom headroom--not-top headroom--pinned">
+			<div class="container">
+				
+					<a class="navbar-brand navbar-icon mr-lg-5" href="">
+						<img src="/assets/img/favicon.ico">
+					</a>
+				
+				<button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbar_global" aria-controls="navbar_global" aria-expanded="false" aria-label="Toggle navigation">
+					<span class="navbar-toggler-icon"></span>
+				</button>
+				<a class="navbar-brand" href="/">沉石鱼惊旋 的博客</a>
+				<div class="navbar-collapse collapse" id="navbar_global">
+					<div class="navbar-collapse-header">
+						<div class="row">
+							<div class="col-6 collapse-brand"></div>
+							<div class="col-6 collapse-close">
+								<button type="button" class="navbar-toggler" data-toggle="collapse" data-target="#navbar_global" aria-controls="navbar_global" aria-expanded="false" aria-label="Toggle navigation">
+									<span></span>
+									<span></span>
+								</button>
+							</div>
+						</div>
+					</div>
+					<ul id="navbar_search_btn_mobile" class="navbar-nav align-items-lg-center ml-lg-auto">
+						<li class="nav-item" data-toggle="modal" data-target="#argon_search_modal" style="padding-left: 5px;">
+							<a class="nav-link nav-link-icon">
+								<i class="fa fa-search"></i>
+								<span class="nav-link-inner--text d-lg-none">搜索</span>
+							</a>
+						</li>
+					</ul>
+					
+							<ul class='navbar-nav navbar-nav-hover align-items-lg-center'>
+								
+										<li class='nav-item'>
+											<a href='/' class='nav-link' >
+												<i class='ni ni-book-bookmark d-lg-none'></i>
+												<span class='nav-link-inner--text'>首页</span>
+											</a>
+											
+										</li>
+									
+										<li class='nav-item'>
+											<a href='/archives' class='nav-link' >
+												<i class='ni ni-book-bookmark d-lg-none'></i>
+												<span class='nav-link-inner--text'>归档</span>
+											</a>
+											
+										</li>
+									
+										<li class='nav-item'>
+											<a href='/friends' class='nav-link' >
+												<i class='ni ni-book-bookmark d-lg-none'></i>
+												<span class='nav-link-inner--text'>友链</span>
+											</a>
+											
+										</li>
+									
+							</ul>
+						
+					<ul class="navbar-nav align-items-lg-center ml-lg-auto">
+						<li class="nav-item" data-toggle="modal" data-target="#argon_search_modal" id="navbar_search_btn_pc">
+							<a class="nav-link nav-link-icon">
+								<i class="fa fa-search"></i>
+								<span class="nav-link-inner--text d-lg-none">搜索</span>
+							</a>
+						</li>
+					</ul>
+				</div>
+				
+					<a class="navbar-brand navbar-icon-mobile" href="">
+						<img src="/assets/img/favicon.ico">
+					</a>
+				
+				<div id="navbar_menu_mask" data-toggle="collapse" data-target="#navbar_global"></div>
+			</div>
+		</nav>
+	</header>
+</div>
+<div class="modal fade" id="argon_search_modal" tabindex="-1" role="dialog" aria-labelledby="" aria-hidden="true">
+	<div class="modal-dialog modal-dialog-centered modal-lg" role="document">
+		<div class="modal-content">
+			<div class="modal-header">
+				<h5 class="modal-title">搜索</h5>
+				<button type="button" class="close" data-dismiss="modal" aria-label="Close">
+					<span aria-hidden="true">&times;</span>
+				</button>
+			</div>
+			<div class="modal-body">
+				<!-- TODO -->
+<div class="form-group mb-3">
+	<div class="input-group input-group-alternative">
+		<div class="input-group-prepend">
+			<span class="input-group-text"><i class="fa fa-search"></i></span>
+		</div>
+		<input id="local-search-input" class="form-control" placeholder="搜索什么..." type="text"  autocomplete="off" data-search.path="search.xml" data-config.root="/">
+	</div>
+	<div id="local-search-result"></div>
+</div>
+
+			</div>
+		</div>
+	</div>
+</div>
+<!--Banner-->
+<section id="banner" class="banner section section-lg section-shaped">
+	<div class="shape shape-style-1 shape-primary">
+		<span></span>
+		<span></span>
+		<span></span>
+		<span></span>
+		<span></span>
+		<span></span>
+		<span></span>
+		<span></span>
+		<span></span>
+	</div>
+
+	
+	<div id="banner_container" class="banner-container container text-center">
+		
+			<div class="banner-title text-white" data-text="沉石鱼惊旋 的博客" data-interval=""><span class="banner-title-inner">&nbsp;</span>
+		
+		</div>
+	</div>
+	
+		<style>
+			section.banner{
+				background-image: url(/assets/img/banner.jpg) !important;
+			}
+		</style>
+	
+</section>
+
+
+	<style>
+		#content:before {
+			content: '';
+			display: block;
+			position: fixed;
+			left: 0;
+			right: 0;
+			top: 0;
+			bottom: 0;
+			z-index: -2;
+			background: url(/assets/img/banner.jpg);
+			background-position: center;
+			background-size: cover;
+			background-repeat: no-repeat;
+			opacity: 1;
+			transition: opacity .5s ease;
+		}
+		html.darkmode #content:before{
+			filter: brightness(0.65);
+		}
+		
+			#content:after {
+				content: '';
+				display: block;
+				position: fixed;
+				left: 0;
+				right: 0;
+				top: 0;
+				bottom: 0;
+				z-index: -2;
+				background: url(/assets/img/banner.jpg);
+				background-position: center;
+				background-size: cover;
+				background-repeat: no-repeat;
+				opacity: 0;
+				transition: opacity .5s ease;
+			}
+			html.darkmode #content:after {
+				opacity: 1;
+			}
+			html.darkmode #content:before {
+				opacity: 0;
+			}
+		
+		
+			#banner, #banner .shape {
+				background: transparent !important;
+			}
+		
+	</style>
+
+
+
+
+<div id="float_action_buttons" class="float-action-buttons fabtns-unloaded">
+	<!-- <button id="fabtn_toggle_sides" class="btn btn-icon btn-neutral fabtn shadow-sm" type="button" aria-hidden="true" tooltip-move-to-left="移至左侧" tooltip-move-to-right="移至右侧">
+		<span class="btn-inner--icon fabtn-show-on-right"><i class="fa fa-caret-left"></i></span>
+		<span class="btn-inner--icon fabtn-show-on-left"><i class="fa fa-caret-right"></i></span>
+	</button> -->
+	<button id="fabtn_back_to_top" class="btn btn-icon btn-neutral fabtn shadow-sm" type="button" aria-label="Back To Top" tooltip="回到顶部">
+		<span class="btn-inner--icon"><i class="fa fa-angle-up"></i></span>
+	</button>
+	<button id="fabtn_go_to_comment" class="btn btn-icon btn-neutral fabtn shadow-sm d-none" type="button" <-% theme.fab_show_gotocomment_button ? "" : "style='display: none;'"  aria-label="Comment" tooltip="评论">
+		<span class="btn-inner--icon"><i class="fa fa-comment-o"></i></span>
+	</button>
+	<button id="fabtn_toggle_darkmode" class="btn btn-icon btn-neutral fabtn shadow-sm" type="button" <-% theme.fab_show_darkmode_button ? "" : "style='display: none;'"  aria-label="Toggle Darkmode" tooltip-darkmode="夜间模式" tooltip-blackmode="暗黑模式" tooltip-lightmode="日间模式">
+		<span class="btn-inner--icon"><i class="fa fa-moon-o"></i><i class='fa fa-lightbulb-o'></i></span>
+	</button>
+	<button id="fabtn_toggle_blog_settings_popup" class="btn btn-icon btn-neutral fabtn shadow-sm" type="button" <-% theme.fab_show_settings_button ? "" : "style='display: none;'"  aria-label="Open Blog Settings Menu" tooltip="设置">
+		<span class="btn-inner--icon"><i class="fa fa-cog"></i></span>
+	</button>
+	<div id="fabtn_blog_settings_popup" class="card shadow-sm" style="opacity: 0;" aria-hidden="true">
+		<div id="close_blog_settings"><i class="fa fa-close"></i></div>
+		<div class="blog-setting-item mt-3">
+			<div style="transform: translateY(-4px);"><div id="blog_setting_toggle_darkmode_and_amoledarkmode" tooltip-switch-to-darkmode="切换到夜间模式" tooltip-switch-to-blackmode="切换到暗黑模式"><span>夜间模式</span><span>暗黑模式</span></div></div>
+			<div style="flex: 1;"></div>
+			<label id="blog_setting_darkmode_switch" class="custom-toggle">
+				<span class="custom-toggle-slider rounded-circle"></span>
+			</label>
+		</div>
+		<div class="blog-setting-item mt-3">
+			<div style="flex: 1;">字体</div>
+			<div>
+				<button id="blog_setting_font_sans_serif" type="button" class="blog-setting-font btn btn-outline-primary blog-setting-selector-left">Sans Serif</button><button id="blog_setting_font_serif" type="button" class="blog-setting-font btn btn-outline-primary blog-setting-selector-right">Serif</button>
+			</div>
+		</div>
+		<div class="blog-setting-item mt-3">
+			<div style="flex: 1;">阴影</div>
+			<div>
+				<button id="blog_setting_shadow_small" type="button" class="blog-setting-shadow btn btn-outline-primary blog-setting-selector-left">浅阴影</button><button id="blog_setting_shadow_big" type="button" class="blog-setting-shadow btn btn-outline-primary blog-setting-selector-right">深阴影</button>
+			</div>
+		</div>
+		<div class="blog-setting-item mt-3 mb-3">
+			<div style="flex: 1;">滤镜</div>
+			<div id="blog_setting_filters" class="ml-3">
+				<button id="blog_setting_filter_off" type="button" class="blog-setting-filter-btn ml-0" filter-name="off">关闭</button>
+				<button id="blog_setting_filter_sunset" type="button" class="blog-setting-filter-btn" filter-name="sunset">日落</button>
+				<button id="blog_setting_filter_darkness" type="button" class="blog-setting-filter-btn" filter-name="darkness">暗化</button>
+				<button id="blog_setting_filter_grayscale" type="button" class="blog-setting-filter-btn" filter-name="grayscale">灰度</button>
+			</div>
+		</div>
+		<div class="blog-setting-item mb-3">
+			<div id="blog_setting_card_radius_to_default" style="cursor: pointer;" tooltip="恢复默认">圆角</div>
+			<div style="flex: 1;margin-left: 20px;margin-right: 8px;transform: translateY(2px);">
+				<div id="blog_setting_card_radius"></div>
+			</div>
+		</div>
+		
+			<div class="blog-setting-item mt-1 mb-3">
+				<div style="flex: 1;">主题色</div>
+				<div id="theme-color-picker" class="ml-3"></div>
+			</div>
+		
+	</div>
+	<button id="fabtn_open_sidebar" class="btn btn-icon btn-neutral fabtn shadow-sm" type="button" aria-label="Open Sidebar Menu" tooltip="菜单">
+		<span class="btn-inner--icon"><i class="fa fa-bars"></i></span>
+	</button>
+	<button id="fabtn_reading_progress" class="btn btn-icon btn-neutral fabtn shadow-sm" type="button" aria-hidden="true" tooltip="阅读进度">
+		<div id="fabtn_reading_progress_bar" style="width: 0%;"></div>
+		<span id="fabtn_reading_progress_details">0%</span>
+	</button>
+</div>
+
+<div id="content" class="site-content">
+
+
+
+
+
+
+
+
+
+<div class="page-information-card-container">
+	
+</div>
+
+<div id="sidebar_mask"></div>
+<aside id="leftbar" class="leftbar widget-area" role="complementary">
+		
+			<div id="leftbar_announcement" class="card bg-white shadow-sm border-0">
+				<div class="leftbar-announcement-body">
+					<div class="leftbar-announcement-title text-white">公告</div>
+					<div class="leftbar-announcement-content text-white">个人博客。</div>
+				</div>
+			</div>
+		
+		<div id="leftbar_part1" class="widget widget_search card bg-white shadow-sm border-0">
+			<div class="leftbar-banner card-body">
+				<span class="leftbar-banner-title text-white">沉石鱼惊旋 的博客</span>
+				
+				
+					<span class="leftbar-banner-subtitle text-white"><span class='hitokoto'></span></span>
+				
+			</div>
+			
+			
+				<ul id='leftbar_part1_menu' class='leftbar-menu'>
+					<li class='leftbar-menu-item'><a href='/'>首页</a></li><li class='leftbar-menu-item'><a href='/archives'>归档</a></li><li class='leftbar-menu-item leftbar-menu-item-haschildren'><a no-pjax onclick='return false;'>实用工具</a><ul class='leftbar-menu-item leftbar-menu-subitem shadow-sm'><li class='leftbar-menu-item'><a target="_blank" rel="noopener" href='https://lab.magiconch.com/homo/'>恶臭数学分解器</a></li><li class='leftbar-menu-item'><a target="_blank" rel="noopener" href='https://lab.magiconch.com/nbnhhsh/'>缩写查询</a></li><li class='leftbar-menu-item'><a target="_blank" rel="noopener" href='https://www.luogu.com.cn/blog/IowaBattleship/latex-gong-shi-tai-quan'>$\LaTeX$ 公式大全</a></li><li class='leftbar-menu-item'><a target="_blank" rel="noopener" href='https://zh.numberempire.com/factoringcalculator.php'>因式分解</a></li><li class='leftbar-menu-item'><a target="_blank" rel="noopener" href='https://csacademy.com/app/graph_editor/'>图论绘画</a></li></ul></li><li class='leftbar-menu-item'><a target="_blank" rel="noopener" href='http://cyx2009.top/'>目录</a></li>
+				</ul>
+			
+			<div class="card-body text-center leftbar-search-button">
+				<button id="leftbar_search" class="btn btn-secondary btn-lg active btn-sm btn-block border-0" role="button" data-toggle="modal" data-target="#argon_search_modal" >
+					<i class="menu-item-icon fa fa-search mr-0"></i> 搜索
+				</button>
+			</div>
+		</div>
+		<div id="leftbar_part2" class="widget widget_search card bg-white shadow-sm border-0">
+			<div id="leftbar_part2_inner" class="card-body">
+				
+				<div class="nav-wrapper" style="padding-top: 5px;">
+	                <ul class="nav nav-pills nav-fill" role="tablist">
+						
+							<li class="nav-item sidebar-tab-switcher">
+								<a class="active show" id="leftbar_tab_catalog_btn" data-toggle="tab" href="#leftbar_tab_catalog" role="tab" aria-controls="leftbar_tab_catalog" no-pjax>文章目录</a>
+							</li>
+						
+						<li class="nav-item sidebar-tab-switcher">
+							<a class="" id="leftbar_tab_overview_btn" data-toggle="tab" href="#leftbar_tab_overview" role="tab" aria-controls="leftbar_tab_overview" no-pjax>站点概览</a>
+						</li>
+	                </ul>
+				</div>
+				<div>
+					<div class="tab-content" style="padding: 10px 10px 0 10px;">
+						
+							<div class="tab-pane fade active show" id="leftbar_tab_catalog" role="tabpanel" aria-labelledby="leftbar_tab_catalog_btn">
+								<div id="leftbar_catalog"></div>
+								<script type="text/javascript">
+									$(function () {
+										$(document).headIndex({
+											articleWrapSelector: '#post_content',
+											indexBoxSelector: '#leftbar_catalog',
+											subItemBoxClass: "index-subItem-box",
+											itemClass: "index-item",
+											linkClass: "index-link",
+											offset: 80,
+										});
+									})
+								</script>
+								
+									<style>
+										#leftbar_catalog ul {
+											counter-reset: blog_catalog_number;
+										}
+										#leftbar_catalog li.index-item > a:before {
+											content: counters(blog_catalog_number, '.') " ";
+											counter-increment: blog_catalog_number;
+										}
+									</style>
+								
+							</div>
+						
+						<div class="tab-pane fade text-center" id="leftbar_tab_overview" role="tabpanel" aria-labelledby="leftbar_tab_overview_btn">
+							<img id="leftbar_overview_author_image" src="/assets/img/favicon.ico" class="img-fluid rounded-circle shadow-sm" style="width: 100px;" alt="avatar">
+							<h6 id="leftbar_overview_author_name">沉石鱼惊旋</h6>
+							<nav class="site-state">
+								<div class="site-state-item site-state-posts">
+									<a href="/archives">
+										<span class="site-state-item-count">166</span>
+										<span class="site-state-item-name">文章</span>
+									</a>
+								</div>
+								<div class="site-state-item site-state-categories">
+									<a data-toggle="modal" data-target="#blog_categories">
+										<span class="site-state-item-count">5</span>
+										<span class="site-state-item-name">分类</span>
+									</a>
+								</div>      
+								<div class="site-state-item site-state-tags">
+									<a data-toggle="modal" data-target="#blog_tags">
+										<span class="site-state-item-count">4</span>
+										<span class="site-state-item-name">标签</span>
+									</a>
+								</div>
+							</nav>
+							
+									<div class="site-author-links">
+										
+											<div class='site-author-links-item'>
+												<a href="https://codeforces.com/profile/Caylex" rel='noopener' target='_blank'>CF 账号</a>
+											</div>
+										
+											<div class='site-author-links-item'>
+												<a href="https://atcoder.jp/users/cayaxi09" rel='noopener' target='_blank'>AT 账号</a>
+											</div>
+										
+											<div class='site-author-links-item'>
+												<a href="https://www.luogu.com.cn/user/516346" rel='noopener' target='_blank'>洛谷账号</a>
+											</div>
+										
+									</div>
+								
+							
+									<div class='site-friend-links'>
+										<div class='site-friend-links-title'><i class='fa fa-fw fa-link'></i> Links</div>
+										<ul class='site-friend-links-ul'>
+											
+												<li class='site-friend-links-item'>
+													<a href='http://yin-xin.fun/' rel='noopener' target='_blank'>吟心</a>
+												</li>
+											
+										</ul>
+									</div>
+								
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+</aside>
+<div class="modal fade" id="blog_categories" tabindex="-1" role="dialog" aria-labelledby="" aria-hidden="true">
+	<div class="modal-dialog modal-dialog-centered">
+		<div class="modal-content">
+			<div class="modal-header">
+				<h5 class="modal-title">分类</h5>
+				<button type="button" class="close" data-dismiss="modal" aria-label="Close">
+					<span aria-hidden="true">&times;</span>
+				</button>
+			</div>
+			<div class="modal-body">
+				<a class="badge badge-secondary tag" href="/categories/Essay/" rel="tag">Essay <span class="tag-num">4</span></a><a class="badge badge-secondary tag" href="/categories/Solution/" rel="tag">Solution <span class="tag-num">147</span></a><a class="badge badge-secondary tag" href="/categories/StudyNote/" rel="tag">StudyNote <span class="tag-num">4</span></a><a class="badge badge-secondary tag" href="/categories/Technology/" rel="tag">Technology <span class="tag-num">1</span></a><a class="badge badge-secondary tag" href="/categories/TravelNote/" rel="tag">TravelNote <span class="tag-num">10</span></a>
+			</div>
+		</div>
+	</div>
+</div>
+<div class="modal fade" id="blog_tags" tabindex="-1" role="dialog" aria-labelledby="" aria-hidden="true">
+	<div class="modal-dialog modal-dialog-centered">
+		<div class="modal-content">
+			<div class="modal-header">
+				<h5 class="modal-title">标签</h5>
+				<button type="button" class="close" data-dismiss="modal" aria-label="Close">
+					<span aria-hidden="true">&times;</span>
+				</button>
+			</div>
+			<div class="modal-body">
+				<a class="badge badge-secondary tag" href="/tags/%E4%B9%B1%E6%90%9E/" rel="tag">乱搞 <span class="tag-num">2</span></a><a class="badge badge-secondary tag" href="/tags/%E5%8A%A8%E6%80%81%E8%A7%84%E5%88%92/" rel="tag">动态规划 <span class="tag-num">1</span></a><a class="badge badge-secondary tag" href="/tags/%E6%A8%A1%E6%8B%9F%E8%B5%9B/" rel="tag">模拟赛 <span class="tag-num">20</span></a><a class="badge badge-secondary tag" href="/tags/%E9%AD%94%E6%80%94%E6%9D%AF/" rel="tag">魔怔杯 <span class="tag-num">2</span></a>
+			</div>
+		</div>
+	</div>
+</div>
+
+
+<div id="primary" class="content-area">
+	<main id="main" class="site-main" role="main">
+		
+		
+			
+	<article class="post post-full card bg-white shadow-sm border-0 post-preview">
+	<header class="post-header text-center">
+		
+		<a class="post-title" href="/archives/ICPC2024RegionalTaichung/">[题解] 2024 ICPC 台中 区域赛 游记 &amp; 题解 | Online Mirror</a>
+		<div class="post-meta">
+			
+						
+						<div class="post-meta-detail post-meta-detail-time">
+							<i class="fa fa-clock-o" aria-hidden="true"></i>
+							<time title="发布于 2024-11-26 0:01:00 | 编辑于 2025-2-12 21:45:50">2024-11-26 0:01
+							</time>
+						</div>
+					
+						
+							<div class="post-meta-devide">|</div>
+						
+						<div class="post-meta-detail post-meta-detail-categories">
+							<i class="fa fa-bookmark-o" aria-hidden="true"></i>
+							<a class="post-meta-detail-catagory-link" href="/categories/Solution/">Solution</a>
+						</div>
+					
+						
+							<div class="post-meta-devide">|</div>
+						
+						<div class="post-meta-detail post-meta-detail-words">
+							<i class="fa fa fa-book" aria-hidden="true"></i>
+							<span id="busuanzi_container_page_pv">
+								阅读<span id="busuanzi_value_page_pv"></span>次
+							</span>
+						</div>
+					
+						
+							<div class="post-meta-devide">|</div>
+						
+						<div class="post-meta-detail post-meta-detail-words">
+							<i class="fa fa-file-word-o" aria-hidden="true"></i>
+							5.1k 字
+						</div>
+					
+						
+							<div class="post-meta-devide">|</div>
+						
+						<div class="post-meta-detail post-meta-detail-readingtime">
+							<i class="fa fa-hourglass-end" aria-hidden="true"></i>
+							20 分钟
+						</div>
+					
+		</div>
+		
+	</header>
+
+	<div class="post-content" id="post_content">
+		<blockquote>
+<p>奶龙击败贝利亚，我纯躺赢 Rank.8。</p>
+</blockquote>
+<p>本场比赛可以在 <a target="_blank" rel="noopener" href="https://codeforces.com/contest/2041">2024 ICPC Asia Taichung Regional Contest (Unrated, Online Mirror, ICPC Rules, Preferably Teams)</a> 参与。是 台中区域赛 的镜像赛。</p>
+<p>我的队友分别是 <a href="/usrr/305891">夜明</a> 和 <a href="/user/447479">IvanZhang2009</a>。</p>
+<h1 id="游记"><a href="#游记" class="headerlink" title="游记"></a>游记</h1><p>本来想单挑的，但是大家都组了队带队友来世贸打，夜明 老师也想给自己找个队友，就拉了我和 ivan 打。</p>
+<p>我本来是一个大号两个小号组了一个队叫『我是奶龙』，加了新成员就还是叫『我是奶龙』了。</p>
+<p>这个队名是我在上周一上课的时候偷摸打 <a target="_blank" rel="noopener" href="https://codeforces.com/contest/2038">2024-2025 ICPC, NERC, Southern and Volga Russian Regional Contest (Unrated, Online Mirror, ICPC Rules, Preferably Teams)
+</a> 的时候起的。</p>
+<p>值得一提的是 <a href="/user/530180">KingPowers</a> + <a href="/user/304524">崔化博</a> + <a href="/user/https://www.luogu.com.cn/user/503792">Svemit</a> 的队伍名称是『我是贝利亚』，是看了我们的队名临时改的。</p>
+<p>那么，接下来是，奶龙大战贝利亚的时间。</p>
+<p>三个人临时组的队一点策略没有，反正就随机开题。我先随机开了 A,B,C,E,M，挑了个题面最短的 A 读了一下，发现是个签到。00:00:46 的时候提交了 A 题。结果我没测样例挂了。还好 WA on 1 不罚时。00:01:04 的时候顺利过掉 A。</p>
+<p>接下来随便看看发现 E 似乎也是简单题，已经有队伍过了。读了一下发现不难，一定在 $n&#x3D;3$ 有解，直接输出就行。00:06:58 过掉了 E。</p>
+<p>ivan 先开的 C，在 00:08:44 的时候过掉了 C。夜明 在看 B，00:14:01 的时候也过掉了。</p>
+<p>此时我们光速 4 题。</p>
+<p>队友写完 C,B 的时候我看到有队伍过了 D，读了一下发现是搜索题，我上手几分钟就写完了。00:17:55 过了 D。</p>
+<p>此时光速 5 题！</p>
+<p>在队友写 C,B 期间我读了 H，把题意报了然后我就润了去写 D 了。Ivan 听完就会了，00:33:18 的时候提交了一发 WA on 3 发现是两行写反了。00:34:37 的时候过掉了 H。</p>
+<p>夜明在手玩 M。他好像意识到了 M 的关键性质，00:43:55 过掉了 M。</p>
+<p>7 题。靠着巨大的手速和罚时优势成为了 rk.1。</p>
+<p>接下来就要靠我们自己开题了。</p>
+<p>我随机读了一点，发现 I 可能是个简单题。但是不是很好写，我一度以为自己假了。但是世贸的别的队伍『我是贝利亚』和『Zhang BlgorixthW』都在开 I。简单想了一下好像就是离线一下就做完了。</p>
+<p>上了个厕所冷静一下开写。我感觉还有点难写啊？？？</p>
+<p>写了一半发现排序方式优先取长度更大的，我看成长度更小的了。本来一个 Trie 上面 BFS 就解决的事情还得补点东西。</p>
+<p>此时我像个 dinner 一样，愣是没想到长度就是 Trie 上的深度，我还把字符串拎出来在排序的时候判长度处理了。排序部分写了一坨。</p>
+<p>然后我就死活不知道自己挂哪里了。看了一眼数据范围，$id$ 的范围是 $[0,n]$。6。还没有保证编号连续，我开了个 vector 用 pair 存信息排序。</p>
+<p>然后就莫名其妙 RE on 5 了。我觉得是字典树上 set 的删除问题，但是题目保证合法，为了验证我甚至我还在插入删除部分写了一个不合法就 exit(0) 的程序，发现没有异常，那说明不是这一段的问题。</p>
+<p>查了半天我发现我从输入的 if 分支拷贝到离线的 if 分支的时候，由于我不需要处理 delete 操作，所以我把这个 if 删了，但是我判断操作最后一项写的是 else 不是 else if。导致我删除这个分支会让 delete 操作进入不该进入的分支执行。</p>
+<p>这个真无敌了，谁看得出来啊？？？</p>
+<p>改完就过了，这题纯纯我的锅，调了这么久还吃了一堆罚时。</p>
+<p>02:05:37 的时候过掉了 I。此时排名十名开外了。</p>
+<p>过掉之后我看 ivan 在贺 Miller Rabin。他说是判素数用的，然后说 F 自己复杂度是错的，不会求 $[l,r],r-l+1\leq 10^5$ 的素数。但我记得我入门线性筛的时候做过这个模板啊？洛谷的 <a href="/problem/P1835">P1835 素数密度</a>。我改了个线性筛上去，结果 TLE on 3 了。</p>
+<p>然后发现记忆化搜索部分有一段可以预处理掉的二分，此时 ivan 已经开摆了，我帮他加了线性筛又改了预处理。结果还是 TLE 啊？测了一下本地发现线性筛部分是瓶颈，因为我在线性筛途中处理了素数，每次都做了一遍线性筛，测了一下线性筛耗时巨大，干脆这一部分也预处理了。把求区间内素数的再单独拿出来每组 case 算一下就行了。改了改过了，极限数据本地 500ms，稳了，交一发，过了，此时是 02:50:04。</p>
+<p>在我改 F 期间夜明老师写了很久的 J。02:33:15 过掉了。此时的我还不知道这个 J 有多难，看榜发现 9 题和 10 题的 gap 就在这个 J 上。此时我们是 rk.5，和 <a href="/user/180242">kradcigam</a> 捆包队贴贴了。捆包队以罚时优势领先我们。</p>
+<p>ivan 说看了 G 很久不会，我看了 L 是计算几何，我们三个都不会，N 我很早就开了，报了题意都不会。此时 <a href="/user/483824">MatrixGroup</a> 和 <a href="/user/515385">zhuzhu2891</a> 和我们罚时相同，他们过的是 K 没过 J。ivan 去吃饭了，我读了 K 题意发现很难，也摆了，和 <a href="/user/359270">是青白呀</a> 点了个外卖开吃。</p>
+<p>吃着吃着我点开了好友提交界面，发现捆包队过了 K。我看了看榜不动了，应该是封榜了。诶不对，封榜了可以通过看好友提交记录然后知道别的队交题情况？？？逆天。</p>
+<p>最后『我是奶龙』队以 10 题 851 罚时的成绩与 『shengqile.cpp』 队一起获得了 rk.8 的成绩。</p>
+<p>是不是差在了我 A 不测样例直接交导致浪费了一分钟啊（？</p>
+<p>不过奶龙队击败了贝利亚队，贝利亚队没过 J。高下立判，奶龙统治世界。</p>
+<h1 id="题解"><a href="#题解" class="headerlink" title="题解"></a>题解</h1><p>无敌了，我写了俩小时然后没保存。小波发现了专栏编辑器的自动保存出 bug 了。</p>
+<h2 id="A-The-Bento-Box-Adventure"><a href="#A-The-Bento-Box-Adventure" class="headerlink" title="A. The Bento Box Adventure"></a>A. The Bento Box Adventure</h2><p>给定 $4$ 个整数 $a,b,c,d$。求 ${1,2,3,4,5}$ 中没出现的那个数。</p>
+<p>$1\leq a,b,c,d\leq 5$。保证数两两不同。</p>
+<hr>
+<p>根据异或的性质 $x\oplus x&#x3D;0,0\oplus x&#x3D;x$。我们用把这 $4$ 个数和 ${1,2,3,4,5}$ 都异或起来就是答案。</p>
+<p>也就是输出 $1\oplus 2\oplus 3\oplus 4\oplus 5\oplus a\oplus b\oplus c\oplus d$。</p>
+<p>推荐相似题目：<a href="/problem/P1469">P1469 找筷子</a>。</p>
+<p><a target="_blank" rel="noopener" href="https://codeforces.com/contest/2041/submission/293494235">https://codeforces.com/contest/2041/submission/293494235</a></p>
+<h2 id="B-Bowling-Frame"><a href="#B-Bowling-Frame" class="headerlink" title="B. Bowling Frame"></a>B. Bowling Frame</h2><p>给定 $w$ 个白点和 $b$ 个黑点，拼三角形，要求三角形第 $i$ 行有 $i$ 个<strong>同色</strong>的点，最大化三角形行数。</p>
+<p>多测，$1\leq t\leq 100$。</p>
+<p>$0\leq w,b\leq 10^9$。</p>
+<hr>
+<p>赛时看了喜提第一眼不会。丢给队友去写别的题了。</p>
+<p>结论题。</p>
+<p>定义 $S(n)&#x3D;\frac{n(n+1)}{2}$ 即行数为 $n$ 的三角形需要的点数，不难通过等差数列求和推出。</p>
+<p>答案即为最大的 $n$ 满足 $S(n)\leq w+b$。</p>
+<p>接下来开始证明。首先如果 $w’\leq w,b’\leq b$ 且有 $w’$ 和 $b’$ 就可以组成一个三角形，那么 $w$ 和 $b$ 一定也能组成这么大的三角形。因为可以有剩余。</p>
+<p>所以我们证明恰好等于的情况就可以。。</p>
+<p>数学归纳法证明。</p>
+<p>$n&#x3D;0$ 时，$w,b$ 取任何值都可以拼出大小为 $n$ 的三角形。相当于一个不用就可以了。</p>
+<p>若 $n&#x3D;k$ 时，对于 $w$ 取任意值，$b$ 取任意值，成立，则 $n&#x3D;k+1$ 时，$w$ 取任意值，$b$ 取任意值，也成立。</p>
+<p>考虑新加的第 $k+1$ 行填什么颜色。<strong>只要能填上，就可以化到 $n&#x3D;k$ 时的情况</strong>。</p>
+<p>也就是说我们只需要证明：在拼出行数为 $k$ 的三角形时，此时 $w,b$ 取任何值（满足 $w+b&#x3D;S(k+1)$），他们的的最大值都会比 $k+1$ 大也就是可以拼出第 $k+1$ 行。</p>
+<p>第 $k+1$ 行有 $k+1$ 个点，而 $k+1$ 行的三角形需要 $S(k)$ 个点，较多颜色的那个点<strong>至少</strong>有 $\lceil\frac{S(k+1)}{2}\rceil$ 个。</p>
+<p>证明 $k$ 取任意值都有 $k+1\leq \lceil\frac{S(k+1)}{2}\rceil$ 即可。</p>
+<p><del>仍然可以数学归纳法。</del></p>
+<p>大力拆式子。</p>
+<p>$$<br>\begin{aligned}<br>k+1 &amp;\leq \lceil\dfrac{S(k+1)}{2}\rceil\<br>k+1 &amp;\leq \lceil\dfrac{\frac{(k+1)(k+2)}{2}}{2}\rceil\<br>k+1 &amp;\leq \lfloor\dfrac{\frac{(k+1)(k+2)}{2}+1}{2}\rfloor\<br>2(k+1)&amp;\leq \dfrac{(k+1)(k+2)}{2}+1\<br>4(k+1)&amp;\leq (k+1)(k+2)+2\<br>2(k+1)+2k+2&amp;\leq 2(k+1)+k(k+1)+2\<br>2k&amp;\leq k(k+1)<br>\end{aligned}<br>$$</p>
+<p>这个不等式在 $k&#x3D;0$ 和 $k\geq 1$ 的时候都显然成立。因此 $k+1\leq \lceil\frac{S(k+1)}{2}\rceil$ 就是成立的。</p>
+<p><a target="_blank" rel="noopener" href="https://codeforces.com/contest/2041/submission/293495113">https://codeforces.com/contest/2041/submission/293495113</a></p>
+<h2 id="C-Cube"><a href="#C-Cube" class="headerlink" title="C. Cube"></a>C. Cube</h2><p>有 $n\times n\times n$ 的立方体，选 $n$ 个点，使得没有任意两点在同一平面，最小化点权。</p>
+<p>对于点 $(x_1,y_1,z_1)$ 和点 $(x_2,y_2,z_2)$，在同一平面当且仅当 $x_1&#x3D;x_2\lor y_1&#x3D;y_2\lor z_1&#x3D;z_2$。</p>
+<p>$1\leq n\leq 12$，$0\leq a_{i,j,k}\leq 2\times 10^7$</p>
+<hr>
+<p>敢写，敢交。</p>
+<p>限制等价于所有点的 $x,y,z$ 坐标互不相同。</p>
+<p>把 $x$ 互不相同拎出来，改成在 $1$ 到 $n$ 依次选择。</p>
+<p>$n$ 范围很小，考虑状压 DP。</p>
+<p>$f_{i,Sj,Sk}$ 表示 $x$ 坐标选到了 $i$，此时 $y$ 坐标集合为 $Sj$，$z$ 坐标集合为 $Sk$。</p>
+<p>转移枚举合法的集合，枚举不在集合里的数即可。</p>
+<p>看起来这非常的暴力，复杂度粗略一算是 $\mathcal O(2^{2n}n^3)$ 的。理论复杂度 $2\times 10^{10}$。</p>
+<p>但其实精细表示一下，这个运算量其实是 $\sum \limits_{i&#x3D;0}^n \binom{n}{i}^2 (n-i)^2$。当 $n&#x3D;12$ 的时候其实是 $10^8$ 左右的运算量。3s 的时限随便过。</p>
+<p><a target="_blank" rel="noopener" href="https://codeforces.com/contest/2041/submission/294597429">https://codeforces.com/contest/2041/submission/294597429</a></p>
+<h2 id="D-Drunken-Maze"><a href="#D-Drunken-Maze" class="headerlink" title="D. Drunken Maze"></a>D. Drunken Maze</h2><p>有 $n\times m$ 的地图，<code>#</code> 表示障碍，<code>.</code> 表示空地，<code>S</code> 表示起点，<code>T</code> 表示终点。要求不能<strong>超过</strong>连续三步走同一方向，不可以通过障碍。起点终点视作一种空地。</p>
+<p>问 <code>S</code> 到 <code>T</code> 的最小步数。无法到达输出 <code>-1</code>。</p>
+<p>$12\leq n\times m\leq 2\times 10^5$，$3\leq n,m\leq 10^4$。</p>
+<hr>
+<p>直接用 $4\times 3\times n\times m$ 的状态数的搜索是可过的。</p>
+<p>$f_{i,j,0&#x2F;1&#x2F;2&#x2F;3,1&#x2F;2&#x2F;3}$，表示这是从什么方向走到 $(i,j)$ 的，这是第几步。</p>
+<p>转移枚举下一步的方向。如果相同并且已经走了三步就无法转移，否则就可以走。如果这个状态之前搜过就跳过。每个状态至多入队一次，更新 $\mathcal O(1)$ 个状态，复杂度是 $\mathcal O(nmAB)$ 的。其中 $A&#x3D;4$ 表示方向的数量，$B&#x3D;3$ 表示约束的步数。</p>
+<p>关于实现：这类约束了 $nm$ 的题，开数组可以使用 vector 或者开局部数组然后清空。一些函数可以写成 lambda 表达式的形式。</p>
+<p><a target="_blank" rel="noopener" href="https://codeforces.com/contest/2041/submission/293536077">https://codeforces.com/contest/2041/submission/293536077</a></p>
+<h2 id="E-Beautiful-Array"><a href="#E-Beautiful-Array" class="headerlink" title="E. Beautiful Array"></a>E. Beautiful Array</h2><p>构造序列，满足序列中位数是 $b$，平均数是 $a$。</p>
+<p>平均数：$n$ 个数 $A_i$ 的平均数是 $A_i$ 之和除以 $n$。即 $\dfrac{\sum\limits_{i&#x3D;1}^n A_i}{n}$。</p>
+<p>中位数：$n$ 个数 $A_i$ 排序后，若 $n$ 为奇数则为 $A_{\frac{n+1}{2}}$，否则为 $A_{\frac{n}{2}}$ 和 $A_{\frac{n}{2}+1}$ 的平均数。</p>
+<p>$-100\leq a,b\leq 100$。</p>
+<p>要求构造的答案序列长度在 $[1,10^3]$ 之间，答案序列元素均为绝对值不超过 $10^6$ 的整数。</p>
+<hr>
+<p>考虑能不能用最朴素的构造求出来。$n&#x3D;3$ 的时候不妨令中位数 $A_2&#x3D;b$。然后调整平均数。</p>
+<p>一开始令 $A&#x3D;[b,b,b]$，但是可能不满足条件。</p>
+<p>如果平均数 $\gt a$ 则 $A_{1}$ 减小 $1$。</p>
+<p>如果平均数 $\lt a$ 则 $A_{3}$ 增大 $1$。</p>
+<p>显然这样一定能出解。出解至多需要做 $|3a-3b|$ 次操作。而在本题的数据范围 $|3a-3b|$ 至多为 $600$。</p>
+<p><a target="_blank" rel="noopener" href="https://codeforces.com/contest/2041/submission/293511197">https://codeforces.com/contest/2041/submission/293511197</a></p>
+<h1 id="F-Segmentation-Folds"><a href="#F-Segmentation-Folds" class="headerlink" title="F. Segmentation Folds"></a>F. Segmentation Folds</h1><p>给定 $[l,r]$，你需要选择以下操作任一执行：</p>
+<ul>
+<li><p>选择一个最大的 $x(l\lt x\leq r)$ 满足 $l+x$ 是质数，$[l,r]\to [\frac{1}{2}(l+x),r]$。</p>
+</li>
+<li><p>选择一个最小的 $x(l\leq x\lt r)$ 满足 $r+x$ 是质数，$[l,r]\to [l,\frac{1}{2}(r+x)]$。</p>
+</li>
+</ul>
+<p>如果这个区间 $[l,r]$ 无法操作，则称这个区间为一个结束状态。否则继续递归。</p>
+<p>问所有结束状态中，长度最小的有多少个。答案对 $998244353$ 取模。</p>
+<p>多测，$1\leq t\leq 10$。</p>
+<p>$1\leq l\lt r\leq 10^{12}$，$r-l\leq 10^5$。</p>
+<hr>
+<p>为了规避浮点问题，我们把所有区间的 $l,r$ 都乘上 $2$。</p>
+<p>我们首先要把 $[2l,2r]$ 之间的素数都筛出来。我们先预处理到 $\sqrt{2r}$ 的所有质数，然后把这些质数在 $[2l,2r]$ 内的倍数筛出来。具体参见 <a target="_blank" rel="noopener" href="https://www.luogu.com.cn/problem/P1835">P1835 素数密度</a>。</p>
+<p>然后大力搜索即可。</p>
+<p>搜索的时候可以通过二分找到第一个和最后一个合法的 $x$。但是这样复杂度多带一个 $\log$。我们把二分的内容拎出去，在预处理完质数之后，枚举所有的情况找到上一个下一个质数。</p>
+<p>搜索的结束状态一定是两个相邻的质数。只有 $\mathcal O(\frac{n}{\log n})$ 个。而每个状态只有 $\mathcal O(\log n)$ 个前驱状态，所以直接搜索甚至不带记忆化的复杂度是 $\mathcal O(n)$ 的。</p>
+<p>总复杂度瓶颈在筛质数的 $\mathcal O(n\log \log n)$。</p>
+<p>代码写的有点丑了，丑在了：</p>
+<blockquote>
+<p>我们把二分的内容拎出去，在预处理完质数之后，枚举所有的情况找到上一个下一个质数。</p>
+</blockquote>
+<p>这一部分。写的是二分，如果写双指针最后复杂度就是 $\mathcal O(n\log \log n)$。这份代码是 $\mathcal O(n\log n)$ 的。 </p>
+<p><a target="_blank" rel="noopener" href="https://codeforces.com/contest/2041/submission/294604119">https://codeforces.com/contest/2041/submission/294604119</a></p>
+<h2 id="H-Sheet-Music"><a href="#H-Sheet-Music" class="headerlink" title="H. Sheet Music"></a>H. Sheet Music</h2><p>定义两个序列 $a,b$ 是同一『类型』当且仅当对于所有 $i$，$a_i$ 和 $a_{i+1}$ 的大小关系与 $b_i$ 和 $b_{i+1}$ 的大小关系一致。</p>
+<p>大小关系指：大于，小于，等于。</p>
+<p>给定 $n,k$，求值域在 $[1,k]$ 的长度为 $n$ 的序列有多少个『类型』，答案对 $998244353$ 取模。</p>
+<p>$1\leq n\leq 10^6$，$1\leq k\leq 10^9$。</p>
+<hr>
+<p>等价于对符号序列计数，并且<strong>删去等号后</strong>满足不存在连续的 $k$ 个符号相同。</p>
+<p>设 $f_{i,0&#x2F;1}$ 表示第 $i$ 个位置填大于号或小于号的方案数。</p>
+<p>初值 $f_{0,0}&#x3D;f_{0,1}&#x3D;1$。</p>
+<p>转移为 $f_{i,0}&#x3D;\sum\limits_{j&#x3D;i-k+2}^{i-1} f_{j,1}$，$f_{i,1}$ 的转移同理。</p>
+<p>显然这个式子可以用前缀和优化 DP。</p>
+<p>之后对答案计数。枚举大于小于号序列的长度。等号可以随意插入，长度为 $i$ 的序列，插入方案数为 $\binom{n-1}{i}$，这就是系数。</p>
+<p>答案为 $(\sum\limits_{i&#x3D;0}^{n-1}\binom{n-1}{i}(f_{i,0}+f_{i,1}))-1$。</p>
+<p>最后 $-1$ 是因为第 $0$ 个位置，就是不填符号，大于小于贡献一样，算一个的即可。</p>
+<p><a target="_blank" rel="noopener" href="https://codeforces.com/contest/2041/submission/293242222">https://codeforces.com/contest/2041/submission/293242222</a></p>
+<h2 id="I-Auto-Complete"><a href="#I-Auto-Complete" class="headerlink" title="I. Auto Complete"></a>I. Auto Complete</h2><p>你需要维护一个搜索引擎。支持 $n$ 次操作。共 $4$ 种操作。</p>
+<ol>
+<li><code>add id str</code> 给搜索引擎插入编号为 $id$ 的内容为 $str$ 的『备选项』。</li>
+<li><code>delete id</code> 删除编号为 $id$ 的『备选项』。</li>
+<li><code>append str</code> 给搜索框后面继续输入 $str$ 的内容。</li>
+<li><code>backspace cnt</code> 给搜索框后面删除 $cnt$ 个字符。</li>
+</ol>
+<p>每次操作后，你需要输出目前的『最优』的『备选项』。</p>
+<p>『最优』的『备选项』定义为：</p>
+<ol>
+<li>搜索框内容是这个『备选项』的前缀。</li>
+<li>若满足 1 的有多个，选最长的。</li>
+<li>若满足 2 的有多个，选字典序最小的。</li>
+<li>若满足 3 的有多个，选编号最小的。</li>
+</ol>
+<p>$1\leq n\leq 10^6$，$1\leq \sum |str|\leq 2\times 10^6$，$1\leq c\leq 2\times 10^6$。</p>
+<p>保证字符串的字符 ASCII 码范围在 $[33,126]$ 以内。</p>
+<p><code>add</code> 操作的 $id$ 两两不同。</p>
+<p><code>delete</code> 操作的 $id$ 两两不同。</p>
+<p>$id$ 范围在 $[0,n]$ 之间。</p>
+<hr>
+<p>这个前缀很引导我们往字典树上想。前缀就对应着祖先。</p>
+<p>把这些备选项判定拎出来，前缀就对应着必须是祖先，长度对应深度，字典序对应着 DFS 序。</p>
+<p>先离线操作，把所有操作全扔到字典树上。删除操作就是跳若干次父亲，所以需要记录字典树每个节点的父亲编号。</p>
+<p>这里保证操作合法，所以往下走几步就至多往上走几步，跳父亲暴力跳就行了。</p>
+<p>操作离线完就做一次深搜。处理出 DFS 序。</p>
+<p>这个编号不是连续的，范围是 $[0,n]$。处理的时候要小心点。</p>
+<p>字符集大小很大，直接开数组会浪费很多空间，可以用 map 换空间。</p>
+<p>赛时太急了没好好看条件，忘判长度了，最后硬加了一个&#x2F;xk 写的有点丑。</p>
+<p><a target="_blank" rel="noopener" href="https://codeforces.com/contest/2041/submission/293614507">https://codeforces.com/contest/2041/submission/293614507</a></p>
+<h2 id="M-Selection-Sort"><a href="#M-Selection-Sort" class="headerlink" title="M. Selection Sort"></a>M. Selection Sort</h2><p>给定长度为 $n$ 的序列 $a$，对长度为 $m$ 的序列使用一次 Alice-Sort 的代价为 $m^2$。</p>
+<pre><code class="highlight cpp"><span class="function"><span class="type">int</span> <span class="title">alice_sort</span><span class="params">(<span class="type">int</span> *s, <span class="type">int</span> n)</span></span>&#123;
+  <span class="keyword">for</span>(<span class="type">int</span> i = <span class="number">0</span>; i &lt; n; ++i)&#123;
+    <span class="keyword">for</span>(<span class="type">int</span> j = i + <span class="number">1</span>; j &lt; n; ++j)&#123;
+      <span class="keyword">if</span>(s[i] &gt; s[j])&#123;
+        <span class="type">int</span> swap = s[i];
+        s[i] = s[j];
+        s[j] = swap;
+      &#125;
+    &#125;
+  &#125;
+  <span class="keyword">return</span> <span class="number">0</span>;
+&#125;</code></pre>
+
+<p>有两种操作：</p>
+<p>可以使用 Alice-Sort 对一个前缀排序。</p>
+<p>可以使用 Alice-Sort 对一个后缀排序。</p>
+<p>每种操作<strong>限用一次</strong>。</p>
+<p>问把序列排好序的最小代价。</p>
+<p>$1\leq n\leq 10^6$，$0\leq a_i\lt 2^{31}-1$。</p>
+<hr>
+<p>一共只排两次序，枚举先排前缀还是先排后缀。</p>
+<p>不妨认为先排前缀。枚举前缀需要排序到哪里，然后算出后缀排到哪里。</p>
+<p>重复值有点难搞（其实也不难搞，先处理了后面操作更顺利），我们把这个数组先改成 $[1,n]$ 的排列，相同值越前面的越小。</p>
+<p>枚举前缀排序到了哪里，维护值的连续段。$lst$ 表示值在 $[1,lst]$ 的数都可以归为了。那么 $[lst+1,n]$ 的就是需要重排的。</p>
+<p>$lst$ 可以直接维护。再维护一个小根堆，里面是已经在区间内但是连不起来的元素，$lst$ 每次根据堆里的元素尝试往后扩展。</p>
+<p>但是这有个问题，我们无法判断那些，后缀无需排序的，和我们已经扩展了前缀的，但是没有必要把一些元素加进去排序的。</p>
+<p>先处理第一个，我们找到原数组最后一个不合法（$a_i\neq i$）的位置记作 $r$，那么 $i&#x3D;r$ 的时候不要加上后缀排序的贡献。</p>
+<p>第二个，我们维护<strong>上一个</strong>需要排序的位置，就是无法直接加入的，即堆内有元素，或者 $a_i\neq lst+1$。记这个位置为 $pos$，那么前缀排序到 $i$ 的代价只为 $pos^2$。</p>
+<p>以上是先选前缀排序的做法，先选后缀排序本质一样。代码复制一遍改一改就行了。</p>
+<p><a target="_blank" rel="noopener" href="https://codeforces.com/contest/2041/submission/294548198">https://codeforces.com/contest/2041/submission/294548198</a></p>
+<h2 id="N-Railway-Construction"><a href="#N-Railway-Construction" class="headerlink" title="N. Railway Construction"></a>N. Railway Construction</h2><p>有一张 $n$ 个点的完全图，连接 $(u,v)$ 的边边权为 $a_u+a_v$。其中删除了 $m$ 条边。</p>
+<p>你需要回答 $n$ 个问题。第 $i$ 个问题你需要回答，删除 $i$ 号点之后，使剩余节点联通的最小代价。若无法联通输出 <code>-1</code>。<strong>问题互不影响</strong>。</p>
+<p>$2\leq n\leq 10^5$，$0\leq m\leq 10^5$，$1\leq a_i\leq 10^9$，$1\leq u\lt v\leq n$，保证无重边。</p>
+
+	</div>
+
+	
+		<div class="post-donate">
+			<button class="btn donate-btn btn-danger">赞赏</button>
+			<div class="donate-qrcode card shadow-sm bg-white">
+				<img src="http://img.cyx2009.top/pay_wx.jpg">
+			</div>
+		</div>
+	
+
+	
+			<div class='additional-content-after-post'>爱你宝宝！</div>
+		
+
+	
+</article>
+
+	<div id="share_container">
+	<div id="share" data-initialized="true">
+		<a class="no-pjax icon-wechat" tooltip="分享到微信">
+			<button class="btn btn-icon btn-success">
+				<span class="btn-inner--icon"><i class="fa fa-weixin"></i></span>
+			</button>
+		</a>
+		<a target="_blank" class="no-pjax icon-douban" tooltip="分享到豆瓣">
+			<button class="btn btn-icon btn-primary" style="background: #209261;border: none;">
+				豆
+			</button>
+		</a>
+		<a target="_blank" class="no-pjax icon-qq" tooltip="分享到 QQ">
+			<button class="btn btn-icon btn-primary" style="background: #2196f3;border: none;">
+				<span class="btn-inner--icon"><i class="fa fa-qq"></i></span>
+			</button>
+		</a>
+		<a target="_blank" class="no-pjax icon-qzone" tooltip="分享到 QQ 空间">
+			<button class="btn btn-icon btn-primary" style="background: #ffc107;border: none;">
+				<span class="btn-inner--icon"><i class="fa fa-star"></i></span>
+			</button>
+		</a>
+		<a target="_blank" class="no-pjax icon-weibo" tooltip="分享到微博">
+			<button class="btn btn-icon btn-warning">
+				<span class="btn-inner--icon"><i class="fa fa-weibo"></i></span>
+			</button>
+		</a>
+		<a target="_blank" class="no-pjax icon-facebook" tooltip="分享到 Facebook">
+			<button class="btn btn-icon btn-primary" style="background: #283593;border: none;">
+				<span class="btn-inner--icon"><i class="fa fa-facebook"></i></span>
+			</button>
+		</a>
+		<a target="_blank" class="no-pjax icon-twitter" tooltip="分享到 Twitter">
+			<button class="btn btn-icon btn-primary" style="background: #03a9f4;border: none;">
+				<span class="btn-inner--icon"><i class="fa fa-twitter"></i></span>
+			</button>
+		</a>
+		<a target="_blank" class="no-pjax icon-telegram" href="https://telegram.me/share/url?url=http://blog.cyx2009.top/archives/ICPC2024RegionalTaichung/&text=[题解] 2024 ICPC 台中 区域赛 游记 &amp; 题解 | Online Mirror" tooltip="分享到 Telegram">
+			<button class="btn btn-icon btn-primary" style="background: #42a5f5;border: none;">
+				<span class="btn-inner--icon"><i class="fa fa-telegram"></i></span>
+			</button>
+		</a>
+		<a target="_blank" class="no-pjax icon-copy-link" id="share_copy_link" tooltip="复制链接">
+			<button class="btn btn-icon btn-default">
+				<span class="btn-inner--icon"><i class="fa fa-link"></i></span>
+			</button>
+		</a>
+	</div>
+	<button id="share_show" class="btn btn-icon btn-primary" tooltip="分享">
+		<span class="btn-inner--icon"><i class="fa fa-share"></i></span>
+	</button>
+</div>
+<script type="text/javascript">
+	socialShare("#share", {
+	    title : '[题解] 2024 ICPC 台中 区域赛 游记 &amp; 题解 | Online Mirror',
+	    description : '
+奶龙击败贝利亚，我纯躺赢 Rank.8。
+
+本场比赛可以在 2024 ICPC Asia Taic...',
+	    wechatQrcodeTitle : "分享到微信",
+	    wechatQrcodeHelper : '微信扫描二维码',
+	    source : 'http://blog.cyx2009.top/archives/ICPC2024RegionalTaichung/'
+	});
+	$("#share_show")[0].onclick = function(){
+		$("#share_container").addClass("opened");
+	};
+	$("#share_copy_link")[0].onclick = function(){
+		let input = document.createElement('input');
+		document.body.appendChild(input);
+		input.setAttribute("value", window.location.href);
+		input.setAttribute("readonly", "readonly");
+		input.setAttribute("style", "opacity: 0;mouse-events:none;");
+		input.select();
+		if (document.execCommand('copy')){
+			iziToast.show({
+				title: '链接已复制',
+				message: "链接已复制到剪贴板",
+				class: 'shadow',
+				position: 'topRight',
+				backgroundColor: '#2dce89',
+				titleColor: '#ffffff',
+				messageColor: '#ffffff',
+				iconColor: '#ffffff',
+				progressBarColor: '#ffffff',
+				icon: 'fa fa-check',
+				timeout: 5000
+			});
+		}else{
+			iziToast.show({
+				title: '复制失败',
+				message: "请手动复制链接",
+				class: 'shadow',
+				position: 'topRight',
+				backgroundColor: '#f5365c',
+				titleColor: '#ffffff',
+				messageColor: '#ffffff',
+				iconColor: '#ffffff',
+				progressBarColor: '#ffffff',
+				icon: 'fa fa-close',
+				timeout: 5000
+			});
+		}
+		document.body.removeChild(input);
+	};
+</script>
+
+
+
+	<div id="post_comment" class="card shadow-sm">
+		<div id="giscus"></div>
+<script src="https://giscus.app/client.js"
+        data-repo="chenyuxuan2009/blogtalk"
+        data-repo-id="R_kgDOHDKqeg"
+        data-category="General"
+        data-category-id="DIC_kwDOHDKqes4COOnc"
+        data-mapping="pathname"
+        data-input-position="top"
+        data-theme="light"
+        data-lang="zh-CN"
+        crossorigin="anonymous"
+        async>
+</script>
+
+	</div>
+
+
+
+<div class="post-navigation card shadow-sm"><div class="post-navigation-item post-navigation-pre"><span class="page-navigation-extra-text"><i class="fa fa-arrow-circle-o-left" aria-hidden="true"></i>上一篇</span><a href="/archives/THUPC2025/" rel="prev"> [游记] THUPC 2025 游记</a></div><div class="post-navigation-item post-navigation-next"><span class="page-navigation-extra-text">下一篇 <i class="fa fa-arrow-circle-o-right" aria-hidden="true"></i></span><a href="/archives/CF722F/" rel="next"> [题解] [模拟赛 20241105] CF722F Cyclic Cipher</a></div></div>
+
+
+
+<!-- <script type="text/javascript" src="/assets/codeBlock/codeBlockFuction.js"></script>
+<!-- 代码语言 -->
+<script type="text/javascript" src="/assets/codeBlock/codeLang.js"></script>
+<!-- 代码块复制 -->
+<script type="text/javascript" src="/assets/codeBlock/codeCopy.js"></script>
+<script type="text/javascript" src="/assets/codeBlock/clipboard.min.js"></script>
+<!-- 代码块收缩 -->
+<script type="text/javascript" src="/assets/codeBlock/codeShrink.js"></script> 
+<!-- 代码块折行 --> -->
+<style type="text/css">code[class*="language-"], pre[class*="language-"] { white-space: pre !important; }</style>
+
+		
+		
+		
+		
+
+					<footer id="footer" class="site-footer card shadow-sm border-0">
+						
+						<div>Theme <a target="_blank" rel="noopener" href="https://github.com/solstice23/hexo-theme-argon"><strong>Argon</strong></a> | Powered by Hexo</div>
+						<span id="busuanzi_container_site_uv">
+							本站访客数 <span id="busuanzi_value_site_uv"></span> 人次
+						</span>
+						<span id="timeDate">载入时间...</span>
+						<script>
+						    var now = new Date(); 
+						    function createtime() { 
+						        var grt= new Date("03/28/2022 20:00:00");//在此处修改你的建站时间
+						        now.setTime(now.getTime()+250); 
+						        days = (now - grt ) / 1000 / 60 / 60 / 24; dnum = Math.floor(days); 
+						        hours = (now - grt ) / 1000 / 60 / 60 - (24 * dnum); hnum = Math.floor(hours); 
+						        if(String(hnum).length ==1 ){hnum = "0" + hnum;} minutes = (now - grt ) / 1000 /60 - (24 * 60 * dnum) - (60 * hnum); 
+						        mnum = Math.floor(minutes); if(String(mnum).length ==1 ){mnum = "0" + mnum;} 
+						        seconds = (now - grt ) / 1000 - (24 * 60 * 60 * dnum) - (60 * 60 * hnum) - (60 * mnum); 
+						        snum = Math.round(seconds); if(String(snum).length ==1 ){snum = "0" + snum;} 
+						        document.getElementById("timeDate").innerHTML = "本站已安全运行 "+dnum+" 天 "+ hnum + " 小时 " + mnum + " 分 " + snum + " 秒"; 
+						        // document.getElementById("times").innerHTML = hnum + " 小时 " + mnum + " 分 " + snum + " 秒"; 
+						    } 
+						setInterval("createtime()",250);
+						</script>
+						<script>
+        window.onload = (() => {
+            //定义点击出现文字类
+            function ClickFrontShow() {
+                //定义所需文字和颜色
+                this.fron = ['复杂度', '枚举', '模拟', '递归 & 分治', '贪心', '排序',
+                    '前缀和 & 差分', '二分', '倍增', '构造',
+                    'DFS（搜索）', 'BFS（搜索）', '双向搜索', '启发式搜索', 'A*',
+                    '迭代加深搜索', 'IDA*', '回溯法', 'Dancing Links',
+                    'Alpha-Beta 剪枝',
+                    '记忆化搜索', '背包 DP', '区间 DP', 'DAG 上的 DP', '树形 DP',
+                    '状压 DP', '数位 DP', '插头 DP', '计数 DP', '动态 DP',
+                    '概率 DP',
+                    '字符串匹配', '字符串哈希', '字典树 (Trie)', '前缀函数与 KMP 算法',
+                    'Boyer-Moore 算法', 'Z 函数（扩展 KMP）', '自动机',
+                    'AC 自动机', '后缀数组 (SA)', '后缀自动机 (SAM)', '后缀平衡树',
+                    '广义后缀自动机', '后缀树', 'Manacher', '回文树', '序列自动机',
+                    '最小表示法', 'Lyndon 分解', 'Main-Lorentz 算法',
+                    '符号', '进位制', '位运算', '二进制集合操作', '平衡三进制', '高精度计算',
+                    '快速幂', '置换和排列', '弧度制与坐标系', '复数', '数论',
+                    '多项式与生成函数', '组合数学', '线性代数', '线性规划', '群论', '概率论',
+                    '博弈论', '牛顿迭代法', '数值积分', '傅里叶-莫茨金消元法', '序理论',
+                    '杨氏矩阵', 'Schreier–Sims 算法',
+                    'Berlekamp-Massey 算法',
+                    '栈', '队列', '链表', '哈希表', '并查集', '堆', '块状数据结构',
+                    '单调栈', '单调队列', 'ST 表', '树状数组', '线段树', '李超线段树',
+                    '区间最值操作 & 区间历史最值', '划分树', '二叉搜索树 & 平衡树', '跳表',
+                    '可持久化数据结构', '树套树', 'K-D Tree', '动态树', '析合树',
+                    'PQ 树', '手指树', '霍夫曼树',
+                    '图论相关概念', '图的存储', 'DFS（图论）', 'BFS（图论）', '树上问题',
+                    '矩阵树定理', '有向无环图', '拓扑排序', '最小生成树', '斯坦纳树',
+                    '最小树形图', '最小直径生成树', '最短路', '拆点', '差分约束', 'k 短路',
+                    '同余最短路', '连通性相关', '2-SAT', '欧拉图', '哈密顿图', '二分图',
+                    '最小环', '平面图', '图的着色', '网络流', 'Stoer-Wagner 算法',
+                    '图的匹配', 'Prufer 序列', 'LGV 引理', '弦图', '最大团搜索算法',
+                    '二维计算几何基础', '三维计算几何基础', '距离', 'Pick 定理', '三角剖分',
+                    '凸包', '扫描线', '旋转卡壳', '半平面交', '平面最近点对', '随机增量法',
+                    '反演变换', '计算几何杂项',
+                    '离散化', '双指针', '离线算法', '分数规划', '随机化', '悬线法',
+                    '计算理论基础', '字节顺序', '约瑟夫问题', '格雷码', '表达式求值',
+                    '在一台机器上规划任务', '主元素问题', 'Garsia-Wachs 算法',
+                    '15-puzzle', 'Kahan 求和', '珂朵莉树/颜色段均摊',
+                    'RMQ', '并查集应用', '括号序列', '线段树与离线询问'
+                ];
+                this.colo = ['#FF69B4', '#ff6651', 'orange', '#FF00FF',
+                    '#00FF7F', '#00BFFF', '#BA55D3'
+                ];
+                //获取body元素
+                this.elBody = document.getElementsByTagName("body")[0];
+                //初始化randomNum
+                this.randomNum = null;
+                //初始化字体inde
+                this.finde = 0;
+                //初始化className
+                this.cls = 0;
+            }
+
+            //定义初始化
+            ClickFrontShow.prototype.init = function(frontArray,
+                colorArray) {
+                //自定义颜色和字体
+                this.fron = frontArray || this.fron;
+                this.colo = colorArray || this.colo;
+
+                this.listenMouse();
+            }
+
+            //创建文字
+            ClickFrontShow.prototype.createFront = function(classname) {
+                var self = this;
+                let ospan = document.createElement('span');
+                //设置样式
+                let cssText =
+                    // "width: 100%; height: 100%; top: 0; left: 0; z-index: 99999; position: fixed;";
+                    // "position:absolute; cursor: default; transform: translate(-50%,-50%); font-weight: bold; opacity: 1; z-index: 1000; transition: 1s;width: 100%; height: 100%;pointer-events: none;";
+                    // "position:absolute; width: 40px; height: 20px; cursor: default; transform: translate(-50%,-50%); font-weight: bold; opacity: 1; z-index: 1000; transition: 1s;";
+                    "position:fixed; width: 40px; height: 20px; cursor: default; transform: translate(-50%,-50%); font-weight: bold; opacity: 1; z-index: 1000; transition: 1s;";
+                //随机字体和颜色
+                let randomFront = self.fron[Math.round(Math
+                    .random() * (self.fron.length - 1))];
+                let randomColor = self.colo[Math.round(Math
+                    .random() * (self.colo.length - 1))];
+                //字体下标增1
+                self.finde = (self.finde + 1) % self.fron.length;
+                //向body中添加元素
+                self.elBody.appendChild(ospan);
+                //绑定一个classname
+                ospan.className = String(classname);
+                //添加样式
+                ospan.style.cssText = cssText +
+                    "-moz-user-select: none;-webkit-user-select: none;-ms-user-select: none;user-select: none;"
+                ospan.style.color = randomColor;
+                ospan.innerHTML = randomFront;
+            }
+
+
+            //监听鼠标点击
+            ClickFrontShow.prototype.listenMouse = function() {
+                var self = this;
+
+                //鼠标点击事件
+                document.onclick = function(e) {
+                    //避免classname值重复导致出现bug
+                    if (self.cls === 20) {
+                        self.cls = 0;
+                    } else {
+                        self.cls += 1;
+                    }
+                    //创建文字
+                    self.createFront(self.cls);
+                    let el = document.getElementsByClassName(
+                        self.cls)[0];
+
+                    //鼠标点击位置
+
+                    el.style.left = e.clientX + 'px';
+                    el.style.top = e.clientY + 'px';
+                    // alert('x: '+el.style.left+' y: '+el.style.top);
+
+                    //过时改变
+                    setTimeout(function() {
+                        el.style.opacity = 0;
+                        el.style.top = el.offsetTop -
+                            100 + 'px';
+                    }, 100);
+                    //过时清除
+                    setTimeout(function() {
+                        self.elBody.removeChild(el);
+                    }, 2000);
+                }
+            }
+            //实例化
+            var frontShow = new ClickFrontShow();
+            //用户可在此传递参数，默认第一个参数是字体数组；
+            //第二个参数是颜色数组，必须是数组类型！
+            frontShow.init();
+        })();
+						</script>
+					</footer>
+				</main>
+			</div>
+		</div>
+		
+<script src="/argontheme.js"></script>
+
+		
+		
+		
+			<link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/KaTeX/0.15.6/katex.min.css">
+			<script src="//cdnjs.cloudflare.com/ajax/libs/KaTeX/0.15.6/katex.min.js"></script>
+			<script src="//cdnjs.cloudflare.com/ajax/libs/KaTeX/0.15.6/contrib/auto-render.min.js"></script>
+			<script>
+				document.addEventListener("DOMContentLoaded", function() {
+					renderMathInElement(document.body,{
+						delimiters: [
+							{left: "$$", right: "$$", display: true},
+							{left: "$", right: "$", display: false},
+							{left: "\\(", right: "\\)", display: false}
+						]
+					});
+				});
+			</script>
+		
+
+		
+			<script>
+				var argonEnableCodeHighlight = true;
+			</script>
+			
+<link rel="stylesheet" href="/assets/vendor/highlight/styles/vs2015.css">
+
+		
+
+	</div>
+</div>
+<noscript>
+	<style>
+		article img.lazyload[src^="data:image/svg+xml;base64,PCEtLUFyZ29uTG9hZGluZy0tPg"]{display: none;}
+		.comment-item-text .comment-sticker.lazyload{display: none;}
+	</style>
+</noscript>
+</body>
+
+
+
+</html>
+

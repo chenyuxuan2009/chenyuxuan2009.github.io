@@ -522,19 +522,19 @@
 							<nav class="site-state">
 								<div class="site-state-item site-state-posts">
 									<a href="/archives">
-										<span class="site-state-item-count">49</span>
+										<span class="site-state-item-count">166</span>
 										<span class="site-state-item-name">文章</span>
 									</a>
 								</div>
 								<div class="site-state-item site-state-categories">
 									<a data-toggle="modal" data-target="#blog_categories">
-										<span class="site-state-item-count">3</span>
+										<span class="site-state-item-count">5</span>
 										<span class="site-state-item-name">分类</span>
 									</a>
 								</div>      
 								<div class="site-state-item site-state-tags">
 									<a data-toggle="modal" data-target="#blog_tags">
-										<span class="site-state-item-count">0</span>
+										<span class="site-state-item-count">4</span>
 										<span class="site-state-item-name">标签</span>
 									</a>
 								</div>
@@ -584,7 +584,7 @@
 				</button>
 			</div>
 			<div class="modal-body">
-				<a class="badge badge-secondary tag" href="/categories/Essay/" rel="tag">Essay <span class="tag-num">1</span></a><a class="badge badge-secondary tag" href="/categories/Solution/" rel="tag">Solution <span class="tag-num">43</span></a><a class="badge badge-secondary tag" href="/categories/TravelNote/" rel="tag">TravelNote <span class="tag-num">5</span></a>
+				<a class="badge badge-secondary tag" href="/categories/Essay/" rel="tag">Essay <span class="tag-num">4</span></a><a class="badge badge-secondary tag" href="/categories/Solution/" rel="tag">Solution <span class="tag-num">147</span></a><a class="badge badge-secondary tag" href="/categories/StudyNote/" rel="tag">StudyNote <span class="tag-num">4</span></a><a class="badge badge-secondary tag" href="/categories/Technology/" rel="tag">Technology <span class="tag-num">1</span></a><a class="badge badge-secondary tag" href="/categories/TravelNote/" rel="tag">TravelNote <span class="tag-num">10</span></a>
 			</div>
 		</div>
 	</div>
@@ -599,7 +599,7 @@
 				</button>
 			</div>
 			<div class="modal-body">
-				
+				<a class="badge badge-secondary tag" href="/tags/%E4%B9%B1%E6%90%9E/" rel="tag">乱搞 <span class="tag-num">2</span></a><a class="badge badge-secondary tag" href="/tags/%E5%8A%A8%E6%80%81%E8%A7%84%E5%88%92/" rel="tag">动态规划 <span class="tag-num">1</span></a><a class="badge badge-secondary tag" href="/tags/%E6%A8%A1%E6%8B%9F%E8%B5%9B/" rel="tag">模拟赛 <span class="tag-num">20</span></a><a class="badge badge-secondary tag" href="/tags/%E9%AD%94%E6%80%94%E6%9D%AF/" rel="tag">魔怔杯 <span class="tag-num">2</span></a>
 			</div>
 		</div>
 	</div>
@@ -615,13 +615,13 @@
 	<article class="post card bg-white shadow-sm border-0 post-preview">
 	<header class="post-header text-center">
 		
-		<a class="post-title" href="/archives/ABC260D/">[题解] ABC260D Draw Your Cards</a>
+		<a class="post-title" href="/archives/CF1829/">[题解] CF1829 做题笔记</a>
 		<div class="post-meta">
 			
 						
 						<div class="post-meta-detail post-meta-detail-time">
 							<i class="fa fa-clock-o" aria-hidden="true"></i>
-							<time title="发布于 2023-1-10 11:49:00 | 编辑于 2025-2-12 15:56:41">2023-1-10 11:49
+							<time title="发布于 2023-5-7 9:39:00 | 编辑于 2025-2-12 19:57:05">2023-5-7 9:39
 							</time>
 						</div>
 					
@@ -648,7 +648,7 @@
 						
 						<div class="post-meta-detail post-meta-detail-words">
 							<i class="fa fa-file-word-o" aria-hidden="true"></i>
-							431 字
+							2.4k 字
 						</div>
 					
 						
@@ -656,7 +656,7 @@
 						
 						<div class="post-meta-detail post-meta-detail-readingtime">
 							<i class="fa fa-hourglass-end" aria-hidden="true"></i>
-							2 分钟
+							12 分钟
 						</div>
 					
 		</div>
@@ -666,10 +666,13 @@
 	<div class="post-content">
 		
 			
-				题目翻译依次摸 $n$ 张卡片，第 $i$ 个卡片上写的 $p_i$，$p_i$ 是 $1$ 到 $n$ 的一个排列。
-维护一些牌堆，如果 $p_i$ 大于所有堆顶的牌，那么新开一堆只有 $p_i$。
-否则在所有堆顶的牌，找到大于 $p_i$ 最小的一张，把 $p_i$ 放到这个堆的堆顶。
-如果这一堆有恰好 $K$ 张牌，把这 $K$ 个牌的数字都...
+				
+A.Love Story题目翻译
+给出一个长度为 $10$ 的字符串，一位一位看问它与 codeforces 差了多少字符。
+$t$ 组数据，$1\leq t\leq 1000$。
+
+题目思路按照题意模拟，扫描一遍给出字符串，判断第 $i$ 位与 codeforces 的第 $i$ 位是否相同即可。
+完整代码#include&lt;bits/st...
 			
 		
 	</div>
@@ -681,13 +684,13 @@
 	<article class="post card bg-white shadow-sm border-0 post-preview">
 	<header class="post-header text-center">
 		
-		<a class="post-title" href="/archives/ABC232E/">[题解] ABC232E Rook Path</a>
+		<a class="post-title" href="/archives/CF1817A/">[题解] CF1817A Almost Increasing Subsequence</a>
 		<div class="post-meta">
 			
 						
 						<div class="post-meta-detail post-meta-detail-time">
 							<i class="fa fa-clock-o" aria-hidden="true"></i>
-							<time title="发布于 2023-1-9 15:21:00 | 编辑于 2025-2-12 15:54:03">2023-1-9 15:21
+							<time title="发布于 2023-5-6 19:25:00 | 编辑于 2025-2-12 16:41:28">2023-5-6 19:25
 							</time>
 						</div>
 					
@@ -714,7 +717,7 @@
 						
 						<div class="post-meta-detail post-meta-detail-words">
 							<i class="fa fa-file-word-o" aria-hidden="true"></i>
-							462 字
+							645 字
 						</div>
 					
 						
@@ -722,7 +725,7 @@
 						
 						<div class="post-meta-detail post-meta-detail-readingtime">
 							<i class="fa fa-hourglass-end" aria-hidden="true"></i>
-							2 分钟
+							3 分钟
 						</div>
 					
 		</div>
@@ -732,9 +735,11 @@
 	<div class="post-content">
 		
 			
-				题目翻译有一个 $H\times W$ 的国际象棋棋盘，求一个车从 $(x_1,y_1)$ 走到 $(x_2,y_2)$ 正好用 $K$ 步的方案数。
-题目思路首先看到题，很显然是动态规划。$f_{k,i,j}$ 表示走到 $(i,j)$ 正好 $k$ 步的方案。但时间复杂度过高，考虑进行优化。
-我们可以不记录具体走到哪个点位，我们只需知道当前在不...
+				题目翻译
+我们定义“几乎递增”序列表示这个序列没有 $3$ 个连续的元素 $x,y,z$ 使得 $x\ge y\ge z$。
+现在有一个长度为 $n$ 的序列，有 $q$ 次询问，每次问一个区间 $[l,r]$，你回答 $[l,r]$ 中最长的“几乎递增”子序列长度。
+一行 $2$ 个正整数 $n,q$ 表示长度和查询个数。
+$q$ 行每行 $1$...
 			
 		
 	</div>
@@ -746,13 +751,13 @@
 	<article class="post card bg-white shadow-sm border-0 post-preview">
 	<header class="post-header text-center">
 		
-		<a class="post-title" href="/archives/ABC252F/">[题解] ABC252F Bread</a>
+		<a class="post-title" href="/archives/ABC171E/">[题解] ABC171E Red Scarf</a>
 		<div class="post-meta">
 			
 						
 						<div class="post-meta-detail post-meta-detail-time">
 							<i class="fa fa-clock-o" aria-hidden="true"></i>
-							<time title="发布于 2023-1-9 12:50:00 | 编辑于 2025-2-12 15:53:38">2023-1-9 12:50
+							<time title="发布于 2023-5-3 9:42:00 | 编辑于 2025-2-12 16:40:29">2023-5-3 9:42
 							</time>
 						</div>
 					
@@ -779,7 +784,7 @@
 						
 						<div class="post-meta-detail post-meta-detail-words">
 							<i class="fa fa-file-word-o" aria-hidden="true"></i>
-							381 字
+							260 字
 						</div>
 					
 						
@@ -797,9 +802,485 @@
 	<div class="post-content">
 		
 			
-				闲话原题 P1334 瑞瑞的木板。刚好不久前做过，赛时直接贺了自己的代码过掉的。
-题目翻译为方便和瑞瑞的木板联系起来，下文翻译不采用原题中的“面包”而是使用“木板”。
-有一根长度为 $L$ 的木板，切成 $n$ 根小木板。第 $i$ 根小木板的长度为 $l_i$，每次切下长度为 $x$ 的小木板需要耗费 $x$ 的体力。允许有剩余，也就是说不保证 ...
+				题目翻译
+给出有 $n$ 个数的序列 $b$，还原序列 $a$，使 $a_i$ 为除 $b_i$ 以外所有数的异或和。$2\leq n\leq 2\times 10^6,0\leq a_i\leq 10^9$。$n\equiv0\pmod{2}$。
+
+题目思路前置知识：异或的归零律、恒等律与自反 $a\oplus a&#x3D;0,a\oplus ...
+			
+		
+	</div>
+
+	
+</article>
+
+
+	<article class="post card bg-white shadow-sm border-0 post-preview">
+	<header class="post-header text-center">
+		
+		<a class="post-title" href="/archives/UVA291/">[题解] UVA291 The House Of Santa Claus</a>
+		<div class="post-meta">
+			
+						
+						<div class="post-meta-detail post-meta-detail-time">
+							<i class="fa fa-clock-o" aria-hidden="true"></i>
+							<time title="发布于 2023-4-30 21:38:00 | 编辑于 2025-2-12 19:39:12">2023-4-30 21:38
+							</time>
+						</div>
+					
+						
+							<div class="post-meta-devide">|</div>
+						
+						<div class="post-meta-detail post-meta-detail-categories">
+							<i class="fa fa-bookmark-o" aria-hidden="true"></i>
+							<a class="post-meta-detail-catagory-link" href="/categories/Solution/">Solution</a>
+						</div>
+					
+						
+							<div class="post-meta-devide">|</div>
+						
+						<div class="post-meta-detail post-meta-detail-words">
+							<i class="fa fa-book" aria-hidden="true"></i>
+							<span id="busuanzi_container_page_pv">
+								阅读<span id="busuanzi_value_page_pv"></span>次
+							</span>
+						</div>
+					
+						
+							<div class="post-meta-devide">|</div>
+						
+						<div class="post-meta-detail post-meta-detail-words">
+							<i class="fa fa-file-word-o" aria-hidden="true"></i>
+							404 字
+						</div>
+					
+						
+							<div class="post-meta-devide">|</div>
+						
+						<div class="post-meta-detail post-meta-detail-readingtime">
+							<i class="fa fa-hourglass-end" aria-hidden="true"></i>
+							2 分钟
+						</div>
+					
+		</div>
+		
+	</header>
+
+	<div class="post-content">
+		
+			
+				题目翻译
+一张无向图。，由 $5$ 个点 $8$ 条边组成。请问如何才能从点 $1$ 出发不遗漏不重复走完所有边。
+
+题目思路简单的一笔画问题。通过一笔画我们不难想到七桥问题，作为尝试，我们都知道一张图内拥有 $0$ 或 $2$ 个奇点时才可被一笔画。
+显然这张图上，奇点是 $1$ 和 $2$。因为题目说了从 $1$ 开始，所以起点为 $1$。
+我...
+			
+		
+	</div>
+
+	
+</article>
+
+
+	<article class="post card bg-white shadow-sm border-0 post-preview">
+	<header class="post-header text-center">
+		
+		<a class="post-title" href="/archives/CF616D/">[题解] CF616D Longest k-Good Segment</a>
+		<div class="post-meta">
+			
+						
+						<div class="post-meta-detail post-meta-detail-time">
+							<i class="fa fa-clock-o" aria-hidden="true"></i>
+							<time title="发布于 2023-4-30 21:00:00 | 编辑于 2025-2-12 16:09:22">2023-4-30 21:00
+							</time>
+						</div>
+					
+						
+							<div class="post-meta-devide">|</div>
+						
+						<div class="post-meta-detail post-meta-detail-categories">
+							<i class="fa fa-bookmark-o" aria-hidden="true"></i>
+							<a class="post-meta-detail-catagory-link" href="/categories/Solution/">Solution</a>
+						</div>
+					
+						
+							<div class="post-meta-devide">|</div>
+						
+						<div class="post-meta-detail post-meta-detail-words">
+							<i class="fa fa-book" aria-hidden="true"></i>
+							<span id="busuanzi_container_page_pv">
+								阅读<span id="busuanzi_value_page_pv"></span>次
+							</span>
+						</div>
+					
+						
+							<div class="post-meta-devide">|</div>
+						
+						<div class="post-meta-detail post-meta-detail-words">
+							<i class="fa fa-file-word-o" aria-hidden="true"></i>
+							292 字
+						</div>
+					
+						
+							<div class="post-meta-devide">|</div>
+						
+						<div class="post-meta-detail post-meta-detail-readingtime">
+							<i class="fa fa-hourglass-end" aria-hidden="true"></i>
+							1 分钟
+						</div>
+					
+		</div>
+		
+	</header>
+
+	<div class="post-content">
+		
+			
+				题目翻译
+有一个长度为 $n$ 的序列 $a$，找出最长的 $[l,r]$ 使得 $a_l,a_{l+1},a_{l+2},\dots a_{r-1},a_r$ 不重复的数字个数 $\leq k$。$1\leq k \leq n\leq 5\times 10^5,a_i\leq 10^6$
+
+题目思路分析一下复杂度，$n$ 的级别显然告诉我们要做到...
+			
+		
+	</div>
+
+	
+</article>
+
+
+	<article class="post card bg-white shadow-sm border-0 post-preview">
+	<header class="post-header text-center">
+		
+		<a class="post-title" href="/archives/20230427_mock/">[题解] 20230427 | VP 往年区赛</a>
+		<div class="post-meta">
+			
+						
+						<div class="post-meta-detail post-meta-detail-time">
+							<i class="fa fa-clock-o" aria-hidden="true"></i>
+							<time title="发布于 2023-4-27 20:59:00 | 编辑于 2025-2-12 21:24:17">2023-4-27 20:59
+							</time>
+						</div>
+					
+						
+							<div class="post-meta-devide">|</div>
+						
+						<div class="post-meta-detail post-meta-detail-categories">
+							<i class="fa fa-bookmark-o" aria-hidden="true"></i>
+							<a class="post-meta-detail-catagory-link" href="/categories/Solution/">Solution</a>
+						</div>
+					
+						
+							<div class="post-meta-devide">|</div>
+						
+						<div class="post-meta-detail post-meta-detail-words">
+							<i class="fa fa-book" aria-hidden="true"></i>
+							<span id="busuanzi_container_page_pv">
+								阅读<span id="busuanzi_value_page_pv"></span>次
+							</span>
+						</div>
+					
+						
+							<div class="post-meta-devide">|</div>
+						
+						<div class="post-meta-detail post-meta-detail-words">
+							<i class="fa fa-file-word-o" aria-hidden="true"></i>
+							1.1k 字
+						</div>
+					
+						
+							<div class="post-meta-devide">|</div>
+						
+						<div class="post-meta-detail post-meta-detail-readingtime">
+							<i class="fa fa-hourglass-end" aria-hidden="true"></i>
+							5 分钟
+						</div>
+					
+		</div>
+		
+	</header>
+
+	<div class="post-content">
+		
+			
+				
+考场 $225\ \tt{pts}$，
+考完改了 $10$ 个字节 $335\ \tt{pts}$，
+回家改了 $2$ 个字节 $400\ \tt{pts}$。
+水平没长进挂分的水平进步不小。
+D.三角形个数 count很显然 $\mathcal O(n^2)$ 枚举两个角度会超时。
+考虑到题目隐藏数据范围 $a_i\leq 180$，我们实际只...
+			
+		
+	</div>
+
+	
+		<div class="post-tags">
+			<i class="fa fa-tags" aria-hidden="true"></i>
+			<a class="tag badge badge-secondary post-meta-detail-tag -none-link" href="/tags/%E6%A8%A1%E6%8B%9F%E8%B5%9B/" rel="tag">模拟赛</a>
+		</div>
+	
+</article>
+
+
+	<article class="post card bg-white shadow-sm border-0 post-preview">
+	<header class="post-header text-center">
+		
+		<a class="post-title" href="/archives/CF776C/">[题解] CF776C Molly&#39;s Chemicals</a>
+		<div class="post-meta">
+			
+						
+						<div class="post-meta-detail post-meta-detail-time">
+							<i class="fa fa-clock-o" aria-hidden="true"></i>
+							<time title="发布于 2023-3-26 14:21:00 | 编辑于 2025-2-12 15:11:43">2023-3-26 14:21
+							</time>
+						</div>
+					
+						
+							<div class="post-meta-devide">|</div>
+						
+						<div class="post-meta-detail post-meta-detail-categories">
+							<i class="fa fa-bookmark-o" aria-hidden="true"></i>
+							<a class="post-meta-detail-catagory-link" href="/categories/Solution/">Solution</a>
+						</div>
+					
+						
+							<div class="post-meta-devide">|</div>
+						
+						<div class="post-meta-detail post-meta-detail-words">
+							<i class="fa fa-book" aria-hidden="true"></i>
+							<span id="busuanzi_container_page_pv">
+								阅读<span id="busuanzi_value_page_pv"></span>次
+							</span>
+						</div>
+					
+						
+							<div class="post-meta-devide">|</div>
+						
+						<div class="post-meta-detail post-meta-detail-words">
+							<i class="fa fa-file-word-o" aria-hidden="true"></i>
+							387 字
+						</div>
+					
+						
+							<div class="post-meta-devide">|</div>
+						
+						<div class="post-meta-detail post-meta-detail-readingtime">
+							<i class="fa fa-hourglass-end" aria-hidden="true"></i>
+							1 分钟
+						</div>
+					
+		</div>
+		
+	</header>
+
+	<div class="post-content">
+		
+			
+				题目翻译给定长度为 $n$ 的序列 $a$，求有多少组 $(l,r)$ 满足 $\sum\limits_{i&#x3D;l}^ra_i&#x3D;k^i$。
+题目思路首先考虑，枚举 $l$ 和 $r$，判断 $\sum\limits_{i&#x3D;l}^r$ 是否为 $k$ 的倍数。但是显然这种做法复杂度为 $n^2$ 无法通过。
+设 $s$ 为...
+			
+		
+	</div>
+
+	
+</article>
+
+
+	<article class="post card bg-white shadow-sm border-0 post-preview">
+	<header class="post-header text-center">
+		
+		<a class="post-title" href="/archives/ABC159E/">[题解] ABC159E Dividing Chocolate</a>
+		<div class="post-meta">
+			
+						
+						<div class="post-meta-detail post-meta-detail-time">
+							<i class="fa fa-clock-o" aria-hidden="true"></i>
+							<time title="发布于 2023-2-14 16:35:00 | 编辑于 2025-2-12 16:00:26">2023-2-14 16:35
+							</time>
+						</div>
+					
+						
+							<div class="post-meta-devide">|</div>
+						
+						<div class="post-meta-detail post-meta-detail-categories">
+							<i class="fa fa-bookmark-o" aria-hidden="true"></i>
+							<a class="post-meta-detail-catagory-link" href="/categories/Solution/">Solution</a>
+						</div>
+					
+						
+							<div class="post-meta-devide">|</div>
+						
+						<div class="post-meta-detail post-meta-detail-words">
+							<i class="fa fa-book" aria-hidden="true"></i>
+							<span id="busuanzi_container_page_pv">
+								阅读<span id="busuanzi_value_page_pv"></span>次
+							</span>
+						</div>
+					
+						
+							<div class="post-meta-devide">|</div>
+						
+						<div class="post-meta-detail post-meta-detail-words">
+							<i class="fa fa-file-word-o" aria-hidden="true"></i>
+							345 字
+						</div>
+					
+						
+							<div class="post-meta-devide">|</div>
+						
+						<div class="post-meta-detail post-meta-detail-readingtime">
+							<i class="fa fa-hourglass-end" aria-hidden="true"></i>
+							1 分钟
+						</div>
+					
+		</div>
+		
+	</header>
+
+	<div class="post-content">
+		
+			
+				题目翻译有一个 $H\times W$ 的矩阵，切若干次，使得每一块中 $1$ 个数 $\leq k$，只能一切到底，问最少用几刀。
+题目思路直接暴力枚举每一行每一列绝对不行，复杂度 $\mathcal O(2^{H+W})$。
+我们发现 $H$ 很小，我们可以枚举 $H$ 在哪里切割，复杂度 $\mathcal O(2^H)$。其实最多只有 $H...
+			
+		
+	</div>
+
+	
+</article>
+
+
+	<article class="post card bg-white shadow-sm border-0 post-preview">
+	<header class="post-header text-center">
+		
+		<a class="post-title" href="/archives/ABC251D/">[题解] ABC251D At Most 3 (Contestant ver.)</a>
+		<div class="post-meta">
+			
+						
+						<div class="post-meta-detail post-meta-detail-time">
+							<i class="fa fa-clock-o" aria-hidden="true"></i>
+							<time title="发布于 2023-1-10 12:22:00 | 编辑于 2025-2-12 14:55:32">2023-1-10 12:22
+							</time>
+						</div>
+					
+						
+							<div class="post-meta-devide">|</div>
+						
+						<div class="post-meta-detail post-meta-detail-categories">
+							<i class="fa fa-bookmark-o" aria-hidden="true"></i>
+							<a class="post-meta-detail-catagory-link" href="/categories/Solution/">Solution</a>
+						</div>
+					
+						
+							<div class="post-meta-devide">|</div>
+						
+						<div class="post-meta-detail post-meta-detail-words">
+							<i class="fa fa-book" aria-hidden="true"></i>
+							<span id="busuanzi_container_page_pv">
+								阅读<span id="busuanzi_value_page_pv"></span>次
+							</span>
+						</div>
+					
+						
+							<div class="post-meta-devide">|</div>
+						
+						<div class="post-meta-detail post-meta-detail-words">
+							<i class="fa fa-file-word-o" aria-hidden="true"></i>
+							172 字
+						</div>
+					
+						
+							<div class="post-meta-devide">|</div>
+						
+						<div class="post-meta-detail post-meta-detail-readingtime">
+							<i class="fa fa-hourglass-end" aria-hidden="true"></i>
+							1 分钟
+						</div>
+					
+		</div>
+		
+	</header>
+
+	<div class="post-content">
+		
+			
+				题目翻译给出 $w$，问造一个数组，满足选三个正好是等于所有 $\leqslant w$ 的。
+题目思路这个 $w$ 最多 $7$ 位，但 $&lt;w$ 只有 $6$ 位。
+我们把这个数设为 $\overline{abcdef}$，然后分成 $\overline{ab}$、$\overline{cd}$、$\overline{ef}$。
+每个都有...
+			
+		
+	</div>
+
+	
+</article>
+
+
+	<article class="post card bg-white shadow-sm border-0 post-preview">
+	<header class="post-header text-center">
+		
+		<a class="post-title" href="/archives/ABC257E/">[题解] ABC257E Addition and Multiplication 2</a>
+		<div class="post-meta">
+			
+						
+						<div class="post-meta-detail post-meta-detail-time">
+							<i class="fa fa-clock-o" aria-hidden="true"></i>
+							<time title="发布于 2023-1-10 11:57:00 | 编辑于 2025-2-12 15:59:43">2023-1-10 11:57
+							</time>
+						</div>
+					
+						
+							<div class="post-meta-devide">|</div>
+						
+						<div class="post-meta-detail post-meta-detail-categories">
+							<i class="fa fa-bookmark-o" aria-hidden="true"></i>
+							<a class="post-meta-detail-catagory-link" href="/categories/Solution/">Solution</a>
+						</div>
+					
+						
+							<div class="post-meta-devide">|</div>
+						
+						<div class="post-meta-detail post-meta-detail-words">
+							<i class="fa fa-book" aria-hidden="true"></i>
+							<span id="busuanzi_container_page_pv">
+								阅读<span id="busuanzi_value_page_pv"></span>次
+							</span>
+						</div>
+					
+						
+							<div class="post-meta-devide">|</div>
+						
+						<div class="post-meta-detail post-meta-detail-words">
+							<i class="fa fa-file-word-o" aria-hidden="true"></i>
+							286 字
+						</div>
+					
+						
+							<div class="post-meta-devide">|</div>
+						
+						<div class="post-meta-detail post-meta-detail-readingtime">
+							<i class="fa fa-hourglass-end" aria-hidden="true"></i>
+							1 分钟
+						</div>
+					
+		</div>
+		
+	</header>
+
+	<div class="post-content">
+		
+			
+				题目翻译有 $9$ 种数字，$1,2,\dots9$。
+数字 $i$ 可以花 $c_i$ 的价格购买，你有 $n$ 元。
+最后输出你购买的数字拼成的最大值。
+题目思路我们考虑，先让位数最大。
+然后，再最大化最高位、次高位、次次高位，一直往下。
+最大位数，即为用 $n$ 除以最便宜的价钱。
+然后，你可能会有剩余的钱。
+剩余的，我们开始置换。
+从 $9...
 			
 		
 	</div>
@@ -809,7 +1290,7 @@
 
 
 
-<nav><ul class="pagination"><li class="page-item"><a aria-label="Previous Page" class="page-link" href="/archives/2023/page/2/"><i class="fa fa-angle-left" aria-hidden="true"></i></a></li><li class="page-item"><a class="page-link" href="/archives/2023/">1</a></li><li class="page-item"><a class="page-link" href="/archives/2023/page/2/">2</a></li><li class="page-item active"><span class="page-link" style="cursor: default;">3</span></li></ul></nav><nav><ul class="pagination pagination-mobile"><li class="page-item"><a aria-label="Previous Page" class="page-link" href="/archives/2023/page/2/"><i class="fa fa-angle-left" aria-hidden="true"></i></a></li><li class="page-item"><a class="page-link" href="/archives/2023/">1</a></li><li class="page-item"><a class="page-link" href="/archives/2023/page/2/">2</a></li><li class="page-item active"><span class="page-link" style="cursor: default;">3</span></li></ul></nav>
+<nav><ul class="pagination"><li class="page-item"><a aria-label="Previous Page" class="page-link" href="/archives/2023/page/2/"><i class="fa fa-angle-left" aria-hidden="true"></i></a></li><li class="page-item"><a class="page-link" href="/archives/2023/">1</a></li><li class="page-item"><a class="page-link" href="/archives/2023/page/2/">2</a></li><li class="page-item active"><span class="page-link" style="cursor: default;">3</span></li><li class="page-item"><a class="page-link" href="/archives/2023/page/4/">4</a></li><li class="page-item"><a aria-label="Next Page" class="page-link" href="/archives/2023/page/4/"><i class="fa fa-angle-right" aria-hidden="true"></i></a></li></ul></nav><nav><ul class="pagination pagination-mobile"><li class="page-item"><a aria-label="Previous Page" class="page-link" href="/archives/2023/page/2/"><i class="fa fa-angle-left" aria-hidden="true"></i></a></li><li class="page-item"><a class="page-link" href="/archives/2023/">1</a></li><li class="page-item"><a class="page-link" href="/archives/2023/page/2/">2</a></li><li class="page-item active"><span class="page-link" style="cursor: default;">3</span></li><li class="page-item"><a class="page-link" href="/archives/2023/page/4/">4</a></li><li class="page-item"><a aria-label="Next Page" class="page-link" href="/archives/2023/page/4/"><i class="fa fa-angle-right" aria-hidden="true"></i></a></li></ul></nav>
 
 
 			

@@ -468,7 +468,7 @@
 		
 			<p class="text-black mt-3 mb-0 opacity-8">
 				<i class="fa fa-file-o mr-1"></i>
-				43 篇文章
+				147 篇文章
 			</p>
 		
 	</div>
@@ -527,19 +527,19 @@
 							<nav class="site-state">
 								<div class="site-state-item site-state-posts">
 									<a href="/archives">
-										<span class="site-state-item-count">49</span>
+										<span class="site-state-item-count">166</span>
 										<span class="site-state-item-name">文章</span>
 									</a>
 								</div>
 								<div class="site-state-item site-state-categories">
 									<a data-toggle="modal" data-target="#blog_categories">
-										<span class="site-state-item-count">3</span>
+										<span class="site-state-item-count">5</span>
 										<span class="site-state-item-name">分类</span>
 									</a>
 								</div>      
 								<div class="site-state-item site-state-tags">
 									<a data-toggle="modal" data-target="#blog_tags">
-										<span class="site-state-item-count">0</span>
+										<span class="site-state-item-count">4</span>
 										<span class="site-state-item-name">标签</span>
 									</a>
 								</div>
@@ -589,7 +589,7 @@
 				</button>
 			</div>
 			<div class="modal-body">
-				<a class="badge badge-secondary tag" href="/categories/Essay/" rel="tag">Essay <span class="tag-num">1</span></a><a class="badge badge-secondary tag" href="/categories/Solution/" rel="tag">Solution <span class="tag-num">43</span></a><a class="badge badge-secondary tag" href="/categories/TravelNote/" rel="tag">TravelNote <span class="tag-num">5</span></a>
+				<a class="badge badge-secondary tag" href="/categories/Essay/" rel="tag">Essay <span class="tag-num">4</span></a><a class="badge badge-secondary tag" href="/categories/Solution/" rel="tag">Solution <span class="tag-num">147</span></a><a class="badge badge-secondary tag" href="/categories/StudyNote/" rel="tag">StudyNote <span class="tag-num">4</span></a><a class="badge badge-secondary tag" href="/categories/Technology/" rel="tag">Technology <span class="tag-num">1</span></a><a class="badge badge-secondary tag" href="/categories/TravelNote/" rel="tag">TravelNote <span class="tag-num">10</span></a>
 			</div>
 		</div>
 	</div>
@@ -604,7 +604,7 @@
 				</button>
 			</div>
 			<div class="modal-body">
-				
+				<a class="badge badge-secondary tag" href="/tags/%E4%B9%B1%E6%90%9E/" rel="tag">乱搞 <span class="tag-num">2</span></a><a class="badge badge-secondary tag" href="/tags/%E5%8A%A8%E6%80%81%E8%A7%84%E5%88%92/" rel="tag">动态规划 <span class="tag-num">1</span></a><a class="badge badge-secondary tag" href="/tags/%E6%A8%A1%E6%8B%9F%E8%B5%9B/" rel="tag">模拟赛 <span class="tag-num">20</span></a><a class="badge badge-secondary tag" href="/tags/%E9%AD%94%E6%80%94%E6%9D%AF/" rel="tag">魔怔杯 <span class="tag-num">2</span></a>
 			</div>
 		</div>
 	</div>
@@ -620,18 +620,15 @@
 		
 			
 	<article class="post card bg-white shadow-sm border-0 post-preview">
-	<header class="post-header text-center post-header-with-thumbnail">
+	<header class="post-header text-center">
 		
-				<img class='post-thumbnail lazyload' src='data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAYAAAAfFcSJAAAAGXRFWHRTb2Z0d2FyZQBBZG9iZSBJbWFnZVJlYWR5ccllPAAAABBJREFUeNpi+P//PwNAgAEACPwC/tuiTRYAAAAASUVORK5CYII=' data-original='https://cdn.luogu.com.cn/upload/image_hosting/4x536hgp.png' alt='thumbnail'></img>
-				<div class='post-header-text-container'>
-			
-		<a class="post-title" href="/archives/CF1648A/">[题解] CF1648A Weird Sum</a>
+		<a class="post-title" href="/archives/ABC370D/">[题解] ABC370D Cross Explosion</a>
 		<div class="post-meta">
 			
 						
 						<div class="post-meta-detail post-meta-detail-time">
 							<i class="fa fa-clock-o" aria-hidden="true"></i>
-							<time title="发布于 2022-3-10 22:10:00 | 编辑于 2025-2-12 14:30:52">2022-3-10 22:10
+							<time title="发布于 2024-9-8 13:17:00 | 编辑于 2025-2-12 21:19:08">2024-9-8 13:17
 							</time>
 						</div>
 					
@@ -658,7 +655,7 @@
 						
 						<div class="post-meta-detail post-meta-detail-words">
 							<i class="fa fa-file-word-o" aria-hidden="true"></i>
-							538 字
+							1.8k 字
 						</div>
 					
 						
@@ -666,21 +663,19 @@
 						
 						<div class="post-meta-detail post-meta-detail-readingtime">
 							<i class="fa fa-hourglass-end" aria-hidden="true"></i>
-							2 分钟
+							8 分钟
 						</div>
 					
 		</div>
 		
-				</div>
-			
 	</header>
 
 	<div class="post-content">
 		
 			
-				题目翻译一个 $n\times m$ 的网格，每个格子里有 $1$ 个数，问对于所有相同的数，曼哈顿距离总和是多少？
-曼哈顿距离：$a_{i_1,j_1}$ 与 $a_{i_2,j_2}$ 距离为 $\left|i_1-i_2\right|+\left|j_1-j_2\right|$。
-题目思路暴力搜一遍，肯定挂掉，$n\times m$ 有 $1...
+				题目翻译给定 $h\times w$ 的网格，初始每个格子上都有一堵墙，给出 $q$ 个操作，每次给出 $(r,c)$ 表示操作位置，若 $(r,c)$ 位置上有墙就破坏掉这个墙。如果没有，破坏掉这堵墙上、下、左、右四个方向各看到的第一堵墙。
+操作之后给出目前剩下的墙的个数。
+$1\leq h,w,h\times w\leq 4\times 10^...
 			
 		
 	</div>
@@ -692,13 +687,13 @@
 	<article class="post card bg-white shadow-sm border-0 post-preview">
 	<header class="post-header text-center">
 		
-		<a class="post-title" href="/archives/CF1646B/">[题解] CF1646B Quality vs Quantity</a>
+		<a class="post-title" href="/archives/CF2008/">[题解] CF2008 做题笔记</a>
 		<div class="post-meta">
 			
 						
 						<div class="post-meta-detail post-meta-detail-time">
 							<i class="fa fa-clock-o" aria-hidden="true"></i>
-							<time title="发布于 2022-3-10 19:24:00 | 编辑于 2025-2-12 14:20:49">2022-3-10 19:24
+							<time title="发布于 2024-9-2 0:54:00 | 编辑于 2025-2-12 21:48:57">2024-9-2 0:54
 							</time>
 						</div>
 					
@@ -725,7 +720,530 @@
 						
 						<div class="post-meta-detail post-meta-detail-words">
 							<i class="fa fa-file-word-o" aria-hidden="true"></i>
-							323 字
+							784 字
+						</div>
+					
+						
+							<div class="post-meta-devide">|</div>
+						
+						<div class="post-meta-detail post-meta-detail-readingtime">
+							<i class="fa fa-hourglass-end" aria-hidden="true"></i>
+							3 分钟
+						</div>
+					
+		</div>
+		
+	</header>
+
+	<div class="post-content">
+		
+			
+				A看 $a$ 个 $1$ 和 $b\bmod 2$ 个 $2$ 能不能匹配。
+B打到一半加解释，牛牛牛。
+先判断 $n$ 是否为完全平方数，如果是的话设 $m&#x3D;\sqrt n$。看原图形分成 $m\times m$ 的图形是否满足要求。
+C不难发现只和 $r-l$ 有关。
+二分答案 $mid$ 表示能增加几项，中间一共增加了 $\frac...
+			
+		
+	</div>
+
+	
+</article>
+
+
+	<article class="post card bg-white shadow-sm border-0 post-preview">
+	<header class="post-header text-center">
+		
+		<a class="post-title" href="/archives/P10637/">[题解] P10637 BZOJ4262 Sum</a>
+		<div class="post-meta">
+			
+						
+						<div class="post-meta-detail post-meta-detail-time">
+							<i class="fa fa-clock-o" aria-hidden="true"></i>
+							<time title="发布于 2024-8-27 15:00:00 | 编辑于 2025-2-12 21:17:00">2024-8-27 15:00
+							</time>
+						</div>
+					
+						
+							<div class="post-meta-devide">|</div>
+						
+						<div class="post-meta-detail post-meta-detail-categories">
+							<i class="fa fa-bookmark-o" aria-hidden="true"></i>
+							<a class="post-meta-detail-catagory-link" href="/categories/Solution/">Solution</a>
+						</div>
+					
+						
+							<div class="post-meta-devide">|</div>
+						
+						<div class="post-meta-detail post-meta-detail-words">
+							<i class="fa fa-book" aria-hidden="true"></i>
+							<span id="busuanzi_container_page_pv">
+								阅读<span id="busuanzi_value_page_pv"></span>次
+							</span>
+						</div>
+					
+						
+							<div class="post-meta-devide">|</div>
+						
+						<div class="post-meta-detail post-meta-detail-words">
+							<i class="fa fa-file-word-o" aria-hidden="true"></i>
+							1.4k 字
+						</div>
+					
+						
+							<div class="post-meta-devide">|</div>
+						
+						<div class="post-meta-detail post-meta-detail-readingtime">
+							<i class="fa fa-hourglass-end" aria-hidden="true"></i>
+							7 分钟
+						</div>
+					
+		</div>
+		
+	</header>
+
+	<div class="post-content">
+		
+			
+				题目思路本文提供一种依赖 $a_i$ 随机生成的解决方式。
+首先 $\min$ 和 $\max$ 可以拆开，原式就是：
+$$(\sum_{l \in [l_1,r_1]} \sum_{r \in [l_2,r_2]} \max_{i \in [l,r]} a_i)-(\sum_{l \in [l_1,r_1]} \sum_{r \in [l_2,r...
+			
+		
+	</div>
+
+	
+</article>
+
+
+	<article class="post card bg-white shadow-sm border-0 post-preview">
+	<header class="post-header text-center">
+		
+		<a class="post-title" href="/archives/ABC365G/">[题解] ABC365G AtCoder Office</a>
+		<div class="post-meta">
+			
+						
+						<div class="post-meta-detail post-meta-detail-time">
+							<i class="fa fa-clock-o" aria-hidden="true"></i>
+							<time title="发布于 2024-8-3 23:24:00 | 编辑于 2025-2-12 21:11:27">2024-8-3 23:24
+							</time>
+						</div>
+					
+						
+							<div class="post-meta-devide">|</div>
+						
+						<div class="post-meta-detail post-meta-detail-categories">
+							<i class="fa fa-bookmark-o" aria-hidden="true"></i>
+							<a class="post-meta-detail-catagory-link" href="/categories/Solution/">Solution</a>
+						</div>
+					
+						
+							<div class="post-meta-devide">|</div>
+						
+						<div class="post-meta-detail post-meta-detail-words">
+							<i class="fa fa-book" aria-hidden="true"></i>
+							<span id="busuanzi_container_page_pv">
+								阅读<span id="busuanzi_value_page_pv"></span>次
+							</span>
+						</div>
+					
+						
+							<div class="post-meta-devide">|</div>
+						
+						<div class="post-meta-detail post-meta-detail-words">
+							<i class="fa fa-file-word-o" aria-hidden="true"></i>
+							1.6k 字
+						</div>
+					
+						
+							<div class="post-meta-devide">|</div>
+						
+						<div class="post-meta-detail post-meta-detail-readingtime">
+							<i class="fa fa-hourglass-end" aria-hidden="true"></i>
+							7 分钟
+						</div>
+					
+		</div>
+		
+	</header>
+
+	<div class="post-content">
+		
+			
+				题目翻译有 $n$ 个人，给定 $m$ 个信息，第 $i$ 条表示 $t_i$ 时刻人 $p_i$ 进 &#x2F; 出了房间。
+进还是出由之前的状态决定。保证最后所有人都是出的。
+现在给定 $q$ 个询问，查询 $a,b$ 表示 $a$ 在房间和 $b$ 在房间的时间的交集大小。
+$2\leq n,m\leq 2\times 10^5$，$1\l...
+			
+		
+	</div>
+
+	
+</article>
+
+
+	<article class="post card bg-white shadow-sm border-0 post-preview">
+	<header class="post-header text-center">
+		
+		<a class="post-title" href="/archives/CF1997E/">[题解] CF1997E Level Up</a>
+		<div class="post-meta">
+			
+						
+						<div class="post-meta-detail post-meta-detail-time">
+							<i class="fa fa-clock-o" aria-hidden="true"></i>
+							<time title="发布于 2024-8-1 15:53:00 | 编辑于 2025-2-12 21:10:31">2024-8-1 15:53
+							</time>
+						</div>
+					
+						
+							<div class="post-meta-devide">|</div>
+						
+						<div class="post-meta-detail post-meta-detail-categories">
+							<i class="fa fa-bookmark-o" aria-hidden="true"></i>
+							<a class="post-meta-detail-catagory-link" href="/categories/Solution/">Solution</a>
+						</div>
+					
+						
+							<div class="post-meta-devide">|</div>
+						
+						<div class="post-meta-detail post-meta-detail-words">
+							<i class="fa fa-book" aria-hidden="true"></i>
+							<span id="busuanzi_container_page_pv">
+								阅读<span id="busuanzi_value_page_pv"></span>次
+							</span>
+						</div>
+					
+						
+							<div class="post-meta-devide">|</div>
+						
+						<div class="post-meta-detail post-meta-detail-words">
+							<i class="fa fa-file-word-o" aria-hidden="true"></i>
+							1.3k 字
+						</div>
+					
+						
+							<div class="post-meta-devide">|</div>
+						
+						<div class="post-meta-detail post-meta-detail-readingtime">
+							<i class="fa fa-hourglass-end" aria-hidden="true"></i>
+							6 分钟
+						</div>
+					
+		</div>
+		
+	</header>
+
+	<div class="post-content">
+		
+			
+				题目翻译打怪操作是指，顺次对于 $[1,n]$ 的每个怪，每个怪有 $a_i$ 的等级，如果你的等级 $lv$ 严格大于怪的等级 $a_i$，它就会逃跑。反之你会和它战斗。
+你每与 $k$ 个怪战斗就会升一级，即 $lv\gets lv+1$。
+现在有若干组查询，每次查询 $i,x$ 表示询问 $k&#x3D;x$ 时，你是否会和第 $i$ 个怪战...
+			
+		
+	</div>
+
+	
+</article>
+
+
+	<article class="post card bg-white shadow-sm border-0 post-preview">
+	<header class="post-header text-center">
+		
+		<a class="post-title" href="/archives/CF558C/">[题解] CF558C Amr and Chemistry</a>
+		<div class="post-meta">
+			
+						
+						<div class="post-meta-detail post-meta-detail-time">
+							<i class="fa fa-clock-o" aria-hidden="true"></i>
+							<time title="发布于 2024-7-28 14:46:00 | 编辑于 2025-2-12 21:08:45">2024-7-28 14:46
+							</time>
+						</div>
+					
+						
+							<div class="post-meta-devide">|</div>
+						
+						<div class="post-meta-detail post-meta-detail-categories">
+							<i class="fa fa-bookmark-o" aria-hidden="true"></i>
+							<a class="post-meta-detail-catagory-link" href="/categories/Solution/">Solution</a>
+						</div>
+					
+						
+							<div class="post-meta-devide">|</div>
+						
+						<div class="post-meta-detail post-meta-detail-words">
+							<i class="fa fa-book" aria-hidden="true"></i>
+							<span id="busuanzi_container_page_pv">
+								阅读<span id="busuanzi_value_page_pv"></span>次
+							</span>
+						</div>
+					
+						
+							<div class="post-meta-devide">|</div>
+						
+						<div class="post-meta-detail post-meta-detail-words">
+							<i class="fa fa-file-word-o" aria-hidden="true"></i>
+							758 字
+						</div>
+					
+						
+							<div class="post-meta-devide">|</div>
+						
+						<div class="post-meta-detail post-meta-detail-readingtime">
+							<i class="fa fa-hourglass-end" aria-hidden="true"></i>
+							3 分钟
+						</div>
+					
+		</div>
+		
+	</header>
+
+	<div class="post-content">
+		
+			
+				前言本文是对 DennyQi 题解思想的补充做法。
+题目翻译$n$ 个数 $a_i$，每次可以选择 $a_i\gets a_i\times 2$ 或者 $a_i\gets \lfloor\frac{a_i}{2}\rfloor$。
+问几次操作后 $a_i$ 全部一样。
+$1\leq n\leq 10^5$，$1\leq a_i\leq 10^5$。...
+			
+		
+	</div>
+
+	
+</article>
+
+
+	<article class="post card bg-white shadow-sm border-0 post-preview">
+	<header class="post-header text-center">
+		
+		<a class="post-title" href="/archives/ABC358G/">[题解] ABC358G AtCoder Tour</a>
+		<div class="post-meta">
+			
+						
+						<div class="post-meta-detail post-meta-detail-time">
+							<i class="fa fa-clock-o" aria-hidden="true"></i>
+							<time title="发布于 2024-6-16 21:30:00 | 编辑于 2025-2-12 21:07:28">2024-6-16 21:30
+							</time>
+						</div>
+					
+						
+							<div class="post-meta-devide">|</div>
+						
+						<div class="post-meta-detail post-meta-detail-categories">
+							<i class="fa fa-bookmark-o" aria-hidden="true"></i>
+							<a class="post-meta-detail-catagory-link" href="/categories/Solution/">Solution</a>
+						</div>
+					
+						
+							<div class="post-meta-devide">|</div>
+						
+						<div class="post-meta-detail post-meta-detail-words">
+							<i class="fa fa-book" aria-hidden="true"></i>
+							<span id="busuanzi_container_page_pv">
+								阅读<span id="busuanzi_value_page_pv"></span>次
+							</span>
+						</div>
+					
+						
+							<div class="post-meta-devide">|</div>
+						
+						<div class="post-meta-detail post-meta-detail-words">
+							<i class="fa fa-file-word-o" aria-hidden="true"></i>
+							1.6k 字
+						</div>
+					
+						
+							<div class="post-meta-devide">|</div>
+						
+						<div class="post-meta-detail post-meta-detail-readingtime">
+							<i class="fa fa-hourglass-end" aria-hidden="true"></i>
+							8 分钟
+						</div>
+					
+		</div>
+		
+	</header>
+
+	<div class="post-content">
+		
+			
+				题目翻译给定 $n\times m$ 的网格，每个格子里有一个正整数 $a_{i,j}$。你需要在从 $(sx,sy)$ 开始，执行 $k$ 次操作。每一操作可以选择不动或者走到任意一个四联通（上下左右）的格子。操作之后，可以获得所在格子的 $a_{i,j}$ 的收益。
+$1\leq n,m\leq 50$
+题目思路可以证明，选择的路线一定是，移动...
+			
+		
+	</div>
+
+	
+</article>
+
+
+	<article class="post card bg-white shadow-sm border-0 post-preview">
+	<header class="post-header text-center">
+		
+		<a class="post-title" href="/archives/JSOI2024/">[题解] 信息与未来 2024 做题笔记</a>
+		<div class="post-meta">
+			
+						
+						<div class="post-meta-detail post-meta-detail-time">
+							<i class="fa fa-clock-o" aria-hidden="true"></i>
+							<time title="发布于 2024-6-6 12:45:00 | 编辑于 2025-2-12 21:06:29">2024-6-6 12:45
+							</time>
+						</div>
+					
+						
+							<div class="post-meta-devide">|</div>
+						
+						<div class="post-meta-detail post-meta-detail-categories">
+							<i class="fa fa-bookmark-o" aria-hidden="true"></i>
+							<a class="post-meta-detail-catagory-link" href="/categories/Solution/">Solution</a>
+						</div>
+					
+						
+							<div class="post-meta-devide">|</div>
+						
+						<div class="post-meta-detail post-meta-detail-words">
+							<i class="fa fa-book" aria-hidden="true"></i>
+							<span id="busuanzi_container_page_pv">
+								阅读<span id="busuanzi_value_page_pv"></span>次
+							</span>
+						</div>
+					
+						
+							<div class="post-meta-devide">|</div>
+						
+						<div class="post-meta-detail post-meta-detail-words">
+							<i class="fa fa-file-word-o" aria-hidden="true"></i>
+							3.5k 字
+						</div>
+					
+						
+							<div class="post-meta-devide">|</div>
+						
+						<div class="post-meta-detail post-meta-detail-readingtime">
+							<i class="fa fa-hourglass-end" aria-hidden="true"></i>
+							16 分钟
+						</div>
+					
+		</div>
+		
+	</header>
+
+	<div class="post-content">
+		
+			
+				幸运数字一个很小朋友的做法是把每个数转二进制字符串或者用数组存下来判断。这里给一个时间复杂度为 $\mathcal O(n\log V)$ 但空间复杂度为 $\mathcal O(1)$ 的写法：使用位运算，通过 x &gt;&gt; i &amp; 1 获得 $x$ 在二进制下的第 $i$ 位。
+#include &lt;bits/stdc++....
+			
+		
+	</div>
+
+	
+</article>
+
+
+	<article class="post card bg-white shadow-sm border-0 post-preview">
+	<header class="post-header text-center">
+		
+		<a class="post-title" href="/archives/CF1975E/">[题解] CF1975E Chain Queries</a>
+		<div class="post-meta">
+			
+						
+						<div class="post-meta-detail post-meta-detail-time">
+							<i class="fa fa-clock-o" aria-hidden="true"></i>
+							<time title="发布于 2024-5-28 20:35:00 | 编辑于 2025-2-12 21:04:45">2024-5-28 20:35
+							</time>
+						</div>
+					
+						
+							<div class="post-meta-devide">|</div>
+						
+						<div class="post-meta-detail post-meta-detail-categories">
+							<i class="fa fa-bookmark-o" aria-hidden="true"></i>
+							<a class="post-meta-detail-catagory-link" href="/categories/Solution/">Solution</a>
+						</div>
+					
+						
+							<div class="post-meta-devide">|</div>
+						
+						<div class="post-meta-detail post-meta-detail-words">
+							<i class="fa fa-book" aria-hidden="true"></i>
+							<span id="busuanzi_container_page_pv">
+								阅读<span id="busuanzi_value_page_pv"></span>次
+							</span>
+						</div>
+					
+						
+							<div class="post-meta-devide">|</div>
+						
+						<div class="post-meta-detail post-meta-detail-words">
+							<i class="fa fa-file-word-o" aria-hidden="true"></i>
+							1.2k 字
+						</div>
+					
+						
+							<div class="post-meta-devide">|</div>
+						
+						<div class="post-meta-detail post-meta-detail-readingtime">
+							<i class="fa fa-hourglass-end" aria-hidden="true"></i>
+							6 分钟
+						</div>
+					
+		</div>
+		
+	</header>
+
+	<div class="post-content">
+		
+			
+				题目翻译给定一棵 $n$ 个节点的数，$c_i&#x3D;1$ 表示这个点为黑色，$c_i&#x3D;0$ 表示这个点为白色。
+接下来有 $q$ 次询问，每次给定一个 $u$，把 $u$ 的颜色取反（即黑变白，白变黑），问黑色点是否构成一条链。
+题目思路$k$ 个黑点，构成长度为 $k$ 的链的充要条件是，恰好存在 $k-2$ 个点的度数为 $2$...
+			
+		
+	</div>
+
+	
+</article>
+
+
+	<article class="post card bg-white shadow-sm border-0 post-preview">
+	<header class="post-header text-center">
+		
+		<a class="post-title" href="/archives/CF1968G2/">[题解] CF1968G1 Division + LCP (easy version)</a>
+		<div class="post-meta">
+			
+						
+						<div class="post-meta-detail post-meta-detail-time">
+							<i class="fa fa-clock-o" aria-hidden="true"></i>
+							<time title="发布于 2024-5-3 10:11:00 | 编辑于 2025-2-12 21:04:01">2024-5-3 10:11
+							</time>
+						</div>
+					
+						
+							<div class="post-meta-devide">|</div>
+						
+						<div class="post-meta-detail post-meta-detail-categories">
+							<i class="fa fa-bookmark-o" aria-hidden="true"></i>
+							<a class="post-meta-detail-catagory-link" href="/categories/Solution/">Solution</a>
+						</div>
+					
+						
+							<div class="post-meta-devide">|</div>
+						
+						<div class="post-meta-detail post-meta-detail-words">
+							<i class="fa fa-book" aria-hidden="true"></i>
+							<span id="busuanzi_container_page_pv">
+								阅读<span id="busuanzi_value_page_pv"></span>次
+							</span>
+						</div>
+					
+						
+							<div class="post-meta-devide">|</div>
+						
+						<div class="post-meta-detail post-meta-detail-words">
+							<i class="fa fa-file-word-o" aria-hidden="true"></i>
+							459 字
 						</div>
 					
 						
@@ -743,550 +1261,10 @@
 	<div class="post-content">
 		
 			
-				题目翻译我们对于 $n$ 个数 $a_1,a_2,…,a_n$，每个数可以选择标记为 Red 或 Blue。
-对于颜色 $c$，Count(c) 表示颜色 $c$ 出现几次。
-对于颜色 $c$，Sum(c) 表示标记为颜色 $c$ 的数字总和。
-问是否存在 Sum(Red) $&gt;$ Sum(Blue) 且  Count(Red) $&lt;$...
-			
-		
-	</div>
-
-	
-</article>
-
-
-	<article class="post card bg-white shadow-sm border-0 post-preview">
-	<header class="post-header text-center">
-		
-		<a class="post-title" href="/archives/ABC105C/">[题解] ABC105C Base -2 Number</a>
-		<div class="post-meta">
-			
-						
-						<div class="post-meta-detail post-meta-detail-time">
-							<i class="fa fa-clock-o" aria-hidden="true"></i>
-							<time title="发布于 2022-3-5 10:34:00 | 编辑于 2025-2-12 14:20:14">2022-3-5 10:34
-							</time>
-						</div>
-					
-						
-							<div class="post-meta-devide">|</div>
-						
-						<div class="post-meta-detail post-meta-detail-categories">
-							<i class="fa fa-bookmark-o" aria-hidden="true"></i>
-							<a class="post-meta-detail-catagory-link" href="/categories/Solution/">Solution</a>
-						</div>
-					
-						
-							<div class="post-meta-devide">|</div>
-						
-						<div class="post-meta-detail post-meta-detail-words">
-							<i class="fa fa-book" aria-hidden="true"></i>
-							<span id="busuanzi_container_page_pv">
-								阅读<span id="busuanzi_value_page_pv"></span>次
-							</span>
-						</div>
-					
-						
-							<div class="post-meta-devide">|</div>
-						
-						<div class="post-meta-detail post-meta-detail-words">
-							<i class="fa fa-file-word-o" aria-hidden="true"></i>
-							197 字
-						</div>
-					
-						
-							<div class="post-meta-devide">|</div>
-						
-						<div class="post-meta-detail post-meta-detail-readingtime">
-							<i class="fa fa-hourglass-end" aria-hidden="true"></i>
-							1 分钟
-						</div>
-					
-		</div>
-		
-	</header>
-
-	<div class="post-content">
-		
-			
-				题目翻译给定一个 $10$ 进制数，将其转变成 $-2$ 进制。
-题目思路和二进制一样短除法。
-注意事项：
-
-特判数据 $n&#x3D;0$ ，不特判的话，它本身进入不了短除法代码，答案就没有记录
-任何位置上不可能出现 $-1$，要转成 $1$ 输出。
-短除法倒着输出。
-
-题目代码void solve()//没加上快读快写、long long定义l...
-			
-		
-	</div>
-
-	
-</article>
-
-
-	<article class="post card bg-white shadow-sm border-0 post-preview">
-	<header class="post-header text-center">
-		
-		<a class="post-title" href="/archives/CF1644B/">[题解] CF1644B Anti-Fibonacci Permutation</a>
-		<div class="post-meta">
-			
-						
-						<div class="post-meta-detail post-meta-detail-time">
-							<i class="fa fa-clock-o" aria-hidden="true"></i>
-							<time title="发布于 2022-2-23 16:43:00 | 编辑于 2025-2-12 14:19:36">2022-2-23 16:43
-							</time>
-						</div>
-					
-						
-							<div class="post-meta-devide">|</div>
-						
-						<div class="post-meta-detail post-meta-detail-categories">
-							<i class="fa fa-bookmark-o" aria-hidden="true"></i>
-							<a class="post-meta-detail-catagory-link" href="/categories/Solution/">Solution</a>
-						</div>
-					
-						
-							<div class="post-meta-devide">|</div>
-						
-						<div class="post-meta-detail post-meta-detail-words">
-							<i class="fa fa-book" aria-hidden="true"></i>
-							<span id="busuanzi_container_page_pv">
-								阅读<span id="busuanzi_value_page_pv"></span>次
-							</span>
-						</div>
-					
-						
-							<div class="post-meta-devide">|</div>
-						
-						<div class="post-meta-detail post-meta-detail-words">
-							<i class="fa fa-file-word-o" aria-hidden="true"></i>
-							254 字
-						</div>
-					
-						
-							<div class="post-meta-devide">|</div>
-						
-						<div class="post-meta-detail post-meta-detail-readingtime">
-							<i class="fa fa-hourglass-end" aria-hidden="true"></i>
-							1 分钟
-						</div>
-					
-		</div>
-		
-	</header>
-
-	<div class="post-content">
-		
-			
-				题目翻译我们定义对于所有 $i$ ($3 \leq i \leq n$)， $p_{i-2}+p_{i-1} \ne p_i$  这样的数列称之为 反斐波那契数列 ，给定一个 $n$ ，请输出 $n$ 个长度为 $n$ 的不同的反斐波那契数列。
-题目思路只要 $p_{i-2}$ 和 $p_{i-1}$ 中任意一个数大于 $p_i$ ，那么肯定为反斐...
-			
-		
-	</div>
-
-	
-</article>
-
-
-	<article class="post card bg-white shadow-sm border-0 post-preview">
-	<header class="post-header text-center">
-		
-		<a class="post-title" href="/archives/CF17FINALA/">[题解] CF17FINALA AKIBA</a>
-		<div class="post-meta">
-			
-						
-						<div class="post-meta-detail post-meta-detail-time">
-							<i class="fa fa-clock-o" aria-hidden="true"></i>
-							<time title="发布于 2022-2-12 15:35:00 | 编辑于 2025-2-12 14:15:42">2022-2-12 15:35
-							</time>
-						</div>
-					
-						
-							<div class="post-meta-devide">|</div>
-						
-						<div class="post-meta-detail post-meta-detail-categories">
-							<i class="fa fa-bookmark-o" aria-hidden="true"></i>
-							<a class="post-meta-detail-catagory-link" href="/categories/Solution/">Solution</a>
-						</div>
-					
-						
-							<div class="post-meta-devide">|</div>
-						
-						<div class="post-meta-detail post-meta-detail-words">
-							<i class="fa fa-book" aria-hidden="true"></i>
-							<span id="busuanzi_container_page_pv">
-								阅读<span id="busuanzi_value_page_pv"></span>次
-							</span>
-						</div>
-					
-						
-							<div class="post-meta-devide">|</div>
-						
-						<div class="post-meta-detail post-meta-detail-words">
-							<i class="fa fa-file-word-o" aria-hidden="true"></i>
-							355 字
-						</div>
-					
-						
-							<div class="post-meta-devide">|</div>
-						
-						<div class="post-meta-detail post-meta-detail-readingtime">
-							<i class="fa fa-hourglass-end" aria-hidden="true"></i>
-							1 分钟
-						</div>
-					
-		</div>
-		
-	</header>
-
-	<div class="post-content">
-		
-			
-				题目翻译输入一个字符串，可不可以在任意一位插入 $\tt A$，使这个字符串变为 AKIHABARA。
-题目思路AKIHABARA 中只出现了 $4$ 次 $\tt A$ ，所以，我们枚举所有可能，每个位置都可以有 选 或 不选 两种可能，所以一共只有 $2^4$ 种可能，十分少。
-我们只要分别枚举 没有 $\tt A$、一个 $\tt A$、两个...
-			
-		
-	</div>
-
-	
-</article>
-
-
-	<article class="post card bg-white shadow-sm border-0 post-preview">
-	<header class="post-header text-center">
-		
-		<a class="post-title" href="/archives/ABC142D/">[题解] ABC142D Disjoint Set of Common Divisors</a>
-		<div class="post-meta">
-			
-						
-						<div class="post-meta-detail post-meta-detail-time">
-							<i class="fa fa-clock-o" aria-hidden="true"></i>
-							<time title="发布于 2022-2-10 12:12:00 | 编辑于 2025-2-12 13:33:04">2022-2-10 12:12
-							</time>
-						</div>
-					
-						
-							<div class="post-meta-devide">|</div>
-						
-						<div class="post-meta-detail post-meta-detail-categories">
-							<i class="fa fa-bookmark-o" aria-hidden="true"></i>
-							<a class="post-meta-detail-catagory-link" href="/categories/Solution/">Solution</a>
-						</div>
-					
-						
-							<div class="post-meta-devide">|</div>
-						
-						<div class="post-meta-detail post-meta-detail-words">
-							<i class="fa fa-book" aria-hidden="true"></i>
-							<span id="busuanzi_container_page_pv">
-								阅读<span id="busuanzi_value_page_pv"></span>次
-							</span>
-						</div>
-					
-						
-							<div class="post-meta-devide">|</div>
-						
-						<div class="post-meta-detail post-meta-detail-words">
-							<i class="fa fa-file-word-o" aria-hidden="true"></i>
-							517 字
-						</div>
-					
-						
-							<div class="post-meta-devide">|</div>
-						
-						<div class="post-meta-detail post-meta-detail-readingtime">
-							<i class="fa fa-hourglass-end" aria-hidden="true"></i>
-							2 分钟
-						</div>
-					
-		</div>
-		
-	</header>
-
-	<div class="post-content">
-		
-			
-				题目翻译给定两个数 $a$ 和 $b$ ，求能同时整除 $a$ 和 $b$ 的数的个数，且这些数需要两两互质。
-题目分析两两互质，也就说明有以下几种情况：
-
-均为不同的质数。
-相邻 。
-一个是质数，另一个不是他的倍数。
-所有数和 $1$。
-相邻奇数
-较大数是质数。……
-
-这是常见的情况，其实还有很多。那么我们肯定不能全写到程序里。我们只选择第 $1...
-			
-		
-	</div>
-
-	
-</article>
-
-
-	<article class="post card bg-white shadow-sm border-0 post-preview">
-	<header class="post-header text-center">
-		
-		<a class="post-title" href="/archives/CF1633C/">[题解] CF1633C Kill the Monster</a>
-		<div class="post-meta">
-			
-						
-						<div class="post-meta-detail post-meta-detail-time">
-							<i class="fa fa-clock-o" aria-hidden="true"></i>
-							<time title="发布于 2022-2-2 13:49:00 | 编辑于 2025-2-12 12:46:26">2022-2-2 13:49
-							</time>
-						</div>
-					
-						
-							<div class="post-meta-devide">|</div>
-						
-						<div class="post-meta-detail post-meta-detail-categories">
-							<i class="fa fa-bookmark-o" aria-hidden="true"></i>
-							<a class="post-meta-detail-catagory-link" href="/categories/Solution/">Solution</a>
-						</div>
-					
-						
-							<div class="post-meta-devide">|</div>
-						
-						<div class="post-meta-detail post-meta-detail-words">
-							<i class="fa fa-book" aria-hidden="true"></i>
-							<span id="busuanzi_container_page_pv">
-								阅读<span id="busuanzi_value_page_pv"></span>次
-							</span>
-						</div>
-					
-						
-							<div class="post-meta-devide">|</div>
-						
-						<div class="post-meta-detail post-meta-detail-words">
-							<i class="fa fa-file-word-o" aria-hidden="true"></i>
-							277 字
-						</div>
-					
-						
-							<div class="post-meta-devide">|</div>
-						
-						<div class="post-meta-detail post-meta-detail-readingtime">
-							<i class="fa fa-hourglass-end" aria-hidden="true"></i>
-							1 分钟
-						</div>
-					
-		</div>
-		
-	</header>
-
-	<div class="post-content">
-		
-			
-				题目翻译一个 01 串，找到一个它的子串，1 的个数多删所有 0，0 的个数多删所有 1。问最多删几个数。
-题目思路首先统计 01 个数是必须的。
-之后，分类讨论 3 种情况。
-情况1：0 的个数比 1 多。输出 1 的个数。
-情况2：1 的个数比 0 多。输出 0 的个数。
-情况 3：1 的个数和 0 的个数相等。这里有个小问题。
-有人可能问，一...
-			
-		
-	</div>
-
-	
-</article>
-
-
-	<article class="post card bg-white shadow-sm border-0 post-preview">
-	<header class="post-header text-center">
-		
-		<a class="post-title" href="/archives/CF1633B/">[题解] CF1633B Minority</a>
-		<div class="post-meta">
-			
-						
-						<div class="post-meta-detail post-meta-detail-time">
-							<i class="fa fa-clock-o" aria-hidden="true"></i>
-							<time title="发布于 2022-2-2 13:48:00 | 编辑于 2025-2-12 12:46:03">2022-2-2 13:48
-							</time>
-						</div>
-					
-						
-							<div class="post-meta-devide">|</div>
-						
-						<div class="post-meta-detail post-meta-detail-categories">
-							<i class="fa fa-bookmark-o" aria-hidden="true"></i>
-							<a class="post-meta-detail-catagory-link" href="/categories/Solution/">Solution</a>
-						</div>
-					
-						
-							<div class="post-meta-devide">|</div>
-						
-						<div class="post-meta-detail post-meta-detail-words">
-							<i class="fa fa-book" aria-hidden="true"></i>
-							<span id="busuanzi_container_page_pv">
-								阅读<span id="busuanzi_value_page_pv"></span>次
-							</span>
-						</div>
-					
-						
-							<div class="post-meta-devide">|</div>
-						
-						<div class="post-meta-detail post-meta-detail-words">
-							<i class="fa fa-file-word-o" aria-hidden="true"></i>
-							277 字
-						</div>
-					
-						
-							<div class="post-meta-devide">|</div>
-						
-						<div class="post-meta-detail post-meta-detail-readingtime">
-							<i class="fa fa-hourglass-end" aria-hidden="true"></i>
-							1 分钟
-						</div>
-					
-		</div>
-		
-	</header>
-
-	<div class="post-content">
-		
-			
-				题目翻译一个 01 串，找到一个它的子串，1 的个数多删所有 0，0 的个数多删所有 1。问最多删几个数。
-题目思路首先统计 01 个数是必须的。
-之后，分类讨论 3 种情况。
-情况1：0 的个数比 1 多。输出 1 的个数。
-情况2：1 的个数比 0 多。输出 0 的个数。
-情况 3：1 的个数和 0 的个数相等。这里有个小问题。
-有人可能问，一...
-			
-		
-	</div>
-
-	
-</article>
-
-
-	<article class="post card bg-white shadow-sm border-0 post-preview">
-	<header class="post-header text-center">
-		
-		<a class="post-title" href="/archives/CF1627B/">[题解] CF1627B Not Sitting</a>
-		<div class="post-meta">
-			
-						
-						<div class="post-meta-detail post-meta-detail-time">
-							<i class="fa fa-clock-o" aria-hidden="true"></i>
-							<time title="发布于 2022-1-28 17:04:00 | 编辑于 2025-2-11 22:12:01">2022-1-28 17:04
-							</time>
-						</div>
-					
-						
-							<div class="post-meta-devide">|</div>
-						
-						<div class="post-meta-detail post-meta-detail-categories">
-							<i class="fa fa-bookmark-o" aria-hidden="true"></i>
-							<a class="post-meta-detail-catagory-link" href="/categories/Solution/">Solution</a>
-						</div>
-					
-						
-							<div class="post-meta-devide">|</div>
-						
-						<div class="post-meta-detail post-meta-detail-words">
-							<i class="fa fa-book" aria-hidden="true"></i>
-							<span id="busuanzi_container_page_pv">
-								阅读<span id="busuanzi_value_page_pv"></span>次
-							</span>
-						</div>
-					
-						
-							<div class="post-meta-devide">|</div>
-						
-						<div class="post-meta-detail post-meta-detail-words">
-							<i class="fa fa-file-word-o" aria-hidden="true"></i>
-							516 字
-						</div>
-					
-						
-							<div class="post-meta-devide">|</div>
-						
-						<div class="post-meta-detail post-meta-detail-readingtime">
-							<i class="fa fa-hourglass-end" aria-hidden="true"></i>
-							2 分钟
-						</div>
-					
-		</div>
-		
-	</header>
-
-	<div class="post-content">
-		
-			
-				题目翻译A 和 B 两个人，在 $n \times m$ 的教室找位置。A 想和 B 坐得近，B 想和 A 坐得远，由 A 先选位置，请问对于所有情况，A 与 B 之间的距离各是多少？
-补充：距离的定义为：$a_{i_1,j_1}$ 与 $a_{i_2,j_2}$ 距离为 $\left|i_1-i_2\right|+\left|j_1-j_2\ri...
-			
-		
-	</div>
-
-	
-</article>
-
-
-	<article class="post card bg-white shadow-sm border-0 post-preview">
-	<header class="post-header text-center">
-		
-		<a class="post-title" href="/archives/CF1621A/">[题解] CF1621A Stable Arrangement of Rooks</a>
-		<div class="post-meta">
-			
-						
-						<div class="post-meta-detail post-meta-detail-time">
-							<i class="fa fa-clock-o" aria-hidden="true"></i>
-							<time title="发布于 2022-1-4 16:45:00 | 编辑于 2025-2-11 22:11:11">2022-1-4 16:45
-							</time>
-						</div>
-					
-						
-							<div class="post-meta-devide">|</div>
-						
-						<div class="post-meta-detail post-meta-detail-categories">
-							<i class="fa fa-bookmark-o" aria-hidden="true"></i>
-							<a class="post-meta-detail-catagory-link" href="/categories/Solution/">Solution</a>
-						</div>
-					
-						
-							<div class="post-meta-devide">|</div>
-						
-						<div class="post-meta-detail post-meta-detail-words">
-							<i class="fa fa-book" aria-hidden="true"></i>
-							<span id="busuanzi_container_page_pv">
-								阅读<span id="busuanzi_value_page_pv"></span>次
-							</span>
-						</div>
-					
-						
-							<div class="post-meta-devide">|</div>
-						
-						<div class="post-meta-detail post-meta-detail-words">
-							<i class="fa fa-file-word-o" aria-hidden="true"></i>
-							372 字
-						</div>
-					
-						
-							<div class="post-meta-devide">|</div>
-						
-						<div class="post-meta-detail post-meta-detail-readingtime">
-							<i class="fa fa-hourglass-end" aria-hidden="true"></i>
-							1 分钟
-						</div>
-					
-		</div>
-		
-	</header>
-
-	<div class="post-content">
-		
-			
-				题目翻译：有 $n \times n$ 大小的棋盘，一共放 $k$ 辆车，使得这个棋盘稳定。
-稳定的概念是：所有的车移动至相邻四格（上下左右）不会出现一行一列有 $\ge 2$ 辆车。
-做题思路:我们可以考虑，移动之后没有同一行一列有多辆车，那么就让它移动之后还是只有它一辆车，换句话说，每辆车之间至少空一行和一列，也就是在对角线上放是最优想法。如果...
+				题目翻译给定长度为 $n$ 的字符串 $s$ 以及 $l,r$。
+对于所有 $k\in[l,r]$ 求出将 $s$ 分成 $k$ 段后每段的 LCP 最大值。
+LCP 是最长公共前缀。
+$1\leq n\leq 2\times 10^5,1\leq l\leq r\leq n$。多测。$1\leq \sum n \leq 2\times 10^5$...
 			
 		
 	</div>
@@ -1296,7 +1274,7 @@
 
 
 
-<nav><ul class="pagination"><li class="page-item"><a aria-label="Previous Page" class="page-link" href="/categories/Solution/page/3/"><i class="fa fa-angle-left" aria-hidden="true"></i></a></li><li class="page-item"><a class="page-link" href="/categories/Solution/">1</a></li><li class="page-item"><a class="page-link" href="/categories/Solution/page/2/">2</a></li><li class="page-item"><a class="page-link" href="/categories/Solution/page/3/">3</a></li><li class="page-item active"><span class="page-link" style="cursor: default;">4</span></li><li class="page-item"><a class="page-link" href="/categories/Solution/page/5/">5</a></li><li class="page-item"><a aria-label="Next Page" class="page-link" href="/categories/Solution/page/5/"><i class="fa fa-angle-right" aria-hidden="true"></i></a></li></ul></nav><nav><ul class="pagination pagination-mobile"><li class="page-item"><a aria-label="Previous Page" class="page-link" href="/categories/Solution/page/3/"><i class="fa fa-angle-left" aria-hidden="true"></i></a></li><li class="page-item"><a class="page-link" href="/categories/Solution/">1</a></li><li class="page-item"><a class="page-link" href="/categories/Solution/page/2/">2</a></li><li class="page-item"><a class="page-link" href="/categories/Solution/page/3/">3</a></li><li class="page-item active"><span class="page-link" style="cursor: default;">4</span></li><li class="page-item"><a class="page-link" href="/categories/Solution/page/5/">5</a></li><li class="page-item"><a aria-label="Next Page" class="page-link" href="/categories/Solution/page/5/"><i class="fa fa-angle-right" aria-hidden="true"></i></a></li></ul></nav>
+<nav><ul class="pagination"><li class="page-item"><a aria-label="Previous Page" class="page-link" href="/categories/Solution/page/3/"><i class="fa fa-angle-left" aria-hidden="true"></i></a></li><li class="page-item"><a class="page-link" href="/categories/Solution/">1</a></li><li class="page-item"><a class="page-link" href="/categories/Solution/page/2/">2</a></li><li class="page-item"><a class="page-link" href="/categories/Solution/page/3/">3</a></li><li class="page-item active"><span class="page-link" style="cursor: default;">4</span></li><li class="page-item"><a class="page-link" href="/categories/Solution/page/5/">5</a></li><li class="page-item"><a class="page-link" href="/categories/Solution/page/6/">6</a></li><li class="page-item"><a class="page-link" href="/categories/Solution/page/7/">7</a></li><li class="page-item"><a aria-label="Next Page" class="page-link" href="/categories/Solution/page/5/"><i class="fa fa-angle-right" aria-hidden="true"></i></a></li><li class="page-item"><a aria-label="Last Page" class="page-link" href="/categories/Solution/page/15/"><i class="fa fa-angle-double-right" aria-hidden="true"></i></a></li></ul></nav><nav><ul class="pagination pagination-mobile"><li class="page-item"><a aria-label="First Page" class="page-link" href="/categories/Solution/"><i class="fa fa-angle-double-left" aria-hidden="true"></i></a></li><li class="page-item"><a aria-label="Previous Page" class="page-link" href="/categories/Solution/page/3/"><i class="fa fa-angle-left" aria-hidden="true"></i></a></li><li class="page-item"><a class="page-link" href="/categories/Solution/page/2/">2</a></li><li class="page-item"><a class="page-link" href="/categories/Solution/page/3/">3</a></li><li class="page-item active"><span class="page-link" style="cursor: default;">4</span></li><li class="page-item"><a class="page-link" href="/categories/Solution/page/5/">5</a></li><li class="page-item"><a class="page-link" href="/categories/Solution/page/6/">6</a></li><li class="page-item"><a aria-label="Next Page" class="page-link" href="/categories/Solution/page/5/"><i class="fa fa-angle-right" aria-hidden="true"></i></a></li><li class="page-item"><a aria-label="Last Page" class="page-link" href="/categories/Solution/page/15/"><i class="fa fa-angle-double-right" aria-hidden="true"></i></a></li></ul></nav>
 
 
 		

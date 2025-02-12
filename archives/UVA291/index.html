@@ -30,7 +30,7 @@
 <meta property="og:description" content="题目翻译 一张无向图。，由 $5$ 个点 $8$ 条边组成。请问如何才能从点 $1$ 出发不遗漏不重复走完所有边。  题目思路简单的一笔画问题。通过一笔画我们不难想到七桥问题，作为尝试，我们都知道一张图内拥有 $0$ 或 $2$ 个奇点时才可被一笔画。 显然这张图上，奇点是 $1$ 和 $2$。因为题目说了从 $1$ 开始，所以起点为 $1$。 我们考虑对这张图进行搜索，枚举之后每一步走哪一条边，">
 <meta property="og:locale" content="zh_CN">
 <meta property="article:published_time" content="2023-04-30T13:38:00.000Z">
-<meta property="article:modified_time" content="2025-02-12T08:39:02.211Z">
+<meta property="article:modified_time" content="2025-02-12T11:39:12.923Z">
 <meta property="article:author" content="CYX">
 <meta name="twitter:card" content="summary">
 
@@ -548,19 +548,19 @@
 							<nav class="site-state">
 								<div class="site-state-item site-state-posts">
 									<a href="/archives">
-										<span class="site-state-item-count">49</span>
+										<span class="site-state-item-count">166</span>
 										<span class="site-state-item-name">文章</span>
 									</a>
 								</div>
 								<div class="site-state-item site-state-categories">
 									<a data-toggle="modal" data-target="#blog_categories">
-										<span class="site-state-item-count">3</span>
+										<span class="site-state-item-count">5</span>
 										<span class="site-state-item-name">分类</span>
 									</a>
 								</div>      
 								<div class="site-state-item site-state-tags">
 									<a data-toggle="modal" data-target="#blog_tags">
-										<span class="site-state-item-count">0</span>
+										<span class="site-state-item-count">4</span>
 										<span class="site-state-item-name">标签</span>
 									</a>
 								</div>
@@ -610,7 +610,7 @@
 				</button>
 			</div>
 			<div class="modal-body">
-				<a class="badge badge-secondary tag" href="/categories/Essay/" rel="tag">Essay <span class="tag-num">1</span></a><a class="badge badge-secondary tag" href="/categories/Solution/" rel="tag">Solution <span class="tag-num">43</span></a><a class="badge badge-secondary tag" href="/categories/TravelNote/" rel="tag">TravelNote <span class="tag-num">5</span></a>
+				<a class="badge badge-secondary tag" href="/categories/Essay/" rel="tag">Essay <span class="tag-num">4</span></a><a class="badge badge-secondary tag" href="/categories/Solution/" rel="tag">Solution <span class="tag-num">147</span></a><a class="badge badge-secondary tag" href="/categories/StudyNote/" rel="tag">StudyNote <span class="tag-num">4</span></a><a class="badge badge-secondary tag" href="/categories/Technology/" rel="tag">Technology <span class="tag-num">1</span></a><a class="badge badge-secondary tag" href="/categories/TravelNote/" rel="tag">TravelNote <span class="tag-num">10</span></a>
 			</div>
 		</div>
 	</div>
@@ -625,7 +625,7 @@
 				</button>
 			</div>
 			<div class="modal-body">
-				
+				<a class="badge badge-secondary tag" href="/tags/%E4%B9%B1%E6%90%9E/" rel="tag">乱搞 <span class="tag-num">2</span></a><a class="badge badge-secondary tag" href="/tags/%E5%8A%A8%E6%80%81%E8%A7%84%E5%88%92/" rel="tag">动态规划 <span class="tag-num">1</span></a><a class="badge badge-secondary tag" href="/tags/%E6%A8%A1%E6%8B%9F%E8%B5%9B/" rel="tag">模拟赛 <span class="tag-num">20</span></a><a class="badge badge-secondary tag" href="/tags/%E9%AD%94%E6%80%94%E6%9D%AF/" rel="tag">魔怔杯 <span class="tag-num">2</span></a>
 			</div>
 		</div>
 	</div>
@@ -646,7 +646,7 @@
 						
 						<div class="post-meta-detail post-meta-detail-time">
 							<i class="fa fa-clock-o" aria-hidden="true"></i>
-							<time title="发布于 2023-4-30 21:38:00 | 编辑于 2025-2-12 16:39:02">2023-4-30 21:38
+							<time title="发布于 2023-4-30 21:38:00 | 编辑于 2025-2-12 19:39:12">2023-4-30 21:38
 							</time>
 						</div>
 					
@@ -673,7 +673,7 @@
 						
 						<div class="post-meta-detail post-meta-detail-words">
 							<i class="fa fa-file-word-o" aria-hidden="true"></i>
-							414 字
+							404 字
 						</div>
 					
 						
@@ -697,7 +697,6 @@
 <p>显然这张图上，奇点是 $1$ 和 $2$。因为题目说了从 $1$ 开始，所以起点为 $1$。</p>
 <p>我们考虑对这张图进行搜索，枚举之后每一步走哪一条边，打上边是否走过的标记即可。</p>
 <h1 id="完整代码"><a href="#完整代码" class="headerlink" title="完整代码"></a>完整代码</h1><p>这题没有输入，可直接打表。具体的答案在程序最后的注释。</p>
-<p>[collapse status&#x3D;”false” title&#x3D;”代码”]</p>
 <pre><code class="highlight prolog">#include&lt;bits/stdc++.h&gt;
 using namespace std;
 bool vis[<span class="number">10</span>][<span class="number">10</span>];
@@ -783,7 +782,6 @@ int main()
 <span class="comment">154352312</span>
 <span class="comment">*/</span></code></pre>
 
-<p>[&#x2F;collapse]</p>
 
 	</div>
 

@@ -1,0 +1,2017 @@
+<!DOCTYPE html>
+
+<html class="article-header-style-1">
+<head>
+
+</script>
+	<link rel="stylesheet" type="text/css" href="https://bohanjun.github.io/live2d/waifu.css" />
+	<div class="waifu" id="waifu" style="z-index: 99999999;">
+  	  <div class="waifu-tips"></div>
+   	 <canvas id="live2d" width="280" height="250" class="live2d"></canvas>
+	</div>
+	<script src="https://bohanjun.github.io/live2d/live2d.js"></script>
+	<script src="https://bohanjun.github.io/live2d/waifu-tips.js"></script>
+	<script type="text/javascript">initModel()</script>
+	<link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/highlight.js/11.1.0/styles/a11y-light.min.css">
+	<script src="//cdnjs.cloudflare.com/ajax/libs/highlight.js/11.1.0/highlight.min.js"></script>
+	
+	<title>归档 - 沉石鱼惊旋 的博客</title>
+	<meta charset="utf-8">
+	
+		<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=5">
+	
+	<meta name="description" content="沉石鱼惊旋 的博客">
+<meta property="og:type" content="website">
+<meta property="og:title" content="沉石鱼惊旋 的博客">
+<meta property="og:url" content="http://blog.cyx2009.top/archives/page/7/index.html">
+<meta property="og:site_name" content="沉石鱼惊旋 的博客">
+<meta property="og:description" content="沉石鱼惊旋 的博客">
+<meta property="og:locale" content="zh_CN">
+<meta property="article:author" content="CYX">
+<meta name="twitter:card" content="summary">
+
+	<meta name="theme-color" content="#5e72e4">
+	<meta name="theme-color-rgb" content="94,114,228">
+	<meta name="theme-color-origin" content="#5e72e4">
+	<meta name="argon-enable-custom-theme-color" content="true">
+	<meta name="theme-card-radius" content="15">
+	<meta name="theme-version" content="1.0.2">
+	<link rel="icon" href="/assets/img/favicon.ico">
+	<!-- <link rel="shortcut icon" href="/assets/img/favicon.ico"> -->
+	<!-- <link rel="shortcut icon" href="https://s2.loli.net/2022/07/28/dj7Y3yrweQ2MXNb.png"> -->
+	
+<link rel="stylesheet" href="/assets/argon_css_merged.css">
+
+	
+<link rel="stylesheet" href="/style.css">
+
+	
+<link rel="stylesheet" href="//fonts.loli.net/css?family=Open+Sans:300,400,600,700|Noto+Serif+SC:300,600&display=swap.css">
+
+	
+<script src="/assets/argon_js_merged.js"></script>
+
+	
+<script src="/assets/js/argon.min.js"></script>
+
+	
+<script src="//busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js"></script>
+
+
+	
+
+	<script>
+		var argonConfig = {
+			language: "zh_CN",
+			
+				zoomify: {
+					duration: 200,
+					easing: "cubic-bezier(0.4,0,0,1)",
+					scale: 0.9
+				},
+			
+			pangu: "false",
+			
+				lazyload: {
+					threshold: 800,
+					effect: "fadeIn"
+				},
+			
+			disable_pjax: false,
+			headroom: false
+		}
+	</script>
+	<script>
+		var darkmodeAutoSwitch = "false";
+		function setDarkmode(enable){
+			if (enable == true){
+				$("html").addClass("darkmode");
+			}else{
+				$("html").removeClass("darkmode");
+			}
+			$(window).trigger("scroll");
+		}
+		function toggleDarkmode(){
+			if ($("html").hasClass("darkmode")){
+				setDarkmode(false);
+				sessionStorage.setItem("Argon_Enable_Dark_Mode", "false");
+			}else{
+				setDarkmode(true);
+				sessionStorage.setItem("Argon_Enable_Dark_Mode", "true");
+			}
+		}
+		if (sessionStorage.getItem("Argon_Enable_Dark_Mode") == "true"){
+			setDarkmode(true);
+		}
+		function toggleDarkmodeByPrefersColorScheme(media){
+			if (sessionStorage.getItem('Argon_Enable_Dark_Mode') == "false" || sessionStorage.getItem('Argon_Enable_Dark_Mode') == "true"){
+				return;
+			}
+			if (media.matches){
+				setDarkmode(true);
+			}else{
+				setDarkmode(false);
+			}
+		}
+		function toggleDarkmodeByTime(){
+			if (sessionStorage.getItem('Argon_Enable_Dark_Mode') == "false" || sessionStorage.getItem('Argon_Enable_Dark_Mode') == "true"){
+				return;
+			}
+			let hour = new Date().getHours();
+			if (hour < 7 || hour >= 22){
+				setDarkmode(true);
+			}else{
+				setDarkmode(false);
+			}
+		}
+		if (darkmodeAutoSwitch == 'system'){
+			var darkmodeMediaQuery = window.matchMedia("(prefers-color-scheme: dark)");
+			darkmodeMediaQuery.addListener(toggleDarkmodeByPrefersColorScheme);
+			toggleDarkmodeByPrefersColorScheme(darkmodeMediaQuery);
+		}
+		if (darkmodeAutoSwitch == 'time'){
+			toggleDarkmodeByTime();
+		}
+		if (darkmodeAutoSwitch == 'alwayson'){
+			setDarkmode(true);
+		}
+
+		function toggleAmoledDarkMode(){
+			$("html").toggleClass("amoled-dark");
+			if ($("html").hasClass("amoled-dark")){
+				localStorage.setItem("Argon_Enable_Amoled_Dark_Mode", "true");
+			}else{
+				localStorage.setItem("Argon_Enable_Amoled_Dark_Mode", "false");
+			}
+		}
+		if (localStorage.getItem("Argon_Enable_Amoled_Dark_Mode") == "true"){
+			$("html").addClass("amoled-dark");
+		}else if (localStorage.getItem("Argon_Enable_Amoled_Dark_Mode") == "false"){
+			$("html").removeClass("amoled-dark");
+		}
+	</script>
+	<script>
+		if (navigator.userAgent.indexOf("Safari") !== -1 && navigator.userAgent.indexOf("Chrome") === -1){
+			$("html").addClass("using-safari");
+		}
+	</script>
+
+	
+		
+<script src="/assets/vendor/smoothscroll/smoothscroll1.js"></script>
+
+	
+<meta name="generator" content="Hexo 7.3.0"></head>
+
+
+
+<style id="themecolor_css">
+	
+	:root{
+		--themecolor: #5e72e4;
+		--themecolor-dark0: #5368E2;
+		--themecolor-dark: #485FE0;
+		--themecolor-dark2: #324CDD;
+		--themecolor-dark3: #233DD2;
+		--themecolor-light: #8A98EB;
+		--themecolor-rgbstr: 94,114,228;
+		--themecolor-gradient: linear-gradient(150deg,var(--themecolor-light) 15%, var(--themecolor) 70%, var(--themecolor-dark0) 94%);
+
+	}
+</style>
+<style id="theme_cardradius_css">
+	:root{
+		--card-radius: 15px;
+	}
+</style>
+
+<body>
+<div id="toolbar">
+	<!-- <script>
+		window.open('http://img.chen2009.tk/','_blank');
+	</script> -->
+	<header class="header-global">
+		<nav id="navbar-main" class="navbar navbar-main navbar-expand-lg navbar-transparent navbar-light bg-primary headroom--not-bottom headroom--not-top headroom--pinned">
+			<div class="container">
+				
+					<a class="navbar-brand navbar-icon mr-lg-5" href="">
+						<img src="/assets/img/favicon.ico">
+					</a>
+				
+				<button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbar_global" aria-controls="navbar_global" aria-expanded="false" aria-label="Toggle navigation">
+					<span class="navbar-toggler-icon"></span>
+				</button>
+				<a class="navbar-brand" href="/">沉石鱼惊旋 的博客</a>
+				<div class="navbar-collapse collapse" id="navbar_global">
+					<div class="navbar-collapse-header">
+						<div class="row">
+							<div class="col-6 collapse-brand"></div>
+							<div class="col-6 collapse-close">
+								<button type="button" class="navbar-toggler" data-toggle="collapse" data-target="#navbar_global" aria-controls="navbar_global" aria-expanded="false" aria-label="Toggle navigation">
+									<span></span>
+									<span></span>
+								</button>
+							</div>
+						</div>
+					</div>
+					<ul id="navbar_search_btn_mobile" class="navbar-nav align-items-lg-center ml-lg-auto">
+						<li class="nav-item" data-toggle="modal" data-target="#argon_search_modal" style="padding-left: 5px;">
+							<a class="nav-link nav-link-icon">
+								<i class="fa fa-search"></i>
+								<span class="nav-link-inner--text d-lg-none">搜索</span>
+							</a>
+						</li>
+					</ul>
+					
+							<ul class='navbar-nav navbar-nav-hover align-items-lg-center'>
+								
+										<li class='nav-item'>
+											<a href='/' class='nav-link' >
+												<i class='ni ni-book-bookmark d-lg-none'></i>
+												<span class='nav-link-inner--text'>首页</span>
+											</a>
+											
+										</li>
+									
+										<li class='nav-item'>
+											<a href='/archives' class='nav-link' >
+												<i class='ni ni-book-bookmark d-lg-none'></i>
+												<span class='nav-link-inner--text'>归档</span>
+											</a>
+											
+										</li>
+									
+										<li class='nav-item'>
+											<a href='/friends' class='nav-link' >
+												<i class='ni ni-book-bookmark d-lg-none'></i>
+												<span class='nav-link-inner--text'>友链</span>
+											</a>
+											
+										</li>
+									
+							</ul>
+						
+					<ul class="navbar-nav align-items-lg-center ml-lg-auto">
+						<li class="nav-item" data-toggle="modal" data-target="#argon_search_modal" id="navbar_search_btn_pc">
+							<a class="nav-link nav-link-icon">
+								<i class="fa fa-search"></i>
+								<span class="nav-link-inner--text d-lg-none">搜索</span>
+							</a>
+						</li>
+					</ul>
+				</div>
+				
+					<a class="navbar-brand navbar-icon-mobile" href="">
+						<img src="/assets/img/favicon.ico">
+					</a>
+				
+				<div id="navbar_menu_mask" data-toggle="collapse" data-target="#navbar_global"></div>
+			</div>
+		</nav>
+	</header>
+</div>
+<div class="modal fade" id="argon_search_modal" tabindex="-1" role="dialog" aria-labelledby="" aria-hidden="true">
+	<div class="modal-dialog modal-dialog-centered modal-lg" role="document">
+		<div class="modal-content">
+			<div class="modal-header">
+				<h5 class="modal-title">搜索</h5>
+				<button type="button" class="close" data-dismiss="modal" aria-label="Close">
+					<span aria-hidden="true">&times;</span>
+				</button>
+			</div>
+			<div class="modal-body">
+				<!-- TODO -->
+<div class="form-group mb-3">
+	<div class="input-group input-group-alternative">
+		<div class="input-group-prepend">
+			<span class="input-group-text"><i class="fa fa-search"></i></span>
+		</div>
+		<input id="local-search-input" class="form-control" placeholder="搜索什么..." type="text"  autocomplete="off" data-search.path="search.xml" data-config.root="/">
+	</div>
+	<div id="local-search-result"></div>
+</div>
+
+			</div>
+		</div>
+	</div>
+</div>
+<!--Banner-->
+<section id="banner" class="banner section section-lg section-shaped">
+	<div class="shape shape-style-1 shape-primary">
+		<span></span>
+		<span></span>
+		<span></span>
+		<span></span>
+		<span></span>
+		<span></span>
+		<span></span>
+		<span></span>
+		<span></span>
+	</div>
+
+	
+	<div id="banner_container" class="banner-container container text-center">
+		
+			<div class="banner-title text-white" data-text="沉石鱼惊旋 的博客" data-interval=""><span class="banner-title-inner">&nbsp;</span>
+		
+		</div>
+	</div>
+	
+		<style>
+			section.banner{
+				background-image: url(/assets/img/banner.jpg) !important;
+			}
+		</style>
+	
+</section>
+
+
+	<style>
+		#content:before {
+			content: '';
+			display: block;
+			position: fixed;
+			left: 0;
+			right: 0;
+			top: 0;
+			bottom: 0;
+			z-index: -2;
+			background: url(/assets/img/banner.jpg);
+			background-position: center;
+			background-size: cover;
+			background-repeat: no-repeat;
+			opacity: 1;
+			transition: opacity .5s ease;
+		}
+		html.darkmode #content:before{
+			filter: brightness(0.65);
+		}
+		
+			#content:after {
+				content: '';
+				display: block;
+				position: fixed;
+				left: 0;
+				right: 0;
+				top: 0;
+				bottom: 0;
+				z-index: -2;
+				background: url(/assets/img/banner.jpg);
+				background-position: center;
+				background-size: cover;
+				background-repeat: no-repeat;
+				opacity: 0;
+				transition: opacity .5s ease;
+			}
+			html.darkmode #content:after {
+				opacity: 1;
+			}
+			html.darkmode #content:before {
+				opacity: 0;
+			}
+		
+		
+			#banner, #banner .shape {
+				background: transparent !important;
+			}
+		
+	</style>
+
+
+
+
+<div id="float_action_buttons" class="float-action-buttons fabtns-unloaded">
+	<!-- <button id="fabtn_toggle_sides" class="btn btn-icon btn-neutral fabtn shadow-sm" type="button" aria-hidden="true" tooltip-move-to-left="移至左侧" tooltip-move-to-right="移至右侧">
+		<span class="btn-inner--icon fabtn-show-on-right"><i class="fa fa-caret-left"></i></span>
+		<span class="btn-inner--icon fabtn-show-on-left"><i class="fa fa-caret-right"></i></span>
+	</button> -->
+	<button id="fabtn_back_to_top" class="btn btn-icon btn-neutral fabtn shadow-sm" type="button" aria-label="Back To Top" tooltip="回到顶部">
+		<span class="btn-inner--icon"><i class="fa fa-angle-up"></i></span>
+	</button>
+	<button id="fabtn_go_to_comment" class="btn btn-icon btn-neutral fabtn shadow-sm d-none" type="button" <-% theme.fab_show_gotocomment_button ? "" : "style='display: none;'"  aria-label="Comment" tooltip="评论">
+		<span class="btn-inner--icon"><i class="fa fa-comment-o"></i></span>
+	</button>
+	<button id="fabtn_toggle_darkmode" class="btn btn-icon btn-neutral fabtn shadow-sm" type="button" <-% theme.fab_show_darkmode_button ? "" : "style='display: none;'"  aria-label="Toggle Darkmode" tooltip-darkmode="夜间模式" tooltip-blackmode="暗黑模式" tooltip-lightmode="日间模式">
+		<span class="btn-inner--icon"><i class="fa fa-moon-o"></i><i class='fa fa-lightbulb-o'></i></span>
+	</button>
+	<button id="fabtn_toggle_blog_settings_popup" class="btn btn-icon btn-neutral fabtn shadow-sm" type="button" <-% theme.fab_show_settings_button ? "" : "style='display: none;'"  aria-label="Open Blog Settings Menu" tooltip="设置">
+		<span class="btn-inner--icon"><i class="fa fa-cog"></i></span>
+	</button>
+	<div id="fabtn_blog_settings_popup" class="card shadow-sm" style="opacity: 0;" aria-hidden="true">
+		<div id="close_blog_settings"><i class="fa fa-close"></i></div>
+		<div class="blog-setting-item mt-3">
+			<div style="transform: translateY(-4px);"><div id="blog_setting_toggle_darkmode_and_amoledarkmode" tooltip-switch-to-darkmode="切换到夜间模式" tooltip-switch-to-blackmode="切换到暗黑模式"><span>夜间模式</span><span>暗黑模式</span></div></div>
+			<div style="flex: 1;"></div>
+			<label id="blog_setting_darkmode_switch" class="custom-toggle">
+				<span class="custom-toggle-slider rounded-circle"></span>
+			</label>
+		</div>
+		<div class="blog-setting-item mt-3">
+			<div style="flex: 1;">字体</div>
+			<div>
+				<button id="blog_setting_font_sans_serif" type="button" class="blog-setting-font btn btn-outline-primary blog-setting-selector-left">Sans Serif</button><button id="blog_setting_font_serif" type="button" class="blog-setting-font btn btn-outline-primary blog-setting-selector-right">Serif</button>
+			</div>
+		</div>
+		<div class="blog-setting-item mt-3">
+			<div style="flex: 1;">阴影</div>
+			<div>
+				<button id="blog_setting_shadow_small" type="button" class="blog-setting-shadow btn btn-outline-primary blog-setting-selector-left">浅阴影</button><button id="blog_setting_shadow_big" type="button" class="blog-setting-shadow btn btn-outline-primary blog-setting-selector-right">深阴影</button>
+			</div>
+		</div>
+		<div class="blog-setting-item mt-3 mb-3">
+			<div style="flex: 1;">滤镜</div>
+			<div id="blog_setting_filters" class="ml-3">
+				<button id="blog_setting_filter_off" type="button" class="blog-setting-filter-btn ml-0" filter-name="off">关闭</button>
+				<button id="blog_setting_filter_sunset" type="button" class="blog-setting-filter-btn" filter-name="sunset">日落</button>
+				<button id="blog_setting_filter_darkness" type="button" class="blog-setting-filter-btn" filter-name="darkness">暗化</button>
+				<button id="blog_setting_filter_grayscale" type="button" class="blog-setting-filter-btn" filter-name="grayscale">灰度</button>
+			</div>
+		</div>
+		<div class="blog-setting-item mb-3">
+			<div id="blog_setting_card_radius_to_default" style="cursor: pointer;" tooltip="恢复默认">圆角</div>
+			<div style="flex: 1;margin-left: 20px;margin-right: 8px;transform: translateY(2px);">
+				<div id="blog_setting_card_radius"></div>
+			</div>
+		</div>
+		
+			<div class="blog-setting-item mt-1 mb-3">
+				<div style="flex: 1;">主题色</div>
+				<div id="theme-color-picker" class="ml-3"></div>
+			</div>
+		
+	</div>
+	<button id="fabtn_open_sidebar" class="btn btn-icon btn-neutral fabtn shadow-sm" type="button" aria-label="Open Sidebar Menu" tooltip="菜单">
+		<span class="btn-inner--icon"><i class="fa fa-bars"></i></span>
+	</button>
+	<button id="fabtn_reading_progress" class="btn btn-icon btn-neutral fabtn shadow-sm" type="button" aria-hidden="true" tooltip="阅读进度">
+		<div id="fabtn_reading_progress_bar" style="width: 0%;"></div>
+		<span id="fabtn_reading_progress_details">0%</span>
+	</button>
+</div>
+
+<div id="content" class="site-content">
+
+
+
+
+
+
+
+
+
+<div class="page-information-card-container">
+	
+</div>
+
+<div id="sidebar_mask"></div>
+<aside id="leftbar" class="leftbar widget-area" role="complementary">
+		
+			<div id="leftbar_announcement" class="card bg-white shadow-sm border-0">
+				<div class="leftbar-announcement-body">
+					<div class="leftbar-announcement-title text-white">公告</div>
+					<div class="leftbar-announcement-content text-white">个人博客。</div>
+				</div>
+			</div>
+		
+		<div id="leftbar_part1" class="widget widget_search card bg-white shadow-sm border-0">
+			<div class="leftbar-banner card-body">
+				<span class="leftbar-banner-title text-white">沉石鱼惊旋 的博客</span>
+				
+				
+					<span class="leftbar-banner-subtitle text-white"><span class='hitokoto'></span></span>
+				
+			</div>
+			
+			
+				<ul id='leftbar_part1_menu' class='leftbar-menu'>
+					<li class='leftbar-menu-item'><a href='/'>首页</a></li><li class='leftbar-menu-item'><a href='/archives'>归档</a></li><li class='leftbar-menu-item leftbar-menu-item-haschildren'><a no-pjax onclick='return false;'>实用工具</a><ul class='leftbar-menu-item leftbar-menu-subitem shadow-sm'><li class='leftbar-menu-item'><a target="_blank" rel="noopener" href='https://lab.magiconch.com/homo/'>恶臭数学分解器</a></li><li class='leftbar-menu-item'><a target="_blank" rel="noopener" href='https://lab.magiconch.com/nbnhhsh/'>缩写查询</a></li><li class='leftbar-menu-item'><a target="_blank" rel="noopener" href='https://www.luogu.com.cn/blog/IowaBattleship/latex-gong-shi-tai-quan'>$\LaTeX$ 公式大全</a></li><li class='leftbar-menu-item'><a target="_blank" rel="noopener" href='https://zh.numberempire.com/factoringcalculator.php'>因式分解</a></li><li class='leftbar-menu-item'><a target="_blank" rel="noopener" href='https://csacademy.com/app/graph_editor/'>图论绘画</a></li></ul></li><li class='leftbar-menu-item'><a target="_blank" rel="noopener" href='http://cyx2009.top/'>目录</a></li>
+				</ul>
+			
+			<div class="card-body text-center leftbar-search-button">
+				<button id="leftbar_search" class="btn btn-secondary btn-lg active btn-sm btn-block border-0" role="button" data-toggle="modal" data-target="#argon_search_modal" >
+					<i class="menu-item-icon fa fa-search mr-0"></i> 搜索
+				</button>
+			</div>
+		</div>
+		<div id="leftbar_part2" class="widget widget_search card bg-white shadow-sm border-0">
+			<div id="leftbar_part2_inner" class="card-body">
+				
+				<div class="nav-wrapper" style="padding-top: 5px; display:none; ">
+	                <ul class="nav nav-pills nav-fill" role="tablist">
+						
+						<li class="nav-item sidebar-tab-switcher">
+							<a class="active show" id="leftbar_tab_overview_btn" data-toggle="tab" href="#leftbar_tab_overview" role="tab" aria-controls="leftbar_tab_overview" no-pjax>站点概览</a>
+						</li>
+	                </ul>
+				</div>
+				<div>
+					<div class="tab-content" style="padding: 10px 10px 0 10px;">
+						
+						<div class="tab-pane fade text-center active show" id="leftbar_tab_overview" role="tabpanel" aria-labelledby="leftbar_tab_overview_btn">
+							<img id="leftbar_overview_author_image" src="/assets/img/favicon.ico" class="img-fluid rounded-circle shadow-sm" style="width: 100px;" alt="avatar">
+							<h6 id="leftbar_overview_author_name">沉石鱼惊旋</h6>
+							<nav class="site-state">
+								<div class="site-state-item site-state-posts">
+									<a href="/archives">
+										<span class="site-state-item-count">166</span>
+										<span class="site-state-item-name">文章</span>
+									</a>
+								</div>
+								<div class="site-state-item site-state-categories">
+									<a data-toggle="modal" data-target="#blog_categories">
+										<span class="site-state-item-count">5</span>
+										<span class="site-state-item-name">分类</span>
+									</a>
+								</div>      
+								<div class="site-state-item site-state-tags">
+									<a data-toggle="modal" data-target="#blog_tags">
+										<span class="site-state-item-count">4</span>
+										<span class="site-state-item-name">标签</span>
+									</a>
+								</div>
+							</nav>
+							
+									<div class="site-author-links">
+										
+											<div class='site-author-links-item'>
+												<a href="https://codeforces.com/profile/Caylex" rel='noopener' target='_blank'>CF 账号</a>
+											</div>
+										
+											<div class='site-author-links-item'>
+												<a href="https://atcoder.jp/users/cayaxi09" rel='noopener' target='_blank'>AT 账号</a>
+											</div>
+										
+											<div class='site-author-links-item'>
+												<a href="https://www.luogu.com.cn/user/516346" rel='noopener' target='_blank'>洛谷账号</a>
+											</div>
+										
+									</div>
+								
+							
+									<div class='site-friend-links'>
+										<div class='site-friend-links-title'><i class='fa fa-fw fa-link'></i> Links</div>
+										<ul class='site-friend-links-ul'>
+											
+												<li class='site-friend-links-item'>
+													<a href='http://yin-xin.fun/' rel='noopener' target='_blank'>吟心</a>
+												</li>
+											
+										</ul>
+									</div>
+								
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+</aside>
+<div class="modal fade" id="blog_categories" tabindex="-1" role="dialog" aria-labelledby="" aria-hidden="true">
+	<div class="modal-dialog modal-dialog-centered">
+		<div class="modal-content">
+			<div class="modal-header">
+				<h5 class="modal-title">分类</h5>
+				<button type="button" class="close" data-dismiss="modal" aria-label="Close">
+					<span aria-hidden="true">&times;</span>
+				</button>
+			</div>
+			<div class="modal-body">
+				<a class="badge badge-secondary tag" href="/categories/Essay/" rel="tag">Essay <span class="tag-num">4</span></a><a class="badge badge-secondary tag" href="/categories/Solution/" rel="tag">Solution <span class="tag-num">147</span></a><a class="badge badge-secondary tag" href="/categories/StudyNote/" rel="tag">StudyNote <span class="tag-num">4</span></a><a class="badge badge-secondary tag" href="/categories/Technology/" rel="tag">Technology <span class="tag-num">1</span></a><a class="badge badge-secondary tag" href="/categories/TravelNote/" rel="tag">TravelNote <span class="tag-num">10</span></a>
+			</div>
+		</div>
+	</div>
+</div>
+<div class="modal fade" id="blog_tags" tabindex="-1" role="dialog" aria-labelledby="" aria-hidden="true">
+	<div class="modal-dialog modal-dialog-centered">
+		<div class="modal-content">
+			<div class="modal-header">
+				<h5 class="modal-title">标签</h5>
+				<button type="button" class="close" data-dismiss="modal" aria-label="Close">
+					<span aria-hidden="true">&times;</span>
+				</button>
+			</div>
+			<div class="modal-body">
+				<a class="badge badge-secondary tag" href="/tags/%E4%B9%B1%E6%90%9E/" rel="tag">乱搞 <span class="tag-num">2</span></a><a class="badge badge-secondary tag" href="/tags/%E5%8A%A8%E6%80%81%E8%A7%84%E5%88%92/" rel="tag">动态规划 <span class="tag-num">1</span></a><a class="badge badge-secondary tag" href="/tags/%E6%A8%A1%E6%8B%9F%E8%B5%9B/" rel="tag">模拟赛 <span class="tag-num">20</span></a><a class="badge badge-secondary tag" href="/tags/%E9%AD%94%E6%80%94%E6%9D%AF/" rel="tag">魔怔杯 <span class="tag-num">2</span></a>
+			</div>
+		</div>
+	</div>
+</div>
+
+
+<div id="primary" class="content-area">
+	<main id="main" class="site-main" role="main">
+		
+		
+		
+				<article class="post post-full card bg-white shadow-sm border-0">
+	<header class="post-header text-center">
+		<a class="post-title" href="/archives/page/7/">归档</a>
+	</header>
+
+	<div class="post-content" id="post_content">
+		<div class='argon-timeline'>
+			
+						<div class='argon-timeline-node'>
+							<div class='argon-timeline-time archive-timeline-year'>2025</div>
+							<div class='argon-timeline-card card bg-gradient-secondary archive-timeline-title'></div>
+						</div>
+						
+					<div class='argon-timeline-node'>
+						<div class='argon-timeline-time'>2-11</div>
+						<div class='argon-timeline-card card bg-gradient-secondary archive-timeline-title'>
+							<a href="/archives/something_to_say/">【置顶】[闲话] Something to Say</a>
+						</div>
+					</div>
+			
+					<div class='argon-timeline-node'>
+						<div class='argon-timeline-time'>2-2</div>
+						<div class='argon-timeline-card card bg-gradient-secondary archive-timeline-title'>
+							<a href="/archives/MXWC2025/">[题解] 梦熊 2025 省选集训营 做题笔记</a>
+						</div>
+					</div>
+			
+					<div class='argon-timeline-node'>
+						<div class='argon-timeline-time'>2-1</div>
+						<div class='argon-timeline-card card bg-gradient-secondary archive-timeline-title'>
+							<a href="/archives/ABC391/">[题解] ABC391 FG 一句话题解</a>
+						</div>
+					</div>
+			
+					<div class='argon-timeline-node'>
+						<div class='argon-timeline-time'>1-26</div>
+						<div class='argon-timeline-card card bg-gradient-secondary archive-timeline-title'>
+							<a href="/archives/ARC191/">[题解] ARC191 ABC 题解</a>
+						</div>
+					</div>
+			
+					<div class='argon-timeline-node'>
+						<div class='argon-timeline-time'>1-26</div>
+						<div class='argon-timeline-card card bg-gradient-secondary archive-timeline-title'>
+							<a href="/archives/UTPC2023K/">[题解] [模拟赛 20250126] UTPC2023K Kth Sum</a>
+						</div>
+					</div>
+			
+					<div class='argon-timeline-node'>
+						<div class='argon-timeline-time'>1-24</div>
+						<div class='argon-timeline-card card bg-gradient-secondary archive-timeline-title'>
+							<a href="/archives/ABC248G/">[题解] ABC248G GCD cost on the tree</a>
+						</div>
+					</div>
+			
+					<div class='argon-timeline-node'>
+						<div class='argon-timeline-time'>1-23</div>
+						<div class='argon-timeline-card card bg-gradient-secondary archive-timeline-title'>
+							<a href="/archives/CF2063F2/">[题解] CF2063F2 Counting Is Not Fun (Hard Version)</a>
+						</div>
+					</div>
+			
+					<div class='argon-timeline-node'>
+						<div class='argon-timeline-time'>1-23</div>
+						<div class='argon-timeline-card card bg-gradient-secondary archive-timeline-title'>
+							<a href="/archives/CF2063F1/">[题解] CF2063F1 Counting Is Not Fun (Easy Version)</a>
+						</div>
+					</div>
+			
+					<div class='argon-timeline-node'>
+						<div class='argon-timeline-time'>1-20</div>
+						<div class='argon-timeline-card card bg-gradient-secondary archive-timeline-title'>
+							<a href="/archives/hack_help/">[笔记] 叉人须知</a>
+						</div>
+					</div>
+			
+					<div class='argon-timeline-node'>
+						<div class='argon-timeline-time'>1-16</div>
+						<div class='argon-timeline-card card bg-gradient-secondary archive-timeline-title'>
+							<a href="/archives/something_needs_to_record/">[笔记] 一些可能需要记录的东西</a>
+						</div>
+					</div>
+			
+					<div class='argon-timeline-node'>
+						<div class='argon-timeline-time'>1-15</div>
+						<div class='argon-timeline-card card bg-gradient-secondary archive-timeline-title'>
+							<a href="/archives/CF254D/">[题解] CF254D Rats</a>
+						</div>
+					</div>
+			
+					<div class='argon-timeline-node'>
+						<div class='argon-timeline-time'>1-14</div>
+						<div class='argon-timeline-card card bg-gradient-secondary archive-timeline-title'>
+							<a href="/archives/P7803/">[题解] [模拟赛 20250113] P7803 [JOI Open 2021] Crossing</a>
+						</div>
+					</div>
+			
+					<div class='argon-timeline-node'>
+						<div class='argon-timeline-time'>1-13</div>
+						<div class='argon-timeline-card card bg-gradient-secondary archive-timeline-title'>
+							<a href="/archives/P11392/">[题解] [模拟赛 20250113] P11392 [JOI Open 2019] 三段跳び</a>
+						</div>
+					</div>
+			
+					<div class='argon-timeline-node'>
+						<div class='argon-timeline-time'>1-2</div>
+						<div class='argon-timeline-card card bg-gradient-secondary archive-timeline-title'>
+							<a href="/archives/CF2053G/">[题解] CF2053G Naive String Splits</a>
+						</div>
+					</div>
+			
+						<div class='argon-timeline-node'>
+							<div class='argon-timeline-time archive-timeline-year'>2024</div>
+							<div class='argon-timeline-card card bg-gradient-secondary archive-timeline-title'></div>
+						</div>
+						
+					<div class='argon-timeline-node'>
+						<div class='argon-timeline-time'>12-26</div>
+						<div class='argon-timeline-card card bg-gradient-secondary archive-timeline-title'>
+							<a href="/archives/CF2049F/">[题解] CF2049F MEX OR Mania</a>
+						</div>
+					</div>
+			
+					<div class='argon-timeline-node'>
+						<div class='argon-timeline-time'>12-23</div>
+						<div class='argon-timeline-card card bg-gradient-secondary archive-timeline-title'>
+							<a href="/archives/CF2051/">[题解] CF2051 做题笔记</a>
+						</div>
+					</div>
+			
+					<div class='argon-timeline-node'>
+						<div class='argon-timeline-time'>11-27</div>
+						<div class='argon-timeline-card card bg-gradient-secondary archive-timeline-title'>
+							<a href="/archives/NOIP2024/">[游记] NOIP 2024 游记</a>
+						</div>
+					</div>
+			
+					<div class='argon-timeline-node'>
+						<div class='argon-timeline-time'>11-27</div>
+						<div class='argon-timeline-card card bg-gradient-secondary archive-timeline-title'>
+							<a href="/archives/THUPC2025/">[游记] THUPC 2025 游记</a>
+						</div>
+					</div>
+			
+					<div class='argon-timeline-node'>
+						<div class='argon-timeline-time'>11-26</div>
+						<div class='argon-timeline-card card bg-gradient-secondary archive-timeline-title'>
+							<a href="/archives/ICPC2024RegionalTaichung/">[题解] 2024 ICPC 台中 区域赛 游记 &amp; 题解 | Online Mirror</a>
+						</div>
+					</div>
+			
+					<div class='argon-timeline-node'>
+						<div class='argon-timeline-time'>11-6</div>
+						<div class='argon-timeline-card card bg-gradient-secondary archive-timeline-title'>
+							<a href="/archives/CF722F/">[题解] [模拟赛 20241105] CF722F Cyclic Cipher</a>
+						</div>
+					</div>
+			
+					<div class='argon-timeline-node'>
+						<div class='argon-timeline-time'>11-3</div>
+						<div class='argon-timeline-card card bg-gradient-secondary archive-timeline-title'>
+							<a href="/archives/CF2036G/">[题解] CF2036G Library of Magic</a>
+						</div>
+					</div>
+			
+					<div class='argon-timeline-node'>
+						<div class='argon-timeline-time'>11-2</div>
+						<div class='argon-timeline-card card bg-gradient-secondary archive-timeline-title'>
+							<a href="/archives/KEYENCE2019E/">[题解] KEYENCE2019E Connecting Cities</a>
+						</div>
+					</div>
+			
+					<div class='argon-timeline-node'>
+						<div class='argon-timeline-time'>11-2</div>
+						<div class='argon-timeline-card card bg-gradient-secondary archive-timeline-title'>
+							<a href="/archives/CF1111D/">[题解] CF1111D Destroy the Colony</a>
+						</div>
+					</div>
+			
+					<div class='argon-timeline-node'>
+						<div class='argon-timeline-time'>10-21</div>
+						<div class='argon-timeline-card card bg-gradient-secondary archive-timeline-title'>
+							<a href="/archives/ABC376G/">[题解] ABC376G Treasure Hunting</a>
+						</div>
+					</div>
+			
+					<div class='argon-timeline-node'>
+						<div class='argon-timeline-time'>10-20</div>
+						<div class='argon-timeline-card card bg-gradient-secondary archive-timeline-title'>
+							<a href="/archives/MXJ8/">[题解] MX-J8 题解</a>
+						</div>
+					</div>
+			
+					<div class='argon-timeline-node'>
+						<div class='argon-timeline-time'>10-13</div>
+						<div class='argon-timeline-card card bg-gradient-secondary archive-timeline-title'>
+							<a href="/archives/CC_DISTNUM/">[题解] [模拟赛 20241008] CodeChef DISTNUM</a>
+						</div>
+					</div>
+			
+					<div class='argon-timeline-node'>
+						<div class='argon-timeline-time'>10-8</div>
+						<div class='argon-timeline-card card bg-gradient-secondary archive-timeline-title'>
+							<a href="/archives/CF1736C2/">[题解] CF1736C2 Good Subarrays (Hard Version)</a>
+						</div>
+					</div>
+			
+					<div class='argon-timeline-node'>
+						<div class='argon-timeline-time'>10-5</div>
+						<div class='argon-timeline-card card bg-gradient-secondary archive-timeline-title'>
+							<a href="/archives/CF2008H/">[题解] CF2008H Sakurako&#39;s Test</a>
+						</div>
+					</div>
+			
+					<div class='argon-timeline-node'>
+						<div class='argon-timeline-time'>10-5</div>
+						<div class='argon-timeline-card card bg-gradient-secondary archive-timeline-title'>
+							<a href="/archives/CF2014H/">[题解] CF2014H Robin Hood Archery</a>
+						</div>
+					</div>
+			
+					<div class='argon-timeline-node'>
+						<div class='argon-timeline-time'>9-30</div>
+						<div class='argon-timeline-card card bg-gradient-secondary archive-timeline-title'>
+							<a href="/archives/CF1221G/">[题解] CF1221G Graph And Numbers</a>
+						</div>
+					</div>
+			
+					<div class='argon-timeline-node'>
+						<div class='argon-timeline-time'>9-21</div>
+						<div class='argon-timeline-card card bg-gradient-secondary archive-timeline-title'>
+							<a href="/archives/CSP2024/">[游记] CSP 2024 游记</a>
+						</div>
+					</div>
+			
+					<div class='argon-timeline-node'>
+						<div class='argon-timeline-time'>9-14</div>
+						<div class='argon-timeline-card card bg-gradient-secondary archive-timeline-title'>
+							<a href="/archives/CF1310C/">[题解] CF1310C Au Pont Rouge</a>
+						</div>
+					</div>
+			
+					<div class='argon-timeline-node'>
+						<div class='argon-timeline-time'>9-13</div>
+						<div class='argon-timeline-card card bg-gradient-secondary archive-timeline-title'>
+							<a href="/archives/TC12844/">[题解] [模拟赛 20240913] TopCoder 12844 OneBlack</a>
+						</div>
+					</div>
+			
+					<div class='argon-timeline-node'>
+						<div class='argon-timeline-time'>9-12</div>
+						<div class='argon-timeline-card card bg-gradient-secondary archive-timeline-title'>
+							<a href="/archives/CF1661E/">[题解] CF1661E Narrow Components</a>
+						</div>
+					</div>
+			
+					<div class='argon-timeline-node'>
+						<div class='argon-timeline-time'>9-8</div>
+						<div class='argon-timeline-card card bg-gradient-secondary archive-timeline-title'>
+							<a href="/archives/ABC370F/">[题解] ABC370F Cake Division</a>
+						</div>
+					</div>
+			
+					<div class='argon-timeline-node'>
+						<div class='argon-timeline-time'>9-8</div>
+						<div class='argon-timeline-card card bg-gradient-secondary archive-timeline-title'>
+							<a href="/archives/ABC370E/">[题解] ABC370E Avoid K Partition</a>
+						</div>
+					</div>
+			
+					<div class='argon-timeline-node'>
+						<div class='argon-timeline-time'>9-8</div>
+						<div class='argon-timeline-card card bg-gradient-secondary archive-timeline-title'>
+							<a href="/archives/ABC370D/">[题解] ABC370D Cross Explosion</a>
+						</div>
+					</div>
+			
+					<div class='argon-timeline-node'>
+						<div class='argon-timeline-time'>9-2</div>
+						<div class='argon-timeline-card card bg-gradient-secondary archive-timeline-title'>
+							<a href="/archives/CF2008/">[题解] CF2008 做题笔记</a>
+						</div>
+					</div>
+			
+					<div class='argon-timeline-node'>
+						<div class='argon-timeline-time'>8-27</div>
+						<div class='argon-timeline-card card bg-gradient-secondary archive-timeline-title'>
+							<a href="/archives/P10637/">[题解] P10637 BZOJ4262 Sum</a>
+						</div>
+					</div>
+			
+					<div class='argon-timeline-node'>
+						<div class='argon-timeline-time'>8-16</div>
+						<div class='argon-timeline-card card bg-gradient-secondary archive-timeline-title'>
+							<a href="/archives/ASTAR2024/">[游记] 百度之星 2024 游记</a>
+						</div>
+					</div>
+			
+					<div class='argon-timeline-node'>
+						<div class='argon-timeline-time'>8-3</div>
+						<div class='argon-timeline-card card bg-gradient-secondary archive-timeline-title'>
+							<a href="/archives/ABC365G/">[题解] ABC365G AtCoder Office</a>
+						</div>
+					</div>
+			
+					<div class='argon-timeline-node'>
+						<div class='argon-timeline-time'>8-1</div>
+						<div class='argon-timeline-card card bg-gradient-secondary archive-timeline-title'>
+							<a href="/archives/CF1997E/">[题解] CF1997E Level Up</a>
+						</div>
+					</div>
+			
+					<div class='argon-timeline-node'>
+						<div class='argon-timeline-time'>7-28</div>
+						<div class='argon-timeline-card card bg-gradient-secondary archive-timeline-title'>
+							<a href="/archives/CF558C/">[题解] CF558C Amr and Chemistry</a>
+						</div>
+					</div>
+			
+					<div class='argon-timeline-node'>
+						<div class='argon-timeline-time'>6-18</div>
+						<div class='argon-timeline-card card bg-gradient-secondary archive-timeline-title'>
+							<a href="/archives/mzcup2nd_2/">[闲话] 487633277 群内魔怔哥语录节选</a>
+						</div>
+					</div>
+			
+					<div class='argon-timeline-node'>
+						<div class='argon-timeline-time'>6-16</div>
+						<div class='argon-timeline-card card bg-gradient-secondary archive-timeline-title'>
+							<a href="/archives/mzcup2nd_1/">[闲话] 20091119 身边的奇质数</a>
+						</div>
+					</div>
+			
+					<div class='argon-timeline-node'>
+						<div class='argon-timeline-time'>6-16</div>
+						<div class='argon-timeline-card card bg-gradient-secondary archive-timeline-title'>
+							<a href="/archives/ABC358G/">[题解] ABC358G AtCoder Tour</a>
+						</div>
+					</div>
+			
+					<div class='argon-timeline-node'>
+						<div class='argon-timeline-time'>6-6</div>
+						<div class='argon-timeline-card card bg-gradient-secondary archive-timeline-title'>
+							<a href="/archives/JSOI2024/">[题解] 信息与未来 2024 做题笔记</a>
+						</div>
+					</div>
+			
+					<div class='argon-timeline-node'>
+						<div class='argon-timeline-time'>5-28</div>
+						<div class='argon-timeline-card card bg-gradient-secondary archive-timeline-title'>
+							<a href="/archives/CF1975E/">[题解] CF1975E Chain Queries</a>
+						</div>
+					</div>
+			
+					<div class='argon-timeline-node'>
+						<div class='argon-timeline-time'>5-3</div>
+						<div class='argon-timeline-card card bg-gradient-secondary archive-timeline-title'>
+							<a href="/archives/CF1968G2/">[题解] CF1968G1 Division + LCP (easy version)</a>
+						</div>
+					</div>
+			
+					<div class='argon-timeline-node'>
+						<div class='argon-timeline-time'>5-3</div>
+						<div class='argon-timeline-card card bg-gradient-secondary archive-timeline-title'>
+							<a href="/archives/CF1968G1/">[题解] CF1968G1 Division + LCP (easy version)</a>
+						</div>
+					</div>
+			
+					<div class='argon-timeline-node'>
+						<div class='argon-timeline-time'>5-3</div>
+						<div class='argon-timeline-card card bg-gradient-secondary archive-timeline-title'>
+							<a href="/archives/CF1968F/">[题解] CF1968F Equal XOR Segments</a>
+						</div>
+					</div>
+			
+					<div class='argon-timeline-node'>
+						<div class='argon-timeline-time'>4-25</div>
+						<div class='argon-timeline-card card bg-gradient-secondary archive-timeline-title'>
+							<a href="/archives/pollardrho/">[题解] 逆天 Pollard Rho</a>
+						</div>
+					</div>
+			
+					<div class='argon-timeline-node'>
+						<div class='argon-timeline-time'>4-22</div>
+						<div class='argon-timeline-card card bg-gradient-secondary archive-timeline-title'>
+							<a href="/archives/CF1957E/">[题解] CF1957E Carousel of Combinations</a>
+						</div>
+					</div>
+			
+					<div class='argon-timeline-node'>
+						<div class='argon-timeline-time'>4-11</div>
+						<div class='argon-timeline-card card bg-gradient-secondary archive-timeline-title'>
+							<a href="/archives/P3475/">[题解] P3475 这都能过？</a>
+						</div>
+					</div>
+			
+					<div class='argon-timeline-node'>
+						<div class='argon-timeline-time'>4-4</div>
+						<div class='argon-timeline-card card bg-gradient-secondary archive-timeline-title'>
+							<a href="/archives/UVA1109/">[题解] UVA1109 Mummy Madness</a>
+						</div>
+					</div>
+			
+					<div class='argon-timeline-node'>
+						<div class='argon-timeline-time'>4-2</div>
+						<div class='argon-timeline-card card bg-gradient-secondary archive-timeline-title'>
+							<a href="/archives/P6453/">[题解] P6453 [COCI2008-2009#4] PERIODNI</a>
+						</div>
+					</div>
+			
+					<div class='argon-timeline-node'>
+						<div class='argon-timeline-time'>4-1</div>
+						<div class='argon-timeline-card card bg-gradient-secondary archive-timeline-title'>
+							<a href="/archives/CF913E/">[题解] CF913E Logical Expression</a>
+						</div>
+					</div>
+			
+					<div class='argon-timeline-node'>
+						<div class='argon-timeline-time'>3-24</div>
+						<div class='argon-timeline-card card bg-gradient-secondary archive-timeline-title'>
+							<a href="/archives/ABC346/">[题解] ABC346 EFG 简单题解</a>
+						</div>
+					</div>
+			
+					<div class='argon-timeline-node'>
+						<div class='argon-timeline-time'>2-28</div>
+						<div class='argon-timeline-card card bg-gradient-secondary archive-timeline-title'>
+							<a href="/archives/CF178F3/">[题解] CF178F3 Representative Sampling</a>
+						</div>
+					</div>
+			
+					<div class='argon-timeline-node'>
+						<div class='argon-timeline-time'>2-25</div>
+						<div class='argon-timeline-card card bg-gradient-secondary archive-timeline-title'>
+							<a href="/archives/AGC026B/">[题解] AGC026B rng_10s</a>
+						</div>
+					</div>
+			
+					<div class='argon-timeline-node'>
+						<div class='argon-timeline-time'>2-25</div>
+						<div class='argon-timeline-card card bg-gradient-secondary archive-timeline-title'>
+							<a href="/archives/CF1017C/">[题解] CF1017C The Phone Number</a>
+						</div>
+					</div>
+			
+					<div class='argon-timeline-node'>
+						<div class='argon-timeline-time'>2-25</div>
+						<div class='argon-timeline-card card bg-gradient-secondary archive-timeline-title'>
+							<a href="/archives/SP18637/">[题解] SP18637 LAWRENCE - Lawrence of Arabia</a>
+						</div>
+					</div>
+			
+					<div class='argon-timeline-node'>
+						<div class='argon-timeline-time'>2-25</div>
+						<div class='argon-timeline-card card bg-gradient-secondary archive-timeline-title'>
+							<a href="/archives/CF1511D/">[题解] CF1511D Min Cost String</a>
+						</div>
+					</div>
+			
+					<div class='argon-timeline-node'>
+						<div class='argon-timeline-time'>2-25</div>
+						<div class='argon-timeline-card card bg-gradient-secondary archive-timeline-title'>
+							<a href="/archives/CF868D/">[题解] CF868D Huge Strings</a>
+						</div>
+					</div>
+			
+					<div class='argon-timeline-node'>
+						<div class='argon-timeline-time'>2-23</div>
+						<div class='argon-timeline-card card bg-gradient-secondary archive-timeline-title'>
+							<a href="/archives/CF1929F/">[题解] CF1929F Sasha and the Wedding Binary Search Tree</a>
+						</div>
+					</div>
+			
+					<div class='argon-timeline-node'>
+						<div class='argon-timeline-time'>2-23</div>
+						<div class='argon-timeline-card card bg-gradient-secondary archive-timeline-title'>
+							<a href="/archives/CF1929E/">[题解] CF1929E Sasha and the Happy Tree Cutting</a>
+						</div>
+					</div>
+			
+					<div class='argon-timeline-node'>
+						<div class='argon-timeline-time'>2-23</div>
+						<div class='argon-timeline-card card bg-gradient-secondary archive-timeline-title'>
+							<a href="/archives/CF710D/">[题解] CF710D Two Arithmetic Progressions</a>
+						</div>
+					</div>
+			
+					<div class='argon-timeline-node'>
+						<div class='argon-timeline-time'>2-22</div>
+						<div class='argon-timeline-card card bg-gradient-secondary archive-timeline-title'>
+							<a href="/archives/CF1926F/">[题解] CF1926F Vlad and Avoiding X</a>
+						</div>
+					</div>
+			
+					<div class='argon-timeline-node'>
+						<div class='argon-timeline-time'>2-12</div>
+						<div class='argon-timeline-card card bg-gradient-secondary archive-timeline-title'>
+							<a href="/archives/CF1129B/">[题解] CF995E Number Clicker</a>
+						</div>
+					</div>
+			
+					<div class='argon-timeline-node'>
+						<div class='argon-timeline-time'>2-4</div>
+						<div class='argon-timeline-card card bg-gradient-secondary archive-timeline-title'>
+							<a href="/archives/ABC339F/">[题解] ABC339F Product Equality</a>
+						</div>
+					</div>
+			
+					<div class='argon-timeline-node'>
+						<div class='argon-timeline-time'>2-2</div>
+						<div class='argon-timeline-card card bg-gradient-secondary archive-timeline-title'>
+							<a href="/archives/Mo_s_algorithm/">[笔记] 莫队 学习笔记</a>
+						</div>
+					</div>
+			
+					<div class='argon-timeline-node'>
+						<div class='argon-timeline-time'>1-30</div>
+						<div class='argon-timeline-card card bg-gradient-secondary archive-timeline-title'>
+							<a href="/archives/CF351D/">[题解] CF351D Jeff and Removing Periods</a>
+						</div>
+					</div>
+			
+					<div class='argon-timeline-node'>
+						<div class='argon-timeline-time'>1-19</div>
+						<div class='argon-timeline-card card bg-gradient-secondary archive-timeline-title'>
+							<a href="/archives/20240119_essay/">[闲话] 20240119 鲜花</a>
+						</div>
+					</div>
+			
+					<div class='argon-timeline-node'>
+						<div class='argon-timeline-time'>1-14</div>
+						<div class='argon-timeline-card card bg-gradient-secondary archive-timeline-title'>
+							<a href="/archives/ABC336/">[题解] ABC336 做题笔记</a>
+						</div>
+					</div>
+			
+						<div class='argon-timeline-node'>
+							<div class='argon-timeline-time archive-timeline-year'>2023</div>
+							<div class='argon-timeline-card card bg-gradient-secondary archive-timeline-title'></div>
+						</div>
+						
+					<div class='argon-timeline-node'>
+						<div class='argon-timeline-time'>12-25</div>
+						<div class='argon-timeline-card card bg-gradient-secondary archive-timeline-title'>
+							<a href="/archives/HITACHI2020D/">[题解] HITACHI2020D Manga Market</a>
+						</div>
+					</div>
+			
+					<div class='argon-timeline-node'>
+						<div class='argon-timeline-time'>12-25</div>
+						<div class='argon-timeline-card card bg-gradient-secondary archive-timeline-title'>
+							<a href="/archives/Fermat_s_little_theorem_prove/">[笔记] 费马小定理 证明</a>
+						</div>
+					</div>
+			
+					<div class='argon-timeline-node'>
+						<div class='argon-timeline-time'>12-20</div>
+						<div class='argon-timeline-card card bg-gradient-secondary archive-timeline-title'>
+							<a href="/archives/USACO23DEC_G/">[题解] 来点 USACO Gold 组人类智慧</a>
+						</div>
+					</div>
+			
+					<div class='argon-timeline-node'>
+						<div class='argon-timeline-time'>12-13</div>
+						<div class='argon-timeline-card card bg-gradient-secondary archive-timeline-title'>
+							<a href="/archives/P3628/">[题解] P3628 [APIO2010] 特别行动队</a>
+						</div>
+					</div>
+			
+					<div class='argon-timeline-node'>
+						<div class='argon-timeline-time'>11-25</div>
+						<div class='argon-timeline-card card bg-gradient-secondary archive-timeline-title'>
+							<a href="/archives/THUPC2024/">[游记] THUPC 2024 游记</a>
+						</div>
+					</div>
+			
+					<div class='argon-timeline-node'>
+						<div class='argon-timeline-time'>11-19</div>
+						<div class='argon-timeline-card card bg-gradient-secondary archive-timeline-title'>
+							<a href="/archives/ABC329F/">[题解] ABC329F Colored Ball</a>
+						</div>
+					</div>
+			
+					<div class='argon-timeline-node'>
+						<div class='argon-timeline-time'>11-11</div>
+						<div class='argon-timeline-card card bg-gradient-secondary archive-timeline-title'>
+							<a href="/archives/NOIP2023/">[游记] NOIP 2023 游记</a>
+						</div>
+					</div>
+			
+					<div class='argon-timeline-node'>
+						<div class='argon-timeline-time'>11-7</div>
+						<div class='argon-timeline-card card bg-gradient-secondary archive-timeline-title'>
+							<a href="/archives/MSOLUTIONS2020F/">[题解] MSOLUTIONS2020F Air Safety</a>
+						</div>
+					</div>
+			
+					<div class='argon-timeline-node'>
+						<div class='argon-timeline-time'>10-31</div>
+						<div class='argon-timeline-card card bg-gradient-secondary archive-timeline-title'>
+							<a href="/archives/CF1891F/">[题解] CF1891F A Growing Tree</a>
+						</div>
+					</div>
+			
+					<div class='argon-timeline-node'>
+						<div class='argon-timeline-time'>10-21</div>
+						<div class='argon-timeline-card card bg-gradient-secondary archive-timeline-title'>
+							<a href="/archives/CSPJ2023/">[题解] CSP-J 2023</a>
+						</div>
+					</div>
+			
+					<div class='argon-timeline-node'>
+						<div class='argon-timeline-time'>10-12</div>
+						<div class='argon-timeline-card card bg-gradient-secondary archive-timeline-title'>
+							<a href="/archives/P2223/">[题解] P2223 [HNOI2001] 软件开发</a>
+						</div>
+					</div>
+			
+					<div class='argon-timeline-node'>
+						<div class='argon-timeline-time'>10-12</div>
+						<div class='argon-timeline-card card bg-gradient-secondary archive-timeline-title'>
+							<a href="/archives/P2917/">[题解] P2917 [USACO08NOV] Toys G</a>
+						</div>
+					</div>
+			
+					<div class='argon-timeline-node'>
+						<div class='argon-timeline-time'>10-12</div>
+						<div class='argon-timeline-card card bg-gradient-secondary archive-timeline-title'>
+							<a href="/archives/P4480/">[题解] P4480 [BJWC2018] 餐巾计划问题</a>
+						</div>
+					</div>
+			
+					<div class='argon-timeline-node'>
+						<div class='argon-timeline-time'>10-12</div>
+						<div class='argon-timeline-card card bg-gradient-secondary archive-timeline-title'>
+							<a href="/archives/SUMITB2019F/">[题解] SUMITB2019F Interval Running</a>
+						</div>
+					</div>
+			
+					<div class='argon-timeline-node'>
+						<div class='argon-timeline-time'>10-12</div>
+						<div class='argon-timeline-card card bg-gradient-secondary archive-timeline-title'>
+							<a href="/archives/TENKA12017C/">[题解] ATTENKA12017C 4/N</a>
+						</div>
+					</div>
+			
+					<div class='argon-timeline-node'>
+						<div class='argon-timeline-time'>10-7</div>
+						<div class='argon-timeline-card card bg-gradient-secondary archive-timeline-title'>
+							<a href="/archives/20231007_mock/">[题解] 20231007 | CSP2023 考前模拟赛 做题笔记</a>
+						</div>
+					</div>
+			
+					<div class='argon-timeline-node'>
+						<div class='argon-timeline-time'>9-22</div>
+						<div class='argon-timeline-card card bg-gradient-secondary archive-timeline-title'>
+							<a href="/archives/CSP2023/">[游记] CSP 2023 游记</a>
+						</div>
+					</div>
+			
+					<div class='argon-timeline-node'>
+						<div class='argon-timeline-time'>8-19</div>
+						<div class='argon-timeline-card card bg-gradient-secondary archive-timeline-title'>
+							<a href="/archives/20230818_mock/">[题解] 20230818 | CSP2023 考前模拟赛 做题笔记</a>
+						</div>
+					</div>
+			
+					<div class='argon-timeline-node'>
+						<div class='argon-timeline-time'>5-22</div>
+						<div class='argon-timeline-card card bg-gradient-secondary archive-timeline-title'>
+							<a href="/archives/CZOI2023/">[题解] 常州市程序设计小能手 2023 做题笔记 | CZOI 2023 做题笔记</a>
+						</div>
+					</div>
+			
+					<div class='argon-timeline-node'>
+						<div class='argon-timeline-time'>5-14</div>
+						<div class='argon-timeline-card card bg-gradient-secondary archive-timeline-title'>
+							<a href="/archives/ABC162D/">[题解] ABC162D RGB Triplets</a>
+						</div>
+					</div>
+			
+					<div class='argon-timeline-node'>
+						<div class='argon-timeline-time'>5-7</div>
+						<div class='argon-timeline-card card bg-gradient-secondary archive-timeline-title'>
+							<a href="/archives/CF1829/">[题解] CF1829 做题笔记</a>
+						</div>
+					</div>
+			
+					<div class='argon-timeline-node'>
+						<div class='argon-timeline-time'>5-6</div>
+						<div class='argon-timeline-card card bg-gradient-secondary archive-timeline-title'>
+							<a href="/archives/CF1817A/">[题解] CF1817A Almost Increasing Subsequence</a>
+						</div>
+					</div>
+			
+					<div class='argon-timeline-node'>
+						<div class='argon-timeline-time'>5-3</div>
+						<div class='argon-timeline-card card bg-gradient-secondary archive-timeline-title'>
+							<a href="/archives/ABC171E/">[题解] ABC171E Red Scarf</a>
+						</div>
+					</div>
+			
+					<div class='argon-timeline-node'>
+						<div class='argon-timeline-time'>4-30</div>
+						<div class='argon-timeline-card card bg-gradient-secondary archive-timeline-title'>
+							<a href="/archives/UVA291/">[题解] UVA291 The House Of Santa Claus</a>
+						</div>
+					</div>
+			
+					<div class='argon-timeline-node'>
+						<div class='argon-timeline-time'>4-30</div>
+						<div class='argon-timeline-card card bg-gradient-secondary archive-timeline-title'>
+							<a href="/archives/CF616D/">[题解] CF616D Longest k-Good Segment</a>
+						</div>
+					</div>
+			
+					<div class='argon-timeline-node'>
+						<div class='argon-timeline-time'>4-27</div>
+						<div class='argon-timeline-card card bg-gradient-secondary archive-timeline-title'>
+							<a href="/archives/20230427_mock/">[题解] 20230427 | VP 往年区赛</a>
+						</div>
+					</div>
+			
+					<div class='argon-timeline-node'>
+						<div class='argon-timeline-time'>3-26</div>
+						<div class='argon-timeline-card card bg-gradient-secondary archive-timeline-title'>
+							<a href="/archives/CF776C/">[题解] CF776C Molly&#39;s Chemicals</a>
+						</div>
+					</div>
+			
+					<div class='argon-timeline-node'>
+						<div class='argon-timeline-time'>2-14</div>
+						<div class='argon-timeline-card card bg-gradient-secondary archive-timeline-title'>
+							<a href="/archives/ABC159E/">[题解] ABC159E Dividing Chocolate</a>
+						</div>
+					</div>
+			
+					<div class='argon-timeline-node'>
+						<div class='argon-timeline-time'>1-10</div>
+						<div class='argon-timeline-card card bg-gradient-secondary archive-timeline-title'>
+							<a href="/archives/ABC251D/">[题解] ABC251D At Most 3 (Contestant ver.)</a>
+						</div>
+					</div>
+			
+					<div class='argon-timeline-node'>
+						<div class='argon-timeline-time'>1-10</div>
+						<div class='argon-timeline-card card bg-gradient-secondary archive-timeline-title'>
+							<a href="/archives/ABC257E/">[题解] ABC257E Addition and Multiplication 2</a>
+						</div>
+					</div>
+			
+					<div class='argon-timeline-node'>
+						<div class='argon-timeline-time'>1-10</div>
+						<div class='argon-timeline-card card bg-gradient-secondary archive-timeline-title'>
+							<a href="/archives/ABC247E/">[题解] ABC247E Max Min</a>
+						</div>
+					</div>
+			
+					<div class='argon-timeline-node'>
+						<div class='argon-timeline-time'>1-10</div>
+						<div class='argon-timeline-card card bg-gradient-secondary archive-timeline-title'>
+							<a href="/archives/ABC260D/">[题解] ABC260D Draw Your Cards</a>
+						</div>
+					</div>
+			
+					<div class='argon-timeline-node'>
+						<div class='argon-timeline-time'>1-9</div>
+						<div class='argon-timeline-card card bg-gradient-secondary archive-timeline-title'>
+							<a href="/archives/ABC232E/">[题解] ABC232E Rook Path</a>
+						</div>
+					</div>
+			
+					<div class='argon-timeline-node'>
+						<div class='argon-timeline-time'>1-9</div>
+						<div class='argon-timeline-card card bg-gradient-secondary archive-timeline-title'>
+							<a href="/archives/ABC252F/">[题解] ABC252F Bread</a>
+						</div>
+					</div>
+			
+						<div class='argon-timeline-node'>
+							<div class='argon-timeline-time archive-timeline-year'>2022</div>
+							<div class='argon-timeline-card card bg-gradient-secondary archive-timeline-title'></div>
+						</div>
+						
+					<div class='argon-timeline-node'>
+						<div class='argon-timeline-time'>12-24</div>
+						<div class='argon-timeline-card card bg-gradient-secondary archive-timeline-title'>
+							<a href="/archives/CF1742G/">[题解] CF1742G Orray</a>
+						</div>
+					</div>
+			
+					<div class='argon-timeline-node'>
+						<div class='argon-timeline-time'>12-12</div>
+						<div class='argon-timeline-card card bg-gradient-secondary archive-timeline-title'>
+							<a href="/archives/CF1744C/">[题解] CF1744C Traffic Light</a>
+						</div>
+					</div>
+			
+					<div class='argon-timeline-node'>
+						<div class='argon-timeline-time'>12-6</div>
+						<div class='argon-timeline-card card bg-gradient-secondary archive-timeline-title'>
+							<a href="/archives/20221203_mock/">[题解] 20221203 | SCZ-QZS 模拟赛 T5</a>
+						</div>
+					</div>
+			
+					<div class='argon-timeline-node'>
+						<div class='argon-timeline-time'>10-23</div>
+						<div class='argon-timeline-card card bg-gradient-secondary archive-timeline-title'>
+							<a href="/archives/20221022_mock/">[题解] 20221022 | CSP2022 考前模拟赛 做题笔记</a>
+						</div>
+					</div>
+			
+					<div class='argon-timeline-node'>
+						<div class='argon-timeline-time'>10-22</div>
+						<div class='argon-timeline-card card bg-gradient-secondary archive-timeline-title'>
+							<a href="/archives/ABC029A/">[题解] ABC029A 複数形</a>
+						</div>
+					</div>
+			
+					<div class='argon-timeline-node'>
+						<div class='argon-timeline-time'>10-6</div>
+						<div class='argon-timeline-card card bg-gradient-secondary archive-timeline-title'>
+							<a href="/archives/20221006_mock/">[题解] 20221006 | CSP2022 考前模拟赛 做题笔记</a>
+						</div>
+					</div>
+			
+					<div class='argon-timeline-node'>
+						<div class='argon-timeline-time'>10-5</div>
+						<div class='argon-timeline-card card bg-gradient-secondary archive-timeline-title'>
+							<a href="/archives/20221005_mock/">[题解] 20221005 | CSP2022 考前模拟赛 做题笔记</a>
+						</div>
+					</div>
+			
+					<div class='argon-timeline-node'>
+						<div class='argon-timeline-time'>10-4</div>
+						<div class='argon-timeline-card card bg-gradient-secondary archive-timeline-title'>
+							<a href="/archives/P1959/">[题解] P1959 遗址</a>
+						</div>
+					</div>
+			
+					<div class='argon-timeline-node'>
+						<div class='argon-timeline-time'>10-4</div>
+						<div class='argon-timeline-card card bg-gradient-secondary archive-timeline-title'>
+							<a href="/archives/20221004_mock/">[题解] 20221004 | CSP2022 考前模拟赛 做题笔记</a>
+						</div>
+					</div>
+			
+					<div class='argon-timeline-node'>
+						<div class='argon-timeline-time'>9-17</div>
+						<div class='argon-timeline-card card bg-gradient-secondary archive-timeline-title'>
+							<a href="/archives/CSP2022/">[游记] CSP 2022 &amp; NOIP 2022 游记</a>
+						</div>
+					</div>
+			
+					<div class='argon-timeline-node'>
+						<div class='argon-timeline-time'>8-23</div>
+						<div class='argon-timeline-card card bg-gradient-secondary archive-timeline-title'>
+							<a href="/archives/20220812_mock/">[题解] 20220812 | CSP2022 考前模拟赛 做题笔记</a>
+						</div>
+					</div>
+			
+					<div class='argon-timeline-node'>
+						<div class='argon-timeline-time'>8-23</div>
+						<div class='argon-timeline-card card bg-gradient-secondary archive-timeline-title'>
+							<a href="/archives/20220819_mock/">[题解] 20220819 | CSP2022 考前模拟赛 做题笔记</a>
+						</div>
+					</div>
+			
+					<div class='argon-timeline-node'>
+						<div class='argon-timeline-time'>8-23</div>
+						<div class='argon-timeline-card card bg-gradient-secondary archive-timeline-title'>
+							<a href="/archives/20220810_mock/">[题解] 20220810 | CSP2021-J</a>
+						</div>
+					</div>
+			
+					<div class='argon-timeline-node'>
+						<div class='argon-timeline-time'>8-9</div>
+						<div class='argon-timeline-card card bg-gradient-secondary archive-timeline-title'>
+							<a href="/archives/20220809_mock/">[题解] 20220809 | CSP2022 考前模拟赛 做题笔记</a>
+						</div>
+					</div>
+			
+					<div class='argon-timeline-node'>
+						<div class='argon-timeline-time'>8-9</div>
+						<div class='argon-timeline-card card bg-gradient-secondary archive-timeline-title'>
+							<a href="/archives/20220808_mock/">[题解] 20220808 | CSP2022 考前模拟赛 做题笔记</a>
+						</div>
+					</div>
+			
+					<div class='argon-timeline-node'>
+						<div class='argon-timeline-time'>7-31</div>
+						<div class='argon-timeline-card card bg-gradient-secondary archive-timeline-title'>
+							<a href="/archives/ABC262/">[题解] ABC262 做题笔记</a>
+						</div>
+					</div>
+			
+					<div class='argon-timeline-node'>
+						<div class='argon-timeline-time'>7-24</div>
+						<div class='argon-timeline-card card bg-gradient-secondary archive-timeline-title'>
+							<a href="/archives/DPeasy/">[题解] 简单动态规划 做题笔记</a>
+						</div>
+					</div>
+			
+					<div class='argon-timeline-node'>
+						<div class='argon-timeline-time'>7-23</div>
+						<div class='argon-timeline-card card bg-gradient-secondary archive-timeline-title'>
+							<a href="/archives/ABC261/">[题解] ABC261 做题笔记</a>
+						</div>
+					</div>
+			
+					<div class='argon-timeline-node'>
+						<div class='argon-timeline-time'>7-18</div>
+						<div class='argon-timeline-card card bg-gradient-secondary archive-timeline-title'>
+							<a href="/archives/20220714_mock/">[题解] 20220714 | JSOI2022 考前模拟赛 做题笔记</a>
+						</div>
+					</div>
+			
+					<div class='argon-timeline-node'>
+						<div class='argon-timeline-time'>7-17</div>
+						<div class='argon-timeline-card card bg-gradient-secondary archive-timeline-title'>
+							<a href="/archives/ABC260/">[题解] ABC260 做题笔记</a>
+						</div>
+					</div>
+			
+					<div class='argon-timeline-node'>
+						<div class='argon-timeline-time'>7-17</div>
+						<div class='argon-timeline-card card bg-gradient-secondary archive-timeline-title'>
+							<a href="/archives/JSOI2022/">[游记] 信息与未来 2022 游记</a>
+						</div>
+					</div>
+			
+					<div class='argon-timeline-node'>
+						<div class='argon-timeline-time'>7-8</div>
+						<div class='argon-timeline-card card bg-gradient-secondary archive-timeline-title'>
+							<a href="/archives/CF1010B/">[题解] CF1010B Rocket</a>
+						</div>
+					</div>
+			
+					<div class='argon-timeline-node'>
+						<div class='argon-timeline-time'>7-2</div>
+						<div class='argon-timeline-card card bg-gradient-secondary archive-timeline-title'>
+							<a href="/archives/ABC258/">[题解] ABC258 做题笔记</a>
+						</div>
+					</div>
+			
+					<div class='argon-timeline-node'>
+						<div class='argon-timeline-time'>6-25</div>
+						<div class='argon-timeline-card card bg-gradient-secondary archive-timeline-title'>
+							<a href="/archives/ABC257/">[题解] ABC257 做题笔记</a>
+						</div>
+					</div>
+			
+					<div class='argon-timeline-node'>
+						<div class='argon-timeline-time'>6-4</div>
+						<div class='argon-timeline-card card bg-gradient-secondary archive-timeline-title'>
+							<a href="/archives/ABC254/">[题解] ABC254 做题笔记</a>
+						</div>
+					</div>
+			
+					<div class='argon-timeline-node'>
+						<div class='argon-timeline-time'>5-28</div>
+						<div class='argon-timeline-card card bg-gradient-secondary archive-timeline-title'>
+							<a href="/archives/ABC253/">[题解] ABC253 做题笔记</a>
+						</div>
+					</div>
+			
+					<div class='argon-timeline-node'>
+						<div class='argon-timeline-time'>5-28</div>
+						<div class='argon-timeline-card card bg-gradient-secondary archive-timeline-title'>
+							<a href="/archives/CF1348B/">[题解] CF1348B Phoenix and Beauty</a>
+						</div>
+					</div>
+			
+					<div class='argon-timeline-node'>
+						<div class='argon-timeline-time'>5-21</div>
+						<div class='argon-timeline-card card bg-gradient-secondary archive-timeline-title'>
+							<a href="/archives/ABC252/">[题解] ABC252 做题笔记</a>
+						</div>
+					</div>
+			
+					<div class='argon-timeline-node'>
+						<div class='argon-timeline-time'>5-19</div>
+						<div class='argon-timeline-card card bg-gradient-secondary archive-timeline-title'>
+							<a href="/archives/how_to_build_hexo_blog/">[工程] 如何快速上手 Hexo 博客</a>
+						</div>
+					</div>
+			
+					<div class='argon-timeline-node'>
+						<div class='argon-timeline-time'>5-14</div>
+						<div class='argon-timeline-card card bg-gradient-secondary archive-timeline-title'>
+							<a href="/archives/ABC251/">[题解] ABC251 做题笔记</a>
+						</div>
+					</div>
+			
+					<div class='argon-timeline-node'>
+						<div class='argon-timeline-time'>5-12</div>
+						<div class='argon-timeline-card card bg-gradient-secondary archive-timeline-title'>
+							<a href="/archives/CZOI2022/">[游记] CZOI 2022 游记</a>
+						</div>
+					</div>
+			
+					<div class='argon-timeline-node'>
+						<div class='argon-timeline-time'>5-8</div>
+						<div class='argon-timeline-card card bg-gradient-secondary archive-timeline-title'>
+							<a href="/archives/ABC250/">[题解] ABC250 做题笔记</a>
+						</div>
+					</div>
+			
+					<div class='argon-timeline-node'>
+						<div class='argon-timeline-time'>5-2</div>
+						<div class='argon-timeline-card card bg-gradient-secondary archive-timeline-title'>
+							<a href="/archives/ABC061C/">[题解] ABC061C Big Array</a>
+						</div>
+					</div>
+			
+					<div class='argon-timeline-node'>
+						<div class='argon-timeline-time'>4-23</div>
+						<div class='argon-timeline-card card bg-gradient-secondary archive-timeline-title'>
+							<a href="/archives/ABC249/">[题解] ABC249 做题笔记</a>
+						</div>
+					</div>
+			
+					<div class='argon-timeline-node'>
+						<div class='argon-timeline-time'>4-16</div>
+						<div class='argon-timeline-card card bg-gradient-secondary archive-timeline-title'>
+							<a href="/archives/ABC248/">[题解] ABC248 做题笔记</a>
+						</div>
+					</div>
+			
+					<div class='argon-timeline-node'>
+						<div class='argon-timeline-time'>4-15</div>
+						<div class='argon-timeline-card card bg-gradient-secondary archive-timeline-title'>
+							<a href="/archives/CF1657B/">[题解] CF1657B XY Sequence</a>
+						</div>
+					</div>
+			
+					<div class='argon-timeline-node'>
+						<div class='argon-timeline-time'>4-10</div>
+						<div class='argon-timeline-card card bg-gradient-secondary archive-timeline-title'>
+							<a href="/archives/ABC247/">[题解] ABC247 做题笔记</a>
+						</div>
+					</div>
+			
+					<div class='argon-timeline-node'>
+						<div class='argon-timeline-time'>4-9</div>
+						<div class='argon-timeline-card card bg-gradient-secondary archive-timeline-title'>
+							<a href="/archives/math1/">[题解] 洛谷题单 117 | 基础数学问题 做题笔记</a>
+						</div>
+					</div>
+			
+					<div class='argon-timeline-node'>
+						<div class='argon-timeline-time'>3-28</div>
+						<div class='argon-timeline-card card bg-gradient-secondary archive-timeline-title'>
+							<a href="/archives/B3619/">[题解] B3619 10 进制转 x 进制</a>
+						</div>
+					</div>
+			
+					<div class='argon-timeline-node'>
+						<div class='argon-timeline-time'>3-26</div>
+						<div class='argon-timeline-card card bg-gradient-secondary archive-timeline-title'>
+							<a href="/archives/CF727C/">[题解] CF727C Guess the Array</a>
+						</div>
+					</div>
+			
+					<div class='argon-timeline-node'>
+						<div class='argon-timeline-time'>3-25</div>
+						<div class='argon-timeline-card card bg-gradient-secondary archive-timeline-title'>
+							<a href="/archives/CF1656B/">[题解] CF1656B Subtract Operation</a>
+						</div>
+					</div>
+			
+					<div class='argon-timeline-node'>
+						<div class='argon-timeline-time'>3-22</div>
+						<div class='argon-timeline-card card bg-gradient-secondary archive-timeline-title'>
+							<a href="/archives/CF1654A/">[题解] CF1654A Maximum Cake Tastiness</a>
+						</div>
+					</div>
+			
+					<div class='argon-timeline-node'>
+						<div class='argon-timeline-time'>3-16</div>
+						<div class='argon-timeline-card card bg-gradient-secondary archive-timeline-title'>
+							<a href="/archives/CF630E/">[题解] CF630E A rectangle</a>
+						</div>
+					</div>
+			
+					<div class='argon-timeline-node'>
+						<div class='argon-timeline-time'>3-14</div>
+						<div class='argon-timeline-card card bg-gradient-secondary archive-timeline-title'>
+							<a href="/archives/CF1651B/">[题解] CF1651B Prove Him Wrong</a>
+						</div>
+					</div>
+			
+					<div class='argon-timeline-node'>
+						<div class='argon-timeline-time'>3-12</div>
+						<div class='argon-timeline-card card bg-gradient-secondary archive-timeline-title'>
+							<a href="/archives/P8197/">[题解] P8197 [传智杯 #4 决赛] 排排队</a>
+						</div>
+					</div>
+			
+					<div class='argon-timeline-node'>
+						<div class='argon-timeline-time'>3-10</div>
+						<div class='argon-timeline-card card bg-gradient-secondary archive-timeline-title'>
+							<a href="/archives/CF1648A/">[题解] CF1648A Weird Sum</a>
+						</div>
+					</div>
+			
+					<div class='argon-timeline-node'>
+						<div class='argon-timeline-time'>3-10</div>
+						<div class='argon-timeline-card card bg-gradient-secondary archive-timeline-title'>
+							<a href="/archives/CF1646B/">[题解] CF1646B Quality vs Quantity</a>
+						</div>
+					</div>
+			
+					<div class='argon-timeline-node'>
+						<div class='argon-timeline-time'>3-5</div>
+						<div class='argon-timeline-card card bg-gradient-secondary archive-timeline-title'>
+							<a href="/archives/ABC105C/">[题解] ABC105C Base -2 Number</a>
+						</div>
+					</div>
+			
+					<div class='argon-timeline-node'>
+						<div class='argon-timeline-time'>2-23</div>
+						<div class='argon-timeline-card card bg-gradient-secondary archive-timeline-title'>
+							<a href="/archives/CF1644B/">[题解] CF1644B Anti-Fibonacci Permutation</a>
+						</div>
+					</div>
+			
+					<div class='argon-timeline-node'>
+						<div class='argon-timeline-time'>2-12</div>
+						<div class='argon-timeline-card card bg-gradient-secondary archive-timeline-title'>
+							<a href="/archives/CF17FINALA/">[题解] CF17FINALA AKIBA</a>
+						</div>
+					</div>
+			
+					<div class='argon-timeline-node'>
+						<div class='argon-timeline-time'>2-10</div>
+						<div class='argon-timeline-card card bg-gradient-secondary archive-timeline-title'>
+							<a href="/archives/ABC142D/">[题解] ABC142D Disjoint Set of Common Divisors</a>
+						</div>
+					</div>
+			
+					<div class='argon-timeline-node'>
+						<div class='argon-timeline-time'>2-2</div>
+						<div class='argon-timeline-card card bg-gradient-secondary archive-timeline-title'>
+							<a href="/archives/CF1633C/">[题解] CF1633C Kill the Monster</a>
+						</div>
+					</div>
+			
+					<div class='argon-timeline-node'>
+						<div class='argon-timeline-time'>2-2</div>
+						<div class='argon-timeline-card card bg-gradient-secondary archive-timeline-title'>
+							<a href="/archives/CF1633B/">[题解] CF1633B Minority</a>
+						</div>
+					</div>
+			
+					<div class='argon-timeline-node'>
+						<div class='argon-timeline-time'>1-28</div>
+						<div class='argon-timeline-card card bg-gradient-secondary archive-timeline-title'>
+							<a href="/archives/CF1627B/">[题解] CF1627B Not Sitting</a>
+						</div>
+					</div>
+			
+					<div class='argon-timeline-node'>
+						<div class='argon-timeline-time'>1-4</div>
+						<div class='argon-timeline-card card bg-gradient-secondary archive-timeline-title'>
+							<a href="/archives/CF1621A/">[题解] CF1621A Stable Arrangement of Rooks</a>
+						</div>
+					</div>
+			
+						<div class='argon-timeline-node'>
+							<div class='argon-timeline-time archive-timeline-year'>2021</div>
+							<div class='argon-timeline-card card bg-gradient-secondary archive-timeline-title'></div>
+						</div>
+						
+					<div class='argon-timeline-node'>
+						<div class='argon-timeline-time'>12-25</div>
+						<div class='argon-timeline-card card bg-gradient-secondary archive-timeline-title'>
+							<a href="/archives/CF1615A/">[题解] CF1615A Closing The Gap</a>
+						</div>
+					</div>
+			
+					<div class='argon-timeline-node'>
+						<div class='argon-timeline-time'>12-4</div>
+						<div class='argon-timeline-card card bg-gradient-secondary archive-timeline-title'>
+							<a href="/archives/CF1613B/">[题解] CF1613B Absent Remainder</a>
+						</div>
+					</div>
+			
+					<div class='argon-timeline-node'>
+						<div class='argon-timeline-time'>8-1</div>
+						<div class='argon-timeline-card card bg-gradient-secondary archive-timeline-title'>
+							<a href="/archives/CF1555A/">[题解] CF1555A PizzaForces</a>
+						</div>
+					</div>
+			
+		</div>
+	</div>
+</article>
+
+		
+		
+		
+
+					<footer id="footer" class="site-footer card shadow-sm border-0">
+						
+						<div>Theme <a target="_blank" rel="noopener" href="https://github.com/solstice23/hexo-theme-argon"><strong>Argon</strong></a> | Powered by Hexo</div>
+						<span id="busuanzi_container_site_uv">
+							本站访客数 <span id="busuanzi_value_site_uv"></span> 人次
+						</span>
+						<span id="timeDate">载入时间...</span>
+						<script>
+						    var now = new Date(); 
+						    function createtime() { 
+						        var grt= new Date("03/28/2022 20:00:00");//在此处修改你的建站时间
+						        now.setTime(now.getTime()+250); 
+						        days = (now - grt ) / 1000 / 60 / 60 / 24; dnum = Math.floor(days); 
+						        hours = (now - grt ) / 1000 / 60 / 60 - (24 * dnum); hnum = Math.floor(hours); 
+						        if(String(hnum).length ==1 ){hnum = "0" + hnum;} minutes = (now - grt ) / 1000 /60 - (24 * 60 * dnum) - (60 * hnum); 
+						        mnum = Math.floor(minutes); if(String(mnum).length ==1 ){mnum = "0" + mnum;} 
+						        seconds = (now - grt ) / 1000 - (24 * 60 * 60 * dnum) - (60 * 60 * hnum) - (60 * mnum); 
+						        snum = Math.round(seconds); if(String(snum).length ==1 ){snum = "0" + snum;} 
+						        document.getElementById("timeDate").innerHTML = "本站已安全运行 "+dnum+" 天 "+ hnum + " 小时 " + mnum + " 分 " + snum + " 秒"; 
+						        // document.getElementById("times").innerHTML = hnum + " 小时 " + mnum + " 分 " + snum + " 秒"; 
+						    } 
+						setInterval("createtime()",250);
+						</script>
+						<script>
+        window.onload = (() => {
+            //定义点击出现文字类
+            function ClickFrontShow() {
+                //定义所需文字和颜色
+                this.fron = ['复杂度', '枚举', '模拟', '递归 & 分治', '贪心', '排序',
+                    '前缀和 & 差分', '二分', '倍增', '构造',
+                    'DFS（搜索）', 'BFS（搜索）', '双向搜索', '启发式搜索', 'A*',
+                    '迭代加深搜索', 'IDA*', '回溯法', 'Dancing Links',
+                    'Alpha-Beta 剪枝',
+                    '记忆化搜索', '背包 DP', '区间 DP', 'DAG 上的 DP', '树形 DP',
+                    '状压 DP', '数位 DP', '插头 DP', '计数 DP', '动态 DP',
+                    '概率 DP',
+                    '字符串匹配', '字符串哈希', '字典树 (Trie)', '前缀函数与 KMP 算法',
+                    'Boyer-Moore 算法', 'Z 函数（扩展 KMP）', '自动机',
+                    'AC 自动机', '后缀数组 (SA)', '后缀自动机 (SAM)', '后缀平衡树',
+                    '广义后缀自动机', '后缀树', 'Manacher', '回文树', '序列自动机',
+                    '最小表示法', 'Lyndon 分解', 'Main-Lorentz 算法',
+                    '符号', '进位制', '位运算', '二进制集合操作', '平衡三进制', '高精度计算',
+                    '快速幂', '置换和排列', '弧度制与坐标系', '复数', '数论',
+                    '多项式与生成函数', '组合数学', '线性代数', '线性规划', '群论', '概率论',
+                    '博弈论', '牛顿迭代法', '数值积分', '傅里叶-莫茨金消元法', '序理论',
+                    '杨氏矩阵', 'Schreier–Sims 算法',
+                    'Berlekamp-Massey 算法',
+                    '栈', '队列', '链表', '哈希表', '并查集', '堆', '块状数据结构',
+                    '单调栈', '单调队列', 'ST 表', '树状数组', '线段树', '李超线段树',
+                    '区间最值操作 & 区间历史最值', '划分树', '二叉搜索树 & 平衡树', '跳表',
+                    '可持久化数据结构', '树套树', 'K-D Tree', '动态树', '析合树',
+                    'PQ 树', '手指树', '霍夫曼树',
+                    '图论相关概念', '图的存储', 'DFS（图论）', 'BFS（图论）', '树上问题',
+                    '矩阵树定理', '有向无环图', '拓扑排序', '最小生成树', '斯坦纳树',
+                    '最小树形图', '最小直径生成树', '最短路', '拆点', '差分约束', 'k 短路',
+                    '同余最短路', '连通性相关', '2-SAT', '欧拉图', '哈密顿图', '二分图',
+                    '最小环', '平面图', '图的着色', '网络流', 'Stoer-Wagner 算法',
+                    '图的匹配', 'Prufer 序列', 'LGV 引理', '弦图', '最大团搜索算法',
+                    '二维计算几何基础', '三维计算几何基础', '距离', 'Pick 定理', '三角剖分',
+                    '凸包', '扫描线', '旋转卡壳', '半平面交', '平面最近点对', '随机增量法',
+                    '反演变换', '计算几何杂项',
+                    '离散化', '双指针', '离线算法', '分数规划', '随机化', '悬线法',
+                    '计算理论基础', '字节顺序', '约瑟夫问题', '格雷码', '表达式求值',
+                    '在一台机器上规划任务', '主元素问题', 'Garsia-Wachs 算法',
+                    '15-puzzle', 'Kahan 求和', '珂朵莉树/颜色段均摊',
+                    'RMQ', '并查集应用', '括号序列', '线段树与离线询问'
+                ];
+                this.colo = ['#FF69B4', '#ff6651', 'orange', '#FF00FF',
+                    '#00FF7F', '#00BFFF', '#BA55D3'
+                ];
+                //获取body元素
+                this.elBody = document.getElementsByTagName("body")[0];
+                //初始化randomNum
+                this.randomNum = null;
+                //初始化字体inde
+                this.finde = 0;
+                //初始化className
+                this.cls = 0;
+            }
+
+            //定义初始化
+            ClickFrontShow.prototype.init = function(frontArray,
+                colorArray) {
+                //自定义颜色和字体
+                this.fron = frontArray || this.fron;
+                this.colo = colorArray || this.colo;
+
+                this.listenMouse();
+            }
+
+            //创建文字
+            ClickFrontShow.prototype.createFront = function(classname) {
+                var self = this;
+                let ospan = document.createElement('span');
+                //设置样式
+                let cssText =
+                    // "width: 100%; height: 100%; top: 0; left: 0; z-index: 99999; position: fixed;";
+                    // "position:absolute; cursor: default; transform: translate(-50%,-50%); font-weight: bold; opacity: 1; z-index: 1000; transition: 1s;width: 100%; height: 100%;pointer-events: none;";
+                    // "position:absolute; width: 40px; height: 20px; cursor: default; transform: translate(-50%,-50%); font-weight: bold; opacity: 1; z-index: 1000; transition: 1s;";
+                    "position:fixed; width: 40px; height: 20px; cursor: default; transform: translate(-50%,-50%); font-weight: bold; opacity: 1; z-index: 1000; transition: 1s;";
+                //随机字体和颜色
+                let randomFront = self.fron[Math.round(Math
+                    .random() * (self.fron.length - 1))];
+                let randomColor = self.colo[Math.round(Math
+                    .random() * (self.colo.length - 1))];
+                //字体下标增1
+                self.finde = (self.finde + 1) % self.fron.length;
+                //向body中添加元素
+                self.elBody.appendChild(ospan);
+                //绑定一个classname
+                ospan.className = String(classname);
+                //添加样式
+                ospan.style.cssText = cssText +
+                    "-moz-user-select: none;-webkit-user-select: none;-ms-user-select: none;user-select: none;"
+                ospan.style.color = randomColor;
+                ospan.innerHTML = randomFront;
+            }
+
+
+            //监听鼠标点击
+            ClickFrontShow.prototype.listenMouse = function() {
+                var self = this;
+
+                //鼠标点击事件
+                document.onclick = function(e) {
+                    //避免classname值重复导致出现bug
+                    if (self.cls === 20) {
+                        self.cls = 0;
+                    } else {
+                        self.cls += 1;
+                    }
+                    //创建文字
+                    self.createFront(self.cls);
+                    let el = document.getElementsByClassName(
+                        self.cls)[0];
+
+                    //鼠标点击位置
+
+                    el.style.left = e.clientX + 'px';
+                    el.style.top = e.clientY + 'px';
+                    // alert('x: '+el.style.left+' y: '+el.style.top);
+
+                    //过时改变
+                    setTimeout(function() {
+                        el.style.opacity = 0;
+                        el.style.top = el.offsetTop -
+                            100 + 'px';
+                    }, 100);
+                    //过时清除
+                    setTimeout(function() {
+                        self.elBody.removeChild(el);
+                    }, 2000);
+                }
+            }
+            //实例化
+            var frontShow = new ClickFrontShow();
+            //用户可在此传递参数，默认第一个参数是字体数组；
+            //第二个参数是颜色数组，必须是数组类型！
+            frontShow.init();
+        })();
+						</script>
+					</footer>
+				</main>
+			</div>
+		</div>
+		
+<script src="/argontheme.js"></script>
+
+		
+		
+		
+			<link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/KaTeX/0.15.6/katex.min.css">
+			<script src="//cdnjs.cloudflare.com/ajax/libs/KaTeX/0.15.6/katex.min.js"></script>
+			<script src="//cdnjs.cloudflare.com/ajax/libs/KaTeX/0.15.6/contrib/auto-render.min.js"></script>
+			<script>
+				document.addEventListener("DOMContentLoaded", function() {
+					renderMathInElement(document.body,{
+						delimiters: [
+							{left: "$$", right: "$$", display: true},
+							{left: "$", right: "$", display: false},
+							{left: "\\(", right: "\\)", display: false}
+						]
+					});
+				});
+			</script>
+		
+
+		
+			<script>
+				var argonEnableCodeHighlight = true;
+			</script>
+			
+<link rel="stylesheet" href="/assets/vendor/highlight/styles/vs2015.css">
+
+		
+
+	</div>
+</div>
+<noscript>
+	<style>
+		article img.lazyload[src^="data:image/svg+xml;base64,PCEtLUFyZ29uTG9hZGluZy0tPg"]{display: none;}
+		.comment-item-text .comment-sticker.lazyload{display: none;}
+	</style>
+</noscript>
+</body>
+
+
+
+</html>
+
