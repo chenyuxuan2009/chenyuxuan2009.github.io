@@ -22,7 +22,7 @@
 <meta property="og:description" content="免责声明：本篇题解在比赛结束前属于私有状态，一般用户无法查看。  A. 竹竿 不难发现最多只会左右调换一根竹竿。如果调换了超过一根，一定可以全调回去或者留一根，答案不劣。 不妨枚举调换的是哪一根竹竿。 设 li&#x3D;bi,ri&#x3D;ai−bil_i&#x3D;b_i,r_i&#x3D;a_i-b_ili​&#x3D;bi​,ri​&#x3D;ai​−bi​ 是第 iii 根竹竿的左右长度。 枚举第 jjj 根竹竿调换了顺序，那么左侧就是 {lj">
 <meta property="og:locale" content="zh_CN">
 <meta property="article:published_time" content="2024-10-20T03:03:00.000Z">
-<meta property="article:modified_time" content="2025-02-12T13:34:54.590Z">
+<meta property="article:modified_time" content="2025-02-13T23:18:28.763Z">
 <meta property="article:author" content="CYX">
 <meta name="twitter:card" content="summary">
 
@@ -638,7 +638,7 @@
 						
 						<div class="post-meta-detail post-meta-detail-time">
 							<i class="fa fa-clock-o" aria-hidden="true"></i>
-							<time title="发布于 2024-10-20 11:03:00 | 编辑于 2025-2-12 21:34:54">2024-10-20 11:03
+							<time title="发布于 2024-10-20 11:03:00 | 编辑于 2025-2-14 7:18:28">2024-10-20 11:03
 							</time>
 						</div>
 					
@@ -710,35 +710,35 @@
 <p>处理树的死亡可以开一个队列储存。每一次种树的时候看一下队首元素，如果生长了超过 <span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>k</mi></mrow><annotation encoding="application/x-tex">k</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.69444em;vertical-align:0em;"></span><span class="mord mathnormal" style="margin-right:0.03148em;">k</span></span></span></span> 秒就尝试让它死亡。只有标记成永久存活的位置的树才可以不死亡。</p>
 <h1 id="d-2048"><a class="markdownIt-Anchor" href="#d-2048"></a> D. 2048</h1>
 <p>废了。错完了。</p>
-<pre><code class="highlight gams">观察这个游戏，发现一个关键性质：局面一定是形成了一个单峰的序列。每一次都会把东西全部移到一侧，然后在另一侧生成，不可能出现 <span class="symbol">$</span><span class="number">2</span><span class="symbol">$</span> 生成在中间的情况，那就更不可能有中间夹了个 <span class="symbol">$</span><span class="number">4</span><span class="symbol">$</span> 的情况了。
+<pre><code class="highlight plain">观察这个游戏，发现一个关键性质：局面一定是形成了一个单峰的序列。每一次都会把东西全部移到一侧，然后在另一侧生成，不可能出现 $2$ 生成在中间的情况，那就更不可能有中间夹了个 $4$ 的情况了。
 
-再手玩一下这个死局的情况，如果你每次从一侧删掉一个数。设这个数为 <span class="symbol">$</span><span class="number">2</span>^y<span class="symbol">$</span>，你能删掉当且仅当这个数旁边有 <span class="symbol">$</span>\geq y<span class="symbol">$</span> 个空位可用。一个死局的贡献次数，等价于这样子删的方案数。例如 <span class="symbol">$</span>[<span class="number">2</span>,<span class="number">8</span>,<span class="number">4</span>,<span class="number">2</span>]<span class="symbol">$</span> 这个死局，如下 <span class="symbol">$</span><span class="number">3</span><span class="symbol">$</span> 种删的方案。
+再手玩一下这个死局的情况，如果你每次从一侧删掉一个数。设这个数为 $2^y$，你能删掉当且仅当这个数旁边有 $\geq y$ 个空位可用。一个死局的贡献次数，等价于这样子删的方案数。例如 $[2,8,4,2]$ 这个死局，如下 $3$ 种删的方案。
 
-<span class="number">1.</span> 先删左侧的 <span class="symbol">$</span><span class="number">2</span><span class="symbol">$</span>，右侧依次删除 <span class="symbol">$</span><span class="number">2</span>,<span class="number">4</span><span class="symbol">$</span>。
+1. 先删左侧的 $2$，右侧依次删除 $2,4$。
 
-<span class="number">2.</span> 先删右侧的 <span class="symbol">$</span><span class="number">2</span><span class="symbol">$</span>，再删左侧的 <span class="symbol">$</span><span class="number">2</span><span class="symbol">$</span>，最后删右侧的 <span class="symbol">$</span><span class="number">4</span><span class="symbol">$</span>。
+2. 先删右侧的 $2$，再删左侧的 $2$，最后删右侧的 $4$。
 
-<span class="number">2.</span> 先删右侧的 <span class="symbol">$</span><span class="number">2</span><span class="symbol">$</span>，再删右侧的 <span class="symbol">$</span><span class="number">4</span><span class="symbol">$</span>，最后删左侧的 <span class="symbol">$</span><span class="number">2</span><span class="symbol">$</span>。
+2. 先删右侧的 $2$，再删右侧的 $4$，最后删左侧的 $2$。
 
 这其实就是死局的生成方式，反过来操作。
 
 那么考虑 DP 一个死局的删除方式。
 
-<span class="meta"><span class="keyword">$f</span>_&#123;i,j,k&#125;$ 表示已经删除了 $i$ 次，左边剩下了 $j$，右边剩下了 $k$。</span>
+$f_&#123;i,j,k&#125;$ 表示已经删除了 $i$ 次，左边剩下了 $j$，右边剩下了 $k$。
 
-转移枚举目前删到了第 <span class="symbol">$</span>i<span class="symbol">$</span> 轮，左边剩下 <span class="symbol">$</span>j<span class="symbol">$</span>，右边剩下 <span class="symbol">$</span>k<span class="symbol">$</span>。
+转移枚举目前删到了第 $i$ 轮，左边剩下 $j$，右边剩下 $k$。
 
-如果这一次是删左边过渡来的，左边可以删一个 <span class="symbol">$</span>[<span class="number">0</span>,\<span class="built_in">min</span>\&#123;i<span class="number">-1</span>,j<span class="number">-1</span>\&#125;]<span class="symbol">$</span> 的数，右边可以删一个 <span class="symbol">$</span>[<span class="number">0</span>,\<span class="built_in">min</span>\&#123;i<span class="number">-1</span>,k<span class="number">-1</span>\&#125;]<span class="symbol">$</span> 的数。
+如果这一次是删左边过渡来的，左边可以删一个 $[0,\min\&#123;i-1,j-1\&#125;]$ 的数，右边可以删一个 $[0,\min\&#123;i-1,k-1\&#125;]$ 的数。
 
-暴力的 DP 转移就是 <span class="symbol">$</span>f_&#123;i,j,k&#125;\gets(\<span class="keyword">sum</span>\limits_&#123;l=<span class="number">0</span>&#125;^&#123;\<span class="built_in">min</span>\&#123;i<span class="number">-1</span>,j<span class="number">-1</span>\&#125;&#125; f_&#123;i<span class="number">-1</span>,l,k&#125;)+(\<span class="keyword">sum</span>\limits_&#123;l=<span class="number">0</span>&#125;^&#123;\<span class="built_in">min</span>\&#123;i<span class="number">-1</span>,k<span class="number">-1</span>\&#125;&#125; f_&#123;i<span class="number">-1</span>,j,l&#125;)<span class="symbol">$</span>。
+暴力的 DP 转移就是 $f_&#123;i,j,k&#125;\gets(\sum\limits_&#123;l=0&#125;^&#123;\min\&#123;i-1,j-1\&#125;&#125; f_&#123;i-1,l,k&#125;)+(\sum\limits_&#123;l=0&#125;^&#123;\min\&#123;i-1,k-1\&#125;&#125; f_&#123;i-1,j,l&#125;)$。
 
-状态 <span class="symbol">$</span>\mathcal O(n^<span class="number">3</span>)<span class="symbol">$</span>，转移 <span class="symbol">$</span>\mathcal O(n)<span class="symbol">$</span>，复杂度是 <span class="symbol">$</span>\mathcal O(n^<span class="number">4</span>)<span class="symbol">$</span> 的，无法接受。
+状态 $\mathcal O(n^3)$，转移 $\mathcal O(n)$，复杂度是 $\mathcal O(n^4)$ 的，无法接受。
 
-发现这个转移不难用前缀和优化，转移直接变成了 <span class="symbol">$</span>\mathcal O(<span class="number">1</span>)<span class="symbol">$</span> 的。
+发现这个转移不难用前缀和优化，转移直接变成了 $\mathcal O(1)$ 的。
 
-初值是 <span class="symbol">$</span>f_&#123;<span class="number">0</span>,i,<span class="number">0</span>&#125;\gets <span class="number">1</span>,f_&#123;<span class="number">0</span>,<span class="number">0</span>,i&#125;\gets <span class="number">1</span><span class="symbol">$</span>。
+初值是 $f_&#123;0,i,0&#125;\gets 1,f_&#123;0,0,i&#125;\gets 1$。
 
-接下来考虑每组询问的回答，就是删 <span class="symbol">$</span>n<span class="number">-1</span><span class="symbol">$</span> 次之后剩下那个数的情况。而剩下的数只可能在 <span class="symbol">$</span>[<span class="number">2</span>^&#123;<span class="number">0</span>&#125;,<span class="number">2</span>^&#123;\<span class="built_in">min</span>\&#123;n<span class="number">-1</span>,x<span class="number">-1</span>\&#125;&#125;]<span class="symbol">$</span> 中，直接枚举即可，回答询问复杂度 <span class="symbol">$</span>\mathcal O(n)<span class="symbol">$</span>。</code></pre>
+接下来考虑每组询问的回答，就是删 $n-1$ 次之后剩下那个数的情况。而剩下的数只可能在 $[2^&#123;0&#125;,2^&#123;\min\&#123;n-1,x-1\&#125;&#125;]$ 中，直接枚举即可，回答询问复杂度 $\mathcal O(n)$。</code></pre>
 	</div>
 
 	

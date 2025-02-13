@@ -22,7 +22,7 @@
 <meta property="og:description" content="赌徒 数学题，分类讨论。不多说。 #include &lt;bits&#x2F;stdc++.h&gt; using namespace std; template &lt;typename T&gt; void gmx(T &amp;x, T y) &#123; x &#x3D; max(x, y); &#125; template &lt;typename T&gt; void gmn(T &amp;x, T">
 <meta property="og:locale" content="zh_CN">
 <meta property="article:published_time" content="2023-08-18T23:08:00.000Z">
-<meta property="article:modified_time" content="2025-02-12T13:24:19.437Z">
+<meta property="article:modified_time" content="2025-02-13T23:16:52.806Z">
 <meta property="article:author" content="CYX">
 <meta property="article:tag" content="模拟赛">
 <meta name="twitter:card" content="summary">
@@ -639,7 +639,7 @@
 						
 						<div class="post-meta-detail post-meta-detail-time">
 							<i class="fa fa-clock-o" aria-hidden="true"></i>
-							<time title="发布于 2023-8-19 7:08:00 | 编辑于 2025-2-12 21:24:19">2023-8-19 7:08
+							<time title="发布于 2023-8-19 7:08:00 | 编辑于 2025-2-14 7:16:52">2023-8-19 7:08
 							</time>
 						</div>
 					
@@ -731,131 +731,131 @@
 <p>再插一嘴，你要是 <span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>n</mi><mi>x</mi><mi>t</mi><mo separator="true">,</mo><mi>p</mi><mi>r</mi><mi>e</mi></mrow><annotation encoding="application/x-tex">nxt,pre</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.80952em;vertical-align:-0.19444em;"></span><span class="mord mathnormal">n</span><span class="mord mathnormal">x</span><span class="mord mathnormal">t</span><span class="mpunct">,</span><span class="mspace" style="margin-right:0.16666666666666666em;"></span><span class="mord mathnormal">p</span><span class="mord mathnormal" style="margin-right:0.02778em;">r</span><span class="mord mathnormal">e</span></span></span></span> 或者是 <span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mn>83</mn><mtext> pts</mtext></mrow><annotation encoding="application/x-tex">83\ \text{pts}</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.8388800000000001em;vertical-align:-0.19444em;"></span><span class="mord">8</span><span class="mord">3</span><span class="mspace"> </span><span class="mord text"><span class="mord">pts</span></span></span></span></span> 做法维护的数字出现次数的数组，用 <code>map/unordered_map</code> 是真的要死。<code>map</code> 稳定 <span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>log</mi><mo>⁡</mo></mrow><annotation encoding="application/x-tex">\log</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.8888799999999999em;vertical-align:-0.19444em;"></span><span class="mop">lo<span style="margin-right:0.01389em;">g</span></span></span></span></span>，<code>unordered_map</code> 均摊常数实则会被卡到线性。</p>
 <p>你复杂度再乘上一个 <span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>log</mi><mo>⁡</mo></mrow><annotation encoding="application/x-tex">\log</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.8888799999999999em;vertical-align:-0.19444em;"></span><span class="mop">lo<span style="margin-right:0.01389em;">g</span></span></span></span></span> 你卡的过去？？？</p>
 <p>离散化，离散化，离散化！</p>
-<pre><code class="highlight inform7">#include &lt;bits/stdc++.h&gt;
-using namespace std;
-#define getchar() p1 == p2 &amp;&amp; (p2 = (p1 = buf) + fread(buf, 1, 1000000, stdin), p1 == p2) ? EOF : *p1++
-char buf<span class="comment">[1000000]</span>, *p1 = buf, *p2 = buf;
-inline int read()
-&#123;
-	register char c = getchar();
-	register int x = 0;
-	while (c &lt; &#x27;0&#x27; || c &gt; &#x27;9&#x27;)
-		c = getchar();
-	while (c &gt;= &#x27;0&#x27; &amp;&amp; c &lt;= &#x27;9&#x27;)
-		x = (x &lt;&lt; 1) + (x &lt;&lt; 3) + (c ^ 48), c = getchar();
-	return x;
+<pre><code class="highlight cpp"><span class="meta">#<span class="keyword">include</span> <span class="string">&lt;bits/stdc++.h&gt;</span></span>
+<span class="keyword">using</span> <span class="keyword">namespace</span> std;
+<span class="meta">#<span class="keyword">define</span> getchar() p1 == p2 &amp;&amp; (p2 = (p1 = buf) + fread(buf, 1, 1000000, stdin), p1 == p2) ? EOF : *p1++</span>
+<span class="type">char</span> buf[<span class="number">1000000</span>], *p1 = buf, *p2 = buf;
+<span class="function"><span class="keyword">inline</span> <span class="type">int</span> <span class="title">read</span><span class="params">()</span></span>
+<span class="function"></span>&#123;
+	<span class="keyword">register</span> <span class="type">char</span> c = <span class="built_in">getchar</span>();
+	<span class="keyword">register</span> <span class="type">int</span> x = <span class="number">0</span>;
+	<span class="keyword">while</span> (c &lt; <span class="string">&#x27;0&#x27;</span> || c &gt; <span class="string">&#x27;9&#x27;</span>)
+		c = <span class="built_in">getchar</span>();
+	<span class="keyword">while</span> (c &gt;= <span class="string">&#x27;0&#x27;</span> &amp;&amp; c &lt;= <span class="string">&#x27;9&#x27;</span>)
+		x = (x &lt;&lt; <span class="number">1</span>) + (x &lt;&lt; <span class="number">3</span>) + (c ^ <span class="number">48</span>), c = <span class="built_in">getchar</span>();
+	<span class="keyword">return</span> x;
 &#125;
-int n, Q;
-int a<span class="comment">[800020]</span>;
-struct node
+<span class="type">int</span> n, Q;
+<span class="type">int</span> a[<span class="number">800020</span>];
+<span class="keyword">struct</span> <span class="title class_">node</span>
 &#123;
-	int l, r, t, id;
-&#125; query<span class="comment">[700020]</span>;
-int ans<span class="comment">[700020]</span>;
-int b<span class="comment">[800020]</span>;
-int p<span class="comment">[800020]</span>;
-int mp<span class="comment">[800020]</span>;
-int pos<span class="comment">[800020]</span>;
-int fa<span class="comment">[800020]</span>;
-int pre<span class="comment">[800020]</span>;
-int nxt<span class="comment">[800020]</span>;
-int len;
-int ANS, X;
-inline bool cmp(node a, node b) &#123; return pos<span class="comment">[a.l]</span> ^ pos<span class="comment">[b.l]</span> ? pos<span class="comment">[a.l]</span> &lt; pos<span class="comment">[b.l]</span> : pos<span class="comment">[a.l]</span> &amp; 1 ? a.r &gt; b.r
+	<span class="type">int</span> l, r, t, id;
+&#125; query[<span class="number">700020</span>];
+<span class="type">int</span> ans[<span class="number">700020</span>];
+<span class="type">int</span> b[<span class="number">800020</span>];
+<span class="type">int</span> p[<span class="number">800020</span>];
+<span class="type">int</span> mp[<span class="number">800020</span>];
+<span class="type">int</span> pos[<span class="number">800020</span>];
+<span class="type">int</span> fa[<span class="number">800020</span>];
+<span class="type">int</span> pre[<span class="number">800020</span>];
+<span class="type">int</span> nxt[<span class="number">800020</span>];
+<span class="type">int</span> len;
+<span class="type">int</span> ANS, X;
+<span class="function"><span class="keyword">inline</span> <span class="type">bool</span> <span class="title">cmp</span><span class="params">(node a, node b)</span> </span>&#123; <span class="keyword">return</span> pos[a.l] ^ pos[b.l] ? pos[a.l] &lt; pos[b.l] : pos[a.l] &amp; <span class="number">1</span> ? a.r &gt; b.r
 																								  : a.r &lt; b.r; &#125;
-int main()
-&#123;
-	freopen(<span class="string">&quot;gauntlet.in&quot;</span>, <span class="string">&quot;r&quot;</span>, stdin);
-	freopen(<span class="string">&quot;gauntlet.out&quot;</span>, <span class="string">&quot;w&quot;</span>, stdout);
-	register int subtask;
-	subtask = read();
-	n = read();
-	Q = read();
-	len = sqrt(n);
-	for (register int i = 1; i &lt;= n; i++)
-		a<span class="comment">[i]</span> = b<span class="comment">[i]</span> = read();
-	sort(b + 1, b + n + 1);
-	register int m = unique(b + 1, b + n + 1) - b;
-	for (register int i = 1; i &lt;= n; i++)
+<span class="function"><span class="type">int</span> <span class="title">main</span><span class="params">()</span></span>
+<span class="function"></span>&#123;
+	<span class="built_in">freopen</span>(<span class="string">&quot;gauntlet.in&quot;</span>, <span class="string">&quot;r&quot;</span>, stdin);
+	<span class="built_in">freopen</span>(<span class="string">&quot;gauntlet.out&quot;</span>, <span class="string">&quot;w&quot;</span>, stdout);
+	<span class="keyword">register</span> <span class="type">int</span> subtask;
+	subtask = <span class="built_in">read</span>();
+	n = <span class="built_in">read</span>();
+	Q = <span class="built_in">read</span>();
+	len = <span class="built_in">sqrt</span>(n);
+	<span class="keyword">for</span> (<span class="keyword">register</span> <span class="type">int</span> i = <span class="number">1</span>; i &lt;= n; i++)
+		a[i] = b[i] = <span class="built_in">read</span>();
+	<span class="built_in">sort</span>(b + <span class="number">1</span>, b + n + <span class="number">1</span>);
+	<span class="keyword">register</span> <span class="type">int</span> m = <span class="built_in">unique</span>(b + <span class="number">1</span>, b + n + <span class="number">1</span>) - b;
+	<span class="keyword">for</span> (<span class="keyword">register</span> <span class="type">int</span> i = <span class="number">1</span>; i &lt;= n; i++)
 	&#123;
-		register int j = lower_bound(b + 1, b + m + 1, a<span class="comment">[i]</span>) - b;
-		p<span class="comment">[j]</span> = a<span class="comment">[i]</span>;
-		a<span class="comment">[i]</span> = j;
-		pos<span class="comment">[i]</span> = (i + len - 1) / len;
+		<span class="keyword">register</span> <span class="type">int</span> j = <span class="built_in">lower_bound</span>(b + <span class="number">1</span>, b + m + <span class="number">1</span>, a[i]) - b;
+		p[j] = a[i];
+		a[i] = j;
+		pos[i] = (i + len - <span class="number">1</span>) / len;
 	&#125;
-	for (register int i = 1; i &lt;= n; i++)
+	<span class="keyword">for</span> (<span class="keyword">register</span> <span class="type">int</span> i = <span class="number">1</span>; i &lt;= n; i++)
 	&#123;
-		nxt<span class="comment">[i]</span> = n + 1;
-		pre<span class="comment">[i]</span> = fa<span class="comment">[a<span class="comment">[i]</span>]</span>;
-		nxt<span class="comment">[pre<span class="comment">[i]</span>]</span> = i;
-		fa<span class="comment">[a<span class="comment">[i]</span>]</span> = i;
+		nxt[i] = n + <span class="number">1</span>;
+		pre[i] = fa[a[i]];
+		nxt[pre[i]] = i;
+		fa[a[i]] = i;
 	&#125;
-	for (register int i = 1; i &lt;= Q; i++)
+	<span class="keyword">for</span> (<span class="keyword">register</span> <span class="type">int</span> i = <span class="number">1</span>; i &lt;= Q; i++)
 	&#123;
-		int l, r, t;
-		l = read();
-		r = read();
-		t = read();
-		query<span class="comment">[i]</span> = &#123;l, r, t, i&#125;;
+		<span class="type">int</span> l, r, t;
+		l = <span class="built_in">read</span>();
+		r = <span class="built_in">read</span>();
+		t = <span class="built_in">read</span>();
+		query[i] = &#123;l, r, t, i&#125;;
 	&#125;
-	sort(query + 1, query + Q + 1, cmp);
-	register int l = 1, r = 0;
-	for (register int i = 1; i &lt;= Q; i++)
+	<span class="built_in">sort</span>(query + <span class="number">1</span>, query + Q + <span class="number">1</span>, cmp);
+	<span class="keyword">register</span> <span class="type">int</span> l = <span class="number">1</span>, r = <span class="number">0</span>;
+	<span class="keyword">for</span> (<span class="keyword">register</span> <span class="type">int</span> i = <span class="number">1</span>; i &lt;= Q; i++)
 	&#123;
-		while (l &lt; query<span class="comment">[i]</span>.l)
+		<span class="keyword">while</span> (l &lt; query[i].l)
 		&#123;
-			ANS ^= p<span class="comment">[a<span class="comment">[l]</span>]</span>;
-			// del(l++);
-			if (nxt<span class="comment">[l]</span> &gt; r)
-				X ^= p<span class="comment">[a<span class="comment">[l]</span>]</span>;
+			ANS ^= p[a[l]];
+			<span class="comment">// del(l++);</span>
+			<span class="keyword">if</span> (nxt[l] &gt; r)
+				X ^= p[a[l]];
 			l++;
 		&#125;
-		while (r &gt; query<span class="comment">[i]</span>.r)
+		<span class="keyword">while</span> (r &gt; query[i].r)
 		&#123;
-			ANS ^= p<span class="comment">[a<span class="comment">[r]</span>]</span>;
-			if (pre<span class="comment">[r]</span> &lt; l)
-				X ^= p<span class="comment">[a<span class="comment">[r]</span>]</span>;
+			ANS ^= p[a[r]];
+			<span class="keyword">if</span> (pre[r] &lt; l)
+				X ^= p[a[r]];
 			r--;
 		&#125;
-		while (l &gt; query<span class="comment">[i]</span>.l)
+		<span class="keyword">while</span> (l &gt; query[i].l)
 		&#123;
 			l--;
-			ANS ^= p<span class="comment">[a<span class="comment">[l]</span>]</span>;
-			if (nxt<span class="comment">[l]</span> &gt; r)
-				X ^= p<span class="comment">[a<span class="comment">[l]</span>]</span>;
+			ANS ^= p[a[l]];
+			<span class="keyword">if</span> (nxt[l] &gt; r)
+				X ^= p[a[l]];
 		&#125;
-		while (r &lt; query<span class="comment">[i]</span>.r)
+		<span class="keyword">while</span> (r &lt; query[i].r)
 		&#123;
 			r++;
-			ANS ^= p<span class="comment">[a<span class="comment">[r]</span>]</span>;
-			if (pre<span class="comment">[r]</span> &lt; l)
-				X ^= p<span class="comment">[a<span class="comment">[r]</span>]</span>;
+			ANS ^= p[a[r]];
+			<span class="keyword">if</span> (pre[r] &lt; l)
+				X ^= p[a[r]];
 		&#125;
-		if (!query<span class="comment">[i]</span>.t)
-			ans<span class="comment">[query<span class="comment">[i]</span>.id]</span> = ANS;
-		else
-			ans<span class="comment">[query<span class="comment">[i]</span>.id]</span> = ANS ^ X;
+		<span class="keyword">if</span> (!query[i].t)
+			ans[query[i].id] = ANS;
+		<span class="keyword">else</span>
+			ans[query[i].id] = ANS ^ X;
 	&#125;
-	for (register int i = 1; i &lt;= Q; i++)
-		printf(<span class="string">&quot;%d\n&quot;</span>, ans<span class="comment">[i]</span>);
-	return 0;
+	<span class="keyword">for</span> (<span class="keyword">register</span> <span class="type">int</span> i = <span class="number">1</span>; i &lt;= Q; i++)
+		<span class="built_in">printf</span>(<span class="string">&quot;%d\n&quot;</span>, ans[i]);
+	<span class="keyword">return</span> <span class="number">0</span>;
 &#125;
-/*
-inline void add(int i)
-&#123;
-	mp<span class="comment">[a<span class="comment">[i]</span>]</span>++;
-	ANS ^= p<span class="comment">[a<span class="comment">[i]</span>]</span>;
-	if (mp<span class="comment">[a<span class="comment">[i]</span>]</span> == 1)
-		X ^= p<span class="comment">[a<span class="comment">[i]</span>]</span>;
-&#125;
-inline void del(int i)
-&#123;
-	mp<span class="comment">[a<span class="comment">[i]</span>]</span>--;
-	ANS ^= p<span class="comment">[a<span class="comment">[i]</span>]</span>;
-	if (mp<span class="comment">[a<span class="comment">[i]</span>]</span> == 0)
-		X ^= p<span class="comment">[a<span class="comment">[i]</span>]</span>;
-&#125;
-*/</code></pre>
+<span class="comment">/*</span>
+<span class="comment">inline void add(int i)</span>
+<span class="comment">&#123;</span>
+<span class="comment">	mp[a[i]]++;</span>
+<span class="comment">	ANS ^= p[a[i]];</span>
+<span class="comment">	if (mp[a[i]] == 1)</span>
+<span class="comment">		X ^= p[a[i]];</span>
+<span class="comment">&#125;</span>
+<span class="comment">inline void del(int i)</span>
+<span class="comment">&#123;</span>
+<span class="comment">	mp[a[i]]--;</span>
+<span class="comment">	ANS ^= p[a[i]];</span>
+<span class="comment">	if (mp[a[i]] == 0)</span>
+<span class="comment">		X ^= p[a[i]];</span>
+<span class="comment">&#125;</span>
+<span class="comment">*/</span></code></pre>
 <h1 id="无量"><a class="markdownIt-Anchor" href="#无量"></a> 无量</h1>
 <pre><code class="highlight cpp"></code></pre>
 	</div>

@@ -22,7 +22,7 @@
 <meta property="og:description" content="题目翻译 有一个长度为 nnn 的数组，里面有 nnn 个元素，a1,a2,a3,...ana_1,a_2,a_3,...a_na1​,a2​,a3​,...an​。 给定一个 kkk，可以通过在 aaa 数组中插入 [1,n][1,n][1,n] 之间的数字，使任意 kkk 个连续的元素之和相等。 如无解，输出 −1-1−1。  题目思路 我们可以考虑，把这个数组分成很多段，也就变成 b1,b">
 <meta property="og:locale" content="zh_CN">
 <meta property="article:published_time" content="2022-05-28T12:54:00.000Z">
-<meta property="article:modified_time" content="2025-02-12T10:03:18.794Z">
+<meta property="article:modified_time" content="2025-02-13T23:17:37.726Z">
 <meta property="article:author" content="CYX">
 <meta name="twitter:card" content="summary">
 
@@ -638,7 +638,7 @@
 						
 						<div class="post-meta-detail post-meta-detail-time">
 							<i class="fa fa-clock-o" aria-hidden="true"></i>
-							<time title="发布于 2022-5-28 20:54:00 | 编辑于 2025-2-12 18:03:18">2022-5-28 20:54
+							<time title="发布于 2022-5-28 20:54:00 | 编辑于 2025-2-14 7:17:37">2022-5-28 20:54
 							</time>
 						</div>
 					
@@ -693,13 +693,13 @@
 <p>那么我们需要输出几次 <span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><msub><mi>b</mi><mn>1</mn></msub><mo separator="true">,</mo><mi mathvariant="normal">.</mi><mi mathvariant="normal">.</mi><mi mathvariant="normal">.</mi><msub><mi>b</mi><mi>k</mi></msub></mrow><annotation encoding="application/x-tex">b_1,...b_k</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.8888799999999999em;vertical-align:-0.19444em;"></span><span class="mord"><span class="mord mathnormal">b</span><span class="msupsub"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist" style="height:0.30110799999999993em;"><span style="top:-2.5500000000000003em;margin-left:0em;margin-right:0.05em;"><span class="pstrut" style="height:2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mtight">1</span></span></span></span><span class="vlist-s">​</span></span><span class="vlist-r"><span class="vlist" style="height:0.15em;"><span></span></span></span></span></span></span><span class="mpunct">,</span><span class="mspace" style="margin-right:0.16666666666666666em;"></span><span class="mord">.</span><span class="mord">.</span><span class="mord">.</span><span class="mord"><span class="mord mathnormal">b</span><span class="msupsub"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist" style="height:0.33610799999999996em;"><span style="top:-2.5500000000000003em;margin-left:0em;margin-right:0.05em;"><span class="pstrut" style="height:2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mathnormal mtight" style="margin-right:0.03148em;">k</span></span></span></span><span class="vlist-s">​</span></span><span class="vlist-r"><span class="vlist" style="height:0.15em;"><span></span></span></span></span></span></span></span></span></span> 呢？</p>
 <p>答案很简单，<span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>n</mi></mrow><annotation encoding="application/x-tex">n</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.43056em;vertical-align:0em;"></span><span class="mord mathnormal">n</span></span></span></span> 次。</p>
 <p>我们用一个例子解释一下。</p>
-<pre><code class="highlight txt">5 5
+<pre><code class="highlight plain">5 5
 5 3 2 4 1</code></pre>
-<pre><code class="highlight tap">注：原数组元素会在下方标注，‘|’分割每组
-1<span class="number"> 2 </span>3<span class="number"> 4 </span>5|1<span class="number"> 2 </span>3<span class="number"> 4 </span>5|1<span class="number"> 2 </span>3<span class="number"> 4 </span>5|1<span class="number"> 2 </span>3<span class="number"> 4 </span>5|1<span class="number"> 2 </span>3<span class="number"> 4 </span>5
+<pre><code class="highlight plain">注：原数组元素会在下方标注，‘|’分割每组
+1 2 3 4 5|1 2 3 4 5|1 2 3 4 5|1 2 3 4 5|1 2 3 4 5
         ^     ^       ^             ^   ^</code></pre>
 <p>当然，我们要进行去重。</p>
-<pre><code class="highlight txt">5 5
+<pre><code class="highlight plain">5 5
 5 5 5 5 5</code></pre>
 <pre><code class="highlight txt">5|5|5|5|5
 ^</code></pre>

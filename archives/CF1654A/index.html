@@ -22,7 +22,7 @@
 <meta property="og:description" content="题目翻译 有 nnn 个数，可以选择一个区间 [l,r][l,r][l,r] 进行一次翻转。最大的相邻两个数的和是多少。  题目思路 最大的和，肯定就是最大加次大。而次大肯定能翻转到最大旁边，所以答案就是次大加最大。 为什么次大肯定翻转到最大旁边：用样例解释一下。 6 5 2 1 4 7 3 翻转 [1,4][1,4][1,4]。 6 4 1 2 5 7 3 最大是 777，次大是 555。 不">
 <meta property="og:locale" content="zh_CN">
 <meta property="article:published_time" content="2022-03-22T01:25:00.000Z">
-<meta property="article:modified_time" content="2025-02-12T09:51:40.006Z">
+<meta property="article:modified_time" content="2025-02-13T23:17:49.315Z">
 <meta property="article:author" content="CYX">
 <meta name="twitter:card" content="summary">
 
@@ -638,7 +638,7 @@
 						
 						<div class="post-meta-detail post-meta-detail-time">
 							<i class="fa fa-clock-o" aria-hidden="true"></i>
-							<time title="发布于 2022-3-22 9:25:00 | 编辑于 2025-2-12 17:51:40">2022-3-22 9:25
+							<time title="发布于 2022-3-22 9:25:00 | 编辑于 2025-2-14 7:17:49">2022-3-22 9:25
 							</time>
 						</div>
 					
@@ -686,10 +686,10 @@
 <h3 id="题目思路"><a class="markdownIt-Anchor" href="#题目思路"></a> 题目思路</h3>
 <p>最大的和，肯定就是最大加次大。而次大肯定能翻转到最大旁边，所以答案就是次大加最大。</p>
 <p>为什么次大肯定翻转到最大旁边：用样例解释一下。</p>
-<pre><code class="highlight tex">6
+<pre><code class="highlight plain">6
 5 2 1 4 7 3</code></pre>
 <p>翻转 <span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mo stretchy="false">[</mo><mn>1</mn><mo separator="true">,</mo><mn>4</mn><mo stretchy="false">]</mo></mrow><annotation encoding="application/x-tex">[1,4]</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:1em;vertical-align:-0.25em;"></span><span class="mopen">[</span><span class="mord">1</span><span class="mpunct">,</span><span class="mspace" style="margin-right:0.16666666666666666em;"></span><span class="mord">4</span><span class="mclose">]</span></span></span></span>。</p>
-<pre><code class="highlight tex">6
+<pre><code class="highlight plain">6
 4 1 2 5 7 3</code></pre>
 <p>最大是 <span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mn>7</mn></mrow><annotation encoding="application/x-tex">7</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.64444em;vertical-align:0em;"></span><span class="mord">7</span></span></span></span>，次大是 <span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mn>5</mn></mrow><annotation encoding="application/x-tex">5</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.64444em;vertical-align:0em;"></span><span class="mord">5</span></span></span></span>。</p>
 <p>不管怎么样，以次大为一个端点，最大旁边为一个端点，永远能保证次大换到最大旁边。</p>

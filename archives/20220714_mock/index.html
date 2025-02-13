@@ -22,7 +22,7 @@
 <meta property="og:description" content="奶牛式乘法 题目很简单，就是每位数字相乘做加法。 下列描述中，均将两个数字 A,BA,BA,B 分别用字符串 S,TS,TS,T 表示，n&#x3D;∣S∣,m&#x3D;∣T∣n&#x3D;\left|S\right|,m&#x3D;\left|T\right|n&#x3D;∣S∣,m&#x3D;∣T∣。 很显然，有一种 O(nm)\mathcal O(nm)O(nm) 的写法，直接模拟题意。 #include&lt;bits&#x2F;stdc++.h&gt;">
 <meta property="og:locale" content="zh_CN">
 <meta property="article:published_time" content="2022-07-18T06:54:00.000Z">
-<meta property="article:modified_time" content="2025-02-12T13:23:37.444Z">
+<meta property="article:modified_time" content="2025-02-13T23:18:49.936Z">
 <meta property="article:author" content="CYX">
 <meta property="article:tag" content="模拟赛">
 <meta name="twitter:card" content="summary">
@@ -639,7 +639,7 @@
 						
 						<div class="post-meta-detail post-meta-detail-time">
 							<i class="fa fa-clock-o" aria-hidden="true"></i>
-							<time title="发布于 2022-7-18 14:54:00 | 编辑于 2025-2-12 21:23:37">2022-7-18 14:54
+							<time title="发布于 2022-7-18 14:54:00 | 编辑于 2025-2-14 7:18:49">2022-7-18 14:54
 							</time>
 						</div>
 					
@@ -983,19 +983,19 @@ queue&lt;node&gt;q;
 <p><s>推导的注释比代码长，谁知道我经历了什么</s></p>
 <p>我们可以反着考虑。</p>
 <p>不太好解释，直接放过程。</p>
-<pre><code class="highlight basic"><span class="symbol">6 </span><span class="number">6</span> <span class="number">6</span>
-<span class="symbol">6 </span><span class="number">6</span> <span class="number">3</span>
-<span class="symbol">6 </span><span class="number">4</span> <span class="number">3</span>
-<span class="symbol">3 </span><span class="number">4</span> <span class="number">3</span>
-<span class="symbol">3 </span><span class="number">3</span> <span class="number">3</span>
+<pre><code class="highlight plain">6 6 6
+6 6 3
+6 4 3
+3 4 3
+3 3 3
 
-<span class="symbol">22 </span><span class="number">22</span> <span class="number">22</span>
-<span class="symbol">13 </span><span class="number">16</span> <span class="number">22</span>
-<span class="symbol">10 </span><span class="number">13</span> <span class="number">16</span>
-<span class="symbol">04 </span><span class="number">10</span> <span class="number">13</span> 
-<span class="symbol">04 </span><span class="number">07</span> <span class="number">10</span> 
-<span class="symbol">04 </span><span class="number">04</span> <span class="number">07</span>
-<span class="symbol">04 </span><span class="number">04</span> <span class="number">04</span></code></pre>
+22 22 22
+13 16 22
+10 13 16
+04 10 13 
+04 07 10 
+04 04 07
+04 04 04</code></pre>
 <p>那么代码如下</p>
 <pre><code class="highlight cpp"><span class="meta">#<span class="keyword">include</span><span class="string">&lt;bits/stdc++.h&gt;</span></span>
 <span class="meta">#<span class="keyword">include</span><span class="string">&lt;windows.h&gt;</span></span>
