@@ -505,7 +505,7 @@
 							<nav class="site-state">
 								<div class="site-state-item site-state-posts">
 									<a href="/archives">
-										<span class="site-state-item-count">169</span>
+										<span class="site-state-item-count">171</span>
 										<span class="site-state-item-name">文章</span>
 									</a>
 								</div>
@@ -567,7 +567,7 @@
 				</button>
 			</div>
 			<div class="modal-body">
-				<a class="badge badge-secondary tag" href="/categories/Essay/" rel="tag">Essay <span class="tag-num">4</span></a><a class="badge badge-secondary tag" href="/categories/Solution/" rel="tag">Solution <span class="tag-num">150</span></a><a class="badge badge-secondary tag" href="/categories/StudyNote/" rel="tag">StudyNote <span class="tag-num">4</span></a><a class="badge badge-secondary tag" href="/categories/Technology/" rel="tag">Technology <span class="tag-num">1</span></a><a class="badge badge-secondary tag" href="/categories/TravelNote/" rel="tag">TravelNote <span class="tag-num">10</span></a>
+				<a class="badge badge-secondary tag" href="/categories/Essay/" rel="tag">Essay <span class="tag-num">4</span></a><a class="badge badge-secondary tag" href="/categories/Solution/" rel="tag">Solution <span class="tag-num">152</span></a><a class="badge badge-secondary tag" href="/categories/StudyNote/" rel="tag">StudyNote <span class="tag-num">4</span></a><a class="badge badge-secondary tag" href="/categories/Technology/" rel="tag">Technology <span class="tag-num">1</span></a><a class="badge badge-secondary tag" href="/categories/TravelNote/" rel="tag">TravelNote <span class="tag-num">10</span></a>
 			</div>
 		</div>
 	</div>
@@ -582,7 +582,7 @@
 				</button>
 			</div>
 			<div class="modal-body">
-				<a class="badge badge-secondary tag" href="/tags/%E4%B9%B1%E6%90%9E/" rel="tag">乱搞 <span class="tag-num">2</span></a><a class="badge badge-secondary tag" href="/tags/%E5%8A%A8%E6%80%81%E8%A7%84%E5%88%92/" rel="tag">动态规划 <span class="tag-num">1</span></a><a class="badge badge-secondary tag" href="/tags/%E6%A8%A1%E6%8B%9F%E8%B5%9B/" rel="tag">模拟赛 <span class="tag-num">22</span></a><a class="badge badge-secondary tag" href="/tags/%E9%9A%8F%E6%9C%BA%E7%AE%97%E6%B3%95/" rel="tag">随机算法 <span class="tag-num">1</span></a><a class="badge badge-secondary tag" href="/tags/%E9%AD%94%E6%80%94%E6%9D%AF/" rel="tag">魔怔杯 <span class="tag-num">2</span></a>
+				<a class="badge badge-secondary tag" href="/tags/%E4%B9%B1%E6%90%9E/" rel="tag">乱搞 <span class="tag-num">2</span></a><a class="badge badge-secondary tag" href="/tags/%E5%8A%A8%E6%80%81%E8%A7%84%E5%88%92/" rel="tag">动态规划 <span class="tag-num">1</span></a><a class="badge badge-secondary tag" href="/tags/%E6%A8%A1%E6%8B%9F%E8%B5%9B/" rel="tag">模拟赛 <span class="tag-num">23</span></a><a class="badge badge-secondary tag" href="/tags/%E9%9A%8F%E6%9C%BA%E7%AE%97%E6%B3%95/" rel="tag">随机算法 <span class="tag-num">1</span></a><a class="badge badge-secondary tag" href="/tags/%E9%AD%94%E6%80%94%E6%9D%AF/" rel="tag">魔怔杯 <span class="tag-num">2</span></a>
 			</div>
 		</div>
 	</div>
@@ -593,6 +593,142 @@
 	<main id="main" class="site-main" role="main">
 		
 			
+	<article class="post card bg-white shadow-sm border-0 post-preview">
+	<header class="post-header text-center">
+		
+		<a class="post-title" href="/archives/CF1929E/">[题解] CF1929E Sasha and the Happy Tree Cutting</a>
+		<div class="post-meta">
+			
+						
+						<div class="post-meta-detail post-meta-detail-time">
+							<i class="fa fa-clock-o" aria-hidden="true"></i>
+							<time title="发布于 2024-2-23 22:10:00 | 编辑于 2025-2-12 20:42:51">2024-2-23 22:10
+							</time>
+						</div>
+					
+						
+							<div class="post-meta-devide">|</div>
+						
+						<div class="post-meta-detail post-meta-detail-categories">
+							<i class="fa fa-bookmark-o" aria-hidden="true"></i>
+							<a class="post-meta-detail-catagory-link" href="/categories/Solution/">Solution</a>
+						</div>
+					
+						
+							<div class="post-meta-devide">|</div>
+						
+						<div class="post-meta-detail post-meta-detail-words">
+							<i class="fa fa-book" aria-hidden="true"></i>
+							<span id="busuanzi_container_page_pv">
+								阅读<span id="busuanzi_value_page_pv"></span>次
+							</span>
+						</div>
+					
+						
+							<div class="post-meta-devide">|</div>
+						
+						<div class="post-meta-detail post-meta-detail-words">
+							<i class="fa fa-file-word-o" aria-hidden="true"></i>
+							896 字
+						</div>
+					
+						
+							<div class="post-meta-devide">|</div>
+						
+						<div class="post-meta-detail post-meta-detail-readingtime">
+							<i class="fa fa-hourglass-end" aria-hidden="true"></i>
+							4 分钟
+						</div>
+					
+		</div>
+		
+	</header>
+
+	<div class="post-content">
+		
+			
+				 前言
+如何评价我场上 LCA 没清空 fa 数组没有 AK。
+ 题目翻译
+给定 nnn 个点的一棵树，以及 kkk 组点 (u,v)(u,v)(u,v)，表示 u→vu\to vu→v 的简单路径包含特殊边。问至少多少边为特殊边。
+多测，1≤t≤104,∑n≤105,∑2k≤2201\leq t\leq 10^4,\sum n\leq10^5,\...
+			
+		
+	</div>
+
+	
+</article>
+
+
+	<article class="post card bg-white shadow-sm border-0 post-preview">
+	<header class="post-header text-center">
+		
+		<a class="post-title" href="/archives/CF710D/">[题解] CF710D Two Arithmetic Progressions</a>
+		<div class="post-meta">
+			
+						
+						<div class="post-meta-detail post-meta-detail-time">
+							<i class="fa fa-clock-o" aria-hidden="true"></i>
+							<time title="发布于 2024-2-23 14:14:00 | 编辑于 2025-2-12 16:58:14">2024-2-23 14:14
+							</time>
+						</div>
+					
+						
+							<div class="post-meta-devide">|</div>
+						
+						<div class="post-meta-detail post-meta-detail-categories">
+							<i class="fa fa-bookmark-o" aria-hidden="true"></i>
+							<a class="post-meta-detail-catagory-link" href="/categories/Solution/">Solution</a>
+						</div>
+					
+						
+							<div class="post-meta-devide">|</div>
+						
+						<div class="post-meta-detail post-meta-detail-words">
+							<i class="fa fa-book" aria-hidden="true"></i>
+							<span id="busuanzi_container_page_pv">
+								阅读<span id="busuanzi_value_page_pv"></span>次
+							</span>
+						</div>
+					
+						
+							<div class="post-meta-devide">|</div>
+						
+						<div class="post-meta-detail post-meta-detail-words">
+							<i class="fa fa-file-word-o" aria-hidden="true"></i>
+							665 字
+						</div>
+					
+						
+							<div class="post-meta-devide">|</div>
+						
+						<div class="post-meta-detail post-meta-detail-readingtime">
+							<i class="fa fa-hourglass-end" aria-hidden="true"></i>
+							3 分钟
+						</div>
+					
+		</div>
+		
+	</header>
+
+	<div class="post-content">
+		
+			
+				 前言
+这是今天粉兔杯每日一题，也是根分日报例题，补一下。
+暴力美学——浅谈根号分治 - paulzrm 的博客 - 洛谷博客
+ 题目翻译
+给出两个等差数列，求在 [L,R][L,R][L,R] 之间的交集大小。
+等差数列形式为 ak+bak+bak+b。
+1≤a1,a2≤2×109,−2×109≤b1,b2,L,R≤2×109,L≤R1\leq ...
+			
+		
+	</div>
+
+	
+</article>
+
+
 	<article class="post card bg-white shadow-sm border-0 post-preview">
 	<header class="post-header text-center">
 		
@@ -1147,138 +1283,8 @@ T+0.5T+0.5T+0.5...
 </article>
 
 
-	<article class="post card bg-white shadow-sm border-0 post-preview">
-	<header class="post-header text-center">
-		
-		<a class="post-title" href="/archives/Fermat_s_little_theorem_prove/">[笔记] 费马小定理 证明</a>
-		<div class="post-meta">
-			
-						
-						<div class="post-meta-detail post-meta-detail-time">
-							<i class="fa fa-clock-o" aria-hidden="true"></i>
-							<time title="发布于 2023-12-25 21:41:00 | 编辑于 2025-2-13 7:38:04">2023-12-25 21:41
-							</time>
-						</div>
-					
-						
-							<div class="post-meta-devide">|</div>
-						
-						<div class="post-meta-detail post-meta-detail-categories">
-							<i class="fa fa-bookmark-o" aria-hidden="true"></i>
-							<a class="post-meta-detail-catagory-link" href="/categories/StudyNote/">StudyNote</a>
-						</div>
-					
-						
-							<div class="post-meta-devide">|</div>
-						
-						<div class="post-meta-detail post-meta-detail-words">
-							<i class="fa fa-book" aria-hidden="true"></i>
-							<span id="busuanzi_container_page_pv">
-								阅读<span id="busuanzi_value_page_pv"></span>次
-							</span>
-						</div>
-					
-						
-							<div class="post-meta-devide">|</div>
-						
-						<div class="post-meta-detail post-meta-detail-words">
-							<i class="fa fa-file-word-o" aria-hidden="true"></i>
-							809 字
-						</div>
-					
-						
-							<div class="post-meta-devide">|</div>
-						
-						<div class="post-meta-detail post-meta-detail-readingtime">
-							<i class="fa fa-hourglass-end" aria-hidden="true"></i>
-							4 分钟
-						</div>
-					
-		</div>
-		
-	</header>
 
-	<div class="post-content">
-		
-			
-				已知 p is prime,gcd⁡(a,p)=1p\text{ is prime},\gcd(a,p)=1p is prime,gcd(a,p)=1 证明 ap≡a(modp)a^p\equiv a\pmod pap≡a(modp)。
-考虑一个引理：若 ppp 是质数，p∣(pi),∀i∈[1,p−1],i∈Zp\mid\dbinom{p}{i}...
-			
-		
-	</div>
-
-	
-</article>
-
-
-	<article class="post card bg-white shadow-sm border-0 post-preview">
-	<header class="post-header text-center">
-		
-		<a class="post-title" href="/archives/USACO23DEC_G/">[题解] 来点 USACO Gold 组人类智慧</a>
-		<div class="post-meta">
-			
-						
-						<div class="post-meta-detail post-meta-detail-time">
-							<i class="fa fa-clock-o" aria-hidden="true"></i>
-							<time title="发布于 2023-12-20 20:58:00 | 编辑于 2025-2-12 20:10:08">2023-12-20 20:58
-							</time>
-						</div>
-					
-						
-							<div class="post-meta-devide">|</div>
-						
-						<div class="post-meta-detail post-meta-detail-categories">
-							<i class="fa fa-bookmark-o" aria-hidden="true"></i>
-							<a class="post-meta-detail-catagory-link" href="/categories/Solution/">Solution</a>
-						</div>
-					
-						
-							<div class="post-meta-devide">|</div>
-						
-						<div class="post-meta-detail post-meta-detail-words">
-							<i class="fa fa-book" aria-hidden="true"></i>
-							<span id="busuanzi_container_page_pv">
-								阅读<span id="busuanzi_value_page_pv"></span>次
-							</span>
-						</div>
-					
-						
-							<div class="post-meta-devide">|</div>
-						
-						<div class="post-meta-detail post-meta-detail-words">
-							<i class="fa fa-file-word-o" aria-hidden="true"></i>
-							1.2k 字
-						</div>
-					
-						
-							<div class="post-meta-devide">|</div>
-						
-						<div class="post-meta-detail post-meta-detail-readingtime">
-							<i class="fa fa-hourglass-end" aria-hidden="true"></i>
-							6 分钟
-						</div>
-					
-		</div>
-		
-	</header>
-
-	<div class="post-content">
-		
-			
-				 T1
-发现 u→vu\to vu→v 的方案数是可以用 u→k→vu\to k\to vu→k→v 算出来的，就类似 Floyd 枚举中心点。
-然后就直接枚举 gapgapgap，u→u+gapu\to u+gapu→u+gap 枚举中间点进行转移。
-但是发现 1→2→3→51\to 2\to 3\to 51→2→3→5 是会统计两次 1→2→3...
-			
-		
-	</div>
-
-	
-</article>
-
-
-
-<nav><ul class="pagination"><li class="page-item"><a aria-label="First Page" class="page-link" href="/"><i class="fa fa-angle-double-left" aria-hidden="true"></i></a></li><li class="page-item"><a aria-label="Previous Page" class="page-link" href="/page/7/"><i class="fa fa-angle-left" aria-hidden="true"></i></a></li><li class="page-item"><a class="page-link" href="/page/5/">5</a></li><li class="page-item"><a class="page-link" href="/page/6/">6</a></li><li class="page-item"><a class="page-link" href="/page/7/">7</a></li><li class="page-item active"><span class="page-link" style="cursor: default;">8</span></li><li class="page-item"><a class="page-link" href="/page/9/">9</a></li><li class="page-item"><a class="page-link" href="/page/10/">10</a></li><li class="page-item"><a class="page-link" href="/page/11/">11</a></li><li class="page-item"><a aria-label="Next Page" class="page-link" href="/page/9/"><i class="fa fa-angle-right" aria-hidden="true"></i></a></li><li class="page-item"><a aria-label="Last Page" class="page-link" href="/page/17/"><i class="fa fa-angle-double-right" aria-hidden="true"></i></a></li></ul></nav><nav><ul class="pagination pagination-mobile"><li class="page-item"><a aria-label="First Page" class="page-link" href="/"><i class="fa fa-angle-double-left" aria-hidden="true"></i></a></li><li class="page-item"><a aria-label="Previous Page" class="page-link" href="/page/7/"><i class="fa fa-angle-left" aria-hidden="true"></i></a></li><li class="page-item"><a class="page-link" href="/page/6/">6</a></li><li class="page-item"><a class="page-link" href="/page/7/">7</a></li><li class="page-item active"><span class="page-link" style="cursor: default;">8</span></li><li class="page-item"><a class="page-link" href="/page/9/">9</a></li><li class="page-item"><a class="page-link" href="/page/10/">10</a></li><li class="page-item"><a aria-label="Next Page" class="page-link" href="/page/9/"><i class="fa fa-angle-right" aria-hidden="true"></i></a></li><li class="page-item"><a aria-label="Last Page" class="page-link" href="/page/17/"><i class="fa fa-angle-double-right" aria-hidden="true"></i></a></li></ul></nav>
+<nav><ul class="pagination"><li class="page-item"><a aria-label="First Page" class="page-link" href="/"><i class="fa fa-angle-double-left" aria-hidden="true"></i></a></li><li class="page-item"><a aria-label="Previous Page" class="page-link" href="/page/7/"><i class="fa fa-angle-left" aria-hidden="true"></i></a></li><li class="page-item"><a class="page-link" href="/page/5/">5</a></li><li class="page-item"><a class="page-link" href="/page/6/">6</a></li><li class="page-item"><a class="page-link" href="/page/7/">7</a></li><li class="page-item active"><span class="page-link" style="cursor: default;">8</span></li><li class="page-item"><a class="page-link" href="/page/9/">9</a></li><li class="page-item"><a class="page-link" href="/page/10/">10</a></li><li class="page-item"><a class="page-link" href="/page/11/">11</a></li><li class="page-item"><a aria-label="Next Page" class="page-link" href="/page/9/"><i class="fa fa-angle-right" aria-hidden="true"></i></a></li><li class="page-item"><a aria-label="Last Page" class="page-link" href="/page/18/"><i class="fa fa-angle-double-right" aria-hidden="true"></i></a></li></ul></nav><nav><ul class="pagination pagination-mobile"><li class="page-item"><a aria-label="First Page" class="page-link" href="/"><i class="fa fa-angle-double-left" aria-hidden="true"></i></a></li><li class="page-item"><a aria-label="Previous Page" class="page-link" href="/page/7/"><i class="fa fa-angle-left" aria-hidden="true"></i></a></li><li class="page-item"><a class="page-link" href="/page/6/">6</a></li><li class="page-item"><a class="page-link" href="/page/7/">7</a></li><li class="page-item active"><span class="page-link" style="cursor: default;">8</span></li><li class="page-item"><a class="page-link" href="/page/9/">9</a></li><li class="page-item"><a class="page-link" href="/page/10/">10</a></li><li class="page-item"><a aria-label="Next Page" class="page-link" href="/page/9/"><i class="fa fa-angle-right" aria-hidden="true"></i></a></li><li class="page-item"><a aria-label="Last Page" class="page-link" href="/page/18/"><i class="fa fa-angle-double-right" aria-hidden="true"></i></a></li></ul></nav>
 
 
 		

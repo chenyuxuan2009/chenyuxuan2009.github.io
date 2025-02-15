@@ -460,7 +460,7 @@
 		
 			<p class="text-black mt-3 mb-0 opacity-8">
 				<i class="fa fa-file-o mr-1"></i>
-				150 篇文章
+				152 篇文章
 			</p>
 		
 	</div>
@@ -519,7 +519,7 @@
 							<nav class="site-state">
 								<div class="site-state-item site-state-posts">
 									<a href="/archives">
-										<span class="site-state-item-count">169</span>
+										<span class="site-state-item-count">171</span>
 										<span class="site-state-item-name">文章</span>
 									</a>
 								</div>
@@ -581,7 +581,7 @@
 				</button>
 			</div>
 			<div class="modal-body">
-				<a class="badge badge-secondary tag" href="/categories/Essay/" rel="tag">Essay <span class="tag-num">4</span></a><a class="badge badge-secondary tag" href="/categories/Solution/" rel="tag">Solution <span class="tag-num">150</span></a><a class="badge badge-secondary tag" href="/categories/StudyNote/" rel="tag">StudyNote <span class="tag-num">4</span></a><a class="badge badge-secondary tag" href="/categories/Technology/" rel="tag">Technology <span class="tag-num">1</span></a><a class="badge badge-secondary tag" href="/categories/TravelNote/" rel="tag">TravelNote <span class="tag-num">10</span></a>
+				<a class="badge badge-secondary tag" href="/categories/Essay/" rel="tag">Essay <span class="tag-num">4</span></a><a class="badge badge-secondary tag" href="/categories/Solution/" rel="tag">Solution <span class="tag-num">152</span></a><a class="badge badge-secondary tag" href="/categories/StudyNote/" rel="tag">StudyNote <span class="tag-num">4</span></a><a class="badge badge-secondary tag" href="/categories/Technology/" rel="tag">Technology <span class="tag-num">1</span></a><a class="badge badge-secondary tag" href="/categories/TravelNote/" rel="tag">TravelNote <span class="tag-num">10</span></a>
 			</div>
 		</div>
 	</div>
@@ -596,7 +596,7 @@
 				</button>
 			</div>
 			<div class="modal-body">
-				<a class="badge badge-secondary tag" href="/tags/%E4%B9%B1%E6%90%9E/" rel="tag">乱搞 <span class="tag-num">2</span></a><a class="badge badge-secondary tag" href="/tags/%E5%8A%A8%E6%80%81%E8%A7%84%E5%88%92/" rel="tag">动态规划 <span class="tag-num">1</span></a><a class="badge badge-secondary tag" href="/tags/%E6%A8%A1%E6%8B%9F%E8%B5%9B/" rel="tag">模拟赛 <span class="tag-num">22</span></a><a class="badge badge-secondary tag" href="/tags/%E9%9A%8F%E6%9C%BA%E7%AE%97%E6%B3%95/" rel="tag">随机算法 <span class="tag-num">1</span></a><a class="badge badge-secondary tag" href="/tags/%E9%AD%94%E6%80%94%E6%9D%AF/" rel="tag">魔怔杯 <span class="tag-num">2</span></a>
+				<a class="badge badge-secondary tag" href="/tags/%E4%B9%B1%E6%90%9E/" rel="tag">乱搞 <span class="tag-num">2</span></a><a class="badge badge-secondary tag" href="/tags/%E5%8A%A8%E6%80%81%E8%A7%84%E5%88%92/" rel="tag">动态规划 <span class="tag-num">1</span></a><a class="badge badge-secondary tag" href="/tags/%E6%A8%A1%E6%8B%9F%E8%B5%9B/" rel="tag">模拟赛 <span class="tag-num">23</span></a><a class="badge badge-secondary tag" href="/tags/%E9%9A%8F%E6%9C%BA%E7%AE%97%E6%B3%95/" rel="tag">随机算法 <span class="tag-num">1</span></a><a class="badge badge-secondary tag" href="/tags/%E9%AD%94%E6%80%94%E6%9D%AF/" rel="tag">魔怔杯 <span class="tag-num">2</span></a>
 			</div>
 		</div>
 	</div>
@@ -611,6 +611,138 @@
 		
 		
 			
+	<article class="post card bg-white shadow-sm border-0 post-preview">
+	<header class="post-header text-center">
+		
+		<a class="post-title" href="/archives/CF558C/">[题解] CF558C Amr and Chemistry</a>
+		<div class="post-meta">
+			
+						
+						<div class="post-meta-detail post-meta-detail-time">
+							<i class="fa fa-clock-o" aria-hidden="true"></i>
+							<time title="发布于 2024-7-28 14:46:00 | 编辑于 2025-2-12 21:08:45">2024-7-28 14:46
+							</time>
+						</div>
+					
+						
+							<div class="post-meta-devide">|</div>
+						
+						<div class="post-meta-detail post-meta-detail-categories">
+							<i class="fa fa-bookmark-o" aria-hidden="true"></i>
+							<a class="post-meta-detail-catagory-link" href="/categories/Solution/">Solution</a>
+						</div>
+					
+						
+							<div class="post-meta-devide">|</div>
+						
+						<div class="post-meta-detail post-meta-detail-words">
+							<i class="fa fa-book" aria-hidden="true"></i>
+							<span id="busuanzi_container_page_pv">
+								阅读<span id="busuanzi_value_page_pv"></span>次
+							</span>
+						</div>
+					
+						
+							<div class="post-meta-devide">|</div>
+						
+						<div class="post-meta-detail post-meta-detail-words">
+							<i class="fa fa-file-word-o" aria-hidden="true"></i>
+							807 字
+						</div>
+					
+						
+							<div class="post-meta-devide">|</div>
+						
+						<div class="post-meta-detail post-meta-detail-readingtime">
+							<i class="fa fa-hourglass-end" aria-hidden="true"></i>
+							3 分钟
+						</div>
+					
+		</div>
+		
+	</header>
+
+	<div class="post-content">
+		
+			
+				 前言
+本文是对 DennyQi 题解思想的补充做法。
+ 题目翻译
+nnn 个数 aia_iai​，每次可以选择 ai←ai×2a_i\gets a_i\times 2ai​←ai​×2 或者 ai←⌊ai2⌋a_i\gets \lfloor\frac{a_i}{2}\rfloorai​←⌊2ai​​⌋。
+问几次操作后 aia_iai​ 全部一样。...
+			
+		
+	</div>
+
+	
+</article>
+
+
+	<article class="post card bg-white shadow-sm border-0 post-preview">
+	<header class="post-header text-center">
+		
+		<a class="post-title" href="/archives/ABC358G/">[题解] ABC358G AtCoder Tour</a>
+		<div class="post-meta">
+			
+						
+						<div class="post-meta-detail post-meta-detail-time">
+							<i class="fa fa-clock-o" aria-hidden="true"></i>
+							<time title="发布于 2024-6-16 21:30:00 | 编辑于 2025-2-12 21:07:28">2024-6-16 21:30
+							</time>
+						</div>
+					
+						
+							<div class="post-meta-devide">|</div>
+						
+						<div class="post-meta-detail post-meta-detail-categories">
+							<i class="fa fa-bookmark-o" aria-hidden="true"></i>
+							<a class="post-meta-detail-catagory-link" href="/categories/Solution/">Solution</a>
+						</div>
+					
+						
+							<div class="post-meta-devide">|</div>
+						
+						<div class="post-meta-detail post-meta-detail-words">
+							<i class="fa fa-book" aria-hidden="true"></i>
+							<span id="busuanzi_container_page_pv">
+								阅读<span id="busuanzi_value_page_pv"></span>次
+							</span>
+						</div>
+					
+						
+							<div class="post-meta-devide">|</div>
+						
+						<div class="post-meta-detail post-meta-detail-words">
+							<i class="fa fa-file-word-o" aria-hidden="true"></i>
+							1.7k 字
+						</div>
+					
+						
+							<div class="post-meta-devide">|</div>
+						
+						<div class="post-meta-detail post-meta-detail-readingtime">
+							<i class="fa fa-hourglass-end" aria-hidden="true"></i>
+							9 分钟
+						</div>
+					
+		</div>
+		
+	</header>
+
+	<div class="post-content">
+		
+			
+				 题目翻译
+给定 n×mn\times mn×m 的网格，每个格子里有一个正整数 ai,ja_{i,j}ai,j​。你需要在从 (sx,sy)(sx,sy)(sx,sy) 开始，执行 kkk 次操作。每一操作可以选择不动或者走到任意一个四联通（上下左右）的格子。操作之后，可以获得所在格子的 ai,ja_{i,j}ai,j​ 的收益。
+1≤n,m≤5...
+			
+		
+	</div>
+
+	
+</article>
+
+
 	<article class="post card bg-white shadow-sm border-0 post-preview">
 	<header class="post-header text-center">
 		
@@ -1154,153 +1286,8 @@ LCP 是最长公共前缀。
 </article>
 
 
-	<article class="post card bg-white shadow-sm border-0 post-preview">
-	<header class="post-header text-center post-header-with-thumbnail">
-		
-				<img class='post-thumbnail lazyload' src='data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAYAAAAfFcSJAAAAGXRFWHRTb2Z0d2FyZQBBZG9iZSBJbWFnZVJlYWR5ccllPAAAABBJREFUeNpi+P//PwNAgAEACPwC/tuiTRYAAAAASUVORK5CYII=' data-original='https://cdn.luogu.com.cn/upload/image_hosting/ekx5uxvr.png' alt='thumbnail'></img>
-				<div class='post-header-text-container'>
-			
-		<a class="post-title" href="/archives/UVA1109/">[题解] UVA1109 Mummy Madness</a>
-		<div class="post-meta">
-			
-						
-						<div class="post-meta-detail post-meta-detail-time">
-							<i class="fa fa-clock-o" aria-hidden="true"></i>
-							<time title="发布于 2024-4-4 14:25:00 | 编辑于 2025-2-12 20:55:37">2024-4-4 14:25
-							</time>
-						</div>
-					
-						
-							<div class="post-meta-devide">|</div>
-						
-						<div class="post-meta-detail post-meta-detail-categories">
-							<i class="fa fa-bookmark-o" aria-hidden="true"></i>
-							<a class="post-meta-detail-catagory-link" href="/categories/Solution/">Solution</a>
-						</div>
-					
-						
-							<div class="post-meta-devide">|</div>
-						
-						<div class="post-meta-detail post-meta-detail-words">
-							<i class="fa fa-book" aria-hidden="true"></i>
-							<span id="busuanzi_container_page_pv">
-								阅读<span id="busuanzi_value_page_pv"></span>次
-							</span>
-						</div>
-					
-						
-							<div class="post-meta-devide">|</div>
-						
-						<div class="post-meta-detail post-meta-detail-words">
-							<i class="fa fa-file-word-o" aria-hidden="true"></i>
-							1k 字
-						</div>
-					
-						
-							<div class="post-meta-devide">|</div>
-						
-						<div class="post-meta-detail post-meta-detail-readingtime">
-							<i class="fa fa-hourglass-end" aria-hidden="true"></i>
-							5 分钟
-						</div>
-					
-		</div>
-		
-				</div>
-			
-	</header>
 
-	<div class="post-content">
-		
-			
-				 题目翻译
-平面直角坐标系中，有 nnn 个木乃伊，分别为 (xi,yi)(x_i,y_i)(xi​,yi​)。你在原点 (0,0)(0,0)(0,0) 上。
-每一个时刻你可以往 888 个相邻位置逃跑，或者待在原地。之后，木乃伊会向 888 个方向移动到最靠近你（距离为欧几里得距离）的位置。多只木乃伊可以在一个格子。
-问你多久可以不被木乃伊抓住。...
-			
-		
-	</div>
-
-	
-</article>
-
-
-	<article class="post card bg-white shadow-sm border-0 post-preview">
-	<header class="post-header text-center post-header-with-thumbnail">
-		
-				<img class='post-thumbnail lazyload' src='data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAYAAAAfFcSJAAAAGXRFWHRTb2Z0d2FyZQBBZG9iZSBJbWFnZVJlYWR5ccllPAAAABBJREFUeNpi+P//PwNAgAEACPwC/tuiTRYAAAAASUVORK5CYII=' data-original='https://cdn.luogu.com.cn/upload/image_hosting/6a5lp8on.png' alt='thumbnail'></img>
-				<div class='post-header-text-container'>
-			
-		<a class="post-title" href="/archives/P6453/">[题解] P6453 [COCI2008-2009#4] PERIODNI</a>
-		<div class="post-meta">
-			
-						
-						<div class="post-meta-detail post-meta-detail-time">
-							<i class="fa fa-clock-o" aria-hidden="true"></i>
-							<time title="发布于 2024-4-2 16:39:00 | 编辑于 2025-2-12 20:54:34">2024-4-2 16:39
-							</time>
-						</div>
-					
-						
-							<div class="post-meta-devide">|</div>
-						
-						<div class="post-meta-detail post-meta-detail-categories">
-							<i class="fa fa-bookmark-o" aria-hidden="true"></i>
-							<a class="post-meta-detail-catagory-link" href="/categories/Solution/">Solution</a>
-						</div>
-					
-						
-							<div class="post-meta-devide">|</div>
-						
-						<div class="post-meta-detail post-meta-detail-words">
-							<i class="fa fa-book" aria-hidden="true"></i>
-							<span id="busuanzi_container_page_pv">
-								阅读<span id="busuanzi_value_page_pv"></span>次
-							</span>
-						</div>
-					
-						
-							<div class="post-meta-devide">|</div>
-						
-						<div class="post-meta-detail post-meta-detail-words">
-							<i class="fa fa-file-word-o" aria-hidden="true"></i>
-							1.1k 字
-						</div>
-					
-						
-							<div class="post-meta-devide">|</div>
-						
-						<div class="post-meta-detail post-meta-detail-readingtime">
-							<i class="fa fa-hourglass-end" aria-hidden="true"></i>
-							4 分钟
-						</div>
-					
-		</div>
-		
-				</div>
-			
-	</header>
-
-	<div class="post-content">
-		
-			
-				 题目思路
-原来这种多边形转成笛卡尔树建树是常见 trick。练的太少导致的。
-但是这题其实不用笛卡尔树建树，因为 DP 部分复杂度较高其实这个优化（至少在我的程序上）没有太大作用。
-
-为了方便描述，定义中国象棋中的『車』为题目中的颜色，本质一样。
-考虑把这个多边形转成树，分割方式就是以底层开割。
-机房电脑的 NOI Linux 2.0 没有好用的...
-			
-		
-	</div>
-
-	
-</article>
-
-
-
-<nav><ul class="pagination"><li class="page-item"><a aria-label="First Page" class="page-link" href="/categories/Solution/"><i class="fa fa-angle-double-left" aria-hidden="true"></i></a></li><li class="page-item"><a aria-label="Previous Page" class="page-link" href="/categories/Solution/page/4/"><i class="fa fa-angle-left" aria-hidden="true"></i></a></li><li class="page-item"><a class="page-link" href="/categories/Solution/page/2/">2</a></li><li class="page-item"><a class="page-link" href="/categories/Solution/page/3/">3</a></li><li class="page-item"><a class="page-link" href="/categories/Solution/page/4/">4</a></li><li class="page-item active"><span class="page-link" style="cursor: default;">5</span></li><li class="page-item"><a class="page-link" href="/categories/Solution/page/6/">6</a></li><li class="page-item"><a class="page-link" href="/categories/Solution/page/7/">7</a></li><li class="page-item"><a class="page-link" href="/categories/Solution/page/8/">8</a></li><li class="page-item"><a aria-label="Next Page" class="page-link" href="/categories/Solution/page/6/"><i class="fa fa-angle-right" aria-hidden="true"></i></a></li><li class="page-item"><a aria-label="Last Page" class="page-link" href="/categories/Solution/page/15/"><i class="fa fa-angle-double-right" aria-hidden="true"></i></a></li></ul></nav><nav><ul class="pagination pagination-mobile"><li class="page-item"><a aria-label="First Page" class="page-link" href="/categories/Solution/"><i class="fa fa-angle-double-left" aria-hidden="true"></i></a></li><li class="page-item"><a aria-label="Previous Page" class="page-link" href="/categories/Solution/page/4/"><i class="fa fa-angle-left" aria-hidden="true"></i></a></li><li class="page-item"><a class="page-link" href="/categories/Solution/page/3/">3</a></li><li class="page-item"><a class="page-link" href="/categories/Solution/page/4/">4</a></li><li class="page-item active"><span class="page-link" style="cursor: default;">5</span></li><li class="page-item"><a class="page-link" href="/categories/Solution/page/6/">6</a></li><li class="page-item"><a class="page-link" href="/categories/Solution/page/7/">7</a></li><li class="page-item"><a aria-label="Next Page" class="page-link" href="/categories/Solution/page/6/"><i class="fa fa-angle-right" aria-hidden="true"></i></a></li><li class="page-item"><a aria-label="Last Page" class="page-link" href="/categories/Solution/page/15/"><i class="fa fa-angle-double-right" aria-hidden="true"></i></a></li></ul></nav>
+<nav><ul class="pagination"><li class="page-item"><a aria-label="First Page" class="page-link" href="/categories/Solution/"><i class="fa fa-angle-double-left" aria-hidden="true"></i></a></li><li class="page-item"><a aria-label="Previous Page" class="page-link" href="/categories/Solution/page/4/"><i class="fa fa-angle-left" aria-hidden="true"></i></a></li><li class="page-item"><a class="page-link" href="/categories/Solution/page/2/">2</a></li><li class="page-item"><a class="page-link" href="/categories/Solution/page/3/">3</a></li><li class="page-item"><a class="page-link" href="/categories/Solution/page/4/">4</a></li><li class="page-item active"><span class="page-link" style="cursor: default;">5</span></li><li class="page-item"><a class="page-link" href="/categories/Solution/page/6/">6</a></li><li class="page-item"><a class="page-link" href="/categories/Solution/page/7/">7</a></li><li class="page-item"><a class="page-link" href="/categories/Solution/page/8/">8</a></li><li class="page-item"><a aria-label="Next Page" class="page-link" href="/categories/Solution/page/6/"><i class="fa fa-angle-right" aria-hidden="true"></i></a></li><li class="page-item"><a aria-label="Last Page" class="page-link" href="/categories/Solution/page/16/"><i class="fa fa-angle-double-right" aria-hidden="true"></i></a></li></ul></nav><nav><ul class="pagination pagination-mobile"><li class="page-item"><a aria-label="First Page" class="page-link" href="/categories/Solution/"><i class="fa fa-angle-double-left" aria-hidden="true"></i></a></li><li class="page-item"><a aria-label="Previous Page" class="page-link" href="/categories/Solution/page/4/"><i class="fa fa-angle-left" aria-hidden="true"></i></a></li><li class="page-item"><a class="page-link" href="/categories/Solution/page/3/">3</a></li><li class="page-item"><a class="page-link" href="/categories/Solution/page/4/">4</a></li><li class="page-item active"><span class="page-link" style="cursor: default;">5</span></li><li class="page-item"><a class="page-link" href="/categories/Solution/page/6/">6</a></li><li class="page-item"><a class="page-link" href="/categories/Solution/page/7/">7</a></li><li class="page-item"><a aria-label="Next Page" class="page-link" href="/categories/Solution/page/6/"><i class="fa fa-angle-right" aria-hidden="true"></i></a></li><li class="page-item"><a aria-label="Last Page" class="page-link" href="/categories/Solution/page/16/"><i class="fa fa-angle-double-right" aria-hidden="true"></i></a></li></ul></nav>
 
 
 		

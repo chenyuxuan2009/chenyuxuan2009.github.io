@@ -460,7 +460,7 @@
 		
 			<p class="text-black mt-3 mb-0 opacity-8">
 				<i class="fa fa-file-o mr-1"></i>
-				150 篇文章
+				152 篇文章
 			</p>
 		
 	</div>
@@ -519,7 +519,7 @@
 							<nav class="site-state">
 								<div class="site-state-item site-state-posts">
 									<a href="/archives">
-										<span class="site-state-item-count">169</span>
+										<span class="site-state-item-count">171</span>
 										<span class="site-state-item-name">文章</span>
 									</a>
 								</div>
@@ -581,7 +581,7 @@
 				</button>
 			</div>
 			<div class="modal-body">
-				<a class="badge badge-secondary tag" href="/categories/Essay/" rel="tag">Essay <span class="tag-num">4</span></a><a class="badge badge-secondary tag" href="/categories/Solution/" rel="tag">Solution <span class="tag-num">150</span></a><a class="badge badge-secondary tag" href="/categories/StudyNote/" rel="tag">StudyNote <span class="tag-num">4</span></a><a class="badge badge-secondary tag" href="/categories/Technology/" rel="tag">Technology <span class="tag-num">1</span></a><a class="badge badge-secondary tag" href="/categories/TravelNote/" rel="tag">TravelNote <span class="tag-num">10</span></a>
+				<a class="badge badge-secondary tag" href="/categories/Essay/" rel="tag">Essay <span class="tag-num">4</span></a><a class="badge badge-secondary tag" href="/categories/Solution/" rel="tag">Solution <span class="tag-num">152</span></a><a class="badge badge-secondary tag" href="/categories/StudyNote/" rel="tag">StudyNote <span class="tag-num">4</span></a><a class="badge badge-secondary tag" href="/categories/Technology/" rel="tag">Technology <span class="tag-num">1</span></a><a class="badge badge-secondary tag" href="/categories/TravelNote/" rel="tag">TravelNote <span class="tag-num">10</span></a>
 			</div>
 		</div>
 	</div>
@@ -596,7 +596,7 @@
 				</button>
 			</div>
 			<div class="modal-body">
-				<a class="badge badge-secondary tag" href="/tags/%E4%B9%B1%E6%90%9E/" rel="tag">乱搞 <span class="tag-num">2</span></a><a class="badge badge-secondary tag" href="/tags/%E5%8A%A8%E6%80%81%E8%A7%84%E5%88%92/" rel="tag">动态规划 <span class="tag-num">1</span></a><a class="badge badge-secondary tag" href="/tags/%E6%A8%A1%E6%8B%9F%E8%B5%9B/" rel="tag">模拟赛 <span class="tag-num">22</span></a><a class="badge badge-secondary tag" href="/tags/%E9%9A%8F%E6%9C%BA%E7%AE%97%E6%B3%95/" rel="tag">随机算法 <span class="tag-num">1</span></a><a class="badge badge-secondary tag" href="/tags/%E9%AD%94%E6%80%94%E6%9D%AF/" rel="tag">魔怔杯 <span class="tag-num">2</span></a>
+				<a class="badge badge-secondary tag" href="/tags/%E4%B9%B1%E6%90%9E/" rel="tag">乱搞 <span class="tag-num">2</span></a><a class="badge badge-secondary tag" href="/tags/%E5%8A%A8%E6%80%81%E8%A7%84%E5%88%92/" rel="tag">动态规划 <span class="tag-num">1</span></a><a class="badge badge-secondary tag" href="/tags/%E6%A8%A1%E6%8B%9F%E8%B5%9B/" rel="tag">模拟赛 <span class="tag-num">23</span></a><a class="badge badge-secondary tag" href="/tags/%E9%9A%8F%E6%9C%BA%E7%AE%97%E6%B3%95/" rel="tag">随机算法 <span class="tag-num">1</span></a><a class="badge badge-secondary tag" href="/tags/%E9%AD%94%E6%80%94%E6%9D%AF/" rel="tag">魔怔杯 <span class="tag-num">2</span></a>
 			</div>
 		</div>
 	</div>
@@ -611,6 +611,138 @@
 		
 		
 			
+	<article class="post card bg-white shadow-sm border-0 post-preview">
+	<header class="post-header text-center">
+		
+		<a class="post-title" href="/archives/P3628/">[题解] P3628 [APIO2010] 特别行动队</a>
+		<div class="post-meta">
+			
+						
+						<div class="post-meta-detail post-meta-detail-time">
+							<i class="fa fa-clock-o" aria-hidden="true"></i>
+							<time title="发布于 2023-12-13 22:36:00 | 编辑于 2025-2-12 16:42:45">2023-12-13 22:36
+							</time>
+						</div>
+					
+						
+							<div class="post-meta-devide">|</div>
+						
+						<div class="post-meta-detail post-meta-detail-categories">
+							<i class="fa fa-bookmark-o" aria-hidden="true"></i>
+							<a class="post-meta-detail-catagory-link" href="/categories/Solution/">Solution</a>
+						</div>
+					
+						
+							<div class="post-meta-devide">|</div>
+						
+						<div class="post-meta-detail post-meta-detail-words">
+							<i class="fa fa-book" aria-hidden="true"></i>
+							<span id="busuanzi_container_page_pv">
+								阅读<span id="busuanzi_value_page_pv"></span>次
+							</span>
+						</div>
+					
+						
+							<div class="post-meta-devide">|</div>
+						
+						<div class="post-meta-detail post-meta-detail-words">
+							<i class="fa fa-file-word-o" aria-hidden="true"></i>
+							990 字
+						</div>
+					
+						
+							<div class="post-meta-devide">|</div>
+						
+						<div class="post-meta-detail post-meta-detail-readingtime">
+							<i class="fa fa-hourglass-end" aria-hidden="true"></i>
+							5 分钟
+						</div>
+					
+		</div>
+		
+	</header>
+
+	<div class="post-content">
+		
+			
+				特别行动队
+易得 O(n2)\mathcal O(n^2)O(n2) 状态转移方程 fi←max⁡j=0j&lt;i{fj+a(si−sj)2+b(si−sj)+c}f_i\gets \max\limits_{j=0}^{j&lt;i}\{f_j+a(s_i-s_j)^2+b(s_i-s_j)+c\}fi​←j=0maxj&lt;i​{fj​+a(...
+			
+		
+	</div>
+
+	
+</article>
+
+
+	<article class="post card bg-white shadow-sm border-0 post-preview">
+	<header class="post-header text-center">
+		
+		<a class="post-title" href="/archives/ABC329F/">[题解] ABC329F Colored Ball</a>
+		<div class="post-meta">
+			
+						
+						<div class="post-meta-detail post-meta-detail-time">
+							<i class="fa fa-clock-o" aria-hidden="true"></i>
+							<time title="发布于 2023-11-19 14:22:00 | 编辑于 2025-2-12 14:50:54">2023-11-19 14:22
+							</time>
+						</div>
+					
+						
+							<div class="post-meta-devide">|</div>
+						
+						<div class="post-meta-detail post-meta-detail-categories">
+							<i class="fa fa-bookmark-o" aria-hidden="true"></i>
+							<a class="post-meta-detail-catagory-link" href="/categories/Solution/">Solution</a>
+						</div>
+					
+						
+							<div class="post-meta-devide">|</div>
+						
+						<div class="post-meta-detail post-meta-detail-words">
+							<i class="fa fa-book" aria-hidden="true"></i>
+							<span id="busuanzi_container_page_pv">
+								阅读<span id="busuanzi_value_page_pv"></span>次
+							</span>
+						</div>
+					
+						
+							<div class="post-meta-devide">|</div>
+						
+						<div class="post-meta-detail post-meta-detail-words">
+							<i class="fa fa-file-word-o" aria-hidden="true"></i>
+							465 字
+						</div>
+					
+						
+							<div class="post-meta-devide">|</div>
+						
+						<div class="post-meta-detail post-meta-detail-readingtime">
+							<i class="fa fa-hourglass-end" aria-hidden="true"></i>
+							1 分钟
+						</div>
+					
+		</div>
+		
+	</header>
+
+	<div class="post-content">
+		
+			
+				 闲话
+来点不同的大炮打蚊子的非 STL 的做法。
+ 题目翻译
+你有 nnn 个盒子，每个盒子一开始装了一个颜色为 cic_ici​ 的球。
+有 qqq 次询问（操作），每次询问给出一对 (a,b)(a,b)(a,b)，要把盒子 aaa 的所有球转到盒子 bbb 里，问此时 bbb 里有多少颜色不同的球。
+1≤n,q≤2×105,1≤a,b,ci≤...
+			
+		
+	</div>
+
+	
+</article>
+
+
 	<article class="post card bg-white shadow-sm border-0 post-preview">
 	<header class="post-header text-center post-header-with-thumbnail">
 		
@@ -1167,157 +1299,8 @@ A 和 B 正在赛跑，前 T1T_1T1​ 分钟 A 和 B 速度分别是 A1A_1A1​ 
 </article>
 
 
-	<article class="post card bg-white shadow-sm border-0 post-preview">
-	<header class="post-header text-center">
-		
-		<a class="post-title" href="/archives/20231007_mock/">[题解] 20231007 | CSP2023 考前模拟赛 做题笔记</a>
-		<div class="post-meta">
-			
-						
-						<div class="post-meta-detail post-meta-detail-time">
-							<i class="fa fa-clock-o" aria-hidden="true"></i>
-							<time title="发布于 2023-10-7 15:50:00 | 编辑于 2025-2-12 21:24:22">2023-10-7 15:50
-							</time>
-						</div>
-					
-						
-							<div class="post-meta-devide">|</div>
-						
-						<div class="post-meta-detail post-meta-detail-categories">
-							<i class="fa fa-bookmark-o" aria-hidden="true"></i>
-							<a class="post-meta-detail-catagory-link" href="/categories/Solution/">Solution</a>
-						</div>
-					
-						
-							<div class="post-meta-devide">|</div>
-						
-						<div class="post-meta-detail post-meta-detail-words">
-							<i class="fa fa-book" aria-hidden="true"></i>
-							<span id="busuanzi_container_page_pv">
-								阅读<span id="busuanzi_value_page_pv"></span>次
-							</span>
-						</div>
-					
-						
-							<div class="post-meta-devide">|</div>
-						
-						<div class="post-meta-detail post-meta-detail-words">
-							<i class="fa fa-file-word-o" aria-hidden="true"></i>
-							1.6k 字
-						</div>
-					
-						
-							<div class="post-meta-devide">|</div>
-						
-						<div class="post-meta-detail post-meta-detail-readingtime">
-							<i class="fa fa-hourglass-end" aria-hidden="true"></i>
-							8 分钟
-						</div>
-					
-		</div>
-		
-	</header>
 
-	<div class="post-content">
-		
-			
-				 书
-简单题，但是有个小丑挂掉了。
-对于每个 [10x,10x+1−1][10^x,10^{x+1}-1][10x,10x+1−1] 的区间，计算 nnn 覆盖了多大范围。
-#include &lt;bits/stdc++.h&gt;
-using namespace std;
-typedef long long ll;
-int main()
-&#1...
-			
-		
-	</div>
-
-	
-		<div class="post-tags">
-			<i class="fa fa-tags" aria-hidden="true"></i>
-			<a class="tag badge badge-secondary post-meta-detail-tag -none-link" href="/tags/%E6%A8%A1%E6%8B%9F%E8%B5%9B/" rel="tag">模拟赛</a>
-		</div>
-	
-</article>
-
-
-	<article class="post card bg-white shadow-sm border-0 post-preview">
-	<header class="post-header text-center">
-		
-		<a class="post-title" href="/archives/20230818_mock/">[题解] 20230818 | CSP2023 考前模拟赛 做题笔记</a>
-		<div class="post-meta">
-			
-						
-						<div class="post-meta-detail post-meta-detail-time">
-							<i class="fa fa-clock-o" aria-hidden="true"></i>
-							<time title="发布于 2023-8-19 7:08:00 | 编辑于 2025-2-14 7:16:52">2023-8-19 7:08
-							</time>
-						</div>
-					
-						
-							<div class="post-meta-devide">|</div>
-						
-						<div class="post-meta-detail post-meta-detail-categories">
-							<i class="fa fa-bookmark-o" aria-hidden="true"></i>
-							<a class="post-meta-detail-catagory-link" href="/categories/Solution/">Solution</a>
-						</div>
-					
-						
-							<div class="post-meta-devide">|</div>
-						
-						<div class="post-meta-detail post-meta-detail-words">
-							<i class="fa fa-book" aria-hidden="true"></i>
-							<span id="busuanzi_container_page_pv">
-								阅读<span id="busuanzi_value_page_pv"></span>次
-							</span>
-						</div>
-					
-						
-							<div class="post-meta-devide">|</div>
-						
-						<div class="post-meta-detail post-meta-detail-words">
-							<i class="fa fa-file-word-o" aria-hidden="true"></i>
-							1.2k 字
-						</div>
-					
-						
-							<div class="post-meta-devide">|</div>
-						
-						<div class="post-meta-detail post-meta-detail-readingtime">
-							<i class="fa fa-hourglass-end" aria-hidden="true"></i>
-							6 分钟
-						</div>
-					
-		</div>
-		
-	</header>
-
-	<div class="post-content">
-		
-			
-				 赌徒
-数学题，分类讨论。不多说。
-#include &lt;bits/stdc++.h&gt;
-using namespace std;
-template &lt;typename T&gt;
-void gmx(T &amp;x, T y) &#123; x = max(x, y); &#125;
-template &lt;typename T&...
-			
-		
-	</div>
-
-	
-		<div class="post-tags">
-			<i class="fa fa-tags" aria-hidden="true"></i>
-			<a class="tag badge badge-secondary post-meta-detail-tag -none-link" href="/tags/%E6%A8%A1%E6%8B%9F%E8%B5%9B/" rel="tag">模拟赛</a>
-		</div>
-	
-</article>
-
-
-
-<nav><ul class="pagination"><li class="page-item"><a aria-label="First Page" class="page-link" href="/categories/Solution/"><i class="fa fa-angle-double-left" aria-hidden="true"></i></a></li><li class="page-item"><a aria-label="Previous Page" class="page-link" href="/categories/Solution/page/7/"><i class="fa fa-angle-left" aria-hidden="true"></i></a></li><li class="page-item"><a class="page-link" href="/categories/Solution/page/5/">5</a></li><li class="page-item"><a class="page-link" href="/categories/Solution/page/6/">6</a></li><li class="page-item"><a class="page-link" href="/categories/Solution/page/7/">7</a></li><li class="page-item active"><span class="page-link" style="cursor: default;">8</span></li><li class="page-item"><a class="page-link" href="/categories/Solution/page/9/">9</a></li><li class="page-item"><a class="page-link" href="/categories/Solution/page/10/">10</a></li><li class="page-item"><a class="page-link" href="/categories/Solution/page/11/">11</a></li><li class="page-item"><a aria-label="Next Page" class="page-link" href="/categories/Solution/page/9/"><i class="fa fa-angle-right" aria-hidden="true"></i></a></li><li class="page-item"><a aria-label="Last Page" class="page-link" href="/categories/Solution/page/15/"><i class="fa fa-angle-double-right" aria-hidden="true"></i></a></li></ul></nav><nav><ul class="pagination pagination-mobile"><li class="page-item"><a aria-label="First Page" class="page-link" href="/categories/Solution/"><i class="fa fa-angle-double-left" aria-hidden="true"></i></a></li><li class="page-item"><a aria-label="Previous Page" class="page-link" href="/categories/Solution/page/7/"><i class="fa fa-angle-left" aria-hidden="true"></i></a></li><li class="page-item"><a class="page-link" href="/categories/Solution/page/6/">6</a></li><li class="page-item"><a class="page-link" href="/categories/Solution/page/7/">7</a></li><li class="page-item active"><span class="page-link" style="cursor: default;">8</span></li><li class="page-item"><a class="page-link" href="/categories/Solution/page/9/">9</a></li><li class="page-item"><a class="page-link" href="/categories/Solution/page/10/">10</a></li><li class="page-item"><a aria-label="Next Page" class="page-link" href="/categories/Solution/page/9/"><i class="fa fa-angle-right" aria-hidden="true"></i></a></li><li class="page-item"><a aria-label="Last Page" class="page-link" href="/categories/Solution/page/15/"><i class="fa fa-angle-double-right" aria-hidden="true"></i></a></li></ul></nav>
+<nav><ul class="pagination"><li class="page-item"><a aria-label="First Page" class="page-link" href="/categories/Solution/"><i class="fa fa-angle-double-left" aria-hidden="true"></i></a></li><li class="page-item"><a aria-label="Previous Page" class="page-link" href="/categories/Solution/page/7/"><i class="fa fa-angle-left" aria-hidden="true"></i></a></li><li class="page-item"><a class="page-link" href="/categories/Solution/page/5/">5</a></li><li class="page-item"><a class="page-link" href="/categories/Solution/page/6/">6</a></li><li class="page-item"><a class="page-link" href="/categories/Solution/page/7/">7</a></li><li class="page-item active"><span class="page-link" style="cursor: default;">8</span></li><li class="page-item"><a class="page-link" href="/categories/Solution/page/9/">9</a></li><li class="page-item"><a class="page-link" href="/categories/Solution/page/10/">10</a></li><li class="page-item"><a class="page-link" href="/categories/Solution/page/11/">11</a></li><li class="page-item"><a aria-label="Next Page" class="page-link" href="/categories/Solution/page/9/"><i class="fa fa-angle-right" aria-hidden="true"></i></a></li><li class="page-item"><a aria-label="Last Page" class="page-link" href="/categories/Solution/page/16/"><i class="fa fa-angle-double-right" aria-hidden="true"></i></a></li></ul></nav><nav><ul class="pagination pagination-mobile"><li class="page-item"><a aria-label="First Page" class="page-link" href="/categories/Solution/"><i class="fa fa-angle-double-left" aria-hidden="true"></i></a></li><li class="page-item"><a aria-label="Previous Page" class="page-link" href="/categories/Solution/page/7/"><i class="fa fa-angle-left" aria-hidden="true"></i></a></li><li class="page-item"><a class="page-link" href="/categories/Solution/page/6/">6</a></li><li class="page-item"><a class="page-link" href="/categories/Solution/page/7/">7</a></li><li class="page-item active"><span class="page-link" style="cursor: default;">8</span></li><li class="page-item"><a class="page-link" href="/categories/Solution/page/9/">9</a></li><li class="page-item"><a class="page-link" href="/categories/Solution/page/10/">10</a></li><li class="page-item"><a aria-label="Next Page" class="page-link" href="/categories/Solution/page/9/"><i class="fa fa-angle-right" aria-hidden="true"></i></a></li><li class="page-item"><a aria-label="Last Page" class="page-link" href="/categories/Solution/page/16/"><i class="fa fa-angle-double-right" aria-hidden="true"></i></a></li></ul></nav>
 
 
 		
