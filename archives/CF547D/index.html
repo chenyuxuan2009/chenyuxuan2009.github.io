@@ -1,24 +1,28 @@
 <!DOCTYPE html>
 
 <html class="article-header-style-1">
-<head>
+<head><!-- hexo injector head_begin start -->
+<link rel="stylesheet" href="/css/bilicard.css">
+<!-- hexo injector head_begin end -->
 
 </script>
 	<link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/highlight.js/11.1.0/styles/a11y-light.min.css">
 	<script src="//cdnjs.cloudflare.com/ajax/libs/highlight.js/11.1.0/highlight.min.js"></script>
 	
-	<title>归档 : 2024/11 - 沉石鱼惊旋 的博客</title>
+	<title>[题解] CF547D Mike and Fish - 沉石鱼惊旋 的博客</title>
 	<meta charset="utf-8">
 	
 		<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=5">
 	
-	<meta name="description" content="沉石鱼惊旋 的博客">
-<meta property="og:type" content="website">
-<meta property="og:title" content="沉石鱼惊旋 的博客">
-<meta property="og:url" content="http://blog.cyx2009.top/archives/2024/11/index.html">
+	<meta name="description" content="题目翻译 平面上有 nnn 个点 (xi,yi)(x_i,y_i)(xi​,yi​)，给每个点染红色或者蓝色，使得一行一列两种颜色的数量最多相差 111。构造方案。 1≤n,xi,yi≤2×1051\leq n,x_i,y_i\leq 2\times 10^51≤n,xi​,yi​≤2×105。  题目做法 考虑建二分图。按行列分成左右两部分。如果是 R→CR\to CR→C 那么染成红色否则染">
+<meta property="og:type" content="article">
+<meta property="og:title" content="[题解] CF547D Mike and Fish">
+<meta property="og:url" content="http://blog.cyx2009.top/archives/CF547D/index.html">
 <meta property="og:site_name" content="沉石鱼惊旋 的博客">
-<meta property="og:description" content="沉石鱼惊旋 的博客">
+<meta property="og:description" content="题目翻译 平面上有 nnn 个点 (xi,yi)(x_i,y_i)(xi​,yi​)，给每个点染红色或者蓝色，使得一行一列两种颜色的数量最多相差 111。构造方案。 1≤n,xi,yi≤2×1051\leq n,x_i,y_i\leq 2\times 10^51≤n,xi​,yi​≤2×105。  题目做法 考虑建二分图。按行列分成左右两部分。如果是 R→CR\to CR→C 那么染成红色否则染">
 <meta property="og:locale" content="zh_CN">
+<meta property="article:published_time" content="2025-02-16T08:47:00.000Z">
+<meta property="article:modified_time" content="2025-02-16T10:54:07.049Z">
 <meta property="article:author" content="CYX">
 <meta name="twitter:card" content="summary">
 
@@ -453,15 +457,6 @@
 
 <div class="page-information-card-container">
 	
-		
-<div class="page-information-card card bg-gradient-secondary shadow-lg border-0">
-	<div class="card-body">
-		<h3 class="text-black">归档 : 2024/11 </h3>
-		
-	</div>
-</div>
-
-	
 </div>
 
 <div id="sidebar_mask"></div>
@@ -497,18 +492,49 @@
 		<div id="leftbar_part2" class="widget widget_search card bg-white shadow-sm border-0">
 			<div id="leftbar_part2_inner" class="card-body">
 				
-				<div class="nav-wrapper" style="padding-top: 5px; display:none; ">
+				<div class="nav-wrapper" style="padding-top: 5px;">
 	                <ul class="nav nav-pills nav-fill" role="tablist">
 						
+							<li class="nav-item sidebar-tab-switcher">
+								<a class="active show" id="leftbar_tab_catalog_btn" data-toggle="tab" href="#leftbar_tab_catalog" role="tab" aria-controls="leftbar_tab_catalog" no-pjax>文章目录</a>
+							</li>
+						
 						<li class="nav-item sidebar-tab-switcher">
-							<a class="active show" id="leftbar_tab_overview_btn" data-toggle="tab" href="#leftbar_tab_overview" role="tab" aria-controls="leftbar_tab_overview" no-pjax>站点概览</a>
+							<a class="" id="leftbar_tab_overview_btn" data-toggle="tab" href="#leftbar_tab_overview" role="tab" aria-controls="leftbar_tab_overview" no-pjax>站点概览</a>
 						</li>
 	                </ul>
 				</div>
 				<div>
 					<div class="tab-content" style="padding: 10px 10px 0 10px;">
 						
-						<div class="tab-pane fade text-center active show" id="leftbar_tab_overview" role="tabpanel" aria-labelledby="leftbar_tab_overview_btn">
+							<div class="tab-pane fade active show" id="leftbar_tab_catalog" role="tabpanel" aria-labelledby="leftbar_tab_catalog_btn">
+								<div id="leftbar_catalog"></div>
+								<script type="text/javascript">
+									$(function () {
+										$(document).headIndex({
+											articleWrapSelector: '#post_content',
+											indexBoxSelector: '#leftbar_catalog',
+											subItemBoxClass: "index-subItem-box",
+											itemClass: "index-item",
+											linkClass: "index-link",
+											offset: 80,
+										});
+									})
+								</script>
+								
+									<style>
+										#leftbar_catalog ul {
+											counter-reset: blog_catalog_number;
+										}
+										#leftbar_catalog li.index-item > a:before {
+											content: counters(blog_catalog_number, '.') " ";
+											counter-increment: blog_catalog_number;
+										}
+									</style>
+								
+							</div>
+						
+						<div class="tab-pane fade text-center" id="leftbar_tab_overview" role="tabpanel" aria-labelledby="leftbar_tab_overview_btn">
 							<img id="leftbar_overview_author_image" src="/assets/img/favicon.ico" class="img-fluid rounded-circle shadow-sm" style="width: 100px;" alt="avatar">
 							<h6 id="leftbar_overview_author_name">沉石鱼惊旋</h6>
 							<nav class="site-state">
@@ -602,157 +628,17 @@
 	<main id="main" class="site-main" role="main">
 		
 		
-		
-				
-	<article class="post card bg-white shadow-sm border-0 post-preview">
+			
+	<article class="post post-full card bg-white shadow-sm border-0 post-preview">
 	<header class="post-header text-center">
 		
-		<a class="post-title" href="/archives/NOIP2024/">[游记] NOIP 2024 游记</a>
+		<a class="post-title" href="/archives/CF547D/">[题解] CF547D Mike and Fish</a>
 		<div class="post-meta">
 			
 						
 						<div class="post-meta-detail post-meta-detail-time">
 							<i class="fa fa-clock-o" aria-hidden="true"></i>
-							<time title="发布于 2024-11-27 11:53:00 | 编辑于 2025-2-12 21:47:35">2024-11-27 11:53
-							</time>
-						</div>
-					
-						
-							<div class="post-meta-devide">|</div>
-						
-						<div class="post-meta-detail post-meta-detail-categories">
-							<i class="fa fa-bookmark-o" aria-hidden="true"></i>
-							<a class="post-meta-detail-catagory-link" href="/categories/TravelNote/">TravelNote</a>
-						</div>
-					
-						
-							<div class="post-meta-devide">|</div>
-						
-						<div class="post-meta-detail post-meta-detail-words">
-							<i class="fa fa-book" aria-hidden="true"></i>
-							<span id="busuanzi_container_page_pv">
-								阅读<span id="busuanzi_value_page_pv"></span>次
-							</span>
-						</div>
-					
-						
-							<div class="post-meta-devide">|</div>
-						
-						<div class="post-meta-detail post-meta-detail-words">
-							<i class="fa fa-file-word-o" aria-hidden="true"></i>
-							1.4k 字
-						</div>
-					
-						
-							<div class="post-meta-devide">|</div>
-						
-						<div class="post-meta-detail post-meta-detail-readingtime">
-							<i class="fa fa-hourglass-end" aria-hidden="true"></i>
-							5 分钟
-						</div>
-					
-		</div>
-		
-	</header>
-
-	<div class="post-content">
-		
-			
-				 Day -3
-晚上 hb 突然找了 KingPowers 让他组模拟赛。原来赛前两天也是可以有模拟的！！！
-KingPowers 看了发现是两个 NOI 模拟和两个省选模拟拼起来的。啊？
-偷偷拿到了题面。Ivan 晚上就把 T1 过了。
- Day -2
-八点十分起来。九点不到到的世贸，晚了半小时开模拟。
-T1 真是绝世无敌奶龙题。。。。。。。。你...
-			
-		
-	</div>
-
-	
-</article>
-
-
-	<article class="post card bg-white shadow-sm border-0 post-preview">
-	<header class="post-header text-center">
-		
-		<a class="post-title" href="/archives/THUPC2025/">[游记] THUPC 2025 游记</a>
-		<div class="post-meta">
-			
-						
-						<div class="post-meta-detail post-meta-detail-time">
-							<i class="fa fa-clock-o" aria-hidden="true"></i>
-							<time title="发布于 2024-11-27 11:53:00 | 编辑于 2025-2-12 21:48:14">2024-11-27 11:53
-							</time>
-						</div>
-					
-						
-							<div class="post-meta-devide">|</div>
-						
-						<div class="post-meta-detail post-meta-detail-categories">
-							<i class="fa fa-bookmark-o" aria-hidden="true"></i>
-							<a class="post-meta-detail-catagory-link" href="/categories/TravelNote/">TravelNote</a>
-						</div>
-					
-						
-							<div class="post-meta-devide">|</div>
-						
-						<div class="post-meta-detail post-meta-detail-words">
-							<i class="fa fa-book" aria-hidden="true"></i>
-							<span id="busuanzi_container_page_pv">
-								阅读<span id="busuanzi_value_page_pv"></span>次
-							</span>
-						</div>
-					
-						
-							<div class="post-meta-devide">|</div>
-						
-						<div class="post-meta-detail post-meta-detail-words">
-							<i class="fa fa-file-word-o" aria-hidden="true"></i>
-							364 字
-						</div>
-					
-						
-							<div class="post-meta-devide">|</div>
-						
-						<div class="post-meta-detail post-meta-detail-readingtime">
-							<i class="fa fa-hourglass-end" aria-hidden="true"></i>
-							1 分钟
-						</div>
-					
-		</div>
-		
-	</header>
-
-	<div class="post-content">
-		
-			
-				 Day -(1e9 + 7)
-注册了 THUPC 2025 的账号。加了 happybob 的团队。
-其实早就约好组队了。但是几场 CF 的 ICPC 赛制比赛都没以这个队伍的名义参加。不管了。
- Day 0
-早上十点钟被叫起床了。吃了点东西去世贸。和队友连麦打。
-牛魔的怎么还有一分钟有人喊开了开了。蓝的盆。
-随机开题。
-开场看了眼 M，打了个 ...
-			
-		
-	</div>
-
-	
-</article>
-
-
-	<article class="post card bg-white shadow-sm border-0 post-preview">
-	<header class="post-header text-center">
-		
-		<a class="post-title" href="/archives/ICPC2024RegionalTaichung/">[题解] 2024 ICPC 台中 区域赛 游记 &amp; 题解 | Online Mirror</a>
-		<div class="post-meta">
-			
-						
-						<div class="post-meta-detail post-meta-detail-time">
-							<i class="fa fa-clock-o" aria-hidden="true"></i>
-							<time title="发布于 2024-11-26 0:01:00 | 编辑于 2025-2-13 7:35:12">2024-11-26 0:01
+							<time title="发布于 2025-2-16 16:47:00 | 编辑于 2025-2-16 18:54:07">2025-2-16 16:47
 							</time>
 						</div>
 					
@@ -768,7 +654,7 @@ T1 真是绝世无敌奶龙题。。。。。。。。你...
 							<div class="post-meta-devide">|</div>
 						
 						<div class="post-meta-detail post-meta-detail-words">
-							<i class="fa fa-book" aria-hidden="true"></i>
+							<i class="fa fa fa-book" aria-hidden="true"></i>
 							<span id="busuanzi_container_page_pv">
 								阅读<span id="busuanzi_value_page_pv"></span>次
 							</span>
@@ -779,145 +665,7 @@ T1 真是绝世无敌奶龙题。。。。。。。。你...
 						
 						<div class="post-meta-detail post-meta-detail-words">
 							<i class="fa fa-file-word-o" aria-hidden="true"></i>
-							5.8k 字
-						</div>
-					
-						
-							<div class="post-meta-devide">|</div>
-						
-						<div class="post-meta-detail post-meta-detail-readingtime">
-							<i class="fa fa-hourglass-end" aria-hidden="true"></i>
-							24 分钟
-						</div>
-					
-		</div>
-		
-	</header>
-
-	<div class="post-content">
-		
-			
-				
-奶龙击败贝利亚，我纯躺赢 Rank.8。
-
-本场比赛可以在 2024 ICPC Asia Taichung Regional Contest (Unrated, Online Mirror, ICPC Rules, Preferably Teams) 参与。是 台中区域赛 的镜像赛。
-我的队友分别是 夜明 和 IvanZhang2009。
- 游记...
-			
-		
-	</div>
-
-	
-</article>
-
-
-	<article class="post card bg-white shadow-sm border-0 post-preview">
-	<header class="post-header text-center">
-		
-		<a class="post-title" href="/archives/CF722F/">[题解] [模拟赛 20241105] CF722F Cyclic Cipher</a>
-		<div class="post-meta">
-			
-						
-						<div class="post-meta-detail post-meta-detail-time">
-							<i class="fa fa-clock-o" aria-hidden="true"></i>
-							<time title="发布于 2024-11-6 11:33:00 | 编辑于 2025-2-12 21:42:44">2024-11-6 11:33
-							</time>
-						</div>
-					
-						
-							<div class="post-meta-devide">|</div>
-						
-						<div class="post-meta-detail post-meta-detail-categories">
-							<i class="fa fa-bookmark-o" aria-hidden="true"></i>
-							<a class="post-meta-detail-catagory-link" href="/categories/Solution/">Solution</a>
-						</div>
-					
-						
-							<div class="post-meta-devide">|</div>
-						
-						<div class="post-meta-detail post-meta-detail-words">
-							<i class="fa fa-book" aria-hidden="true"></i>
-							<span id="busuanzi_container_page_pv">
-								阅读<span id="busuanzi_value_page_pv"></span>次
-							</span>
-						</div>
-					
-						
-							<div class="post-meta-devide">|</div>
-						
-						<div class="post-meta-detail post-meta-detail-words">
-							<i class="fa fa-file-word-o" aria-hidden="true"></i>
-							1k 字
-						</div>
-					
-						
-							<div class="post-meta-devide">|</div>
-						
-						<div class="post-meta-detail post-meta-detail-readingtime">
-							<i class="fa fa-hourglass-end" aria-hidden="true"></i>
-							5 分钟
-						</div>
-					
-		</div>
-		
-	</header>
-
-	<div class="post-content">
-		
-			
-				 题目翻译
-给定 nnn 个序列，第 iii 个序列长度 kik_iki​。保证元素都不超过 mmm。每一秒进行一次循环向左移位，问 1010010^{100}10100 秒内，对于所有 1≤x≤m1\leq x\leq m1≤x≤m，回答开头最长连续 xxx 的长度。
-1≤n,m≤1051\leq n,m\leq 10^51≤n,m≤105，1≤...
-			
-		
-	</div>
-
-	
-		<div class="post-tags">
-			<i class="fa fa-tags" aria-hidden="true"></i>
-			<a class="tag badge badge-secondary post-meta-detail-tag -none-link" href="/tags/%E6%A8%A1%E6%8B%9F%E8%B5%9B/" rel="tag">模拟赛</a>
-		</div>
-	
-</article>
-
-
-	<article class="post card bg-white shadow-sm border-0 post-preview">
-	<header class="post-header text-center">
-		
-		<a class="post-title" href="/archives/CF2036G/">[题解] CF2036G Library of Magic</a>
-		<div class="post-meta">
-			
-						
-						<div class="post-meta-detail post-meta-detail-time">
-							<i class="fa fa-clock-o" aria-hidden="true"></i>
-							<time title="发布于 2024-11-3 10:52:00 | 编辑于 2025-2-12 21:38:35">2024-11-3 10:52
-							</time>
-						</div>
-					
-						
-							<div class="post-meta-devide">|</div>
-						
-						<div class="post-meta-detail post-meta-detail-categories">
-							<i class="fa fa-bookmark-o" aria-hidden="true"></i>
-							<a class="post-meta-detail-catagory-link" href="/categories/Solution/">Solution</a>
-						</div>
-					
-						
-							<div class="post-meta-devide">|</div>
-						
-						<div class="post-meta-detail post-meta-detail-words">
-							<i class="fa fa-book" aria-hidden="true"></i>
-							<span id="busuanzi_container_page_pv">
-								阅读<span id="busuanzi_value_page_pv"></span>次
-							</span>
-						</div>
-					
-						
-							<div class="post-meta-devide">|</div>
-						
-						<div class="post-meta-detail post-meta-detail-words">
-							<i class="fa fa-file-word-o" aria-hidden="true"></i>
-							992 字
+							867 字
 						</div>
 					
 						
@@ -932,156 +680,349 @@ T1 真是绝世无敌奶龙题。。。。。。。。你...
 		
 	</header>
 
-	<div class="post-content">
-		
-			
-				 题目翻译
-本题是一道 I/O 交互题。
-有 1∼n1\sim n1∼n 的数各 222 个（共 2n2n2n 个），现在拿走 333 个互不相同的数（还剩 2n−32n-32n−3 个）。
-你可以进行不超过 150150150 次的询问 xor l r 表示询问数值大小在 [l,r][l,r][l,r] 内的数的异或和。找出这 333 个拿走的数...
-			
-		
+	<div class="post-content" id="post_content">
+		<h1 id="题目翻译"><a class="markdownIt-Anchor" href="#题目翻译"></a> 题目翻译</h1>
+<p>平面上有 <span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>n</mi></mrow><annotation encoding="application/x-tex">n</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.43056em;vertical-align:0em;"></span><span class="mord mathnormal">n</span></span></span></span> 个点 <span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mo stretchy="false">(</mo><msub><mi>x</mi><mi>i</mi></msub><mo separator="true">,</mo><msub><mi>y</mi><mi>i</mi></msub><mo stretchy="false">)</mo></mrow><annotation encoding="application/x-tex">(x_i,y_i)</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:1em;vertical-align:-0.25em;"></span><span class="mopen">(</span><span class="mord"><span class="mord mathnormal">x</span><span class="msupsub"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist" style="height:0.31166399999999994em;"><span style="top:-2.5500000000000003em;margin-left:0em;margin-right:0.05em;"><span class="pstrut" style="height:2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mathnormal mtight">i</span></span></span></span><span class="vlist-s">​</span></span><span class="vlist-r"><span class="vlist" style="height:0.15em;"><span></span></span></span></span></span></span><span class="mpunct">,</span><span class="mspace" style="margin-right:0.16666666666666666em;"></span><span class="mord"><span class="mord mathnormal" style="margin-right:0.03588em;">y</span><span class="msupsub"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist" style="height:0.31166399999999994em;"><span style="top:-2.5500000000000003em;margin-left:-0.03588em;margin-right:0.05em;"><span class="pstrut" style="height:2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mathnormal mtight">i</span></span></span></span><span class="vlist-s">​</span></span><span class="vlist-r"><span class="vlist" style="height:0.15em;"><span></span></span></span></span></span></span><span class="mclose">)</span></span></span></span>，给每个点染红色或者蓝色，使得一行一列两种颜色的数量最多相差 <span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mn>1</mn></mrow><annotation encoding="application/x-tex">1</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.64444em;vertical-align:0em;"></span><span class="mord">1</span></span></span></span>。构造方案。</p>
+<p><span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mn>1</mn><mo>≤</mo><mi>n</mi><mo separator="true">,</mo><msub><mi>x</mi><mi>i</mi></msub><mo separator="true">,</mo><msub><mi>y</mi><mi>i</mi></msub><mo>≤</mo><mn>2</mn><mo>×</mo><mn>1</mn><msup><mn>0</mn><mn>5</mn></msup></mrow><annotation encoding="application/x-tex">1\leq n,x_i,y_i\leq 2\times 10^5</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.78041em;vertical-align:-0.13597em;"></span><span class="mord">1</span><span class="mspace" style="margin-right:0.2777777777777778em;"></span><span class="mrel">≤</span><span class="mspace" style="margin-right:0.2777777777777778em;"></span></span><span class="base"><span class="strut" style="height:0.8304100000000001em;vertical-align:-0.19444em;"></span><span class="mord mathnormal">n</span><span class="mpunct">,</span><span class="mspace" style="margin-right:0.16666666666666666em;"></span><span class="mord"><span class="mord mathnormal">x</span><span class="msupsub"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist" style="height:0.31166399999999994em;"><span style="top:-2.5500000000000003em;margin-left:0em;margin-right:0.05em;"><span class="pstrut" style="height:2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mathnormal mtight">i</span></span></span></span><span class="vlist-s">​</span></span><span class="vlist-r"><span class="vlist" style="height:0.15em;"><span></span></span></span></span></span></span><span class="mpunct">,</span><span class="mspace" style="margin-right:0.16666666666666666em;"></span><span class="mord"><span class="mord mathnormal" style="margin-right:0.03588em;">y</span><span class="msupsub"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist" style="height:0.31166399999999994em;"><span style="top:-2.5500000000000003em;margin-left:-0.03588em;margin-right:0.05em;"><span class="pstrut" style="height:2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mathnormal mtight">i</span></span></span></span><span class="vlist-s">​</span></span><span class="vlist-r"><span class="vlist" style="height:0.15em;"><span></span></span></span></span></span></span><span class="mspace" style="margin-right:0.2777777777777778em;"></span><span class="mrel">≤</span><span class="mspace" style="margin-right:0.2777777777777778em;"></span></span><span class="base"><span class="strut" style="height:0.72777em;vertical-align:-0.08333em;"></span><span class="mord">2</span><span class="mspace" style="margin-right:0.2222222222222222em;"></span><span class="mbin">×</span><span class="mspace" style="margin-right:0.2222222222222222em;"></span></span><span class="base"><span class="strut" style="height:0.8141079999999999em;vertical-align:0em;"></span><span class="mord">1</span><span class="mord"><span class="mord">0</span><span class="msupsub"><span class="vlist-t"><span class="vlist-r"><span class="vlist" style="height:0.8141079999999999em;"><span style="top:-3.063em;margin-right:0.05em;"><span class="pstrut" style="height:2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mtight">5</span></span></span></span></span></span></span></span></span></span></span>。</p>
+<h1 id="题目做法"><a class="markdownIt-Anchor" href="#题目做法"></a> 题目做法</h1>
+<p>考虑建二分图。按行列分成左右两部分。如果是 <span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>R</mi><mo>→</mo><mi>C</mi></mrow><annotation encoding="application/x-tex">R\to C</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.68333em;vertical-align:0em;"></span><span class="mord mathnormal" style="margin-right:0.00773em;">R</span><span class="mspace" style="margin-right:0.2777777777777778em;"></span><span class="mrel">→</span><span class="mspace" style="margin-right:0.2777777777777778em;"></span></span><span class="base"><span class="strut" style="height:0.68333em;vertical-align:0em;"></span><span class="mord mathnormal" style="margin-right:0.07153em;">C</span></span></span></span> 那么染成红色否则染成蓝色。</p>
+<p>相当于钦定每个点入度和出度相差不超过 <span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mn>1</mn></mrow><annotation encoding="application/x-tex">1</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.64444em;vertical-align:0em;"></span><span class="mord">1</span></span></span></span>。</p>
+<p>考虑度数都是偶数要求不超过 <span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mn>0</mn></mrow><annotation encoding="application/x-tex">0</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.64444em;vertical-align:0em;"></span><span class="mord">0</span></span></span></span> 怎么做。</p>
+<p>直接欧拉回路就是对的。</p>
+<p>我们再开一个虚点连接那些奇点。可以证明虚点最后度数会是偶数。</p>
+<p>加了虚点之后这张图当然还是二分图。而且此时所有点度数都是偶数，直接欧拉回路就可以了。跑欧拉回路的时候标记一下每条边的方向是容易的。</p>
+<h1 id="完整代码"><a class="markdownIt-Anchor" href="#完整代码"></a> 完整代码</h1>
+<p><a target="_blank" rel="noopener" href="https://codeforces.com/contest/547/submission/306287988">https://codeforces.com/contest/547/submission/306287988</a></p>
+<pre><code class="highlight cpp"><span class="meta">#<span class="keyword">include</span> <span class="string">&lt;bits/stdc++.h&gt;</span></span>
+<span class="keyword">using</span> <span class="keyword">namespace</span> std;
+<span class="meta">#<span class="keyword">define</span> getchar() p1 == p2 &amp;&amp; (p2 = (p1 = buf) + fread(buf, 1, 1000000, stdin), p1 == p2) ? EOF : *p1++</span>
+<span class="type">char</span> buf[<span class="number">1000000</span>], *p1 = buf, *p2 = buf;
+<span class="keyword">template</span> &lt;<span class="keyword">typename</span> T&gt;
+<span class="function"><span class="type">void</span> <span class="title">read</span><span class="params">(T &amp;x)</span></span>
+<span class="function"></span>&#123;
+    x = <span class="number">0</span>;
+    <span class="type">int</span> f = <span class="number">1</span>;
+    <span class="type">char</span> c = <span class="built_in">getchar</span>();
+    <span class="keyword">for</span> (; c &lt; <span class="string">&#x27;0&#x27;</span> || c &gt; <span class="string">&#x27;9&#x27;</span>; c = <span class="built_in">getchar</span>())
+        <span class="keyword">if</span> (c == <span class="string">&#x27;-&#x27;</span>)
+            f = -f;
+    <span class="keyword">for</span> (; c &gt;= <span class="string">&#x27;0&#x27;</span> &amp;&amp; c &lt;= <span class="string">&#x27;9&#x27;</span>; c = <span class="built_in">getchar</span>())
+        x = x * <span class="number">10</span> + c - <span class="string">&#x27;0&#x27;</span>;
+    x *= f;
+&#125;
+<span class="keyword">template</span> &lt;<span class="keyword">typename</span> T, <span class="keyword">typename</span>... Args&gt;
+<span class="function"><span class="type">void</span> <span class="title">read</span><span class="params">(T &amp;x, Args &amp;...y)</span></span>
+<span class="function"></span>&#123;
+    <span class="built_in">read</span>(x);
+    <span class="built_in">read</span>(y...);
+&#125;
+<span class="keyword">template</span> &lt;<span class="keyword">class</span> <span class="title class_">T</span>&gt;
+<span class="function"><span class="type">void</span> <span class="title">write</span><span class="params">(T x)</span></span>
+<span class="function"></span>&#123;
+    <span class="type">static</span> <span class="type">int</span> stk[<span class="number">30</span>];
+    <span class="keyword">if</span> (x &lt; <span class="number">0</span>)
+        <span class="built_in">putchar</span>(<span class="string">&#x27;-&#x27;</span>), x = -x;
+    <span class="type">int</span> top = <span class="number">0</span>;
+    <span class="keyword">do</span>
+    &#123;
+        stk[top++] = x % <span class="number">10</span>, x /= <span class="number">10</span>;
+    &#125; <span class="keyword">while</span> (x);
+    <span class="keyword">while</span> (top)
+        <span class="built_in">putchar</span>(stk[--top] + <span class="string">&#x27;0&#x27;</span>);
+&#125;
+<span class="keyword">template</span> &lt;<span class="keyword">class</span> <span class="title class_">T</span>&gt;
+<span class="function"><span class="type">void</span> <span class="title">write</span><span class="params">(T x, <span class="type">char</span> lastChar)</span> </span>&#123; <span class="built_in">write</span>(x), <span class="built_in">putchar</span>(lastChar); &#125;
+<span class="function"><span class="type">void</span> <span class="title">solve</span><span class="params">()</span></span>
+<span class="function"></span>&#123;
+    <span class="type">int</span> n, m, k;
+    <span class="built_in">read</span>(n, m, k);
+    vector&lt;<span class="type">int</span>&gt; a[n + <span class="number">1</span>];
+    <span class="type">int</span> deg[n + <span class="number">1</span>] = &#123;&#125;;
+    <span class="type">bool</span> del[n + <span class="number">1</span>] = &#123;&#125;;
+    <span class="keyword">while</span> (m--)
+    &#123;
+        <span class="type">int</span> u, v;
+        <span class="built_in">read</span>(u, v);
+        a[u].<span class="built_in">emplace_back</span>(v);
+        a[v].<span class="built_in">emplace_back</span>(u);
+        deg[u]++, deg[v]++;
+    &#125;
+    queue&lt;<span class="type">int</span>&gt; q;
+    <span class="keyword">for</span> (<span class="type">int</span> i = <span class="number">1</span>; i &lt;= n; i++)
+    &#123;
+        <span class="built_in">sort</span>(a[i].<span class="built_in">begin</span>(), a[i].<span class="built_in">end</span>());
+        <span class="keyword">if</span> (deg[i] &lt; k - <span class="number">1</span>)
+            q.<span class="built_in">push</span>(i);
+    &#125;
+    <span class="keyword">while</span> (!q.<span class="built_in">empty</span>())
+    &#123;
+        <span class="type">int</span> u = q.<span class="built_in">front</span>();
+        q.<span class="built_in">pop</span>();
+        <span class="keyword">for</span> (<span class="type">int</span> v : a[u])
+        &#123;
+            <span class="keyword">if</span> (del[v])
+                <span class="keyword">continue</span>;
+            <span class="keyword">if</span> (deg[v]-- == k - <span class="number">1</span>)
+                q.<span class="built_in">push</span>(v);
+        &#125;
+        a[u].<span class="built_in">clear</span>();
+        deg[u] = <span class="number">0</span>;
+        del[u] = <span class="number">1</span>;
+    &#125;
+    <span class="type">int</span> totdeg = <span class="number">0</span>;
+    <span class="keyword">for</span> (<span class="type">int</span> i = <span class="number">1</span>; i &lt;= n; i++)
+        totdeg += deg[i];
+    <span class="keyword">if</span> (totdeg &lt; <span class="number">1LL</span> * k * (k - <span class="number">1</span>))
+        <span class="keyword">return</span> <span class="built_in">write</span>(<span class="number">-1</span>, <span class="string">&#x27;\n&#x27;</span>), <span class="built_in">void</span>();
+    <span class="keyword">for</span> (<span class="type">int</span> i = <span class="number">1</span>; i &lt;= n; i++)
+    &#123;
+        <span class="keyword">if</span> (!del[i] &amp;&amp; deg[i] == k - <span class="number">1</span>)
+            q.<span class="built_in">push</span>(i);
+    &#125;
+    <span class="keyword">while</span> (!q.<span class="built_in">empty</span>())
+    &#123;
+        <span class="type">int</span> u = q.<span class="built_in">front</span>();
+        q.<span class="built_in">pop</span>();
+        <span class="keyword">if</span> (del[u])
+            <span class="keyword">continue</span>;
+        <span class="keyword">if</span> (deg[u] != k - <span class="number">1</span>)
+        &#123;
+            <span class="keyword">for</span> (<span class="type">int</span> v : a[u])
+            &#123;
+                <span class="keyword">if</span> (del[v])
+                    <span class="keyword">continue</span>;
+                <span class="keyword">if</span> (--deg[v] == k - <span class="number">1</span>)
+                    q.<span class="built_in">push</span>(v);
+            &#125;
+            a[u].<span class="built_in">clear</span>();
+            deg[u] = <span class="number">0</span>;
+            del[u] = <span class="number">1</span>;
+            <span class="keyword">continue</span>;
+        &#125;
+        vector&lt;<span class="type">int</span>&gt; vec;
+        vec.<span class="built_in">emplace_back</span>(u);
+        <span class="keyword">for</span> (<span class="type">int</span> v : a[u])
+        &#123;
+            <span class="keyword">if</span> (!del[v])
+                vec.<span class="built_in">emplace_back</span>(v);
+        &#125;
+        <span class="type">bool</span> f = <span class="number">1</span>;
+        <span class="keyword">for</span> (<span class="type">int</span> i : vec)
+        &#123;
+            <span class="keyword">for</span> (<span class="type">int</span> j : vec)
+            &#123;
+                <span class="keyword">if</span> (i == j)
+                    <span class="keyword">continue</span>;
+                <span class="keyword">if</span> (!<span class="built_in">binary_search</span>(a[i].<span class="built_in">begin</span>(), a[i].<span class="built_in">end</span>(), j))
+                &#123;
+                    f = <span class="number">0</span>;
+                    <span class="keyword">break</span>;
+                &#125;
+            &#125;
+            <span class="keyword">if</span> (!f)
+                <span class="keyword">break</span>;
+        &#125;
+        <span class="keyword">if</span> (f)
+        &#123;
+            <span class="built_in">write</span>(<span class="number">2</span>, <span class="string">&#x27;\n&#x27;</span>);
+            <span class="keyword">for</span> (<span class="type">int</span> i : vec)
+                <span class="built_in">write</span>(i, <span class="string">&#x27; &#x27;</span>);
+            <span class="built_in">putchar</span>(<span class="string">&#x27;\n&#x27;</span>);
+            <span class="keyword">return</span>;
+        &#125;
+        <span class="keyword">for</span> (<span class="type">int</span> v : a[u])
+        &#123;
+            <span class="keyword">if</span> (del[v])
+                <span class="keyword">continue</span>;
+            <span class="keyword">if</span> (--deg[v] == k - <span class="number">1</span>)
+                q.<span class="built_in">push</span>(v);
+        &#125;
+        a[u].<span class="built_in">clear</span>();
+        deg[u] = <span class="number">0</span>;
+        del[u] = <span class="number">1</span>;
+    &#125;
+    <span class="type">bool</span> f = <span class="number">0</span>;
+    <span class="keyword">for</span> (<span class="type">int</span> i = <span class="number">1</span>; i &lt;= n; i++)
+        f |= deg[i];
+    <span class="keyword">for</span> (<span class="type">int</span> i = <span class="number">1</span>; i &lt;= n; i++)
+    &#123;
+        <span class="keyword">if</span> (!del[i])
+            f &amp;= deg[i] &gt;= k;
+    &#125;
+    <span class="keyword">if</span> (f)
+    &#123;
+        vector&lt;<span class="type">int</span>&gt; vec;
+        <span class="keyword">for</span> (<span class="type">int</span> i = <span class="number">1</span>; i &lt;= n; i++)
+        &#123;
+            <span class="keyword">if</span> (!del[i])
+                vec.<span class="built_in">emplace_back</span>(i);
+        &#125;
+        <span class="built_in">write</span>(<span class="number">1</span>, <span class="string">&#x27; &#x27;</span>);
+        <span class="built_in">write</span>(vec.<span class="built_in">size</span>(), <span class="string">&#x27;\n&#x27;</span>);
+        <span class="keyword">for</span> (<span class="type">int</span> i : vec)
+            <span class="built_in">write</span>(i, <span class="string">&#x27; &#x27;</span>);
+        <span class="built_in">putchar</span>(<span class="string">&#x27;\n&#x27;</span>);
+        <span class="keyword">return</span>;
+    &#125;
+    <span class="built_in">write</span>(<span class="number">-1</span>, <span class="string">&#x27;\n&#x27;</span>);
+&#125;
+<span class="function"><span class="type">int</span> <span class="title">main</span><span class="params">()</span></span>
+<span class="function"></span>&#123;
+    <span class="type">int</span> t;
+    <span class="built_in">read</span>(t);
+    <span class="keyword">while</span> (t--)
+        <span class="built_in">solve</span>();
+    <span class="keyword">return</span> <span class="number">0</span>;
+&#125;</code></pre>
 	</div>
 
 	
-</article>
-
-
-	<article class="post card bg-white shadow-sm border-0 post-preview">
-	<header class="post-header text-center">
-		
-		<a class="post-title" href="/archives/KEYENCE2019E/">[题解] KEYENCE2019E Connecting Cities</a>
-		<div class="post-meta">
-			
-						
-						<div class="post-meta-detail post-meta-detail-time">
-							<i class="fa fa-clock-o" aria-hidden="true"></i>
-							<time title="发布于 2024-11-2 17:29:00 | 编辑于 2025-2-12 21:37:57">2024-11-2 17:29
-							</time>
-						</div>
-					
-						
-							<div class="post-meta-devide">|</div>
-						
-						<div class="post-meta-detail post-meta-detail-categories">
-							<i class="fa fa-bookmark-o" aria-hidden="true"></i>
-							<a class="post-meta-detail-catagory-link" href="/categories/Solution/">Solution</a>
-						</div>
-					
-						
-							<div class="post-meta-devide">|</div>
-						
-						<div class="post-meta-detail post-meta-detail-words">
-							<i class="fa fa-book" aria-hidden="true"></i>
-							<span id="busuanzi_container_page_pv">
-								阅读<span id="busuanzi_value_page_pv"></span>次
-							</span>
-						</div>
-					
-						
-							<div class="post-meta-devide">|</div>
-						
-						<div class="post-meta-detail post-meta-detail-words">
-							<i class="fa fa-file-word-o" aria-hidden="true"></i>
-							1.2k 字
-						</div>
-					
-						
-							<div class="post-meta-devide">|</div>
-						
-						<div class="post-meta-detail post-meta-detail-readingtime">
-							<i class="fa fa-hourglass-end" aria-hidden="true"></i>
-							6 分钟
-						</div>
-					
+		<div class="post-donate">
+			<button class="btn donate-btn btn-danger">赞赏</button>
+			<div class="donate-qrcode card shadow-sm bg-white">
+				<img src="http://img.cyx2009.top/pay_wx.jpg">
+			</div>
 		</div>
-		
-	</header>
+	
 
-	<div class="post-content">
+	
+			<div class='additional-content-after-post'>爱你宝宝！</div>
 		
-			
-				 题目翻译
-点 i,ji,ji,j 连边的代价是 ∣i−j∣×d+ai+aj|i-j|\times d+a_i+a_j∣i−j∣×d+ai​+aj​，问最小生成树边权之和。
-1≤n≤2×1051\leq n\leq 2\times 10^51≤n≤2×105，1≤d,ai≤1091\leq d,a_i\leq 10^91≤d,ai​≤109。
- 题...
-			
-		
-	</div>
 
 	
 </article>
 
+	<div id="share_container">
+	<div id="share" data-initialized="true">
+		<a class="no-pjax icon-wechat" tooltip="分享到微信">
+			<button class="btn btn-icon btn-success">
+				<span class="btn-inner--icon"><i class="fa fa-weixin"></i></span>
+			</button>
+		</a>
+		<a target="_blank" class="no-pjax icon-douban" tooltip="分享到豆瓣">
+			<button class="btn btn-icon btn-primary" style="background: #209261;border: none;">
+				豆
+			</button>
+		</a>
+		<a target="_blank" class="no-pjax icon-qq" tooltip="分享到 QQ">
+			<button class="btn btn-icon btn-primary" style="background: #2196f3;border: none;">
+				<span class="btn-inner--icon"><i class="fa fa-qq"></i></span>
+			</button>
+		</a>
+		<a target="_blank" class="no-pjax icon-qzone" tooltip="分享到 QQ 空间">
+			<button class="btn btn-icon btn-primary" style="background: #ffc107;border: none;">
+				<span class="btn-inner--icon"><i class="fa fa-star"></i></span>
+			</button>
+		</a>
+		<a target="_blank" class="no-pjax icon-weibo" tooltip="分享到微博">
+			<button class="btn btn-icon btn-warning">
+				<span class="btn-inner--icon"><i class="fa fa-weibo"></i></span>
+			</button>
+		</a>
+		<a target="_blank" class="no-pjax icon-facebook" tooltip="分享到 Facebook">
+			<button class="btn btn-icon btn-primary" style="background: #283593;border: none;">
+				<span class="btn-inner--icon"><i class="fa fa-facebook"></i></span>
+			</button>
+		</a>
+		<a target="_blank" class="no-pjax icon-twitter" tooltip="分享到 Twitter">
+			<button class="btn btn-icon btn-primary" style="background: #03a9f4;border: none;">
+				<span class="btn-inner--icon"><i class="fa fa-twitter"></i></span>
+			</button>
+		</a>
+		<a target="_blank" class="no-pjax icon-telegram" href="https://telegram.me/share/url?url=http://blog.cyx2009.top/archives/CF547D/&text=[题解] CF547D Mike and Fish" tooltip="分享到 Telegram">
+			<button class="btn btn-icon btn-primary" style="background: #42a5f5;border: none;">
+				<span class="btn-inner--icon"><i class="fa fa-telegram"></i></span>
+			</button>
+		</a>
+		<a target="_blank" class="no-pjax icon-copy-link" id="share_copy_link" tooltip="复制链接">
+			<button class="btn btn-icon btn-default">
+				<span class="btn-inner--icon"><i class="fa fa-link"></i></span>
+			</button>
+		</a>
+	</div>
+	<button id="share_show" class="btn btn-icon btn-primary" tooltip="分享">
+		<span class="btn-inner--icon"><i class="fa fa-share"></i></span>
+	</button>
+</div>
+<script type="text/javascript">
+	socialShare("#share", {
+	    title : `[题解] CF547D Mike and Fish`,
+	    description : ` 题目翻译
+平面上有 nnn 个点 (xi,yi)(x_i,y_i)(xi​,yi​)，给每个点染红...`,
+	    wechatQrcodeTitle : `分享到微信`,
+	    wechatQrcodeHelper : `微信扫描二维码`,
+	    source : `http://blog.cyx2009.top/archives/CF547D/`
+	});
+	$("#share_show")[0].onclick = function(){
+		$("#share_container").addClass("opened");
+	};
+	$("#share_copy_link")[0].onclick = function(){
+		let input = document.createElement('input');
+		document.body.appendChild(input);
+		input.setAttribute("value", window.location.href);
+		input.setAttribute("readonly", "readonly");
+		input.setAttribute("style", "opacity: 0;mouse-events:none;");
+		input.select();
+		if (document.execCommand('copy')){
+			iziToast.show({
+				title: '链接已复制',
+				message: "链接已复制到剪贴板",
+				class: 'shadow',
+				position: 'topRight',
+				backgroundColor: '#2dce89',
+				titleColor: '#ffffff',
+				messageColor: '#ffffff',
+				iconColor: '#ffffff',
+				progressBarColor: '#ffffff',
+				icon: 'fa fa-check',
+				timeout: 5000
+			});
+		}else{
+			iziToast.show({
+				title: '复制失败',
+				message: "请手动复制链接",
+				class: 'shadow',
+				position: 'topRight',
+				backgroundColor: '#f5365c',
+				titleColor: '#ffffff',
+				messageColor: '#ffffff',
+				iconColor: '#ffffff',
+				progressBarColor: '#ffffff',
+				icon: 'fa fa-close',
+				timeout: 5000
+			});
+		}
+		document.body.removeChild(input);
+	};
+</script>
 
-	<article class="post card bg-white shadow-sm border-0 post-preview">
-	<header class="post-header text-center">
-		
-		<a class="post-title" href="/archives/CF1111D/">[题解] CF1111D Destroy the Colony</a>
-		<div class="post-meta">
-			
-						
-						<div class="post-meta-detail post-meta-detail-time">
-							<i class="fa fa-clock-o" aria-hidden="true"></i>
-							<time title="发布于 2024-11-2 0:12:00 | 编辑于 2025-2-12 21:36:19">2024-11-2 0:12
-							</time>
-						</div>
-					
-						
-							<div class="post-meta-devide">|</div>
-						
-						<div class="post-meta-detail post-meta-detail-categories">
-							<i class="fa fa-bookmark-o" aria-hidden="true"></i>
-							<a class="post-meta-detail-catagory-link" href="/categories/Solution/">Solution</a>
-						</div>
-					
-						
-							<div class="post-meta-devide">|</div>
-						
-						<div class="post-meta-detail post-meta-detail-words">
-							<i class="fa fa-book" aria-hidden="true"></i>
-							<span id="busuanzi_container_page_pv">
-								阅读<span id="busuanzi_value_page_pv"></span>次
-							</span>
-						</div>
-					
-						
-							<div class="post-meta-devide">|</div>
-						
-						<div class="post-meta-detail post-meta-detail-words">
-							<i class="fa fa-file-word-o" aria-hidden="true"></i>
-							1.5k 字
-						</div>
-					
-						
-							<div class="post-meta-devide">|</div>
-						
-						<div class="post-meta-detail post-meta-detail-readingtime">
-							<i class="fa fa-hourglass-end" aria-hidden="true"></i>
-							7 分钟
-						</div>
-					
-		</div>
-		
-	</header>
 
-	<div class="post-content">
-		
-			
-				 题目翻译
-给定字符串 sss，长度为偶数，和 qqq 个询问，每次询问给出 x,yx,yx,y，问 sss 有多少个不同的排列满足，所有相同字符都在前 ∣s∣2\dfrac{|s|}{2}2∣s∣​ 个或者后 ∣s∣2\dfrac{|s|}{2}2∣s∣​ 个，且 sxs_xsx​ 和 sys_ysy​ 在同一部分（要么都在前 ∣s∣2\dfra...
-			
-		
+
+	<div id="post_comment" class="card shadow-sm">
+		<div id="giscus"></div>
+<script src="https://giscus.app/client.js"
+        data-repo="chenyuxuan2009/blogtalk"
+        data-repo-id="R_kgDOHDKqeg"
+        data-category="General"
+        data-category-id="DIC_kwDOHDKqes4COOnc"
+        data-mapping="pathname"
+        data-input-position="top"
+        data-theme="light"
+        data-lang="zh-CN"
+        crossorigin="anonymous"
+        async>
+</script>
+
 	</div>
 
-	
-</article>
+
+
+<div class="post-navigation card shadow-sm"><div class="post-navigation-item post-navigation-pre"></div><div class="post-navigation-item post-navigation-next"><span class="page-navigation-extra-text">下一篇 <i class="fa fa-arrow-circle-o-right" aria-hidden="true"></i></span><a href="/archives/GYM100425B/" rel="next"> [题解] [模拟 20241109] GYM100425B Passport Control</a></div></div>
 
 
 
-
-
-
-			
+		
+		
 		
 		
 
