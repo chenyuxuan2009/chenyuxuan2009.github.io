@@ -1,25 +1,30 @@
 <!DOCTYPE html>
 
 <html class="article-header-style-1">
-<head>
+<head><!-- hexo injector head_begin start -->
+<link rel="stylesheet" href="/css/bilicard.css">
+<!-- hexo injector head_begin end -->
 
 </script>
 	<link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/highlight.js/11.1.0/styles/a11y-light.min.css">
 	<script src="//cdnjs.cloudflare.com/ajax/libs/highlight.js/11.1.0/highlight.min.js"></script>
 	
-	<title>归档 : 2024/9 - 沉石鱼惊旋 的博客</title>
+	<title>[题解] QOJ5568 Cyclic Shifts - 沉石鱼惊旋 的博客</title>
 	<meta charset="utf-8">
 	
 		<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=5">
 	
-	<meta name="description" content="沉石鱼惊旋 的博客">
-<meta property="og:type" content="website">
-<meta property="og:title" content="沉石鱼惊旋 的博客">
-<meta property="og:url" content="http://blog.cyx2009.top/archives/2024/09/index.html">
+	<meta name="description" content="https:&#x2F;&#x2F;qoj.ac&#x2F;problem&#x2F;5568 https:&#x2F;&#x2F;codeforces.com&#x2F;gym&#x2F;105644&#x2F;problem&#x2F;C  题目翻译 给定排列 ppp，每次可以选 kkk 个数循环右移，即选若干个 aia_iai​，pai+1′&#x3D;paip&#x27;_{a_{i+1}}&#x3D;p_{a_i}pai+1​′​&#x3D;pai​​。 一次操作代价是 10−8⌈108k⌉10^{-8}\lcei">
+<meta property="og:type" content="article">
+<meta property="og:title" content="[题解] QOJ5568 Cyclic Shifts">
+<meta property="og:url" content="http://blog.cyx2009.top/archives/QOJ5568/index.html">
 <meta property="og:site_name" content="沉石鱼惊旋 的博客">
-<meta property="og:description" content="沉石鱼惊旋 的博客">
+<meta property="og:description" content="https:&#x2F;&#x2F;qoj.ac&#x2F;problem&#x2F;5568 https:&#x2F;&#x2F;codeforces.com&#x2F;gym&#x2F;105644&#x2F;problem&#x2F;C  题目翻译 给定排列 ppp，每次可以选 kkk 个数循环右移，即选若干个 aia_iai​，pai+1′&#x3D;paip&#x27;_{a_{i+1}}&#x3D;p_{a_i}pai+1​′​&#x3D;pai​​。 一次操作代价是 10−8⌈108k⌉10^{-8}\lcei">
 <meta property="og:locale" content="zh_CN">
+<meta property="article:published_time" content="2025-02-18T11:43:00.000Z">
+<meta property="article:modified_time" content="2025-02-18T11:48:35.028Z">
 <meta property="article:author" content="CYX">
+<meta property="article:tag" content="随机">
 <meta name="twitter:card" content="summary">
 
 	<meta name="theme-color" content="#5e72e4">
@@ -453,15 +458,6 @@
 
 <div class="page-information-card-container">
 	
-		
-<div class="page-information-card card bg-gradient-secondary shadow-lg border-0">
-	<div class="card-body">
-		<h3 class="text-black">归档 : 2024/9 </h3>
-		
-	</div>
-</div>
-
-	
 </div>
 
 <div id="sidebar_mask"></div>
@@ -497,18 +493,49 @@
 		<div id="leftbar_part2" class="widget widget_search card bg-white shadow-sm border-0">
 			<div id="leftbar_part2_inner" class="card-body">
 				
-				<div class="nav-wrapper" style="padding-top: 5px; display:none; ">
+				<div class="nav-wrapper" style="padding-top: 5px;">
 	                <ul class="nav nav-pills nav-fill" role="tablist">
 						
+							<li class="nav-item sidebar-tab-switcher">
+								<a class="active show" id="leftbar_tab_catalog_btn" data-toggle="tab" href="#leftbar_tab_catalog" role="tab" aria-controls="leftbar_tab_catalog" no-pjax>文章目录</a>
+							</li>
+						
 						<li class="nav-item sidebar-tab-switcher">
-							<a class="active show" id="leftbar_tab_overview_btn" data-toggle="tab" href="#leftbar_tab_overview" role="tab" aria-controls="leftbar_tab_overview" no-pjax>站点概览</a>
+							<a class="" id="leftbar_tab_overview_btn" data-toggle="tab" href="#leftbar_tab_overview" role="tab" aria-controls="leftbar_tab_overview" no-pjax>站点概览</a>
 						</li>
 	                </ul>
 				</div>
 				<div>
 					<div class="tab-content" style="padding: 10px 10px 0 10px;">
 						
-						<div class="tab-pane fade text-center active show" id="leftbar_tab_overview" role="tabpanel" aria-labelledby="leftbar_tab_overview_btn">
+							<div class="tab-pane fade active show" id="leftbar_tab_catalog" role="tabpanel" aria-labelledby="leftbar_tab_catalog_btn">
+								<div id="leftbar_catalog"></div>
+								<script type="text/javascript">
+									$(function () {
+										$(document).headIndex({
+											articleWrapSelector: '#post_content',
+											indexBoxSelector: '#leftbar_catalog',
+											subItemBoxClass: "index-subItem-box",
+											itemClass: "index-item",
+											linkClass: "index-link",
+											offset: 80,
+										});
+									})
+								</script>
+								
+									<style>
+										#leftbar_catalog ul {
+											counter-reset: blog_catalog_number;
+										}
+										#leftbar_catalog li.index-item > a:before {
+											content: counters(blog_catalog_number, '.') " ";
+											counter-increment: blog_catalog_number;
+										}
+									</style>
+								
+							</div>
+						
+						<div class="tab-pane fade text-center" id="leftbar_tab_overview" role="tabpanel" aria-labelledby="leftbar_tab_overview_btn">
 							<img id="leftbar_overview_author_image" src="/assets/img/favicon.ico" class="img-fluid rounded-circle shadow-sm" style="width: 100px;" alt="avatar">
 							<h6 id="leftbar_overview_author_name">沉石鱼惊旋</h6>
 							<nav class="site-state">
@@ -602,18 +629,17 @@
 	<main id="main" class="site-main" role="main">
 		
 		
-		
-				
-	<article class="post card bg-white shadow-sm border-0 post-preview">
+			
+	<article class="post post-full card bg-white shadow-sm border-0 post-preview">
 	<header class="post-header text-center">
 		
-		<a class="post-title" href="/archives/CF1221G/">[题解] CF1221G Graph And Numbers</a>
+		<a class="post-title" href="/archives/QOJ5568/">[题解] QOJ5568 Cyclic Shifts</a>
 		<div class="post-meta">
 			
 						
 						<div class="post-meta-detail post-meta-detail-time">
 							<i class="fa fa-clock-o" aria-hidden="true"></i>
-							<time title="发布于 2024-9-30 23:55:00 | 编辑于 2025-2-17 15:10:33">2024-9-30 23:55
+							<time title="发布于 2025-2-18 19:43:00 | 编辑于 2025-2-18 19:48:35">2025-2-18 19:43
 							</time>
 						</div>
 					
@@ -629,7 +655,7 @@
 							<div class="post-meta-devide">|</div>
 						
 						<div class="post-meta-detail post-meta-detail-words">
-							<i class="fa fa-book" aria-hidden="true"></i>
+							<i class="fa fa fa-book" aria-hidden="true"></i>
 							<span id="busuanzi_container_page_pv">
 								阅读 <span id="busuanzi_value_page_pv"></span> 次
 							</span>
@@ -640,441 +666,7 @@
 						
 						<div class="post-meta-detail post-meta-detail-words">
 							<i class="fa fa-file-word-o" aria-hidden="true"></i>
-							1.7k 字
-						</div>
-					
-						
-							<div class="post-meta-devide">|</div>
-						
-						<div class="post-meta-detail post-meta-detail-readingtime">
-							<i class="fa fa-hourglass-end" aria-hidden="true"></i>
-							8 分钟
-						</div>
-					
-		</div>
-		
-	</header>
-
-	<div class="post-content">
-		
-			
-				 题目翻译
-给定 nnn 个点 mmm 条边的图，定义边权为边连接的端点点权之和。你可以为点权赋值 000 或 111，求同时存在至少一条边权为 000 的边，存在至少一条边权为 111 的边，存在至少一条边权为 222 的边的方案数。
-1≤n≤401\leq n\leq 401≤n≤40，0≤m≤n(n−1)20\leq m\leq \dfrac...
-			
-		
-	</div>
-
-	
-		<div class="post-tags">
-			<i class="fa fa-tags" aria-hidden="true"></i>
-			<a class="tag badge badge-secondary post-meta-detail-tag -none-link" href="/tags/%E5%8F%8C%E5%90%91%E6%90%9C%E7%B4%A2/" rel="tag">双向搜索</a><a class="tag badge badge-secondary post-meta-detail-tag -none-link" href="/tags/%E5%AE%B9%E6%96%A5/" rel="tag">容斥</a>
-		</div>
-	
-</article>
-
-
-	<article class="post card bg-white shadow-sm border-0 post-preview">
-	<header class="post-header text-center post-header-with-thumbnail">
-		
-				<img class='post-thumbnail lazyload' src='data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAYAAAAfFcSJAAAAGXRFWHRTb2Z0d2FyZQBBZG9iZSBJbWFnZVJlYWR5ccllPAAAABBJREFUeNpi+P//PwNAgAEACPwC/tuiTRYAAAAASUVORK5CYII=' data-original='https://s21.ax1x.com/2024/10/27/pA0nEhd.png' alt='thumbnail'></img>
-				<div class='post-header-text-container'>
-			
-		<a class="post-title" href="/archives/CSP2024/">[游记] CSP 2024 游记</a>
-		<div class="post-meta">
-			
-						
-						<div class="post-meta-detail post-meta-detail-time">
-							<i class="fa fa-clock-o" aria-hidden="true"></i>
-							<time title="发布于 2024-9-21 19:32:00 | 编辑于 2025-2-12 21:26:08">2024-9-21 19:32
-							</time>
-						</div>
-					
-						
-							<div class="post-meta-devide">|</div>
-						
-						<div class="post-meta-detail post-meta-detail-categories">
-							<i class="fa fa-bookmark-o" aria-hidden="true"></i>
-							<a class="post-meta-detail-catagory-link" href="/categories/TravelNote/">TravelNote</a>
-						</div>
-					
-						
-							<div class="post-meta-devide">|</div>
-						
-						<div class="post-meta-detail post-meta-detail-words">
-							<i class="fa fa-book" aria-hidden="true"></i>
-							<span id="busuanzi_container_page_pv">
-								阅读 <span id="busuanzi_value_page_pv"></span> 次
-							</span>
-						</div>
-					
-						
-							<div class="post-meta-devide">|</div>
-						
-						<div class="post-meta-detail post-meta-detail-words">
-							<i class="fa fa-file-word-o" aria-hidden="true"></i>
-							3k 字
-						</div>
-					
-						
-							<div class="post-meta-devide">|</div>
-						
-						<div class="post-meta-detail post-meta-detail-readingtime">
-							<i class="fa fa-hourglass-end" aria-hidden="true"></i>
-							10 分钟
-						</div>
-					
-		</div>
-		
-				</div>
-			
-	</header>
-
-	<div class="post-content">
-		
-			
-				 初赛
- Day -(1e9+7)
-好吧我其实忘了 Day -(1e9+7) 和 Day -998244353 的先后顺序。
-所以可能这里其实才是 Day -998244353 发生的事情。
-很荣幸收到了 Aya 的私信找我验初赛模拟。
-做了一下感觉选择问题不大。阅读和完善到处开花。
-成功砍下 62.5 分高分。
-好像是验题人倒数第二还是倒数第一来...
-			
-		
-	</div>
-
-	
-</article>
-
-
-	<article class="post card bg-white shadow-sm border-0 post-preview">
-	<header class="post-header text-center">
-		
-		<a class="post-title" href="/archives/CF1310C/">[题解] CF1310C Au Pont Rouge</a>
-		<div class="post-meta">
-			
-						
-						<div class="post-meta-detail post-meta-detail-time">
-							<i class="fa fa-clock-o" aria-hidden="true"></i>
-							<time title="发布于 2024-9-14 20:58:00 | 编辑于 2025-2-12 21:24:48">2024-9-14 20:58
-							</time>
-						</div>
-					
-						
-							<div class="post-meta-devide">|</div>
-						
-						<div class="post-meta-detail post-meta-detail-categories">
-							<i class="fa fa-bookmark-o" aria-hidden="true"></i>
-							<a class="post-meta-detail-catagory-link" href="/categories/Solution/">Solution</a>
-						</div>
-					
-						
-							<div class="post-meta-devide">|</div>
-						
-						<div class="post-meta-detail post-meta-detail-words">
-							<i class="fa fa-book" aria-hidden="true"></i>
-							<span id="busuanzi_container_page_pv">
-								阅读 <span id="busuanzi_value_page_pv"></span> 次
-							</span>
-						</div>
-					
-						
-							<div class="post-meta-devide">|</div>
-						
-						<div class="post-meta-detail post-meta-detail-words">
-							<i class="fa fa-file-word-o" aria-hidden="true"></i>
-							1.2k 字
-						</div>
-					
-						
-							<div class="post-meta-devide">|</div>
-						
-						<div class="post-meta-detail post-meta-detail-readingtime">
-							<i class="fa fa-hourglass-end" aria-hidden="true"></i>
-							5 分钟
-						</div>
-					
-		</div>
-		
-	</header>
-
-	<div class="post-content">
-		
-			
-				 题目翻译
-给定长度为 nnn 的字符串 sss，将其分成 mmm 个非空子串。定义一种划分方式的『代表』，是这 mmm 个子串种，字典序最小的那个子串。
-求所有分割方式中，所有『代表』按字典序从大到小排的第 kkk 个『代表』。
-1≤n,m≤10001\leq n,m\leq 10001≤n,m≤1000，1≤k≤10181\leq k\leq ...
-			
-		
-	</div>
-
-	
-</article>
-
-
-	<article class="post card bg-white shadow-sm border-0 post-preview">
-	<header class="post-header text-center post-header-with-thumbnail">
-		
-				<img class='post-thumbnail lazyload' src='data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAYAAAAfFcSJAAAAGXRFWHRTb2Z0d2FyZQBBZG9iZSBJbWFnZVJlYWR5ccllPAAAABBJREFUeNpi+P//PwNAgAEACPwC/tuiTRYAAAAASUVORK5CYII=' data-original='https://cdn.luogu.com.cn/upload/image_hosting/yjiw4h2n.png' alt='thumbnail'></img>
-				<div class='post-header-text-container'>
-			
-		<a class="post-title" href="/archives/TC12844/">[题解] [模拟赛 20240913] TopCoder 12844 OneBlack</a>
-		<div class="post-meta">
-			
-						
-						<div class="post-meta-detail post-meta-detail-time">
-							<i class="fa fa-clock-o" aria-hidden="true"></i>
-							<time title="发布于 2024-9-13 21:03:00 | 编辑于 2025-2-17 14:55:22">2024-9-13 21:03
-							</time>
-						</div>
-					
-						
-							<div class="post-meta-devide">|</div>
-						
-						<div class="post-meta-detail post-meta-detail-categories">
-							<i class="fa fa-bookmark-o" aria-hidden="true"></i>
-							<a class="post-meta-detail-catagory-link" href="/categories/Solution/">Solution</a>
-						</div>
-					
-						
-							<div class="post-meta-devide">|</div>
-						
-						<div class="post-meta-detail post-meta-detail-words">
-							<i class="fa fa-book" aria-hidden="true"></i>
-							<span id="busuanzi_container_page_pv">
-								阅读 <span id="busuanzi_value_page_pv"></span> 次
-							</span>
-						</div>
-					
-						
-							<div class="post-meta-devide">|</div>
-						
-						<div class="post-meta-detail post-meta-detail-words">
-							<i class="fa fa-file-word-o" aria-hidden="true"></i>
-							784 字
-						</div>
-					
-						
-							<div class="post-meta-devide">|</div>
-						
-						<div class="post-meta-detail post-meta-detail-readingtime">
-							<i class="fa fa-hourglass-end" aria-hidden="true"></i>
-							4 分钟
-						</div>
-					
-		</div>
-		
-				</div>
-			
-	</header>
-
-	<div class="post-content">
-		
-			
-				Ivan 太牛。
-首先那些无法从 (1,1)(1,1)(1,1) 到达或者无法到达 (n,m)(n,m)(n,m) 的点填任何颜色都无所谓，遇到这样一个就把最后答案 ×2\times 2×2。之后就把他们视作墙即可。
-套路性地把割点转成割边。
-众所周知网格图是平面图。
-
-然后你画出来那个图，长得一脸平面图，又是割，那就对偶。
-By Ivan
-
-然后...
-			
-		
-	</div>
-
-	
-		<div class="post-tags">
-			<i class="fa fa-tags" aria-hidden="true"></i>
-			<a class="tag badge badge-secondary post-meta-detail-tag -none-link" href="/tags/%E5%B9%B3%E9%9D%A2%E5%9B%BE%E8%BD%AC%E5%AF%B9%E5%81%B6%E5%9B%BE/" rel="tag">平面图转对偶图</a><a class="tag badge badge-secondary post-meta-detail-tag -none-link" href="/tags/%E6%A8%A1%E6%8B%9F%E8%B5%9B/" rel="tag">模拟赛</a>
-		</div>
-	
-</article>
-
-
-	<article class="post card bg-white shadow-sm border-0 post-preview">
-	<header class="post-header text-center">
-		
-		<a class="post-title" href="/archives/CF1661E/">[题解] CF1661E Narrow Components</a>
-		<div class="post-meta">
-			
-						
-						<div class="post-meta-detail post-meta-detail-time">
-							<i class="fa fa-clock-o" aria-hidden="true"></i>
-							<time title="发布于 2024-9-12 11:47:00 | 编辑于 2025-2-17 15:09:42">2024-9-12 11:47
-							</time>
-						</div>
-					
-						
-							<div class="post-meta-devide">|</div>
-						
-						<div class="post-meta-detail post-meta-detail-categories">
-							<i class="fa fa-bookmark-o" aria-hidden="true"></i>
-							<a class="post-meta-detail-catagory-link" href="/categories/Solution/">Solution</a>
-						</div>
-					
-						
-							<div class="post-meta-devide">|</div>
-						
-						<div class="post-meta-detail post-meta-detail-words">
-							<i class="fa fa-book" aria-hidden="true"></i>
-							<span id="busuanzi_container_page_pv">
-								阅读 <span id="busuanzi_value_page_pv"></span> 次
-							</span>
-						</div>
-					
-						
-							<div class="post-meta-devide">|</div>
-						
-						<div class="post-meta-detail post-meta-detail-words">
-							<i class="fa fa-file-word-o" aria-hidden="true"></i>
-							1.4k 字
-						</div>
-					
-						
-							<div class="post-meta-devide">|</div>
-						
-						<div class="post-meta-detail post-meta-detail-readingtime">
-							<i class="fa fa-hourglass-end" aria-hidden="true"></i>
-							8 分钟
-						</div>
-					
-		</div>
-		
-	</header>
-
-	<div class="post-content">
-		
-			
-				 题目翻译
-给定 3×n3\times n3×n 的 0/1\tt{0/1}0/1 网格图，给定 qqq 个询问 [l,r][l,r][l,r]，查询 [l,r][l,r][l,r] 部分有几个 1\tt 11 组成的联通块。
-联通是四联通。
-1≤n≤5×1051\leq n\leq 5\times 10^51≤n≤5×105，1≤q≤3×1051...
-			
-		
-	</div>
-
-	
-		<div class="post-tags">
-			<i class="fa fa-tags" aria-hidden="true"></i>
-			<a class="tag badge badge-secondary post-meta-detail-tag -none-link" href="/tags/%E5%B9%B6%E6%9F%A5%E9%9B%86/" rel="tag">并查集</a><a class="tag badge badge-secondary post-meta-detail-tag -none-link" href="/tags/%E8%8E%AB%E9%98%9F/" rel="tag">莫队</a>
-		</div>
-	
-</article>
-
-
-	<article class="post card bg-white shadow-sm border-0 post-preview">
-	<header class="post-header text-center">
-		
-		<a class="post-title" href="/archives/ABC370F/">[题解] ABC370F Cake Division</a>
-		<div class="post-meta">
-			
-						
-						<div class="post-meta-detail post-meta-detail-time">
-							<i class="fa fa-clock-o" aria-hidden="true"></i>
-							<time title="发布于 2024-9-8 13:32:00 | 编辑于 2025-2-17 15:16:27">2024-9-8 13:32
-							</time>
-						</div>
-					
-						
-							<div class="post-meta-devide">|</div>
-						
-						<div class="post-meta-detail post-meta-detail-categories">
-							<i class="fa fa-bookmark-o" aria-hidden="true"></i>
-							<a class="post-meta-detail-catagory-link" href="/categories/Solution/">Solution</a>
-						</div>
-					
-						
-							<div class="post-meta-devide">|</div>
-						
-						<div class="post-meta-detail post-meta-detail-words">
-							<i class="fa fa-book" aria-hidden="true"></i>
-							<span id="busuanzi_container_page_pv">
-								阅读 <span id="busuanzi_value_page_pv"></span> 次
-							</span>
-						</div>
-					
-						
-							<div class="post-meta-devide">|</div>
-						
-						<div class="post-meta-detail post-meta-detail-words">
-							<i class="fa fa-file-word-o" aria-hidden="true"></i>
-							914 字
-						</div>
-					
-						
-							<div class="post-meta-devide">|</div>
-						
-						<div class="post-meta-detail post-meta-detail-readingtime">
-							<i class="fa fa-hourglass-end" aria-hidden="true"></i>
-							4 分钟
-						</div>
-					
-		</div>
-		
-	</header>
-
-	<div class="post-content">
-		
-			
-				 题目翻译
-你有一个圆形的蛋糕，被分成了 nnn 块，每一块都有美味程度 aia_iai​。第 iii 条分割线位于第 iii 块和第 i+1i+1i+1 块之间。
-你需要选择 kkk 条分割线分出 kkk 段交给 kkk 个人，满足每个人都收到了一段连续的蛋糕块，且不存在有块没有交给任何人。
-你需要解决两问。设 wiw_iwi​ 表示第 iii ...
-			
-		
-	</div>
-
-	
-		<div class="post-tags">
-			<i class="fa fa-tags" aria-hidden="true"></i>
-			<a class="tag badge badge-secondary post-meta-detail-tag -none-link" href="/tags/%E4%BA%8C%E5%88%86/" rel="tag">二分</a><a class="tag badge badge-secondary post-meta-detail-tag -none-link" href="/tags/%E5%80%8D%E5%A2%9E/" rel="tag">倍增</a>
-		</div>
-	
-</article>
-
-
-	<article class="post card bg-white shadow-sm border-0 post-preview">
-	<header class="post-header text-center">
-		
-		<a class="post-title" href="/archives/ABC370E/">[题解] ABC370E Avoid K Partition</a>
-		<div class="post-meta">
-			
-						
-						<div class="post-meta-detail post-meta-detail-time">
-							<i class="fa fa-clock-o" aria-hidden="true"></i>
-							<time title="发布于 2024-9-8 13:25:00 | 编辑于 2025-2-12 21:20:06">2024-9-8 13:25
-							</time>
-						</div>
-					
-						
-							<div class="post-meta-devide">|</div>
-						
-						<div class="post-meta-detail post-meta-detail-categories">
-							<i class="fa fa-bookmark-o" aria-hidden="true"></i>
-							<a class="post-meta-detail-catagory-link" href="/categories/Solution/">Solution</a>
-						</div>
-					
-						
-							<div class="post-meta-devide">|</div>
-						
-						<div class="post-meta-detail post-meta-detail-words">
-							<i class="fa fa-book" aria-hidden="true"></i>
-							<span id="busuanzi_container_page_pv">
-								阅读 <span id="busuanzi_value_page_pv"></span> 次
-							</span>
-						</div>
-					
-						
-							<div class="post-meta-devide">|</div>
-						
-						<div class="post-meta-detail post-meta-detail-words">
-							<i class="fa fa-file-word-o" aria-hidden="true"></i>
-							575 字
+							398 字
 						</div>
 					
 						
@@ -1089,161 +681,228 @@ By Ivan
 		
 	</header>
 
-	<div class="post-content">
-		
-			
-				 题目翻译
-给定长度为 nnn 的序列 aaa，求有多少种划分方式（不可划分出空段）使得 aaa 可以被分成若干个段，每段之和都 ≠k\neq k=k。
-对于划分的具体定义：选定 1=i1&lt;i2&lt;⋯&lt;ik&lt;ik+1=n+11=i_1\lt i_2\lt  \dots\lt i_k\lt i_{k+1}=n+11=i1​&l...
-			
-		
+	<div class="post-content" id="post_content">
+		<p><a target="_blank" rel="noopener" href="https://qoj.ac/problem/5568">https://qoj.ac/problem/5568</a></p>
+<p><a target="_blank" rel="noopener" href="https://codeforces.com/gym/105644/problem/C">https://codeforces.com/gym/105644/problem/C</a></p>
+<h1 id="题目翻译"><a class="markdownIt-Anchor" href="#题目翻译"></a> 题目翻译</h1>
+<p>给定排列 <span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>p</mi></mrow><annotation encoding="application/x-tex">p</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.625em;vertical-align:-0.19444em;"></span><span class="mord mathnormal">p</span></span></span></span>，每次可以选 <span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>k</mi></mrow><annotation encoding="application/x-tex">k</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.69444em;vertical-align:0em;"></span><span class="mord mathnormal" style="margin-right:0.03148em;">k</span></span></span></span> 个数循环右移，即选若干个 <span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><msub><mi>a</mi><mi>i</mi></msub></mrow><annotation encoding="application/x-tex">a_i</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.58056em;vertical-align:-0.15em;"></span><span class="mord"><span class="mord mathnormal">a</span><span class="msupsub"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist" style="height:0.31166399999999994em;"><span style="top:-2.5500000000000003em;margin-left:0em;margin-right:0.05em;"><span class="pstrut" style="height:2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mathnormal mtight">i</span></span></span></span><span class="vlist-s">​</span></span><span class="vlist-r"><span class="vlist" style="height:0.15em;"><span></span></span></span></span></span></span></span></span></span>，<span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><msubsup><mi>p</mi><msub><mi>a</mi><mrow><mi>i</mi><mo>+</mo><mn>1</mn></mrow></msub><mo mathvariant="normal" lspace="0em" rspace="0em">′</mo></msubsup><mo>=</mo><msub><mi>p</mi><msub><mi>a</mi><mi>i</mi></msub></msub></mrow><annotation encoding="application/x-tex">p&#x27;_{a_{i+1}}=p_{a_i}</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:1.140657em;vertical-align:-0.388765em;"></span><span class="mord"><span class="mord mathnormal">p</span><span class="msupsub"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist" style="height:0.751892em;"><span style="top:-2.453em;margin-left:0em;margin-right:0.05em;"><span class="pstrut" style="height:2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mtight"><span class="mord mtight"><span class="mord mathnormal mtight">a</span><span class="msupsub"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist" style="height:0.32808571428571426em;"><span style="top:-2.357em;margin-left:0em;margin-right:0.07142857142857144em;"><span class="pstrut" style="height:2.5em;"></span><span class="sizing reset-size3 size1 mtight"><span class="mord mtight"><span class="mord mathnormal mtight">i</span><span class="mbin mtight">+</span><span class="mord mtight">1</span></span></span></span></span><span class="vlist-s">​</span></span><span class="vlist-r"><span class="vlist" style="height:0.20252142857142857em;"><span></span></span></span></span></span></span></span></span></span><span style="top:-3.063em;margin-right:0.05em;"><span class="pstrut" style="height:2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mtight"><span class="mord mtight">′</span></span></span></span></span><span class="vlist-s">​</span></span><span class="vlist-r"><span class="vlist" style="height:0.388765em;"><span></span></span></span></span></span></span><span class="mspace" style="margin-right:0.2777777777777778em;"></span><span class="mrel">=</span><span class="mspace" style="margin-right:0.2777777777777778em;"></span></span><span class="base"><span class="strut" style="height:0.68066em;vertical-align:-0.2501em;"></span><span class="mord"><span class="mord mathnormal">p</span><span class="msupsub"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist" style="height:0.15139199999999997em;"><span style="top:-2.5500000000000003em;margin-left:0em;margin-right:0.05em;"><span class="pstrut" style="height:2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mtight"><span class="mord mtight"><span class="mord mathnormal mtight">a</span><span class="msupsub"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist" style="height:0.3280857142857143em;"><span style="top:-2.357em;margin-left:0em;margin-right:0.07142857142857144em;"><span class="pstrut" style="height:2.5em;"></span><span class="sizing reset-size3 size1 mtight"><span class="mord mathnormal mtight">i</span></span></span></span><span class="vlist-s">​</span></span><span class="vlist-r"><span class="vlist" style="height:0.143em;"><span></span></span></span></span></span></span></span></span></span></span><span class="vlist-s">​</span></span><span class="vlist-r"><span class="vlist" style="height:0.2501em;"><span></span></span></span></span></span></span></span></span></span>。</p>
+<p>一次操作代价是 <span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mn>1</mn><msup><mn>0</mn><mrow><mo>−</mo><mn>8</mn></mrow></msup><mo stretchy="false">⌈</mo><mfrac><mrow><mn>1</mn><msup><mn>0</mn><mn>8</mn></msup></mrow><mi>k</mi></mfrac><mo stretchy="false">⌉</mo></mrow><annotation encoding="application/x-tex">10^{-8}\lceil\frac{10^8}{k}\rceil</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:1.36292em;vertical-align:-0.345em;"></span><span class="mord">1</span><span class="mord"><span class="mord">0</span><span class="msupsub"><span class="vlist-t"><span class="vlist-r"><span class="vlist" style="height:0.8141079999999999em;"><span style="top:-3.063em;margin-right:0.05em;"><span class="pstrut" style="height:2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mtight"><span class="mord mtight">−</span><span class="mord mtight">8</span></span></span></span></span></span></span></span></span><span class="mopen">⌈</span><span class="mord"><span class="mopen nulldelimiter"></span><span class="mfrac"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist" style="height:1.01792em;"><span style="top:-2.6550000000000002em;"><span class="pstrut" style="height:3em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mtight"><span class="mord mathnormal mtight" style="margin-right:0.03148em;">k</span></span></span></span><span style="top:-3.23em;"><span class="pstrut" style="height:3em;"></span><span class="frac-line" style="border-bottom-width:0.04em;"></span></span><span style="top:-3.394em;"><span class="pstrut" style="height:3em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mtight"><span class="mord mtight">1</span><span class="mord mtight"><span class="mord mtight">0</span><span class="msupsub"><span class="vlist-t"><span class="vlist-r"><span class="vlist" style="height:0.8913142857142857em;"><span style="top:-2.931em;margin-right:0.07142857142857144em;"><span class="pstrut" style="height:2.5em;"></span><span class="sizing reset-size3 size1 mtight"><span class="mord mtight">8</span></span></span></span></span></span></span></span></span></span></span></span><span class="vlist-s">​</span></span><span class="vlist-r"><span class="vlist" style="height:0.345em;"><span></span></span></span></span></span><span class="mclose nulldelimiter"></span></span><span class="mclose">⌉</span></span></span></span>。</p>
+<p>要求在 <span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mo>≤</mo><mn>2</mn></mrow><annotation encoding="application/x-tex">\leq 2</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.7719400000000001em;vertical-align:-0.13597em;"></span><span class="mrel">≤</span><span class="mspace" style="margin-right:0.2777777777777778em;"></span></span><span class="base"><span class="strut" style="height:0.64444em;vertical-align:0em;"></span><span class="mord">2</span></span></span></span> 的代价内把排列排好序。</p>
+<h1 id="题目思路"><a class="markdownIt-Anchor" href="#题目思路"></a> 题目思路</h1>
+<p>这个做法也太神仙了。</p>
+<p>注意到一个排列到一个随机排列的代价期望 <span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mo>&lt;</mo><mn>1</mn></mrow><annotation encoding="application/x-tex">\lt 1</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.5782em;vertical-align:-0.0391em;"></span><span class="mrel">&lt;</span><span class="mspace" style="margin-right:0.2777777777777778em;"></span></span><span class="base"><span class="strut" style="height:0.64444em;vertical-align:0em;"></span><span class="mord">1</span></span></span></span>。</p>
+<p>随机一个排列 <span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>q</mi></mrow><annotation encoding="application/x-tex">q</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.625em;vertical-align:-0.19444em;"></span><span class="mord mathnormal" style="margin-right:0.03588em;">q</span></span></span></span>，操作 <span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>p</mi><mo>→</mo><mi>q</mi><mo>→</mo><mi mathvariant="normal">sorted</mi><mo>⁡</mo><mo stretchy="false">(</mo><mi>p</mi><mo stretchy="false">)</mo></mrow><annotation encoding="application/x-tex">p\to q\to \operatorname{sorted}(p)</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.625em;vertical-align:-0.19444em;"></span><span class="mord mathnormal">p</span><span class="mspace" style="margin-right:0.2777777777777778em;"></span><span class="mrel">→</span><span class="mspace" style="margin-right:0.2777777777777778em;"></span></span><span class="base"><span class="strut" style="height:0.625em;vertical-align:-0.19444em;"></span><span class="mord mathnormal" style="margin-right:0.03588em;">q</span><span class="mspace" style="margin-right:0.2777777777777778em;"></span><span class="mrel">→</span><span class="mspace" style="margin-right:0.2777777777777778em;"></span></span><span class="base"><span class="strut" style="height:1em;vertical-align:-0.25em;"></span><span class="mop"><span class="mord mathrm">s</span><span class="mord mathrm">o</span><span class="mord mathrm">r</span><span class="mord mathrm">t</span><span class="mord mathrm">e</span><span class="mord mathrm">d</span></span><span class="mopen">(</span><span class="mord mathnormal">p</span><span class="mclose">)</span></span></span></span> 期望代价是 <span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mo>&lt;</mo><mn>2</mn></mrow><annotation encoding="application/x-tex">\lt 2</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.5782em;vertical-align:-0.0391em;"></span><span class="mrel">&lt;</span><span class="mspace" style="margin-right:0.2777777777777778em;"></span></span><span class="base"><span class="strut" style="height:0.64444em;vertical-align:0em;"></span><span class="mord">2</span></span></span></span> 的。</p>
+<p>暴力模拟这个过程。</p>
+<h1 id="完整代码"><a class="markdownIt-Anchor" href="#完整代码"></a> 完整代码</h1>
+<p><a target="_blank" rel="noopener" href="https://codeforces.com/gym/105644/submission/306654542">https://codeforces.com/gym/105644/submission/306654542</a></p>
+<p><a target="_blank" rel="noopener" href="https://qoj.ac/submission/904910">https://qoj.ac/submission/904910</a></p>
+<pre><code class="highlight cpp"><span class="meta">#<span class="keyword">include</span> <span class="string">&lt;bits/stdc++.h&gt;</span></span>
+<span class="keyword">using</span> <span class="keyword">namespace</span> std;
+<span class="function">mt19937 <span class="title">rnd</span><span class="params">(chrono::system_clock::now().time_since_epoch().count())</span></span>;
+<span class="type">int</span> n;
+<span class="type">int</span> p[<span class="number">5020</span>];
+<span class="type">int</span> q[<span class="number">5020</span>];
+<span class="type">int</span> t[<span class="number">5020</span>];
+<span class="type">int</span> a[<span class="number">5020</span>], m;
+vector&lt;string&gt; ans;
+<span class="function"><span class="type">bool</span> <span class="title">check</span><span class="params">()</span></span>
+<span class="function"></span>&#123;
+    <span class="keyword">for</span> (<span class="type">int</span> i = <span class="number">1</span>; i &lt;= n; i++)
+    &#123;
+        <span class="keyword">if</span> (p[i] ^ q[i])
+            <span class="keyword">return</span> <span class="number">0</span>;
+    &#125;
+    <span class="keyword">return</span> <span class="number">1</span>;
+&#125;
+<span class="function"><span class="type">void</span> <span class="title">shift</span><span class="params">()</span></span>
+<span class="function"></span>&#123;
+    vector&lt;<span class="type">int</span>&gt; vec;
+    <span class="keyword">for</span> (<span class="type">int</span> i = <span class="number">1</span>; i &lt;= n; i++)
+    &#123;
+        <span class="keyword">if</span> (p[i] ^ q[i])
+            vec.<span class="built_in">emplace_back</span>(i);
+    &#125;
+    <span class="built_in">memcpy</span>(t, p, <span class="built_in">sizeof</span>(t));
+    string s = <span class="string">&quot;&quot;</span>;
+    <span class="keyword">for</span> (<span class="type">int</span> i = <span class="number">1</span>; i &lt;= n; i++)
+        s += <span class="string">&#x27;0&#x27;</span>;
+    <span class="keyword">for</span> (<span class="type">int</span> i : vec)
+        s[i - <span class="number">1</span>] = <span class="string">&#x27;1&#x27;</span>;
+    ans.<span class="built_in">push_back</span>(s);
+    <span class="keyword">for</span> (<span class="type">int</span> i = <span class="number">0</span>; i &lt; vec.<span class="built_in">size</span>(); i++)
+        p[vec[(i + <span class="number">1</span>) % vec.<span class="built_in">size</span>()]] = t[vec[i]];
+&#125;
+<span class="function"><span class="type">int</span> <span class="title">main</span><span class="params">()</span></span>
+<span class="function"></span>&#123;
+    cin &gt;&gt; n;
+    <span class="keyword">for</span> (<span class="type">int</span> i = <span class="number">1</span>; i &lt;= n; i++)
+        cin &gt;&gt; p[i], q[i] = i;
+    <span class="built_in">shuffle</span>(q + <span class="number">1</span>, q + n + <span class="number">1</span>, rnd);
+    <span class="keyword">while</span> (!<span class="built_in">check</span>())
+        <span class="built_in">shift</span>();
+    <span class="keyword">for</span> (<span class="type">int</span> i = <span class="number">1</span>; i &lt;= n; i++)
+        q[i] = i;
+    <span class="keyword">while</span> (!<span class="built_in">check</span>())
+        <span class="built_in">shift</span>();
+    cout &lt;&lt; ans.<span class="built_in">size</span>() &lt;&lt; <span class="string">&#x27;\n&#x27;</span>;
+    <span class="keyword">for</span> (<span class="keyword">auto</span> s : ans)
+        cout &lt;&lt; s &lt;&lt; <span class="string">&#x27;\n&#x27;</span>;
+    <span class="keyword">return</span> <span class="number">0</span>;
+&#125;</code></pre>
 	</div>
 
 	
-</article>
-
-
-	<article class="post card bg-white shadow-sm border-0 post-preview">
-	<header class="post-header text-center">
-		
-		<a class="post-title" href="/archives/ABC370D/">[题解] ABC370D Cross Explosion</a>
-		<div class="post-meta">
-			
-						
-						<div class="post-meta-detail post-meta-detail-time">
-							<i class="fa fa-clock-o" aria-hidden="true"></i>
-							<time title="发布于 2024-9-8 13:17:00 | 编辑于 2025-2-12 21:19:08">2024-9-8 13:17
-							</time>
-						</div>
-					
-						
-							<div class="post-meta-devide">|</div>
-						
-						<div class="post-meta-detail post-meta-detail-categories">
-							<i class="fa fa-bookmark-o" aria-hidden="true"></i>
-							<a class="post-meta-detail-catagory-link" href="/categories/Solution/">Solution</a>
-						</div>
-					
-						
-							<div class="post-meta-devide">|</div>
-						
-						<div class="post-meta-detail post-meta-detail-words">
-							<i class="fa fa-book" aria-hidden="true"></i>
-							<span id="busuanzi_container_page_pv">
-								阅读 <span id="busuanzi_value_page_pv"></span> 次
-							</span>
-						</div>
-					
-						
-							<div class="post-meta-devide">|</div>
-						
-						<div class="post-meta-detail post-meta-detail-words">
-							<i class="fa fa-file-word-o" aria-hidden="true"></i>
-							2k 字
-						</div>
-					
-						
-							<div class="post-meta-devide">|</div>
-						
-						<div class="post-meta-detail post-meta-detail-readingtime">
-							<i class="fa fa-hourglass-end" aria-hidden="true"></i>
-							10 分钟
-						</div>
-					
+		<div class="post-donate">
+			<button class="btn donate-btn btn-danger">赞赏</button>
+			<div class="donate-qrcode card shadow-sm bg-white">
+				<img src="http://img.cyx2009.top/pay_wx.jpg">
+			</div>
 		</div>
-		
-	</header>
-
-	<div class="post-content">
-		
-			
-				 题目翻译
-给定 h×wh\times wh×w 的网格，初始每个格子上都有一堵墙，给出 qqq 个操作，每次给出 (r,c)(r,c)(r,c) 表示操作位置，若 (r,c)(r,c)(r,c) 位置上有墙就破坏掉这个墙。如果没有，破坏掉这堵墙上、下、左、右四个方向各看到的第一堵墙。
-操作之后给出目前剩下的墙的个数。
-1≤h,w,h×w≤4×10...
-			
-		
-	</div>
+	
 
 	
-</article>
-
-
-	<article class="post card bg-white shadow-sm border-0 post-preview">
-	<header class="post-header text-center">
+			<div class='additional-content-after-post'>爱你宝宝！</div>
 		
-		<a class="post-title" href="/archives/CF2008/">[题解] CF2008 做题笔记</a>
-		<div class="post-meta">
-			
-						
-						<div class="post-meta-detail post-meta-detail-time">
-							<i class="fa fa-clock-o" aria-hidden="true"></i>
-							<time title="发布于 2024-9-2 0:54:00 | 编辑于 2025-2-12 21:48:57">2024-9-2 0:54
-							</time>
-						</div>
-					
-						
-							<div class="post-meta-devide">|</div>
-						
-						<div class="post-meta-detail post-meta-detail-categories">
-							<i class="fa fa-bookmark-o" aria-hidden="true"></i>
-							<a class="post-meta-detail-catagory-link" href="/categories/Solution/">Solution</a>
-						</div>
-					
-						
-							<div class="post-meta-devide">|</div>
-						
-						<div class="post-meta-detail post-meta-detail-words">
-							<i class="fa fa-book" aria-hidden="true"></i>
-							<span id="busuanzi_container_page_pv">
-								阅读 <span id="busuanzi_value_page_pv"></span> 次
-							</span>
-						</div>
-					
-						
-							<div class="post-meta-devide">|</div>
-						
-						<div class="post-meta-detail post-meta-detail-words">
-							<i class="fa fa-file-word-o" aria-hidden="true"></i>
-							977 字
-						</div>
-					
-						
-							<div class="post-meta-devide">|</div>
-						
-						<div class="post-meta-detail post-meta-detail-readingtime">
-							<i class="fa fa-hourglass-end" aria-hidden="true"></i>
-							4 分钟
-						</div>
-					
+
+	
+		<div class="post-tags">
+			<i class="fa fa-tags" aria-hidden="true"></i>
+			<a class="tag badge badge-secondary post-meta-detail-tag -none-link" href="/tags/%E9%9A%8F%E6%9C%BA/" rel="tag">随机</a>
 		</div>
-		
-	</header>
-
-	<div class="post-content">
-		
-			
-				 A
-看 aaa 个 111 和 b mod 2b\bmod 2bmod2 个 222 能不能匹配。
- B
-打到一半加解释，牛牛牛。
-先判断 nnn 是否为完全平方数，如果是的话设 m=nm=\sqrt nm=n​。看原图形分成 m×mm\times mm×m 的图形是否满足要求。
- C
-不难发现只和 r−lr-lr−l 有关。
-二分答案 midm...
-			
-		
-	</div>
-
 	
 </article>
 
+	<div id="share_container">
+	<div id="share" data-initialized="true">
+		<a class="no-pjax icon-wechat" tooltip="分享到微信">
+			<button class="btn btn-icon btn-success">
+				<span class="btn-inner--icon"><i class="fa fa-weixin"></i></span>
+			</button>
+		</a>
+		<a target="_blank" class="no-pjax icon-douban" tooltip="分享到豆瓣">
+			<button class="btn btn-icon btn-primary" style="background: #209261;border: none;">
+				豆
+			</button>
+		</a>
+		<a target="_blank" class="no-pjax icon-qq" tooltip="分享到 QQ">
+			<button class="btn btn-icon btn-primary" style="background: #2196f3;border: none;">
+				<span class="btn-inner--icon"><i class="fa fa-qq"></i></span>
+			</button>
+		</a>
+		<a target="_blank" class="no-pjax icon-qzone" tooltip="分享到 QQ 空间">
+			<button class="btn btn-icon btn-primary" style="background: #ffc107;border: none;">
+				<span class="btn-inner--icon"><i class="fa fa-star"></i></span>
+			</button>
+		</a>
+		<a target="_blank" class="no-pjax icon-weibo" tooltip="分享到微博">
+			<button class="btn btn-icon btn-warning">
+				<span class="btn-inner--icon"><i class="fa fa-weibo"></i></span>
+			</button>
+		</a>
+		<a target="_blank" class="no-pjax icon-facebook" tooltip="分享到 Facebook">
+			<button class="btn btn-icon btn-primary" style="background: #283593;border: none;">
+				<span class="btn-inner--icon"><i class="fa fa-facebook"></i></span>
+			</button>
+		</a>
+		<a target="_blank" class="no-pjax icon-twitter" tooltip="分享到 Twitter">
+			<button class="btn btn-icon btn-primary" style="background: #03a9f4;border: none;">
+				<span class="btn-inner--icon"><i class="fa fa-twitter"></i></span>
+			</button>
+		</a>
+		<a target="_blank" class="no-pjax icon-telegram" href="https://telegram.me/share/url?url=http://blog.cyx2009.top/archives/QOJ5568/&text=[题解] QOJ5568 Cyclic Shifts" tooltip="分享到 Telegram">
+			<button class="btn btn-icon btn-primary" style="background: #42a5f5;border: none;">
+				<span class="btn-inner--icon"><i class="fa fa-telegram"></i></span>
+			</button>
+		</a>
+		<a target="_blank" class="no-pjax icon-copy-link" id="share_copy_link" tooltip="复制链接">
+			<button class="btn btn-icon btn-default">
+				<span class="btn-inner--icon"><i class="fa fa-link"></i></span>
+			</button>
+		</a>
+	</div>
+	<button id="share_show" class="btn btn-icon btn-primary" tooltip="分享">
+		<span class="btn-inner--icon"><i class="fa fa-share"></i></span>
+	</button>
+</div>
+<script type="text/javascript">
+	socialShare("#share", {
+	    title : `[题解] QOJ5568 Cyclic Shifts`,
+	    description : `https://qoj.ac/problem/5568
+https://codeforces.com...`,
+	    wechatQrcodeTitle : `分享到微信`,
+	    wechatQrcodeHelper : `微信扫描二维码`,
+	    source : `http://blog.cyx2009.top/archives/QOJ5568/`
+	});
+	$("#share_show")[0].onclick = function(){
+		$("#share_container").addClass("opened");
+	};
+	$("#share_copy_link")[0].onclick = function(){
+		let input = document.createElement('input');
+		document.body.appendChild(input);
+		input.setAttribute("value", window.location.href);
+		input.setAttribute("readonly", "readonly");
+		input.setAttribute("style", "opacity: 0;mouse-events:none;");
+		input.select();
+		if (document.execCommand('copy')){
+			iziToast.show({
+				title: '链接已复制',
+				message: "链接已复制到剪贴板",
+				class: 'shadow',
+				position: 'topRight',
+				backgroundColor: '#2dce89',
+				titleColor: '#ffffff',
+				messageColor: '#ffffff',
+				iconColor: '#ffffff',
+				progressBarColor: '#ffffff',
+				icon: 'fa fa-check',
+				timeout: 5000
+			});
+		}else{
+			iziToast.show({
+				title: '复制失败',
+				message: "请手动复制链接",
+				class: 'shadow',
+				position: 'topRight',
+				backgroundColor: '#f5365c',
+				titleColor: '#ffffff',
+				messageColor: '#ffffff',
+				iconColor: '#ffffff',
+				progressBarColor: '#ffffff',
+				icon: 'fa fa-close',
+				timeout: 5000
+			});
+		}
+		document.body.removeChild(input);
+	};
+</script>
 
 
 
+	<div id="post_comment" class="card shadow-sm">
+		<div id="giscus"></div>
+<script src="https://giscus.app/client.js"
+        data-repo="chenyuxuan2009/blogtalk"
+        data-repo-id="R_kgDOHDKqeg"
+        data-category="General"
+        data-category-id="DIC_kwDOHDKqes4COOnc"
+        data-mapping="pathname"
+        data-input-position="top"
+        data-theme="light"
+        data-lang="zh-CN"
+        crossorigin="anonymous"
+        async>
+</script>
+
+	</div>
 
 
-			
+
+<div class="post-navigation card shadow-sm"><div class="post-navigation-item post-navigation-pre"></div><div class="post-navigation-item post-navigation-next"><span class="page-navigation-extra-text">下一篇 <i class="fa fa-arrow-circle-o-right" aria-hidden="true"></i></span><a href="/archives/CF1184B3/" rel="next"> [题解] CF1184B3 The Doctor Meets Vader (Hard)</a></div></div>
+
+
+
+		
+		
 		
 		
 
