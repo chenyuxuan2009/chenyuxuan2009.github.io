@@ -68,6 +68,7 @@ translation['en_US'] = {
 	"获取 Repo 信息失败": "Failed to get repository information",
 	"点赞失败": "Vote failed",
 	"Hitokoto 获取失败": "Failed to get Hitokoto",
+	"Poem 获取失败": "Failed to get Poem",
 	"复制成功": "Copied",
 	"代码已复制到剪贴板": "Code has been copied to the clipboard",
 	"复制失败": "Failed",
@@ -125,6 +126,7 @@ translation['ru_RU'] = {
 	"获取 Repo 信息失败": "Неудалось получить информацию репозитория",
 	"点赞失败": "Ошибка голосования",
 	"Hitokoto 获取失败": "Проблемы с вызовом Hitokoto",
+	"Poem 获取失败": "Проблемы с вызовом Poem",
 	"复制成功": "Скопировано",
 	"代码已复制到剪贴板": "Код скопирован в буфер обмена",
 	"复制失败": "Неудалось",
@@ -182,6 +184,7 @@ translation['zh_TW'] = {
 	"获取 Repo 信息失败": "獲取 Repo 信息失敗",
 	"点赞失败": "點贊失敗",
 	"Hitokoto 获取失败": "Hitokoto 獲取失敗",
+	"Poem 获取失败": "Poem 獲取失敗",
 	"复制成功": "復制成功",
 	"代码已复制到剪贴板": "代碼已復制到剪貼板",
 	"复制失败": "復制失敗",
@@ -1086,6 +1089,20 @@ if ($(".hitokoto").length > 0){
 		},
 		error: function(result){
 			$(".hitokoto").text(__("Hitokoto 获取失败"));
+		}
+	});
+}
+
+/* 古诗 */
+if ($(".poem").length > 0){
+	$.ajax({
+		type: 'GET',
+		url: "https://v1.jinrishici.com/all.json",
+		success: function(result){
+			$(".poem").text(result.content+'——'+'【'+result.author+'】'+'《'+result.origin+'》');
+		},
+		error: function(result){
+			$(".poem").text(__("Poem 获取失败"));
 		}
 	});
 }
