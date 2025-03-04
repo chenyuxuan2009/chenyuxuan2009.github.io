@@ -6,7 +6,7 @@
   <link href="http://blog.cyx2009.top/atom.xml" rel="self"/>
   
   <link href="http://blog.cyx2009.top/"/>
-  <updated>2025-03-03T03:35:06.740Z</updated>
+  <updated>2025-03-04T14:52:48.902Z</updated>
   <id>http://blog.cyx2009.top/</id>
   
   <author>
@@ -15,6 +15,34 @@
   </author>
   
   <generator uri="https://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>『置顶』[工程] 通过 RSS 订阅文章更新</title>
+    <link href="http://blog.cyx2009.top/archives/rss_follow/"/>
+    <id>http://blog.cyx2009.top/archives/rss_follow/</id>
+    <published>2025-03-04T14:44:00.000Z</published>
+    <updated>2025-03-04T14:52:48.902Z</updated>
+    
+    
+      
+      
+        
+        
+    <summary type="html">&lt;blockquote&gt;
+&lt;p&gt;什么是 RSS？&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;RSS 指 Really Simple Syndication（真正简易联合）；&lt;/li&gt;
+&lt;li&gt;RSS 使您有能力聚合（syndicate）网站的内容；&lt;/li&gt;
+&lt;li&gt;RSS</summary>
+        
+      
+    
+    
+    
+    <category term="Solution" scheme="http://blog.cyx2009.top/categories/Solution/"/>
+    
+    
+  </entry>
   
   <entry>
     <title>[游记] 江苏省选 2025 游记</title>
@@ -539,31 +567,6 @@
     
     
     <category term="模拟赛" scheme="http://blog.cyx2009.top/tags/%E6%A8%A1%E6%8B%9F%E8%B5%9B/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>[题解] ABC391 FG 一句话题解</title>
-    <link href="http://blog.cyx2009.top/archives/ABC391/"/>
-    <id>http://blog.cyx2009.top/archives/ABC391/</id>
-    <published>2025-02-01T13:59:00.000Z</published>
-    <updated>2025-02-12T14:10:17.377Z</updated>
-    
-    
-      
-      
-        
-        
-    <summary type="html">&lt;p&gt;没脸投题解区了，给我的博客里扔点垃圾。&lt;/p&gt;
-&lt;h1 id=&quot;f&quot;&gt;&lt;a class=&quot;markdownIt-Anchor&quot; href=&quot;#f&quot;&gt;&lt;/a&gt; F&lt;/h1&gt;
-&lt;p&gt;来说一下我的铸币做法。有两个很简单的是直接优先队列每次尝试加 &lt;span</summary>
-        
-      
-    
-    
-    
-    <category term="Solution" scheme="http://blog.cyx2009.top/categories/Solution/"/>
-    
     
   </entry>
   

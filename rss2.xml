@@ -15,8 +15,38 @@
     <atom:link href="http://blog.cyx2009.top/rss2.xml" rel="self" type="application/rss+xml"/>
     
     <description>沉石鱼惊旋 的博客</description>
-    <pubDate>Mon, 03 Mar 2025 03:35:06 GMT</pubDate>
+    <pubDate>Tue, 04 Mar 2025 14:52:48 GMT</pubDate>
     <generator>http://hexo.io/</generator>
+    
+    <item>
+      <title>『置顶』[工程] 通过 RSS 订阅文章更新</title>
+      <link>http://blog.cyx2009.top/archives/rss_follow/</link>
+      <guid>http://blog.cyx2009.top/archives/rss_follow/</guid>
+      <pubDate>Tue, 04 Mar 2025 14:44:00 GMT</pubDate>
+      
+        
+        
+          
+          
+      <description>&lt;blockquote&gt;
+&lt;p&gt;什么是 RSS？&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;RSS 指 Really Simple Syndication（真正简易联合）；&lt;/li&gt;
+&lt;li&gt;RSS 使您有能力聚合（syndicate）网站的内容；&lt;/li&gt;
+&lt;li&gt;RSS</description>
+          
+        
+      
+      
+      
+      
+      <category domain="http://blog.cyx2009.top/categories/Solution/">Solution</category>
+      
+      
+      
+      <comments>http://blog.cyx2009.top/archives/rss_follow/#disqus_thread</comments>
+      
+    </item>
     
     <item>
       <title>[游记] 江苏省选 2025 游记</title>
@@ -579,33 +609,6 @@
       
       
       <comments>http://blog.cyx2009.top/archives/MXWC2025/#disqus_thread</comments>
-      
-    </item>
-    
-    <item>
-      <title>[题解] ABC391 FG 一句话题解</title>
-      <link>http://blog.cyx2009.top/archives/ABC391/</link>
-      <guid>http://blog.cyx2009.top/archives/ABC391/</guid>
-      <pubDate>Sat, 01 Feb 2025 13:59:00 GMT</pubDate>
-      
-        
-        
-          
-          
-      <description>&lt;p&gt;没脸投题解区了，给我的博客里扔点垃圾。&lt;/p&gt;
-&lt;h1 id=&quot;f&quot;&gt;&lt;a class=&quot;markdownIt-Anchor&quot; href=&quot;#f&quot;&gt;&lt;/a&gt; F&lt;/h1&gt;
-&lt;p&gt;来说一下我的铸币做法。有两个很简单的是直接优先队列每次尝试加 &lt;span</description>
-          
-        
-      
-      
-      
-      
-      <category domain="http://blog.cyx2009.top/categories/Solution/">Solution</category>
-      
-      
-      
-      <comments>http://blog.cyx2009.top/archives/ABC391/#disqus_thread</comments>
       
     </item>
     
