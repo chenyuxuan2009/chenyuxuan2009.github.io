@@ -1,0 +1,613 @@
+<?xml version="1.0" encoding="utf-8"?>
+<rss version="2.0"
+  xmlns:atom="http://www.w3.org/2005/Atom"
+  xmlns:content="http://purl.org/rss/1.0/modules/content/">
+  <channel>
+    <title>沉石鱼惊旋 的博客</title>
+    <link>http://blog.cyx2009.top/</link>
+    
+    <image>
+      <url>http://blog.cyx2009.top/favicon.ico</url>
+      <title>沉石鱼惊旋 的博客</title>
+      <link>http://blog.cyx2009.top/</link>
+    </image>
+    
+    <atom:link href="http://blog.cyx2009.top/rss2.xml" rel="self" type="application/rss+xml"/>
+    
+    <description>沉石鱼惊旋 的博客</description>
+    <pubDate>Mon, 03 Mar 2025 03:35:06 GMT</pubDate>
+    <generator>http://hexo.io/</generator>
+    
+    <item>
+      <title>[游记] 江苏省选 2025 游记</title>
+      <link>http://blog.cyx2009.top/archives/JSOI2025/</link>
+      <guid>http://blog.cyx2009.top/archives/JSOI2025/</guid>
+      <pubDate>Thu, 27 Feb 2025 12:46:00 GMT</pubDate>
+      
+        
+        
+          
+          
+      <description>&lt;h1 id=&quot;2025-省选游记没去只是有个同名同姓-关于有人拍到了我这件事我还没想好怎么编&quot;&gt;&lt;a class=&quot;markdownIt-Anchor&quot; href=&quot;#2025-省选游记没去只是有个同名同姓-关于有人拍到了我这件事我还没想好怎么编&quot;&gt;&lt;/a&gt; 2025</description>
+          
+        
+      
+      
+      
+      
+      <category domain="http://blog.cyx2009.top/categories/TravelNote/">TravelNote</category>
+      
+      
+      
+      <comments>http://blog.cyx2009.top/archives/JSOI2025/#disqus_thread</comments>
+      
+    </item>
+    
+    <item>
+      <title>[题解] [模拟赛 20250226] 签到题 checkin</title>
+      <link>http://blog.cyx2009.top/archives/20250226_checkin/</link>
+      <guid>http://blog.cyx2009.top/archives/20250226_checkin/</guid>
+      <pubDate>Wed, 26 Feb 2025 12:35:00 GMT</pubDate>
+      
+        
+        
+          
+          
+      <description>&lt;h1 id=&quot;题意&quot;&gt;&lt;a class=&quot;markdownIt-Anchor&quot; href=&quot;#题意&quot;&gt;&lt;/a&gt; 题意&lt;/h1&gt;
+&lt;p&gt;给定 &lt;span class=&quot;katex&quot;&gt;&lt;span class=&quot;katex-mathml&quot;&gt;&lt;math</description>
+          
+        
+      
+      
+      
+      
+      <category domain="http://blog.cyx2009.top/categories/Solution/">Solution</category>
+      
+      
+      <category domain="http://blog.cyx2009.top/tags/%E6%A8%A1%E6%8B%9F%E8%B5%9B/">模拟赛</category>
+      
+      <category domain="http://blog.cyx2009.top/tags/%E6%89%AB%E6%8F%8F%E7%BA%BF/">扫描线</category>
+      
+      <category domain="http://blog.cyx2009.top/tags/%E7%BA%BF%E6%AE%B5%E6%A0%91/">线段树</category>
+      
+      
+      <comments>http://blog.cyx2009.top/archives/20250226_checkin/#disqus_thread</comments>
+      
+    </item>
+    
+    <item>
+      <title>[题解] 【LGR-215-Div.3】洛谷基础赛 #20 &amp; FAOI-R4 题解</title>
+      <link>http://blog.cyx2009.top/archives/LGR215/</link>
+      <guid>http://blog.cyx2009.top/archives/LGR215/</guid>
+      <pubDate>Sun, 23 Feb 2025 05:45:00 GMT</pubDate>
+      
+        
+        
+          
+          
+      <description>&lt;h1 id=&quot;p11784-faoi-r4问题跳转&quot;&gt;&lt;a class=&quot;markdownIt-Anchor&quot; href=&quot;#p11784-faoi-r4问题跳转&quot;&gt;&lt;/a&gt; P11784 「FAOI-R4」问题跳转&lt;/h1&gt;
+&lt;p&gt;按题意模拟即可，如果这是纯数字题号把省略的</description>
+          
+        
+      
+      
+      
+      
+      <category domain="http://blog.cyx2009.top/categories/Solution/">Solution</category>
+      
+      
+      <category domain="http://blog.cyx2009.top/tags/%E5%B9%B3%E8%A1%A1%E6%A0%91/">平衡树</category>
+      
+      <category domain="http://blog.cyx2009.top/tags/%E5%8F%8C%E6%8C%87%E9%92%88/">双指针</category>
+      
+      <category domain="http://blog.cyx2009.top/tags/%E4%BA%8C%E8%BF%9B%E5%88%B6/">二进制</category>
+      
+      <category domain="http://blog.cyx2009.top/tags/%E6%A8%A1%E6%8B%9F/">模拟</category>
+      
+      
+      <comments>http://blog.cyx2009.top/archives/LGR215/#disqus_thread</comments>
+      
+    </item>
+    
+    <item>
+      <title>[题解] [模拟赛 20250221] QOJ5566 And Xor Tree</title>
+      <link>http://blog.cyx2009.top/archives/QOJ5566/</link>
+      <guid>http://blog.cyx2009.top/archives/QOJ5566/</guid>
+      <pubDate>Fri, 21 Feb 2025 11:56:00 GMT</pubDate>
+      
+        
+        
+          
+          
+      <description>&lt;h1 id=&quot;题意&quot;&gt;&lt;a class=&quot;markdownIt-Anchor&quot; href=&quot;#题意&quot;&gt;&lt;/a&gt; 题意&lt;/h1&gt;
+&lt;p&gt;给定 &lt;span class=&quot;katex&quot;&gt;&lt;span class=&quot;katex-mathml&quot;&gt;&lt;math</description>
+          
+        
+      
+      
+      
+      
+      <category domain="http://blog.cyx2009.top/categories/Solution/">Solution</category>
+      
+      
+      <category domain="http://blog.cyx2009.top/tags/%E5%8A%A8%E6%80%81%E8%A7%84%E5%88%92/">动态规划</category>
+      
+      <category domain="http://blog.cyx2009.top/tags/%E6%8B%86%E4%BD%8D/">拆位</category>
+      
+      <category domain="http://blog.cyx2009.top/tags/%E6%A0%91%E5%BD%A2-DP/">树形 DP</category>
+      
+      
+      <comments>http://blog.cyx2009.top/archives/QOJ5566/#disqus_thread</comments>
+      
+    </item>
+    
+    <item>
+      <title>[题解] GYM102562B Bitwise Party</title>
+      <link>http://blog.cyx2009.top/archives/GYM102562B/</link>
+      <guid>http://blog.cyx2009.top/archives/GYM102562B/</guid>
+      <pubDate>Fri, 21 Feb 2025 11:40:00 GMT</pubDate>
+      
+        
+        
+          
+          
+      <description>&lt;h1 id=&quot;题意&quot;&gt;&lt;a class=&quot;markdownIt-Anchor&quot; href=&quot;#题意&quot;&gt;&lt;/a&gt; 题意&lt;/h1&gt;
+&lt;p&gt;定义 &lt;span class=&quot;katex&quot;&gt;&lt;span class=&quot;katex-mathml&quot;&gt;&lt;math</description>
+          
+        
+      
+      
+      
+      
+      <category domain="http://blog.cyx2009.top/categories/Solution/">Solution</category>
+      
+      
+      <category domain="http://blog.cyx2009.top/tags/%E5%88%86%E6%B2%BB/">分治</category>
+      
+      <category domain="http://blog.cyx2009.top/tags/%E6%8B%86%E4%BD%8D/">拆位</category>
+      
+      
+      <comments>http://blog.cyx2009.top/archives/GYM102562B/#disqus_thread</comments>
+      
+    </item>
+    
+    <item>
+      <title>[题解] CF1270F Awesome Substrings</title>
+      <link>http://blog.cyx2009.top/archives/CF1270F/</link>
+      <guid>http://blog.cyx2009.top/archives/CF1270F/</guid>
+      <pubDate>Thu, 20 Feb 2025 13:01:00 GMT</pubDate>
+      
+        
+        
+          
+          
+      <description>&lt;h1 id=&quot;题目翻译&quot;&gt;&lt;a class=&quot;markdownIt-Anchor&quot; href=&quot;#题目翻译&quot;&gt;&lt;/a&gt; 题目翻译&lt;/h1&gt;
+&lt;p&gt;给定长度为 &lt;span class=&quot;katex&quot;&gt;&lt;span class=&quot;katex-mathml&quot;&gt;&lt;math</description>
+          
+        
+      
+      
+      
+      
+      <category domain="http://blog.cyx2009.top/categories/Solution/">Solution</category>
+      
+      
+      <category domain="http://blog.cyx2009.top/tags/%E6%A0%B9%E5%8F%B7%E5%88%86%E6%B2%BB/">根号分治</category>
+      
+      
+      <comments>http://blog.cyx2009.top/archives/CF1270F/#disqus_thread</comments>
+      
+    </item>
+    
+    <item>
+      <title>[题解] CF1325E Ehab&#39;s REAL Number Theory Problem</title>
+      <link>http://blog.cyx2009.top/archives/CF1325E/</link>
+      <guid>http://blog.cyx2009.top/archives/CF1325E/</guid>
+      <pubDate>Thu, 20 Feb 2025 09:25:00 GMT</pubDate>
+      
+        
+        
+          
+          
+      <description>&lt;h1 id=&quot;题目翻译&quot;&gt;&lt;a class=&quot;markdownIt-Anchor&quot; href=&quot;#题目翻译&quot;&gt;&lt;/a&gt; 题目翻译&lt;/h1&gt;
+&lt;p&gt;给定 &lt;span class=&quot;katex&quot;&gt;&lt;span class=&quot;katex-mathml&quot;&gt;&lt;math</description>
+          
+        
+      
+      
+      
+      
+      <category domain="http://blog.cyx2009.top/categories/Solution/">Solution</category>
+      
+      
+      <category domain="http://blog.cyx2009.top/tags/%E6%9C%80%E5%B0%8F%E7%8E%AF/">最小环</category>
+      
+      
+      <comments>http://blog.cyx2009.top/archives/CF1325E/#disqus_thread</comments>
+      
+    </item>
+    
+    <item>
+      <title>[题解] [模拟赛 20250219] 散步 walk</title>
+      <link>http://blog.cyx2009.top/archives/20250219_walk/</link>
+      <guid>http://blog.cyx2009.top/archives/20250219_walk/</guid>
+      <pubDate>Thu, 20 Feb 2025 09:04:00 GMT</pubDate>
+      
+        
+        
+          
+          
+      <description>&lt;h1 id=&quot;题意&quot;&gt;&lt;a class=&quot;markdownIt-Anchor&quot; href=&quot;#题意&quot;&gt;&lt;/a&gt; 题意&lt;/h1&gt;
+&lt;p&gt;给定一个长度为 &lt;span class=&quot;katex&quot;&gt;&lt;span class=&quot;katex-mathml&quot;&gt;&lt;math</description>
+          
+        
+      
+      
+      
+      
+      <category domain="http://blog.cyx2009.top/categories/Solution/">Solution</category>
+      
+      
+      <category domain="http://blog.cyx2009.top/tags/%E6%A8%A1%E6%8B%9F%E8%B5%9B/">模拟赛</category>
+      
+      
+      <comments>http://blog.cyx2009.top/archives/20250219_walk/#disqus_thread</comments>
+      
+    </item>
+    
+    <item>
+      <title>[题解] QOJ5568 Cyclic Shifts</title>
+      <link>http://blog.cyx2009.top/archives/QOJ5568/</link>
+      <guid>http://blog.cyx2009.top/archives/QOJ5568/</guid>
+      <pubDate>Tue, 18 Feb 2025 11:43:00 GMT</pubDate>
+      
+        
+        
+          
+          
+      <description>&lt;p&gt;&lt;a href=&quot;https://qoj.ac/problem/5568&quot;&gt;https://qoj.ac/problem/5568&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;&lt;a</description>
+          
+        
+      
+      
+      
+      
+      <category domain="http://blog.cyx2009.top/categories/Solution/">Solution</category>
+      
+      
+      <category domain="http://blog.cyx2009.top/tags/%E9%9A%8F%E6%9C%BA/">随机</category>
+      
+      
+      <comments>http://blog.cyx2009.top/archives/QOJ5568/#disqus_thread</comments>
+      
+    </item>
+    
+    <item>
+      <title>[题解] CF1184B3 The Doctor Meets Vader (Hard)</title>
+      <link>http://blog.cyx2009.top/archives/CF1184B3/</link>
+      <guid>http://blog.cyx2009.top/archives/CF1184B3/</guid>
+      <pubDate>Tue, 18 Feb 2025 11:01:00 GMT</pubDate>
+      
+        
+        
+          
+          
+      <description>&lt;h1 id=&quot;题目翻译&quot;&gt;&lt;a class=&quot;markdownIt-Anchor&quot; href=&quot;#题目翻译&quot;&gt;&lt;/a&gt; 题目翻译&lt;/h1&gt;
+&lt;p&gt;一张图有 &lt;span class=&quot;katex&quot;&gt;&lt;span class=&quot;katex-mathml&quot;&gt;&lt;math</description>
+          
+        
+      
+      
+      
+      
+      <category domain="http://blog.cyx2009.top/categories/Solution/">Solution</category>
+      
+      
+      <category domain="http://blog.cyx2009.top/tags/%E7%BD%91%E7%BB%9C%E6%B5%81/">网络流</category>
+      
+      <category domain="http://blog.cyx2009.top/tags/%E6%9C%80%E5%A4%A7%E6%B5%81%E6%9C%80%E5%B0%8F%E5%89%B2/">最大流最小割</category>
+      
+      
+      <comments>http://blog.cyx2009.top/archives/CF1184B3/#disqus_thread</comments>
+      
+    </item>
+    
+    <item>
+      <title>[题解] [模拟 20250217] GYM100425B Comparing Theories</title>
+      <link>http://blog.cyx2009.top/archives/GYM104103E/</link>
+      <guid>http://blog.cyx2009.top/archives/GYM104103E/</guid>
+      <pubDate>Mon, 17 Feb 2025 06:37:00 GMT</pubDate>
+      
+        
+        
+          
+          
+      <description>&lt;p&gt;&lt;a href=&quot;https://codeforces.com/gym/104103/problem/E&quot;&gt;https://codeforces.com/gym/104103/problem/E&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;&lt;a</description>
+          
+        
+      
+      
+      
+      
+      <category domain="http://blog.cyx2009.top/categories/Solution/">Solution</category>
+      
+      
+      <category domain="http://blog.cyx2009.top/tags/%E6%A8%A1%E6%8B%9F%E8%B5%9B/">模拟赛</category>
+      
+      <category domain="http://blog.cyx2009.top/tags/%E7%BA%BF%E6%AE%B5%E6%A0%91/">线段树</category>
+      
+      <category domain="http://blog.cyx2009.top/tags/%E6%9C%80%E5%B0%8F%E7%94%9F%E6%88%90%E6%A0%91/">最小生成树</category>
+      
+      
+      <comments>http://blog.cyx2009.top/archives/GYM104103E/#disqus_thread</comments>
+      
+    </item>
+    
+    <item>
+      <title>[题解] CF547D Mike and Fish</title>
+      <link>http://blog.cyx2009.top/archives/CF547D/</link>
+      <guid>http://blog.cyx2009.top/archives/CF547D/</guid>
+      <pubDate>Sun, 16 Feb 2025 08:47:00 GMT</pubDate>
+      
+        
+        
+          
+          
+      <description>&lt;h1 id=&quot;题目翻译&quot;&gt;&lt;a class=&quot;markdownIt-Anchor&quot; href=&quot;#题目翻译&quot;&gt;&lt;/a&gt; 题目翻译&lt;/h1&gt;
+&lt;p&gt;平面上有 &lt;span class=&quot;katex&quot;&gt;&lt;span class=&quot;katex-mathml&quot;&gt;&lt;math</description>
+          
+        
+      
+      
+      
+      
+      <category domain="http://blog.cyx2009.top/categories/Solution/">Solution</category>
+      
+      
+      <category domain="http://blog.cyx2009.top/tags/%E6%AC%A7%E6%8B%89%E5%9B%9E%E8%B7%AF/">欧拉回路</category>
+      
+      
+      <comments>http://blog.cyx2009.top/archives/CF547D/#disqus_thread</comments>
+      
+    </item>
+    
+    <item>
+      <title>[题解] [模拟 20241109] GYM100425B Passport Control</title>
+      <link>http://blog.cyx2009.top/archives/GYM100425B/</link>
+      <guid>http://blog.cyx2009.top/archives/GYM100425B/</guid>
+      <pubDate>Sat, 15 Feb 2025 13:31:00 GMT</pubDate>
+      
+        
+        
+          
+          
+      <description>&lt;h1 id=&quot;前言&quot;&gt;&lt;a class=&quot;markdownIt-Anchor&quot; href=&quot;#前言&quot;&gt;&lt;/a&gt; 前言&lt;/h1&gt;
+&lt;p&gt;当时给 cyx 分享了这个题，今天他问我要 std 和 solution。所以有了这篇文章。&lt;/p&gt;
+&lt;h1 id=&quot;题目翻译&quot;&gt;&lt;a</description>
+          
+        
+      
+      
+      
+      
+      <category domain="http://blog.cyx2009.top/categories/Solution/">Solution</category>
+      
+      
+      <category domain="http://blog.cyx2009.top/tags/%E6%A8%A1%E6%8B%9F%E8%B5%9B/">模拟赛</category>
+      
+      <category domain="http://blog.cyx2009.top/tags/%E6%A0%91%E7%8A%B6%E6%95%B0%E7%BB%84/">树状数组</category>
+      
+      <category domain="http://blog.cyx2009.top/tags/%E4%B8%89%E7%BB%B4%E5%81%8F%E5%BA%8F/">三维偏序</category>
+      
+      <category domain="http://blog.cyx2009.top/tags/%E4%BA%8C%E7%BB%B4%E5%81%8F%E5%BA%8F/">二维偏序</category>
+      
+      <category domain="http://blog.cyx2009.top/tags/%E5%AD%97%E5%85%B8%E6%A0%91/">字典树</category>
+      
+      
+      <comments>http://blog.cyx2009.top/archives/GYM100425B/#disqus_thread</comments>
+      
+    </item>
+    
+    <item>
+      <title>[题解] 常州市 程序设计小能手 CZOI 板刷笔记</title>
+      <link>http://blog.cyx2009.top/archives/CZOI/</link>
+      <guid>http://blog.cyx2009.top/archives/CZOI/</guid>
+      <pubDate>Sat, 15 Feb 2025 10:03:00 GMT</pubDate>
+      
+        
+        
+          
+          
+      <description>&lt;h1 id=&quot;前言&quot;&gt;&lt;a class=&quot;markdownIt-Anchor&quot; href=&quot;#前言&quot;&gt;&lt;/a&gt; 前言&lt;/h1&gt;
+&lt;p&gt;为什么要有这篇东西呢。洛谷在收各个地方的小学生比赛题，联系到了我，虽然 CZOJ</description>
+          
+        
+      
+      
+      
+      
+      <category domain="http://blog.cyx2009.top/categories/Solution/">Solution</category>
+      
+      
+      
+      <comments>http://blog.cyx2009.top/archives/CZOI/#disqus_thread</comments>
+      
+    </item>
+    
+    <item>
+      <title>[题解] CF1439B Graph Subset Problem</title>
+      <link>http://blog.cyx2009.top/archives/CF1439B/</link>
+      <guid>http://blog.cyx2009.top/archives/CF1439B/</guid>
+      <pubDate>Sat, 15 Feb 2025 09:31:00 GMT</pubDate>
+      
+        
+        
+          
+          
+      <description>&lt;h1 id=&quot;题目翻译&quot;&gt;&lt;a class=&quot;markdownIt-Anchor&quot; href=&quot;#题目翻译&quot;&gt;&lt;/a&gt; 题目翻译&lt;/h1&gt;
+&lt;p&gt;给定 &lt;span class=&quot;katex&quot;&gt;&lt;span class=&quot;katex-mathml&quot;&gt;&lt;math</description>
+          
+        
+      
+      
+      
+      
+      <category domain="http://blog.cyx2009.top/categories/Solution/">Solution</category>
+      
+      
+      <category domain="http://blog.cyx2009.top/tags/%E6%A0%B9%E5%8F%B7%E5%88%86%E6%B2%BB/">根号分治</category>
+      
+      
+      <comments>http://blog.cyx2009.top/archives/CF1439B/#disqus_thread</comments>
+      
+    </item>
+    
+    <item>
+      <title>[题解] P6060 [加油武汉] 传染病研究</title>
+      <link>http://blog.cyx2009.top/archives/P6060/</link>
+      <guid>http://blog.cyx2009.top/archives/P6060/</guid>
+      <pubDate>Sat, 15 Feb 2025 09:03:00 GMT</pubDate>
+      
+        
+        
+          
+          
+      <description>&lt;h1 id=&quot;题意&quot;&gt;&lt;a class=&quot;markdownIt-Anchor&quot; href=&quot;#题意&quot;&gt;&lt;/a&gt; 题意&lt;/h1&gt;
+&lt;p&gt;约定 &lt;span class=&quot;katex&quot;&gt;&lt;span class=&quot;katex-mathml&quot;&gt;&lt;math</description>
+          
+        
+      
+      
+      
+      
+      <category domain="http://blog.cyx2009.top/categories/Solution/">Solution</category>
+      
+      
+      <category domain="http://blog.cyx2009.top/tags/%E6%95%B0%E8%AE%BA/">数论</category>
+      
+      <category domain="http://blog.cyx2009.top/tags/%E5%A4%9A%E9%A1%B9%E5%BC%8F/">多项式</category>
+      
+      <category domain="http://blog.cyx2009.top/tags/%E7%AD%9B%E6%B3%95/">筛法</category>
+      
+      
+      <comments>http://blog.cyx2009.top/archives/P6060/#disqus_thread</comments>
+      
+    </item>
+    
+    <item>
+      <title>[题解] [模拟赛 20250214] 装备 armor</title>
+      <link>http://blog.cyx2009.top/archives/20250214_armor/</link>
+      <guid>http://blog.cyx2009.top/archives/20250214_armor/</guid>
+      <pubDate>Fri, 14 Feb 2025 07:03:00 GMT</pubDate>
+      
+        
+        
+          
+          
+      <description>&lt;h1 id=&quot;题意&quot;&gt;&lt;a class=&quot;markdownIt-Anchor&quot; href=&quot;#题意&quot;&gt;&lt;/a&gt; 题意&lt;/h1&gt;
+&lt;p&gt;给定 &lt;span class=&quot;katex&quot;&gt;&lt;span class=&quot;katex-mathml&quot;&gt;&lt;math</description>
+          
+        
+      
+      
+      
+      
+      <category domain="http://blog.cyx2009.top/categories/Solution/">Solution</category>
+      
+      
+      <category domain="http://blog.cyx2009.top/tags/%E6%A8%A1%E6%8B%9F%E8%B5%9B/">模拟赛</category>
+      
+      <category domain="http://blog.cyx2009.top/tags/%E8%AE%A1%E7%AE%97%E5%87%A0%E4%BD%95/">计算几何</category>
+      
+      <category domain="http://blog.cyx2009.top/tags/%E9%97%B5%E5%8F%AF%E5%A4%AB%E6%96%AF%E5%9F%BA%E5%92%8C/">闵可夫斯基和</category>
+      
+      
+      <comments>http://blog.cyx2009.top/archives/20250214_armor/#disqus_thread</comments>
+      
+    </item>
+    
+    <item>
+      <title>『置顶』[闲话] Something to Say</title>
+      <link>http://blog.cyx2009.top/archives/something_to_say/</link>
+      <guid>http://blog.cyx2009.top/archives/something_to_say/</guid>
+      <pubDate>Tue, 11 Feb 2025 11:46:38 GMT</pubDate>
+      
+        
+        
+          
+          
+      <description>&lt;p&gt;这里是我的博客的移植版。&lt;/p&gt;
+&lt;p&gt;我的早期内容糟粕很多，甚至可能有错误内容/xk</description>
+          
+        
+      
+      
+      
+      
+      <category domain="http://blog.cyx2009.top/categories/Essay/">Essay</category>
+      
+      
+      
+      <comments>http://blog.cyx2009.top/archives/something_to_say/#disqus_thread</comments>
+      
+    </item>
+    
+    <item>
+      <title>[题解] 梦熊 2025 省选集训营 做题笔记</title>
+      <link>http://blog.cyx2009.top/archives/MXWC2025/</link>
+      <guid>http://blog.cyx2009.top/archives/MXWC2025/</guid>
+      <pubDate>Sun, 02 Feb 2025 10:45:00 GMT</pubDate>
+      
+        
+        
+          
+          
+      <description>&lt;h1 id=&quot;20250204-模拟-t1&quot;&gt;&lt;a class=&quot;markdownIt-Anchor&quot; href=&quot;#20250204-模拟-t1&quot;&gt;&lt;/a&gt; 20250204 模拟 T1&lt;/h1&gt;
+&lt;p&gt;删点 MST，&lt;span class=&quot;katex&quot;&gt;&lt;span</description>
+          
+        
+      
+      
+      
+      
+      <category domain="http://blog.cyx2009.top/categories/Solution/">Solution</category>
+      
+      
+      <category domain="http://blog.cyx2009.top/tags/%E6%A8%A1%E6%8B%9F%E8%B5%9B/">模拟赛</category>
+      
+      
+      <comments>http://blog.cyx2009.top/archives/MXWC2025/#disqus_thread</comments>
+      
+    </item>
+    
+    <item>
+      <title>[题解] ABC391 FG 一句话题解</title>
+      <link>http://blog.cyx2009.top/archives/ABC391/</link>
+      <guid>http://blog.cyx2009.top/archives/ABC391/</guid>
+      <pubDate>Sat, 01 Feb 2025 13:59:00 GMT</pubDate>
+      
+        
+        
+          
+          
+      <description>&lt;p&gt;没脸投题解区了，给我的博客里扔点垃圾。&lt;/p&gt;
+&lt;h1 id=&quot;f&quot;&gt;&lt;a class=&quot;markdownIt-Anchor&quot; href=&quot;#f&quot;&gt;&lt;/a&gt; F&lt;/h1&gt;
+&lt;p&gt;来说一下我的铸币做法。有两个很简单的是直接优先队列每次尝试加 &lt;span</description>
+          
+        
+      
+      
+      
+      
+      <category domain="http://blog.cyx2009.top/categories/Solution/">Solution</category>
+      
+      
+      
+      <comments>http://blog.cyx2009.top/archives/ABC391/#disqus_thread</comments>
+      
+    </item>
+    
+  </channel>
+</rss>
