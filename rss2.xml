@@ -15,8 +15,44 @@
     <atom:link href="http://blog.cyx2009.top/rss2.xml" rel="self" type="application/rss+xml"/>
     
     <description>沉石鱼惊旋 的博客</description>
-    <pubDate>Tue, 04 Mar 2025 14:52:48 GMT</pubDate>
+    <pubDate>Mon, 17 Mar 2025 01:35:11 GMT</pubDate>
     <generator>http://hexo.io/</generator>
+    
+    <item>
+      <title>[题解] [模拟赛 20250316] 祝愿 wish</title>
+      <link>http://blog.cyx2009.top/archives/20250316_wish/</link>
+      <guid>http://blog.cyx2009.top/archives/20250316_wish/</guid>
+      <pubDate>Mon, 17 Mar 2025 00:31:00 GMT</pubDate>
+      
+        
+        
+          
+          
+      <description>&lt;h1 id=&quot;题意&quot;&gt;&lt;a class=&quot;markdownIt-Anchor&quot; href=&quot;#题意&quot;&gt;&lt;/a&gt; 题意&lt;/h1&gt;
+&lt;p&gt;给定长度为 &lt;span class=&quot;katex&quot;&gt;&lt;span class=&quot;katex-mathml&quot;&gt;&lt;math</description>
+          
+        
+      
+      
+      
+      
+      <category domain="http://blog.cyx2009.top/categories/Solution/">Solution</category>
+      
+      
+      <category domain="http://blog.cyx2009.top/tags/%E6%A8%A1%E6%8B%9F%E8%B5%9B/">模拟赛</category>
+      
+      <category domain="http://blog.cyx2009.top/tags/%E6%95%B0%E8%AE%BA/">数论</category>
+      
+      <category domain="http://blog.cyx2009.top/tags/%E7%BA%BF%E6%AE%B5%E6%A0%91/">线段树</category>
+      
+      <category domain="http://blog.cyx2009.top/tags/%E9%98%B6/">阶</category>
+      
+      <category domain="http://blog.cyx2009.top/tags/%E5%8E%9F%E6%A0%B9/">原根</category>
+      
+      
+      <comments>http://blog.cyx2009.top/archives/20250316_wish/#disqus_thread</comments>
+      
+    </item>
     
     <item>
       <title>『置顶』[工程] 通过 RSS 订阅文章更新</title>
@@ -96,9 +132,9 @@
       
       <category domain="http://blog.cyx2009.top/tags/%E6%A8%A1%E6%8B%9F%E8%B5%9B/">模拟赛</category>
       
-      <category domain="http://blog.cyx2009.top/tags/%E6%89%AB%E6%8F%8F%E7%BA%BF/">扫描线</category>
-      
       <category domain="http://blog.cyx2009.top/tags/%E7%BA%BF%E6%AE%B5%E6%A0%91/">线段树</category>
+      
+      <category domain="http://blog.cyx2009.top/tags/%E6%89%AB%E6%8F%8F%E7%BA%BF/">扫描线</category>
       
       
       <comments>http://blog.cyx2009.top/archives/20250226_checkin/#disqus_thread</comments>
@@ -581,34 +617,6 @@
       
       
       <comments>http://blog.cyx2009.top/archives/something_to_say/#disqus_thread</comments>
-      
-    </item>
-    
-    <item>
-      <title>[题解] 梦熊 2025 省选集训营 做题笔记</title>
-      <link>http://blog.cyx2009.top/archives/MXWC2025/</link>
-      <guid>http://blog.cyx2009.top/archives/MXWC2025/</guid>
-      <pubDate>Sun, 02 Feb 2025 10:45:00 GMT</pubDate>
-      
-        
-        
-          
-          
-      <description>&lt;h1 id=&quot;20250204-模拟-t1&quot;&gt;&lt;a class=&quot;markdownIt-Anchor&quot; href=&quot;#20250204-模拟-t1&quot;&gt;&lt;/a&gt; 20250204 模拟 T1&lt;/h1&gt;
-&lt;p&gt;删点 MST，&lt;span class=&quot;katex&quot;&gt;&lt;span</description>
-          
-        
-      
-      
-      
-      
-      <category domain="http://blog.cyx2009.top/categories/Solution/">Solution</category>
-      
-      
-      <category domain="http://blog.cyx2009.top/tags/%E6%A8%A1%E6%8B%9F%E8%B5%9B/">模拟赛</category>
-      
-      
-      <comments>http://blog.cyx2009.top/archives/MXWC2025/#disqus_thread</comments>
       
     </item>
     
