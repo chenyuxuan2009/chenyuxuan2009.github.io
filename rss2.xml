@@ -15,8 +15,36 @@
     <atom:link href="http://blog.cyx2009.top/rss2.xml" rel="self" type="application/rss+xml"/>
     
     <description>沉石鱼惊旋 的博客</description>
-    <pubDate>Mon, 17 Mar 2025 05:10:00 GMT</pubDate>
+    <pubDate>Mon, 17 Mar 2025 11:41:06 GMT</pubDate>
     <generator>http://hexo.io/</generator>
+    
+    <item>
+      <title>[题解] CF2077F AND x OR</title>
+      <link>http://blog.cyx2009.top/archives/CF2077F/</link>
+      <guid>http://blog.cyx2009.top/archives/CF2077F/</guid>
+      <pubDate>Mon, 17 Mar 2025 11:05:00 GMT</pubDate>
+      
+        
+        
+          
+          
+      <description>&lt;h1 id=&quot;题意&quot;&gt;&lt;a class=&quot;markdownIt-Anchor&quot; href=&quot;#题意&quot;&gt;&lt;/a&gt; 题意&lt;/h1&gt;
+&lt;p&gt;我们称一个 &lt;span class=&quot;katex&quot;&gt;&lt;span class=&quot;katex-mathml&quot;&gt;&lt;math</description>
+          
+        
+      
+      
+      
+      
+      <category domain="http://blog.cyx2009.top/categories/Solution/">Solution</category>
+      
+      
+      <category domain="http://blog.cyx2009.top/tags/%E4%B9%B1%E6%90%9E/">乱搞</category>
+      
+      
+      <comments>http://blog.cyx2009.top/archives/CF2077F/#disqus_thread</comments>
+      
+    </item>
     
     <item>
       <title>[题解] ARC193D Magnets</title>
@@ -587,38 +615,6 @@
       
       
       <comments>http://blog.cyx2009.top/archives/P6060/#disqus_thread</comments>
-      
-    </item>
-    
-    <item>
-      <title>[题解] [模拟赛 20250214] 装备 armor</title>
-      <link>http://blog.cyx2009.top/archives/20250214_armor/</link>
-      <guid>http://blog.cyx2009.top/archives/20250214_armor/</guid>
-      <pubDate>Fri, 14 Feb 2025 07:03:00 GMT</pubDate>
-      
-        
-        
-          
-          
-      <description>&lt;h1 id=&quot;题意&quot;&gt;&lt;a class=&quot;markdownIt-Anchor&quot; href=&quot;#题意&quot;&gt;&lt;/a&gt; 题意&lt;/h1&gt;
-&lt;p&gt;给定 &lt;span class=&quot;katex&quot;&gt;&lt;span class=&quot;katex-mathml&quot;&gt;&lt;math</description>
-          
-        
-      
-      
-      
-      
-      <category domain="http://blog.cyx2009.top/categories/Solution/">Solution</category>
-      
-      
-      <category domain="http://blog.cyx2009.top/tags/%E6%A8%A1%E6%8B%9F%E8%B5%9B/">模拟赛</category>
-      
-      <category domain="http://blog.cyx2009.top/tags/%E8%AE%A1%E7%AE%97%E5%87%A0%E4%BD%95/">计算几何</category>
-      
-      <category domain="http://blog.cyx2009.top/tags/%E9%97%B5%E5%8F%AF%E5%A4%AB%E6%96%AF%E5%9F%BA%E5%92%8C/">闵可夫斯基和</category>
-      
-      
-      <comments>http://blog.cyx2009.top/archives/20250214_armor/#disqus_thread</comments>
       
     </item>
     

@@ -6,7 +6,7 @@
   <link href="http://blog.cyx2009.top/atom.xml" rel="self"/>
   
   <link href="http://blog.cyx2009.top/"/>
-  <updated>2025-03-17T05:10:00.513Z</updated>
+  <updated>2025-03-17T11:41:06.689Z</updated>
   <id>http://blog.cyx2009.top/</id>
   
   <author>
@@ -17,11 +17,37 @@
   <generator uri="https://hexo.io/">Hexo</generator>
   
   <entry>
+    <title>[题解] CF2077F AND x OR</title>
+    <link href="http://blog.cyx2009.top/archives/CF2077F/"/>
+    <id>http://blog.cyx2009.top/archives/CF2077F/</id>
+    <published>2025-03-17T11:05:00.000Z</published>
+    <updated>2025-03-17T11:41:06.689Z</updated>
+    
+    
+      
+      
+        
+        
+    <summary type="html">&lt;h1 id=&quot;题意&quot;&gt;&lt;a class=&quot;markdownIt-Anchor&quot; href=&quot;#题意&quot;&gt;&lt;/a&gt; 题意&lt;/h1&gt;
+&lt;p&gt;我们称一个 &lt;span class=&quot;katex&quot;&gt;&lt;span class=&quot;katex-mathml&quot;&gt;&lt;math</summary>
+        
+      
+    
+    
+    
+    <category term="Solution" scheme="http://blog.cyx2009.top/categories/Solution/"/>
+    
+    
+    <category term="乱搞" scheme="http://blog.cyx2009.top/tags/%E4%B9%B1%E6%90%9E/"/>
+    
+  </entry>
+  
+  <entry>
     <title>[题解] ARC193D Magnets</title>
     <link href="http://blog.cyx2009.top/archives/ARC193D/"/>
     <id>http://blog.cyx2009.top/archives/ARC193D/</id>
     <published>2025-03-17T03:02:00.000Z</published>
-    <updated>2025-03-17T05:10:00.513Z</updated>
+    <updated>2025-03-17T11:06:58.630Z</updated>
     
     
       
@@ -547,36 +573,6 @@
     <category term="多项式" scheme="http://blog.cyx2009.top/tags/%E5%A4%9A%E9%A1%B9%E5%BC%8F/"/>
     
     <category term="筛法" scheme="http://blog.cyx2009.top/tags/%E7%AD%9B%E6%B3%95/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>[题解] [模拟赛 20250214] 装备 armor</title>
-    <link href="http://blog.cyx2009.top/archives/20250214_armor/"/>
-    <id>http://blog.cyx2009.top/archives/20250214_armor/</id>
-    <published>2025-02-14T07:03:00.000Z</published>
-    <updated>2025-02-20T09:04:51.982Z</updated>
-    
-    
-      
-      
-        
-        
-    <summary type="html">&lt;h1 id=&quot;题意&quot;&gt;&lt;a class=&quot;markdownIt-Anchor&quot; href=&quot;#题意&quot;&gt;&lt;/a&gt; 题意&lt;/h1&gt;
-&lt;p&gt;给定 &lt;span class=&quot;katex&quot;&gt;&lt;span class=&quot;katex-mathml&quot;&gt;&lt;math</summary>
-        
-      
-    
-    
-    
-    <category term="Solution" scheme="http://blog.cyx2009.top/categories/Solution/"/>
-    
-    
-    <category term="模拟赛" scheme="http://blog.cyx2009.top/tags/%E6%A8%A1%E6%8B%9F%E8%B5%9B/"/>
-    
-    <category term="计算几何" scheme="http://blog.cyx2009.top/tags/%E8%AE%A1%E7%AE%97%E5%87%A0%E4%BD%95/"/>
-    
-    <category term="闵可夫斯基和" scheme="http://blog.cyx2009.top/tags/%E9%97%B5%E5%8F%AF%E5%A4%AB%E6%96%AF%E5%9F%BA%E5%92%8C/"/>
     
   </entry>
   
