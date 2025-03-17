@@ -15,8 +15,36 @@
     <atom:link href="http://blog.cyx2009.top/rss2.xml" rel="self" type="application/rss+xml"/>
     
     <description>沉石鱼惊旋 的博客</description>
-    <pubDate>Mon, 17 Mar 2025 01:35:11 GMT</pubDate>
+    <pubDate>Mon, 17 Mar 2025 05:08:10 GMT</pubDate>
     <generator>http://hexo.io/</generator>
+    
+    <item>
+      <title>[题解] ARC193D Magnets</title>
+      <link>http://blog.cyx2009.top/archives/ARC193D/</link>
+      <guid>http://blog.cyx2009.top/archives/ARC193D/</guid>
+      <pubDate>Mon, 17 Mar 2025 03:02:00 GMT</pubDate>
+      
+        
+        
+          
+          
+      <description>&lt;h1 id=&quot;题意&quot;&gt;&lt;a class=&quot;markdownIt-Anchor&quot; href=&quot;#题意&quot;&gt;&lt;/a&gt; 题意&lt;/h1&gt;
+&lt;p&gt;给定 &lt;span class=&quot;katex&quot;&gt;&lt;span class=&quot;katex-mathml&quot;&gt;&lt;math</description>
+          
+        
+      
+      
+      
+      
+      <category domain="http://blog.cyx2009.top/categories/Solution/">Solution</category>
+      
+      
+      <category domain="http://blog.cyx2009.top/tags/%E8%B4%AA%E5%BF%83/">贪心</category>
+      
+      
+      <comments>http://blog.cyx2009.top/archives/ARC193D/#disqus_thread</comments>
+      
+    </item>
     
     <item>
       <title>[题解] [模拟赛 20250316] 祝愿 wish</title>
@@ -41,9 +69,9 @@
       
       <category domain="http://blog.cyx2009.top/tags/%E6%A8%A1%E6%8B%9F%E8%B5%9B/">模拟赛</category>
       
-      <category domain="http://blog.cyx2009.top/tags/%E6%95%B0%E8%AE%BA/">数论</category>
-      
       <category domain="http://blog.cyx2009.top/tags/%E7%BA%BF%E6%AE%B5%E6%A0%91/">线段树</category>
+      
+      <category domain="http://blog.cyx2009.top/tags/%E6%95%B0%E8%AE%BA/">数论</category>
       
       <category domain="http://blog.cyx2009.top/tags/%E9%98%B6/">阶</category>
       
@@ -132,9 +160,9 @@
       
       <category domain="http://blog.cyx2009.top/tags/%E6%A8%A1%E6%8B%9F%E8%B5%9B/">模拟赛</category>
       
-      <category domain="http://blog.cyx2009.top/tags/%E7%BA%BF%E6%AE%B5%E6%A0%91/">线段树</category>
-      
       <category domain="http://blog.cyx2009.top/tags/%E6%89%AB%E6%8F%8F%E7%BA%BF/">扫描线</category>
+      
+      <category domain="http://blog.cyx2009.top/tags/%E7%BA%BF%E6%AE%B5%E6%A0%91/">线段树</category>
       
       
       <comments>http://blog.cyx2009.top/archives/20250226_checkin/#disqus_thread</comments>
@@ -591,32 +619,6 @@
       
       
       <comments>http://blog.cyx2009.top/archives/20250214_armor/#disqus_thread</comments>
-      
-    </item>
-    
-    <item>
-      <title>『置顶』[闲话] Something to Say</title>
-      <link>http://blog.cyx2009.top/archives/something_to_say/</link>
-      <guid>http://blog.cyx2009.top/archives/something_to_say/</guid>
-      <pubDate>Tue, 11 Feb 2025 11:46:38 GMT</pubDate>
-      
-        
-        
-          
-          
-      <description>&lt;p&gt;这里是我的博客的移植版。&lt;/p&gt;
-&lt;p&gt;我的早期内容糟粕很多，甚至可能有错误内容/xk</description>
-          
-        
-      
-      
-      
-      
-      <category domain="http://blog.cyx2009.top/categories/Essay/">Essay</category>
-      
-      
-      
-      <comments>http://blog.cyx2009.top/archives/something_to_say/#disqus_thread</comments>
       
     </item>
     
