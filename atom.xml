@@ -6,7 +6,7 @@
   <link href="http://blog.cyx2009.top/atom.xml" rel="self"/>
   
   <link href="http://blog.cyx2009.top/"/>
-  <updated>2025-03-17T11:41:06.689Z</updated>
+  <updated>2025-03-18T13:24:04.268Z</updated>
   <id>http://blog.cyx2009.top/</id>
   
   <author>
@@ -17,11 +17,67 @@
   <generator uri="https://hexo.io/">Hexo</generator>
   
   <entry>
+    <title>[题解] </title>
+    <link href="http://blog.cyx2009.top/archives/P11928/"/>
+    <id>http://blog.cyx2009.top/archives/P11928/</id>
+    <published>2025-03-18T12:58:00.000Z</published>
+    <updated>2025-03-18T13:24:04.268Z</updated>
+    
+    
+      
+      
+        
+        
+    <summary type="html">&lt;h1 id=&quot;题意&quot;&gt;&lt;a class=&quot;markdownIt-Anchor&quot; href=&quot;#题意&quot;&gt;&lt;/a&gt; 题意&lt;/h1&gt;
+&lt;p&gt;给定长度 &lt;span class=&quot;katex&quot;&gt;&lt;span class=&quot;katex-mathml&quot;&gt;&lt;math</summary>
+        
+      
+    
+    
+    
+    <category term="Solution" scheme="http://blog.cyx2009.top/categories/Solution/"/>
+    
+    
+    <category term="线段树" scheme="http://blog.cyx2009.top/tags/%E7%BA%BF%E6%AE%B5%E6%A0%91/"/>
+    
+    <category term="动态规划" scheme="http://blog.cyx2009.top/tags/%E5%8A%A8%E6%80%81%E8%A7%84%E5%88%92/"/>
+    
+    <category term="矩阵乘法" scheme="http://blog.cyx2009.top/tags/%E7%9F%A9%E9%98%B5%E4%B9%98%E6%B3%95/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>[题解] [模拟赛 20250318] P11918 [PA 2025] 考试 / Egzamin</title>
+    <link href="http://blog.cyx2009.top/archives/P11918/"/>
+    <id>http://blog.cyx2009.top/archives/P11918/</id>
+    <published>2025-03-18T09:53:00.000Z</published>
+    <updated>2025-03-18T10:32:40.800Z</updated>
+    
+    
+      
+      
+        
+        
+    <summary type="html">&lt;h1 id=&quot;题意&quot;&gt;&lt;a class=&quot;markdownIt-Anchor&quot; href=&quot;#题意&quot;&gt;&lt;/a&gt; 题意&lt;/h1&gt;
+&lt;p&gt;有 &lt;span class=&quot;katex&quot;&gt;&lt;span class=&quot;katex-mathml&quot;&gt;&lt;math</summary>
+        
+      
+    
+    
+    
+    <category term="Solution" scheme="http://blog.cyx2009.top/categories/Solution/"/>
+    
+    
+    <category term="动态规划" scheme="http://blog.cyx2009.top/tags/%E5%8A%A8%E6%80%81%E8%A7%84%E5%88%92/"/>
+    
+  </entry>
+  
+  <entry>
     <title>[题解] CF2077F AND x OR</title>
     <link href="http://blog.cyx2009.top/archives/CF2077F/"/>
     <id>http://blog.cyx2009.top/archives/CF2077F/</id>
     <published>2025-03-17T11:05:00.000Z</published>
-    <updated>2025-03-17T11:41:06.689Z</updated>
+    <updated>2025-03-17T12:13:11.104Z</updated>
     
     
       
@@ -517,62 +573,6 @@
     
     <category term="Solution" scheme="http://blog.cyx2009.top/categories/Solution/"/>
     
-    
-  </entry>
-  
-  <entry>
-    <title>[题解] CF1439B Graph Subset Problem</title>
-    <link href="http://blog.cyx2009.top/archives/CF1439B/"/>
-    <id>http://blog.cyx2009.top/archives/CF1439B/</id>
-    <published>2025-02-15T09:31:00.000Z</published>
-    <updated>2025-02-20T12:49:49.418Z</updated>
-    
-    
-      
-      
-        
-        
-    <summary type="html">&lt;h1 id=&quot;题目翻译&quot;&gt;&lt;a class=&quot;markdownIt-Anchor&quot; href=&quot;#题目翻译&quot;&gt;&lt;/a&gt; 题目翻译&lt;/h1&gt;
-&lt;p&gt;给定 &lt;span class=&quot;katex&quot;&gt;&lt;span class=&quot;katex-mathml&quot;&gt;&lt;math</summary>
-        
-      
-    
-    
-    
-    <category term="Solution" scheme="http://blog.cyx2009.top/categories/Solution/"/>
-    
-    
-    <category term="根号分治" scheme="http://blog.cyx2009.top/tags/%E6%A0%B9%E5%8F%B7%E5%88%86%E6%B2%BB/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>[题解] P6060 [加油武汉] 传染病研究</title>
-    <link href="http://blog.cyx2009.top/archives/P6060/"/>
-    <id>http://blog.cyx2009.top/archives/P6060/</id>
-    <published>2025-02-15T09:03:00.000Z</published>
-    <updated>2025-02-17T06:58:30.895Z</updated>
-    
-    
-      
-      
-        
-        
-    <summary type="html">&lt;h1 id=&quot;题意&quot;&gt;&lt;a class=&quot;markdownIt-Anchor&quot; href=&quot;#题意&quot;&gt;&lt;/a&gt; 题意&lt;/h1&gt;
-&lt;p&gt;约定 &lt;span class=&quot;katex&quot;&gt;&lt;span class=&quot;katex-mathml&quot;&gt;&lt;math</summary>
-        
-      
-    
-    
-    
-    <category term="Solution" scheme="http://blog.cyx2009.top/categories/Solution/"/>
-    
-    
-    <category term="数论" scheme="http://blog.cyx2009.top/tags/%E6%95%B0%E8%AE%BA/"/>
-    
-    <category term="多项式" scheme="http://blog.cyx2009.top/tags/%E5%A4%9A%E9%A1%B9%E5%BC%8F/"/>
-    
-    <category term="筛法" scheme="http://blog.cyx2009.top/tags/%E7%AD%9B%E6%B3%95/"/>
     
   </entry>
   
