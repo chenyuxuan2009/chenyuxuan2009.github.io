@@ -15,8 +15,34 @@
     <atom:link href="http://blog.cyx2009.top/rss2.xml" rel="self" type="application/rss+xml"/>
     
     <description>沉石鱼惊旋 的博客</description>
-    <pubDate>Wed, 19 Mar 2025 02:37:31 GMT</pubDate>
+    <pubDate>Wed, 19 Mar 2025 10:42:58 GMT</pubDate>
     <generator>http://hexo.io/</generator>
+    
+    <item>
+      <title>[题解] CF2066E Tropical Season</title>
+      <link>http://blog.cyx2009.top/archives/CF2066E/</link>
+      <guid>http://blog.cyx2009.top/archives/CF2066E/</guid>
+      <pubDate>Wed, 19 Mar 2025 10:23:00 GMT</pubDate>
+      
+        
+        
+          
+          
+      <description>&lt;h1 id=&quot;题意&quot;&gt;&lt;a class=&quot;markdownIt-Anchor&quot; href=&quot;#题意&quot;&gt;&lt;/a&gt; 题意&lt;/h1&gt;
+&lt;p&gt;有 &lt;span class=&quot;katex&quot;&gt;&lt;span class=&quot;katex-mathml&quot;&gt;&lt;math</description>
+          
+        
+      
+      
+      
+      
+      <category domain="http://blog.cyx2009.top/categories/Solution/">Solution</category>
+      
+      
+      
+      <comments>http://blog.cyx2009.top/archives/CF2066E/#disqus_thread</comments>
+      
+    </item>
     
     <item>
       <title>[题解] CF1687D Cute number</title>
@@ -580,43 +606,6 @@
       
       
       <comments>http://blog.cyx2009.top/archives/CF547D/#disqus_thread</comments>
-      
-    </item>
-    
-    <item>
-      <title>[题解] [模拟 20241109] GYM100425B Passport Control</title>
-      <link>http://blog.cyx2009.top/archives/GYM100425B/</link>
-      <guid>http://blog.cyx2009.top/archives/GYM100425B/</guid>
-      <pubDate>Sat, 15 Feb 2025 13:31:00 GMT</pubDate>
-      
-        
-        
-          
-          
-      <description>&lt;h1 id=&quot;前言&quot;&gt;&lt;a class=&quot;markdownIt-Anchor&quot; href=&quot;#前言&quot;&gt;&lt;/a&gt; 前言&lt;/h1&gt;
-&lt;p&gt;当时给 cyx 分享了这个题，今天他问我要 std 和 solution。所以有了这篇文章。&lt;/p&gt;
-&lt;h1 id=&quot;题目翻译&quot;&gt;&lt;a</description>
-          
-        
-      
-      
-      
-      
-      <category domain="http://blog.cyx2009.top/categories/Solution/">Solution</category>
-      
-      
-      <category domain="http://blog.cyx2009.top/tags/%E6%A8%A1%E6%8B%9F%E8%B5%9B/">模拟赛</category>
-      
-      <category domain="http://blog.cyx2009.top/tags/%E6%A0%91%E7%8A%B6%E6%95%B0%E7%BB%84/">树状数组</category>
-      
-      <category domain="http://blog.cyx2009.top/tags/%E4%B8%89%E7%BB%B4%E5%81%8F%E5%BA%8F/">三维偏序</category>
-      
-      <category domain="http://blog.cyx2009.top/tags/%E4%BA%8C%E7%BB%B4%E5%81%8F%E5%BA%8F/">二维偏序</category>
-      
-      <category domain="http://blog.cyx2009.top/tags/%E5%AD%97%E5%85%B8%E6%A0%91/">字典树</category>
-      
-      
-      <comments>http://blog.cyx2009.top/archives/GYM100425B/#disqus_thread</comments>
       
     </item>
     

@@ -6,7 +6,7 @@
   <link href="http://blog.cyx2009.top/atom.xml" rel="self"/>
   
   <link href="http://blog.cyx2009.top/"/>
-  <updated>2025-03-19T02:37:31.434Z</updated>
+  <updated>2025-03-19T10:42:58.845Z</updated>
   <id>http://blog.cyx2009.top/</id>
   
   <author>
@@ -15,6 +15,30 @@
   </author>
   
   <generator uri="https://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>[题解] CF2066E Tropical Season</title>
+    <link href="http://blog.cyx2009.top/archives/CF2066E/"/>
+    <id>http://blog.cyx2009.top/archives/CF2066E/</id>
+    <published>2025-03-19T10:23:00.000Z</published>
+    <updated>2025-03-19T10:42:58.845Z</updated>
+    
+    
+      
+      
+        
+        
+    <summary type="html">&lt;h1 id=&quot;题意&quot;&gt;&lt;a class=&quot;markdownIt-Anchor&quot; href=&quot;#题意&quot;&gt;&lt;/a&gt; 题意&lt;/h1&gt;
+&lt;p&gt;有 &lt;span class=&quot;katex&quot;&gt;&lt;span class=&quot;katex-mathml&quot;&gt;&lt;math</summary>
+        
+      
+    
+    
+    
+    <category term="Solution" scheme="http://blog.cyx2009.top/categories/Solution/"/>
+    
+    
+  </entry>
   
   <entry>
     <title>[题解] CF1687D Cute number</title>
@@ -540,41 +564,6 @@
     
     
     <category term="欧拉回路" scheme="http://blog.cyx2009.top/tags/%E6%AC%A7%E6%8B%89%E5%9B%9E%E8%B7%AF/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>[题解] [模拟 20241109] GYM100425B Passport Control</title>
-    <link href="http://blog.cyx2009.top/archives/GYM100425B/"/>
-    <id>http://blog.cyx2009.top/archives/GYM100425B/</id>
-    <published>2025-02-15T13:31:00.000Z</published>
-    <updated>2025-02-17T06:51:57.115Z</updated>
-    
-    
-      
-      
-        
-        
-    <summary type="html">&lt;h1 id=&quot;前言&quot;&gt;&lt;a class=&quot;markdownIt-Anchor&quot; href=&quot;#前言&quot;&gt;&lt;/a&gt; 前言&lt;/h1&gt;
-&lt;p&gt;当时给 cyx 分享了这个题，今天他问我要 std 和 solution。所以有了这篇文章。&lt;/p&gt;
-&lt;h1 id=&quot;题目翻译&quot;&gt;&lt;a</summary>
-        
-      
-    
-    
-    
-    <category term="Solution" scheme="http://blog.cyx2009.top/categories/Solution/"/>
-    
-    
-    <category term="模拟赛" scheme="http://blog.cyx2009.top/tags/%E6%A8%A1%E6%8B%9F%E8%B5%9B/"/>
-    
-    <category term="树状数组" scheme="http://blog.cyx2009.top/tags/%E6%A0%91%E7%8A%B6%E6%95%B0%E7%BB%84/"/>
-    
-    <category term="三维偏序" scheme="http://blog.cyx2009.top/tags/%E4%B8%89%E7%BB%B4%E5%81%8F%E5%BA%8F/"/>
-    
-    <category term="二维偏序" scheme="http://blog.cyx2009.top/tags/%E4%BA%8C%E7%BB%B4%E5%81%8F%E5%BA%8F/"/>
-    
-    <category term="字典树" scheme="http://blog.cyx2009.top/tags/%E5%AD%97%E5%85%B8%E6%A0%91/"/>
     
   </entry>
   

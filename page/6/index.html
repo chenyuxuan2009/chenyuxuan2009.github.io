@@ -504,7 +504,7 @@
 							<nav class="site-state">
 								<div class="site-state-item site-state-posts">
 									<a href="/archives">
-										<span class="site-state-item-count">190</span>
+										<span class="site-state-item-count">191</span>
 										<span class="site-state-item-name">文章</span>
 									</a>
 								</div>
@@ -566,7 +566,7 @@
 				</button>
 			</div>
 			<div class="modal-body">
-				<a class="badge badge-secondary tag" href="/categories/Essay/" rel="tag">Essay <span class="tag-num">4</span></a><a class="badge badge-secondary tag" href="/categories/Solution/" rel="tag">Solution <span class="tag-num">170</span></a><a class="badge badge-secondary tag" href="/categories/StudyNote/" rel="tag">StudyNote <span class="tag-num">4</span></a><a class="badge badge-secondary tag" href="/categories/Technology/" rel="tag">Technology <span class="tag-num">1</span></a><a class="badge badge-secondary tag" href="/categories/TravelNote/" rel="tag">TravelNote <span class="tag-num">11</span></a>
+				<a class="badge badge-secondary tag" href="/categories/Essay/" rel="tag">Essay <span class="tag-num">4</span></a><a class="badge badge-secondary tag" href="/categories/Solution/" rel="tag">Solution <span class="tag-num">171</span></a><a class="badge badge-secondary tag" href="/categories/StudyNote/" rel="tag">StudyNote <span class="tag-num">4</span></a><a class="badge badge-secondary tag" href="/categories/Technology/" rel="tag">Technology <span class="tag-num">1</span></a><a class="badge badge-secondary tag" href="/categories/TravelNote/" rel="tag">TravelNote <span class="tag-num">11</span></a>
 			</div>
 		</div>
 	</div>
@@ -592,6 +592,77 @@
 	<main id="main" class="site-main" role="main">
 		
 			
+	<article class="post card bg-white shadow-sm border-0 post-preview">
+	<header class="post-header text-center">
+		
+		<a class="post-title" href="/archives/CC_DISTNUM/">[题解] [模拟赛 20241008] CodeChef DISTNUM</a>
+		<div class="post-meta">
+			
+						
+						<div class="post-meta-detail post-meta-detail-time">
+							<i class="fa fa-clock-o" aria-hidden="true"></i>
+							<time title="发布于 2024-10-13 11:51:00 | 编辑于 2025-2-17 15:15:29">2024-10-13 11:51
+							</time>
+						</div>
+					
+						
+							<div class="post-meta-devide">|</div>
+						
+						<div class="post-meta-detail post-meta-detail-categories">
+							<i class="fa fa-bookmark-o" aria-hidden="true"></i>
+							<a class="post-meta-detail-catagory-link" href="/categories/Solution/">Solution</a>
+						</div>
+					
+						
+							<div class="post-meta-devide">|</div>
+						
+						<div class="post-meta-detail post-meta-detail-words">
+							<i class="fa fa-book" aria-hidden="true"></i>
+							<span id="busuanzi_container_page_pv">
+								阅读 <span id="busuanzi_value_page_pv"></span> 次
+							</span>
+						</div>
+					
+						
+							<div class="post-meta-devide">|</div>
+						
+						<div class="post-meta-detail post-meta-detail-words">
+							<i class="fa fa-file-word-o" aria-hidden="true"></i>
+							3.6k 字
+						</div>
+					
+						
+							<div class="post-meta-devide">|</div>
+						
+						<div class="post-meta-detail post-meta-detail-readingtime">
+							<i class="fa fa-hourglass-end" aria-hidden="true"></i>
+							20 分钟
+						</div>
+					
+		</div>
+		
+	</header>
+
+	<div class="post-content">
+		
+			
+				考虑离线操作。用 FHQ-Treap 维护，这样拓展成 O(n+q)\mathcal O(n+q)O(n+q) 长度的序列，单点修改。删除就是相当于改为 000。
+平衡树节点打上 deldeldel 标记表示这个节点是否被删除。
+直接 split 出来可能找不到合法点，是一个删除的点。再写一个 find 用来找合法点。
+之后对平衡树做中序遍历搜一遍...
+			
+		
+	</div>
+
+	
+		<div class="post-tags">
+			<i class="fa fa-tags" aria-hidden="true"></i>
+			<a class="tag badge badge-secondary post-meta-detail-tag -none-link" href="/tags/%E5%88%86%E5%9D%97/" rel="tag">分块</a><a class="tag badge badge-secondary post-meta-detail-tag -none-link" href="/tags/%E5%B9%B3%E8%A1%A1%E6%A0%91/" rel="tag">平衡树</a><a class="tag badge badge-secondary post-meta-detail-tag -none-link" href="/tags/%E6%A0%91%E7%8A%B6%E6%95%B0%E7%BB%84/" rel="tag">树状数组</a><a class="tag badge badge-secondary post-meta-detail-tag -none-link" href="/tags/%E6%A8%A1%E6%8B%9F%E8%B5%9B/" rel="tag">模拟赛</a>
+		</div>
+	
+</article>
+
+
 	<article class="post card bg-white shadow-sm border-0 post-preview">
 	<header class="post-header text-center">
 		
@@ -1246,73 +1317,8 @@ By Ivan
 </article>
 
 
-	<article class="post card bg-white shadow-sm border-0 post-preview">
-	<header class="post-header text-center">
-		
-		<a class="post-title" href="/archives/ABC370E/">[题解] ABC370E Avoid K Partition</a>
-		<div class="post-meta">
-			
-						
-						<div class="post-meta-detail post-meta-detail-time">
-							<i class="fa fa-clock-o" aria-hidden="true"></i>
-							<time title="发布于 2024-9-8 13:25:00 | 编辑于 2025-2-12 21:20:06">2024-9-8 13:25
-							</time>
-						</div>
-					
-						
-							<div class="post-meta-devide">|</div>
-						
-						<div class="post-meta-detail post-meta-detail-categories">
-							<i class="fa fa-bookmark-o" aria-hidden="true"></i>
-							<a class="post-meta-detail-catagory-link" href="/categories/Solution/">Solution</a>
-						</div>
-					
-						
-							<div class="post-meta-devide">|</div>
-						
-						<div class="post-meta-detail post-meta-detail-words">
-							<i class="fa fa-book" aria-hidden="true"></i>
-							<span id="busuanzi_container_page_pv">
-								阅读 <span id="busuanzi_value_page_pv"></span> 次
-							</span>
-						</div>
-					
-						
-							<div class="post-meta-devide">|</div>
-						
-						<div class="post-meta-detail post-meta-detail-words">
-							<i class="fa fa-file-word-o" aria-hidden="true"></i>
-							575 字
-						</div>
-					
-						
-							<div class="post-meta-devide">|</div>
-						
-						<div class="post-meta-detail post-meta-detail-readingtime">
-							<i class="fa fa-hourglass-end" aria-hidden="true"></i>
-							2 分钟
-						</div>
-					
-		</div>
-		
-	</header>
 
-	<div class="post-content">
-		
-			
-				 题目翻译
-给定长度为 nnn 的序列 aaa，求有多少种划分方式（不可划分出空段）使得 aaa 可以被分成若干个段，每段之和都 ≠k\neq k=k。
-对于划分的具体定义：选定 1=i1&lt;i2&lt;⋯&lt;ik&lt;ik+1=n+11=i_1\lt i_2\lt  \dots\lt i_k\lt i_{k+1}=n+11=i1​&l...
-			
-		
-	</div>
-
-	
-</article>
-
-
-
-<nav><ul class="pagination"><li class="page-item"><a aria-label="First Page" class="page-link" href="/"><i class="fa fa-angle-double-left" aria-hidden="true"></i></a></li><li class="page-item"><a aria-label="Previous Page" class="page-link" href="/page/5/"><i class="fa fa-angle-left" aria-hidden="true"></i></a></li><li class="page-item"><a class="page-link" href="/page/3/">3</a></li><li class="page-item"><a class="page-link" href="/page/4/">4</a></li><li class="page-item"><a class="page-link" href="/page/5/">5</a></li><li class="page-item active"><span class="page-link" style="cursor: default;">6</span></li><li class="page-item"><a class="page-link" href="/page/7/">7</a></li><li class="page-item"><a class="page-link" href="/page/8/">8</a></li><li class="page-item"><a class="page-link" href="/page/9/">9</a></li><li class="page-item"><a aria-label="Next Page" class="page-link" href="/page/7/"><i class="fa fa-angle-right" aria-hidden="true"></i></a></li><li class="page-item"><a aria-label="Last Page" class="page-link" href="/page/19/"><i class="fa fa-angle-double-right" aria-hidden="true"></i></a></li></ul></nav><nav><ul class="pagination pagination-mobile"><li class="page-item"><a aria-label="First Page" class="page-link" href="/"><i class="fa fa-angle-double-left" aria-hidden="true"></i></a></li><li class="page-item"><a aria-label="Previous Page" class="page-link" href="/page/5/"><i class="fa fa-angle-left" aria-hidden="true"></i></a></li><li class="page-item"><a class="page-link" href="/page/4/">4</a></li><li class="page-item"><a class="page-link" href="/page/5/">5</a></li><li class="page-item active"><span class="page-link" style="cursor: default;">6</span></li><li class="page-item"><a class="page-link" href="/page/7/">7</a></li><li class="page-item"><a class="page-link" href="/page/8/">8</a></li><li class="page-item"><a aria-label="Next Page" class="page-link" href="/page/7/"><i class="fa fa-angle-right" aria-hidden="true"></i></a></li><li class="page-item"><a aria-label="Last Page" class="page-link" href="/page/19/"><i class="fa fa-angle-double-right" aria-hidden="true"></i></a></li></ul></nav>
+<nav><ul class="pagination"><li class="page-item"><a aria-label="First Page" class="page-link" href="/"><i class="fa fa-angle-double-left" aria-hidden="true"></i></a></li><li class="page-item"><a aria-label="Previous Page" class="page-link" href="/page/5/"><i class="fa fa-angle-left" aria-hidden="true"></i></a></li><li class="page-item"><a class="page-link" href="/page/3/">3</a></li><li class="page-item"><a class="page-link" href="/page/4/">4</a></li><li class="page-item"><a class="page-link" href="/page/5/">5</a></li><li class="page-item active"><span class="page-link" style="cursor: default;">6</span></li><li class="page-item"><a class="page-link" href="/page/7/">7</a></li><li class="page-item"><a class="page-link" href="/page/8/">8</a></li><li class="page-item"><a class="page-link" href="/page/9/">9</a></li><li class="page-item"><a aria-label="Next Page" class="page-link" href="/page/7/"><i class="fa fa-angle-right" aria-hidden="true"></i></a></li><li class="page-item"><a aria-label="Last Page" class="page-link" href="/page/20/"><i class="fa fa-angle-double-right" aria-hidden="true"></i></a></li></ul></nav><nav><ul class="pagination pagination-mobile"><li class="page-item"><a aria-label="First Page" class="page-link" href="/"><i class="fa fa-angle-double-left" aria-hidden="true"></i></a></li><li class="page-item"><a aria-label="Previous Page" class="page-link" href="/page/5/"><i class="fa fa-angle-left" aria-hidden="true"></i></a></li><li class="page-item"><a class="page-link" href="/page/4/">4</a></li><li class="page-item"><a class="page-link" href="/page/5/">5</a></li><li class="page-item active"><span class="page-link" style="cursor: default;">6</span></li><li class="page-item"><a class="page-link" href="/page/7/">7</a></li><li class="page-item"><a class="page-link" href="/page/8/">8</a></li><li class="page-item"><a aria-label="Next Page" class="page-link" href="/page/7/"><i class="fa fa-angle-right" aria-hidden="true"></i></a></li><li class="page-item"><a aria-label="Last Page" class="page-link" href="/page/20/"><i class="fa fa-angle-double-right" aria-hidden="true"></i></a></li></ul></nav>
 
 
 		
