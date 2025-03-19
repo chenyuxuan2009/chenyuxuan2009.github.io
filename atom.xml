@@ -6,7 +6,7 @@
   <link href="http://blog.cyx2009.top/atom.xml" rel="self"/>
   
   <link href="http://blog.cyx2009.top/"/>
-  <updated>2025-03-18T13:31:06.185Z</updated>
+  <updated>2025-03-19T02:37:31.434Z</updated>
   <id>http://blog.cyx2009.top/</id>
   
   <author>
@@ -15,6 +15,32 @@
   </author>
   
   <generator uri="https://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>[题解] CF1687D Cute number</title>
+    <link href="http://blog.cyx2009.top/archives/CF1687D/"/>
+    <id>http://blog.cyx2009.top/archives/CF1687D/</id>
+    <published>2025-03-19T01:57:00.000Z</published>
+    <updated>2025-03-19T02:37:31.434Z</updated>
+    
+    
+      
+      
+        
+        
+    <summary type="html">&lt;h1 id=&quot;题意&quot;&gt;&lt;a class=&quot;markdownIt-Anchor&quot; href=&quot;#题意&quot;&gt;&lt;/a&gt; 题意&lt;/h1&gt;
+&lt;p&gt;定义 &lt;span class=&quot;katex&quot;&gt;&lt;span class=&quot;katex-mathml&quot;&gt;&lt;math</summary>
+        
+      
+    
+    
+    
+    <category term="Solution" scheme="http://blog.cyx2009.top/categories/Solution/"/>
+    
+    
+    <category term="数论" scheme="http://blog.cyx2009.top/tags/%E6%95%B0%E8%AE%BA/"/>
+    
+  </entry>
   
   <entry>
     <title>[题解] [模拟赛 20250318] P11928 [PA 2025] 子序列 / Podciągi</title>
@@ -549,30 +575,6 @@
     <category term="二维偏序" scheme="http://blog.cyx2009.top/tags/%E4%BA%8C%E7%BB%B4%E5%81%8F%E5%BA%8F/"/>
     
     <category term="字典树" scheme="http://blog.cyx2009.top/tags/%E5%AD%97%E5%85%B8%E6%A0%91/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>[题解] 常州市 程序设计小能手 CZOI 板刷笔记</title>
-    <link href="http://blog.cyx2009.top/archives/CZOI/"/>
-    <id>http://blog.cyx2009.top/archives/CZOI/</id>
-    <published>2025-02-15T10:03:00.000Z</published>
-    <updated>2025-02-15T11:50:27.978Z</updated>
-    
-    
-      
-      
-        
-        
-    <summary type="html">&lt;h1 id=&quot;前言&quot;&gt;&lt;a class=&quot;markdownIt-Anchor&quot; href=&quot;#前言&quot;&gt;&lt;/a&gt; 前言&lt;/h1&gt;
-&lt;p&gt;为什么要有这篇东西呢。洛谷在收各个地方的小学生比赛题，联系到了我，虽然 CZOJ</summary>
-        
-      
-    
-    
-    
-    <category term="Solution" scheme="http://blog.cyx2009.top/categories/Solution/"/>
-    
     
   </entry>
   

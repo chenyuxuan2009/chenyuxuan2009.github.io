@@ -15,8 +15,36 @@
     <atom:link href="http://blog.cyx2009.top/rss2.xml" rel="self" type="application/rss+xml"/>
     
     <description>沉石鱼惊旋 的博客</description>
-    <pubDate>Tue, 18 Mar 2025 13:31:06 GMT</pubDate>
+    <pubDate>Wed, 19 Mar 2025 02:37:31 GMT</pubDate>
     <generator>http://hexo.io/</generator>
+    
+    <item>
+      <title>[题解] CF1687D Cute number</title>
+      <link>http://blog.cyx2009.top/archives/CF1687D/</link>
+      <guid>http://blog.cyx2009.top/archives/CF1687D/</guid>
+      <pubDate>Wed, 19 Mar 2025 01:57:00 GMT</pubDate>
+      
+        
+        
+          
+          
+      <description>&lt;h1 id=&quot;题意&quot;&gt;&lt;a class=&quot;markdownIt-Anchor&quot; href=&quot;#题意&quot;&gt;&lt;/a&gt; 题意&lt;/h1&gt;
+&lt;p&gt;定义 &lt;span class=&quot;katex&quot;&gt;&lt;span class=&quot;katex-mathml&quot;&gt;&lt;math</description>
+          
+        
+      
+      
+      
+      
+      <category domain="http://blog.cyx2009.top/categories/Solution/">Solution</category>
+      
+      
+      <category domain="http://blog.cyx2009.top/tags/%E6%95%B0%E8%AE%BA/">数论</category>
+      
+      
+      <comments>http://blog.cyx2009.top/archives/CF1687D/#disqus_thread</comments>
+      
+    </item>
     
     <item>
       <title>[题解] [模拟赛 20250318] P11928 [PA 2025] 子序列 / Podciągi</title>
@@ -589,32 +617,6 @@
       
       
       <comments>http://blog.cyx2009.top/archives/GYM100425B/#disqus_thread</comments>
-      
-    </item>
-    
-    <item>
-      <title>[题解] 常州市 程序设计小能手 CZOI 板刷笔记</title>
-      <link>http://blog.cyx2009.top/archives/CZOI/</link>
-      <guid>http://blog.cyx2009.top/archives/CZOI/</guid>
-      <pubDate>Sat, 15 Feb 2025 10:03:00 GMT</pubDate>
-      
-        
-        
-          
-          
-      <description>&lt;h1 id=&quot;前言&quot;&gt;&lt;a class=&quot;markdownIt-Anchor&quot; href=&quot;#前言&quot;&gt;&lt;/a&gt; 前言&lt;/h1&gt;
-&lt;p&gt;为什么要有这篇东西呢。洛谷在收各个地方的小学生比赛题，联系到了我，虽然 CZOJ</description>
-          
-        
-      
-      
-      
-      
-      <category domain="http://blog.cyx2009.top/categories/Solution/">Solution</category>
-      
-      
-      
-      <comments>http://blog.cyx2009.top/archives/CZOI/#disqus_thread</comments>
       
     </item>
     
