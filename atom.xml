@@ -6,7 +6,7 @@
   <link href="http://blog.cyx2009.top/atom.xml" rel="self"/>
   
   <link href="http://blog.cyx2009.top/"/>
-  <updated>2025-03-19T10:42:58.845Z</updated>
+  <updated>2025-03-21T14:27:18.718Z</updated>
   <id>http://blog.cyx2009.top/</id>
   
   <author>
@@ -15,6 +15,36 @@
   </author>
   
   <generator uri="https://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>[题解] [KTSC 2025] 可爱区间 / maxsum</title>
+    <link href="http://blog.cyx2009.top/archives/P11947/"/>
+    <id>http://blog.cyx2009.top/archives/P11947/</id>
+    <published>2025-03-21T10:21:00.000Z</published>
+    <updated>2025-03-21T14:27:18.718Z</updated>
+    
+    
+      
+      
+        
+        
+    <summary type="html">&lt;h1 id=&quot;题意&quot;&gt;&lt;a class=&quot;markdownIt-Anchor&quot; href=&quot;#题意&quot;&gt;&lt;/a&gt; 题意&lt;/h1&gt;
+&lt;p&gt;有 &lt;span class=&quot;katex&quot;&gt;&lt;span class=&quot;katex-mathml&quot;&gt;&lt;math</summary>
+        
+      
+    
+    
+    
+    <category term="Solution" scheme="http://blog.cyx2009.top/categories/Solution/"/>
+    
+    
+    <category term="扫描线" scheme="http://blog.cyx2009.top/tags/%E6%89%AB%E6%8F%8F%E7%BA%BF/"/>
+    
+    <category term="线段树" scheme="http://blog.cyx2009.top/tags/%E7%BA%BF%E6%AE%B5%E6%A0%91/"/>
+    
+    <category term="倍增" scheme="http://blog.cyx2009.top/tags/%E5%80%8D%E5%A2%9E/"/>
+    
+  </entry>
   
   <entry>
     <title>[题解] CF2066E Tropical Season</title>
@@ -462,7 +492,7 @@
     <link href="http://blog.cyx2009.top/archives/QOJ5568/"/>
     <id>http://blog.cyx2009.top/archives/QOJ5568/</id>
     <published>2025-02-18T11:43:00.000Z</published>
-    <updated>2025-02-18T11:48:35.028Z</updated>
+    <updated>2025-03-21T04:02:20.038Z</updated>
     
     
       
@@ -538,32 +568,6 @@
     <category term="线段树" scheme="http://blog.cyx2009.top/tags/%E7%BA%BF%E6%AE%B5%E6%A0%91/"/>
     
     <category term="最小生成树" scheme="http://blog.cyx2009.top/tags/%E6%9C%80%E5%B0%8F%E7%94%9F%E6%88%90%E6%A0%91/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>[题解] CF547D Mike and Fish</title>
-    <link href="http://blog.cyx2009.top/archives/CF547D/"/>
-    <id>http://blog.cyx2009.top/archives/CF547D/</id>
-    <published>2025-02-16T08:47:00.000Z</published>
-    <updated>2025-02-17T07:14:27.729Z</updated>
-    
-    
-      
-      
-        
-        
-    <summary type="html">&lt;h1 id=&quot;题目翻译&quot;&gt;&lt;a class=&quot;markdownIt-Anchor&quot; href=&quot;#题目翻译&quot;&gt;&lt;/a&gt; 题目翻译&lt;/h1&gt;
-&lt;p&gt;平面上有 &lt;span class=&quot;katex&quot;&gt;&lt;span class=&quot;katex-mathml&quot;&gt;&lt;math</summary>
-        
-      
-    
-    
-    
-    <category term="Solution" scheme="http://blog.cyx2009.top/categories/Solution/"/>
-    
-    
-    <category term="欧拉回路" scheme="http://blog.cyx2009.top/tags/%E6%AC%A7%E6%8B%89%E5%9B%9E%E8%B7%AF/"/>
     
   </entry>
   
