@@ -6,7 +6,7 @@
   <link href="http://blog.cyx2009.top/atom.xml" rel="self"/>
   
   <link href="http://blog.cyx2009.top/"/>
-  <updated>2025-03-21T14:27:18.718Z</updated>
+  <updated>2025-03-24T12:56:14.297Z</updated>
   <id>http://blog.cyx2009.top/</id>
   
   <author>
@@ -17,11 +17,11 @@
   <generator uri="https://hexo.io/">Hexo</generator>
   
   <entry>
-    <title>[题解] [KTSC 2025] 可爱区间 / maxsum</title>
+    <title>[题解] [模拟赛 20250320] [KTSC 2025] 可爱区间 / maxsum</title>
     <link href="http://blog.cyx2009.top/archives/P11947/"/>
     <id>http://blog.cyx2009.top/archives/P11947/</id>
     <published>2025-03-21T10:21:00.000Z</published>
-    <updated>2025-03-21T14:27:18.718Z</updated>
+    <updated>2025-03-24T12:56:14.297Z</updated>
     
     
       
@@ -37,6 +37,8 @@
     
     <category term="Solution" scheme="http://blog.cyx2009.top/categories/Solution/"/>
     
+    
+    <category term="模拟赛" scheme="http://blog.cyx2009.top/tags/%E6%A8%A1%E6%8B%9F%E8%B5%9B/"/>
     
     <category term="扫描线" scheme="http://blog.cyx2009.top/tags/%E6%89%AB%E6%8F%8F%E7%BA%BF/"/>
     
@@ -101,7 +103,7 @@
     <link href="http://blog.cyx2009.top/archives/P11928/"/>
     <id>http://blog.cyx2009.top/archives/P11928/</id>
     <published>2025-03-18T12:58:00.000Z</published>
-    <updated>2025-03-20T12:30:49.709Z</updated>
+    <updated>2025-03-24T12:56:19.013Z</updated>
     
     
       
@@ -118,6 +120,8 @@
     <category term="Solution" scheme="http://blog.cyx2009.top/categories/Solution/"/>
     
     
+    <category term="模拟赛" scheme="http://blog.cyx2009.top/tags/%E6%A8%A1%E6%8B%9F%E8%B5%9B/"/>
+    
     <category term="线段树" scheme="http://blog.cyx2009.top/tags/%E7%BA%BF%E6%AE%B5%E6%A0%91/"/>
     
     <category term="动态规划" scheme="http://blog.cyx2009.top/tags/%E5%8A%A8%E6%80%81%E8%A7%84%E5%88%92/"/>
@@ -131,7 +135,7 @@
     <link href="http://blog.cyx2009.top/archives/P11918/"/>
     <id>http://blog.cyx2009.top/archives/P11918/</id>
     <published>2025-03-18T09:53:00.000Z</published>
-    <updated>2025-03-18T10:32:40.800Z</updated>
+    <updated>2025-03-24T12:56:24.516Z</updated>
     
     
       
@@ -147,6 +151,8 @@
     
     <category term="Solution" scheme="http://blog.cyx2009.top/categories/Solution/"/>
     
+    
+    <category term="模拟赛" scheme="http://blog.cyx2009.top/tags/%E6%A8%A1%E6%8B%9F%E8%B5%9B/"/>
     
     <category term="动态规划" scheme="http://blog.cyx2009.top/tags/%E5%8A%A8%E6%80%81%E8%A7%84%E5%88%92/"/>
     
@@ -209,7 +215,7 @@
     <link href="http://blog.cyx2009.top/archives/20250316_wish/"/>
     <id>http://blog.cyx2009.top/archives/20250316_wish/</id>
     <published>2025-03-17T00:31:00.000Z</published>
-    <updated>2025-03-17T01:35:11.036Z</updated>
+    <updated>2025-03-24T12:57:44.620Z</updated>
     
     
       
@@ -294,7 +300,7 @@
     <link href="http://blog.cyx2009.top/archives/20250226_checkin/"/>
     <id>http://blog.cyx2009.top/archives/20250226_checkin/</id>
     <published>2025-02-26T12:35:00.000Z</published>
-    <updated>2025-02-26T13:32:04.445Z</updated>
+    <updated>2025-03-24T12:57:37.762Z</updated>
     
     
       
@@ -324,7 +330,7 @@
     <link href="http://blog.cyx2009.top/archives/LGR215/"/>
     <id>http://blog.cyx2009.top/archives/LGR215/</id>
     <published>2025-02-23T05:45:00.000Z</published>
-    <updated>2025-02-23T06:42:40.018Z</updated>
+    <updated>2025-03-24T12:59:48.123Z</updated>
     
     
       

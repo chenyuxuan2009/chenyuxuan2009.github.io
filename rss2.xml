@@ -15,11 +15,11 @@
     <atom:link href="http://blog.cyx2009.top/rss2.xml" rel="self" type="application/rss+xml"/>
     
     <description>沉石鱼惊旋 的博客</description>
-    <pubDate>Fri, 21 Mar 2025 14:27:18 GMT</pubDate>
+    <pubDate>Mon, 24 Mar 2025 12:56:14 GMT</pubDate>
     <generator>http://hexo.io/</generator>
     
     <item>
-      <title>[题解] [KTSC 2025] 可爱区间 / maxsum</title>
+      <title>[题解] [模拟赛 20250320] [KTSC 2025] 可爱区间 / maxsum</title>
       <link>http://blog.cyx2009.top/archives/P11947/</link>
       <guid>http://blog.cyx2009.top/archives/P11947/</guid>
       <pubDate>Fri, 21 Mar 2025 10:21:00 GMT</pubDate>
@@ -38,6 +38,8 @@
       
       <category domain="http://blog.cyx2009.top/categories/Solution/">Solution</category>
       
+      
+      <category domain="http://blog.cyx2009.top/tags/%E6%A8%A1%E6%8B%9F%E8%B5%9B/">模拟赛</category>
       
       <category domain="http://blog.cyx2009.top/tags/%E6%89%AB%E6%8F%8F%E7%BA%BF/">扫描线</category>
       
@@ -125,6 +127,8 @@
       <category domain="http://blog.cyx2009.top/categories/Solution/">Solution</category>
       
       
+      <category domain="http://blog.cyx2009.top/tags/%E6%A8%A1%E6%8B%9F%E8%B5%9B/">模拟赛</category>
+      
       <category domain="http://blog.cyx2009.top/tags/%E7%BA%BF%E6%AE%B5%E6%A0%91/">线段树</category>
       
       <category domain="http://blog.cyx2009.top/tags/%E5%8A%A8%E6%80%81%E8%A7%84%E5%88%92/">动态规划</category>
@@ -156,6 +160,8 @@
       
       <category domain="http://blog.cyx2009.top/categories/Solution/">Solution</category>
       
+      
+      <category domain="http://blog.cyx2009.top/tags/%E6%A8%A1%E6%8B%9F%E8%B5%9B/">模拟赛</category>
       
       <category domain="http://blog.cyx2009.top/tags/%E5%8A%A8%E6%80%81%E8%A7%84%E5%88%92/">动态规划</category>
       
