@@ -658,10 +658,11 @@
 		
 			
 				 题目翻译
-有 nnn 个节点，每个节点有 222 个参数 ai,bia_i,b_iai​,bi​。
-你时刻 000 在节点 000，在节点间往返需要消耗 111 的单位时间。
-你在时刻 ttt 到达第 iii 个节点时可以等待 ai×t+bia_i\times t+b_iai​×t+bi​ 后获得 111 的收益。
-T+0.5T+0.5T+0.5...
+有 n 个节点，每个节点有 2 个参数 ai,bi。
+你时刻 0 在节点 0，在节点间往返需要消耗 1 的单位时间。
+你在时刻 t 到达第 i 个节点时可以等待 ai×t+bi 后获得 1 的收益。
+T+0.5 时刻所有节点都会失效，包括你所在的节点。
+求你能得到的最大收益，每个节点不能多次等待，不要求在 T+0.5 时刻之前返回 0 ...
 			
 		
 	</div>
@@ -729,8 +730,12 @@ T+0.5T+0.5T+0.5...
 	<div class="post-content">
 		
 			
-				已知 p is prime,gcd⁡(a,p)=1p\text{ is prime},\gcd(a,p)=1p is prime,gcd(a,p)=1 证明 ap≡a(modp)a^p\equiv a\pmod pap≡a(modp)。
-考虑一个引理：若 ppp 是质数，p∣(pi),∀i∈[1,p−1],i∈Zp\mid\dbinom{p}{i}...
+				已知 p is prime,gcd⁡(a,p)=1 证明 ap≡a(modp)。
+考虑一个引理：若 p 是质数，p∣(pi),∀i∈[1,p−1],i∈Z。
+∵(pi)=p!i!(p−i)!又∵p is prime∴(p−1)!∣i!(p−i)!∴(pi)=p⋅(p−1)!i!(p−i)!
+引理证毕。
+通过这个引理我们能进一步得到一个结论：
+p∣∑...
 			
 		
 	</div>
@@ -799,9 +804,11 @@ T+0.5T+0.5T+0.5...
 		
 			
 				 T1
-发现 u→vu\to vu→v 的方案数是可以用 u→k→vu\to k\to vu→k→v 算出来的，就类似 Floyd 枚举中心点。
-然后就直接枚举 gapgapgap，u→u+gapu\to u+gapu→u+gap 枚举中间点进行转移。
-但是发现 1→2→3→51\to 2\to 3\to 51→2→3→5 是会统计两次 1→2→3...
+发现 u→v 的方案数是可以用 u→k→v 算出来的，就类似 Floyd 枚举中心点。
+然后就直接枚举 gap，u→u+gap 枚举中间点进行转移。
+但是发现 1→2→3→5 是会统计两次 1→2→3→5 和 1→2→3→5 的。
+设 gu,v 表示是否存在 u→v 的直接连接路径即可顺利转移。
+#include <bits/stdc++....
 			
 		
 	</div>
@@ -870,7 +877,11 @@ T+0.5T+0.5T+0.5...
 		
 			
 				特别行动队
-易得 O(n2)\mathcal O(n^2)O(n2) 状态转移方程 fi←max⁡j=0j&lt;i{fj+a(si−sj)2+b(si−sj)+c}f_i\gets \max\limits_{j=0}^{j&lt;i}\{f_j+a(s_i-s_j)^2+b(s_i-s_j)+c\}fi​←j=0maxj&lt;i​{fj​+a(...
+易得 O(n2) 状态转移方程 fi←max⁡j=0j<i{fj+a(si−sj)2+b(si−sj)+c}，特殊的，约定 f0=0。
+考虑化简式子，
+\begin{aligned}
+f_j+a(s_i-s_j)^2+b(s_i-s_j)+c 
+&= f_j+a(s_i^2-2\cdot s_i\cdot s_j+s_j^2)+b\cd...
 			
 		
 	</div>

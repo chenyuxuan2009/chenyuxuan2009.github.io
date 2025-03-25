@@ -665,7 +665,7 @@ P2917 [USACO08NOV] Toys G
 P4480 [BJWC2018] 餐巾计划问题
 
  题目思路
-约定 ppp 为干净毛巾价格，m1,m2m_1,m_2m1​,m2​ 为快消毒慢消毒所需要的天数，c1,c2c_1,c_2c1​,c2​ 为快消毒慢消毒...
+约定 p 为干净毛巾价格，m1,m2 为快消毒慢消毒所需要的天数，c1,c2 为快消毒慢消毒一个的代价，m1≤m2,c1≥c2，不满足的话自己 swap...
 			
 		
 	</div>
@@ -741,7 +741,7 @@ P2917 [USACO08NOV] Toys G
 P4480 [BJWC2018] 餐巾计划问题
 
  题目思路
-约定 ppp 为干净玩具价格，m1,m2m_1,m_2m1​,m2​ 为快消毒慢消毒所需要的天数，c1,c2c_1,c_2c1​,c2​ 为快消毒慢消毒...
+约定 p 为干净玩具价格，m1,m2 为快消毒慢消毒所需要的天数，c1,c2 为快消毒慢消毒一个的代价，m1≤m2,c1≥c2，不满足的话自己 swap...
 			
 		
 	</div>
@@ -817,7 +817,7 @@ P2917 [USACO08NOV] Toys G
 P4480 [BJWC2018] 餐巾计划问题
 
  题目思路
-约定 ppp 为干净餐巾价格，m1,m2m_1,m_2m1​,m2​ 为快洗慢洗所需要的天数，c1,c2c_1,c_2c1​,c2​ 为快洗慢洗一个的代...
+约定 p 为干净餐巾价格，m1,m2 为快洗慢洗所需要的天数，c1,c2 为快洗慢洗一个的代价，m1≤m2,c1≥c2，不满足的话自己 swap 一下即...
 			
 		
 	</div>
@@ -886,12 +886,13 @@ P4480 [BJWC2018] 餐巾计划问题
 		
 			
 				 题目翻译
-A 和 B 正在赛跑，前 T1T_1T1​ 分钟 A 和 B 速度分别是 A1A_1A1​ 和 A2A_2A2​，之后 T2T_2T2​ 分钟 A 和 B 速度分别是 A2A_2A2​ 和 B2B_2B2​，以此类推，问 A 和 B 会相遇几次。
+A 和 B 正在赛跑，前 T1 分钟 A 和 B 速度分别是 A1 和 A2，之后 T2 分钟 A 和 B 速度分别是 A2 和 B2，以此类推，问 A 和 B 会相遇几次。
 相遇无数次输出 infinity。
  题目思路
 什么小学奥数入门题。
 为了方便描述：
-前半...
+前半段：Sa,1=T1×A1,Sb,1=T1×B1。
+后半段：Sa,2=T2...
 			
 		
 	</div>
@@ -960,8 +961,11 @@ A 和 B 正在赛跑，前 T1T_1T1​ 分钟 A 和 B 速度分别是 A1A_1A1​ 
 		
 			
 				 题目翻译
-输入一个正整数 a(2≤a≤3500)a(2\leq a\leq 3500)a(2≤a≤3500)，输出三个数 h,w,rh,w,rh,w,r，满足 1h+1w+1r=4a\dfrac1h+\dfrac1w+\dfrac1r=\dfrac4ah1​+w1​+r1​=a4​，输出任意一种符合的答案。
-保证存在一组 h,w,r≤3500h,...
+输入一个正整数 a(2≤a≤3500)，输出三个数 h,w,r，满足 1h+1w+1r=4a，输出任意一种符合的答案。
+保证存在一组 h,w,r≤3500 的合法解，但是你不需要一定输出类似的方案，输出中含有 ≥3500 的方案也是合法的。
+ 题目思路
+大家都会数学，就我不会，那就来一个不太寻常的大炮打蚊子的做法。
+O(V3) 的做法显...
 			
 		
 	</div>
@@ -1031,12 +1035,14 @@ A 和 B 正在赛跑，前 T1T_1T1​ 分钟 A 和 B 速度分别是 A1A_1A1​ 
 			
 				 书
 简单题，但是有个小丑挂掉了。
-对于每个 [10x,10x+1−1][10^x,10^{x+1}-1][10x,10x+1−1] 的区间，计算 nnn 覆盖了多大范围。
-#include &lt;bits/stdc++.h&gt;
+对于每个 [10x,10x+1−1] 的区间，计算 n 覆盖了多大范围。
+#include <bits/stdc++.h>
 using namespace std;
 typedef long long ll;
 int main()
-&#1...
+{
+    freopen("book.in", "r", stdin);
+   ...
 			
 		
 	</div>
@@ -1183,11 +1189,12 @@ int main()
 			
 				 赌徒
 数学题，分类讨论。不多说。
-#include &lt;bits/stdc++.h&gt;
+#include <bits/stdc++.h>
 using namespace std;
-template &lt;typename T&gt;
-void gmx(T &amp;x, T y) &#123; x = max(x, y); &#125;
-template &lt;typename T&...
+template <typename T>
+void gmx(T &x, T y) { x = max(x, y); }
+template <typename T>
+void gmn(T &x, T y) { x = mi...
 			
 		
 	</div>
@@ -1262,8 +1269,8 @@ template &lt;typename T&...
 http://czoj.com.cn/p/P1672
 来源 CZOJ。
  题目思路
-题面中的 10910^9109 完全吓唬人用的。
-考虑到 1≤a,b,c,d,x,y≤10001\leq a,b,c,d,...
+题面中的 109 完全吓唬人用的。
+考虑到 1≤a,b,c,d,x,y≤1000，最暴力的方法开个 2000×2000 大...
 			
 		
 	</div>
@@ -1328,10 +1335,17 @@ http://czoj.com.cn/p/P1672
 			
 				 题目翻译
 
-有一个长度为 nnn，且只由 R,G,B\tt R,\tt G,\tt BR,G,B 组成的字符串 sss，求有多少个三元组 (i,j,k)(i,j,k)(i,j,k) 满足：
+有一个长度为 n，且只由 R,G,B 组成的字符串 s，求有多少个三元组 (i,j,k) 满足：
 
-1≤i&lt;j&lt;k≤n1\leq i&lt;j&lt;k\leq n1≤i&lt;j&lt;k≤n。
-si≠sj,sj≠sk,si≠sks_i\ne...
+1≤i<j<k≤n。
+si≠sj,sj≠sk,si≠sk。
+j−i≠k−j。
+
+1≤n≤4,000。
+
+ 题目思路
+暴力枚举 i,j,k，但是 O(n3) 超时。
+考虑优化，我们枚举 i,k，可以通过前缀和预处理出这一段中 sj≠si,...
 			
 		
 	</div>

@@ -648,16 +648,18 @@
 			
 				 abc253_a
  题目翻译
-给定 a,b,ca,b,ca,b,c，问 bbb 是不是中位数。
+给定 a,b,c，问 b 是不是中位数。
  题目思路
 排序，判断。
  AC 代码
-#include&lt;bits/stdc++.h&gt;
+#include<bits/stdc++.h>
 using namespace std;
 int main()
-&#123;
+{
     int a, b, c, d;
-    cin &gt;&gt; ...
+    cin >> a >> b >> c;
+    d = b;
+    i...
 			
 		
 	</div>
@@ -721,11 +723,11 @@ int main()
 		
 			
 				 题目翻译
-有一个长度为 nnn 的数组，里面有 nnn 个元素，a1,a2,a3,...ana_1,a_2,a_3,...a_na1​,a2​,a3​,...an​。
-给定一个 kkk，可以通过在 aaa 数组中插入 [1,n][1,n][1,n] 之间的数字，使任意 kkk 个连续的元素之和相等。
-如无解，输出 −1-1−1。
+有一个长度为 n 的数组，里面有 n 个元素，a1,a2,a3,...an。
+给定一个 k，可以通过在 a 数组中插入 [1,n] 之间的数字，使任意 k 个连续的元素之和相等。
+如无解，输出 −1。
  题目思路
-我们...
+我们可以考虑，把这个数组分成很多段，也就变成 b1,b2,b3,...,bk,b1,b2,b3,...,bk,b1,b2,b...
 			
 		
 	</div>
@@ -790,17 +792,20 @@ int main()
 			
 				 abc252_a
  题目翻译
-给一个数字 nnn，输出 ASCLL 码里第 nnn 位的字母。
+给一个数字 n，输出 ASCLL 码里第 n 位的字母。
  题目思路
 直接输出。
  AC 代码
-#include&lt;bits/stdc++.h&gt;
+#include<bits/stdc++.h>
 using namespace std;
 int main()
-&#123;
+{
 	int n;
-	cin&gt;&gt;n;
-	cout&lt;&lt;ch...
+	cin>>n;
+	cout<<char(n)<<endl;
+	return 0;
+}
+ ...
 			
 		
 	</div>
@@ -945,17 +950,17 @@ git --version
 			
 				 abc251_a
  题目翻译
-有一个字符串，输出这个字符串交替的前 666 位。
+有一个字符串，输出这个字符串交替的前 6 位。
  题目思路
 判断长度。
  AC 代码
-#include&lt;bits/stdc++.h&gt;
+#include<bits/stdc++.h>
 using namespace std;
 int main()
-&#123;
+{
 	string s;
-	cin&gt;&gt;s;
-	if(s.size()==1)cou...
+	cin>>s;
+	if(s.size()==1)cout<<s<<s<<s<<s<<s<<s...
 			
 		
 	</div>
@@ -1024,7 +1029,7 @@ int main()
 点赞这条动态/朋友圈，会获得jiangly和tourist保佑，一整年AK所有比赛，快来试试
 顺带一提，明天就是信息与未来的选拔赛了，所以，unsigned long long rp=0;rp--;
  Second
-背模板ing&amp;...
+背模板ing&看博客i...
 			
 		
 	</div>
@@ -1089,13 +1094,17 @@ int main()
 			
 				 abc250_a
  题目翻译
-有一个 h×wh\times wh×w 的矩阵，有个数对 (r,c)(r,c)(r,c)，问与 (r,c)(r,c)(r,c) 相邻的有几个。
+有一个 h×w 的矩阵，有个数对 (r,c)，问与 (r,c) 相邻的有几个。
  题目思路
-判断 r,cr,cr,c 是否在边界。
+判断 r,c 是否在边界。
  AC 代码
-#include&lt;bits/stdc++.h&gt;
+#include<bits/stdc++.h>
 using namespace std;
-int...
+int main()
+{
+	int h,w,r,c;
+	cin>>h>>w>>r>>c;
+	i...
 			
 		
 	</div>
@@ -1159,10 +1168,12 @@ int...
 		
 			
 				 题目翻译
-nnn 次操作，每次两个数 ai,bia_i,b_iai​,bi​，在一个初始为空的序列里插入 bib_ibi​ 个 aia_iai​，操作结束后问第 kkk 小是什么。
+n 次操作，每次两个数 ai,bi，在一个初始为空的序列里插入 bi 个 ai，操作结束后问第 k 小是什么。
  题目思路
 类似于 ABC247D 的写法，还是个弱化版。
-我们不用真的插入 bib_ibi​ 个 aia_iai​，只需记录 bib_ibi​ 有多少即可，因为很多...
+我们不用真的插入 bi 个 ai，只需记录 bi 有多少即可，因为很多的数都用不到。
+这是很多个一添，同理，我们可以很多个一删。
+所以我们用一个 pair 记录两个量...
 			
 		
 	</div>
@@ -1227,13 +1238,14 @@ nnn 次操作，每次两个数 ai,bia_i,b_iai​,bi​，在一个初始为空�
 			
 				 abc249_a
  题目翻译
-两个人走路，一个 aaa 秒走 bbb 米，休息 ccc 秒，一个 ddd 秒走 eee 米，休息 fff 秒。问 xxx 秒后，谁走得多。
+两个人走路，一个 a 秒走 b 米，休息 c 秒，一个 d 秒走 e 米，休息 f 秒。问 x 秒后，谁走得多。
  题目思路
-小学数学题。a+ca+ca+c 为一循环，d+fd+fd+f 为一循环。之后再处理剩余秒数。
+小学数学题。a+c 为一循环，d+f 为一循环。之后再处理剩余秒数。
  AC 代码
 void solve()
-&#123;
-	int a,b...
+{
+	int a,b,c,d,e,f,x;
+	cin>>a>>b>>c>>d>>e...
 			
 		
 	</div>
@@ -1298,18 +1310,20 @@ void solve()
 			
 				 abc248_a
  题目翻译
-有一个字符串 sss，找出 000 到 999 中没出现的数。
+有一个字符串 s，找出 0 到 9 中没出现的数。
  题目思路
 直接开数组存出现次数。
  AC 代码
 int a[10];
 void solve()
-&#123;
+{
 	string s;
-	cin&gt;&gt;s;
-	for(int i=0;i&lt;9;i++)
-	&#123;
-		a[s[i]-&#x...
+	cin>>s;
+	for(int i=0;i<9;i++)
+	{
+		a[s[i]-'0']++;
+	}
+	for(int i=0;i<=9...
 			
 		
 	</div>

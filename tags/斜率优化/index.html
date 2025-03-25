@@ -664,7 +664,11 @@
 		
 			
 				特别行动队
-易得 O(n2)\mathcal O(n^2)O(n2) 状态转移方程 fi←max⁡j=0j&lt;i{fj+a(si−sj)2+b(si−sj)+c}f_i\gets \max\limits_{j=0}^{j&lt;i}\{f_j+a(s_i-s_j)^2+b(s_i-s_j)+c\}fi​←j=0maxj&lt;i​{fj​+a(...
+易得 O(n2) 状态转移方程 fi←max⁡j=0j<i{fj+a(si−sj)2+b(si−sj)+c}，特殊的，约定 f0=0。
+考虑化简式子，
+\begin{aligned}
+f_j+a(s_i-s_j)^2+b(s_i-s_j)+c 
+&= f_j+a(s_i^2-2\cdot s_i\cdot s_j+s_j^2)+b\cd...
 			
 		
 	</div>

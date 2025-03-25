@@ -659,16 +659,17 @@
 			
 				 abc262_a
  题目翻译
-问第 YYY 年后（包括第 YYY 年）最近一次世界杯在什么时候。
+问第 Y 年后（包括第 Y 年）最近一次世界杯在什么时候。
  题目思路
-世界杯举办的年份  mod 4\bmod 4mod4 为 222。
+世界杯举办的年份  mod 4 为 2。
  AC 代码
-#include&lt;bits/stdc++.h&gt;
+#include<bits/stdc++.h>
 using namespace std;
 int main()
-&#123;
+{
 	int a;
-	...
+	cin>>a;
+	cout<<a+(4-(a-2)%4)...
 			
 		
 	</div>
@@ -731,14 +732,17 @@ int main()
 	<div class="post-content">
 		
 			
-				总计 303030 题。
+				总计 30 题。
  洛谷
-总计 171717 题。
+总计 17 题。
  P1002
 没什么好说的，注意一下细节。
 如果马的掌控范围不在棋盘内，特判防 RE。
-不开 long long 见祖宗！！！\Huge \text{不开 long\ long 见祖宗！！！}不开 long long 见祖宗！！！
-#include&lt;bits/stdc++.h&gt;...
+不开 long long 见祖宗！！！
+#include<bits/stdc++.h>
+using namespace std;
+long long f[50][50]; 
+int dx[]={1,1,-1,-1,2,...
 			
 		
 	</div>
@@ -808,14 +812,17 @@ int main()
 			
 				 abc261_a
  题目翻译
-问数轴上 [l1,r1][l_1,r_1][l1​,r1​] 和 [l2,r2][l_2,r_2][l2​,r2​] 重叠长度。
+问数轴上 [l1,r1] 和 [l2,r2] 重叠长度。
  题目思路
 注意数轴上，不是问重叠数字个数。
 罚时带来的教训。
  AC 代码
-#include&lt;bits/stdc++.h&gt;
+#include<bits/stdc++.h>
 using namespace std;
-int ...
+int main()
+{
+	int l1,r1,l2,r2,ans=0;
+	cin>>l1>...
 			
 		
 	</div>
@@ -880,9 +887,15 @@ int ...
 			
 				 奶牛式乘法
 题目很简单，就是每位数字相乘做加法。
-下列描述中，均将两个数字 A,BA,BA,B 分别用字符串 S,TS,TS,T 表示，n=∣S∣,m=∣T∣n=\left|S\right|,m=\left|T\right|n=∣S∣,m=∣T∣。
-很显然，有一种 O(nm)\mathcal O(nm)O(nm) 的写法，直接模拟题意。
-#inc...
+下列描述中，均将两个数字 A,B 分别用字符串 S,T 表示，n=∣S∣,m=∣T∣。
+很显然，有一种 O(nm) 的写法，直接模拟题意。
+#include<bits/stdc++.h>
+using namespace std;
+string a,b;
+int ans;
+int main()
+{
+...
 			
 		
 	</div>
@@ -953,12 +966,14 @@ int ...
 				 abc260_a
  题目翻译
 聊天聊过头晚开题我是什么品种的制杖。
-有一个长度为 333 的字符串 sss，问 sss 中只出现一次的字符是什么，没有输出 −1-1−1。
+有一个长度为 3 的字符串 s，问 s 中只出现一次的字符是什么，没有输出 −1。
  题目思路
 建一个数组存放每个小写字母出现次数，最后扫一遍。
  AC 代码
-#include&lt;bits/stdc++.h&gt;
-using namespace std;...
+#include<bits/stdc++.h>
+using namespace std;
+int a['z'+1];
+i...
 			
 		
 	</div>
@@ -1094,8 +1109,12 @@ PS：可惜了，几年前的手机拍照延迟过高，大头照没拍到几张
 		
 			
 				 题目翻译
-有一个数 xxx，你可以询问至多 606060 次，每次会返回 0,1,−10,1,-10,1,−1 中的任意一个数。 111 代表询问的数 &gt;x&gt;x&gt;x，−1-1−1 代表询问的数 &lt;x&lt;x&lt;x，000 代表询问的数 =x=x=x。
-有时候可能会返回错误的信息，可能会 111 和 −1-1−1 交换...
+有一个数 x，你可以询问至多 60 次，每次会返回 0,1,−1 中的任意一个数。 1 代表询问的数 >x，−1 代表询问的数 <x，0 代表询问的数 =x。
+有时候可能会返回错误的信息，可能会 1 和 −1 交换。但相等时，是不会返回错误信息的。信息返回的周期长度为 n。
+本题注意事项：
+
+
+得到 0 或 −1 返回时，立即终止程序。...
 			
 		
 	</div>
@@ -1165,13 +1184,15 @@ PS：可惜了，几年前的手机拍照延迟过高，大头照没拍到几张
 			
 				 abc258_a
  题目翻译
-Atcoder 的 ABC 一般在东京时间 21:00\tt{21:00}21:00 开始，持续 100100100 分钟。
-问开始后 xxx 分钟后，是东京时间几点？
+Atcoder 的 ABC 一般在东京时间 21:00 开始，持续 100 分钟。
+问开始后 x 分钟后，是东京时间几点？
 注意时和分有前导零。
  题目思路
 随便写写，特判前导零，或者用 printf。
  AC 代码
-#include&lt;bits/stdc++.h&g...
+#include<bits/stdc++.h>
+using namespace std;
+int m...
 			
 		
 	</div>

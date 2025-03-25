@@ -658,9 +658,10 @@
 		
 			
 				 题目翻译
-给定长度为 nnn 的序列 aaa，求有多少组 (l,r)(l,r)(l,r) 满足 ∑i=lrai=ki\sum\limits_{i=l}^ra_i=k^ii=l∑r​ai​=ki。
+给定长度为 n 的序列 a，求有多少组 (l,r) 满足 ∑i=lrai=ki。
  题目思路
-首先考虑，枚举 lll 和 rrr，判断 ∑i=lr\sum\limits_{i=l}^ri=l∑r​ 是否为 kkk 的倍数。但是显然这种...
+首先考虑，枚举 l 和 r，判断 ∑i=lr 是否为 k 的倍数。但是显然这种做法复杂度为 n2 无法通过。
+设 s 为 a 的前缀和数组，我们注意到，我们查找 sr−sl−1=ki，其实等价于找 s 中是否有 sr−ki 这个元素，那么我们只...
 			
 		
 	</div>

@@ -664,7 +664,9 @@
 		
 			
 				 题意
-给定 nnn 个点的树，点有点权，定义 f(u,v,op⁡)f(u,v,\operatorname{op})f(u,v,op) 表示 (ap0=uop⁡ap1op⁡ap2op⁡…op⁡apk=v)2(a_{p_0=u}\operatorname{op} a_{p_1}\operatorname{op} a_{p_2}\operatornam...
+给定 n 个点的树，点有点权，定义 f(u,v,op⁡) 表示 (ap0=uop⁡ap1op⁡ap2op⁡…op⁡apk=v)2。即 u→v 的路径上的点权 op⁡ 和的平方。
+求出 ∑u=1n∑v=1nf(u,v,AND⁡)，∑u=1n∑v=1nf(u,v,OR⁡)，∑u=1n∑v=1nf(u,v,XOR⁡)。
+答案对 998244353...
 			
 		
 	</div>
@@ -733,8 +735,16 @@
 		
 			
 				 题意
-定义 f(l,r)=min⁡i∈[l,r]aiOR⁡max⁡i∈[l,r]ainf(l,r)=\min\limits_{i\in [l,r]} a_i \operatorname{OR} \max\limits_{i\in [l,r]} a_inf(l,r)=i∈[l,r]min​ai​ORi∈[l,r]max​ai​n。
-求 ⨁i=1n⨁...
+定义 f(l,r)=min⁡i∈[l,r]aiOR⁡max⁡i∈[l,r]ain。
+求 ⨁i=1n⨁j=inf(i,j)。其中 ⊕ 是按位异或，OR⁡ 是按位或。
+1≤n≤106，1≤ai≤1018，保证 ai 互不相同。
+ 做法
+考虑分治。
+分治之后分最小值最大值在哪一侧进行讨论。
+
+
+若最大值最小值在同一侧
+不妨认为都在左侧。枚举左侧的...
 			
 		
 	</div>

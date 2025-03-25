@@ -730,8 +730,12 @@ PS：可惜了，几年前的手机拍照延迟过高，大头照没拍到几张
 		
 			
 				 题目翻译
-有一个数 xxx，你可以询问至多 606060 次，每次会返回 0,1,−10,1,-10,1,−1 中的任意一个数。 111 代表询问的数 &gt;x&gt;x&gt;x，−1-1−1 代表询问的数 &lt;x&lt;x&lt;x，000 代表询问的数 =x=x=x。
-有时候可能会返回错误的信息，可能会 111 和 −1-1−1 交换...
+有一个数 x，你可以询问至多 60 次，每次会返回 0,1,−1 中的任意一个数。 1 代表询问的数 >x，−1 代表询问的数 <x，0 代表询问的数 =x。
+有时候可能会返回错误的信息，可能会 1 和 −1 交换。但相等时，是不会返回错误信息的。信息返回的周期长度为 n。
+本题注意事项：
+
+
+得到 0 或 −1 返回时，立即终止程序。...
 			
 		
 	</div>
@@ -801,13 +805,15 @@ PS：可惜了，几年前的手机拍照延迟过高，大头照没拍到几张
 			
 				 abc258_a
  题目翻译
-Atcoder 的 ABC 一般在东京时间 21:00\tt{21:00}21:00 开始，持续 100100100 分钟。
-问开始后 xxx 分钟后，是东京时间几点？
+Atcoder 的 ABC 一般在东京时间 21:00 开始，持续 100 分钟。
+问开始后 x 分钟后，是东京时间几点？
 注意时和分有前导零。
  题目思路
 随便写写，特判前导零，或者用 printf。
  AC 代码
-#include&lt;bits/stdc++.h&g...
+#include<bits/stdc++.h>
+using namespace std;
+int m...
 			
 		
 	</div>
@@ -873,12 +879,17 @@ Atcoder 的 ABC 一般在东京时间 21:00\tt{21:00}21:00 开始，持续 10010
 				由于作者代码风格有变，头文件较长，以下代码均舍去头文件。
  abc257_a
  题目翻译
-给定一个 nnn，生成一个字符串，内容为 nnn 个 A\tt{A}A，nnn 个 B\tt{B}B，一直到 nnn 个 Z\tt{Z}Z。
-输出第 kkk 位。
+给定一个 n，生成一个字符串，内容为 n 个 A，n 个 B，一直到 n 个 Z。
+输出第 k 位。
  题目思路
-直接模拟到第 nnn 位。
+直接模拟到第 n 位。
 这是最暴力的写法。
-也可以用数学知识算一下当前是哪个字符...
+也可以用数学知识算一下当前是哪个字符。
+我采用了最暴力的。
+ AC 代码
+int main()
+{
+ ...
 			
 		
 	</div>
@@ -951,11 +962,12 @@ int 读入，要特判前导零。
 char 读入，直接输出。
 我写的是 int 读入。
  AC 代码
-#include&lt;bits/stdc++.h&gt;
+#include<bits/stdc++.h>
 using namespace std;
 int main()
-&#123;
-    int n;...
+{
+    int n;
+    cin >>...
 			
 		
 	</div>
@@ -1020,16 +1032,18 @@ int main()
 			
 				 abc253_a
  题目翻译
-给定 a,b,ca,b,ca,b,c，问 bbb 是不是中位数。
+给定 a,b,c，问 b 是不是中位数。
  题目思路
 排序，判断。
  AC 代码
-#include&lt;bits/stdc++.h&gt;
+#include<bits/stdc++.h>
 using namespace std;
 int main()
-&#123;
+{
     int a, b, c, d;
-    cin &gt;&gt; ...
+    cin >> a >> b >> c;
+    d = b;
+    i...
 			
 		
 	</div>
@@ -1093,11 +1107,11 @@ int main()
 		
 			
 				 题目翻译
-有一个长度为 nnn 的数组，里面有 nnn 个元素，a1,a2,a3,...ana_1,a_2,a_3,...a_na1​,a2​,a3​,...an​。
-给定一个 kkk，可以通过在 aaa 数组中插入 [1,n][1,n][1,n] 之间的数字，使任意 kkk 个连续的元素之和相等。
-如无解，输出 −1-1−1。
+有一个长度为 n 的数组，里面有 n 个元素，a1,a2,a3,...an。
+给定一个 k，可以通过在 a 数组中插入 [1,n] 之间的数字，使任意 k 个连续的元素之和相等。
+如无解，输出 −1。
  题目思路
-我们...
+我们可以考虑，把这个数组分成很多段，也就变成 b1,b2,b3,...,bk,b1,b2,b3,...,bk,b1,b2,b...
 			
 		
 	</div>
@@ -1162,17 +1176,20 @@ int main()
 			
 				 abc252_a
  题目翻译
-给一个数字 nnn，输出 ASCLL 码里第 nnn 位的字母。
+给一个数字 n，输出 ASCLL 码里第 n 位的字母。
  题目思路
 直接输出。
  AC 代码
-#include&lt;bits/stdc++.h&gt;
+#include<bits/stdc++.h>
 using namespace std;
 int main()
-&#123;
+{
 	int n;
-	cin&gt;&gt;n;
-	cout&lt;&lt;ch...
+	cin>>n;
+	cout<<char(n)<<endl;
+	return 0;
+}
+ ...
 			
 		
 	</div>
@@ -1317,17 +1334,17 @@ git --version
 			
 				 abc251_a
  题目翻译
-有一个字符串，输出这个字符串交替的前 666 位。
+有一个字符串，输出这个字符串交替的前 6 位。
  题目思路
 判断长度。
  AC 代码
-#include&lt;bits/stdc++.h&gt;
+#include<bits/stdc++.h>
 using namespace std;
 int main()
-&#123;
+{
 	string s;
-	cin&gt;&gt;s;
-	if(s.size()==1)cou...
+	cin>>s;
+	if(s.size()==1)cout<<s<<s<<s<<s<<s<<s...
 			
 		
 	</div>
