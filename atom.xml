@@ -6,7 +6,7 @@
   <link href="http://blog.cyx2009.top/atom.xml" rel="self"/>
   
   <link href="http://blog.cyx2009.top/"/>
-  <updated>2025-03-25T05:47:53.327Z</updated>
+  <updated>2025-03-25T14:22:19.920Z</updated>
   <id>http://blog.cyx2009.top/</id>
   
   <author>
@@ -17,11 +17,39 @@
   <generator uri="https://hexo.io/">Hexo</generator>
   
   <entry>
+    <title>[题解] [模拟赛 20250325] P11946 [KTSC 2025] 物竞天择 2 / evolution</title>
+    <link href="http://blog.cyx2009.top/archives/P11946/"/>
+    <id>http://blog.cyx2009.top/archives/P11946/</id>
+    <published>2025-03-25T13:01:00.000Z</published>
+    <updated>2025-03-25T14:22:19.920Z</updated>
+    
+    
+      
+      
+        
+        
+    <summary type="html">&lt;h1 id=&quot;题意&quot;&gt;&lt;a class=&quot;markdownIt-Anchor&quot; href=&quot;#题意&quot;&gt;&lt;/a&gt; 题意&lt;/h1&gt;
+&lt;p&gt;一棵 &lt;span class=&quot;katex&quot;&gt;&lt;span class=&quot;katex-mathml&quot;&gt;&lt;math</summary>
+        
+      
+    
+    
+    
+    <category term="Solution" scheme="http://blog.cyx2009.top/categories/Solution/"/>
+    
+    
+    <category term="模拟赛" scheme="http://blog.cyx2009.top/tags/%E6%A8%A1%E6%8B%9F%E8%B5%9B/"/>
+    
+    <category term="Adhoc" scheme="http://blog.cyx2009.top/tags/Adhoc/"/>
+    
+  </entry>
+  
+  <entry>
     <title>[题解] [模拟赛 20250325] P11948 [KTSC 2025] 完美编号 / numbering</title>
     <link href="http://blog.cyx2009.top/archives/P11948/"/>
     <id>http://blog.cyx2009.top/archives/P11948/</id>
     <published>2025-03-25T02:19:00.000Z</published>
-    <updated>2025-03-25T05:47:53.327Z</updated>
+    <updated>2025-03-25T07:58:30.378Z</updated>
     
     
       
@@ -546,34 +574,6 @@
     
     
     <category term="随机" scheme="http://blog.cyx2009.top/tags/%E9%9A%8F%E6%9C%BA/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>[题解] CF1184B3 The Doctor Meets Vader (Hard)</title>
-    <link href="http://blog.cyx2009.top/archives/CF1184B3/"/>
-    <id>http://blog.cyx2009.top/archives/CF1184B3/</id>
-    <published>2025-02-18T11:01:00.000Z</published>
-    <updated>2025-02-18T11:06:02.733Z</updated>
-    
-    
-      
-      
-        
-        
-    <summary type="html">&lt;h1 id=&quot;题目翻译&quot;&gt;&lt;a class=&quot;markdownIt-Anchor&quot; href=&quot;#题目翻译&quot;&gt;&lt;/a&gt; 题目翻译&lt;/h1&gt;
-&lt;p&gt;一张图有 &lt;span class=&quot;katex&quot;&gt;&lt;span class=&quot;katex-mathml&quot;&gt;&lt;math</summary>
-        
-      
-    
-    
-    
-    <category term="Solution" scheme="http://blog.cyx2009.top/categories/Solution/"/>
-    
-    
-    <category term="网络流" scheme="http://blog.cyx2009.top/tags/%E7%BD%91%E7%BB%9C%E6%B5%81/"/>
-    
-    <category term="最大流最小割" scheme="http://blog.cyx2009.top/tags/%E6%9C%80%E5%A4%A7%E6%B5%81%E6%9C%80%E5%B0%8F%E5%89%B2/"/>
     
   </entry>
   

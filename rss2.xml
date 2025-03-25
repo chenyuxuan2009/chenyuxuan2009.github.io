@@ -15,8 +15,38 @@
     <atom:link href="http://blog.cyx2009.top/rss2.xml" rel="self" type="application/rss+xml"/>
     
     <description>沉石鱼惊旋 的博客</description>
-    <pubDate>Tue, 25 Mar 2025 05:47:53 GMT</pubDate>
+    <pubDate>Tue, 25 Mar 2025 14:22:19 GMT</pubDate>
     <generator>http://hexo.io/</generator>
+    
+    <item>
+      <title>[题解] [模拟赛 20250325] P11946 [KTSC 2025] 物竞天择 2 / evolution</title>
+      <link>http://blog.cyx2009.top/archives/P11946/</link>
+      <guid>http://blog.cyx2009.top/archives/P11946/</guid>
+      <pubDate>Tue, 25 Mar 2025 13:01:00 GMT</pubDate>
+      
+        
+        
+          
+          
+      <description>&lt;h1 id=&quot;题意&quot;&gt;&lt;a class=&quot;markdownIt-Anchor&quot; href=&quot;#题意&quot;&gt;&lt;/a&gt; 题意&lt;/h1&gt;
+&lt;p&gt;一棵 &lt;span class=&quot;katex&quot;&gt;&lt;span class=&quot;katex-mathml&quot;&gt;&lt;math</description>
+          
+        
+      
+      
+      
+      
+      <category domain="http://blog.cyx2009.top/categories/Solution/">Solution</category>
+      
+      
+      <category domain="http://blog.cyx2009.top/tags/%E6%A8%A1%E6%8B%9F%E8%B5%9B/">模拟赛</category>
+      
+      <category domain="http://blog.cyx2009.top/tags/Adhoc/">Adhoc</category>
+      
+      
+      <comments>http://blog.cyx2009.top/archives/P11946/#disqus_thread</comments>
+      
+    </item>
     
     <item>
       <title>[题解] [模拟赛 20250325] P11948 [KTSC 2025] 完美编号 / numbering</title>
@@ -586,36 +616,6 @@
       
       
       <comments>http://blog.cyx2009.top/archives/QOJ5568/#disqus_thread</comments>
-      
-    </item>
-    
-    <item>
-      <title>[题解] CF1184B3 The Doctor Meets Vader (Hard)</title>
-      <link>http://blog.cyx2009.top/archives/CF1184B3/</link>
-      <guid>http://blog.cyx2009.top/archives/CF1184B3/</guid>
-      <pubDate>Tue, 18 Feb 2025 11:01:00 GMT</pubDate>
-      
-        
-        
-          
-          
-      <description>&lt;h1 id=&quot;题目翻译&quot;&gt;&lt;a class=&quot;markdownIt-Anchor&quot; href=&quot;#题目翻译&quot;&gt;&lt;/a&gt; 题目翻译&lt;/h1&gt;
-&lt;p&gt;一张图有 &lt;span class=&quot;katex&quot;&gt;&lt;span class=&quot;katex-mathml&quot;&gt;&lt;math</description>
-          
-        
-      
-      
-      
-      
-      <category domain="http://blog.cyx2009.top/categories/Solution/">Solution</category>
-      
-      
-      <category domain="http://blog.cyx2009.top/tags/%E7%BD%91%E7%BB%9C%E6%B5%81/">网络流</category>
-      
-      <category domain="http://blog.cyx2009.top/tags/%E6%9C%80%E5%A4%A7%E6%B5%81%E6%9C%80%E5%B0%8F%E5%89%B2/">最大流最小割</category>
-      
-      
-      <comments>http://blog.cyx2009.top/archives/CF1184B3/#disqus_thread</comments>
       
     </item>
     
