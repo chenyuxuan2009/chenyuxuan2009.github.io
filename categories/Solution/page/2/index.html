@@ -665,9 +665,11 @@
 		
 			
 				 题意
-给定 nn 个三元组 (ai,bi,ci)(ai​,bi​,ci​)，将其分成 3 组。设第一组的 max⁡a=Amaxa=A，第二组的 max⁡b=Bmaxb=B，第三组的 max⁡c=Cmaxc=C，输出最小的 A+B+CA+B+C。若一组内没有元素，则对应的 max⁡=0max=0。
+给定 n 个三元组 (ai,bi,ci)，将其分成 3 组。设第一组的 max⁡a=A，第二组的 max⁡b=B，第三组的 max⁡c=C，输出最小的 A+B+C。若一组内没有元素，则对应的 max⁡=0。
 多测。
-1≤t≤101≤t≤10，1≤n≤1061...
+1≤t≤10，1≤n≤106，1≤∑n≤2×106，1≤ai,bi,ci≤7×108。
+ 做法
+先按 a 从小到大排序，不妨称...
 			
 		
 	</div>
@@ -736,10 +738,10 @@
 		
 			
 				 P11784 「FAOI-R4」问题跳转
-按题意模拟即可，如果这是纯数字题号把省略的 PP 加回去，之后加上 https://www.luogu.com.cn/problem/ 输出。
+按题意模拟即可，如果这是纯数字题号把省略的 P 加回去，之后加上 https://www.luogu.com.cn/problem/ 输出。
 https://www.luogu.com.cn/record/204246956
 #include <bits/stdc++.h>
-using namespac...
+using namespace...
 			
 		
 	</div>
@@ -808,8 +810,9 @@ using namespac...
 		
 			
 				 题意
-给定 nn 个点的树，点有点权，定义 f(u,v,op⁡)f(u,v,op) 表示 (ap0=uop⁡ap1op⁡ap2op⁡…op⁡apk=v)2(ap0​=u​opap1​​opap2​​op…opapk​=v​)2。即 u→vu→v 的路径上的点权 op⁡op 和的平方。
-求出 ∑u=1n∑v=1nf(u,v,AND⁡)u=1∑n​v...
+给定 n 个点的树，点有点权，定义 f(u,v,op⁡) 表示 (ap0=uop⁡ap1op⁡ap2op⁡…op⁡apk=v)2。即 u→v 的路径上的点权 op⁡ 和的平方。
+求出 ∑u=1n∑v=1nf(u,v,AND⁡)，∑u=1n∑v=1nf(u,v,OR⁡)，∑u=1n∑v=1nf(u,v,XOR⁡)。
+答案对 998244353...
 			
 		
 	</div>
@@ -878,9 +881,16 @@ using namespac...
 		
 			
 				 题意
-定义 f(l,r)=min⁡i∈[l,r]aiOR⁡max⁡i∈[l,r]ainf(l,r)=i∈[l,r]min​ai​ORi∈[l,r]max​ai​n。
-求 ⨁i=1n⨁j=inf(i,j)i=1⨁n​j=i⨁n​f(i,j)。其中 ⊕⊕ 是按位异或，OR⁡OR 是按位或。
-1≤n≤1061≤n≤106，1≤ai≤10181≤ai​≤...
+定义 f(l,r)=min⁡i∈[l,r]aiOR⁡max⁡i∈[l,r]ain。
+求 ⨁i=1n⨁j=inf(i,j)。其中 ⊕ 是按位异或，OR⁡ 是按位或。
+1≤n≤106，1≤ai≤1018，保证 ai 互不相同。
+ 做法
+考虑分治。
+分治之后分最小值最大值在哪一侧进行讨论。
+
+
+若最大值最小值在同一侧
+不妨认为都在左侧。枚举左侧的...
 			
 		
 	</div>
@@ -949,11 +959,13 @@ using namespac...
 		
 			
 				 题目翻译
-给定长度为 nn 的 0101 串，求有多少个区间 [l,r][l,r] 满足 [l,r][l,r] 中 11 的个数整除 r−l+1r−l+1。
-1≤n≤2×1051≤n≤2×105
+给定长度为 n 的 01 串，求有多少个区间 [l,r] 满足 [l,r] 中 1 的个数整除 r−l+1。
+1≤n≤2×105
  题目思路
-设 sisi​ 表示 [1,i][1,i] 的 11 的个数。
-那么我们就是求 si−sj∣i−jsi​−sj​∣i−j 的 (i,j)(i...
+设 si 表示 [1,i] 的 1 的个数。
+那么我们就是求 si−sj∣i−j 的 (i,j) 个数，其中 0≤j<i≤n。
+那么我们有 ksi−i=ksj−j。
+一个很暴力的想法是枚举这些 k...
 			
 		
 	</div>
@@ -1022,10 +1034,11 @@ using namespac...
 		
 			
 				 题目翻译
-给定 nn 个数 aiai​，每个的因数个数不超过 77，选若干个数使得乘积为完全平方数，求最小选出的数的个数。
-1≤n≤1051≤n≤105，1≤ai≤1061≤ai​≤106。
+给定 n 个数 ai，每个的因数个数不超过 7，选若干个数使得乘积为完全平方数，求最小选出的数的个数。
+1≤n≤105，1≤ai≤106。
  题目思路
-先把完全平方因子除掉，那么每个数只有若干个不重复的质因子。因数个数只有 77 个，所以不超过 22 个质因子。33 个质因子时一个数有 88 个...
+先把完全平方因子除掉，那么每个数只有若干个不重复的质因子。因数个数只有 7 个，所以不超过 2 个质因子。3 个质因子时一个数有 8 个因数。
+那么如果出现任意一个数为完全平方数，答案就...
 			
 		
 	</div>
@@ -1094,10 +1107,11 @@ using namespac...
 		
 			
 				 题意
-给定一个长度为 nn 的二维序列 {(ai,bi)}{(ai​,bi​)}，其中 0≤ai,bi≤1090≤ai​,bi​≤109。
-定义一个长度为 nn 的排列 pkpk​ 的权值：最小的 i∈[1,n]i∈[1,n]，使得：
-∀j≥i,∑i≤k≤j(apk−bpk)≥0∀j≥i,i≤k≤j∑​(apk​​−bpk​​)≥0。
-∀j<i,...
+给定一个长度为 n 的二维序列 {(ai,bi)}，其中 0≤ai,bi≤109。
+定义一个长度为 n 的排列 pk 的权值：最小的 i∈[1,n]，使得：
+∀j≥i,∑i≤k≤j(apk−bpk)≥0。
+∀j<i,∑i≤k≤n(apk−bpk)+∑1≤k≤j(apk−bpk)≥0。
+如果不存在这样的 i，则这个排列的权值为 0。输出所有 ...
 			
 		
 	</div>
@@ -1168,9 +1182,11 @@ using namespac...
 				https://qoj.ac/problem/5568
 https://codeforces.com/gym/105644/problem/C
  题目翻译
-给定排列 pp，每次可以选 kk 个数循环右移，即选若干个 aiai​，pai+1′=paipai+1​′​=pai​​。
-一次操作代价是 10−8⌈108k⌉10−8⌈k108​⌉。
-要求在 ...
+给定排列 p，每次可以选 k 个数循环右移，即选若干个 ai，pai+1′=pai。
+一次操作代价是 10−8⌈108k⌉。
+要求在 ≤2 的代价内把排列排好序。
+ 题目思路
+这个做法也太神仙了...
 			
 		
 	</div>
@@ -1239,10 +1255,11 @@ https://codeforces.com/gym/105644/problem/C
 		
 			
 				 题目翻译
-一张图有 nn 个点 mm 条边，边权都是 11。
-有 ss 个宇宙飞船，第 ii 个宇宙飞船在 xixi​ 的位置，有 aiai​ 的攻击 fifi​ 的燃料 pipi​ 的运行代价。
-有 bb 个基地，第 jj 个基地在 xj′xj′​ 的位置，有 djdj​ 的防御和 gjgj​ 的价值。
-有 kk 条限制，表示如果发动了宇宙飞船...
+一张图有 n 个点 m 条边，边权都是 1。
+有 s 个宇宙飞船，第 i 个宇宙飞船在 xi 的位置，有 ai 的攻击 fi 的燃料 pi 的运行代价。
+有 b 个基地，第 j 个基地在 xj′ 的位置，有 dj 的防御和 gj 的价值。
+有 k 条限制，表示如果发动了宇宙飞船 u 则必须发动宇宙飞船 v。
+一个飞船 i 能攻打到基地 ...
 			
 		
 	</div>
@@ -1357,144 +1374,271 @@ https://mna.wang/contest/2339/problem/3
                             } 
                         setInterval("createtime()",250);
                         </script>
+                        <style>
+                            .particle {
+  position: fixed;
+  pointer-events: none;
+  background-color: currentColor;
+  border-radius: 50%;
+  width: 10px;
+  height: 10px;
+}
+
+.ripple {
+  position: fixed;
+  border-radius: 50%;
+  pointer-events: none;
+  border: 2px solid rgba(255, 20, 97, 0.8);
+  transform: translate(-50%, -50%);
+  animation: ripple-effect 0.6s ease-out forwards;
+}
+
+@keyframes ripple-effect {
+  0% {
+    width: 0;
+    height: 0;
+    opacity: 0.5;
+  }
+  100% {
+    width: 50px;
+    height: 50px;
+    opacity: 0;
+  }
+}
+                        </style>
                         <script>
-        // window.onload = (() => {
-        //     //定义点击出现文字类
-        //     function ClickFrontShow() {
-        //         //定义所需文字和颜色
-        //         this.fron = ['复杂度', '枚举', '模拟', '递归 & 分治', '贪心', '排序',
-        //             '前缀和 & 差分', '二分', '倍增', '构造',
-        //             'DFS（搜索）', 'BFS（搜索）', '双向搜索', '启发式搜索', 'A*',
-        //             '迭代加深搜索', 'IDA*', '回溯法', 'Dancing Links',
-        //             'Alpha-Beta 剪枝',
-        //             '记忆化搜索', '背包 DP', '区间 DP', 'DAG 上的 DP', '树形 DP',
-        //             '状压 DP', '数位 DP', '插头 DP', '计数 DP', '动态 DP',
-        //             '概率 DP',
-        //             '字符串匹配', '字符串哈希', '字典树 (Trie)', '前缀函数与 KMP 算法',
-        //             'Boyer-Moore 算法', 'Z 函数（扩展 KMP）', '自动机',
-        //             'AC 自动机', '后缀数组 (SA)', '后缀自动机 (SAM)', '后缀平衡树',
-        //             '广义后缀自动机', '后缀树', 'Manacher', '回文树', '序列自动机',
-        //             '最小表示法', 'Lyndon 分解', 'Main-Lorentz 算法',
-        //             '符号', '进位制', '位运算', '二进制集合操作', '平衡三进制', '高精度计算',
-        //             '快速幂', '置换和排列', '弧度制与坐标系', '复数', '数论',
-        //             '多项式与生成函数', '组合数学', '线性代数', '线性规划', '群论', '概率论',
-        //             '博弈论', '牛顿迭代法', '数值积分', '傅里叶-莫茨金消元法', '序理论',
-        //             '杨氏矩阵', 'Schreier–Sims 算法',
-        //             'Berlekamp-Massey 算法',
-        //             '栈', '队列', '链表', '哈希表', '并查集', '堆', '块状数据结构',
-        //             '单调栈', '单调队列', 'ST 表', '树状数组', '线段树', '李超线段树',
-        //             '区间最值操作 & 区间历史最值', '划分树', '二叉搜索树 & 平衡树', '跳表',
-        //             '可持久化数据结构', '树套树', 'K-D Tree', '动态树', '析合树',
-        //             'PQ 树', '手指树', '霍夫曼树',
-        //             '图论相关概念', '图的存储', 'DFS（图论）', 'BFS（图论）', '树上问题',
-        //             '矩阵树定理', '有向无环图', '拓扑排序', '最小生成树', '斯坦纳树',
-        //             '最小树形图', '最小直径生成树', '最短路', '拆点', '差分约束', 'k 短路',
-        //             '同余最短路', '连通性相关', '2-SAT', '欧拉图', '哈密顿图', '二分图',
-        //             '最小环', '平面图', '图的着色', '网络流', 'Stoer-Wagner 算法',
-        //             '图的匹配', 'Prufer 序列', 'LGV 引理', '弦图', '最大团搜索算法',
-        //             '二维计算几何基础', '三维计算几何基础', '距离', 'Pick 定理', '三角剖分',
-        //             '凸包', '扫描线', '旋转卡壳', '半平面交', '平面最近点对', '随机增量法',
-        //             '反演变换', '计算几何杂项',
-        //             '离散化', '双指针', '离线算法', '分数规划', '随机化', '悬线法',
-        //             '计算理论基础', '字节顺序', '约瑟夫问题', '格雷码', '表达式求值',
-        //             '在一台机器上规划任务', '主元素问题', 'Garsia-Wachs 算法',
-        //             '15-puzzle', 'Kahan 求和', '珂朵莉树/颜色段均摊',
-        //             'RMQ', '并查集应用', '括号序列', '线段树与离线询问'
-        //         ];
-        //         this.colo = ['#FF69B4', '#ff6651', 'orange', '#FF00FF',
-        //             '#00FF7F', '#00BFFF', '#BA55D3'
-        //         ];
-        //         //获取body元素
-        //         this.elBody = document.getElementsByTagName("body")[0];
-        //         //初始化randomNum
-        //         this.randomNum = null;
-        //         //初始化字体inde
-        //         this.finde = 0;
-        //         //初始化className
-        //         this.cls = 0;
-        //     }
 
-        //     //定义初始化
-        //     ClickFrontShow.prototype.init = function(frontArray,
-        //         colorArray) {
-        //         //自定义颜色和字体
-        //         this.fron = frontArray || this.fron;
-        //         this.colo = colorArray || this.colo;
+                  const colors = ['#FF1461', '#18FF92', '#5A87FF', '#FBF38C'];
 
-        //         this.listenMouse();
-        //     }
+  
 
-        //     //创建文字
-        //     ClickFrontShow.prototype.createFront = function(classname) {
-        //         var self = this;
-        //         let ospan = document.createElement('span');
-        //         //设置样式
-        //         let cssText =
-        //             // "width: 100%; height: 100%; top: 0; left: 0; z-index: 99999; position: fixed;";
-        //             // "position:absolute; cursor: default; transform: translate(-50%,-50%); font-weight: bold; opacity: 1; z-index: 1000; transition: 1s;width: 100%; height: 100%;pointer-events: none;";
-        //             // "position:absolute; width: 40px; height: 20px; cursor: default; transform: translate(-50%,-50%); font-weight: bold; opacity: 1; z-index: 1000; transition: 1s;";
-        //             "position:fixed; width: 40px; height: 20px; cursor: default; transform: translate(-50%,-50%); font-weight: bold; opacity: 1; z-index: 1000; transition: 1s;";
-        //         //随机字体和颜色
-        //         let randomFront = self.fron[Math.round(Math
-        //             .random() * (self.fron.length - 1))];
-        //         let randomColor = self.colo[Math.round(Math
-        //             .random() * (self.colo.length - 1))];
-        //         //字体下标增1
-        //         self.finde = (self.finde + 1) % self.fron.length;
-        //         //向body中添加元素
-        //         self.elBody.appendChild(ospan);
-        //         //绑定一个classname
-        //         ospan.className = String(classname);
-        //         //添加样式
-        //         ospan.style.cssText = cssText +
-        //             "-moz-user-select: none;-webkit-user-select: none;-ms-user-select: none;user-select: none;"
-        //         ospan.style.color = randomColor;
-        //         ospan.innerHTML = randomFront;
-        //     }
+  document.addEventListener('click', (e) => {
+
+    const ripple = document.createElement('div');
+
+    ripple.className = 'ripple';
+
+    ripple.style.left = `${e.clientX}px`;
+
+    ripple.style.top = `${e.clientY}px`;
+
+    document.body.appendChild(ripple);
+
+    
+
+    // パーティクルを8個生成
+
+    for (let i = 0; i < 8; i++) {
+
+      const particle = document.createElement('div');
+
+      particle.className = 'particle';
+
+      particle.style.backgroundColor = colors[Math.floor(Math.random() * colors.length)];
+
+      particle.style.left = `${e.clientX - 4}px`;
+
+      particle.style.top = `${e.clientY - 4}px`;
+
+      
+
+      // アニメーションの初期設定
+
+      const angle = ((i * 45 + 22.5) * Math.PI) / 180;
+
+      const velocity = 2 + Math.random() * 2;
+
+      const startTime = performance.now();
+
+      
+
+      // アニメーション実行
+
+      const animate = (currentTime) => {
+
+        const progress = (currentTime - startTime) / 600;
+
+        
+
+        if (progress >= 1) {
+
+          particle.remove();
+
+          return;
+
+        }
+
+        
+
+        particle.style.left = `${e.clientX - 4 + Math.cos(angle) * velocity * progress * 20}px`;
+
+        particle.style.top = `${e.clientY - 4 + Math.sin(angle) * velocity * progress * 20}px`;
+
+        particle.style.opacity = 1 - progress;
+
+        particle.style.transform = `scale(${1 - progress})`;
+
+        
+
+        requestAnimationFrame(animate);
+
+      };
+
+      
+
+      document.body.appendChild(particle);
+
+      requestAnimationFrame(animate);
+
+    }
+
+    
+
+    // 600ms後に波紋を削除
+
+    setTimeout(() => ripple.remove(), 600);
+
+  });
+
+                </script>
+                     <!--    <script>
+        window.onload = (() => {
+            //定义点击出现文字类
+            function ClickFrontShow() {
+                //定义所需文字和颜色
+                this.fron = ['复杂度', '枚举', '模拟', '递归 & 分治', '贪心', '排序',
+                    '前缀和 & 差分', '二分', '倍增', '构造',
+                    'DFS（搜索）', 'BFS（搜索）', '双向搜索', '启发式搜索', 'A*',
+                    '迭代加深搜索', 'IDA*', '回溯法', 'Dancing Links',
+                    'Alpha-Beta 剪枝',
+                    '记忆化搜索', '背包 DP', '区间 DP', 'DAG 上的 DP', '树形 DP',
+                    '状压 DP', '数位 DP', '插头 DP', '计数 DP', '动态 DP',
+                    '概率 DP',
+                    '字符串匹配', '字符串哈希', '字典树 (Trie)', '前缀函数与 KMP 算法',
+                    'Boyer-Moore 算法', 'Z 函数（扩展 KMP）', '自动机',
+                    'AC 自动机', '后缀数组 (SA)', '后缀自动机 (SAM)', '后缀平衡树',
+                    '广义后缀自动机', '后缀树', 'Manacher', '回文树', '序列自动机',
+                    '最小表示法', 'Lyndon 分解', 'Main-Lorentz 算法',
+                    '符号', '进位制', '位运算', '二进制集合操作', '平衡三进制', '高精度计算',
+                    '快速幂', '置换和排列', '弧度制与坐标系', '复数', '数论',
+                    '多项式与生成函数', '组合数学', '线性代数', '线性规划', '群论', '概率论',
+                    '博弈论', '牛顿迭代法', '数值积分', '傅里叶-莫茨金消元法', '序理论',
+                    '杨氏矩阵', 'Schreier–Sims 算法',
+                    'Berlekamp-Massey 算法',
+                    '栈', '队列', '链表', '哈希表', '并查集', '堆', '块状数据结构',
+                    '单调栈', '单调队列', 'ST 表', '树状数组', '线段树', '李超线段树',
+                    '区间最值操作 & 区间历史最值', '划分树', '二叉搜索树 & 平衡树', '跳表',
+                    '可持久化数据结构', '树套树', 'K-D Tree', '动态树', '析合树',
+                    'PQ 树', '手指树', '霍夫曼树',
+                    '图论相关概念', '图的存储', 'DFS（图论）', 'BFS（图论）', '树上问题',
+                    '矩阵树定理', '有向无环图', '拓扑排序', '最小生成树', '斯坦纳树',
+                    '最小树形图', '最小直径生成树', '最短路', '拆点', '差分约束', 'k 短路',
+                    '同余最短路', '连通性相关', '2-SAT', '欧拉图', '哈密顿图', '二分图',
+                    '最小环', '平面图', '图的着色', '网络流', 'Stoer-Wagner 算法',
+                    '图的匹配', 'Prufer 序列', 'LGV 引理', '弦图', '最大团搜索算法',
+                    '二维计算几何基础', '三维计算几何基础', '距离', 'Pick 定理', '三角剖分',
+                    '凸包', '扫描线', '旋转卡壳', '半平面交', '平面最近点对', '随机增量法',
+                    '反演变换', '计算几何杂项',
+                    '离散化', '双指针', '离线算法', '分数规划', '随机化', '悬线法',
+                    '计算理论基础', '字节顺序', '约瑟夫问题', '格雷码', '表达式求值',
+                    '在一台机器上规划任务', '主元素问题', 'Garsia-Wachs 算法',
+                    '15-puzzle', 'Kahan 求和', '珂朵莉树/颜色段均摊',
+                    'RMQ', '并查集应用', '括号序列', '线段树与离线询问'
+                ];
+                this.colo = ['#FF69B4', '#ff6651', 'orange', '#FF00FF',
+                    '#00FF7F', '#00BFFF', '#BA55D3'
+                ];
+                //获取body元素
+                this.elBody = document.getElementsByTagName("body")[0];
+                //初始化randomNum
+                this.randomNum = null;
+                //初始化字体inde
+                this.finde = 0;
+                //初始化className
+                this.cls = 0;
+            }
+
+            //定义初始化
+            ClickFrontShow.prototype.init = function(frontArray,
+                colorArray) {
+                //自定义颜色和字体
+                this.fron = frontArray || this.fron;
+                this.colo = colorArray || this.colo;
+
+                this.listenMouse();
+            }
+
+            //创建文字
+            ClickFrontShow.prototype.createFront = function(classname) {
+                var self = this;
+                let ospan = document.createElement('span');
+                //设置样式
+                let cssText =
+                    // "width: 100%; height: 100%; top: 0; left: 0; z-index: 99999; position: fixed;";
+                    // "position:absolute; cursor: default; transform: translate(-50%,-50%); font-weight: bold; opacity: 1; z-index: 1000; transition: 1s;width: 100%; height: 100%;pointer-events: none;";
+                    // "position:absolute; width: 40px; height: 20px; cursor: default; transform: translate(-50%,-50%); font-weight: bold; opacity: 1; z-index: 1000; transition: 1s;";
+                    "position:fixed; width: 40px; height: 20px; cursor: default; transform: translate(-50%,-50%); font-weight: bold; opacity: 1; z-index: 1000; transition: 1s;";
+                //随机字体和颜色
+                let randomFront = self.fron[Math.round(Math
+                    .random() * (self.fron.length - 1))];
+                let randomColor = self.colo[Math.round(Math
+                    .random() * (self.colo.length - 1))];
+                //字体下标增1
+                self.finde = (self.finde + 1) % self.fron.length;
+                //向body中添加元素
+                self.elBody.appendChild(ospan);
+                //绑定一个classname
+                ospan.className = String(classname);
+                //添加样式
+                ospan.style.cssText = cssText +
+                    "-moz-user-select: none;-webkit-user-select: none;-ms-user-select: none;user-select: none;"
+                ospan.style.color = randomColor;
+                ospan.innerHTML = randomFront;
+            }
 
 
-        //     //监听鼠标点击
-        //     ClickFrontShow.prototype.listenMouse = function() {
-        //         var self = this;
+            //监听鼠标点击
+            ClickFrontShow.prototype.listenMouse = function() {
+                var self = this;
 
-        //         //鼠标点击事件
-        //         document.onclick = function(e) {
-        //             //避免classname值重复导致出现bug
-        //             if (self.cls === 20) {
-        //                 self.cls = 0;
-        //             } else {
-        //                 self.cls += 1;
-        //             }
-        //             //创建文字
-        //             self.createFront(self.cls);
-        //             let el = document.getElementsByClassName(
-        //                 self.cls)[0];
+                //鼠标点击事件
+                document.onclick = function(e) {
+                    //避免classname值重复导致出现bug
+                    if (self.cls === 20) {
+                        self.cls = 0;
+                    } else {
+                        self.cls += 1;
+                    }
+                    //创建文字
+                    self.createFront(self.cls);
+                    let el = document.getElementsByClassName(
+                        self.cls)[0];
 
-        //             //鼠标点击位置
+                    //鼠标点击位置
 
-        //             el.style.left = e.clientX + 'px';
-        //             el.style.top = e.clientY + 'px';
-        //             // alert('x: '+el.style.left+' y: '+el.style.top);
+                    el.style.left = e.clientX + 'px';
+                    el.style.top = e.clientY + 'px';
+                    // alert('x: '+el.style.left+' y: '+el.style.top);
 
-        //             //过时改变
-        //             setTimeout(function() {
-        //                 el.style.opacity = 0;
-        //                 el.style.top = el.offsetTop -
-        //                     100 + 'px';
-        //             }, 100);
-        //             //过时清除
-        //             setTimeout(function() {
-        //                 self.elBody.removeChild(el);
-        //             }, 2000);
-        //         }
-        //     }
-        //     //实例化
-        //     var frontShow = new ClickFrontShow();
-        //     //用户可在此传递参数，默认第一个参数是字体数组；
-        //     //第二个参数是颜色数组，必须是数组类型！
-        //     frontShow.init();
-        // })();
-                        </script>
+                    //过时改变
+                    setTimeout(function() {
+                        el.style.opacity = 0;
+                        el.style.top = el.offsetTop -
+                            100 + 'px';
+                    }, 100);
+                    //过时清除
+                    setTimeout(function() {
+                        self.elBody.removeChild(el);
+                    }, 2000);
+                }
+            }
+            //实例化
+            var frontShow = new ClickFrontShow();
+            //用户可在此传递参数，默认第一个参数是字体数组；
+            //第二个参数是颜色数组，必须是数组类型！
+            frontShow.init();
+        })();
+                        </script> -->
                     </footer>
                 </main>
             </div>

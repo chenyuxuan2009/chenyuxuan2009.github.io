@@ -664,9 +664,10 @@
 		
 			
 				 题目翻译
-有一个长度为 n(n≤500)n(n≤500) 的序列，你可以砍 m(0≤m<n)m(0≤m<n) 刀将其分为 m+1m+1 段，令每一段 [l,r][l,r] 的贡献为 ∑i=lr∑j=i+1rai×aji=l∑r​j=i+1∑r​ai​×aj​，一个序列的答案是每一段的贡献之和，求最小的答案。
+有一个长度为 n(n≤500) 的序列，你可以砍 m(0≤m<n) 刀将其分为 m+1 段，令每一段 [l,r] 的贡献为 ∑i=lr∑j=i+1rai×aj，一个序列的答案是每一段的贡献之和，求最小的答案。
  题目思路
-设 fi,jfi,j​ 表...
+设 fi,j 表示前 i 个位置割 j 刀的最小答案。
+转移是很显然的，枚举上一次断在哪里，fi,j←min⁡k=0...
 			
 		
 	</div>
@@ -737,10 +738,10 @@
 				 前言
 如何评价我场上 LCA 没清空 fa 数组没有 AK。
  题目翻译
-给定 nn 个点的一棵树，以及 kk 组点 (u,v)(u,v)，表示 u→vu→v 的简单路径包含特殊边。问至少多少边为特殊边。
-多测，1≤t≤104,∑n≤105,∑2k≤2201≤t≤104,∑n≤105,∑2k≤220。
+给定 n 个点的一棵树，以及 k 组点 (u,v)，表示 u→v 的简单路径包含特殊边。问至少多少边为特殊边。
+多测，1≤t≤104,∑n≤105,∑2k≤220。
  题目思路
-kk 很小，考虑状压。SiSi​...
+k 很小，考虑状压。Si 为一个 mask 表示第 i 条边可能出现哪几条特殊边，也就是被哪几个...
 			
 		
 	</div>
@@ -809,11 +810,11 @@ kk 很小，考虑状压。SiSi​...
 		
 			
 				 题目翻译
-有 nn 个节点，每个节点有 22 个参数 ai,biai​,bi​。
-你时刻 00 在节点 00，在节点间往返需要消耗 11 的单位时间。
-你在时刻 tt 到达第 ii 个节点时可以等待 ai×t+biai​×t+bi​ 后获得 11 的收益。
-T+0.5T+0.5 时刻所有节点都会失效，包括你所在的节点。
-求你能得到的最大收益，每个...
+有 n 个节点，每个节点有 2 个参数 ai,bi。
+你时刻 0 在节点 0，在节点间往返需要消耗 1 的单位时间。
+你在时刻 t 到达第 i 个节点时可以等待 ai×t+bi 后获得 1 的收益。
+T+0.5 时刻所有节点都会失效，包括你所在的节点。
+求你能得到的最大收益，每个节点不能多次等待，不要求在 T+0.5 时刻之前返回 0 ...
 			
 		
 	</div>
@@ -882,10 +883,11 @@ T+0.5T+0.5 时刻所有节点都会失效，包括你所在的节点。
 		
 			
 				特别行动队
-易得 O(n2)O(n2) 状态转移方程 fi←max⁡j=0j<i{fj+a(si−sj)2+b(si−sj)+c}fi​←j=0maxj<i​{fj​+a(si​−sj​)2+b(si​−sj​)+c}，特殊的，约定 f0=0f0​=0。
+易得 O(n2) 状态转移方程 fi←max⁡j=0j<i{fj+a(si−sj)2+b(si−sj)+c}，特殊的，约定 f0=0。
 考虑化简式子，
 \begin{aligned}
-f_j+a(s_i-s_j)^2+b(s_i-...
+f_j+a(s_i-s_j)^2+b(s_i-s_j)+c 
+&= f_j+a(s_i^2-2\cdot s_i\cdot s_j+s_j^2)+b\cd...
 			
 		
 	</div>
@@ -954,10 +956,10 @@ f_j+a(s_i-s_j)^2+b(s_i-...
 		
 			
 				 题目翻译
-有一个 H×WH×W 的国际象棋棋盘，求一个车从 (x1,y1)(x1​,y1​) 走到 (x2,y2)(x2​,y2​) 正好用 KK 步的方案数。
+有一个 H×W 的国际象棋棋盘，求一个车从 (x1,y1) 走到 (x2,y2) 正好用 K 步的方案数。
  题目思路
-首先看到题，很显然是动态规划。fk,i,jfk,i,j​ 表示走到 (i,j)(i,j) 正好 kk 步的方案。但时间复杂度过高，考虑进行优化。
-我们可以不记录具体走到哪个点...
+首先看到题，很显然是动态规划。fk,i,j 表示走到 (i,j) 正好 k 步的方案。但时间复杂度过高，考虑进行优化。
+我们可以不记录具体走到哪个点位，我们只需知道当前在不在起点即可。于是就有 fk,0/1/2/3 表...
 			
 		
 	</div>
@@ -1025,16 +1027,17 @@ f_j+a(s_i-s_j)^2+b(s_i-...
 	<div class="post-content">
 		
 			
-				总计 3030 题。
+				总计 30 题。
  洛谷
-总计 1717 题。
+总计 17 题。
  P1002
 没什么好说的，注意一下细节。
 如果马的掌控范围不在棋盘内，特判防 RE。
-不开 long long 见祖宗！！！不开 long long 见祖宗！！！
+不开 long long 见祖宗！！！
 #include<bits/stdc++.h>
 using namespace std;
-long long f[50][50]; ...
+long long f[50][50]; 
+int dx[]={1,1,-1,-1,2,...
 			
 		
 	</div>
@@ -1078,144 +1081,271 @@ long long f[50][50]; ...
                             } 
                         setInterval("createtime()",250);
                         </script>
+                        <style>
+                            .particle {
+  position: fixed;
+  pointer-events: none;
+  background-color: currentColor;
+  border-radius: 50%;
+  width: 10px;
+  height: 10px;
+}
+
+.ripple {
+  position: fixed;
+  border-radius: 50%;
+  pointer-events: none;
+  border: 2px solid rgba(255, 20, 97, 0.8);
+  transform: translate(-50%, -50%);
+  animation: ripple-effect 0.6s ease-out forwards;
+}
+
+@keyframes ripple-effect {
+  0% {
+    width: 0;
+    height: 0;
+    opacity: 0.5;
+  }
+  100% {
+    width: 50px;
+    height: 50px;
+    opacity: 0;
+  }
+}
+                        </style>
                         <script>
-        // window.onload = (() => {
-        //     //定义点击出现文字类
-        //     function ClickFrontShow() {
-        //         //定义所需文字和颜色
-        //         this.fron = ['复杂度', '枚举', '模拟', '递归 & 分治', '贪心', '排序',
-        //             '前缀和 & 差分', '二分', '倍增', '构造',
-        //             'DFS（搜索）', 'BFS（搜索）', '双向搜索', '启发式搜索', 'A*',
-        //             '迭代加深搜索', 'IDA*', '回溯法', 'Dancing Links',
-        //             'Alpha-Beta 剪枝',
-        //             '记忆化搜索', '背包 DP', '区间 DP', 'DAG 上的 DP', '树形 DP',
-        //             '状压 DP', '数位 DP', '插头 DP', '计数 DP', '动态 DP',
-        //             '概率 DP',
-        //             '字符串匹配', '字符串哈希', '字典树 (Trie)', '前缀函数与 KMP 算法',
-        //             'Boyer-Moore 算法', 'Z 函数（扩展 KMP）', '自动机',
-        //             'AC 自动机', '后缀数组 (SA)', '后缀自动机 (SAM)', '后缀平衡树',
-        //             '广义后缀自动机', '后缀树', 'Manacher', '回文树', '序列自动机',
-        //             '最小表示法', 'Lyndon 分解', 'Main-Lorentz 算法',
-        //             '符号', '进位制', '位运算', '二进制集合操作', '平衡三进制', '高精度计算',
-        //             '快速幂', '置换和排列', '弧度制与坐标系', '复数', '数论',
-        //             '多项式与生成函数', '组合数学', '线性代数', '线性规划', '群论', '概率论',
-        //             '博弈论', '牛顿迭代法', '数值积分', '傅里叶-莫茨金消元法', '序理论',
-        //             '杨氏矩阵', 'Schreier–Sims 算法',
-        //             'Berlekamp-Massey 算法',
-        //             '栈', '队列', '链表', '哈希表', '并查集', '堆', '块状数据结构',
-        //             '单调栈', '单调队列', 'ST 表', '树状数组', '线段树', '李超线段树',
-        //             '区间最值操作 & 区间历史最值', '划分树', '二叉搜索树 & 平衡树', '跳表',
-        //             '可持久化数据结构', '树套树', 'K-D Tree', '动态树', '析合树',
-        //             'PQ 树', '手指树', '霍夫曼树',
-        //             '图论相关概念', '图的存储', 'DFS（图论）', 'BFS（图论）', '树上问题',
-        //             '矩阵树定理', '有向无环图', '拓扑排序', '最小生成树', '斯坦纳树',
-        //             '最小树形图', '最小直径生成树', '最短路', '拆点', '差分约束', 'k 短路',
-        //             '同余最短路', '连通性相关', '2-SAT', '欧拉图', '哈密顿图', '二分图',
-        //             '最小环', '平面图', '图的着色', '网络流', 'Stoer-Wagner 算法',
-        //             '图的匹配', 'Prufer 序列', 'LGV 引理', '弦图', '最大团搜索算法',
-        //             '二维计算几何基础', '三维计算几何基础', '距离', 'Pick 定理', '三角剖分',
-        //             '凸包', '扫描线', '旋转卡壳', '半平面交', '平面最近点对', '随机增量法',
-        //             '反演变换', '计算几何杂项',
-        //             '离散化', '双指针', '离线算法', '分数规划', '随机化', '悬线法',
-        //             '计算理论基础', '字节顺序', '约瑟夫问题', '格雷码', '表达式求值',
-        //             '在一台机器上规划任务', '主元素问题', 'Garsia-Wachs 算法',
-        //             '15-puzzle', 'Kahan 求和', '珂朵莉树/颜色段均摊',
-        //             'RMQ', '并查集应用', '括号序列', '线段树与离线询问'
-        //         ];
-        //         this.colo = ['#FF69B4', '#ff6651', 'orange', '#FF00FF',
-        //             '#00FF7F', '#00BFFF', '#BA55D3'
-        //         ];
-        //         //获取body元素
-        //         this.elBody = document.getElementsByTagName("body")[0];
-        //         //初始化randomNum
-        //         this.randomNum = null;
-        //         //初始化字体inde
-        //         this.finde = 0;
-        //         //初始化className
-        //         this.cls = 0;
-        //     }
 
-        //     //定义初始化
-        //     ClickFrontShow.prototype.init = function(frontArray,
-        //         colorArray) {
-        //         //自定义颜色和字体
-        //         this.fron = frontArray || this.fron;
-        //         this.colo = colorArray || this.colo;
+                  const colors = ['#FF1461', '#18FF92', '#5A87FF', '#FBF38C'];
 
-        //         this.listenMouse();
-        //     }
+  
 
-        //     //创建文字
-        //     ClickFrontShow.prototype.createFront = function(classname) {
-        //         var self = this;
-        //         let ospan = document.createElement('span');
-        //         //设置样式
-        //         let cssText =
-        //             // "width: 100%; height: 100%; top: 0; left: 0; z-index: 99999; position: fixed;";
-        //             // "position:absolute; cursor: default; transform: translate(-50%,-50%); font-weight: bold; opacity: 1; z-index: 1000; transition: 1s;width: 100%; height: 100%;pointer-events: none;";
-        //             // "position:absolute; width: 40px; height: 20px; cursor: default; transform: translate(-50%,-50%); font-weight: bold; opacity: 1; z-index: 1000; transition: 1s;";
-        //             "position:fixed; width: 40px; height: 20px; cursor: default; transform: translate(-50%,-50%); font-weight: bold; opacity: 1; z-index: 1000; transition: 1s;";
-        //         //随机字体和颜色
-        //         let randomFront = self.fron[Math.round(Math
-        //             .random() * (self.fron.length - 1))];
-        //         let randomColor = self.colo[Math.round(Math
-        //             .random() * (self.colo.length - 1))];
-        //         //字体下标增1
-        //         self.finde = (self.finde + 1) % self.fron.length;
-        //         //向body中添加元素
-        //         self.elBody.appendChild(ospan);
-        //         //绑定一个classname
-        //         ospan.className = String(classname);
-        //         //添加样式
-        //         ospan.style.cssText = cssText +
-        //             "-moz-user-select: none;-webkit-user-select: none;-ms-user-select: none;user-select: none;"
-        //         ospan.style.color = randomColor;
-        //         ospan.innerHTML = randomFront;
-        //     }
+  document.addEventListener('click', (e) => {
+
+    const ripple = document.createElement('div');
+
+    ripple.className = 'ripple';
+
+    ripple.style.left = `${e.clientX}px`;
+
+    ripple.style.top = `${e.clientY}px`;
+
+    document.body.appendChild(ripple);
+
+    
+
+    // パーティクルを8個生成
+
+    for (let i = 0; i < 8; i++) {
+
+      const particle = document.createElement('div');
+
+      particle.className = 'particle';
+
+      particle.style.backgroundColor = colors[Math.floor(Math.random() * colors.length)];
+
+      particle.style.left = `${e.clientX - 4}px`;
+
+      particle.style.top = `${e.clientY - 4}px`;
+
+      
+
+      // アニメーションの初期設定
+
+      const angle = ((i * 45 + 22.5) * Math.PI) / 180;
+
+      const velocity = 2 + Math.random() * 2;
+
+      const startTime = performance.now();
+
+      
+
+      // アニメーション実行
+
+      const animate = (currentTime) => {
+
+        const progress = (currentTime - startTime) / 600;
+
+        
+
+        if (progress >= 1) {
+
+          particle.remove();
+
+          return;
+
+        }
+
+        
+
+        particle.style.left = `${e.clientX - 4 + Math.cos(angle) * velocity * progress * 20}px`;
+
+        particle.style.top = `${e.clientY - 4 + Math.sin(angle) * velocity * progress * 20}px`;
+
+        particle.style.opacity = 1 - progress;
+
+        particle.style.transform = `scale(${1 - progress})`;
+
+        
+
+        requestAnimationFrame(animate);
+
+      };
+
+      
+
+      document.body.appendChild(particle);
+
+      requestAnimationFrame(animate);
+
+    }
+
+    
+
+    // 600ms後に波紋を削除
+
+    setTimeout(() => ripple.remove(), 600);
+
+  });
+
+                </script>
+                     <!--    <script>
+        window.onload = (() => {
+            //定义点击出现文字类
+            function ClickFrontShow() {
+                //定义所需文字和颜色
+                this.fron = ['复杂度', '枚举', '模拟', '递归 & 分治', '贪心', '排序',
+                    '前缀和 & 差分', '二分', '倍增', '构造',
+                    'DFS（搜索）', 'BFS（搜索）', '双向搜索', '启发式搜索', 'A*',
+                    '迭代加深搜索', 'IDA*', '回溯法', 'Dancing Links',
+                    'Alpha-Beta 剪枝',
+                    '记忆化搜索', '背包 DP', '区间 DP', 'DAG 上的 DP', '树形 DP',
+                    '状压 DP', '数位 DP', '插头 DP', '计数 DP', '动态 DP',
+                    '概率 DP',
+                    '字符串匹配', '字符串哈希', '字典树 (Trie)', '前缀函数与 KMP 算法',
+                    'Boyer-Moore 算法', 'Z 函数（扩展 KMP）', '自动机',
+                    'AC 自动机', '后缀数组 (SA)', '后缀自动机 (SAM)', '后缀平衡树',
+                    '广义后缀自动机', '后缀树', 'Manacher', '回文树', '序列自动机',
+                    '最小表示法', 'Lyndon 分解', 'Main-Lorentz 算法',
+                    '符号', '进位制', '位运算', '二进制集合操作', '平衡三进制', '高精度计算',
+                    '快速幂', '置换和排列', '弧度制与坐标系', '复数', '数论',
+                    '多项式与生成函数', '组合数学', '线性代数', '线性规划', '群论', '概率论',
+                    '博弈论', '牛顿迭代法', '数值积分', '傅里叶-莫茨金消元法', '序理论',
+                    '杨氏矩阵', 'Schreier–Sims 算法',
+                    'Berlekamp-Massey 算法',
+                    '栈', '队列', '链表', '哈希表', '并查集', '堆', '块状数据结构',
+                    '单调栈', '单调队列', 'ST 表', '树状数组', '线段树', '李超线段树',
+                    '区间最值操作 & 区间历史最值', '划分树', '二叉搜索树 & 平衡树', '跳表',
+                    '可持久化数据结构', '树套树', 'K-D Tree', '动态树', '析合树',
+                    'PQ 树', '手指树', '霍夫曼树',
+                    '图论相关概念', '图的存储', 'DFS（图论）', 'BFS（图论）', '树上问题',
+                    '矩阵树定理', '有向无环图', '拓扑排序', '最小生成树', '斯坦纳树',
+                    '最小树形图', '最小直径生成树', '最短路', '拆点', '差分约束', 'k 短路',
+                    '同余最短路', '连通性相关', '2-SAT', '欧拉图', '哈密顿图', '二分图',
+                    '最小环', '平面图', '图的着色', '网络流', 'Stoer-Wagner 算法',
+                    '图的匹配', 'Prufer 序列', 'LGV 引理', '弦图', '最大团搜索算法',
+                    '二维计算几何基础', '三维计算几何基础', '距离', 'Pick 定理', '三角剖分',
+                    '凸包', '扫描线', '旋转卡壳', '半平面交', '平面最近点对', '随机增量法',
+                    '反演变换', '计算几何杂项',
+                    '离散化', '双指针', '离线算法', '分数规划', '随机化', '悬线法',
+                    '计算理论基础', '字节顺序', '约瑟夫问题', '格雷码', '表达式求值',
+                    '在一台机器上规划任务', '主元素问题', 'Garsia-Wachs 算法',
+                    '15-puzzle', 'Kahan 求和', '珂朵莉树/颜色段均摊',
+                    'RMQ', '并查集应用', '括号序列', '线段树与离线询问'
+                ];
+                this.colo = ['#FF69B4', '#ff6651', 'orange', '#FF00FF',
+                    '#00FF7F', '#00BFFF', '#BA55D3'
+                ];
+                //获取body元素
+                this.elBody = document.getElementsByTagName("body")[0];
+                //初始化randomNum
+                this.randomNum = null;
+                //初始化字体inde
+                this.finde = 0;
+                //初始化className
+                this.cls = 0;
+            }
+
+            //定义初始化
+            ClickFrontShow.prototype.init = function(frontArray,
+                colorArray) {
+                //自定义颜色和字体
+                this.fron = frontArray || this.fron;
+                this.colo = colorArray || this.colo;
+
+                this.listenMouse();
+            }
+
+            //创建文字
+            ClickFrontShow.prototype.createFront = function(classname) {
+                var self = this;
+                let ospan = document.createElement('span');
+                //设置样式
+                let cssText =
+                    // "width: 100%; height: 100%; top: 0; left: 0; z-index: 99999; position: fixed;";
+                    // "position:absolute; cursor: default; transform: translate(-50%,-50%); font-weight: bold; opacity: 1; z-index: 1000; transition: 1s;width: 100%; height: 100%;pointer-events: none;";
+                    // "position:absolute; width: 40px; height: 20px; cursor: default; transform: translate(-50%,-50%); font-weight: bold; opacity: 1; z-index: 1000; transition: 1s;";
+                    "position:fixed; width: 40px; height: 20px; cursor: default; transform: translate(-50%,-50%); font-weight: bold; opacity: 1; z-index: 1000; transition: 1s;";
+                //随机字体和颜色
+                let randomFront = self.fron[Math.round(Math
+                    .random() * (self.fron.length - 1))];
+                let randomColor = self.colo[Math.round(Math
+                    .random() * (self.colo.length - 1))];
+                //字体下标增1
+                self.finde = (self.finde + 1) % self.fron.length;
+                //向body中添加元素
+                self.elBody.appendChild(ospan);
+                //绑定一个classname
+                ospan.className = String(classname);
+                //添加样式
+                ospan.style.cssText = cssText +
+                    "-moz-user-select: none;-webkit-user-select: none;-ms-user-select: none;user-select: none;"
+                ospan.style.color = randomColor;
+                ospan.innerHTML = randomFront;
+            }
 
 
-        //     //监听鼠标点击
-        //     ClickFrontShow.prototype.listenMouse = function() {
-        //         var self = this;
+            //监听鼠标点击
+            ClickFrontShow.prototype.listenMouse = function() {
+                var self = this;
 
-        //         //鼠标点击事件
-        //         document.onclick = function(e) {
-        //             //避免classname值重复导致出现bug
-        //             if (self.cls === 20) {
-        //                 self.cls = 0;
-        //             } else {
-        //                 self.cls += 1;
-        //             }
-        //             //创建文字
-        //             self.createFront(self.cls);
-        //             let el = document.getElementsByClassName(
-        //                 self.cls)[0];
+                //鼠标点击事件
+                document.onclick = function(e) {
+                    //避免classname值重复导致出现bug
+                    if (self.cls === 20) {
+                        self.cls = 0;
+                    } else {
+                        self.cls += 1;
+                    }
+                    //创建文字
+                    self.createFront(self.cls);
+                    let el = document.getElementsByClassName(
+                        self.cls)[0];
 
-        //             //鼠标点击位置
+                    //鼠标点击位置
 
-        //             el.style.left = e.clientX + 'px';
-        //             el.style.top = e.clientY + 'px';
-        //             // alert('x: '+el.style.left+' y: '+el.style.top);
+                    el.style.left = e.clientX + 'px';
+                    el.style.top = e.clientY + 'px';
+                    // alert('x: '+el.style.left+' y: '+el.style.top);
 
-        //             //过时改变
-        //             setTimeout(function() {
-        //                 el.style.opacity = 0;
-        //                 el.style.top = el.offsetTop -
-        //                     100 + 'px';
-        //             }, 100);
-        //             //过时清除
-        //             setTimeout(function() {
-        //                 self.elBody.removeChild(el);
-        //             }, 2000);
-        //         }
-        //     }
-        //     //实例化
-        //     var frontShow = new ClickFrontShow();
-        //     //用户可在此传递参数，默认第一个参数是字体数组；
-        //     //第二个参数是颜色数组，必须是数组类型！
-        //     frontShow.init();
-        // })();
-                        </script>
+                    //过时改变
+                    setTimeout(function() {
+                        el.style.opacity = 0;
+                        el.style.top = el.offsetTop -
+                            100 + 'px';
+                    }, 100);
+                    //过时清除
+                    setTimeout(function() {
+                        self.elBody.removeChild(el);
+                    }, 2000);
+                }
+            }
+            //实例化
+            var frontShow = new ClickFrontShow();
+            //用户可在此传递参数，默认第一个参数是字体数组；
+            //第二个参数是颜色数组，必须是数组类型！
+            frontShow.init();
+        })();
+                        </script> -->
                     </footer>
                 </main>
             </div>

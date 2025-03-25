@@ -670,11 +670,12 @@
 		
 			
 				 题目翻译
-一个 n×mn×m 的网格，每个格子里有 11 个数，问对于所有相同的数，曼哈顿距离总和是多少？
-曼哈顿距离：ai1,j1ai1​,j1​​ 与 ai2,j2ai2​,j2​​ 距离为 ∣i1−i2∣+∣j1−j2∣∣i1​−i2​∣+∣j1​−j2​∣。
+一个 n×m 的网格，每个格子里有 1 个数，问对于所有相同的数，曼哈顿距离总和是多少？
+曼哈顿距离：ai1,j1 与 ai2,j2 距离为 ∣i1−i2∣+∣j1−j2∣。
  题目思路
-暴力搜一遍，肯定挂掉，n×mn×m 有 100000100000。
-...
+暴力搜一遍，肯定挂掉，n×m 有 100000。
+所以，我们对每种数进行分类，每一类再分成 x 轴的总距离求和加上 y 轴的总距离求和。
+这是蒟蒻我能...
 			
 		
 	</div>
@@ -738,10 +739,12 @@
 		
 			
 				 题目翻译
-我们对于 nn 个数 a1,a2,...,ana1​,a2​,...,an​，每个数可以选择标记为 Red 或 Blue。
-对于颜色 cc，Count(c) 表示颜色 cc 出现几次。
-对于颜色 cc，Sum(c) 表示标记为颜色 cc 的数字总和。
-问是否存在 Sum(Red) >> Sum(Blue) 且  Count(Red) <...
+我们对于 n 个数 a1,a2,...,an，每个数可以选择标记为 Red 或 Blue。
+对于颜色 c，Count(c) 表示颜色 c 出现几次。
+对于颜色 c，Sum(c) 表示标记为颜色 c 的数字总和。
+问是否存在 Sum(Red) > Sum(Blue) 且  Count(Red) <  Count(Blue)
+ 题目思路
+个...
 			
 		
 	</div>
@@ -805,17 +808,19 @@
 		
 			
 				 题目翻译
-给定一个 1010 进制数，将其转变成 −2−2 进制。
+给定一个 10 进制数，将其转变成 −2 进制。
  题目思路
 和二进制一样短除法。
 注意事项：
 
-特判数据 n=0n=0 ，不特判的话，它本身进入不了短除法代码，答案就没有记录
-任何位置上不可能出现 −1−1，要转成 11 输出。
+特判数据 n=0 ，不特判的话，它本身进入不了短除法代码，答案就没有记录
+任何位置上不可能出现 −1，要转成 1 输出。
 短除法倒着输出。
 
  题目代码
-void solve()//没加上快读快写、long long定义...
+void solve()//没加上快读快写、long long定义ll，防抄袭
+{
+	...
 			
 		
 	</div>
@@ -879,9 +884,10 @@ void solve()//没加上快读快写、long long定义...
 		
 			
 				 题目翻译
-我们定义对于所有 ii (3≤i≤n3≤i≤n)， pi−2+pi−1≠pipi−2​+pi−1​=pi​  这样的数列称之为 反斐波那契数列 ，给定一个 nn ，请输出 nn 个长度为 nn 的不同的反斐波那契数列。
+我们定义对于所有 i (3≤i≤n)， pi−2+pi−1≠pi  这样的数列称之为 反斐波那契数列 ，给定一个 n ，请输出 n 个长度为 n 的不同的反斐波那契数列。
  题目思路
-只要 pi−2pi−2​ 和 pi−1pi−1​ 中任意一个数大于 pipi​ ，那么肯定为反斐波那契数...
+只要 pi−2 和 pi−1 中任意一个数大于 pi ，那么肯定为反斐波那契数列。
+所以构造一个降序的数列，然后每次把最后一个数往前挪，肯定能构成一个反斐...
 			
 		
 	</div>
@@ -945,10 +951,11 @@ void solve()//没加上快读快写、long long定义...
 		
 			
 				 题目翻译
-输入一个字符串，可不可以在任意一位插入 AA，使这个字符串变为 AKIHABARA。
+输入一个字符串，可不可以在任意一位插入 A，使这个字符串变为 AKIHABARA。
  题目思路
-AKIHABARA 中只出现了 44 次 AA ，所以，我们枚举所有可能，每个位置都可以有 选 或 不选 两种可能，所以一共只有 2424 种可能，十分少。
-我们只要分别枚举 没有 AA、一个 AA、两个 AA、三个 AA、四个 AA 的情...
+AKIHABARA 中只出现了 4 次 A ，所以，我们枚举所有可能，每个位置都可以有 选 或 不选 两种可能，所以一共只有 24 种可能，十分少。
+我们只要分别枚举 没有 A、一个 A、两个 A、三个 A、四个 A 的情况即可。
+ 题目代码...
 			
 		
 	</div>
@@ -1012,19 +1019,19 @@ AKIHABARA 中只出现了 44 次 AA ，所以，我们枚举所有可能，每�
 		
 			
 				 题目翻译
-给定两个数 aa 和 bb ，求能同时整除 aa 和 bb 的数的个数，且这些数需要两两互质。
+给定两个数 a 和 b ，求能同时整除 a 和 b 的数的个数，且这些数需要两两互质。
  题目分析
 两两互质，也就说明有以下几种情况：
 
 均为不同的质数。
 相邻 。
 一个是质数，另一个不是他的倍数。
-所有数和 11。
+所有数和 1。
 相邻奇数
 较大数是质数。
 ……
 
-这是常见的情况，其实还有很多。那么我们肯定不能全写到程序里。我们只选择第 11...
+这是常见的情况，其实还有很多。那么我们肯定不能全写到程序里。我们只选择第 1 个性质：均...
 			
 		
 	</div>
@@ -1234,9 +1241,10 @@ AKIHABARA 中只出现了 44 次 AA ，所以，我们枚举所有可能，每�
 		
 			
 				 题目翻译
-A 和 B 两个人，在 n×mn×m 的教室找位置。A 想和 B 坐得近，B 想和 A 坐得远，由 A 先选位置，请问对于所有情况，A 与 B 之间的距离各是多少？
-补充：距离的定义为：ai1,j1ai1​,j1​​ 与 ai2,j2ai2​,j2​​ 距离为 ∣i1−i2∣+∣j1−j2∣∣i1​−i2​∣+∣j1​−j2​∣
- 题目...
+A 和 B 两个人，在 n×m 的教室找位置。A 想和 B 坐得近，B 想和 A 坐得远，由 A 先选位置，请问对于所有情况，A 与 B 之间的距离各是多少？
+补充：距离的定义为：ai1,j1 与 ai2,j2 距离为 ∣i1−i2∣+∣j1−j2∣
+ 题目思路
+A 会选什么位置，我们不用考虑，因为题目求所有情况，不是最优或最坏，所以只...
 			
 		
 	</div>
@@ -1300,10 +1308,10 @@ A 和 B 两个人，在 n×mn×m 的教室找位置。A 想和 B 坐得近，B �
 		
 			
 				 题目翻译：
-有 n×nn×n 大小的棋盘，一共放 kk 辆车，使得这个棋盘稳定。
-稳定的概念是：所有的车移动至相邻四格（上下左右）不会出现一行一列有 ≥2≥2 辆车。
+有 n×n 大小的棋盘，一共放 k 辆车，使得这个棋盘稳定。
+稳定的概念是：所有的车移动至相邻四格（上下左右）不会出现一行一列有 ≥2 辆车。
  做题思路:
-我们可以考虑，移动之后没有同一行一列有多辆车，那么就让它移动之后还是只有它一辆车，换句话说，每辆车之间至少空一行和一列，也就是在对角线上放是最优想法。如果对角线放不下...
+我们可以考虑，移动之后没有同一行一列有多辆车，那么就让它移动之后还是只有它一辆车，换句话说，每辆车之间至少空一行和一列，也就是在对角线上放是最优想法。如果对角线放不下 k 辆车了...
 			
 		
 	</div>
@@ -1341,144 +1349,271 @@ A 和 B 两个人，在 n×mn×m 的教室找位置。A 想和 B 坐得近，B �
                             } 
                         setInterval("createtime()",250);
                         </script>
+                        <style>
+                            .particle {
+  position: fixed;
+  pointer-events: none;
+  background-color: currentColor;
+  border-radius: 50%;
+  width: 10px;
+  height: 10px;
+}
+
+.ripple {
+  position: fixed;
+  border-radius: 50%;
+  pointer-events: none;
+  border: 2px solid rgba(255, 20, 97, 0.8);
+  transform: translate(-50%, -50%);
+  animation: ripple-effect 0.6s ease-out forwards;
+}
+
+@keyframes ripple-effect {
+  0% {
+    width: 0;
+    height: 0;
+    opacity: 0.5;
+  }
+  100% {
+    width: 50px;
+    height: 50px;
+    opacity: 0;
+  }
+}
+                        </style>
                         <script>
-        // window.onload = (() => {
-        //     //定义点击出现文字类
-        //     function ClickFrontShow() {
-        //         //定义所需文字和颜色
-        //         this.fron = ['复杂度', '枚举', '模拟', '递归 & 分治', '贪心', '排序',
-        //             '前缀和 & 差分', '二分', '倍增', '构造',
-        //             'DFS（搜索）', 'BFS（搜索）', '双向搜索', '启发式搜索', 'A*',
-        //             '迭代加深搜索', 'IDA*', '回溯法', 'Dancing Links',
-        //             'Alpha-Beta 剪枝',
-        //             '记忆化搜索', '背包 DP', '区间 DP', 'DAG 上的 DP', '树形 DP',
-        //             '状压 DP', '数位 DP', '插头 DP', '计数 DP', '动态 DP',
-        //             '概率 DP',
-        //             '字符串匹配', '字符串哈希', '字典树 (Trie)', '前缀函数与 KMP 算法',
-        //             'Boyer-Moore 算法', 'Z 函数（扩展 KMP）', '自动机',
-        //             'AC 自动机', '后缀数组 (SA)', '后缀自动机 (SAM)', '后缀平衡树',
-        //             '广义后缀自动机', '后缀树', 'Manacher', '回文树', '序列自动机',
-        //             '最小表示法', 'Lyndon 分解', 'Main-Lorentz 算法',
-        //             '符号', '进位制', '位运算', '二进制集合操作', '平衡三进制', '高精度计算',
-        //             '快速幂', '置换和排列', '弧度制与坐标系', '复数', '数论',
-        //             '多项式与生成函数', '组合数学', '线性代数', '线性规划', '群论', '概率论',
-        //             '博弈论', '牛顿迭代法', '数值积分', '傅里叶-莫茨金消元法', '序理论',
-        //             '杨氏矩阵', 'Schreier–Sims 算法',
-        //             'Berlekamp-Massey 算法',
-        //             '栈', '队列', '链表', '哈希表', '并查集', '堆', '块状数据结构',
-        //             '单调栈', '单调队列', 'ST 表', '树状数组', '线段树', '李超线段树',
-        //             '区间最值操作 & 区间历史最值', '划分树', '二叉搜索树 & 平衡树', '跳表',
-        //             '可持久化数据结构', '树套树', 'K-D Tree', '动态树', '析合树',
-        //             'PQ 树', '手指树', '霍夫曼树',
-        //             '图论相关概念', '图的存储', 'DFS（图论）', 'BFS（图论）', '树上问题',
-        //             '矩阵树定理', '有向无环图', '拓扑排序', '最小生成树', '斯坦纳树',
-        //             '最小树形图', '最小直径生成树', '最短路', '拆点', '差分约束', 'k 短路',
-        //             '同余最短路', '连通性相关', '2-SAT', '欧拉图', '哈密顿图', '二分图',
-        //             '最小环', '平面图', '图的着色', '网络流', 'Stoer-Wagner 算法',
-        //             '图的匹配', 'Prufer 序列', 'LGV 引理', '弦图', '最大团搜索算法',
-        //             '二维计算几何基础', '三维计算几何基础', '距离', 'Pick 定理', '三角剖分',
-        //             '凸包', '扫描线', '旋转卡壳', '半平面交', '平面最近点对', '随机增量法',
-        //             '反演变换', '计算几何杂项',
-        //             '离散化', '双指针', '离线算法', '分数规划', '随机化', '悬线法',
-        //             '计算理论基础', '字节顺序', '约瑟夫问题', '格雷码', '表达式求值',
-        //             '在一台机器上规划任务', '主元素问题', 'Garsia-Wachs 算法',
-        //             '15-puzzle', 'Kahan 求和', '珂朵莉树/颜色段均摊',
-        //             'RMQ', '并查集应用', '括号序列', '线段树与离线询问'
-        //         ];
-        //         this.colo = ['#FF69B4', '#ff6651', 'orange', '#FF00FF',
-        //             '#00FF7F', '#00BFFF', '#BA55D3'
-        //         ];
-        //         //获取body元素
-        //         this.elBody = document.getElementsByTagName("body")[0];
-        //         //初始化randomNum
-        //         this.randomNum = null;
-        //         //初始化字体inde
-        //         this.finde = 0;
-        //         //初始化className
-        //         this.cls = 0;
-        //     }
 
-        //     //定义初始化
-        //     ClickFrontShow.prototype.init = function(frontArray,
-        //         colorArray) {
-        //         //自定义颜色和字体
-        //         this.fron = frontArray || this.fron;
-        //         this.colo = colorArray || this.colo;
+                  const colors = ['#FF1461', '#18FF92', '#5A87FF', '#FBF38C'];
 
-        //         this.listenMouse();
-        //     }
+  
 
-        //     //创建文字
-        //     ClickFrontShow.prototype.createFront = function(classname) {
-        //         var self = this;
-        //         let ospan = document.createElement('span');
-        //         //设置样式
-        //         let cssText =
-        //             // "width: 100%; height: 100%; top: 0; left: 0; z-index: 99999; position: fixed;";
-        //             // "position:absolute; cursor: default; transform: translate(-50%,-50%); font-weight: bold; opacity: 1; z-index: 1000; transition: 1s;width: 100%; height: 100%;pointer-events: none;";
-        //             // "position:absolute; width: 40px; height: 20px; cursor: default; transform: translate(-50%,-50%); font-weight: bold; opacity: 1; z-index: 1000; transition: 1s;";
-        //             "position:fixed; width: 40px; height: 20px; cursor: default; transform: translate(-50%,-50%); font-weight: bold; opacity: 1; z-index: 1000; transition: 1s;";
-        //         //随机字体和颜色
-        //         let randomFront = self.fron[Math.round(Math
-        //             .random() * (self.fron.length - 1))];
-        //         let randomColor = self.colo[Math.round(Math
-        //             .random() * (self.colo.length - 1))];
-        //         //字体下标增1
-        //         self.finde = (self.finde + 1) % self.fron.length;
-        //         //向body中添加元素
-        //         self.elBody.appendChild(ospan);
-        //         //绑定一个classname
-        //         ospan.className = String(classname);
-        //         //添加样式
-        //         ospan.style.cssText = cssText +
-        //             "-moz-user-select: none;-webkit-user-select: none;-ms-user-select: none;user-select: none;"
-        //         ospan.style.color = randomColor;
-        //         ospan.innerHTML = randomFront;
-        //     }
+  document.addEventListener('click', (e) => {
+
+    const ripple = document.createElement('div');
+
+    ripple.className = 'ripple';
+
+    ripple.style.left = `${e.clientX}px`;
+
+    ripple.style.top = `${e.clientY}px`;
+
+    document.body.appendChild(ripple);
+
+    
+
+    // パーティクルを8個生成
+
+    for (let i = 0; i < 8; i++) {
+
+      const particle = document.createElement('div');
+
+      particle.className = 'particle';
+
+      particle.style.backgroundColor = colors[Math.floor(Math.random() * colors.length)];
+
+      particle.style.left = `${e.clientX - 4}px`;
+
+      particle.style.top = `${e.clientY - 4}px`;
+
+      
+
+      // アニメーションの初期設定
+
+      const angle = ((i * 45 + 22.5) * Math.PI) / 180;
+
+      const velocity = 2 + Math.random() * 2;
+
+      const startTime = performance.now();
+
+      
+
+      // アニメーション実行
+
+      const animate = (currentTime) => {
+
+        const progress = (currentTime - startTime) / 600;
+
+        
+
+        if (progress >= 1) {
+
+          particle.remove();
+
+          return;
+
+        }
+
+        
+
+        particle.style.left = `${e.clientX - 4 + Math.cos(angle) * velocity * progress * 20}px`;
+
+        particle.style.top = `${e.clientY - 4 + Math.sin(angle) * velocity * progress * 20}px`;
+
+        particle.style.opacity = 1 - progress;
+
+        particle.style.transform = `scale(${1 - progress})`;
+
+        
+
+        requestAnimationFrame(animate);
+
+      };
+
+      
+
+      document.body.appendChild(particle);
+
+      requestAnimationFrame(animate);
+
+    }
+
+    
+
+    // 600ms後に波紋を削除
+
+    setTimeout(() => ripple.remove(), 600);
+
+  });
+
+                </script>
+                     <!--    <script>
+        window.onload = (() => {
+            //定义点击出现文字类
+            function ClickFrontShow() {
+                //定义所需文字和颜色
+                this.fron = ['复杂度', '枚举', '模拟', '递归 & 分治', '贪心', '排序',
+                    '前缀和 & 差分', '二分', '倍增', '构造',
+                    'DFS（搜索）', 'BFS（搜索）', '双向搜索', '启发式搜索', 'A*',
+                    '迭代加深搜索', 'IDA*', '回溯法', 'Dancing Links',
+                    'Alpha-Beta 剪枝',
+                    '记忆化搜索', '背包 DP', '区间 DP', 'DAG 上的 DP', '树形 DP',
+                    '状压 DP', '数位 DP', '插头 DP', '计数 DP', '动态 DP',
+                    '概率 DP',
+                    '字符串匹配', '字符串哈希', '字典树 (Trie)', '前缀函数与 KMP 算法',
+                    'Boyer-Moore 算法', 'Z 函数（扩展 KMP）', '自动机',
+                    'AC 自动机', '后缀数组 (SA)', '后缀自动机 (SAM)', '后缀平衡树',
+                    '广义后缀自动机', '后缀树', 'Manacher', '回文树', '序列自动机',
+                    '最小表示法', 'Lyndon 分解', 'Main-Lorentz 算法',
+                    '符号', '进位制', '位运算', '二进制集合操作', '平衡三进制', '高精度计算',
+                    '快速幂', '置换和排列', '弧度制与坐标系', '复数', '数论',
+                    '多项式与生成函数', '组合数学', '线性代数', '线性规划', '群论', '概率论',
+                    '博弈论', '牛顿迭代法', '数值积分', '傅里叶-莫茨金消元法', '序理论',
+                    '杨氏矩阵', 'Schreier–Sims 算法',
+                    'Berlekamp-Massey 算法',
+                    '栈', '队列', '链表', '哈希表', '并查集', '堆', '块状数据结构',
+                    '单调栈', '单调队列', 'ST 表', '树状数组', '线段树', '李超线段树',
+                    '区间最值操作 & 区间历史最值', '划分树', '二叉搜索树 & 平衡树', '跳表',
+                    '可持久化数据结构', '树套树', 'K-D Tree', '动态树', '析合树',
+                    'PQ 树', '手指树', '霍夫曼树',
+                    '图论相关概念', '图的存储', 'DFS（图论）', 'BFS（图论）', '树上问题',
+                    '矩阵树定理', '有向无环图', '拓扑排序', '最小生成树', '斯坦纳树',
+                    '最小树形图', '最小直径生成树', '最短路', '拆点', '差分约束', 'k 短路',
+                    '同余最短路', '连通性相关', '2-SAT', '欧拉图', '哈密顿图', '二分图',
+                    '最小环', '平面图', '图的着色', '网络流', 'Stoer-Wagner 算法',
+                    '图的匹配', 'Prufer 序列', 'LGV 引理', '弦图', '最大团搜索算法',
+                    '二维计算几何基础', '三维计算几何基础', '距离', 'Pick 定理', '三角剖分',
+                    '凸包', '扫描线', '旋转卡壳', '半平面交', '平面最近点对', '随机增量法',
+                    '反演变换', '计算几何杂项',
+                    '离散化', '双指针', '离线算法', '分数规划', '随机化', '悬线法',
+                    '计算理论基础', '字节顺序', '约瑟夫问题', '格雷码', '表达式求值',
+                    '在一台机器上规划任务', '主元素问题', 'Garsia-Wachs 算法',
+                    '15-puzzle', 'Kahan 求和', '珂朵莉树/颜色段均摊',
+                    'RMQ', '并查集应用', '括号序列', '线段树与离线询问'
+                ];
+                this.colo = ['#FF69B4', '#ff6651', 'orange', '#FF00FF',
+                    '#00FF7F', '#00BFFF', '#BA55D3'
+                ];
+                //获取body元素
+                this.elBody = document.getElementsByTagName("body")[0];
+                //初始化randomNum
+                this.randomNum = null;
+                //初始化字体inde
+                this.finde = 0;
+                //初始化className
+                this.cls = 0;
+            }
+
+            //定义初始化
+            ClickFrontShow.prototype.init = function(frontArray,
+                colorArray) {
+                //自定义颜色和字体
+                this.fron = frontArray || this.fron;
+                this.colo = colorArray || this.colo;
+
+                this.listenMouse();
+            }
+
+            //创建文字
+            ClickFrontShow.prototype.createFront = function(classname) {
+                var self = this;
+                let ospan = document.createElement('span');
+                //设置样式
+                let cssText =
+                    // "width: 100%; height: 100%; top: 0; left: 0; z-index: 99999; position: fixed;";
+                    // "position:absolute; cursor: default; transform: translate(-50%,-50%); font-weight: bold; opacity: 1; z-index: 1000; transition: 1s;width: 100%; height: 100%;pointer-events: none;";
+                    // "position:absolute; width: 40px; height: 20px; cursor: default; transform: translate(-50%,-50%); font-weight: bold; opacity: 1; z-index: 1000; transition: 1s;";
+                    "position:fixed; width: 40px; height: 20px; cursor: default; transform: translate(-50%,-50%); font-weight: bold; opacity: 1; z-index: 1000; transition: 1s;";
+                //随机字体和颜色
+                let randomFront = self.fron[Math.round(Math
+                    .random() * (self.fron.length - 1))];
+                let randomColor = self.colo[Math.round(Math
+                    .random() * (self.colo.length - 1))];
+                //字体下标增1
+                self.finde = (self.finde + 1) % self.fron.length;
+                //向body中添加元素
+                self.elBody.appendChild(ospan);
+                //绑定一个classname
+                ospan.className = String(classname);
+                //添加样式
+                ospan.style.cssText = cssText +
+                    "-moz-user-select: none;-webkit-user-select: none;-ms-user-select: none;user-select: none;"
+                ospan.style.color = randomColor;
+                ospan.innerHTML = randomFront;
+            }
 
 
-        //     //监听鼠标点击
-        //     ClickFrontShow.prototype.listenMouse = function() {
-        //         var self = this;
+            //监听鼠标点击
+            ClickFrontShow.prototype.listenMouse = function() {
+                var self = this;
 
-        //         //鼠标点击事件
-        //         document.onclick = function(e) {
-        //             //避免classname值重复导致出现bug
-        //             if (self.cls === 20) {
-        //                 self.cls = 0;
-        //             } else {
-        //                 self.cls += 1;
-        //             }
-        //             //创建文字
-        //             self.createFront(self.cls);
-        //             let el = document.getElementsByClassName(
-        //                 self.cls)[0];
+                //鼠标点击事件
+                document.onclick = function(e) {
+                    //避免classname值重复导致出现bug
+                    if (self.cls === 20) {
+                        self.cls = 0;
+                    } else {
+                        self.cls += 1;
+                    }
+                    //创建文字
+                    self.createFront(self.cls);
+                    let el = document.getElementsByClassName(
+                        self.cls)[0];
 
-        //             //鼠标点击位置
+                    //鼠标点击位置
 
-        //             el.style.left = e.clientX + 'px';
-        //             el.style.top = e.clientY + 'px';
-        //             // alert('x: '+el.style.left+' y: '+el.style.top);
+                    el.style.left = e.clientX + 'px';
+                    el.style.top = e.clientY + 'px';
+                    // alert('x: '+el.style.left+' y: '+el.style.top);
 
-        //             //过时改变
-        //             setTimeout(function() {
-        //                 el.style.opacity = 0;
-        //                 el.style.top = el.offsetTop -
-        //                     100 + 'px';
-        //             }, 100);
-        //             //过时清除
-        //             setTimeout(function() {
-        //                 self.elBody.removeChild(el);
-        //             }, 2000);
-        //         }
-        //     }
-        //     //实例化
-        //     var frontShow = new ClickFrontShow();
-        //     //用户可在此传递参数，默认第一个参数是字体数组；
-        //     //第二个参数是颜色数组，必须是数组类型！
-        //     frontShow.init();
-        // })();
-                        </script>
+                    //过时改变
+                    setTimeout(function() {
+                        el.style.opacity = 0;
+                        el.style.top = el.offsetTop -
+                            100 + 'px';
+                    }, 100);
+                    //过时清除
+                    setTimeout(function() {
+                        self.elBody.removeChild(el);
+                    }, 2000);
+                }
+            }
+            //实例化
+            var frontShow = new ClickFrontShow();
+            //用户可在此传递参数，默认第一个参数是字体数组；
+            //第二个参数是颜色数组，必须是数组类型！
+            frontShow.init();
+        })();
+                        </script> -->
                     </footer>
                 </main>
             </div>
