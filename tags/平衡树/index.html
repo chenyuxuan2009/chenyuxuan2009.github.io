@@ -664,10 +664,10 @@
 		
 			
 				 P11784 「FAOI-R4」问题跳转
-按题意模拟即可，如果这是纯数字题号把省略的 P 加回去，之后加上 https://www.luogu.com.cn/problem/ 输出。
+按题意模拟即可，如果这是纯数字题号把省略的 PP 加回去，之后加上 https://www.luogu.com.cn/problem/ 输出。
 https://www.luogu.com.cn/record/204246956
 #include <bits/stdc++.h>
-using namespace...
+using namespac...
 			
 		
 	</div>
@@ -735,11 +735,11 @@ using namespace...
 	<div class="post-content">
 		
 			
-				考虑离线操作。用 FHQ-Treap 维护，这样拓展成 O(n+q) 长度的序列，单点修改。删除就是相当于改为 0。
-平衡树节点打上 del 标记表示这个节点是否被删除。
+				考虑离线操作。用 FHQ-Treap 维护，这样拓展成 O(n+q)O(n+q) 长度的序列，单点修改。删除就是相当于改为 00。
+平衡树节点打上 deldel 标记表示这个节点是否被删除。
 直接 split 出来可能找不到合法点，是一个删除的点。再写一个 find 用来找合法点。
 之后对平衡树做中序遍历搜一遍，时间戳即为对应点在新序列的编号。
-平衡树 val 值填这...
+平...
 			
 		
 	</div>

@@ -664,16 +664,9 @@
 		
 			
 				 题意
-定义 f(l,r)=min⁡i∈[l,r]aiOR⁡max⁡i∈[l,r]ain。
-求 ⨁i=1n⨁j=inf(i,j)。其中 ⊕ 是按位异或，OR⁡ 是按位或。
-1≤n≤106，1≤ai≤1018，保证 ai 互不相同。
- 做法
-考虑分治。
-分治之后分最小值最大值在哪一侧进行讨论。
-
-
-若最大值最小值在同一侧
-不妨认为都在左侧。枚举左侧的...
+定义 f(l,r)=min⁡i∈[l,r]aiOR⁡max⁡i∈[l,r]ainf(l,r)=i∈[l,r]min​ai​ORi∈[l,r]max​ai​n。
+求 ⨁i=1n⨁j=inf(i,j)i=1⨁n​j=i⨁n​f(i,j)。其中 ⊕⊕ 是按位异或，OR⁡OR 是按位或。
+1≤n≤1061≤n≤106，1≤ai≤10181≤ai​≤...
 			
 		
 	</div>

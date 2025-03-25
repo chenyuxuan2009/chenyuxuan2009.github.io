@@ -665,14 +665,14 @@
 		
 			
 				 题目翻译
-问当前字符后的第一个 g 与它的距离最大是多少。
+问当前字符后的第一个 gg 与它的距离最大是多少。
 当前字符可能有很多个。
  题目思路
 我们把目前找到的当前字符的位置记录下来，找到最早的，记录一下时间差，取个最大。
 但显然我们不能对每一个去找，必须几个打包一找。
 我用 queue 模拟题意，详情见代码。
-由于当前的可能要到下一个循环才能看见 g，所以要循环两次。
-时间复杂度 O(n)。...
+由于当前的可能要到下一个循环才能看见 gg，所以要循环两次。
+时间复杂度 O(n...
 			
 		
 	</div>
@@ -735,8 +735,8 @@
 	<div class="post-content">
 		
 			
-				题意很明确了，大意就是一棵树，染色，距离 ≤2 不得染同色，问染色方案。
-首先我们要明确，距离 ≤2，具体是什么情况呢？
+				题意很明确了，大意就是一棵树，染色，距离 ≤2≤2 不得染同色，问染色方案。
+首先我们要明确，距离 ≤2≤2，具体是什么情况呢？
 显然，分两个大类：
 
 
@@ -753,9 +753,9 @@
 
 
 
-那么我们就梳理出了 3 中不能涂同一种颜色的情况。
+那么我们就梳理出了 33 中不能涂同一种颜色的情况。
 读到这里，我想应该正解慢慢出来了。
-其次我们要知道，总染...
+其次我们要...
 			
 		
 	</div>
@@ -824,13 +824,13 @@
 		
 			
 				 赛后感言
-本来能 400 pts 的，T3 边界写错扣十分，这个问题不大，加个判断就过了。T4 真的扣的分真伤，打错了两个数字废了。
+本来能 400 pts400 pts 的，T3 边界写错扣十分，这个问题不大，加个判断就过了。T4 真的扣的分真伤，打错了两个数字废了。
 痛失 U 盘！
 比赛点评：一道送分一道板，一道模拟一道原。
  四则混合运算
 题目很简单，扫描两遍字符串，第一遍处理乘除符号，第二遍处理加减符号。
-时间复杂度 O(∣S∣)。
-插一句题外话，像这种题最好不要偷懒在字符...
+时间复杂度 O(∣S∣)O(∣S∣)。
+插一句题外话，...
 			
 		
 	</div>
@@ -972,11 +972,11 @@ using na...
 			
 				 沙漠旅行
 一道最短路模板。
-q.push(make_pair(dis[v],v)); 写成 q.push(make_pair(w,v)); 痛失 80pts。
+q.push(make_pair(dis[v],v)); 写成 q.push(make_pair(w,v)); 痛失 80pts80pts。
 
-上述的时间复杂度是带 log⁡ 的，光 O(nm) 过不了，要堆优化。
-在看完 std 的思路后焕然大悟，若全是边权为 1，bfs 跑一下即可。
-这里边权最多为 2，拆成 2 条边就好了...
+上述的时间复杂度是带 log⁡log 的，光 O(nm)O(nm) 过不了，要堆优化。
+在看完 std 的思路后焕然大悟，若全是边权为 11，bfs 跑一下即可。
+这里边权最多...
 			
 		
 	</div>
@@ -1045,14 +1045,14 @@ q.push(make_pair(dis[v],v)); 写成 q.push(make_pair(w,v)); 痛失 80pts。
 		
 			
 				 智商测试
-题目数据有点小问题，t≤6000。
+题目数据有点小问题，t≤6000t≤6000。
 但问题不大。
 首先最暴力的办法是枚举每个时间点，模拟题意。
 我就这么做的。
-复杂度 O(t) 可以接受。
+复杂度 O(t)O(t) 可以接受。
 其次，如果有吊打我的实力能写数学办法，那就是确定行确定列，随便写写。
-printf("%d %d\n",t/n%n+1,t%n+1); 即可，复杂度 O(1)。
-#include<bits/std...
+printf("%d %d\n",t/n%n+1,t%n+1); 即可，复杂度 O(1)O(1)。
+#in...
 			
 		
 	</div>
@@ -1129,10 +1129,9 @@ printf("%d %d\n",t/n%n+1,t%n+1); 即可，复杂度 O(1)。
 CSP-J 模拟赛教练放的一道原题，赛时 AC 了听同学说洛谷有，回来写题解。
  题目思路
  如何找到正方形的四个顶点
-最简单的最容易思考到的方法：O(n4) 或 O(n3) 枚举四个顶点。
-但由于 n≤3000，肯定超时，复杂度肯定要控制在 O(n2) 左右。
-O(n2) 意味着枚举两个点，我们来观察一下这两个点与另外两个点的位置关系。
-...
+最简单的最容易思考到的方法：O(n4)O(n4) 或 O(n3)O(n3) 枚举四个顶点。
+但由于 n≤3000n≤3000，肯定超时，复杂度肯定要控制在 O(n2)O(n2) 左右。
+O(n2)O(n2) 意味着枚举两个...
 			
 		
 	</div>
@@ -1228,6 +1227,86 @@ struct node
 	<article class="post card bg-white shadow-sm border-0 post-preview">
 	<header class="post-header text-center">
 		
+		<a class="post-title" href="/archives/20220812_mock/">[题解] 20220812 | CSP2022 考前模拟赛 做题笔记</a>
+		<div class="post-meta">
+			
+						
+						<div class="post-meta-detail post-meta-detail-time">
+							<i class="fa fa-clock-o" aria-hidden="true"></i>
+							<time title="发布于 2022-8-23 19:52:00 | 编辑于 2025-2-12 21:23:46">2022-8-23 19:52
+							</time>
+						</div>
+					
+						
+							<div class="post-meta-devide">|</div>
+						
+						<div class="post-meta-detail post-meta-detail-categories">
+							<i class="fa fa-bookmark-o" aria-hidden="true"></i>
+							<a class="post-meta-detail-catagory-link" href="/categories/Solution/">Solution</a>
+						</div>
+					
+						
+							<div class="post-meta-devide">|</div>
+						
+						<div class="post-meta-detail post-meta-detail-words">
+							<i class="fa fa-book" aria-hidden="true"></i>
+							<span id="busuanzi_container_page_pv">
+								阅读 <span id="busuanzi_value_page_pv"></span> 次
+							</span>
+						</div>
+					
+						
+							<div class="post-meta-devide">|</div>
+						
+						<div class="post-meta-detail post-meta-detail-words">
+							<i class="fa fa-file-word-o" aria-hidden="true"></i>
+							3.7k 字
+						</div>
+					
+						
+							<div class="post-meta-devide">|</div>
+						
+						<div class="post-meta-detail post-meta-detail-readingtime">
+							<i class="fa fa-hourglass-end" aria-hidden="true"></i>
+							21 分钟
+						</div>
+					
+		</div>
+		
+	</header>
+
+	<div class="post-content">
+		
+			
+				呜呜呜卞宇轩等巨佬出的太毒瘤了呜呜呜
+ cube
+模拟。
+真就模拟。
+好好想咋模拟。
+不然和我一样瞎写。
+我瞎写写了 7 KB7 KB 的模拟。
+我太菜了只会这种一点一点转。
+不像 爬不？立刻！ 巨佬一样 5 min5 min 爆切。
+#include<bits/stdc++.h>
+using namespace std;
+int t;
+int a...
+			
+		
+	</div>
+
+	
+		<div class="post-tags">
+			<i class="fa fa-tags" aria-hidden="true"></i>
+			<a class="tag badge badge-secondary post-meta-detail-tag -none-link" href="/tags/%E6%A8%A1%E6%8B%9F%E8%B5%9B/" rel="tag">模拟赛</a>
+		</div>
+	
+</article>
+
+
+	<article class="post card bg-white shadow-sm border-0 post-preview">
+	<header class="post-header text-center">
+		
 		<a class="post-title" href="/archives/20220819_mock/">[题解] 20220819 | CSP2022 考前模拟赛 做题笔记</a>
 		<div class="post-meta">
 			
@@ -1287,87 +1366,6 @@ struct node
 #define endl '\n'
 #define S(x) scanf("%lld",&x);
 #define...
-			
-		
-	</div>
-
-	
-		<div class="post-tags">
-			<i class="fa fa-tags" aria-hidden="true"></i>
-			<a class="tag badge badge-secondary post-meta-detail-tag -none-link" href="/tags/%E6%A8%A1%E6%8B%9F%E8%B5%9B/" rel="tag">模拟赛</a>
-		</div>
-	
-</article>
-
-
-	<article class="post card bg-white shadow-sm border-0 post-preview">
-	<header class="post-header text-center">
-		
-		<a class="post-title" href="/archives/20220812_mock/">[题解] 20220812 | CSP2022 考前模拟赛 做题笔记</a>
-		<div class="post-meta">
-			
-						
-						<div class="post-meta-detail post-meta-detail-time">
-							<i class="fa fa-clock-o" aria-hidden="true"></i>
-							<time title="发布于 2022-8-23 19:52:00 | 编辑于 2025-2-12 21:23:46">2022-8-23 19:52
-							</time>
-						</div>
-					
-						
-							<div class="post-meta-devide">|</div>
-						
-						<div class="post-meta-detail post-meta-detail-categories">
-							<i class="fa fa-bookmark-o" aria-hidden="true"></i>
-							<a class="post-meta-detail-catagory-link" href="/categories/Solution/">Solution</a>
-						</div>
-					
-						
-							<div class="post-meta-devide">|</div>
-						
-						<div class="post-meta-detail post-meta-detail-words">
-							<i class="fa fa-book" aria-hidden="true"></i>
-							<span id="busuanzi_container_page_pv">
-								阅读 <span id="busuanzi_value_page_pv"></span> 次
-							</span>
-						</div>
-					
-						
-							<div class="post-meta-devide">|</div>
-						
-						<div class="post-meta-detail post-meta-detail-words">
-							<i class="fa fa-file-word-o" aria-hidden="true"></i>
-							3.7k 字
-						</div>
-					
-						
-							<div class="post-meta-devide">|</div>
-						
-						<div class="post-meta-detail post-meta-detail-readingtime">
-							<i class="fa fa-hourglass-end" aria-hidden="true"></i>
-							21 分钟
-						</div>
-					
-		</div>
-		
-	</header>
-
-	<div class="post-content">
-		
-			
-				呜呜呜卞宇轩等巨佬出的太毒瘤了呜呜呜
- cube
-模拟。
-真就模拟。
-好好想咋模拟。
-不然和我一样瞎写。
-我瞎写写了 7 KB 的模拟。
-我太菜了只会这种一点一点转。
-不像 爬不？立刻！ 巨佬一样 5 min 爆切。
-#include<bits/stdc++.h>
-using namespace std;
-int t;
-int a[130];
-bo...
 			
 		
 	</div>
