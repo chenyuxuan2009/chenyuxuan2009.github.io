@@ -15,11 +15,43 @@
     <atom:link href="http://blog.cyx2009.top/rss2.xml" rel="self" type="application/rss+xml"/>
     
     <description>沉石鱼惊旋 的博客</description>
-    <pubDate>Mon, 24 Mar 2025 12:56:14 GMT</pubDate>
+    <pubDate>Tue, 25 Mar 2025 02:52:17 GMT</pubDate>
     <generator>http://hexo.io/</generator>
     
     <item>
-      <title>[题解] [模拟赛 20250320] [KTSC 2025] 可爱区间 / maxsum</title>
+      <title>[题解] [模拟赛 20250325] P11948 [KTSC 2025] 路网维修 / roadwork</title>
+      <link>http://blog.cyx2009.top/archives/P11948/</link>
+      <guid>http://blog.cyx2009.top/archives/P11948/</guid>
+      <pubDate>Tue, 25 Mar 2025 02:19:00 GMT</pubDate>
+      
+        
+        
+          
+          
+      <description>&lt;h1 id=&quot;题意&quot;&gt;&lt;a class=&quot;markdownIt-Anchor&quot; href=&quot;#题意&quot;&gt;&lt;/a&gt; 题意&lt;/h1&gt;
+&lt;p&gt;给定 &lt;span class=&quot;katex&quot;&gt;&lt;span class=&quot;katex-mathml&quot;&gt;&lt;math</description>
+          
+        
+      
+      
+      
+      
+      <category domain="http://blog.cyx2009.top/categories/Solution/">Solution</category>
+      
+      
+      <category domain="http://blog.cyx2009.top/tags/%E6%A8%A1%E6%8B%9F%E8%B5%9B/">模拟赛</category>
+      
+      <category domain="http://blog.cyx2009.top/tags/%E5%8A%A8%E6%80%81%E8%A7%84%E5%88%92/">动态规划</category>
+      
+      <category domain="http://blog.cyx2009.top/tags/%E4%B9%B1%E6%90%9E/">乱搞</category>
+      
+      
+      <comments>http://blog.cyx2009.top/archives/P11948/#disqus_thread</comments>
+      
+    </item>
+    
+    <item>
+      <title>[题解] [模拟赛 20250320] P11947 [KTSC 2025] 可爱区间 / maxsum</title>
       <link>http://blog.cyx2009.top/archives/P11947/</link>
       <guid>http://blog.cyx2009.top/archives/P11947/</guid>
       <pubDate>Fri, 21 Mar 2025 10:21:00 GMT</pubDate>
@@ -41,9 +73,9 @@
       
       <category domain="http://blog.cyx2009.top/tags/%E6%A8%A1%E6%8B%9F%E8%B5%9B/">模拟赛</category>
       
-      <category domain="http://blog.cyx2009.top/tags/%E7%BA%BF%E6%AE%B5%E6%A0%91/">线段树</category>
-      
       <category domain="http://blog.cyx2009.top/tags/%E6%89%AB%E6%8F%8F%E7%BA%BF/">扫描线</category>
+      
+      <category domain="http://blog.cyx2009.top/tags/%E7%BA%BF%E6%AE%B5%E6%A0%91/">线段树</category>
       
       <category domain="http://blog.cyx2009.top/tags/%E5%80%8D%E5%A2%9E/">倍增</category>
       
@@ -249,9 +281,9 @@
       
       <category domain="http://blog.cyx2009.top/tags/%E6%A8%A1%E6%8B%9F%E8%B5%9B/">模拟赛</category>
       
-      <category domain="http://blog.cyx2009.top/tags/%E6%95%B0%E8%AE%BA/">数论</category>
-      
       <category domain="http://blog.cyx2009.top/tags/%E7%BA%BF%E6%AE%B5%E6%A0%91/">线段树</category>
+      
+      <category domain="http://blog.cyx2009.top/tags/%E6%95%B0%E8%AE%BA/">数论</category>
       
       <category domain="http://blog.cyx2009.top/tags/%E9%98%B6/">阶</category>
       
@@ -340,9 +372,9 @@
       
       <category domain="http://blog.cyx2009.top/tags/%E6%A8%A1%E6%8B%9F%E8%B5%9B/">模拟赛</category>
       
-      <category domain="http://blog.cyx2009.top/tags/%E7%BA%BF%E6%AE%B5%E6%A0%91/">线段树</category>
-      
       <category domain="http://blog.cyx2009.top/tags/%E6%89%AB%E6%8F%8F%E7%BA%BF/">扫描线</category>
+      
+      <category domain="http://blog.cyx2009.top/tags/%E7%BA%BF%E6%AE%B5%E6%A0%91/">线段树</category>
       
       
       <comments>http://blog.cyx2009.top/archives/20250226_checkin/#disqus_thread</comments>
@@ -584,38 +616,6 @@
       
       
       <comments>http://blog.cyx2009.top/archives/CF1184B3/#disqus_thread</comments>
-      
-    </item>
-    
-    <item>
-      <title>[题解] [模拟 20250217] GYM100425B Comparing Theories</title>
-      <link>http://blog.cyx2009.top/archives/GYM104103E/</link>
-      <guid>http://blog.cyx2009.top/archives/GYM104103E/</guid>
-      <pubDate>Mon, 17 Feb 2025 06:37:00 GMT</pubDate>
-      
-        
-        
-          
-          
-      <description>&lt;p&gt;&lt;a href=&quot;https://codeforces.com/gym/104103/problem/E&quot;&gt;https://codeforces.com/gym/104103/problem/E&lt;/a&gt;&lt;/p&gt;
-&lt;p&gt;&lt;a</description>
-          
-        
-      
-      
-      
-      
-      <category domain="http://blog.cyx2009.top/categories/Solution/">Solution</category>
-      
-      
-      <category domain="http://blog.cyx2009.top/tags/%E6%A8%A1%E6%8B%9F%E8%B5%9B/">模拟赛</category>
-      
-      <category domain="http://blog.cyx2009.top/tags/%E7%BA%BF%E6%AE%B5%E6%A0%91/">线段树</category>
-      
-      <category domain="http://blog.cyx2009.top/tags/%E6%9C%80%E5%B0%8F%E7%94%9F%E6%88%90%E6%A0%91/">最小生成树</category>
-      
-      
-      <comments>http://blog.cyx2009.top/archives/GYM104103E/#disqus_thread</comments>
       
     </item>
     
