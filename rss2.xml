@@ -15,8 +15,63 @@
     <atom:link href="http://blog.cyx2009.top/rss2.xml" rel="self" type="application/rss+xml"/>
     
     <description>沉石鱼惊旋 的博客</description>
-    <pubDate>Tue, 25 Mar 2025 14:22:19 GMT</pubDate>
+    <pubDate>Thu, 27 Mar 2025 08:23:57 GMT</pubDate>
     <generator>http://hexo.io/</generator>
+    
+    <item>
+      <title>[工程] 洛谷修改提交记录方框背景</title>
+      <link>http://blog.cyx2009.top/archives/luogu-submission-better/</link>
+      <guid>http://blog.cyx2009.top/archives/luogu-submission-better/</guid>
+      <pubDate>Thu, 27 Mar 2025 08:12:00 GMT</pubDate>
+      
+        
+        
+          
+          
+      <description>&lt;h1 id=&quot;插件下载地址&quot;&gt;&lt;a class=&quot;markdownIt-Anchor&quot; href=&quot;#插件下载地址&quot;&gt;&lt;/a&gt; 插件下载地址&lt;/h1&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;a</description>
+          
+        
+      
+      
+      
+      
+      <category domain="http://blog.cyx2009.top/categories/Technology/">Technology</category>
+      
+      
+      
+      <comments>http://blog.cyx2009.top/archives/luogu-submission-better/#disqus_thread</comments>
+      
+    </item>
+    
+    <item>
+      <title>[题解] CF2091G Gleb and Boating</title>
+      <link>http://blog.cyx2009.top/archives/CF2091G/</link>
+      <guid>http://blog.cyx2009.top/archives/CF2091G/</guid>
+      <pubDate>Tue, 25 Mar 2025 23:04:00 GMT</pubDate>
+      
+        
+        
+          
+          
+      <description>&lt;h1 id=&quot;题意&quot;&gt;&lt;a class=&quot;markdownIt-Anchor&quot; href=&quot;#题意&quot;&gt;&lt;/a&gt; 题意&lt;/h1&gt;
+&lt;p&gt;你需要在 &lt;span class=&quot;katex&quot;&gt;&lt;span class=&quot;katex-mathml&quot;&gt;&lt;math</description>
+          
+        
+      
+      
+      
+      
+      <category domain="http://blog.cyx2009.top/categories/Solution/">Solution</category>
+      
+      
+      <category domain="http://blog.cyx2009.top/tags/%E5%8A%A8%E6%80%81%E8%A7%84%E5%88%92/">动态规划</category>
+      
+      
+      <comments>http://blog.cyx2009.top/archives/CF2091G/#disqus_thread</comments>
+      
+    </item>
     
     <item>
       <title>[题解] [模拟赛 20250325] P11946 [KTSC 2025] 物竞天择 2 / evolution</title>
@@ -346,7 +401,7 @@
       
       
       
-      <category domain="http://blog.cyx2009.top/categories/Solution/">Solution</category>
+      <category domain="http://blog.cyx2009.top/categories/Technology/">Technology</category>
       
       
       
@@ -560,62 +615,6 @@
       
       
       <comments>http://blog.cyx2009.top/archives/CF1325E/#disqus_thread</comments>
-      
-    </item>
-    
-    <item>
-      <title>[题解] [模拟赛 20250219] 散步 walk</title>
-      <link>http://blog.cyx2009.top/archives/20250219_walk/</link>
-      <guid>http://blog.cyx2009.top/archives/20250219_walk/</guid>
-      <pubDate>Thu, 20 Feb 2025 09:04:00 GMT</pubDate>
-      
-        
-        
-          
-          
-      <description>&lt;h1 id=&quot;题意&quot;&gt;&lt;a class=&quot;markdownIt-Anchor&quot; href=&quot;#题意&quot;&gt;&lt;/a&gt; 题意&lt;/h1&gt;
-&lt;p&gt;给定一个长度为 &lt;span class=&quot;katex&quot;&gt;&lt;span class=&quot;katex-mathml&quot;&gt;&lt;math</description>
-          
-        
-      
-      
-      
-      
-      <category domain="http://blog.cyx2009.top/categories/Solution/">Solution</category>
-      
-      
-      <category domain="http://blog.cyx2009.top/tags/%E6%A8%A1%E6%8B%9F%E8%B5%9B/">模拟赛</category>
-      
-      
-      <comments>http://blog.cyx2009.top/archives/20250219_walk/#disqus_thread</comments>
-      
-    </item>
-    
-    <item>
-      <title>[题解] QOJ5568 Cyclic Shifts</title>
-      <link>http://blog.cyx2009.top/archives/QOJ5568/</link>
-      <guid>http://blog.cyx2009.top/archives/QOJ5568/</guid>
-      <pubDate>Tue, 18 Feb 2025 11:43:00 GMT</pubDate>
-      
-        
-        
-          
-          
-      <description>&lt;p&gt;&lt;a href=&quot;https://qoj.ac/problem/5568&quot;&gt;https://qoj.ac/problem/5568&lt;/a&gt;&lt;/p&gt;
-&lt;p&gt;&lt;a</description>
-          
-        
-      
-      
-      
-      
-      <category domain="http://blog.cyx2009.top/categories/Solution/">Solution</category>
-      
-      
-      <category domain="http://blog.cyx2009.top/tags/%E9%9A%8F%E6%9C%BA/">随机</category>
-      
-      
-      <comments>http://blog.cyx2009.top/archives/QOJ5568/#disqus_thread</comments>
       
     </item>
     
