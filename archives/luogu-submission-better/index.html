@@ -24,7 +24,7 @@
 <meta property="og:image" content="https://cdn.jsdelivr.net/gh/chenyuxuan2009/luogu_submission_better/example1.png">
 <meta property="og:image" content="https://cdn.jsdelivr.net/gh/chenyuxuan2009/luogu_submission_better/example2.png">
 <meta property="article:published_time" content="2025-03-27T08:12:00.000Z">
-<meta property="article:modified_time" content="2025-03-27T08:51:21.394Z">
+<meta property="article:modified_time" content="2025-03-27T14:07:08.412Z">
 <meta property="article:author" content="沉石鱼惊旋">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:image" content="https://cdn.jsdelivr.net/gh/chenyuxuan2009/luogu_submission_better/example1.png">
@@ -643,7 +643,7 @@
 						
 						<div class="post-meta-detail post-meta-detail-time">
 							<i class="fa fa-clock-o" aria-hidden="true"></i>
-							<time title="发布于 2025-3-27 16:12:00 | 编辑于 2025-3-27 16:51:21">2025-3-27 16:12
+							<time title="发布于 2025-3-27 16:12:00 | 编辑于 2025-3-27 22:07:08">2025-3-27 16:12
 							</time>
 						</div>
 					
@@ -670,7 +670,7 @@
 						
 						<div class="post-meta-detail post-meta-detail-words">
 							<i class="fa fa-file-word-o" aria-hidden="true"></i>
-							322 字
+							587 字
 						</div>
 					
 						
@@ -678,7 +678,7 @@
 						
 						<div class="post-meta-detail post-meta-detail-readingtime">
 							<i class="fa fa-hourglass-end" aria-hidden="true"></i>
-							1 分钟
+							2 分钟
 						</div>
 					
 		</div>
@@ -701,29 +701,43 @@
 </li>
 </ul>
 <p>如果前两个都打不开可以选择使用第三个 gitee 的镜像仓库链接。</p>
+<p>如果 gitee 链接打开不是源码，不要直接点击链接，复制链接地址到浏览器地址栏进入。</p>
+<p>插件是油猴脚本，需要先安装 TamperMonkey 插件。安装油猴插件自行搜索相关教程。</p>
 <h1 id="效果展示"><a class="markdownIt-Anchor" href="#效果展示"></a> 效果展示</h1>
 <p><img src="https://cdn.jsdelivr.net/gh/chenyuxuan2009/luogu_submission_better/example1.png" alt="" /></p>
 <p><img src="https://cdn.jsdelivr.net/gh/chenyuxuan2009/luogu_submission_better/example2.png" alt="" /></p>
 <p>其实都是动图，懒得录动图效果了（</p>
 <p>前者可以安装插件成功之后在 <a target="_blank" rel="noopener" href="https://www.luogu.com.cn/record/72597888">https://www.luogu.com.cn/record/72597888</a> 查看。</p>
-<p>后者由于 Judging 状态难以维持，无法提供长久有效的链接。可以写题的时候留意一下。</p>
+<p>后者由于 Judging 状态难以维持，无法提供长久有效的链接查看效果。可以写题的时候留意一下。</p>
 <h1 id="常见问题"><a class="markdownIt-Anchor" href="#常见问题"></a> 常见问题</h1>
 <ul>
 <li>
-<p>为什么图片没有加载？</p>
-<p>默认用 <a target="_blank" rel="noopener" href="http://jsdelivr.net">jsdelivr.net</a> 加速了。建议先访问一下 <a target="_blank" rel="noopener" href="https://cdn.jsdelivr.net/">https://cdn.jsdelivr.net/</a> 和 <a target="_blank" rel="noopener" href="https://www.jsdelivr.com/">https://www.jsdelivr.com/</a> 确保连接通畅。</p>
+<p>为什么图片没有加载？图片加载太慢怎么办？</p>
+<p>源码提供了几个镜像源。</p>
+<pre><code class="highlight js"><span class="comment">// let jsdelivr = &#x27;https://cdn.jsdelivr.net&#x27;</span>
+<span class="comment">// let jsdelivr = &#x27;https://cdn.mengze.vip&#x27;</span>
+<span class="keyword">let</span> jsdelivr = <span class="string">&#x27;https://jsdelivrcn.netlify.app/&#x27;</span></code></pre>
+<p>如果需要修改，注释掉对应的源，把想要的源注释取消即可。</p>
+<p>例如需要使用原站，就改为</p>
+<pre><code class="highlight js"><span class="keyword">let</span> jsdelivr = <span class="string">&#x27;https://cdn.jsdelivr.net&#x27;</span>
+<span class="comment">// let jsdelivr = &#x27;https://cdn.mengze.vip&#x27;</span>
+<span class="comment">// let jsdelivr = &#x27;https://jsdelivrcn.netlify.app/&#x27;</span></code></pre>
+<p>即可。</p>
+<p>建议先直接访问一下你想要切换的源。目前版本默认用 jsdelivr 的镜像站加速了。</p>
+<p><strong>强烈建议先访问 <a target="_blank" rel="noopener" href="https://www.luogu.com.cn/record/72597888">https://www.luogu.com.cn/record/72597888</a> 把图片加载一下。等待动图完全动起来。为了验证是否缓存，刷新页面查看加载是否仍然过慢。如果仍然过慢，尝试切换图源。如果你是一位魔法师，还可以使用 / 停止使用魔法。</strong></p>
+<p>如果你是魔法师，原站很适合。如果你不是魔法师，国内镜像源稍微加载一段时间。</p>
 </li>
 <li>
 <p>如何修改图片？</p>
 <p>源码定义了如下内容：</p>
-<pre><code class="highlight js"><span class="keyword">let</span> <span class="variable constant_">AC</span> = <span class="string">&#x27;https://cdn.jsdelivr.net/gh/chenyuxuan2009/luogu_submission_better/AC.gif&#x27;</span>
-<span class="keyword">let</span> <span class="variable constant_">WA</span> = <span class="string">&#x27;https://cdn.jsdelivr.net/gh/chenyuxuan2009/luogu_submission_better/WA.gif&#x27;</span>
-<span class="keyword">let</span> <span class="variable constant_">TLE</span> = <span class="string">&#x27;https://cdn.jsdelivr.net/gh/chenyuxuan2009/luogu_submission_better/TLE.gif&#x27;</span>
-<span class="keyword">let</span> <span class="variable constant_">MLE</span> = <span class="string">&#x27;https://cdn.jsdelivr.net/gh/chenyuxuan2009/luogu_submission_better/MLE.gif&#x27;</span>
-<span class="keyword">let</span> <span class="variable constant_">RE</span> = <span class="string">&#x27;https://cdn.jsdelivr.net/gh/chenyuxuan2009/luogu_submission_better/RE.gif&#x27;</span>
-<span class="keyword">let</span> <span class="variable constant_">OLE</span> = <span class="string">&#x27;https://cdn.jsdelivr.net/gh/chenyuxuan2009/luogu_submission_better/OLE.gif&#x27;</span>
-<span class="keyword">let</span> <span class="variable constant_">UKE</span> = <span class="string">&#x27;https://cdn.jsdelivr.net/gh/chenyuxuan2009/luogu_submission_better/UKE.gif&#x27;</span>
-<span class="keyword">let</span> <span class="title class_">Judging</span> = <span class="string">&#x27;https://cdn.jsdelivr.net/gh/chenyuxuan2009/luogu_submission_better/Judging.gif&#x27;</span></code></pre>
+<pre><code class="highlight js"><span class="keyword">let</span> <span class="variable constant_">AC</span> = <span class="string">`<span class="subst">$&#123;jsdelivr&#125;</span>/gh/chenyuxuan2009/luogu_submission_better/AC.gif`</span>
+<span class="keyword">let</span> <span class="variable constant_">WA</span> = <span class="string">`<span class="subst">$&#123;jsdelivr&#125;</span>/gh/chenyuxuan2009/luogu_submission_better/WA.gif`</span>
+<span class="keyword">let</span> <span class="variable constant_">TLE</span> = <span class="string">`<span class="subst">$&#123;jsdelivr&#125;</span>/gh/chenyuxuan2009/luogu_submission_better/TLE.gif`</span>
+<span class="keyword">let</span> <span class="variable constant_">MLE</span> = <span class="string">`<span class="subst">$&#123;jsdelivr&#125;</span>/gh/chenyuxuan2009/luogu_submission_better/MLE.gif`</span>
+<span class="keyword">let</span> <span class="variable constant_">RE</span> = <span class="string">`<span class="subst">$&#123;jsdelivr&#125;</span>/gh/chenyuxuan2009/luogu_submission_better/RE.gif`</span>
+<span class="keyword">let</span> <span class="variable constant_">OLE</span> = <span class="string">`<span class="subst">$&#123;jsdelivr&#125;</span>/gh/chenyuxuan2009/luogu_submission_better/OLE.gif`</span>
+<span class="keyword">let</span> <span class="variable constant_">UKE</span> = <span class="string">`<span class="subst">$&#123;jsdelivr&#125;</span>/gh/chenyuxuan2009/luogu_submission_better/UKE.gif`</span>
+<span class="keyword">let</span> <span class="title class_">Judging</span> = <span class="string">`<span class="subst">$&#123;jsdelivr&#125;</span>/gh/chenyuxuan2009/luogu_submission_better/Judging.gif`</span></code></pre>
 <p>把对应状态的链接改成你自己的图片即可。</p>
 </li>
 </ul>
