@@ -22,7 +22,7 @@
 <meta property="og:description" content="题意 你需要在 [0,s][0,s][0,s] 的数轴上移动。不能超出这个范围。初始步长是 kkk。初始默认方向是 0→s0\to s0→s。即 ppp 走一步走到 p+kp+kp+k。转弯一次会令 k←max⁡{k−1,1}k\gets \max\{k-1,1\}k←max{k−1,1}。转弯一次是从 ppp 走一步走到 p−kp-kp−k，以此类推。 问到达 sss 时最后的 kkk 最大是">
 <meta property="og:locale" content="zh_CN">
 <meta property="article:published_time" content="2025-03-25T23:04:00.000Z">
-<meta property="article:modified_time" content="2025-03-27T05:35:46.525Z">
+<meta property="article:modified_time" content="2025-03-28T02:24:16.648Z">
 <meta property="article:author" content="沉石鱼惊旋">
 <meta property="article:tag" content="动态规划">
 <meta name="twitter:card" content="summary">
@@ -638,7 +638,7 @@
 						
 						<div class="post-meta-detail post-meta-detail-time">
 							<i class="fa fa-clock-o" aria-hidden="true"></i>
-							<time title="发布于 2025-3-26 7:04:00 | 编辑于 2025-3-27 13:35:46">2025-3-26 7:04
+							<time title="发布于 2025-3-26 7:04:00 | 编辑于 2025-3-28 10:24:16">2025-3-26 7:04
 							</time>
 						</div>
 					
@@ -698,7 +698,7 @@
 <p>但是可以直接 bitset 优化。复杂度降成 <span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi mathvariant="script">O</mi><mo stretchy="false">(</mo><mi>k</mi><mi>s</mi><mi>log</mi><mo>⁡</mo><mi>s</mi><mi mathvariant="normal">/</mi><mi>w</mi><mo stretchy="false">)</mo></mrow><annotation encoding="application/x-tex">\mathcal O(ks\log s/w)</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:1em;vertical-align:-0.25em;"></span><span class="mord mathcal" style="margin-right:0.02778em;">O</span><span class="mopen">(</span><span class="mord mathnormal" style="margin-right:0.03148em;">k</span><span class="mord mathnormal">s</span><span class="mspace" style="margin-right:0.16666666666666666em;"></span><span class="mop">lo<span style="margin-right:0.01389em;">g</span></span><span class="mspace" style="margin-right:0.16666666666666666em;"></span><span class="mord mathnormal">s</span><span class="mord">/</span><span class="mord mathnormal" style="margin-right:0.02691em;">w</span><span class="mclose">)</span></span></span></span>，跑得很快。</p>
 <p>多测可以用 <code>std::tr2::dynamic_bitset</code>（这个东西大概是唯一一个 OI 赛场上能直接用的动态 bitset，但是有 bug，参考 <a target="_blank" rel="noopener" href="https://codeforces.com/blog/entry/129454">https://codeforces.com/blog/entry/129454</a>，但是这个题我本地拍了十万组没拍出来有锅），或者说开若干个大小为 <span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mn>2</mn></mrow><annotation encoding="application/x-tex">2</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.64444em;vertical-align:0em;"></span><span class="mord">2</span></span></span></span> 的幂的 bitset 每次选一个刚好够的用一下，或者直接手写一个。</p>
 <h1 id="代码"><a class="markdownIt-Anchor" href="#代码"></a> 代码</h1>
-<p><a target="_blank" rel="noopener" href="https://codeforces.com/contest/2091/submission/312422080">https://codeforces.com/contest/2091/submission/312422080</a></p>
+<p><a target="_blank" rel="noopener" href="https://codeforces.com/contest/2091/submission/312735736">https://codeforces.com/contest/2091/submission/312735736</a></p>
 <pre><code class="highlight cpp"><span class="meta">#<span class="keyword">include</span> <span class="string">&lt;bits/stdc++.h&gt;</span></span>
 <span class="meta">#<span class="keyword">include</span> <span class="string">&lt;tr2/dynamic_bitset&gt;</span></span>
 <span class="keyword">using</span> <span class="keyword">namespace</span> std;
@@ -725,7 +725,7 @@
         &#125;
         <span class="keyword">else</span>
         &#123;
-            <span class="keyword">for</span> (<span class="type">int</span> j = <span class="number">0</span>; j &lt;= s; j += k - <span class="number">1</span>)
+            <span class="keyword">for</span> (<span class="type">int</span> j = <span class="number">0</span>; j &lt;= s; j += i - <span class="number">1</span>)
                 f[i - <span class="number">1</span>] |= (f[i] &gt;&gt;= i - <span class="number">1</span>);
         &#125;
         <span class="comment">// cout &lt;&lt; i - 1 &lt;&lt; &#x27;\n&#x27;;</span>
