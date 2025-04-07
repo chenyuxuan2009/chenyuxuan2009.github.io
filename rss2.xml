@@ -15,8 +15,95 @@
     <atom:link href="http://blog.cyx2009.top/rss2.xml" rel="self" type="application/rss+xml"/>
     
     <description>沉石鱼惊旋 的博客</description>
-    <pubDate>Fri, 28 Mar 2025 08:07:38 GMT</pubDate>
+    <pubDate>Mon, 07 Apr 2025 16:00:29 GMT</pubDate>
     <generator>http://hexo.io/</generator>
+    
+    <item>
+      <title>[题解] B3760 [信息与未来 2021] 掷骰子</title>
+      <link>http://blog.cyx2009.top/archives/B3760/</link>
+      <guid>http://blog.cyx2009.top/archives/B3760/</guid>
+      <pubDate>Mon, 07 Apr 2025 15:32:00 GMT</pubDate>
+      
+        
+        
+          
+          
+      <description>&lt;h1 id=&quot;前言&quot;&gt;&lt;a class=&quot;markdownIt-Anchor&quot; href=&quot;#前言&quot;&gt;&lt;/a&gt; 前言&lt;/h1&gt;
+&lt;p&gt;2025.04.07 晚。被 cz</description>
+          
+        
+      
+      
+      
+      
+      <category domain="http://blog.cyx2009.top/categories/Solution/">Solution</category>
+      
+      
+      
+      <comments>http://blog.cyx2009.top/archives/B3760/#disqus_thread</comments>
+      
+    </item>
+    
+    <item>
+      <title>[题解] P12032 [USACO25OPEN] Lazy Sort P</title>
+      <link>http://blog.cyx2009.top/archives/P12032/</link>
+      <guid>http://blog.cyx2009.top/archives/P12032/</guid>
+      <pubDate>Mon, 07 Apr 2025 07:43:00 GMT</pubDate>
+      
+        
+        
+          
+          
+      <description>&lt;h1 id=&quot;做法&quot;&gt;&lt;a class=&quot;markdownIt-Anchor&quot; href=&quot;#做法&quot;&gt;&lt;/a&gt; 做法&lt;/h1&gt;
+&lt;p&gt;考虑先把 &lt;span class=&quot;katex&quot;&gt;&lt;span class=&quot;katex-mathml&quot;&gt;&lt;math</description>
+          
+        
+      
+      
+      
+      
+      <category domain="http://blog.cyx2009.top/categories/Solution/">Solution</category>
+      
+      
+      <category domain="http://blog.cyx2009.top/tags/%E5%8A%A8%E6%80%81%E8%A7%84%E5%88%92/">动态规划</category>
+      
+      <category domain="http://blog.cyx2009.top/tags/%E7%BB%84%E5%90%88%E6%95%B0%E5%AD%A6/">组合数学</category>
+      
+      
+      <comments>http://blog.cyx2009.top/archives/P12032/#disqus_thread</comments>
+      
+    </item>
+    
+    <item>
+      <title>[题解] P12031 [USACO25OPEN] Forklift Certified P</title>
+      <link>http://blog.cyx2009.top/archives/P12031/</link>
+      <guid>http://blog.cyx2009.top/archives/P12031/</guid>
+      <pubDate>Mon, 07 Apr 2025 07:26:00 GMT</pubDate>
+      
+        
+        
+          
+          
+      <description>&lt;h1 id=&quot;做法&quot;&gt;&lt;a class=&quot;markdownIt-Anchor&quot; href=&quot;#做法&quot;&gt;&lt;/a&gt; 做法&lt;/h1&gt;
+&lt;p&gt;一个简单的发现是，我们每个箱子只需要关心『右上角』下方的区域是否包含某个箱子的『左下角』。&lt;/p&gt;
+&lt;p&gt;&lt;span</description>
+          
+        
+      
+      
+      
+      
+      <category domain="http://blog.cyx2009.top/categories/Solution/">Solution</category>
+      
+      
+      <category domain="http://blog.cyx2009.top/tags/%E7%BA%BF%E6%AE%B5%E6%A0%91/">线段树</category>
+      
+      <category domain="http://blog.cyx2009.top/tags/%E6%8B%93%E6%89%91%E6%8E%92%E5%BA%8F/">拓扑排序</category>
+      
+      
+      <comments>http://blog.cyx2009.top/archives/P12031/#disqus_thread</comments>
+      
+    </item>
     
     <item>
       <title>[工程] 洛谷修改提交记录方框背景</title>
@@ -159,9 +246,9 @@
       
       <category domain="http://blog.cyx2009.top/tags/%E6%A8%A1%E6%8B%9F%E8%B5%9B/">模拟赛</category>
       
-      <category domain="http://blog.cyx2009.top/tags/%E7%BA%BF%E6%AE%B5%E6%A0%91/">线段树</category>
-      
       <category domain="http://blog.cyx2009.top/tags/%E6%89%AB%E6%8F%8F%E7%BA%BF/">扫描线</category>
+      
+      <category domain="http://blog.cyx2009.top/tags/%E7%BA%BF%E6%AE%B5%E6%A0%91/">线段树</category>
       
       <category domain="http://blog.cyx2009.top/tags/%E5%80%8D%E5%A2%9E/">倍增</category>
       
@@ -367,9 +454,9 @@
       
       <category domain="http://blog.cyx2009.top/tags/%E6%A8%A1%E6%8B%9F%E8%B5%9B/">模拟赛</category>
       
-      <category domain="http://blog.cyx2009.top/tags/%E6%95%B0%E8%AE%BA/">数论</category>
-      
       <category domain="http://blog.cyx2009.top/tags/%E7%BA%BF%E6%AE%B5%E6%A0%91/">线段树</category>
+      
+      <category domain="http://blog.cyx2009.top/tags/%E6%95%B0%E8%AE%BA/">数论</category>
       
       <category domain="http://blog.cyx2009.top/tags/%E9%98%B6/">阶</category>
       
@@ -458,9 +545,9 @@
       
       <category domain="http://blog.cyx2009.top/tags/%E6%A8%A1%E6%8B%9F%E8%B5%9B/">模拟赛</category>
       
-      <category domain="http://blog.cyx2009.top/tags/%E7%BA%BF%E6%AE%B5%E6%A0%91/">线段树</category>
-      
       <category domain="http://blog.cyx2009.top/tags/%E6%89%AB%E6%8F%8F%E7%BA%BF/">扫描线</category>
+      
+      <category domain="http://blog.cyx2009.top/tags/%E7%BA%BF%E6%AE%B5%E6%A0%91/">线段树</category>
       
       
       <comments>http://blog.cyx2009.top/archives/20250226_checkin/#disqus_thread</comments>
@@ -530,92 +617,6 @@
       
       
       <comments>http://blog.cyx2009.top/archives/QOJ5566/#disqus_thread</comments>
-      
-    </item>
-    
-    <item>
-      <title>[题解] GYM102562B Bitwise Party</title>
-      <link>http://blog.cyx2009.top/archives/GYM102562B/</link>
-      <guid>http://blog.cyx2009.top/archives/GYM102562B/</guid>
-      <pubDate>Fri, 21 Feb 2025 11:40:00 GMT</pubDate>
-      
-        
-        
-          
-          
-      <description>&lt;h1 id=&quot;题意&quot;&gt;&lt;a class=&quot;markdownIt-Anchor&quot; href=&quot;#题意&quot;&gt;&lt;/a&gt; 题意&lt;/h1&gt;
-&lt;p&gt;定义 &lt;span class=&quot;katex&quot;&gt;&lt;span class=&quot;katex-mathml&quot;&gt;&lt;math</description>
-          
-        
-      
-      
-      
-      
-      <category domain="http://blog.cyx2009.top/categories/Solution/">Solution</category>
-      
-      
-      <category domain="http://blog.cyx2009.top/tags/%E5%88%86%E6%B2%BB/">分治</category>
-      
-      <category domain="http://blog.cyx2009.top/tags/%E6%8B%86%E4%BD%8D/">拆位</category>
-      
-      
-      <comments>http://blog.cyx2009.top/archives/GYM102562B/#disqus_thread</comments>
-      
-    </item>
-    
-    <item>
-      <title>[题解] CF1270F Awesome Substrings</title>
-      <link>http://blog.cyx2009.top/archives/CF1270F/</link>
-      <guid>http://blog.cyx2009.top/archives/CF1270F/</guid>
-      <pubDate>Thu, 20 Feb 2025 13:01:00 GMT</pubDate>
-      
-        
-        
-          
-          
-      <description>&lt;h1 id=&quot;题目翻译&quot;&gt;&lt;a class=&quot;markdownIt-Anchor&quot; href=&quot;#题目翻译&quot;&gt;&lt;/a&gt; 题目翻译&lt;/h1&gt;
-&lt;p&gt;给定长度为 &lt;span class=&quot;katex&quot;&gt;&lt;span class=&quot;katex-mathml&quot;&gt;&lt;math</description>
-          
-        
-      
-      
-      
-      
-      <category domain="http://blog.cyx2009.top/categories/Solution/">Solution</category>
-      
-      
-      <category domain="http://blog.cyx2009.top/tags/%E6%A0%B9%E5%8F%B7%E5%88%86%E6%B2%BB/">根号分治</category>
-      
-      
-      <comments>http://blog.cyx2009.top/archives/CF1270F/#disqus_thread</comments>
-      
-    </item>
-    
-    <item>
-      <title>[题解] CF1325E Ehab&#39;s REAL Number Theory Problem</title>
-      <link>http://blog.cyx2009.top/archives/CF1325E/</link>
-      <guid>http://blog.cyx2009.top/archives/CF1325E/</guid>
-      <pubDate>Thu, 20 Feb 2025 09:25:00 GMT</pubDate>
-      
-        
-        
-          
-          
-      <description>&lt;h1 id=&quot;题目翻译&quot;&gt;&lt;a class=&quot;markdownIt-Anchor&quot; href=&quot;#题目翻译&quot;&gt;&lt;/a&gt; 题目翻译&lt;/h1&gt;
-&lt;p&gt;给定 &lt;span class=&quot;katex&quot;&gt;&lt;span class=&quot;katex-mathml&quot;&gt;&lt;math</description>
-          
-        
-      
-      
-      
-      
-      <category domain="http://blog.cyx2009.top/categories/Solution/">Solution</category>
-      
-      
-      <category domain="http://blog.cyx2009.top/tags/%E6%9C%80%E5%B0%8F%E7%8E%AF/">最小环</category>
-      
-      
-      <comments>http://blog.cyx2009.top/archives/CF1325E/#disqus_thread</comments>
       
     </item>
     
