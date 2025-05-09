@@ -6,7 +6,7 @@
   <link href="http://blog.cyx2009.top/atom.xml" rel="self"/>
   
   <link href="http://blog.cyx2009.top/"/>
-  <updated>2025-04-10T15:28:16.718Z</updated>
+  <updated>2025-05-09T16:29:12.405Z</updated>
   <id>http://blog.cyx2009.top/</id>
   
   <author>
@@ -15,6 +15,58 @@
   </author>
   
   <generator uri="https://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>『置顶』[闲话] 20250509 闲话</title>
+    <link href="http://blog.cyx2009.top/archives/20250509_essay/"/>
+    <id>http://blog.cyx2009.top/archives/20250509_essay/</id>
+    <published>2025-05-09T15:28:00.000Z</published>
+    <updated>2025-05-09T16:29:12.405Z</updated>
+    
+    
+      
+      
+        
+        
+    <summary type="html">&lt;p&gt;今天常外拍毕业照。&lt;/p&gt;
+&lt;p&gt;本来订的昨天的，我猜是因为昨天下大雨了。&lt;/p&gt;
+&lt;p&gt;昨天我还在学校体育馆小走廊练足球，令人感慨。甚至射门进女厕所了。诶不是我上次射门门还没开啊？？？&lt;/p&gt;
+&lt;p&gt;经过在小锡监文化课的洗礼感觉常州无锡教育差异其实蛮大的。比如政史开卷导致</summary>
+        
+      
+    
+    
+    
+    <category term="Essay" scheme="http://blog.cyx2009.top/categories/Essay/"/>
+    
+    
+  </entry>
+  
+  <entry>
+    <title>[题解] CF2107D Apple Tree Traversing</title>
+    <link href="http://blog.cyx2009.top/archives/CF2107D/"/>
+    <id>http://blog.cyx2009.top/archives/CF2107D/</id>
+    <published>2025-05-09T14:47:00.000Z</published>
+    <updated>2025-05-09T15:14:43.721Z</updated>
+    
+    
+      
+      
+        
+        
+    <summary type="html">&lt;h1 id=&quot;题意&quot;&gt;&lt;a class=&quot;markdownIt-Anchor&quot; href=&quot;#题意&quot;&gt;&lt;/a&gt; 题意&lt;/h1&gt;
+&lt;p&gt;给定一棵 &lt;span class=&quot;katex&quot;&gt;&lt;span class=&quot;katex-mathml&quot;&gt;&lt;math</summary>
+        
+      
+    
+    
+    
+    <category term="Solution" scheme="http://blog.cyx2009.top/categories/Solution/"/>
+    
+    
+    <category term="均摊分析" scheme="http://blog.cyx2009.top/tags/%E5%9D%87%E6%91%8A%E5%88%86%E6%9E%90/"/>
+    
+  </entry>
   
   <entry>
     <title>[题解] P12098 [NERC2024] Geometric Balance</title>
@@ -516,59 +568,6 @@
     
     <category term="Technology" scheme="http://blog.cyx2009.top/categories/Technology/"/>
     
-    
-  </entry>
-  
-  <entry>
-    <title>[游记] 江苏省选 2025 游记</title>
-    <link href="http://blog.cyx2009.top/archives/JSOI2025/"/>
-    <id>http://blog.cyx2009.top/archives/JSOI2025/</id>
-    <published>2025-02-27T12:46:00.000Z</published>
-    <updated>2025-03-03T03:35:06.740Z</updated>
-    
-    
-      
-      
-        
-        
-    <summary type="html">&lt;h1 id=&quot;2025-省选游记没去只是有个同名同姓-关于有人拍到了我这件事我还没想好怎么编&quot;&gt;&lt;a class=&quot;markdownIt-Anchor&quot; href=&quot;#2025-省选游记没去只是有个同名同姓-关于有人拍到了我这件事我还没想好怎么编&quot;&gt;&lt;/a&gt; 2025</summary>
-        
-      
-    
-    
-    
-    <category term="TravelNote" scheme="http://blog.cyx2009.top/categories/TravelNote/"/>
-    
-    
-  </entry>
-  
-  <entry>
-    <title>[题解] [模拟赛 20250226] 签到题 checkin</title>
-    <link href="http://blog.cyx2009.top/archives/20250226_checkin/"/>
-    <id>http://blog.cyx2009.top/archives/20250226_checkin/</id>
-    <published>2025-02-26T12:35:00.000Z</published>
-    <updated>2025-03-24T12:57:37.762Z</updated>
-    
-    
-      
-      
-        
-        
-    <summary type="html">&lt;h1 id=&quot;题意&quot;&gt;&lt;a class=&quot;markdownIt-Anchor&quot; href=&quot;#题意&quot;&gt;&lt;/a&gt; 题意&lt;/h1&gt;
-&lt;p&gt;给定 &lt;span class=&quot;katex&quot;&gt;&lt;span class=&quot;katex-mathml&quot;&gt;&lt;math</summary>
-        
-      
-    
-    
-    
-    <category term="Solution" scheme="http://blog.cyx2009.top/categories/Solution/"/>
-    
-    
-    <category term="模拟赛" scheme="http://blog.cyx2009.top/tags/%E6%A8%A1%E6%8B%9F%E8%B5%9B/"/>
-    
-    <category term="扫描线" scheme="http://blog.cyx2009.top/tags/%E6%89%AB%E6%8F%8F%E7%BA%BF/"/>
-    
-    <category term="线段树" scheme="http://blog.cyx2009.top/tags/%E7%BA%BF%E6%AE%B5%E6%A0%91/"/>
     
   </entry>
   
