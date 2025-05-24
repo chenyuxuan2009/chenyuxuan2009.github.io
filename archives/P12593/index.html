@@ -22,7 +22,7 @@
 <meta property="og:description" content="做题需要先看数据范围。发现 n≤8n\leq 8n≤8，显然我们可以枚举全排列枚举删除顺序。使用打删除标记遍历每一条边来模拟题意。 枚举全排列可以使用 next_permutation 或 DFS 搜索（如 std）。 mmm 是 n2n^2n2 级别的，故复杂度 O(n!n2)\mathcal O(n! n^2)O(n!n2)。 当然本题也可以通过状态压缩 DP 做到 O(2nn2)\mathc">
 <meta property="og:locale" content="zh_CN">
 <meta property="article:published_time" content="2025-05-24T10:04:00.000Z">
-<meta property="article:modified_time" content="2025-05-24T10:08:45.197Z">
+<meta property="article:modified_time" content="2025-05-24T10:15:59.204Z">
 <meta property="article:author" content="沉石鱼惊旋">
 <meta property="article:tag" content="搜索">
 <meta name="twitter:card" content="summary">
@@ -638,7 +638,7 @@
 						
 						<div class="post-meta-detail post-meta-detail-time">
 							<i class="fa fa-clock-o" aria-hidden="true"></i>
-							<time title="发布于 2025-5-24 18:04:00 | 编辑于 2025-5-24 18:08:45">2025-5-24 18:04
+							<time title="发布于 2025-5-24 18:04:00 | 编辑于 2025-5-24 18:15:59">2025-5-24 18:04
 							</time>
 						</div>
 					
@@ -665,7 +665,7 @@
 						
 						<div class="post-meta-detail post-meta-detail-words">
 							<i class="fa fa-file-word-o" aria-hidden="true"></i>
-							938 字
+							1.1k 字
 						</div>
 					
 						
@@ -685,10 +685,15 @@
 <p>枚举全排列可以使用 <code>next_permutation</code> 或 DFS 搜索（如 std）。</p>
 <p><span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>m</mi></mrow><annotation encoding="application/x-tex">m</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.43056em;vertical-align:0em;"></span><span class="mord mathnormal">m</span></span></span></span> 是 <span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><msup><mi>n</mi><mn>2</mn></msup></mrow><annotation encoding="application/x-tex">n^2</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.8141079999999999em;vertical-align:0em;"></span><span class="mord"><span class="mord mathnormal">n</span><span class="msupsub"><span class="vlist-t"><span class="vlist-r"><span class="vlist" style="height:0.8141079999999999em;"><span style="top:-3.063em;margin-right:0.05em;"><span class="pstrut" style="height:2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mtight">2</span></span></span></span></span></span></span></span></span></span></span> 级别的，故复杂度 <span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi mathvariant="script">O</mi><mo stretchy="false">(</mo><mi>n</mi><mo stretchy="false">!</mo><msup><mi>n</mi><mn>2</mn></msup><mo stretchy="false">)</mo></mrow><annotation encoding="application/x-tex">\mathcal O(n! n^2)</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:1.064108em;vertical-align:-0.25em;"></span><span class="mord mathcal" style="margin-right:0.02778em;">O</span><span class="mopen">(</span><span class="mord mathnormal">n</span><span class="mclose">!</span><span class="mord"><span class="mord mathnormal">n</span><span class="msupsub"><span class="vlist-t"><span class="vlist-r"><span class="vlist" style="height:0.8141079999999999em;"><span style="top:-3.063em;margin-right:0.05em;"><span class="pstrut" style="height:2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mtight">2</span></span></span></span></span></span></span></span><span class="mclose">)</span></span></span></span>。</p>
 <p>当然本题也可以通过状态压缩 DP 做到 <span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi mathvariant="script">O</mi><mo stretchy="false">(</mo><msup><mn>2</mn><mi>n</mi></msup><msup><mi>n</mi><mn>2</mn></msup><mo stretchy="false">)</mo></mrow><annotation encoding="application/x-tex">\mathcal O(2^n n^2)</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:1.064108em;vertical-align:-0.25em;"></span><span class="mord mathcal" style="margin-right:0.02778em;">O</span><span class="mopen">(</span><span class="mord"><span class="mord">2</span><span class="msupsub"><span class="vlist-t"><span class="vlist-r"><span class="vlist" style="height:0.664392em;"><span style="top:-3.063em;margin-right:0.05em;"><span class="pstrut" style="height:2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mathnormal mtight">n</span></span></span></span></span></span></span></span><span class="mord"><span class="mord mathnormal">n</span><span class="msupsub"><span class="vlist-t"><span class="vlist-r"><span class="vlist" style="height:0.8141079999999999em;"><span style="top:-3.063em;margin-right:0.05em;"><span class="pstrut" style="height:2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mtight">2</span></span></span></span></span></span></span></span><span class="mclose">)</span></span></span></span> 的复杂度。</p>
-<p>开 <span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>n</mi><mo>=</mo><mn>8</mn></mrow><annotation encoding="application/x-tex">n=8</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.43056em;vertical-align:0em;"></span><span class="mord mathnormal">n</span><span class="mspace" style="margin-right:0.2777777777777778em;"></span><span class="mrel">=</span><span class="mspace" style="margin-right:0.2777777777777778em;"></span></span><span class="base"><span class="strut" style="height:0.64444em;vertical-align:0em;"></span><span class="mord">8</span></span></span></span> 是因为放在这个位置被钦定使用枚举全排列通过，作者写了一份 Python 代码发现 n=9 就跑的很慢了。</p>
+<p>开 <span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>n</mi><mo>=</mo><mn>8</mn></mrow><annotation encoding="application/x-tex">n=8</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.43056em;vertical-align:0em;"></span><span class="mord mathnormal">n</span><span class="mspace" style="margin-right:0.2777777777777778em;"></span><span class="mrel">=</span><span class="mspace" style="margin-right:0.2777777777777778em;"></span></span><span class="base"><span class="strut" style="height:0.64444em;vertical-align:0em;"></span><span class="mord">8</span></span></span></span> 是因为放在这个位置被钦定使用枚举全排列通过，作者写了一份 Python 代码发现 <span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>n</mi><mo>=</mo><mn>9</mn></mrow><annotation encoding="application/x-tex">n=9</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.43056em;vertical-align:0em;"></span><span class="mord mathnormal">n</span><span class="mspace" style="margin-right:0.2777777777777778em;"></span><span class="mrel">=</span><span class="mspace" style="margin-right:0.2777777777777778em;"></span></span><span class="base"><span class="strut" style="height:0.64444em;vertical-align:0em;"></span><span class="mord">9</span></span></span></span> 就跑的很慢了。</p>
+<p>另外 C++ 注意要开 <code>long long</code>，其他语言同理。</p>
 <hr />
 <p>第一档部分分每次选度数最小的出来做。第二档其实也是，但是因为树的特殊性质边权之和就是答案。</p>
+<p>刻意卡了一下每次选度数最小或者是代价最小的拉出来跑贪心或者凭这个性质做搜索的剪枝。分别被卡到了 <span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mn>70</mn></mrow><annotation encoding="application/x-tex">70</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.64444em;vertical-align:0em;"></span><span class="mord">7</span><span class="mord">0</span></span></span></span> 分和 <span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mn>60</mn></mrow><annotation encoding="application/x-tex">60</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.64444em;vertical-align:0em;"></span><span class="mord">6</span><span class="mord">0</span></span></span></span> 分。</p>
 <hr />
+<p>关于题目名称，和本场比赛彩蛋有关。</p>
+<hr />
+<p>这是我写的 std。</p>
 <pre><code class="highlight cpp"><span class="comment">// std</span>
 <span class="meta">#<span class="keyword">include</span> <span class="string">&lt;bits/stdc++.h&gt;</span></span>
 <span class="keyword">using</span> <span class="keyword">namespace</span> std;
@@ -750,6 +755,7 @@ ll ans = <span class="number">1e18</span>;
     cout &lt;&lt; ans &lt;&lt; <span class="string">&#x27;\n&#x27;</span>;
     <span class="keyword">return</span> <span class="number">0</span>;
 &#125;</code></pre>
+<p>用 GPT 4o 写了个代码结果常数太大过不去，比我写的这份慢了十倍。</p>
 <pre><code class="highlight python"><span class="comment"># Python std</span>
 n, m = <span class="built_in">map</span>(<span class="built_in">int</span>, <span class="built_in">input</span>().split())
 e = [[]]
@@ -799,6 +805,7 @@ ans = <span class="number">10</span>**<span class="number">18</span>
 
 dfs(<span class="number">1</span>)
 <span class="built_in">print</span>(ans)</code></pre>
+<p>这份是 GPT 4o 写的 Java 代码。</p>
 <pre><code class="highlight java"><span class="comment">// GPT 4o Java</span>
 
 <span class="keyword">import</span> java.util.*;
