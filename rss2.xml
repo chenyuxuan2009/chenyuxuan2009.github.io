@@ -15,8 +15,35 @@
     <atom:link href="http://blog.cyx2009.top/rss2.xml" rel="self" type="application/rss+xml"/>
     
     <description>沉石鱼惊旋 的博客</description>
-    <pubDate>Fri, 09 May 2025 16:38:15 GMT</pubDate>
+    <pubDate>Sat, 24 May 2025 10:08:45 GMT</pubDate>
     <generator>http://hexo.io/</generator>
+    
+    <item>
+      <title>[题解] P12593 沉石鱼惊旋</title>
+      <link>http://blog.cyx2009.top/archives/P12593/</link>
+      <guid>http://blog.cyx2009.top/archives/P12593/</guid>
+      <pubDate>Sat, 24 May 2025 10:04:00 GMT</pubDate>
+      
+        
+        
+          
+          
+      <description>&lt;p&gt;做题需要先看数据范围。发现 &lt;span class=&quot;katex&quot;&gt;&lt;span class=&quot;katex-mathml&quot;&gt;&lt;math</description>
+          
+        
+      
+      
+      
+      
+      <category domain="http://blog.cyx2009.top/categories/Solution/">Solution</category>
+      
+      
+      <category domain="http://blog.cyx2009.top/tags/%E6%90%9C%E7%B4%A2/">搜索</category>
+      
+      
+      <comments>http://blog.cyx2009.top/archives/P12593/#disqus_thread</comments>
+      
+    </item>
     
     <item>
       <title>『置顶』[闲话] 20250509 闲话</title>
@@ -580,36 +607,6 @@
       
       
       <comments>http://blog.cyx2009.top/archives/20250316_wish/#disqus_thread</comments>
-      
-    </item>
-    
-    <item>
-      <title>『置顶』[工程] 通过 RSS 订阅文章更新</title>
-      <link>http://blog.cyx2009.top/archives/rss_follow/</link>
-      <guid>http://blog.cyx2009.top/archives/rss_follow/</guid>
-      <pubDate>Tue, 04 Mar 2025 14:44:00 GMT</pubDate>
-      
-        
-        
-          
-          
-      <description>&lt;blockquote&gt;
-&lt;p&gt;什么是 RSS？&lt;/p&gt;
-&lt;ul&gt;
-&lt;li&gt;RSS 指 Really Simple Syndication（真正简易联合）；&lt;/li&gt;
-&lt;li&gt;RSS 使您有能力聚合（syndicate）网站的内容；&lt;/li&gt;
-&lt;li&gt;RSS</description>
-          
-        
-      
-      
-      
-      
-      <category domain="http://blog.cyx2009.top/categories/Technology/">Technology</category>
-      
-      
-      
-      <comments>http://blog.cyx2009.top/archives/rss_follow/#disqus_thread</comments>
       
     </item>
     

@@ -6,7 +6,7 @@
   <link href="http://blog.cyx2009.top/atom.xml" rel="self"/>
   
   <link href="http://blog.cyx2009.top/"/>
-  <updated>2025-05-09T16:38:15.740Z</updated>
+  <updated>2025-05-24T10:08:45.197Z</updated>
   <id>http://blog.cyx2009.top/</id>
   
   <author>
@@ -17,11 +17,36 @@
   <generator uri="https://hexo.io/">Hexo</generator>
   
   <entry>
+    <title>[题解] P12593 沉石鱼惊旋</title>
+    <link href="http://blog.cyx2009.top/archives/P12593/"/>
+    <id>http://blog.cyx2009.top/archives/P12593/</id>
+    <published>2025-05-24T10:04:00.000Z</published>
+    <updated>2025-05-24T10:08:45.197Z</updated>
+    
+    
+      
+      
+        
+        
+    <summary type="html">&lt;p&gt;做题需要先看数据范围。发现 &lt;span class=&quot;katex&quot;&gt;&lt;span class=&quot;katex-mathml&quot;&gt;&lt;math</summary>
+        
+      
+    
+    
+    
+    <category term="Solution" scheme="http://blog.cyx2009.top/categories/Solution/"/>
+    
+    
+    <category term="搜索" scheme="http://blog.cyx2009.top/tags/%E6%90%9C%E7%B4%A2/"/>
+    
+  </entry>
+  
+  <entry>
     <title>『置顶』[闲话] 20250509 闲话</title>
     <link href="http://blog.cyx2009.top/archives/20250509_essay/"/>
     <id>http://blog.cyx2009.top/archives/20250509_essay/</id>
     <published>2025-05-09T15:28:00.000Z</published>
-    <updated>2025-05-09T16:38:15.740Z</updated>
+    <updated>2025-05-23T12:59:03.912Z</updated>
     
     
       
@@ -540,34 +565,6 @@
     <category term="阶" scheme="http://blog.cyx2009.top/tags/%E9%98%B6/"/>
     
     <category term="原根" scheme="http://blog.cyx2009.top/tags/%E5%8E%9F%E6%A0%B9/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>『置顶』[工程] 通过 RSS 订阅文章更新</title>
-    <link href="http://blog.cyx2009.top/archives/rss_follow/"/>
-    <id>http://blog.cyx2009.top/archives/rss_follow/</id>
-    <published>2025-03-04T14:44:00.000Z</published>
-    <updated>2025-03-27T08:13:19.472Z</updated>
-    
-    
-      
-      
-        
-        
-    <summary type="html">&lt;blockquote&gt;
-&lt;p&gt;什么是 RSS？&lt;/p&gt;
-&lt;ul&gt;
-&lt;li&gt;RSS 指 Really Simple Syndication（真正简易联合）；&lt;/li&gt;
-&lt;li&gt;RSS 使您有能力聚合（syndicate）网站的内容；&lt;/li&gt;
-&lt;li&gt;RSS</summary>
-        
-      
-    
-    
-    
-    <category term="Technology" scheme="http://blog.cyx2009.top/categories/Technology/"/>
-    
     
   </entry>
   

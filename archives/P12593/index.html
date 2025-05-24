@@ -9,22 +9,22 @@
 	<link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/highlight.js/11.1.0/styles/a11y-light.min.css">
 	<script src="//cdnjs.cloudflare.com/ajax/libs/highlight.js/11.1.0/highlight.min.js"></script>
 	
-	<title>[题解] 来点 USACO Gold 组人类智慧 - 沉石鱼惊旋 的博客</title>
+	<title>[题解] P12593 沉石鱼惊旋 - 沉石鱼惊旋 的博客</title>
 	<meta charset="utf-8">
 	
 		<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=5">
 	
-	<meta name="description" content="T1 发现 u→vu\to vu→v 的方案数是可以用 u→k→vu\to k\to vu→k→v 算出来的，就类似 Floyd 枚举中心点。 然后就直接枚举 gapgapgap，u→u+gapu\to u+gapu→u+gap 枚举中间点进行转移。 但是发现 1→2→3→51\to 2\to 3\to 51→2→3→5 是会统计两次 1→2→3→51\to {\color{red}2}\to">
+	<meta name="description" content="做题需要先看数据范围。发现 n≤8n\leq 8n≤8，显然我们可以枚举全排列枚举删除顺序。使用打删除标记遍历每一条边来模拟题意。 枚举全排列可以使用 next_permutation 或 DFS 搜索（如 std）。 mmm 是 n2n^2n2 级别的，故复杂度 O(n!n2)\mathcal O(n! n^2)O(n!n2)。 当然本题也可以通过状态压缩 DP 做到 O(2nn2)\mathc">
 <meta property="og:type" content="article">
-<meta property="og:title" content="[题解] 来点 USACO Gold 组人类智慧">
-<meta property="og:url" content="http://blog.cyx2009.top/archives/USACO23DEC_G/index.html">
+<meta property="og:title" content="[题解] P12593 沉石鱼惊旋">
+<meta property="og:url" content="http://blog.cyx2009.top/archives/P12593/index.html">
 <meta property="og:site_name" content="沉石鱼惊旋 的博客">
-<meta property="og:description" content="T1 发现 u→vu\to vu→v 的方案数是可以用 u→k→vu\to k\to vu→k→v 算出来的，就类似 Floyd 枚举中心点。 然后就直接枚举 gapgapgap，u→u+gapu\to u+gapu→u+gap 枚举中间点进行转移。 但是发现 1→2→3→51\to 2\to 3\to 51→2→3→5 是会统计两次 1→2→3→51\to {\color{red}2}\to">
+<meta property="og:description" content="做题需要先看数据范围。发现 n≤8n\leq 8n≤8，显然我们可以枚举全排列枚举删除顺序。使用打删除标记遍历每一条边来模拟题意。 枚举全排列可以使用 next_permutation 或 DFS 搜索（如 std）。 mmm 是 n2n^2n2 级别的，故复杂度 O(n!n2)\mathcal O(n! n^2)O(n!n2)。 当然本题也可以通过状态压缩 DP 做到 O(2nn2)\mathc">
 <meta property="og:locale" content="zh_CN">
-<meta property="article:published_time" content="2023-12-20T12:58:00.000Z">
-<meta property="article:modified_time" content="2025-02-17T06:54:52.319Z">
+<meta property="article:published_time" content="2025-05-24T10:04:00.000Z">
+<meta property="article:modified_time" content="2025-05-24T10:08:45.197Z">
 <meta property="article:author" content="沉石鱼惊旋">
-<meta property="article:tag" content="乱搞">
+<meta property="article:tag" content="搜索">
 <meta name="twitter:card" content="summary">
 
 	<meta name="theme-color" content="#5e72e4">
@@ -632,13 +632,13 @@
 	<article class="post post-full card bg-white shadow-sm border-0 post-preview">
 	<header class="post-header text-center">
 		
-		<a class="post-title" href="/archives/USACO23DEC_G/">[题解] 来点 USACO Gold 组人类智慧</a>
+		<a class="post-title" href="/archives/P12593/">[题解] P12593 沉石鱼惊旋</a>
 		<div class="post-meta">
 			
 						
 						<div class="post-meta-detail post-meta-detail-time">
 							<i class="fa fa-clock-o" aria-hidden="true"></i>
-							<time title="发布于 2023-12-20 20:58:00 | 编辑于 2025-2-17 14:54:52">2023-12-20 20:58
+							<time title="发布于 2025-5-24 18:04:00 | 编辑于 2025-5-24 18:08:45">2025-5-24 18:04
 							</time>
 						</div>
 					
@@ -665,7 +665,7 @@
 						
 						<div class="post-meta-detail post-meta-detail-words">
 							<i class="fa fa-file-word-o" aria-hidden="true"></i>
-							1.2k 字
+							938 字
 						</div>
 					
 						
@@ -673,7 +673,7 @@
 						
 						<div class="post-meta-detail post-meta-detail-readingtime">
 							<i class="fa fa-hourglass-end" aria-hidden="true"></i>
-							6 分钟
+							5 分钟
 						</div>
 					
 		</div>
@@ -681,182 +681,219 @@
 	</header>
 
 	<div class="post-content" id="post_content">
-		<h1 id="t1"><a class="markdownIt-Anchor" href="#t1"></a> T1</h1>
-<p>发现 <span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>u</mi><mo>→</mo><mi>v</mi></mrow><annotation encoding="application/x-tex">u\to v</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.43056em;vertical-align:0em;"></span><span class="mord mathnormal">u</span><span class="mspace" style="margin-right:0.2777777777777778em;"></span><span class="mrel">→</span><span class="mspace" style="margin-right:0.2777777777777778em;"></span></span><span class="base"><span class="strut" style="height:0.43056em;vertical-align:0em;"></span><span class="mord mathnormal" style="margin-right:0.03588em;">v</span></span></span></span> 的方案数是可以用 <span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>u</mi><mo>→</mo><mi>k</mi><mo>→</mo><mi>v</mi></mrow><annotation encoding="application/x-tex">u\to k\to v</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.43056em;vertical-align:0em;"></span><span class="mord mathnormal">u</span><span class="mspace" style="margin-right:0.2777777777777778em;"></span><span class="mrel">→</span><span class="mspace" style="margin-right:0.2777777777777778em;"></span></span><span class="base"><span class="strut" style="height:0.69444em;vertical-align:0em;"></span><span class="mord mathnormal" style="margin-right:0.03148em;">k</span><span class="mspace" style="margin-right:0.2777777777777778em;"></span><span class="mrel">→</span><span class="mspace" style="margin-right:0.2777777777777778em;"></span></span><span class="base"><span class="strut" style="height:0.43056em;vertical-align:0em;"></span><span class="mord mathnormal" style="margin-right:0.03588em;">v</span></span></span></span> 算出来的，就类似 Floyd 枚举中心点。</p>
-<p>然后就直接枚举 <span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>g</mi><mi>a</mi><mi>p</mi></mrow><annotation encoding="application/x-tex">gap</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.625em;vertical-align:-0.19444em;"></span><span class="mord mathnormal" style="margin-right:0.03588em;">g</span><span class="mord mathnormal">a</span><span class="mord mathnormal">p</span></span></span></span>，<span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>u</mi><mo>→</mo><mi>u</mi><mo>+</mo><mi>g</mi><mi>a</mi><mi>p</mi></mrow><annotation encoding="application/x-tex">u\to u+gap</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.43056em;vertical-align:0em;"></span><span class="mord mathnormal">u</span><span class="mspace" style="margin-right:0.2777777777777778em;"></span><span class="mrel">→</span><span class="mspace" style="margin-right:0.2777777777777778em;"></span></span><span class="base"><span class="strut" style="height:0.66666em;vertical-align:-0.08333em;"></span><span class="mord mathnormal">u</span><span class="mspace" style="margin-right:0.2222222222222222em;"></span><span class="mbin">+</span><span class="mspace" style="margin-right:0.2222222222222222em;"></span></span><span class="base"><span class="strut" style="height:0.625em;vertical-align:-0.19444em;"></span><span class="mord mathnormal" style="margin-right:0.03588em;">g</span><span class="mord mathnormal">a</span><span class="mord mathnormal">p</span></span></span></span> 枚举中间点进行转移。</p>
-<p>但是发现 <span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mn>1</mn><mo>→</mo><mn>2</mn><mo>→</mo><mn>3</mn><mo>→</mo><mn>5</mn></mrow><annotation encoding="application/x-tex">1\to 2\to 3\to 5</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.64444em;vertical-align:0em;"></span><span class="mord">1</span><span class="mspace" style="margin-right:0.2777777777777778em;"></span><span class="mrel">→</span><span class="mspace" style="margin-right:0.2777777777777778em;"></span></span><span class="base"><span class="strut" style="height:0.64444em;vertical-align:0em;"></span><span class="mord">2</span><span class="mspace" style="margin-right:0.2777777777777778em;"></span><span class="mrel">→</span><span class="mspace" style="margin-right:0.2777777777777778em;"></span></span><span class="base"><span class="strut" style="height:0.64444em;vertical-align:0em;"></span><span class="mord">3</span><span class="mspace" style="margin-right:0.2777777777777778em;"></span><span class="mrel">→</span><span class="mspace" style="margin-right:0.2777777777777778em;"></span></span><span class="base"><span class="strut" style="height:0.64444em;vertical-align:0em;"></span><span class="mord">5</span></span></span></span> 是会统计两次 <span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mn>1</mn><mo>→</mo><mstyle mathcolor="red"><mn>2</mn></mstyle><mo>→</mo><mn>3</mn><mo>→</mo><mn>5</mn></mrow><annotation encoding="application/x-tex">1\to {\color{red}2}\to 3\to 5</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.64444em;vertical-align:0em;"></span><span class="mord">1</span><span class="mspace" style="margin-right:0.2777777777777778em;"></span><span class="mrel">→</span><span class="mspace" style="margin-right:0.2777777777777778em;"></span></span><span class="base"><span class="strut" style="height:0.64444em;vertical-align:0em;"></span><span class="mord"><span class="mord" style="color:red;">2</span></span><span class="mspace" style="margin-right:0.2777777777777778em;"></span><span class="mrel">→</span><span class="mspace" style="margin-right:0.2777777777777778em;"></span></span><span class="base"><span class="strut" style="height:0.64444em;vertical-align:0em;"></span><span class="mord">3</span><span class="mspace" style="margin-right:0.2777777777777778em;"></span><span class="mrel">→</span><span class="mspace" style="margin-right:0.2777777777777778em;"></span></span><span class="base"><span class="strut" style="height:0.64444em;vertical-align:0em;"></span><span class="mord">5</span></span></span></span> 和 <span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mn>1</mn><mo>→</mo><mn>2</mn><mo>→</mo><mstyle mathcolor="red"><mn>3</mn></mstyle><mo>→</mo><mn>5</mn></mrow><annotation encoding="application/x-tex">1\to 2\to {\color{red}3}\to 5</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.64444em;vertical-align:0em;"></span><span class="mord">1</span><span class="mspace" style="margin-right:0.2777777777777778em;"></span><span class="mrel">→</span><span class="mspace" style="margin-right:0.2777777777777778em;"></span></span><span class="base"><span class="strut" style="height:0.64444em;vertical-align:0em;"></span><span class="mord">2</span><span class="mspace" style="margin-right:0.2777777777777778em;"></span><span class="mrel">→</span><span class="mspace" style="margin-right:0.2777777777777778em;"></span></span><span class="base"><span class="strut" style="height:0.64444em;vertical-align:0em;"></span><span class="mord"><span class="mord" style="color:red;">3</span></span><span class="mspace" style="margin-right:0.2777777777777778em;"></span><span class="mrel">→</span><span class="mspace" style="margin-right:0.2777777777777778em;"></span></span><span class="base"><span class="strut" style="height:0.64444em;vertical-align:0em;"></span><span class="mord">5</span></span></span></span> 的。</p>
-<p>设 <span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><msub><mi>g</mi><mrow><mi>u</mi><mo separator="true">,</mo><mi>v</mi></mrow></msub></mrow><annotation encoding="application/x-tex">g_{u,v}</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.716668em;vertical-align:-0.286108em;"></span><span class="mord"><span class="mord mathnormal" style="margin-right:0.03588em;">g</span><span class="msupsub"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist" style="height:0.15139200000000003em;"><span style="top:-2.5500000000000003em;margin-left:-0.03588em;margin-right:0.05em;"><span class="pstrut" style="height:2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mtight"><span class="mord mathnormal mtight">u</span><span class="mpunct mtight">,</span><span class="mord mathnormal mtight" style="margin-right:0.03588em;">v</span></span></span></span></span><span class="vlist-s">​</span></span><span class="vlist-r"><span class="vlist" style="height:0.286108em;"><span></span></span></span></span></span></span></span></span></span> 表示是否存在 <span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>u</mi><mo>→</mo><mi>v</mi></mrow><annotation encoding="application/x-tex">u\to v</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.43056em;vertical-align:0em;"></span><span class="mord mathnormal">u</span><span class="mspace" style="margin-right:0.2777777777777778em;"></span><span class="mrel">→</span><span class="mspace" style="margin-right:0.2777777777777778em;"></span></span><span class="base"><span class="strut" style="height:0.43056em;vertical-align:0em;"></span><span class="mord mathnormal" style="margin-right:0.03588em;">v</span></span></span></span> 的直接连接路径即可顺利转移。</p>
-<pre><code class="highlight cpp"><span class="meta">#<span class="keyword">include</span> <span class="string">&lt;bits/stdc++.h&gt;</span></span>
+		<p>做题需要先看数据范围。发现 <span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>n</mi><mo>≤</mo><mn>8</mn></mrow><annotation encoding="application/x-tex">n\leq 8</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.7719400000000001em;vertical-align:-0.13597em;"></span><span class="mord mathnormal">n</span><span class="mspace" style="margin-right:0.2777777777777778em;"></span><span class="mrel">≤</span><span class="mspace" style="margin-right:0.2777777777777778em;"></span></span><span class="base"><span class="strut" style="height:0.64444em;vertical-align:0em;"></span><span class="mord">8</span></span></span></span>，显然我们可以枚举全排列枚举删除顺序。使用打删除标记遍历每一条边来模拟题意。</p>
+<p>枚举全排列可以使用 <code>next_permutation</code> 或 DFS 搜索（如 std）。</p>
+<p><span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>m</mi></mrow><annotation encoding="application/x-tex">m</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.43056em;vertical-align:0em;"></span><span class="mord mathnormal">m</span></span></span></span> 是 <span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><msup><mi>n</mi><mn>2</mn></msup></mrow><annotation encoding="application/x-tex">n^2</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.8141079999999999em;vertical-align:0em;"></span><span class="mord"><span class="mord mathnormal">n</span><span class="msupsub"><span class="vlist-t"><span class="vlist-r"><span class="vlist" style="height:0.8141079999999999em;"><span style="top:-3.063em;margin-right:0.05em;"><span class="pstrut" style="height:2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mtight">2</span></span></span></span></span></span></span></span></span></span></span> 级别的，故复杂度 <span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi mathvariant="script">O</mi><mo stretchy="false">(</mo><mi>n</mi><mo stretchy="false">!</mo><msup><mi>n</mi><mn>2</mn></msup><mo stretchy="false">)</mo></mrow><annotation encoding="application/x-tex">\mathcal O(n! n^2)</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:1.064108em;vertical-align:-0.25em;"></span><span class="mord mathcal" style="margin-right:0.02778em;">O</span><span class="mopen">(</span><span class="mord mathnormal">n</span><span class="mclose">!</span><span class="mord"><span class="mord mathnormal">n</span><span class="msupsub"><span class="vlist-t"><span class="vlist-r"><span class="vlist" style="height:0.8141079999999999em;"><span style="top:-3.063em;margin-right:0.05em;"><span class="pstrut" style="height:2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mtight">2</span></span></span></span></span></span></span></span><span class="mclose">)</span></span></span></span>。</p>
+<p>当然本题也可以通过状态压缩 DP 做到 <span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi mathvariant="script">O</mi><mo stretchy="false">(</mo><msup><mn>2</mn><mi>n</mi></msup><msup><mi>n</mi><mn>2</mn></msup><mo stretchy="false">)</mo></mrow><annotation encoding="application/x-tex">\mathcal O(2^n n^2)</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:1.064108em;vertical-align:-0.25em;"></span><span class="mord mathcal" style="margin-right:0.02778em;">O</span><span class="mopen">(</span><span class="mord"><span class="mord">2</span><span class="msupsub"><span class="vlist-t"><span class="vlist-r"><span class="vlist" style="height:0.664392em;"><span style="top:-3.063em;margin-right:0.05em;"><span class="pstrut" style="height:2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mathnormal mtight">n</span></span></span></span></span></span></span></span><span class="mord"><span class="mord mathnormal">n</span><span class="msupsub"><span class="vlist-t"><span class="vlist-r"><span class="vlist" style="height:0.8141079999999999em;"><span style="top:-3.063em;margin-right:0.05em;"><span class="pstrut" style="height:2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mtight">2</span></span></span></span></span></span></span></span><span class="mclose">)</span></span></span></span> 的复杂度。</p>
+<p>开 <span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>n</mi><mo>=</mo><mn>8</mn></mrow><annotation encoding="application/x-tex">n=8</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.43056em;vertical-align:0em;"></span><span class="mord mathnormal">n</span><span class="mspace" style="margin-right:0.2777777777777778em;"></span><span class="mrel">=</span><span class="mspace" style="margin-right:0.2777777777777778em;"></span></span><span class="base"><span class="strut" style="height:0.64444em;vertical-align:0em;"></span><span class="mord">8</span></span></span></span> 是因为放在这个位置被钦定使用枚举全排列通过，作者写了一份 Python 代码发现 n=9 就跑的很慢了。</p>
+<hr />
+<p>第一档部分分每次选度数最小的出来做。第二档其实也是，但是因为树的特殊性质边权之和就是答案。</p>
+<hr />
+<pre><code class="highlight cpp"><span class="comment">// std</span>
+<span class="meta">#<span class="keyword">include</span> <span class="string">&lt;bits/stdc++.h&gt;</span></span>
 <span class="keyword">using</span> <span class="keyword">namespace</span> std;
-<span class="type">int</span> n;
-<span class="type">char</span> mp[<span class="number">1020</span>][<span class="number">1020</span>];
-<span class="type">int</span> f[<span class="number">1020</span>][<span class="number">1020</span>];
-<span class="type">int</span> g[<span class="number">1020</span>][<span class="number">1020</span>];
-<span class="type">int</span> ans;
-<span class="function"><span class="type">int</span> <span class="title">main</span><span class="params">()</span></span>
-<span class="function"></span>&#123;
-    cin &gt;&gt; n;
-    <span class="keyword">for</span> (<span class="type">int</span> i = <span class="number">1</span>; i &lt;= n; i++)
-    &#123;
-        <span class="keyword">for</span> (<span class="type">int</span> j = <span class="number">1</span>; j &lt;= i; j++)
-            mp[i][j] = <span class="string">&#x27;0&#x27;</span>;
-        <span class="keyword">for</span> (<span class="type">int</span> j = i + <span class="number">1</span>; j &lt;= n; j++)
-            cin &gt;&gt; mp[i][j];
-    &#125;
-    <span class="comment">// for (int i = 1; i &lt;= n; i++)</span>
-    <span class="comment">//     for (int j = 1; j &lt;= n; j++)</span>
-    <span class="comment">//         cout &lt;&lt; mp[i][j] &lt;&lt; &quot; \n&quot;[j == n];</span>
-    <span class="keyword">for</span> (<span class="type">int</span> gap = <span class="number">1</span>; gap &lt;= n; gap++)
-    &#123;
-        <span class="keyword">for</span> (<span class="type">int</span> u = <span class="number">1</span>; u + gap &lt;= n; u++)
-        &#123;
-            <span class="type">int</span> v = u + gap;
-            <span class="comment">// cout &lt;&lt; u &lt;&lt; &quot; &quot; &lt;&lt; v &lt;&lt; endl;</span>
-            <span class="keyword">for</span> (<span class="type">int</span> k = u + <span class="number">1</span>; k &lt; v; k++)
-                (f[u][v] += g[u][k] * f[k][v]) %= <span class="number">2</span>;
-            <span class="comment">// cout &lt;&lt; f[u][v] &lt;&lt; &quot; &quot; &lt;&lt; mp[u][v] &lt;&lt; endl;</span>
-            <span class="keyword">if</span> ((f[u][v] &amp; <span class="number">1</span>) != (mp[u][v] ^ <span class="string">&#x27;0&#x27;</span>))
-                (f[u][v] += <span class="number">1</span>) %= <span class="number">2</span>, g[u][v] = <span class="number">1</span>, ans++;
-            <span class="comment">// cout &lt;&lt; f[u][v] &lt;&lt; endl</span>
-            <span class="comment">//      &lt;&lt; endl;</span>
-        &#125;
-    &#125;
-    cout &lt;&lt; ans &lt;&lt; endl;
-    <span class="keyword">return</span> <span class="number">0</span>;
-&#125;</code></pre>
-<h1 id="t2"><a class="markdownIt-Anchor" href="#t2"></a> T2</h1>
-<h2 id="人类智慧"><a class="markdownIt-Anchor" href="#人类智慧"></a> 人类智慧</h2>
-<p>记忆化搜索，<span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><msub><mi>g</mi><mi>u</mi></msub></mrow><annotation encoding="application/x-tex">g_u</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.625em;vertical-align:-0.19444em;"></span><span class="mord"><span class="mord mathnormal" style="margin-right:0.03588em;">g</span><span class="msupsub"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist" style="height:0.151392em;"><span style="top:-2.5500000000000003em;margin-left:-0.03588em;margin-right:0.05em;"><span class="pstrut" style="height:2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mathnormal mtight">u</span></span></span></span><span class="vlist-s">​</span></span><span class="vlist-r"><span class="vlist" style="height:0.15em;"><span></span></span></span></span></span></span></span></span></span> 表示 <span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>u</mi></mrow><annotation encoding="application/x-tex">u</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.43056em;vertical-align:0em;"></span><span class="mord mathnormal">u</span></span></span></span> 出发的最长路，<span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><msub><mi>f</mi><mi>u</mi></msub></mrow><annotation encoding="application/x-tex">f_u</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.8888799999999999em;vertical-align:-0.19444em;"></span><span class="mord"><span class="mord mathnormal" style="margin-right:0.10764em;">f</span><span class="msupsub"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist" style="height:0.151392em;"><span style="top:-2.5500000000000003em;margin-left:-0.10764em;margin-right:0.05em;"><span class="pstrut" style="height:2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mathnormal mtight">u</span></span></span></span><span class="vlist-s">​</span></span><span class="vlist-r"><span class="vlist" style="height:0.15em;"><span></span></span></span></span></span></span></span></span></span> 表示 <span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>u</mi></mrow><annotation encoding="application/x-tex">u</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.43056em;vertical-align:0em;"></span><span class="mord mathnormal">u</span></span></span></span> 出发最长路中字典序最小的收益。</p>
-<p>然后发现字典序不是很好转移，考虑第一步一样取答案最小。喜提过了 19 个然后 WA on #20。</p>
-<p>主播赛时到这里就跳了，然后发现</p>
-<p><a target="_blank" rel="noopener" href="https://www.luogu.com.cn/blog/679936/au-t2-xian-xing-zuo-fa-post">https://www.luogu.com.cn/blog/679936/au-t2-xian-xing-zuo-fa-post</a></p>
-<p>我们记录两步就行了。</p>
-<p>WA on #20</p>
-<pre><code class="highlight cpp"><span class="meta">#<span class="keyword">include</span> <span class="string">&lt;bits/stdc++.h&gt;</span></span>
-<span class="keyword">using</span> <span class="keyword">namespace</span> std;
-<span class="keyword">typedef</span> <span class="type">long</span> <span class="type">long</span> ll;
-<span class="keyword">template</span> &lt;<span class="keyword">typename</span> T&gt;
-<span class="function"><span class="type">void</span> <span class="title">read</span><span class="params">(T &amp;x)</span></span>
-<span class="function"></span>&#123;
-    x = <span class="number">0</span>;
-    <span class="type">int</span> f = <span class="number">1</span>;
-    <span class="type">char</span> c = <span class="built_in">getchar</span>();
-    <span class="keyword">for</span> (; c &lt; <span class="string">&#x27;0&#x27;</span> || c &gt; <span class="string">&#x27;9&#x27;</span>; c = <span class="built_in">getchar</span>())
-        <span class="keyword">if</span> (c == <span class="string">&#x27;-&#x27;</span>)
-            f = -f;
-    <span class="keyword">for</span> (; c &gt;= <span class="string">&#x27;0&#x27;</span> &amp;&amp; c &lt;= <span class="string">&#x27;9&#x27;</span>; c = <span class="built_in">getchar</span>())
-        x = x * <span class="number">10</span> + c - <span class="string">&#x27;0&#x27;</span>;
-    x *= f;
-&#125;
-<span class="keyword">template</span> &lt;<span class="keyword">typename</span> T, <span class="keyword">typename</span>... Args&gt;
-<span class="function"><span class="type">void</span> <span class="title">read</span><span class="params">(T &amp;x, Args &amp;...y)</span></span>
-<span class="function"></span>&#123;
-    <span class="built_in">read</span>(x);
-    <span class="built_in">read</span>(y...);
-&#125;
-<span class="keyword">template</span> &lt;<span class="keyword">typename</span> T&gt;
-<span class="function"><span class="type">void</span> <span class="title">chkmx</span><span class="params">(T &amp;x, T y)</span> </span>&#123; x = <span class="built_in">max</span>(x, y); &#125;
 <span class="keyword">template</span> &lt;<span class="keyword">typename</span> T&gt;
 <span class="function"><span class="type">void</span> <span class="title">chkmn</span><span class="params">(T &amp;x, T y)</span> </span>&#123; x = <span class="built_in">min</span>(x, y); &#125;
-<span class="keyword">typedef</span> pair&lt;ll, ll&gt; pii;
+<span class="keyword">typedef</span> <span class="type">long</span> <span class="type">long</span> ll;
 <span class="type">int</span> n, m;
-set&lt;pii&gt; e[<span class="number">200020</span>];
-ll f[<span class="number">200020</span>];
-ll g[<span class="number">200020</span>];
-ll len;
-<span class="function">pii <span class="title">dfs</span><span class="params">(<span class="type">int</span> u, <span class="type">int</span> len)</span></span>
+vector&lt;array&lt;<span class="type">int</span>, 2&gt;&gt; a[<span class="number">30</span>];
+<span class="type">bool</span> vis[<span class="number">30</span>];
+<span class="type">bool</span> del[<span class="number">30</span>];
+<span class="type">int</span> v[<span class="number">30</span>];
+ll ans = <span class="number">1e18</span>;
+<span class="function"><span class="type">void</span> <span class="title">dfs</span><span class="params">(<span class="type">int</span> dep)</span></span>
 <span class="function"></span>&#123;
-    ll &amp;t = f[u];
-    ll &amp;T = g[u];
-    <span class="keyword">if</span> (~t)
-        <span class="keyword">return</span> &#123;t, T&#125;;
-    <span class="keyword">if</span> (e[u].<span class="built_in">empty</span>())
-        <span class="keyword">return</span> &#123;t = <span class="number">0</span>, T = <span class="number">0</span>&#125;;
-    ll val = <span class="number">-1</span>;
-    <span class="keyword">for</span> (pii i : e[u])
+    <span class="keyword">if</span> (dep == n + <span class="number">1</span>)
     &#123;
-        <span class="built_in">dfs</span>(i.second, len + <span class="number">1</span>);
-        ll res = i.first + f[i.second];
-        <span class="keyword">if</span> (g[i.second] + <span class="number">1</span> &gt; T)
-            val = i.first, t = res, T = g[i.second] + <span class="number">1</span>;
-        <span class="keyword">else</span> <span class="keyword">if</span> (g[i.second] + <span class="number">1</span> == T &amp;&amp; val == i.first)
-            <span class="built_in">chkmn</span>(t, res);
+        <span class="built_in">memset</span>(del, <span class="number">0</span>, <span class="built_in">sizeof</span>(del));
+        ll tmp = <span class="number">0</span>;
+        <span class="keyword">for</span> (<span class="type">int</span> i = <span class="number">1</span>; i &lt;= n; i++)
+        &#123;
+            <span class="type">int</span> u = v[i];
+            <span class="type">int</span> tot = <span class="number">0</span>;
+            ll sum = <span class="number">0</span>;
+            <span class="keyword">for</span> (<span class="keyword">auto</span> [v, w] : a[u])
+            &#123;
+                <span class="keyword">if</span> (del[v])
+                    <span class="keyword">continue</span>;
+                tot++;
+                sum += w;
+            &#125;
+            del[u] = <span class="number">1</span>;
+            tmp += sum * tot;
+        &#125;
+        <span class="built_in">chkmn</span>(ans, tmp);
+        <span class="keyword">return</span>;
     &#125;
-    <span class="keyword">return</span> &#123;t, T&#125;;
+    <span class="keyword">for</span> (<span class="type">int</span> i = <span class="number">1</span>; i &lt;= n; i++)
+    &#123;
+        <span class="keyword">if</span> (vis[i])
+            <span class="keyword">continue</span>;
+        v[dep] = i;
+        vis[i] = <span class="number">1</span>;
+        <span class="built_in">dfs</span>(dep + <span class="number">1</span>);
+        vis[i] = <span class="number">0</span>;
+        v[dep] = <span class="number">0</span>;
+    &#125;
 &#125;
 <span class="function"><span class="type">int</span> <span class="title">main</span><span class="params">()</span></span>
 <span class="function"></span>&#123;
-    <span class="built_in">read</span>(n, m);
+    cin &gt;&gt; n &gt;&gt; m;
     <span class="keyword">while</span> (m--)
     &#123;
-        <span class="type">int</span> x, y, z;
-        <span class="built_in">read</span>(x, y, z);
-        e[x].<span class="built_in">insert</span>(&#123;z, y&#125;);
+        <span class="type">int</span> u, v, w;
+        cin &gt;&gt; u &gt;&gt; v &gt;&gt; w;
+        a[u].<span class="built_in">push_back</span>(&#123;v, w&#125;);
+        a[v].<span class="built_in">push_back</span>(&#123;u, w&#125;);
     &#125;
-    <span class="built_in">memset</span>(f, <span class="number">-1</span>, <span class="built_in">sizeof</span>(f));
-    <span class="keyword">for</span> (<span class="type">int</span> i = <span class="number">1</span>; i &lt;= n; i++)
-    &#123;
-        pii res = <span class="built_in">dfs</span>(i, <span class="number">0</span>);
-        cout &lt;&lt; res.second &lt;&lt; <span class="string">&quot; &quot;</span> &lt;&lt; res.first &lt;&lt; <span class="string">&#x27;\n&#x27;</span>;
-    &#125;
+    <span class="built_in">dfs</span>(<span class="number">1</span>);
+    cout &lt;&lt; ans &lt;&lt; <span class="string">&#x27;\n&#x27;</span>;
     <span class="keyword">return</span> <span class="number">0</span>;
 &#125;</code></pre>
-<p>AC</p>
-<pre><code class="highlight cpp">别急，等发数据了再发。顺便去你谷加强一下。</code></pre>
-<h2 id="正解"><a class="markdownIt-Anchor" href="#正解"></a> 正解</h2>
-<p>拓扑。</p>
-<p>等我先学习一下。</p>
-<h1 id="t3"><a class="markdownIt-Anchor" href="#t3"></a> T3</h1>
-<h2 id="在线"><a class="markdownIt-Anchor" href="#在线"></a> 在线</h2>
-<p>发现按题目说的 <span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>f</mi><mo stretchy="false">(</mo><mi>y</mi><mo stretchy="false">)</mo></mrow><annotation encoding="application/x-tex">f(y)</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:1em;vertical-align:-0.25em;"></span><span class="mord mathnormal" style="margin-right:0.10764em;">f</span><span class="mopen">(</span><span class="mord mathnormal" style="margin-right:0.03588em;">y</span><span class="mclose">)</span></span></span></span> 就是个凹函数。</p>
-<p>容易发现对于整数 <span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>y</mi></mrow><annotation encoding="application/x-tex">y</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.625em;vertical-align:-0.19444em;"></span><span class="mord mathnormal" style="margin-right:0.03588em;">y</span></span></span></span> 当 <span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>a</mi><mo mathvariant="normal">≠</mo><mi>b</mi></mrow><annotation encoding="application/x-tex">a\neq b</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.8888799999999999em;vertical-align:-0.19444em;"></span><span class="mord mathnormal">a</span><span class="mspace" style="margin-right:0.2777777777777778em;"></span><span class="mrel"><span class="mrel"><span class="mord vbox"><span class="thinbox"><span class="rlap"><span class="strut" style="height:0.8888799999999999em;vertical-align:-0.19444em;"></span><span class="inner"><span class="mrel"></span></span><span class="fix"></span></span></span></span></span><span class="mrel">=</span></span><span class="mspace" style="margin-right:0.2777777777777778em;"></span></span><span class="base"><span class="strut" style="height:0.69444em;vertical-align:0em;"></span><span class="mord mathnormal">b</span></span></span></span> 时不存在非极值点的平台，只有在 <span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>a</mi><mo>=</mo><mi>b</mi></mrow><annotation encoding="application/x-tex">a=b</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.43056em;vertical-align:0em;"></span><span class="mord mathnormal">a</span><span class="mspace" style="margin-right:0.2777777777777778em;"></span><span class="mrel">=</span><span class="mspace" style="margin-right:0.2777777777777778em;"></span></span><span class="base"><span class="strut" style="height:0.69444em;vertical-align:0em;"></span><span class="mord mathnormal">b</span></span></span></span> 时存在平台，但此时函数是一条直线。</p>
-<p>整数三分成立，贺板子。</p>
-<p>然后考虑优化 <span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>f</mi><mo stretchy="false">(</mo><mi>y</mi><mo stretchy="false">)</mo></mrow><annotation encoding="application/x-tex">f(y)</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:1em;vertical-align:-0.25em;"></span><span class="mord mathnormal" style="margin-right:0.10764em;">f</span><span class="mopen">(</span><span class="mord mathnormal" style="margin-right:0.03588em;">y</span><span class="mclose">)</span></span></span></span> 的计算，稍微拆一下就知道记录前缀和后缀和即可，二分当前 <span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>y</mi></mrow><annotation encoding="application/x-tex">y</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.625em;vertical-align:-0.19444em;"></span><span class="mord mathnormal" style="margin-right:0.03588em;">y</span></span></span></span> 在 <span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>x</mi></mrow><annotation encoding="application/x-tex">x</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.43056em;vertical-align:0em;"></span><span class="mord mathnormal">x</span></span></span></span> 序列中的位置即可单次 <span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>f</mi><mo stretchy="false">(</mo><mi>y</mi><mo stretchy="false">)</mo></mrow><annotation encoding="application/x-tex">f(y)</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:1em;vertical-align:-0.25em;"></span><span class="mord mathnormal" style="margin-right:0.10764em;">f</span><span class="mopen">(</span><span class="mord mathnormal" style="margin-right:0.03588em;">y</span><span class="mclose">)</span></span></span></span> 做到 <span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>log</mi><mo>⁡</mo><mi>n</mi></mrow><annotation encoding="application/x-tex">\log n</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.8888799999999999em;vertical-align:-0.19444em;"></span><span class="mop">lo<span style="margin-right:0.01389em;">g</span></span><span class="mspace" style="margin-right:0.16666666666666666em;"></span><span class="mord mathnormal">n</span></span></span></span> 的效率，总过程是 <span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><msup><mo><mi>log</mi><mo>⁡</mo></mo><mn>2</mn></msup></mrow><annotation encoding="application/x-tex">\log^2</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:1.0928879999999999em;vertical-align:-0.19444em;"></span><span class="mop"><span class="mop">lo<span style="margin-right:0.01389em;">g</span></span><span class="msupsub"><span class="vlist-t"><span class="vlist-r"><span class="vlist" style="height:0.8984479999999999em;"><span style="top:-3.1473400000000002em;margin-right:0.05em;"><span class="pstrut" style="height:2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mtight">2</span></span></span></span></span></span></span></span></span></span></span> 的。</p>
-<pre><code class="highlight cpp"><span class="meta">#<span class="keyword">include</span> <span class="string">&lt;bits/stdc++.h&gt;</span></span>
-<span class="keyword">using</span> <span class="keyword">namespace</span> std;
-<span class="keyword">typedef</span> <span class="type">long</span> <span class="type">long</span> ll;
-<span class="type">int</span> n, q;
-<span class="type">int</span> x[<span class="number">200020</span>];
-ll pre[<span class="number">200020</span>];
-ll suf[<span class="number">200020</span>];
-ll a, b;
-<span class="function">ll <span class="title">f</span><span class="params">(ll k)</span></span>
-<span class="function"></span>&#123;
-    <span class="type">int</span> pos = <span class="built_in">upper_bound</span>(x + <span class="number">1</span>, x + n + <span class="number">1</span>, k) - x - <span class="number">1</span>;
-    <span class="comment">//[1,pos] [pos+1,n]</span>
-    <span class="keyword">return</span> a * (k * pos - pre[pos]) + b * (suf[pos + <span class="number">1</span>] - k * (n - pos));
-&#125;
-<span class="function"><span class="type">int</span> <span class="title">main</span><span class="params">()</span></span>
-<span class="function"></span>&#123;
-    cin &gt;&gt; n;
-    <span class="keyword">for</span> (<span class="type">int</span> i = <span class="number">1</span>; i &lt;= n; i++)
-        cin &gt;&gt; x[i];
-    <span class="built_in">sort</span>(x + <span class="number">1</span>, x + n + <span class="number">1</span>);
-    <span class="keyword">for</span> (<span class="type">int</span> i = <span class="number">1</span>; i &lt;= n; i++)
-        pre[i] = pre[i - <span class="number">1</span>] + x[i];
-    <span class="keyword">for</span> (<span class="type">int</span> i = n; i &gt;= <span class="number">1</span>; i--)
-        suf[i] = suf[i + <span class="number">1</span>] + x[i];
-    cin &gt;&gt; q;
-    <span class="keyword">while</span> (q--)
-    &#123;
-        cin &gt;&gt; a &gt;&gt; b;
-        <span class="type">int</span> l = <span class="number">0</span>, r = <span class="number">1e6</span> + <span class="number">1</span>;
-        <span class="keyword">while</span> (l &lt; r)
-        &#123;
-            <span class="type">int</span> ml = l + (r - l) / <span class="number">3</span>;
-            <span class="type">int</span> mr = r - (r - l) / <span class="number">3</span>;
-            <span class="comment">// cout &lt;&lt; ml &lt;&lt; &quot; &quot; &lt;&lt; mr &lt;&lt; &quot; &quot; &lt;&lt; f(ml) &lt;&lt; &quot; &quot; &lt;&lt; f(mr) &lt;&lt; endl;</span>
-            <span class="keyword">if</span> (<span class="built_in">f</span>(ml) &gt; <span class="built_in">f</span>(mr))
-                l = ml + <span class="number">1</span>;
-            <span class="keyword">else</span>
-                r = mr - <span class="number">1</span>;
+<pre><code class="highlight python"><span class="comment"># Python std</span>
+n, m = <span class="built_in">map</span>(<span class="built_in">int</span>, <span class="built_in">input</span>().split())
+e = [[]]
+<span class="keyword">for</span> i <span class="keyword">in</span> <span class="built_in">range</span>(n + <span class="number">1</span>):
+    t = []
+    <span class="keyword">for</span> j <span class="keyword">in</span> <span class="built_in">range</span>(n + <span class="number">1</span>):
+        t.append(-<span class="number">1</span>)
+    e.append(t)
+<span class="keyword">for</span> i <span class="keyword">in</span> <span class="built_in">range</span>(m):
+    u, v, w = <span class="built_in">map</span>(<span class="built_in">int</span>, <span class="built_in">input</span>().split())
+    e[u][v] = e[v][u] = w
+vis = [<span class="number">0</span>] * (n + <span class="number">1</span>)
+vv = [-<span class="number">1</span>] * (n + <span class="number">1</span>)
+
+ans = <span class="number">10</span>**<span class="number">18</span>
+
+
+<span class="keyword">def</span> <span class="title function_">dfs</span>(<span class="params">dep</span>):
+    <span class="keyword">global</span> ans
+    <span class="keyword">if</span> dep == n + <span class="number">1</span>:
+        dele = [<span class="number">0</span>] * (n + <span class="number">1</span>)
+        tmp = <span class="number">0</span>
+        <span class="keyword">for</span> i <span class="keyword">in</span> <span class="built_in">range</span>(<span class="number">1</span>, n + <span class="number">1</span>):
+            u = vv[i]
+            tot = <span class="number">0</span>
+            <span class="built_in">sum</span> = <span class="number">0</span>
+            <span class="keyword">for</span> v <span class="keyword">in</span> <span class="built_in">range</span>(<span class="number">1</span>, n + <span class="number">1</span>):
+                <span class="keyword">if</span> e[u][v] == -<span class="number">1</span>:
+                    <span class="keyword">continue</span>
+                <span class="keyword">if</span> dele[v]:
+                    <span class="keyword">continue</span>
+                tot += <span class="number">1</span>
+                <span class="built_in">sum</span> += e[u][v]
+            dele[u] = <span class="number">1</span>
+            tmp += <span class="built_in">sum</span> * tot
+        ans = <span class="built_in">min</span>(ans, tmp)
+        <span class="keyword">return</span>
+    <span class="keyword">for</span> u <span class="keyword">in</span> <span class="built_in">range</span>(<span class="number">1</span>, n + <span class="number">1</span>):
+        <span class="keyword">if</span> vis[u]:
+            <span class="keyword">continue</span>
+        vis[u] = <span class="number">1</span>
+        vv[dep] = u
+        dfs(dep + <span class="number">1</span>)
+        vis[u] = <span class="number">0</span>
+        vv[dep] = -<span class="number">1</span>
+
+
+dfs(<span class="number">1</span>)
+<span class="built_in">print</span>(ans)</code></pre>
+<pre><code class="highlight java"><span class="comment">// GPT 4o Java</span>
+
+<span class="keyword">import</span> java.util.*;
+
+<span class="keyword">public</span> <span class="keyword">class</span> <span class="title class_">Main</span> &#123;
+    <span class="keyword">static</span> <span class="type">int</span> n, m;
+    <span class="keyword">static</span> List&lt;<span class="type">int</span>[]&gt;[] graph;
+
+    <span class="keyword">public</span> <span class="keyword">static</span> <span class="keyword">void</span> <span class="title function_">main</span><span class="params">(String[] args)</span> &#123;
+        <span class="type">Scanner</span> <span class="variable">sc</span> <span class="operator">=</span> <span class="keyword">new</span> <span class="title class_">Scanner</span>(System.in);
+
+        n = sc.nextInt();
+        m = sc.nextInt();
+
+        graph = <span class="keyword">new</span> <span class="title class_">ArrayList</span>[n + <span class="number">1</span>];
+        <span class="keyword">for</span> (<span class="type">int</span> <span class="variable">i</span> <span class="operator">=</span> <span class="number">1</span>; i &lt;= n; ++i) &#123;
+            graph[i] = <span class="keyword">new</span> <span class="title class_">ArrayList</span>&lt;&gt;();
         &#125;
-        cout &lt;&lt; <span class="built_in">min</span>(<span class="built_in">f</span>(l), <span class="built_in">f</span>(r)) &lt;&lt; endl;
+
+        <span class="keyword">for</span> (<span class="type">int</span> <span class="variable">i</span> <span class="operator">=</span> <span class="number">0</span>; i &lt; m; ++i) &#123;
+            <span class="type">int</span> <span class="variable">u</span> <span class="operator">=</span> sc.nextInt(), v = sc.nextInt(), w = sc.nextInt();
+            graph[u].add(<span class="keyword">new</span> <span class="title class_">int</span>[]&#123;v, w&#125;);
+            graph[v].add(<span class="keyword">new</span> <span class="title class_">int</span>[]&#123;u, w&#125;);
+        &#125;
+
+        <span class="type">int</span>[] order = <span class="keyword">new</span> <span class="title class_">int</span>[n];
+        <span class="keyword">for</span> (<span class="type">int</span> <span class="variable">i</span> <span class="operator">=</span> <span class="number">0</span>; i &lt; n; ++i) order[i] = i + <span class="number">1</span>;
+
+        <span class="type">long</span> <span class="variable">ans</span> <span class="operator">=</span> Long.MAX_VALUE;
+
+        <span class="keyword">do</span> &#123;
+            <span class="comment">// 深复制图结构</span>
+            List&lt;<span class="type">int</span>[]&gt;[] g = <span class="keyword">new</span> <span class="title class_">ArrayList</span>[n + <span class="number">1</span>];
+            <span class="keyword">for</span> (<span class="type">int</span> <span class="variable">i</span> <span class="operator">=</span> <span class="number">1</span>; i &lt;= n; ++i) &#123;
+                g[i] = <span class="keyword">new</span> <span class="title class_">ArrayList</span>&lt;&gt;();
+                <span class="keyword">for</span> (<span class="type">int</span>[] edge : graph[i]) &#123;
+                    g[i].add(<span class="keyword">new</span> <span class="title class_">int</span>[]&#123;edge[<span class="number">0</span>], edge[<span class="number">1</span>]&#125;);
+                &#125;
+            &#125;
+
+            <span class="type">boolean</span>[] deleted = <span class="keyword">new</span> <span class="title class_">boolean</span>[n + <span class="number">1</span>];
+            <span class="type">long</span> <span class="variable">cost</span> <span class="operator">=</span> <span class="number">0</span>;
+
+            <span class="keyword">for</span> (<span class="type">int</span> <span class="variable">idx</span> <span class="operator">=</span> <span class="number">0</span>; idx &lt; n; ++idx) &#123;
+                <span class="type">int</span> <span class="variable">u</span> <span class="operator">=</span> order[idx];
+                <span class="type">int</span> <span class="variable">deg</span> <span class="operator">=</span> <span class="number">0</span>;
+                <span class="type">long</span> <span class="variable">sum</span> <span class="operator">=</span> <span class="number">0</span>;
+
+                <span class="keyword">for</span> (<span class="type">int</span>[] edge : g[u]) &#123;
+                    <span class="type">int</span> <span class="variable">v</span> <span class="operator">=</span> edge[<span class="number">0</span>], w = edge[<span class="number">1</span>];
+                    <span class="keyword">if</span> (!deleted[v]) &#123;
+                        deg++;
+                        sum += w;
+                    &#125;
+                &#125;
+
+                cost += (<span class="type">long</span>) deg * sum;
+                deleted[u] = <span class="literal">true</span>;
+
+                <span class="keyword">for</span> (<span class="type">int</span>[] edge : g[u]) &#123;
+                    <span class="type">int</span> <span class="variable">v</span> <span class="operator">=</span> edge[<span class="number">0</span>];
+                    g[v].removeIf(e -&gt; e[<span class="number">0</span>] == u);
+                &#125;
+
+                g[u].clear();
+            &#125;
+
+            ans = Math.min(ans, cost);
+
+        &#125; <span class="keyword">while</span> (nextPermutation(order));
+
+        System.out.println(ans);
     &#125;
-    <span class="keyword">return</span> <span class="number">0</span>;
+
+    <span class="comment">// Java 没有内建的 next_permutation，需要手写</span>
+    <span class="keyword">static</span> <span class="type">boolean</span> <span class="title function_">nextPermutation</span><span class="params">(<span class="type">int</span>[] arr)</span> &#123;
+        <span class="type">int</span> <span class="variable">i</span> <span class="operator">=</span> arr.length - <span class="number">2</span>;
+        <span class="keyword">while</span> (i &gt;= <span class="number">0</span> &amp;&amp; arr[i] &gt;= arr[i + <span class="number">1</span>]) i--;
+        <span class="keyword">if</span> (i &lt; <span class="number">0</span>) <span class="keyword">return</span> <span class="literal">false</span>;
+
+        <span class="type">int</span> <span class="variable">j</span> <span class="operator">=</span> arr.length - <span class="number">1</span>;
+        <span class="keyword">while</span> (arr[j] &lt;= arr[i]) j--;
+        swap(arr, i, j);
+        reverse(arr, i + <span class="number">1</span>, arr.length - <span class="number">1</span>);
+        <span class="keyword">return</span> <span class="literal">true</span>;
+    &#125;
+
+    <span class="keyword">static</span> <span class="keyword">void</span> <span class="title function_">swap</span><span class="params">(<span class="type">int</span>[] arr, <span class="type">int</span> i, <span class="type">int</span> j)</span> &#123;
+        <span class="type">int</span> <span class="variable">tmp</span> <span class="operator">=</span> arr[i]; arr[i] = arr[j]; arr[j] = tmp;
+    &#125;
+
+    <span class="keyword">static</span> <span class="keyword">void</span> <span class="title function_">reverse</span><span class="params">(<span class="type">int</span>[] arr, <span class="type">int</span> l, <span class="type">int</span> r)</span> &#123;
+        <span class="keyword">while</span> (l &lt; r) swap(arr, l++, r--);
+    &#125;
 &#125;</code></pre>
-<h2 id="离线"><a class="markdownIt-Anchor" href="#离线"></a> 离线</h2>
-<p>考虑把询问离线下来排个序就行，单 <span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>log</mi><mo>⁡</mo></mrow><annotation encoding="application/x-tex">\log</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.8888799999999999em;vertical-align:-0.19444em;"></span><span class="mop">lo<span style="margin-right:0.01389em;">g</span></span></span></span></span> 就做完了。</p>
 
 	</div>
 
@@ -876,7 +913,7 @@ ll a, b;
 	
 		<div class="post-tags">
 			<i class="fa fa-tags" aria-hidden="true"></i>
-			<a class="tag badge badge-secondary post-meta-detail-tag -none-link" href="/tags/%E4%B9%B1%E6%90%9E/" rel="tag">乱搞</a>
+			<a class="tag badge badge-secondary post-meta-detail-tag -none-link" href="/tags/%E6%90%9C%E7%B4%A2/" rel="tag">搜索</a>
 		</div>
 	
 </article>
@@ -918,7 +955,7 @@ ll a, b;
 				<span class="btn-inner--icon"><i class="fa fa-twitter"></i></span>
 			</button>
 		</a>
-		<a target="_blank" class="no-pjax icon-telegram" href="https://telegram.me/share/url?url=http://blog.cyx2009.top/archives/USACO23DEC_G/&text=[题解] 来点 USACO Gold 组人类智慧" tooltip="分享到 Telegram">
+		<a target="_blank" class="no-pjax icon-telegram" href="https://telegram.me/share/url?url=http://blog.cyx2009.top/archives/P12593/&text=[题解] P12593 沉石鱼惊旋" tooltip="分享到 Telegram">
 			<button class="btn btn-icon btn-primary" style="background: #42a5f5;border: none;">
 				<span class="btn-inner--icon"><i class="fa fa-telegram"></i></span>
 			</button>
@@ -935,13 +972,11 @@ ll a, b;
 </div>
 <script type="text/javascript">
 	socialShare("#share", {
-	    title : `[题解] 来点 USACO Gold 组人类智慧`,
-	    description : `T1
-发现 u→v 的方案数是可以用 u→k→v 算出来的，就类似 Floyd 枚举中心点。
-然后就...`,
+	    title : `[题解] P12593 沉石鱼惊旋`,
+	    description : `做题需要先看数据范围。发现 n≤8，显然我们可以枚举全排列枚举删除顺序。使用打删除标记遍历每一条边来...`,
 	    wechatQrcodeTitle : `分享到微信`,
 	    wechatQrcodeHelper : `微信扫描二维码`,
-	    source : `http://blog.cyx2009.top/archives/USACO23DEC_G/`
+	    source : `http://blog.cyx2009.top/archives/P12593/`
 	});
 	$("#share_show")[0].onclick = function(){
 		$("#share_container").addClass("opened");
@@ -1007,7 +1042,7 @@ ll a, b;
 
 
 
-<div class="post-navigation card shadow-sm"><div class="post-navigation-item post-navigation-pre"><span class="page-navigation-extra-text"><i class="fa fa-arrow-circle-o-left" aria-hidden="true"></i>上一篇</span><a href="/archives/Fermat_s_little_theorem_prove/" rel="prev"> [笔记] 费马小定理 证明</a></div><div class="post-navigation-item post-navigation-next"><span class="page-navigation-extra-text">下一篇 <i class="fa fa-arrow-circle-o-right" aria-hidden="true"></i></span><a href="/archives/P3628/" rel="next"> [题解] P3628 [APIO2010] 特别行动队</a></div></div>
+<div class="post-navigation card shadow-sm"><div class="post-navigation-item post-navigation-pre"></div><div class="post-navigation-item post-navigation-next"><span class="page-navigation-extra-text">下一篇 <i class="fa fa-arrow-circle-o-right" aria-hidden="true"></i></span><a href="/archives/20250509_essay/" rel="next"> 『置顶』[闲话] 20250509 闲话</a></div></div>
 
 
 
