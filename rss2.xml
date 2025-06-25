@@ -15,7 +15,7 @@
     <atom:link href="http://blog.cyx2009.top/rss2.xml" rel="self" type="application/rss+xml"/>
     
     <description>沉石鱼惊旋 的博客</description>
-    <pubDate>Wed, 25 Jun 2025 16:13:34 GMT</pubDate>
+    <pubDate>Wed, 25 Jun 2025 16:15:35 GMT</pubDate>
     <generator>http://hexo.io/</generator>
     
     <item>
@@ -39,7 +39,11 @@
       <category domain="http://blog.cyx2009.top/categories/Solution/">Solution</category>
       
       
+      <category domain="http://blog.cyx2009.top/tags/%E6%90%9C%E7%B4%A2/">搜索</category>
+      
       <category domain="http://blog.cyx2009.top/tags/%E6%9C%9F%E6%9C%9B-DP/">期望 DP</category>
+      
+      <category domain="http://blog.cyx2009.top/tags/%E7%AB%9E%E8%B5%9B%E5%9B%BE/">竞赛图</category>
       
       
       <comments>http://blog.cyx2009.top/archives/potpourri_1/#disqus_thread</comments>
@@ -445,9 +449,9 @@
       
       <category domain="http://blog.cyx2009.top/tags/%E6%A8%A1%E6%8B%9F%E8%B5%9B/">模拟赛</category>
       
-      <category domain="http://blog.cyx2009.top/tags/%E7%BA%BF%E6%AE%B5%E6%A0%91/">线段树</category>
-      
       <category domain="http://blog.cyx2009.top/tags/%E6%89%AB%E6%8F%8F%E7%BA%BF/">扫描线</category>
+      
+      <category domain="http://blog.cyx2009.top/tags/%E7%BA%BF%E6%AE%B5%E6%A0%91/">线段树</category>
       
       <category domain="http://blog.cyx2009.top/tags/%E5%80%8D%E5%A2%9E/">倍增</category>
       
