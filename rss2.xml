@@ -15,8 +15,36 @@
     <atom:link href="http://blog.cyx2009.top/rss2.xml" rel="self" type="application/rss+xml"/>
     
     <description>沉石鱼惊旋 的博客</description>
-    <pubDate>Sun, 22 Jun 2025 04:16:43 GMT</pubDate>
+    <pubDate>Wed, 25 Jun 2025 16:13:34 GMT</pubDate>
     <generator>http://hexo.io/</generator>
+    
+    <item>
+      <title>[题解] 杂题选讲 1</title>
+      <link>http://blog.cyx2009.top/archives/potpourri_1/</link>
+      <guid>http://blog.cyx2009.top/archives/potpourri_1/</guid>
+      <pubDate>Wed, 25 Jun 2025 13:26:00 GMT</pubDate>
+      
+        
+        
+          
+          
+      <description>&lt;p&gt;每个题都好好写题解有点多了，写点自己能看懂的笔记。&lt;/p&gt;
+&lt;h1 id=&quot;cf1267g-game-relics&quot;&gt;&lt;a class=&quot;markdownIt-Anchor&quot; href=&quot;#cf1267g-game-relics&quot;&gt;&lt;/a&gt; CF1267G Game</description>
+          
+        
+      
+      
+      
+      
+      <category domain="http://blog.cyx2009.top/categories/Solution/">Solution</category>
+      
+      
+      <category domain="http://blog.cyx2009.top/tags/%E6%9C%9F%E6%9C%9B-DP/">期望 DP</category>
+      
+      
+      <comments>http://blog.cyx2009.top/archives/potpourri_1/#disqus_thread</comments>
+      
+    </item>
     
     <item>
       <title>[题解] ABC411G Count Cycles</title>
@@ -417,9 +445,9 @@
       
       <category domain="http://blog.cyx2009.top/tags/%E6%A8%A1%E6%8B%9F%E8%B5%9B/">模拟赛</category>
       
-      <category domain="http://blog.cyx2009.top/tags/%E6%89%AB%E6%8F%8F%E7%BA%BF/">扫描线</category>
-      
       <category domain="http://blog.cyx2009.top/tags/%E7%BA%BF%E6%AE%B5%E6%A0%91/">线段树</category>
+      
+      <category domain="http://blog.cyx2009.top/tags/%E6%89%AB%E6%8F%8F%E7%BA%BF/">扫描线</category>
       
       <category domain="http://blog.cyx2009.top/tags/%E5%80%8D%E5%A2%9E/">倍增</category>
       
@@ -571,34 +599,6 @@
       
       
       <comments>http://blog.cyx2009.top/archives/CF2077F/#disqus_thread</comments>
-      
-    </item>
-    
-    <item>
-      <title>[题解] ARC193D Magnets</title>
-      <link>http://blog.cyx2009.top/archives/ARC193D/</link>
-      <guid>http://blog.cyx2009.top/archives/ARC193D/</guid>
-      <pubDate>Mon, 17 Mar 2025 03:02:00 GMT</pubDate>
-      
-        
-        
-          
-          
-      <description>&lt;h1 id=&quot;题意&quot;&gt;&lt;a class=&quot;markdownIt-Anchor&quot; href=&quot;#题意&quot;&gt;&lt;/a&gt; 题意&lt;/h1&gt;
-&lt;p&gt;给定长度为 &lt;span class=&quot;katex&quot;&gt;&lt;span class=&quot;katex-mathml&quot;&gt;&lt;math</description>
-          
-        
-      
-      
-      
-      
-      <category domain="http://blog.cyx2009.top/categories/Solution/">Solution</category>
-      
-      
-      <category domain="http://blog.cyx2009.top/tags/%E8%B4%AA%E5%BF%83/">贪心</category>
-      
-      
-      <comments>http://blog.cyx2009.top/archives/ARC193D/#disqus_thread</comments>
       
     </item>
     
