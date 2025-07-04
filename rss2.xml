@@ -15,8 +15,36 @@
     <atom:link href="http://blog.cyx2009.top/rss2.xml" rel="self" type="application/rss+xml"/>
     
     <description>沉石鱼惊旋 的博客</description>
-    <pubDate>Mon, 30 Jun 2025 07:30:39 GMT</pubDate>
+    <pubDate>Mon, 30 Jun 2025 16:32:46 GMT</pubDate>
     <generator>http://hexo.io/</generator>
+    
+    <item>
+      <title>[游记] 百度之星 2025 游记</title>
+      <link>http://blog.cyx2009.top/archives/ASTAR2025/</link>
+      <guid>http://blog.cyx2009.top/archives/ASTAR2025/</guid>
+      <pubDate>Mon, 30 Jun 2025 16:28:00 GMT</pubDate>
+      
+        
+        
+          
+          
+      <description>&lt;p&gt;既然其他出题人集体自爆了，我也自爆一手。&lt;/p&gt;
+&lt;p&gt;今年我没有参加百度之星，因为我参与了出题。&lt;/p&gt;
+&lt;p&gt;本文是出题日记/kx&lt;/p&gt;
+&lt;h1 id=&quot;2025&quot;&gt;&lt;a class=&quot;markdownIt-Anchor&quot; href=&quot;#2025&quot;&gt;&lt;/a&gt;</description>
+          
+        
+      
+      
+      
+      
+      <category domain="http://blog.cyx2009.top/categories/TravelNote/">TravelNote</category>
+      
+      
+      
+      <comments>http://blog.cyx2009.top/archives/ASTAR2025/#disqus_thread</comments>
+      
+    </item>
     
     <item>
       <title>[题解] 杂题选讲 1</title>
@@ -443,9 +471,9 @@
       
       <category domain="http://blog.cyx2009.top/tags/%E6%A8%A1%E6%8B%9F%E8%B5%9B/">模拟赛</category>
       
-      <category domain="http://blog.cyx2009.top/tags/%E6%89%AB%E6%8F%8F%E7%BA%BF/">扫描线</category>
-      
       <category domain="http://blog.cyx2009.top/tags/%E7%BA%BF%E6%AE%B5%E6%A0%91/">线段树</category>
+      
+      <category domain="http://blog.cyx2009.top/tags/%E6%89%AB%E6%8F%8F%E7%BA%BF/">扫描线</category>
       
       <category domain="http://blog.cyx2009.top/tags/%E5%80%8D%E5%A2%9E/">倍增</category>
       
@@ -569,34 +597,6 @@
       
       
       <comments>http://blog.cyx2009.top/archives/P11918/#disqus_thread</comments>
-      
-    </item>
-    
-    <item>
-      <title>[题解] CF2077F AND x OR</title>
-      <link>http://blog.cyx2009.top/archives/CF2077F/</link>
-      <guid>http://blog.cyx2009.top/archives/CF2077F/</guid>
-      <pubDate>Mon, 17 Mar 2025 11:05:00 GMT</pubDate>
-      
-        
-        
-          
-          
-      <description>&lt;h1 id=&quot;题意&quot;&gt;&lt;a class=&quot;markdownIt-Anchor&quot; href=&quot;#题意&quot;&gt;&lt;/a&gt; 题意&lt;/h1&gt;
-&lt;p&gt;我们称一个 &lt;span class=&quot;katex&quot;&gt;&lt;span class=&quot;katex-mathml&quot;&gt;&lt;math</description>
-          
-        
-      
-      
-      
-      
-      <category domain="http://blog.cyx2009.top/categories/Solution/">Solution</category>
-      
-      
-      <category domain="http://blog.cyx2009.top/tags/%E4%B9%B1%E6%90%9E/">乱搞</category>
-      
-      
-      <comments>http://blog.cyx2009.top/archives/CF2077F/#disqus_thread</comments>
       
     </item>
     
