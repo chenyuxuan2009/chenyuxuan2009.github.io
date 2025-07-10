@@ -5,7 +5,13 @@
 <link rel="stylesheet" href="/css/bilicard.css">
 <!-- hexo injector head_begin end -->
 
+<script src="https://cdn.jsdelivr.net/npm/mermaid/dist/mermaid.min.js"></script>
+<script>
+  mermaid.initialize({ startOnLoad: true });
 </script>
+
+</script>
+
 	<link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/highlight.js/11.1.0/styles/a11y-light.min.css">
 	<script src="//cdnjs.cloudflare.com/ajax/libs/highlight.js/11.1.0/highlight.min.js"></script>
 	
@@ -786,7 +792,7 @@ enter回车一次</code></pre>
 <p>然后输入</p>
 <pre><code class="highlight bash">ssh -T git@github.com</code></pre>
 <p>确认是否绑定成功，有要输入 y 的就输入。</p>
-<p>出现 Hi …即可。</p>
+<p>出现 Hi ...即可。</p>
 <h3 id="本地测试"><a class="markdownIt-Anchor" href="#本地测试"></a> 本地测试</h3>
 <p>在根目录里输入</p>
 <pre><code class="highlight bash">hexo cl &amp;&amp; hexo g &amp;&amp; hexo s</code></pre>
@@ -1392,6 +1398,15 @@ hexo cl &amp;&amp; hexo g &amp;&amp; hexo d</code></pre>
 
         
 
+        
+          <script src='https://unpkg.com/mermaid@7.1.2/dist/mermaid.min.js'></script>
+          <script>
+            if (window.mermaid) {
+              mermaid.initialize({theme: 'forest'});
+            }
+          </script>
+        
+        
     </div>
 </div>
 <noscript>
