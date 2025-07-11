@@ -1078,22 +1078,38 @@ string s[<span class="number">3</span>];
                             本站访客数 <span id="busuanzi_value_site_uv"></span> 人次
                         </span>
                         <span id="timeDate">载入时间...</span>
-                        <script>
-                            var now = new Date(); 
-                            function createtime() { 
-                                var grt= new Date("03/28/2022 20:00:00");//在此处修改你的建站时间
-                                now.setTime(now.getTime()+250); 
-                                days = (now - grt ) / 1000 / 60 / 60 / 24; dnum = Math.floor(days); 
-                                hours = (now - grt ) / 1000 / 60 / 60 - (24 * dnum); hnum = Math.floor(hours); 
-                                if(String(hnum).length ==1 ){hnum = "0" + hnum;} minutes = (now - grt ) / 1000 /60 - (24 * 60 * dnum) - (60 * hnum); 
-                                mnum = Math.floor(minutes); if(String(mnum).length ==1 ){mnum = "0" + mnum;} 
-                                seconds = (now - grt ) / 1000 - (24 * 60 * 60 * dnum) - (60 * 60 * hnum) - (60 * mnum); 
-                                snum = Math.round(seconds); if(String(snum).length ==1 ){snum = "0" + snum;} 
-                                document.getElementById("timeDate").innerHTML = "本站已安全运行 "+dnum+" 天 "+ hnum + " 小时 " + mnum + " 分 " + snum + " 秒"; 
-                                // document.getElementById("times").innerHTML = hnum + " 小时 " + mnum + " 分 " + snum + " 秒"; 
-                            } 
-                        setInterval("createtime()",250);
-                        </script>
+                          <script>
+  function createtime() {
+    // 建站时间，东八区 +08:00
+    var grt = new Date("2022-03-28T20:00:00+08:00");
+    var now = new Date();
+
+    var diff = now - grt;
+
+    var days = diff / 1000 / 60 / 60 / 24;
+    var dnum = Math.floor(days);
+
+    var hours = diff / 1000 / 60 / 60 - (24 * dnum);
+    var hnum = Math.floor(hours);
+    if (String(hnum).length == 1) hnum = "0" + hnum;
+
+    var minutes = diff / 1000 / 60 - (24 * 60 * dnum) - (60 * hnum);
+    var mnum = Math.floor(minutes);
+    if (String(mnum).length == 1) mnum = "0" + mnum;
+
+    var seconds = diff / 1000 - (24 * 60 * 60 * dnum) - (60 * 60 * hnum) - (60 * mnum);
+    var snum = Math.floor(seconds);
+    if (String(snum).length == 1) snum = "0" + snum;
+
+    document.getElementById("timeDate").innerHTML =
+      "本站已安全运行 " + dnum + " 天 " + hnum + " 小时 " + mnum + " 分 " + snum + " 秒";
+  }
+
+  // 立即执行一次
+  createtime();
+  // 每 1 秒刷新一次
+  setInterval(createtime, 1000);
+                          </script>
                         <style>
                             .particle {
   position: fixed;
@@ -1126,101 +1142,6 @@ string s[<span class="number">3</span>];
   }
 }
                         </style>
-                        <script>
-
-                  const colors = ['#FF1461', '#18FF92', '#5A87FF', '#FBF38C'];
-
-  
-
-  document.addEventListener('click', (e) => {
-
-    const ripple = document.createElement('div');
-
-    ripple.className = 'ripple';
-
-    ripple.style.left = `${e.clientX}px`;
-
-    ripple.style.top = `${e.clientY}px`;
-
-    document.body.appendChild(ripple);
-
-    
-
-    // パーティクルを8個生成
-
-    for (let i = 0; i < 8; i++) {
-
-      const particle = document.createElement('div');
-
-      particle.className = 'particle';
-
-      particle.style.backgroundColor = colors[Math.floor(Math.random() * colors.length)];
-
-      particle.style.left = `${e.clientX - 4}px`;
-
-      particle.style.top = `${e.clientY - 4}px`;
-
-      
-
-      // アニメーションの初期設定
-
-      const angle = ((i * 45 + 22.5) * Math.PI) / 180;
-
-      const velocity = 2 + Math.random() * 2;
-
-      const startTime = performance.now();
-
-      
-
-      // アニメーション実行
-
-      const animate = (currentTime) => {
-
-        const progress = (currentTime - startTime) / 600;
-
-        
-
-        if (progress >= 1) {
-
-          particle.remove();
-
-          return;
-
-        }
-
-        
-
-        particle.style.left = `${e.clientX - 4 + Math.cos(angle) * velocity * progress * 20}px`;
-
-        particle.style.top = `${e.clientY - 4 + Math.sin(angle) * velocity * progress * 20}px`;
-
-        particle.style.opacity = 1 - progress;
-
-        particle.style.transform = `scale(${1 - progress})`;
-
-        
-
-        requestAnimationFrame(animate);
-
-      };
-
-      
-
-      document.body.appendChild(particle);
-
-      requestAnimationFrame(animate);
-
-    }
-
-    
-
-    // 600ms後に波紋を削除
-
-    setTimeout(() => ripple.remove(), 600);
-
-  });
-
-                </script>
                      <!--    <script>
         window.onload = (() => {
             //定义点击出现文字类
@@ -1359,6 +1280,54 @@ string s[<span class="number">3</span>];
             frontShow.init();
         })();
                         </script> -->
+                     <script>
+                  const colors = ['#FF1461', '#18FF92', '#5A87FF', '#FBF38C'];
+  
+  document.addEventListener('click', (e) => {
+    const ripple = document.createElement('div');
+    ripple.className = 'ripple';
+    ripple.style.left = `${e.clientX}px`;
+    ripple.style.top = `${e.clientY}px`;
+    document.body.appendChild(ripple);
+    
+    // パーティクルを8個生成
+    for (let i = 0; i < 8; i++) {
+      const particle = document.createElement('div');
+      particle.className = 'particle';
+      particle.style.backgroundColor = colors[Math.floor(Math.random() * colors.length)];
+      particle.style.left = `${e.clientX - 4}px`;
+      particle.style.top = `${e.clientY - 4}px`;
+      
+      // アニメーションの初期設定
+      const angle = ((i * 45 + 22.5) * Math.PI) / 180;
+      const velocity = 2 + Math.random() * 2;
+      const startTime = performance.now();
+      
+      // アニメーション実行
+      const animate = (currentTime) => {
+        const progress = (currentTime - startTime) / 600;
+        
+        if (progress >= 1) {
+          particle.remove();
+          return;
+        }
+        
+        particle.style.left = `${e.clientX - 4 + Math.cos(angle) * velocity * progress * 20}px`;
+        particle.style.top = `${e.clientY - 4 + Math.sin(angle) * velocity * progress * 20}px`;
+        particle.style.opacity = 1 - progress;
+        particle.style.transform = `scale(${1 - progress})`;
+        
+        requestAnimationFrame(animate);
+      };
+      
+      document.body.appendChild(particle);
+      requestAnimationFrame(animate);
+    }
+    
+    // 600ms後に波紋を削除
+    setTimeout(() => ripple.remove(), 600);
+  });
+                </script>
                     </footer>
                 </main>
             </div>
@@ -1407,7 +1376,7 @@ string s[<span class="number">3</span>];
             }
           </script>
         
-        
+
     </div>
 </div>
 <noscript>
