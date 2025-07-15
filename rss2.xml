@@ -15,7 +15,7 @@
     <atom:link href="http://blog.cyx2009.top/rss2.xml" rel="self" type="application/rss+xml"/>
     
     <description>沉石鱼惊旋 的博客</description>
-    <pubDate>Mon, 30 Jun 2025 16:32:46 GMT</pubDate>
+    <pubDate>Tue, 15 Jul 2025 10:00:05 GMT</pubDate>
     <generator>http://hexo.io/</generator>
     
     <item>
@@ -28,10 +28,8 @@
         
           
           
-      <description>&lt;p&gt;既然其他出题人集体自爆了，我也自爆一手。&lt;/p&gt;
-&lt;p&gt;今年我没有参加百度之星，因为我参与了出题。&lt;/p&gt;
-&lt;p&gt;本文是出题日记/kx&lt;/p&gt;
-&lt;h1 id=&quot;2025&quot;&gt;&lt;a class=&quot;markdownIt-Anchor&quot; href=&quot;#2025&quot;&gt;&lt;/a&gt;</description>
+      <description>&lt;p&gt;被制裁了。嘟嘟嘟。&lt;/p&gt;
+</description>
           
         
       
@@ -471,9 +469,9 @@
       
       <category domain="http://blog.cyx2009.top/tags/%E6%A8%A1%E6%8B%9F%E8%B5%9B/">模拟赛</category>
       
-      <category domain="http://blog.cyx2009.top/tags/%E7%BA%BF%E6%AE%B5%E6%A0%91/">线段树</category>
-      
       <category domain="http://blog.cyx2009.top/tags/%E6%89%AB%E6%8F%8F%E7%BA%BF/">扫描线</category>
+      
+      <category domain="http://blog.cyx2009.top/tags/%E7%BA%BF%E6%AE%B5%E6%A0%91/">线段树</category>
       
       <category domain="http://blog.cyx2009.top/tags/%E5%80%8D%E5%A2%9E/">倍增</category>
       
