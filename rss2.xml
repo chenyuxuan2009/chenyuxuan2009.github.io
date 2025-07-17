@@ -15,8 +15,34 @@
     <atom:link href="http://blog.cyx2009.top/rss2.xml" rel="self" type="application/rss+xml"/>
     
     <description>沉石鱼惊旋 的博客</description>
-    <pubDate>Tue, 15 Jul 2025 10:00:05 GMT</pubDate>
+    <pubDate>Thu, 17 Jul 2025 11:28:22 GMT</pubDate>
     <generator>http://hexo.io/</generator>
+    
+    <item>
+      <title>[题解] 杂题选讲 2</title>
+      <link>http://blog.cyx2009.top/archives/potpourri_2/</link>
+      <guid>http://blog.cyx2009.top/archives/potpourri_2/</guid>
+      <pubDate>Thu, 17 Jul 2025 13:38:00 GMT</pubDate>
+      
+        
+        
+          
+          
+      <description>&lt;h1 id=&quot;p5336-thusc-2016-成绩单&quot;&gt;&lt;a class=&quot;markdownIt-Anchor&quot; href=&quot;#p5336-thusc-2016-成绩单&quot;&gt;&lt;/a&gt; P5336 [THUSC 2016] 成绩单&lt;/h1&gt;
+&lt;p&gt;设 &lt;span</description>
+          
+        
+      
+      
+      
+      
+      <category domain="http://blog.cyx2009.top/categories/Solution/">Solution</category>
+      
+      
+      
+      <comments>http://blog.cyx2009.top/archives/potpourri_2/#disqus_thread</comments>
+      
+    </item>
     
     <item>
       <title>[游记] 百度之星 2025 游记</title>
@@ -469,9 +495,9 @@
       
       <category domain="http://blog.cyx2009.top/tags/%E6%A8%A1%E6%8B%9F%E8%B5%9B/">模拟赛</category>
       
-      <category domain="http://blog.cyx2009.top/tags/%E7%BA%BF%E6%AE%B5%E6%A0%91/">线段树</category>
-      
       <category domain="http://blog.cyx2009.top/tags/%E6%89%AB%E6%8F%8F%E7%BA%BF/">扫描线</category>
+      
+      <category domain="http://blog.cyx2009.top/tags/%E7%BA%BF%E6%AE%B5%E6%A0%91/">线段树</category>
       
       <category domain="http://blog.cyx2009.top/tags/%E5%80%8D%E5%A2%9E/">倍增</category>
       
@@ -565,36 +591,6 @@
       
       
       <comments>http://blog.cyx2009.top/archives/P11928/#disqus_thread</comments>
-      
-    </item>
-    
-    <item>
-      <title>[题解] [模拟赛 20250318] P11918 [PA 2025] 考试 / Egzamin</title>
-      <link>http://blog.cyx2009.top/archives/P11918/</link>
-      <guid>http://blog.cyx2009.top/archives/P11918/</guid>
-      <pubDate>Tue, 18 Mar 2025 09:53:00 GMT</pubDate>
-      
-        
-        
-          
-          
-      <description>&lt;h1 id=&quot;题意&quot;&gt;&lt;a class=&quot;markdownIt-Anchor&quot; href=&quot;#题意&quot;&gt;&lt;/a&gt; 题意&lt;/h1&gt;
-&lt;p&gt;有 &lt;span class=&quot;katex&quot;&gt;&lt;span class=&quot;katex-mathml&quot;&gt;&lt;math</description>
-          
-        
-      
-      
-      
-      
-      <category domain="http://blog.cyx2009.top/categories/Solution/">Solution</category>
-      
-      
-      <category domain="http://blog.cyx2009.top/tags/%E6%A8%A1%E6%8B%9F%E8%B5%9B/">模拟赛</category>
-      
-      <category domain="http://blog.cyx2009.top/tags/%E5%8A%A8%E6%80%81%E8%A7%84%E5%88%92/">动态规划</category>
-      
-      
-      <comments>http://blog.cyx2009.top/archives/P11918/#disqus_thread</comments>
       
     </item>
     
