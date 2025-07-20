@@ -15,8 +15,34 @@
     <atom:link href="http://blog.cyx2009.top/rss2.xml" rel="self" type="application/rss+xml"/>
     
     <description>沉石鱼惊旋 的博客</description>
-    <pubDate>Thu, 17 Jul 2025 11:28:22 GMT</pubDate>
+    <pubDate>Fri, 18 Jul 2025 08:43:05 GMT</pubDate>
     <generator>http://hexo.io/</generator>
+    
+    <item>
+      <title>[题解] P12975 疯狂星期四</title>
+      <link>http://blog.cyx2009.top/archives/P12975/</link>
+      <guid>http://blog.cyx2009.top/archives/P12975/</guid>
+      <pubDate>Fri, 18 Jul 2025 08:35:00 GMT</pubDate>
+      
+        
+        
+          
+          
+      <description>&lt;p&gt;&lt;s&gt;发现这题当时写的题解没保存。&lt;/s&gt;&lt;/p&gt;
+&lt;p&gt;注意到有取模，并且对如此小的数取模，猜测答案循环节与 &lt;span class=&quot;katex&quot;&gt;&lt;span class=&quot;katex-mathml&quot;&gt;&lt;math</description>
+          
+        
+      
+      
+      
+      
+      <category domain="http://blog.cyx2009.top/categories/Solution/">Solution</category>
+      
+      
+      
+      <comments>http://blog.cyx2009.top/archives/P12975/#disqus_thread</comments>
+      
+    </item>
     
     <item>
       <title>[题解] 杂题选讲 2</title>
@@ -495,9 +521,9 @@
       
       <category domain="http://blog.cyx2009.top/tags/%E6%A8%A1%E6%8B%9F%E8%B5%9B/">模拟赛</category>
       
-      <category domain="http://blog.cyx2009.top/tags/%E6%89%AB%E6%8F%8F%E7%BA%BF/">扫描线</category>
-      
       <category domain="http://blog.cyx2009.top/tags/%E7%BA%BF%E6%AE%B5%E6%A0%91/">线段树</category>
+      
+      <category domain="http://blog.cyx2009.top/tags/%E6%89%AB%E6%8F%8F%E7%BA%BF/">扫描线</category>
       
       <category domain="http://blog.cyx2009.top/tags/%E5%80%8D%E5%A2%9E/">倍增</category>
       
@@ -557,40 +583,6 @@
       
       
       <comments>http://blog.cyx2009.top/archives/CF1687D/#disqus_thread</comments>
-      
-    </item>
-    
-    <item>
-      <title>[题解] [模拟赛 20250318] P11928 [PA 2025] 子序列 / Podciągi</title>
-      <link>http://blog.cyx2009.top/archives/P11928/</link>
-      <guid>http://blog.cyx2009.top/archives/P11928/</guid>
-      <pubDate>Tue, 18 Mar 2025 12:58:00 GMT</pubDate>
-      
-        
-        
-          
-          
-      <description>&lt;h1 id=&quot;题意&quot;&gt;&lt;a class=&quot;markdownIt-Anchor&quot; href=&quot;#题意&quot;&gt;&lt;/a&gt; 题意&lt;/h1&gt;
-&lt;p&gt;给定长度 &lt;span class=&quot;katex&quot;&gt;&lt;span class=&quot;katex-mathml&quot;&gt;&lt;math</description>
-          
-        
-      
-      
-      
-      
-      <category domain="http://blog.cyx2009.top/categories/Solution/">Solution</category>
-      
-      
-      <category domain="http://blog.cyx2009.top/tags/%E6%A8%A1%E6%8B%9F%E8%B5%9B/">模拟赛</category>
-      
-      <category domain="http://blog.cyx2009.top/tags/%E7%BA%BF%E6%AE%B5%E6%A0%91/">线段树</category>
-      
-      <category domain="http://blog.cyx2009.top/tags/%E5%8A%A8%E6%80%81%E8%A7%84%E5%88%92/">动态规划</category>
-      
-      <category domain="http://blog.cyx2009.top/tags/%E7%9F%A9%E9%98%B5%E4%B9%98%E6%B3%95/">矩阵乘法</category>
-      
-      
-      <comments>http://blog.cyx2009.top/archives/P11928/#disqus_thread</comments>
       
     </item>
     
