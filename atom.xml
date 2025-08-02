@@ -6,7 +6,7 @@
   <link href="http://blog.cyx2009.top/atom.xml" rel="self"/>
   
   <link href="http://blog.cyx2009.top/"/>
-  <updated>2025-07-18T08:43:05.032Z</updated>
+  <updated>2025-08-02T06:55:54.525Z</updated>
   <id>http://blog.cyx2009.top/</id>
   
   <author>
@@ -15,6 +15,30 @@
   </author>
   
   <generator uri="https://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>[题解] 杂题选讲 3</title>
+    <link href="http://blog.cyx2009.top/archives/potpourri_3/"/>
+    <id>http://blog.cyx2009.top/archives/potpourri_3/</id>
+    <published>2025-08-01T08:38:00.000Z</published>
+    <updated>2025-08-02T06:55:54.525Z</updated>
+    
+    
+      
+      
+        
+        
+    <summary type="html">&lt;h1 id=&quot;模拟赛-梦熊-20250731-a&quot;&gt;&lt;a class=&quot;markdownIt-Anchor&quot; href=&quot;#模拟赛-梦熊-20250731-a&quot;&gt;&lt;/a&gt; 模拟赛 梦熊 20250731 A&lt;/h1&gt;
+&lt;p&gt;考虑把 &lt;span</summary>
+        
+      
+    
+    
+    
+    <category term="Solution" scheme="http://blog.cyx2009.top/categories/Solution/"/>
+    
+    
+  </entry>
   
   <entry>
     <title>[题解] P12975 疯狂星期四</title>
@@ -45,7 +69,7 @@
     <link href="http://blog.cyx2009.top/archives/potpourri_2/"/>
     <id>http://blog.cyx2009.top/archives/potpourri_2/</id>
     <published>2025-07-17T13:38:00.000Z</published>
-    <updated>2025-07-30T11:51:23.513Z</updated>
+    <updated>2025-08-01T09:14:13.816Z</updated>
     
     
       
@@ -93,7 +117,7 @@
     <link href="http://blog.cyx2009.top/archives/potpourri_1/"/>
     <id>http://blog.cyx2009.top/archives/potpourri_1/</id>
     <published>2025-06-25T13:26:00.000Z</published>
-    <updated>2025-07-21T12:44:47.779Z</updated>
+    <updated>2025-08-01T08:52:35.764Z</updated>
     
     
       
@@ -168,7 +192,7 @@
     <link href="http://blog.cyx2009.top/archives/20250509_essay/"/>
     <id>http://blog.cyx2009.top/archives/20250509_essay/</id>
     <published>2025-05-09T15:28:00.000Z</published>
-    <updated>2025-07-11T14:40:06.798Z</updated>
+    <updated>2025-08-02T12:58:44.691Z</updated>
     
     
       
@@ -251,7 +275,7 @@
     <link href="http://blog.cyx2009.top/archives/20250309_essay/"/>
     <id>http://blog.cyx2009.top/archives/20250309_essay/</id>
     <published>2025-04-09T11:21:00.000Z</published>
-    <updated>2025-07-11T14:47:27.303Z</updated>
+    <updated>2025-08-02T12:41:14.420Z</updated>
     
     
       
@@ -260,7 +284,7 @@
         
     <summary type="html">&lt;p&gt;这个题太简单了不太想专开一篇文章。&lt;/p&gt;
 &lt;p&gt;正好今天收到了逆天私信，就当个闲话记录了。&lt;/p&gt;
-&lt;p&gt;&lt;img src=&quot;https://cdn.luogu.com.cn/upload/image_hosting/k45t38xb.png&quot; alt=&quot;&quot;</summary>
+&lt;p&gt;&lt;img</summary>
         
       
     
@@ -486,9 +510,9 @@
     
     <category term="模拟赛" scheme="http://blog.cyx2009.top/tags/%E6%A8%A1%E6%8B%9F%E8%B5%9B/"/>
     
-    <category term="扫描线" scheme="http://blog.cyx2009.top/tags/%E6%89%AB%E6%8F%8F%E7%BA%BF/"/>
-    
     <category term="线段树" scheme="http://blog.cyx2009.top/tags/%E7%BA%BF%E6%AE%B5%E6%A0%91/"/>
+    
+    <category term="扫描线" scheme="http://blog.cyx2009.top/tags/%E6%89%AB%E6%8F%8F%E7%BA%BF/"/>
     
     <category term="倍增" scheme="http://blog.cyx2009.top/tags/%E5%80%8D%E5%A2%9E/"/>
     
@@ -515,32 +539,6 @@
     
     <category term="Solution" scheme="http://blog.cyx2009.top/categories/Solution/"/>
     
-    
-  </entry>
-  
-  <entry>
-    <title>[题解] CF1687D Cute number</title>
-    <link href="http://blog.cyx2009.top/archives/CF1687D/"/>
-    <id>http://blog.cyx2009.top/archives/CF1687D/</id>
-    <published>2025-03-19T01:57:00.000Z</published>
-    <updated>2025-03-19T02:37:31.434Z</updated>
-    
-    
-      
-      
-        
-        
-    <summary type="html">&lt;h1 id=&quot;题意&quot;&gt;&lt;a class=&quot;markdownIt-Anchor&quot; href=&quot;#题意&quot;&gt;&lt;/a&gt; 题意&lt;/h1&gt;
-&lt;p&gt;定义 &lt;span class=&quot;katex&quot;&gt;&lt;span class=&quot;katex-mathml&quot;&gt;&lt;math</summary>
-        
-      
-    
-    
-    
-    <category term="Solution" scheme="http://blog.cyx2009.top/categories/Solution/"/>
-    
-    
-    <category term="数论" scheme="http://blog.cyx2009.top/tags/%E6%95%B0%E8%AE%BA/"/>
     
   </entry>
   
