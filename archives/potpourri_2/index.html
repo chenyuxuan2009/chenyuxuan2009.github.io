@@ -28,7 +28,7 @@
 <meta property="og:description" content="P5336 [THUSC 2016] 成绩单 设 cost⁡(l,r)\operatorname{cost}(l,r)cost(l,r) 表示 [l,r][l,r][l,r] 删空的代价。因为和 wmax⁡w_{\max}wmax​ 和 wmin⁡w_{\min}wmin​ 相关，这也要知道。设 dp(l,r,L,R)dp(l,r,L,R)dp(l,r,L,R) 表示删空了 [l,r][l,r]">
 <meta property="og:locale" content="zh_CN">
 <meta property="article:published_time" content="2025-07-17T13:38:00.000Z">
-<meta property="article:modified_time" content="2025-08-01T09:14:13.816Z">
+<meta property="article:modified_time" content="2025-08-03T07:43:51.454Z">
 <meta property="article:author" content="沉石鱼惊旋">
 <meta name="twitter:card" content="summary">
 
@@ -643,7 +643,7 @@
 						
 						<div class="post-meta-detail post-meta-detail-time">
 							<i class="fa fa-clock-o" aria-hidden="true"></i>
-							<time title="发布于 2025-7-17 21:38:00 | 编辑于 2025-8-1 17:14:13">2025-7-17 21:38
+							<time title="发布于 2025-7-17 21:38:00 | 编辑于 2025-8-3 15:43:51">2025-7-17 21:38
 							</time>
 						</div>
 					
@@ -670,7 +670,7 @@
 						
 						<div class="post-meta-detail post-meta-detail-words">
 							<i class="fa fa-file-word-o" aria-hidden="true"></i>
-							11.2k 字
+							11.4k 字
 						</div>
 					
 						
@@ -678,7 +678,7 @@
 						
 						<div class="post-meta-detail post-meta-detail-readingtime">
 							<i class="fa fa-hourglass-end" aria-hidden="true"></i>
-							50 分钟
+							51 分钟
 						</div>
 					
 		</div>
@@ -1088,7 +1088,10 @@ j\leq\frac{G(k_1)-G(k_2)}{2(k_1-k_2)}\text{ 时选择 }k_2\text{ 进行转移}
 </div>
 <h1 id="模拟赛-洛谷-2025-noip-6-c"><a class="markdownIt-Anchor" href="#模拟赛-洛谷-2025-noip-6-c"></a> 模拟赛 洛谷 2025 NOIP #6 C</h1>
 <h1 id="模拟赛-洛谷-2025-noip-6-d"><a class="markdownIt-Anchor" href="#模拟赛-洛谷-2025-noip-6-d"></a> 模拟赛 洛谷 2025 NOIP #6 D</h1>
-<h1 id="占位"><a class="markdownIt-Anchor" href="#占位"></a> 占位</h1>
+<h1 id="cf2129c3-interactive-rbs-hard-version"><a class="markdownIt-Anchor" href="#cf2129c3-interactive-rbs-hard-version"></a> CF2129C3 Interactive RBS (Hard Version)</h1>
+<p>C1 考虑每次询问出来一个 <code>()</code> 或者 <code>)(</code>，具体的我们先问一次整个串，如果是 <span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mn>0</mn></mrow><annotation encoding="application/x-tex">0</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.64444em;vertical-align:0em;"></span><span class="mord">0</span></span></span></span> 就没有 <code>)(</code>，直接在反串上二分，否则原串上二分。</p>
+<p>然后就是一次询问要求我们确定两个位置，考虑问 <code>a) + ) + b)b)</code> 的形式。<code>+</code> 只是辅助理解的字符串拼接。这样 C1就过了。</p>
+<p>类似的，扣掉二分，C3 就是我们要一次问 <span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mo>≥</mo><mn>12</mn></mrow><annotation encoding="application/x-tex">\geq 12</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.7719400000000001em;vertical-align:-0.13597em;"></span><span class="mrel">≥</span><span class="mspace" style="margin-right:0.2777777777777778em;"></span></span><span class="base"><span class="strut" style="height:0.64444em;vertical-align:0em;"></span><span class="mord">1</span><span class="mord">2</span></span></span></span> 个位置。考虑如何区分，还是 <code>a) + ) + b)b)</code> 类似的，为了能区分出这个括号，我们必须让这个括号的方案数大于之前的之和。枚举一下所有括号串，随便模拟一下就行了，然后存一下每个方案数对应的字符串用来还原。</p>
 
 	</div>
 
