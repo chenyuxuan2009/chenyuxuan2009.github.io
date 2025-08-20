@@ -6,7 +6,7 @@
   <link href="http://blog.cyx2009.top/atom.xml" rel="self"/>
   
   <link href="http://blog.cyx2009.top/"/>
-  <updated>2025-08-15T12:33:35.392Z</updated>
+  <updated>2025-08-19T08:48:12.017Z</updated>
   <id>http://blog.cyx2009.top/</id>
   
   <author>
@@ -17,11 +17,35 @@
   <generator uri="https://hexo.io/">Hexo</generator>
   
   <entry>
+    <title>『置顶』[闲话] 我的那些原创题</title>
+    <link href="http://blog.cyx2009.top/archives/problems/"/>
+    <id>http://blog.cyx2009.top/archives/problems/</id>
+    <published>2025-08-17T12:39:25.919Z</published>
+    <updated>2025-08-19T08:48:12.017Z</updated>
+    
+    
+      
+      
+        
+        
+    <summary type="html">&lt;p&gt;这里是我的原创题合集。&lt;/p&gt;
+&lt;h1 id=&quot;p12593-沉石鱼惊旋&quot;&gt;&lt;a class=&quot;markdownIt-Anchor&quot; href=&quot;#p12593-沉石鱼惊旋&quot;&gt;&lt;/a&gt; P12593</summary>
+        
+      
+    
+    
+    
+    <category term="Essay" scheme="http://blog.cyx2009.top/categories/Essay/"/>
+    
+    
+  </entry>
+  
+  <entry>
     <title>[题解] 杂题选讲 3</title>
     <link href="http://blog.cyx2009.top/archives/potpourri_3/"/>
     <id>http://blog.cyx2009.top/archives/potpourri_3/</id>
     <published>2025-08-01T08:38:00.000Z</published>
-    <updated>2025-08-15T12:33:35.392Z</updated>
+    <updated>2025-08-19T12:24:38.834Z</updated>
     
     
       
@@ -69,7 +93,7 @@
     <link href="http://blog.cyx2009.top/archives/potpourri_2/"/>
     <id>http://blog.cyx2009.top/archives/potpourri_2/</id>
     <published>2025-07-17T13:38:00.000Z</published>
-    <updated>2025-08-10T11:57:42.206Z</updated>
+    <updated>2025-08-18T12:31:49.160Z</updated>
     
     
       
@@ -117,7 +141,7 @@
     <link href="http://blog.cyx2009.top/archives/potpourri_1/"/>
     <id>http://blog.cyx2009.top/archives/potpourri_1/</id>
     <published>2025-06-25T13:26:00.000Z</published>
-    <updated>2025-08-01T08:52:35.764Z</updated>
+    <updated>2025-08-19T06:26:24.651Z</updated>
     
     
       
@@ -515,30 +539,6 @@
     <category term="线段树" scheme="http://blog.cyx2009.top/tags/%E7%BA%BF%E6%AE%B5%E6%A0%91/"/>
     
     <category term="倍增" scheme="http://blog.cyx2009.top/tags/%E5%80%8D%E5%A2%9E/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>[题解] CF2066E Tropical Season</title>
-    <link href="http://blog.cyx2009.top/archives/CF2066E/"/>
-    <id>http://blog.cyx2009.top/archives/CF2066E/</id>
-    <published>2025-03-19T10:23:00.000Z</published>
-    <updated>2025-03-19T10:42:58.845Z</updated>
-    
-    
-      
-      
-        
-        
-    <summary type="html">&lt;h1 id=&quot;题意&quot;&gt;&lt;a class=&quot;markdownIt-Anchor&quot; href=&quot;#题意&quot;&gt;&lt;/a&gt; 题意&lt;/h1&gt;
-&lt;p&gt;有 &lt;span class=&quot;katex&quot;&gt;&lt;span class=&quot;katex-mathml&quot;&gt;&lt;math</summary>
-        
-      
-    
-    
-    
-    <category term="Solution" scheme="http://blog.cyx2009.top/categories/Solution/"/>
-    
     
   </entry>
   

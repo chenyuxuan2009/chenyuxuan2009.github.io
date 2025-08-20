@@ -15,8 +15,34 @@
     <atom:link href="http://blog.cyx2009.top/rss2.xml" rel="self" type="application/rss+xml"/>
     
     <description>沉石鱼惊旋 的博客</description>
-    <pubDate>Fri, 15 Aug 2025 12:33:35 GMT</pubDate>
+    <pubDate>Tue, 19 Aug 2025 08:48:12 GMT</pubDate>
     <generator>http://hexo.io/</generator>
+    
+    <item>
+      <title>『置顶』[闲话] 我的那些原创题</title>
+      <link>http://blog.cyx2009.top/archives/problems/</link>
+      <guid>http://blog.cyx2009.top/archives/problems/</guid>
+      <pubDate>Sun, 17 Aug 2025 12:39:25 GMT</pubDate>
+      
+        
+        
+          
+          
+      <description>&lt;p&gt;这里是我的原创题合集。&lt;/p&gt;
+&lt;h1 id=&quot;p12593-沉石鱼惊旋&quot;&gt;&lt;a class=&quot;markdownIt-Anchor&quot; href=&quot;#p12593-沉石鱼惊旋&quot;&gt;&lt;/a&gt; P12593</description>
+          
+        
+      
+      
+      
+      
+      <category domain="http://blog.cyx2009.top/categories/Essay/">Essay</category>
+      
+      
+      
+      <comments>http://blog.cyx2009.top/archives/problems/#disqus_thread</comments>
+      
+    </item>
     
     <item>
       <title>[题解] 杂题选讲 3</title>
@@ -555,32 +581,6 @@
       
       
       <comments>http://blog.cyx2009.top/archives/P11947/#disqus_thread</comments>
-      
-    </item>
-    
-    <item>
-      <title>[题解] CF2066E Tropical Season</title>
-      <link>http://blog.cyx2009.top/archives/CF2066E/</link>
-      <guid>http://blog.cyx2009.top/archives/CF2066E/</guid>
-      <pubDate>Wed, 19 Mar 2025 10:23:00 GMT</pubDate>
-      
-        
-        
-          
-          
-      <description>&lt;h1 id=&quot;题意&quot;&gt;&lt;a class=&quot;markdownIt-Anchor&quot; href=&quot;#题意&quot;&gt;&lt;/a&gt; 题意&lt;/h1&gt;
-&lt;p&gt;有 &lt;span class=&quot;katex&quot;&gt;&lt;span class=&quot;katex-mathml&quot;&gt;&lt;math</description>
-          
-        
-      
-      
-      
-      
-      <category domain="http://blog.cyx2009.top/categories/Solution/">Solution</category>
-      
-      
-      
-      <comments>http://blog.cyx2009.top/archives/CF2066E/#disqus_thread</comments>
       
     </item>
     
