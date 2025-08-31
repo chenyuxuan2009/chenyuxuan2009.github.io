@@ -6,7 +6,7 @@
   <link href="http://blog.cyx2009.top/atom.xml" rel="self"/>
   
   <link href="http://blog.cyx2009.top/"/>
-  <updated>2025-08-21T06:15:12.714Z</updated>
+  <updated>2025-08-31T11:55:58.139Z</updated>
   <id>http://blog.cyx2009.top/</id>
   
   <author>
@@ -15,6 +15,30 @@
   </author>
   
   <generator uri="https://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>[题解] 杂题选讲 4</title>
+    <link href="http://blog.cyx2009.top/archives/potpourri_4/"/>
+    <id>http://blog.cyx2009.top/archives/potpourri_4/</id>
+    <published>2025-08-28T08:13:00.000Z</published>
+    <updated>2025-08-31T11:55:58.139Z</updated>
+    
+    
+      
+      
+        
+        
+    <summary type="html">&lt;h1 id=&quot;cf1073e-segment-sum&quot;&gt;&lt;a class=&quot;markdownIt-Anchor&quot; href=&quot;#cf1073e-segment-sum&quot;&gt;&lt;/a&gt; CF1073E Segment Sum&lt;/h1&gt;
+&lt;p&gt;数位 DP，&lt;span</summary>
+        
+      
+    
+    
+    
+    <category term="Solution" scheme="http://blog.cyx2009.top/categories/Solution/"/>
+    
+    
+  </entry>
   
   <entry>
     <title>[题解] P10206 [JOI 2024 Final] 建设工程 2 / Construction Project 2</title>
@@ -72,7 +96,7 @@
     <link href="http://blog.cyx2009.top/archives/potpourri_3/"/>
     <id>http://blog.cyx2009.top/archives/potpourri_3/</id>
     <published>2025-08-01T08:38:00.000Z</published>
-    <updated>2025-08-24T11:10:38.256Z</updated>
+    <updated>2025-08-28T08:14:00.139Z</updated>
     
     
       
@@ -168,7 +192,7 @@
     <link href="http://blog.cyx2009.top/archives/potpourri_1/"/>
     <id>http://blog.cyx2009.top/archives/potpourri_1/</id>
     <published>2025-06-25T13:26:00.000Z</published>
-    <updated>2025-08-19T06:26:24.651Z</updated>
+    <updated>2025-08-30T06:40:11.300Z</updated>
     
     
       
@@ -295,7 +319,7 @@
     <link href="http://blog.cyx2009.top/archives/P12098/"/>
     <id>http://blog.cyx2009.top/archives/P12098/</id>
     <published>2025-04-10T15:04:00.000Z</published>
-    <updated>2025-04-10T15:28:16.718Z</updated>
+    <updated>2025-08-30T06:40:11.301Z</updated>
     
     
       
@@ -351,7 +375,7 @@
     <link href="http://blog.cyx2009.top/archives/B3760/"/>
     <id>http://blog.cyx2009.top/archives/B3760/</id>
     <published>2025-04-07T15:32:00.000Z</published>
-    <updated>2025-04-07T16:00:29.844Z</updated>
+    <updated>2025-08-30T06:41:53.468Z</updated>
     
     
       
@@ -504,36 +528,6 @@
     <category term="模拟赛" scheme="http://blog.cyx2009.top/tags/%E6%A8%A1%E6%8B%9F%E8%B5%9B/"/>
     
     <category term="Adhoc" scheme="http://blog.cyx2009.top/tags/Adhoc/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>[题解] [模拟赛 20250325] P11948 [KTSC 2025] 完美编号 / numbering</title>
-    <link href="http://blog.cyx2009.top/archives/P11948/"/>
-    <id>http://blog.cyx2009.top/archives/P11948/</id>
-    <published>2025-03-25T02:19:00.000Z</published>
-    <updated>2025-03-25T07:58:30.378Z</updated>
-    
-    
-      
-      
-        
-        
-    <summary type="html">&lt;h1 id=&quot;题意&quot;&gt;&lt;a class=&quot;markdownIt-Anchor&quot; href=&quot;#题意&quot;&gt;&lt;/a&gt; 题意&lt;/h1&gt;
-&lt;p&gt;给定 &lt;span class=&quot;katex&quot;&gt;&lt;span class=&quot;katex-mathml&quot;&gt;&lt;math</summary>
-        
-      
-    
-    
-    
-    <category term="Solution" scheme="http://blog.cyx2009.top/categories/Solution/"/>
-    
-    
-    <category term="模拟赛" scheme="http://blog.cyx2009.top/tags/%E6%A8%A1%E6%8B%9F%E8%B5%9B/"/>
-    
-    <category term="动态规划" scheme="http://blog.cyx2009.top/tags/%E5%8A%A8%E6%80%81%E8%A7%84%E5%88%92/"/>
-    
-    <category term="乱搞" scheme="http://blog.cyx2009.top/tags/%E4%B9%B1%E6%90%9E/"/>
     
   </entry>
   

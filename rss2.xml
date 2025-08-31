@@ -15,8 +15,34 @@
     <atom:link href="http://blog.cyx2009.top/rss2.xml" rel="self" type="application/rss+xml"/>
     
     <description>沉石鱼惊旋 的博客</description>
-    <pubDate>Thu, 21 Aug 2025 06:15:12 GMT</pubDate>
+    <pubDate>Sun, 31 Aug 2025 11:55:58 GMT</pubDate>
     <generator>http://hexo.io/</generator>
+    
+    <item>
+      <title>[题解] 杂题选讲 4</title>
+      <link>http://blog.cyx2009.top/archives/potpourri_4/</link>
+      <guid>http://blog.cyx2009.top/archives/potpourri_4/</guid>
+      <pubDate>Thu, 28 Aug 2025 08:13:00 GMT</pubDate>
+      
+        
+        
+          
+          
+      <description>&lt;h1 id=&quot;cf1073e-segment-sum&quot;&gt;&lt;a class=&quot;markdownIt-Anchor&quot; href=&quot;#cf1073e-segment-sum&quot;&gt;&lt;/a&gt; CF1073E Segment Sum&lt;/h1&gt;
+&lt;p&gt;数位 DP，&lt;span</description>
+          
+        
+      
+      
+      
+      
+      <category domain="http://blog.cyx2009.top/categories/Solution/">Solution</category>
+      
+      
+      
+      <comments>http://blog.cyx2009.top/archives/potpourri_4/#disqus_thread</comments>
+      
+    </item>
     
     <item>
       <title>[题解] P10206 [JOI 2024 Final] 建设工程 2 / Construction Project 2</title>
@@ -544,38 +570,6 @@
       
       
       <comments>http://blog.cyx2009.top/archives/P11946/#disqus_thread</comments>
-      
-    </item>
-    
-    <item>
-      <title>[题解] [模拟赛 20250325] P11948 [KTSC 2025] 完美编号 / numbering</title>
-      <link>http://blog.cyx2009.top/archives/P11948/</link>
-      <guid>http://blog.cyx2009.top/archives/P11948/</guid>
-      <pubDate>Tue, 25 Mar 2025 02:19:00 GMT</pubDate>
-      
-        
-        
-          
-          
-      <description>&lt;h1 id=&quot;题意&quot;&gt;&lt;a class=&quot;markdownIt-Anchor&quot; href=&quot;#题意&quot;&gt;&lt;/a&gt; 题意&lt;/h1&gt;
-&lt;p&gt;给定 &lt;span class=&quot;katex&quot;&gt;&lt;span class=&quot;katex-mathml&quot;&gt;&lt;math</description>
-          
-        
-      
-      
-      
-      
-      <category domain="http://blog.cyx2009.top/categories/Solution/">Solution</category>
-      
-      
-      <category domain="http://blog.cyx2009.top/tags/%E6%A8%A1%E6%8B%9F%E8%B5%9B/">模拟赛</category>
-      
-      <category domain="http://blog.cyx2009.top/tags/%E5%8A%A8%E6%80%81%E8%A7%84%E5%88%92/">动态规划</category>
-      
-      <category domain="http://blog.cyx2009.top/tags/%E4%B9%B1%E6%90%9E/">乱搞</category>
-      
-      
-      <comments>http://blog.cyx2009.top/archives/P11948/#disqus_thread</comments>
       
     </item>
     

@@ -10382,3 +10382,8 @@ p.admonition-title {
 .admonition > :last-child {
   margin-bottom: 0 !important;
 }
+
+pre code.language-plain {
+  background: none !important;
+  color: inherit !important;
+}
