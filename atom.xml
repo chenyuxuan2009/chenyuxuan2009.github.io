@@ -6,7 +6,7 @@
   <link href="http://blog.cyx2009.top/atom.xml" rel="self"/>
   
   <link href="http://blog.cyx2009.top/"/>
-  <updated>2025-09-13T14:09:32.420Z</updated>
+  <updated>2025-09-14T08:44:29.143Z</updated>
   <id>http://blog.cyx2009.top/</id>
   
   <author>
@@ -17,11 +17,48 @@
   <generator uri="https://hexo.io/">Hexo</generator>
   
   <entry>
+    <title></title>
+    <link href="http://blog.cyx2009.top/archives/Untitled/"/>
+    <id>http://blog.cyx2009.top/archives/Untitled/</id>
+    <published>2025-09-14T08:44:29.143Z</published>
+    <updated>2025-09-14T08:44:29.143Z</updated>
+    
+    
+    
+    
+    
+  </entry>
+  
+  <entry>
+    <title>[题解] 杂题选讲 5</title>
+    <link href="http://blog.cyx2009.top/archives/potpourri_5/"/>
+    <id>http://blog.cyx2009.top/archives/potpourri_5/</id>
+    <published>2025-09-14T08:44:00.000Z</published>
+    <updated>2025-09-14T11:38:18.035Z</updated>
+    
+    
+      
+      
+        
+        
+    <summary type="html">&lt;h1 id=&quot;模拟赛-洛谷-2025-noip-15-a&quot;&gt;&lt;a class=&quot;markdownIt-Anchor&quot; href=&quot;#模拟赛-洛谷-2025-noip-15-a&quot;&gt;&lt;/a&gt; 模拟赛 洛谷 2025 NOIP #15 A&lt;/h1&gt;
+&lt;p&gt;本题 aka &lt;a</summary>
+        
+      
+    
+    
+    
+    <category term="Solution" scheme="http://blog.cyx2009.top/categories/Solution/"/>
+    
+    
+  </entry>
+  
+  <entry>
     <title>[题解] 杂题选讲 4</title>
     <link href="http://blog.cyx2009.top/archives/potpourri_4/"/>
     <id>http://blog.cyx2009.top/archives/potpourri_4/</id>
     <published>2025-08-28T08:13:00.000Z</published>
-    <updated>2025-09-13T14:09:32.420Z</updated>
+    <updated>2025-09-14T08:44:33.057Z</updated>
     
     
       
@@ -474,60 +511,6 @@
     
     <category term="Technology" scheme="http://blog.cyx2009.top/categories/Technology/"/>
     
-    
-  </entry>
-  
-  <entry>
-    <title>[题解] CF2091G Gleb and Boating</title>
-    <link href="http://blog.cyx2009.top/archives/CF2091G/"/>
-    <id>http://blog.cyx2009.top/archives/CF2091G/</id>
-    <published>2025-03-25T23:04:00.000Z</published>
-    <updated>2025-04-18T12:23:54.061Z</updated>
-    
-    
-      
-      
-        
-        
-    <summary type="html">&lt;h1 id=&quot;题意&quot;&gt;&lt;a class=&quot;markdownIt-Anchor&quot; href=&quot;#题意&quot;&gt;&lt;/a&gt; 题意&lt;/h1&gt;
-&lt;p&gt;你需要在 &lt;span class=&quot;katex&quot;&gt;&lt;span class=&quot;katex-mathml&quot;&gt;&lt;math</summary>
-        
-      
-    
-    
-    
-    <category term="Solution" scheme="http://blog.cyx2009.top/categories/Solution/"/>
-    
-    
-    <category term="动态规划" scheme="http://blog.cyx2009.top/tags/%E5%8A%A8%E6%80%81%E8%A7%84%E5%88%92/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>[题解] [模拟赛 20250325] P11946 [KTSC 2025] 信竞天择 2 / evolution</title>
-    <link href="http://blog.cyx2009.top/archives/P11946/"/>
-    <id>http://blog.cyx2009.top/archives/P11946/</id>
-    <published>2025-03-25T13:01:00.000Z</published>
-    <updated>2025-03-27T12:01:49.923Z</updated>
-    
-    
-      
-      
-        
-        
-    <summary type="html">&lt;h1 id=&quot;题意&quot;&gt;&lt;a class=&quot;markdownIt-Anchor&quot; href=&quot;#题意&quot;&gt;&lt;/a&gt; 题意&lt;/h1&gt;
-&lt;p&gt;一棵 &lt;span class=&quot;katex&quot;&gt;&lt;span class=&quot;katex-mathml&quot;&gt;&lt;math</summary>
-        
-      
-    
-    
-    
-    <category term="Solution" scheme="http://blog.cyx2009.top/categories/Solution/"/>
-    
-    
-    <category term="模拟赛" scheme="http://blog.cyx2009.top/tags/%E6%A8%A1%E6%8B%9F%E8%B5%9B/"/>
-    
-    <category term="Adhoc" scheme="http://blog.cyx2009.top/tags/Adhoc/"/>
     
   </entry>
   
