@@ -519,7 +519,7 @@
 							<nav class="site-state">
 								<div class="site-state-item site-state-posts">
 									<a href="/archives">
-										<span class="site-state-item-count">215</span>
+										<span class="site-state-item-count">214</span>
 										<span class="site-state-item-name">文章</span>
 									</a>
 								</div>
@@ -609,80 +609,6 @@
 		
 		
 				
-	<article class="post card bg-white shadow-sm border-0 post-preview">
-	<header class="post-header text-center">
-		
-		<a class="post-title" href="/archives/ABC411G/">[题解] ABC411G Count Cycles</a>
-		<div class="post-meta">
-			
-						
-						<div class="post-meta-detail post-meta-detail-time">
-							<i class="fa fa-clock-o" aria-hidden="true"></i>
-							<time title="发布于 2025-6-22 11:44:00 | 编辑于 2025-6-22 12:16:43">2025-6-22 11:44
-							</time>
-						</div>
-					
-						
-							<div class="post-meta-devide">|</div>
-						
-						<div class="post-meta-detail post-meta-detail-categories">
-							<i class="fa fa-bookmark-o" aria-hidden="true"></i>
-							<a class="post-meta-detail-catagory-link" href="/categories/Solution/">Solution</a>
-						</div>
-					
-						
-							<div class="post-meta-devide">|</div>
-						
-						<div class="post-meta-detail post-meta-detail-words">
-							<i class="fa fa-book" aria-hidden="true"></i>
-							<span id="busuanzi_container_page_pv">
-								阅读 <span id="busuanzi_value_page_pv"></span> 次
-							</span>
-						</div>
-					
-						
-							<div class="post-meta-devide">|</div>
-						
-						<div class="post-meta-detail post-meta-detail-words">
-							<i class="fa fa-file-word-o" aria-hidden="true"></i>
-							1.2k 字
-						</div>
-					
-						
-							<div class="post-meta-devide">|</div>
-						
-						<div class="post-meta-detail post-meta-detail-readingtime">
-							<i class="fa fa-hourglass-end" aria-hidden="true"></i>
-							6 分钟
-						</div>
-					
-		</div>
-		
-	</header>
-
-	<div class="post-content">
-		
-			
-				题意
-求 n 个点 m 条边的无向图中简单环数量。可以有重边，没有自环。
-1≤n≤20，1≤m≤2×105。
- 做法
-有一个显然的 O(2nn3) 的朴素状压 DP。
-设 fs,i,mask 表示开头为 s 目前结尾为 i 包含了 mask 集合里的点，形成了一条链的方案数。转移枚举下一个点乘上两点之间边的个数即可。
-最后把所有可能的开头结尾枚举一...
-			
-		
-	</div>
-
-	
-		<div class="post-tags">
-			<i class="fa fa-tags" aria-hidden="true"></i>
-			<a class="tag badge badge-secondary post-meta-detail-tag -none-link" href="/tags/%E7%8A%B6%E5%8E%8B-DP/" rel="tag">状压 DP</a>
-		</div>
-	
-</article>
-
-
 	<article class="post card bg-white shadow-sm border-0 post-preview">
 	<header class="post-header text-center">
 		
@@ -1343,6 +1269,79 @@ https://greasyfork.org/zh-CN/scripts/530997 或 https://gf.qytechs.cn/zh-CN/scri
 		
 	</div>
 
+	
+</article>
+
+
+	<article class="post card bg-white shadow-sm border-0 post-preview">
+	<header class="post-header text-center">
+		
+		<a class="post-title" href="/archives/CF2091G/">[题解] CF2091G Gleb and Boating</a>
+		<div class="post-meta">
+			
+						
+						<div class="post-meta-detail post-meta-detail-time">
+							<i class="fa fa-clock-o" aria-hidden="true"></i>
+							<time title="发布于 2025-3-26 7:04:00 | 编辑于 2025-4-18 20:23:54">2025-3-26 7:04
+							</time>
+						</div>
+					
+						
+							<div class="post-meta-devide">|</div>
+						
+						<div class="post-meta-detail post-meta-detail-categories">
+							<i class="fa fa-bookmark-o" aria-hidden="true"></i>
+							<a class="post-meta-detail-catagory-link" href="/categories/Solution/">Solution</a>
+						</div>
+					
+						
+							<div class="post-meta-devide">|</div>
+						
+						<div class="post-meta-detail post-meta-detail-words">
+							<i class="fa fa-book" aria-hidden="true"></i>
+							<span id="busuanzi_container_page_pv">
+								阅读 <span id="busuanzi_value_page_pv"></span> 次
+							</span>
+						</div>
+					
+						
+							<div class="post-meta-devide">|</div>
+						
+						<div class="post-meta-detail post-meta-detail-words">
+							<i class="fa fa-file-word-o" aria-hidden="true"></i>
+							1.3k 字
+						</div>
+					
+						
+							<div class="post-meta-devide">|</div>
+						
+						<div class="post-meta-detail post-meta-detail-readingtime">
+							<i class="fa fa-hourglass-end" aria-hidden="true"></i>
+							6 分钟
+						</div>
+					
+		</div>
+		
+	</header>
+
+	<div class="post-content">
+		
+			
+				题意
+你需要在 [0,s] 的数轴上移动。不能超出这个范围。初始步长是 k。初始默认方向是 0→s。即 p 走一步走到 p+k。转弯一次会令 k←max⁡{k−1,1}。转弯一次是从 p 走一步走到 p−k，以此类推。
+问到达 s 时最后的 k 最大是几。
+多测，1≤t≤100，1≤s≤109，1≤k≤1000，1≤∑k≤2000。
+ 做法
+s 很...
+			
+		
+	</div>
+
+	
+		<div class="post-tags">
+			<i class="fa fa-tags" aria-hidden="true"></i>
+			<a class="tag badge badge-secondary post-meta-detail-tag -none-link" href="/tags/%E5%8A%A8%E6%80%81%E8%A7%84%E5%88%92/" rel="tag">动态规划</a>
+		</div>
 	
 </article>
 
