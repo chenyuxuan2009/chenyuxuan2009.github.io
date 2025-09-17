@@ -31,7 +31,7 @@
 <meta property="og:image" content="https://cdn.jsdelivr.net/gh/chenyuxuan2009/img@main/images/20250914/193125141.png">
 <meta property="og:image" content="https://cdn.jsdelivr.net/gh/chenyuxuan2009/img@main/images/20250914/193330489.png">
 <meta property="article:published_time" content="2025-09-14T08:44:00.000Z">
-<meta property="article:modified_time" content="2025-09-17T12:00:23.639Z">
+<meta property="article:modified_time" content="2025-09-17T12:19:50.501Z">
 <meta property="article:author" content="沉石鱼惊旋">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:image" content="https://cdn.jsdelivr.net/gh/chenyuxuan2009/img@main/images/20250914/192956686.png">
@@ -650,7 +650,7 @@
 						
 						<div class="post-meta-detail post-meta-detail-time">
 							<i class="fa fa-clock-o" aria-hidden="true"></i>
-							<time title="发布于 2025-9-14 16:44:00 | 编辑于 2025-9-17 20:00:23">2025-9-14 16:44
+							<time title="发布于 2025-9-14 16:44:00 | 编辑于 2025-9-17 20:19:50">2025-9-14 16:44
 							</time>
 						</div>
 					
@@ -677,7 +677,7 @@
 						
 						<div class="post-meta-detail post-meta-detail-words">
 							<i class="fa fa-file-word-o" aria-hidden="true"></i>
-							5k 字
+							5.1k 字
 						</div>
 					
 						
@@ -910,6 +910,10 @@ M834 80h400000v40h-400000z'/></svg></span></span></span><span class="vlist-s">�
 <p>1s 不到就过了，很快。</p>
 <p>但你都这么做了，继续分析一下，左边加数的转化，其实就是求前 <span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>k</mi></mrow><annotation encoding="application/x-tex">k</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.69444em;vertical-align:0em;"></span><span class="mord mathnormal" style="margin-right:0.03148em;">k</span></span></span></span> 小之和。然后 <span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mn>0</mn></mrow><annotation encoding="application/x-tex">0</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.64444em;vertical-align:0em;"></span><span class="mord">0</span></span></span></span> 的话可以预处理然后转化成不含 <span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mn>0</mn></mrow><annotation encoding="application/x-tex">0</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.64444em;vertical-align:0em;"></span><span class="mord">0</span></span></span></span>。左边加数可以如此预处理做到 <span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi mathvariant="script">O</mi><mo stretchy="false">(</mo><mn>1</mn><mo stretchy="false">)</mo></mrow><annotation encoding="application/x-tex">\mathcal O(1)</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:1em;vertical-align:-0.25em;"></span><span class="mord mathcal" style="margin-right:0.02778em;">O</span><span class="mopen">(</span><span class="mord">1</span><span class="mclose">)</span></span></span></span> 移动指针，加上这个卡常也可以勉强通过。</p>
 <p>但你把这个分治一下，你用主席树查询前 <span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>k</mi></mrow><annotation encoding="application/x-tex">k</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.69444em;vertical-align:0em;"></span><span class="mord mathnormal" style="margin-right:0.03148em;">k</span></span></span></span> 小之和，然后就是 <span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi mathvariant="script">O</mi><mo stretchy="false">(</mo><mi>n</mi><mi>log</mi><mo>⁡</mo><mi>n</mi><mi>log</mi><mo>⁡</mo><mi>V</mi><mo stretchy="false">)</mo></mrow><annotation encoding="application/x-tex">\mathcal O(n\log n\log V)</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:1em;vertical-align:-0.25em;"></span><span class="mord mathcal" style="margin-right:0.02778em;">O</span><span class="mopen">(</span><span class="mord mathnormal">n</span><span class="mspace" style="margin-right:0.16666666666666666em;"></span><span class="mop">lo<span style="margin-right:0.01389em;">g</span></span><span class="mspace" style="margin-right:0.16666666666666666em;"></span><span class="mord mathnormal">n</span><span class="mspace" style="margin-right:0.16666666666666666em;"></span><span class="mop">lo<span style="margin-right:0.01389em;">g</span></span><span class="mspace" style="margin-right:0.16666666666666666em;"></span><span class="mord mathnormal" style="margin-right:0.22222em;">V</span><span class="mclose">)</span></span></span></span> 了。</p>
+<h1 id="joisc2012-kangaroo-カンガルー"><a class="markdownIt-Anchor" href="#joisc2012-kangaroo-カンガルー"></a> JOISC2012 kangaroo カンガルー</h1>
+<p>2025 梦熊暑假 20250729 模拟赛 B 题，其实是和 <a target="_blank" rel="noopener" href="https://www.luogu.com.cn/problem/P7154">https://www.luogu.com.cn/problem/P7154</a> 一模一样的题。</p>
+<p>笔记在 potpourri_2 写过了。</p>
+<p>zyf 看我写了这么多做题笔记，说来随机挑一个题然后给我一个类似的看看会不会，然后看到了牛棚题挑了这个袋鼠，结果发现是一模一样的题。</p>
 
 	</div>
 
