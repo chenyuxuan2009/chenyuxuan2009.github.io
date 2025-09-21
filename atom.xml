@@ -6,7 +6,7 @@
   <link href="http://blog.cyx2009.top/atom.xml" rel="self"/>
   
   <link href="http://blog.cyx2009.top/"/>
-  <updated>2025-09-18T13:32:55.724Z</updated>
+  <updated>2025-09-21T16:52:24.103Z</updated>
   <id>http://blog.cyx2009.top/</id>
   
   <author>
@@ -17,11 +17,59 @@
   <generator uri="https://hexo.io/">Hexo</generator>
   
   <entry>
+    <title>[题解] CF2146 验题人题解</title>
+    <link href="http://blog.cyx2009.top/archives/CF2146/"/>
+    <id>http://blog.cyx2009.top/archives/CF2146/</id>
+    <published>2025-09-21T13:44:00.000Z</published>
+    <updated>2025-09-21T16:52:24.103Z</updated>
+    
+    
+      
+      
+        
+        
+    <summary type="html">&lt;p&gt;虽然 date 是写的 21:44，但是是完赛才公布的。&lt;/p&gt;
+&lt;h1 id=&quot;a-equal-occurrences&quot;&gt;&lt;a class=&quot;markdownIt-Anchor&quot; href=&quot;#a-equal-occurrences&quot;&gt;&lt;/a&gt; A. Equal</summary>
+        
+      
+    
+    
+    
+    <category term="Solution" scheme="http://blog.cyx2009.top/categories/Solution/"/>
+    
+    
+  </entry>
+  
+  <entry>
+    <title>[游记] CSP 2025 游记</title>
+    <link href="http://blog.cyx2009.top/archives/CSP2025/"/>
+    <id>http://blog.cyx2009.top/archives/CSP2025/</id>
+    <published>2025-09-19T10:04:00.000Z</published>
+    <updated>2025-09-20T14:22:48.056Z</updated>
+    
+    
+      
+      
+        
+        
+    <summary type="html">&lt;h1 id=&quot;初赛&quot;&gt;&lt;a class=&quot;markdownIt-Anchor&quot; href=&quot;#初赛&quot;&gt;&lt;/a&gt; 初赛&lt;/h1&gt;
+&lt;h2 id=&quot;day-1e97&quot;&gt;&lt;a class=&quot;markdownIt-Anchor&quot; href=&quot;#day-1e97&quot;&gt;&lt;/a&gt; Day</summary>
+        
+      
+    
+    
+    
+    <category term="TravelNote" scheme="http://blog.cyx2009.top/categories/TravelNote/"/>
+    
+    
+  </entry>
+  
+  <entry>
     <title>[题解] 杂题选讲 5</title>
     <link href="http://blog.cyx2009.top/archives/potpourri_5/"/>
     <id>http://blog.cyx2009.top/archives/potpourri_5/</id>
     <published>2025-09-14T08:44:00.000Z</published>
-    <updated>2025-09-18T13:32:55.724Z</updated>
+    <updated>2025-09-21T12:45:40.516Z</updated>
     
     
       
@@ -472,58 +520,6 @@
     <category term="线段树" scheme="http://blog.cyx2009.top/tags/%E7%BA%BF%E6%AE%B5%E6%A0%91/"/>
     
     <category term="拓扑排序" scheme="http://blog.cyx2009.top/tags/%E6%8B%93%E6%89%91%E6%8E%92%E5%BA%8F/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>[工程] 洛谷修改提交记录方框背景</title>
-    <link href="http://blog.cyx2009.top/archives/luogu-submission-better/"/>
-    <id>http://blog.cyx2009.top/archives/luogu-submission-better/</id>
-    <published>2025-03-27T08:12:00.000Z</published>
-    <updated>2025-03-29T15:43:46.599Z</updated>
-    
-    
-      
-      
-        
-        
-    <summary type="html">&lt;h1 id=&quot;插件下载地址&quot;&gt;&lt;a class=&quot;markdownIt-Anchor&quot; href=&quot;#插件下载地址&quot;&gt;&lt;/a&gt; 插件下载地址&lt;/h1&gt;
-&lt;ul&gt;
-&lt;li&gt;
-&lt;p&gt;&lt;a</summary>
-        
-      
-    
-    
-    
-    <category term="Technology" scheme="http://blog.cyx2009.top/categories/Technology/"/>
-    
-    
-  </entry>
-  
-  <entry>
-    <title>[题解] CF2091G Gleb and Boating</title>
-    <link href="http://blog.cyx2009.top/archives/CF2091G/"/>
-    <id>http://blog.cyx2009.top/archives/CF2091G/</id>
-    <published>2025-03-25T23:04:00.000Z</published>
-    <updated>2025-04-18T12:23:54.061Z</updated>
-    
-    
-      
-      
-        
-        
-    <summary type="html">&lt;h1 id=&quot;题意&quot;&gt;&lt;a class=&quot;markdownIt-Anchor&quot; href=&quot;#题意&quot;&gt;&lt;/a&gt; 题意&lt;/h1&gt;
-&lt;p&gt;你需要在 &lt;span class=&quot;katex&quot;&gt;&lt;span class=&quot;katex-mathml&quot;&gt;&lt;math</summary>
-        
-      
-    
-    
-    
-    <category term="Solution" scheme="http://blog.cyx2009.top/categories/Solution/"/>
-    
-    
-    <category term="动态规划" scheme="http://blog.cyx2009.top/tags/%E5%8A%A8%E6%80%81%E8%A7%84%E5%88%92/"/>
     
   </entry>
   

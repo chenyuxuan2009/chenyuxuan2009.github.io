@@ -15,8 +15,60 @@
     <atom:link href="http://blog.cyx2009.top/rss2.xml" rel="self" type="application/rss+xml"/>
     
     <description>沉石鱼惊旋 的博客</description>
-    <pubDate>Thu, 18 Sep 2025 13:32:55 GMT</pubDate>
+    <pubDate>Sun, 21 Sep 2025 16:52:24 GMT</pubDate>
     <generator>http://hexo.io/</generator>
+    
+    <item>
+      <title>[题解] CF2146 验题人题解</title>
+      <link>http://blog.cyx2009.top/archives/CF2146/</link>
+      <guid>http://blog.cyx2009.top/archives/CF2146/</guid>
+      <pubDate>Sun, 21 Sep 2025 13:44:00 GMT</pubDate>
+      
+        
+        
+          
+          
+      <description>&lt;p&gt;虽然 date 是写的 21:44，但是是完赛才公布的。&lt;/p&gt;
+&lt;h1 id=&quot;a-equal-occurrences&quot;&gt;&lt;a class=&quot;markdownIt-Anchor&quot; href=&quot;#a-equal-occurrences&quot;&gt;&lt;/a&gt; A. Equal</description>
+          
+        
+      
+      
+      
+      
+      <category domain="http://blog.cyx2009.top/categories/Solution/">Solution</category>
+      
+      
+      
+      <comments>http://blog.cyx2009.top/archives/CF2146/#disqus_thread</comments>
+      
+    </item>
+    
+    <item>
+      <title>[游记] CSP 2025 游记</title>
+      <link>http://blog.cyx2009.top/archives/CSP2025/</link>
+      <guid>http://blog.cyx2009.top/archives/CSP2025/</guid>
+      <pubDate>Fri, 19 Sep 2025 10:04:00 GMT</pubDate>
+      
+        
+        
+          
+          
+      <description>&lt;h1 id=&quot;初赛&quot;&gt;&lt;a class=&quot;markdownIt-Anchor&quot; href=&quot;#初赛&quot;&gt;&lt;/a&gt; 初赛&lt;/h1&gt;
+&lt;h2 id=&quot;day-1e97&quot;&gt;&lt;a class=&quot;markdownIt-Anchor&quot; href=&quot;#day-1e97&quot;&gt;&lt;/a&gt; Day</description>
+          
+        
+      
+      
+      
+      
+      <category domain="http://blog.cyx2009.top/categories/TravelNote/">TravelNote</category>
+      
+      
+      
+      <comments>http://blog.cyx2009.top/archives/CSP2025/#disqus_thread</comments>
+      
+    </item>
     
     <item>
       <title>[题解] 杂题选讲 5</title>
@@ -510,62 +562,6 @@
       
       
       <comments>http://blog.cyx2009.top/archives/P12031/#disqus_thread</comments>
-      
-    </item>
-    
-    <item>
-      <title>[工程] 洛谷修改提交记录方框背景</title>
-      <link>http://blog.cyx2009.top/archives/luogu-submission-better/</link>
-      <guid>http://blog.cyx2009.top/archives/luogu-submission-better/</guid>
-      <pubDate>Thu, 27 Mar 2025 08:12:00 GMT</pubDate>
-      
-        
-        
-          
-          
-      <description>&lt;h1 id=&quot;插件下载地址&quot;&gt;&lt;a class=&quot;markdownIt-Anchor&quot; href=&quot;#插件下载地址&quot;&gt;&lt;/a&gt; 插件下载地址&lt;/h1&gt;
-&lt;ul&gt;
-&lt;li&gt;
-&lt;p&gt;&lt;a</description>
-          
-        
-      
-      
-      
-      
-      <category domain="http://blog.cyx2009.top/categories/Technology/">Technology</category>
-      
-      
-      
-      <comments>http://blog.cyx2009.top/archives/luogu-submission-better/#disqus_thread</comments>
-      
-    </item>
-    
-    <item>
-      <title>[题解] CF2091G Gleb and Boating</title>
-      <link>http://blog.cyx2009.top/archives/CF2091G/</link>
-      <guid>http://blog.cyx2009.top/archives/CF2091G/</guid>
-      <pubDate>Tue, 25 Mar 2025 23:04:00 GMT</pubDate>
-      
-        
-        
-          
-          
-      <description>&lt;h1 id=&quot;题意&quot;&gt;&lt;a class=&quot;markdownIt-Anchor&quot; href=&quot;#题意&quot;&gt;&lt;/a&gt; 题意&lt;/h1&gt;
-&lt;p&gt;你需要在 &lt;span class=&quot;katex&quot;&gt;&lt;span class=&quot;katex-mathml&quot;&gt;&lt;math</description>
-          
-        
-      
-      
-      
-      
-      <category domain="http://blog.cyx2009.top/categories/Solution/">Solution</category>
-      
-      
-      <category domain="http://blog.cyx2009.top/tags/%E5%8A%A8%E6%80%81%E8%A7%84%E5%88%92/">动态规划</category>
-      
-      
-      <comments>http://blog.cyx2009.top/archives/CF2091G/#disqus_thread</comments>
       
     </item>
     
