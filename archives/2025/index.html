@@ -519,7 +519,7 @@
 							<nav class="site-state">
 								<div class="site-state-item site-state-posts">
 									<a href="/archives">
-										<span class="site-state-item-count">216</span>
+										<span class="site-state-item-count">217</span>
 										<span class="site-state-item-name">文章</span>
 									</a>
 								</div>
@@ -581,7 +581,7 @@
 				</button>
 			</div>
 			<div class="modal-body">
-				<a class="badge badge-secondary tag" href="/categories/Essay/" rel="tag">Essay <span class="tag-num">7</span></a><a class="badge badge-secondary tag" href="/categories/Solution/" rel="tag">Solution <span class="tag-num">189</span></a><a class="badge badge-secondary tag" href="/categories/StudyNote/" rel="tag">StudyNote <span class="tag-num">4</span></a><a class="badge badge-secondary tag" href="/categories/Technology/" rel="tag">Technology <span class="tag-num">3</span></a><a class="badge badge-secondary tag" href="/categories/TravelNote/" rel="tag">TravelNote <span class="tag-num">13</span></a>
+				<a class="badge badge-secondary tag" href="/categories/Essay/" rel="tag">Essay <span class="tag-num">7</span></a><a class="badge badge-secondary tag" href="/categories/Solution/" rel="tag">Solution <span class="tag-num">190</span></a><a class="badge badge-secondary tag" href="/categories/StudyNote/" rel="tag">StudyNote <span class="tag-num">4</span></a><a class="badge badge-secondary tag" href="/categories/Technology/" rel="tag">Technology <span class="tag-num">3</span></a><a class="badge badge-secondary tag" href="/categories/TravelNote/" rel="tag">TravelNote <span class="tag-num">13</span></a>
 			</div>
 		</div>
 	</div>
@@ -609,6 +609,72 @@
 		
 		
 				
+	<article class="post card bg-white shadow-sm border-0 post-preview">
+	<header class="post-header text-center">
+		
+		<a class="post-title" href="/archives/potpourri_6/">[题解] 杂题选讲 6</a>
+		<div class="post-meta">
+			
+						
+						<div class="post-meta-detail post-meta-detail-time">
+							<i class="fa fa-clock-o" aria-hidden="true"></i>
+							<time title="发布于 2025-9-30 15:43:00 | 编辑于 2025-9-30 19:23:36">2025-9-30 15:43
+							</time>
+						</div>
+					
+						
+							<div class="post-meta-devide">|</div>
+						
+						<div class="post-meta-detail post-meta-detail-categories">
+							<i class="fa fa-bookmark-o" aria-hidden="true"></i>
+							<a class="post-meta-detail-catagory-link" href="/categories/Solution/">Solution</a>
+						</div>
+					
+						
+							<div class="post-meta-devide">|</div>
+						
+						<div class="post-meta-detail post-meta-detail-words">
+							<i class="fa fa-book" aria-hidden="true"></i>
+							<span id="busuanzi_container_page_pv">
+								阅读 <span id="busuanzi_value_page_pv"></span> 次
+							</span>
+						</div>
+					
+						
+							<div class="post-meta-devide">|</div>
+						
+						<div class="post-meta-detail post-meta-detail-words">
+							<i class="fa fa-file-word-o" aria-hidden="true"></i>
+							1.1k 字
+						</div>
+					
+						
+							<div class="post-meta-devide">|</div>
+						
+						<div class="post-meta-detail post-meta-detail-readingtime">
+							<i class="fa fa-hourglass-end" aria-hidden="true"></i>
+							5 分钟
+						</div>
+					
+		</div>
+		
+	</header>
+
+	<div class="post-content">
+		
+			
+				模拟赛 梦熊 20250930 A
+本题 aka https://qoj.ac/problem/670。
+简单题，注意到我们比较字典序由于字母互不相同，所以只关心首字母。
+枚举给定字符串应该出现在哪里，就是出现在 p 的有 n−p+1 的排名代价。对于首字母比他小的 DP 一下，首字母比他大的随便选乘上阶乘。DP 设 fi,j,k 表示前 i 个字...
+			
+		
+	</div>
+
+	
+</article>
+
+
 	<article class="post card bg-white shadow-sm border-0 post-preview">
 	<header class="post-header text-center">
 		
@@ -755,7 +821,7 @@ cpp 提交记录：https://codeforces.com/cont...
 						
 						<div class="post-meta-detail post-meta-detail-time">
 							<i class="fa fa-clock-o" aria-hidden="true"></i>
-							<time title="发布于 2025-9-14 16:44:00 | 编辑于 2025-9-29 14:51:09">2025-9-14 16:44
+							<time title="发布于 2025-9-14 16:44:00 | 编辑于 2025-9-30 15:43:05">2025-9-14 16:44
 							</time>
 						</div>
 					
@@ -782,7 +848,7 @@ cpp 提交记录：https://codeforces.com/cont...
 						
 						<div class="post-meta-detail post-meta-detail-words">
 							<i class="fa fa-file-word-o" aria-hidden="true"></i>
-							13.3k 字
+							13.5k 字
 						</div>
 					
 						
@@ -790,7 +856,7 @@ cpp 提交记录：https://codeforces.com/cont...
 						
 						<div class="post-meta-detail post-meta-detail-readingtime">
 							<i class="fa fa-hourglass-end" aria-hidden="true"></i>
-							61 分钟
+							62 分钟
 						</div>
 					
 		</div>
@@ -1220,69 +1286,6 @@ cpp 提交记录：https://codeforces.com/cont...
 设 cost⁡(l,r) 表示 [l,r] 删空的代价。因为和 wmax⁡ 和 wmin⁡ 相关，这也要知道。设 dp(l,r,L,R) 表示删空了 [l,r] 除了值域为 [L,R] 的部分的代价。
 转移显然有 cost(l,r)←min⁡L≤R{dp(l,r,L,R)+a+b×(R−L)2}。
 而 ...
-			
-		
-	</div>
-
-	
-</article>
-
-
-	<article class="post card bg-white shadow-sm border-0 post-preview">
-	<header class="post-header text-center">
-		
-		<a class="post-title" href="/archives/ASTAR2025/">[游记] 百度之星 2025 游记</a>
-		<div class="post-meta">
-			
-						
-						<div class="post-meta-detail post-meta-detail-time">
-							<i class="fa fa-clock-o" aria-hidden="true"></i>
-							<time title="发布于 2025-7-1 0:28:00 | 编辑于 2025-7-15 18:00:05">2025-7-1 0:28
-							</time>
-						</div>
-					
-						
-							<div class="post-meta-devide">|</div>
-						
-						<div class="post-meta-detail post-meta-detail-categories">
-							<i class="fa fa-bookmark-o" aria-hidden="true"></i>
-							<a class="post-meta-detail-catagory-link" href="/categories/TravelNote/">TravelNote</a>
-						</div>
-					
-						
-							<div class="post-meta-devide">|</div>
-						
-						<div class="post-meta-detail post-meta-detail-words">
-							<i class="fa fa-book" aria-hidden="true"></i>
-							<span id="busuanzi_container_page_pv">
-								阅读 <span id="busuanzi_value_page_pv"></span> 次
-							</span>
-						</div>
-					
-						
-							<div class="post-meta-devide">|</div>
-						
-						<div class="post-meta-detail post-meta-detail-words">
-							<i class="fa fa-file-word-o" aria-hidden="true"></i>
-							7 字
-						</div>
-					
-						
-							<div class="post-meta-devide">|</div>
-						
-						<div class="post-meta-detail post-meta-detail-readingtime">
-							<i class="fa fa-hourglass-end" aria-hidden="true"></i>
-							1 分钟
-						</div>
-					
-		</div>
-		
-	</header>
-
-	<div class="post-content">
-		
-			
-				被制裁了。嘟嘟嘟。
 			
 		
 	</div>

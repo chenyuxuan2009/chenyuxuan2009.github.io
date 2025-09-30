@@ -15,20 +15,20 @@
 	<link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/highlight.js/11.1.0/styles/a11y-light.min.css">
 	<script src="//cdnjs.cloudflare.com/ajax/libs/highlight.js/11.1.0/highlight.min.js"></script>
 	
-	<title>[闲话] 20240119 鲜花 - 沉石鱼惊旋 的博客</title>
+	<title>[题解] 杂题选讲 6 - 沉石鱼惊旋 的博客</title>
 	<meta charset="utf-8">
 	
 		<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=5">
 	
-	<meta name="description" content="今天是 gmx 生日。我昨晚在书包藏了两块巧克力，下午第四节课下课跑去送了。 她好像看起来很开心&#x2F;se 但她估计不知道我是咋知道她生日的，我甚至没有她的联系方式（但我打算期末考完加一个），她也没和我说过她生日。其实是我和几个同学（保护一下他们人身安全就不放洛谷号了）机惨教练把教练 U 盘里好东西偷出来找到了一些学生信息和一些 OI 的东西。 今天很巧的是，我出教室走到她班级门口，她因为今天生日也不">
+	<meta name="description" content="模拟赛 梦熊 20250930 A 本题 aka https:&#x2F;&#x2F;qoj.ac&#x2F;problem&#x2F;670。 简单题，注意到我们比较字典序由于字母互不相同，所以只关心首字母。 枚举给定字符串应该出现在哪里，就是出现在 ppp 的有 n−p+1n-p+1n−p+1 的排名代价。对于首字母比他小的 DP 一下，首字母比他大的随便选乘上阶乘。DP 设 fi,j,kf_{i,j,k}fi,j,k​ 表示前">
 <meta property="og:type" content="article">
-<meta property="og:title" content="[闲话] 20240119 鲜花">
-<meta property="og:url" content="http://blog.cyx2009.top/archives/20240119_essay/index.html">
+<meta property="og:title" content="[题解] 杂题选讲 6">
+<meta property="og:url" content="http://blog.cyx2009.top/archives/potpourri_6/index.html">
 <meta property="og:site_name" content="沉石鱼惊旋 的博客">
-<meta property="og:description" content="今天是 gmx 生日。我昨晚在书包藏了两块巧克力，下午第四节课下课跑去送了。 她好像看起来很开心&#x2F;se 但她估计不知道我是咋知道她生日的，我甚至没有她的联系方式（但我打算期末考完加一个），她也没和我说过她生日。其实是我和几个同学（保护一下他们人身安全就不放洛谷号了）机惨教练把教练 U 盘里好东西偷出来找到了一些学生信息和一些 OI 的东西。 今天很巧的是，我出教室走到她班级门口，她因为今天生日也不">
+<meta property="og:description" content="模拟赛 梦熊 20250930 A 本题 aka https:&#x2F;&#x2F;qoj.ac&#x2F;problem&#x2F;670。 简单题，注意到我们比较字典序由于字母互不相同，所以只关心首字母。 枚举给定字符串应该出现在哪里，就是出现在 ppp 的有 n−p+1n-p+1n−p+1 的排名代价。对于首字母比他小的 DP 一下，首字母比他大的随便选乘上阶乘。DP 设 fi,j,kf_{i,j,k}fi,j,k​ 表示前">
 <meta property="og:locale" content="zh_CN">
-<meta property="article:published_time" content="2024-01-19T10:58:00.000Z">
-<meta property="article:modified_time" content="2025-02-12T12:21:30.965Z">
+<meta property="article:published_time" content="2025-09-30T07:43:00.000Z">
+<meta property="article:modified_time" content="2025-09-30T11:23:36.745Z">
 <meta property="article:author" content="沉石鱼惊旋">
 <meta name="twitter:card" content="summary">
 
@@ -637,13 +637,13 @@
 	<article class="post post-full card bg-white shadow-sm border-0 post-preview">
 	<header class="post-header text-center">
 		
-		<a class="post-title" href="/archives/20240119_essay/">[闲话] 20240119 鲜花</a>
+		<a class="post-title" href="/archives/potpourri_6/">[题解] 杂题选讲 6</a>
 		<div class="post-meta">
 			
 						
 						<div class="post-meta-detail post-meta-detail-time">
 							<i class="fa fa-clock-o" aria-hidden="true"></i>
-							<time title="发布于 2024-1-19 18:58:00 | 编辑于 2025-2-12 20:21:30">2024-1-19 18:58
+							<time title="发布于 2025-9-30 15:43:00 | 编辑于 2025-9-30 19:23:36">2025-9-30 15:43
 							</time>
 						</div>
 					
@@ -652,7 +652,7 @@
 						
 						<div class="post-meta-detail post-meta-detail-categories">
 							<i class="fa fa-bookmark-o" aria-hidden="true"></i>
-							<a class="post-meta-detail-catagory-link" href="/categories/Essay/">Essay</a>
+							<a class="post-meta-detail-catagory-link" href="/categories/Solution/">Solution</a>
 						</div>
 					
 						
@@ -670,7 +670,7 @@
 						
 						<div class="post-meta-detail post-meta-detail-words">
 							<i class="fa fa-file-word-o" aria-hidden="true"></i>
-							1.9k 字
+							1.1k 字
 						</div>
 					
 						
@@ -678,7 +678,7 @@
 						
 						<div class="post-meta-detail post-meta-detail-readingtime">
 							<i class="fa fa-hourglass-end" aria-hidden="true"></i>
-							6 分钟
+							5 分钟
 						</div>
 					
 		</div>
@@ -686,55 +686,70 @@
 	</header>
 
 	<div class="post-content" id="post_content">
-		<p>今天是 gmx 生日。我昨晚在书包藏了两块巧克力，下午第四节课下课跑去送了。</p>
-<p>她好像看起来很开心/se</p>
-<p>但她估计不知道我是咋知道她生日的，我甚至没有她的联系方式（<s>但我打算期末考完加一个</s>），她也没和我说过她生日。其实是我和几个同学（保护一下他们人身安全就不放洛谷号了）机惨教练把教练 U 盘里好东西偷出来找到了一些学生信息和一些 OI 的东西。</p>
-<p>今天很巧的是，我出教室走到她班级门口，她因为今天生日也不上晚自习，正好在她班级门口碰到了。</p>
-<p>然后我俩一起在学校里走出去的。她数学这次竟然模考 86，感觉很有实力，上次从食堂出来聊天她还说开始补数学了，确实数学分抬上来了。但我的语文大抵是废了。废得很彻底。为数不多的成就是会多背一点诗而已。</p>
-<p>她说语文 86 随便上，我：？</p>
-<p>我就说数学 90 随便上，她：？</p>
-<hr />
-<p>下周一二三期末，我现在模考挂分很严重啊！</p>
-<p>语文老师答应我期末考试上 86 给我棒棒糖吃，为了棒棒糖我怎么也要把笔记全背下来！！1</p>
-<p>（下面的加表示老师批错我申诉后获得的分）</p>
-<hr />
-<p>语文（没写作文）：</p>
-<p>45+1/60，选择 -5，古诗默写 -1。这 6 分扣得很逆天啊，完全不该扣的，挂分原因是自己考完之后脑子昏昏的改选择，以及忘了一个字到底是啥先跳了打算昨晚整张再背一下说不定就背出来了，然后忘记改了。</p>
-<hr />
-<p>数学（分两次做导致简单卷给了很多时间难卷我没写完）</p>
-<p>89+2/100</p>
-<p>2+3 分是我算完之后答句写错了，很逆天。2 分是一个很逆天的题，全校好像不到 10 个写出了结论，最高得分应该是 @<a target="_blank" rel="noopener" href="https://www.luogu.com.cn/user/448938">wangchonghao</a> 只扣了 1 分因为证明完了忘记画图。</p>
-<p>我这题是喜提 -2 的，发现我一眼秒了结论证明不太会，感觉说不清，这也不给个数据算一算证一下的，只能口头乱说做法。然后先开的最后一题（这题是倒数第二题）。然后做完最后一题开始证，没写完，喜提结论分。</p>
-<p>最后一题有 3 分是算完之后答句写错了，有 2 分是最后一问漏解了，卷子发下来又是 5min 不到算完了，每次我都是卷子发下来再没讨论做法的情况下就能很快写出来没做出/没写全的题，每次都是这样，鉴定为应该考试途中上个厕所清醒一下脑子。</p>
-<p>诶这个最后一问怎么老师讲的这么简单？我的做法除了构造一组全等三角形之外用到的东西都不是八上讲的。</p>
-<hr />
-<p>英语 92/100</p>
-<p>阅读短文，回答问题，不超过 4 个单词，我喜提得分 2/5，好像昨天晚自习我不在的时候被老师公开处刑了。</p>
-<p>作文 -1 意料之中，选择我是真的不知道 nothing 和 none 的区别啊呜呜呜，这到底咋区分啊，换个情景我就不知道了，呜呜呜。</p>
-<hr />
-<p>政治 80+5/100，但是得分折半计算。</p>
-<p>我不多评价。有 2 分是给 4 个序号匹配相应违法行为，我只写了 3 个序号。</p>
-<hr />
-<p>历史 91+2/100，但是得分折半计算。</p>
-<p>毛【】【】的革命理论就是“毛【】【】思想”啊？啊？我扯了一堆没扯到 -4。选择我分不清七届二中全会和七大，考完信誓旦旦说七大是河北西柏坡召开的，肯定不选七大。</p>
-<hr />
-<p>物理 95/100</p>
-<p>鉴定为我是弱智。选择 -2，我只看光路不看成像位置。填空 -3，有一空我该错，多次实验没写改变物距，有一空图上原来是光线 OB，我看到的明明就是 OE！！！就是 OE！！！</p>
-<p>还有谁家好人上一题填空拉的和下面表格框框一样长，我没看到这一空。</p>
-<hr />
-<p><s>打完入门赛继续写。</s></p>
-<p>我 27 min AK 了。</p>
-<p>天天因为老师批改错误挂分，这学期已经二三十分了诶，常外任课老师我感觉已经很负责了还有这种问题，期末考试换别的学校老师咋办啊？平时每个老师 100 张左右的卷子都能出现这样的问题，期末考试那么多卷子咋办啊？</p>
-<p>希望我 RP 不会低到出现这种挂分情况。</p>
-<hr />
-<p>妈的，我要开始发力了。体育都他妈最后一节课了，难得碰到一次做完准备活动就活动的，给我们灌鸡汤说的贼几把好听，以前男生先拿乒乓场地要挤成 4 人 2 拍轮流打，怎么女生先拿场地就啥玩意儿都不剩了？没球打你吗的，把你脑袋拧下来打？最后一节课都不给放松是吧。</p>
-<p>（我们男女分开上体育课。）</p>
-<p>还有那个学校傻逼跑操，我搞不懂以前七年级绕学校八九年级绕操场内圈外圈有啥不好的，你他妈非要三个年级挤在操场上，屁大点位置转弯还不让减速。诶不是你他妈知道什么是理想状态什么是现实吗？你要每个人都在那个位置慢一下或者快一下是完全不可能的，还几把的一天到晚跑完两三轮发现队伍拉开距离了，你他妈倒是挺会找男生茬的，有本事他妈让男生跑前面你看最后女生掉不掉队？傻逼东西自己不实验就来压力学生尤其男生是吧？</p>
-<p>还有那一个两个的，你们是他妈多虚啊，平时都说我天天生病身体虚，老子跑操偷过最大的懒是去排练升旗仪式，第二大是系了个鞋带然后自己还加速跑回队伍了。你们一个个什么病一天到晚不跑操？还有那个领导，请假的人要排在班级前面让整个班多绕几米是什么勾八规定，你是觉得每个班凸几个凹几个看上去很美观还是他妈自己长大了来撕伞了？</p>
-<p>还有市教研局，你也不是什么好东西，去年数学出题出了个贼牛逼的无解出来，你还自己放出标答是 <span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mo stretchy="false">[</mo><mn>1</mn><mo separator="true">,</mo><mn>2</mn><mo stretchy="false">)</mo></mrow><annotation encoding="application/x-tex">[1, 2)</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:1em;vertical-align:-0.25em;"></span><span class="mopen">[</span><span class="mord">1</span><span class="mpunct">,</span><span class="mspace" style="margin-right:0.16666666666666666em;"></span><span class="mord">2</span><span class="mclose">)</span></span></span></span>，什么逆天玩意儿，出卷子不会改数据可以不改，审题人不验卷子可以不验，你他妈是连个初中学历的验题人找不到？我操这怎么他妈不给你禁止出题三年啊？今年生物又他妈来个单选题选择错误的 A. 臭氧无色无味 B. 臭氧对人体无害 是什么几把？你他妈也不说根据材料得到错误选项，这算个什么东西，你要是中考文化科目今年再有错题等着他妈被刨祖坟吧。</p>
-<p>这些只是积压了很久的东西，趁着今天写鲜花赶紧发出来，目的是告诉大家，我们吊州是人才辈出的。</p>
-<hr />
-<p>另外，虽然市教研局估计会继续出错题，但还是 RP++。<s>我会用我的实力，用我的排名，告诉大家，今年有多少学生考试。</s></p>
+		<h1 id="模拟赛-梦熊-20250930-a"><a class="markdownIt-Anchor" href="#模拟赛-梦熊-20250930-a"></a> 模拟赛 梦熊 20250930 A</h1>
+<p>本题 aka <a target="_blank" rel="noopener" href="https://qoj.ac/problem/670">https://qoj.ac/problem/670</a>。</p>
+<p>简单题，注意到我们比较字典序由于字母互不相同，所以只关心首字母。</p>
+<p>枚举给定字符串应该出现在哪里，就是出现在 <span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>p</mi></mrow><annotation encoding="application/x-tex">p</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.625em;vertical-align:-0.19444em;"></span><span class="mord mathnormal">p</span></span></span></span> 的有 <span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>n</mi><mo>−</mo><mi>p</mi><mo>+</mo><mn>1</mn></mrow><annotation encoding="application/x-tex">n-p+1</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.66666em;vertical-align:-0.08333em;"></span><span class="mord mathnormal">n</span><span class="mspace" style="margin-right:0.2222222222222222em;"></span><span class="mbin">−</span><span class="mspace" style="margin-right:0.2222222222222222em;"></span></span><span class="base"><span class="strut" style="height:0.7777700000000001em;vertical-align:-0.19444em;"></span><span class="mord mathnormal">p</span><span class="mspace" style="margin-right:0.2222222222222222em;"></span><span class="mbin">+</span><span class="mspace" style="margin-right:0.2222222222222222em;"></span></span><span class="base"><span class="strut" style="height:0.64444em;vertical-align:0em;"></span><span class="mord">1</span></span></span></span> 的排名代价。对于首字母比他小的 DP 一下，首字母比他大的随便选乘上阶乘。DP 设 <span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><msub><mi>f</mi><mrow><mi>i</mi><mo separator="true">,</mo><mi>j</mi><mo separator="true">,</mo><mi>k</mi></mrow></msub></mrow><annotation encoding="application/x-tex">f_{i,j,k}</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.980548em;vertical-align:-0.286108em;"></span><span class="mord"><span class="mord mathnormal" style="margin-right:0.10764em;">f</span><span class="msupsub"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist" style="height:0.3361079999999999em;"><span style="top:-2.5500000000000003em;margin-left:-0.10764em;margin-right:0.05em;"><span class="pstrut" style="height:2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mtight"><span class="mord mathnormal mtight">i</span><span class="mpunct mtight">,</span><span class="mord mathnormal mtight" style="margin-right:0.05724em;">j</span><span class="mpunct mtight">,</span><span class="mord mathnormal mtight" style="margin-right:0.03148em;">k</span></span></span></span></span><span class="vlist-s">​</span></span><span class="vlist-r"><span class="vlist" style="height:0.286108em;"><span></span></span></span></span></span></span></span></span></span> 表示前 <span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>i</mi></mrow><annotation encoding="application/x-tex">i</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.65952em;vertical-align:0em;"></span><span class="mord mathnormal">i</span></span></span></span> 个字符选了总长度为 <span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>j</mi></mrow><annotation encoding="application/x-tex">j</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.85396em;vertical-align:-0.19444em;"></span><span class="mord mathnormal" style="margin-right:0.05724em;">j</span></span></span></span> 的，然后我们最后一个位置选的是 <span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>k</mi></mrow><annotation encoding="application/x-tex">k</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.69444em;vertical-align:0em;"></span><span class="mord mathnormal" style="margin-right:0.03148em;">k</span></span></span></span>。</p>
+<p>转移使用前缀和优化可以做到 <span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi mathvariant="script">O</mi><mo stretchy="false">(</mo><msup><mi>n</mi><mn>4</mn></msup><mo stretchy="false">)</mo></mrow><annotation encoding="application/x-tex">\mathcal O(n^4)</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:1.064108em;vertical-align:-0.25em;"></span><span class="mord mathcal" style="margin-right:0.02778em;">O</span><span class="mopen">(</span><span class="mord"><span class="mord mathnormal">n</span><span class="msupsub"><span class="vlist-t"><span class="vlist-r"><span class="vlist" style="height:0.8141079999999999em;"><span style="top:-3.063em;margin-right:0.05em;"><span class="pstrut" style="height:2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mtight">4</span></span></span></span></span></span></span></span><span class="mclose">)</span></span></span></span>，算上枚举就是 <span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi mathvariant="script">O</mi><mo stretchy="false">(</mo><msup><mi>n</mi><mn>5</mn></msup><mo stretchy="false">)</mo></mrow><annotation encoding="application/x-tex">\mathcal O(n^5)</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:1.064108em;vertical-align:-0.25em;"></span><span class="mord mathcal" style="margin-right:0.02778em;">O</span><span class="mopen">(</span><span class="mord"><span class="mord mathnormal">n</span><span class="msupsub"><span class="vlist-t"><span class="vlist-r"><span class="vlist" style="height:0.8141079999999999em;"><span style="top:-3.063em;margin-right:0.05em;"><span class="pstrut" style="height:2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mtight">5</span></span></span></span></span></span></span></span><span class="mclose">)</span></span></span></span>。</p>
+<h1 id="模拟赛-梦熊-20250930-b"><a class="markdownIt-Anchor" href="#模拟赛-梦熊-20250930-b"></a> 模拟赛 梦熊 20250930 B</h1>
+<p>本题 aka <a target="_blank" rel="noopener" href="https://qoj.ac/problem/7405">https://qoj.ac/problem/7405</a>。</p>
+<p>这是一个有向图博弈，我们可以通过类似拓扑排序的做法，求出每个点的胜负态。</p>
+<p>打表出来，观察规律：</p>
+<p>对于初始局面，如果全是奇数，则 <span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mo>−</mo><mn>1</mn></mrow><annotation encoding="application/x-tex">-1</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.72777em;vertical-align:-0.08333em;"></span><span class="mord">−</span><span class="mord">1</span></span></span></span>。</p>
+<p>若仅仅存在奇数则 <span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mn>0</mn></mrow><annotation encoding="application/x-tex">0</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.64444em;vertical-align:0em;"></span><span class="mord">0</span></span></span></span>。</p>
+<p>如果存在 <span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mtext> </mtext><mo lspace="0.22em" rspace="0.22em"><mrow><mi mathvariant="normal">m</mi><mi mathvariant="normal">o</mi><mi mathvariant="normal">d</mi></mrow></mo><mtext> </mtext><msup><mn>2</mn><mrow><mi>k</mi><mo>+</mo><mn>1</mn></mrow></msup><mo>=</mo><msup><mn>2</mn><mi>k</mi></msup></mrow><annotation encoding="application/x-tex">\bmod 2^{k+1}=2^k</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.8491079999999999em;vertical-align:0em;"></span><span class="mspace" style="margin-right:0.05555555555555555em;"></span><span class="mord"><span class="mord"><span class="mord mathrm">m</span><span class="mord mathrm">o</span><span class="mord mathrm">d</span></span></span><span class="mspace" style="margin-right:0.05555555555555555em;"></span><span class="mord"><span class="mord">2</span><span class="msupsub"><span class="vlist-t"><span class="vlist-r"><span class="vlist" style="height:0.8491079999999999em;"><span style="top:-3.063em;margin-right:0.05em;"><span class="pstrut" style="height:2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mtight"><span class="mord mathnormal mtight" style="margin-right:0.03148em;">k</span><span class="mbin mtight">+</span><span class="mord mtight">1</span></span></span></span></span></span></span></span></span><span class="mspace" style="margin-right:0.2777777777777778em;"></span><span class="mrel">=</span><span class="mspace" style="margin-right:0.2777777777777778em;"></span></span><span class="base"><span class="strut" style="height:0.849108em;vertical-align:0em;"></span><span class="mord"><span class="mord">2</span><span class="msupsub"><span class="vlist-t"><span class="vlist-r"><span class="vlist" style="height:0.849108em;"><span style="top:-3.063em;margin-right:0.05em;"><span class="pstrut" style="height:2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mathnormal mtight" style="margin-right:0.03148em;">k</span></span></span></span></span></span></span></span></span></span></span> 的偶数，那么他和 <span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><msup><mn>2</mn><mi>k</mi></msup></mrow><annotation encoding="application/x-tex">2^k</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.849108em;vertical-align:0em;"></span><span class="mord"><span class="mord">2</span><span class="msupsub"><span class="vlist-t"><span class="vlist-r"><span class="vlist" style="height:0.849108em;"><span style="top:-3.063em;margin-right:0.05em;"><span class="pstrut" style="height:2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mathnormal mtight" style="margin-right:0.03148em;">k</span></span></span></span></span></span></span></span></span></span></span> 的循环节相同。</p>
+<p>对于 <span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><msup><mn>2</mn><mrow><mn>2</mn><mi>k</mi><mo>+</mo><mn>1</mn></mrow></msup></mrow><annotation encoding="application/x-tex">2^{2k+1}</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.8491079999999999em;vertical-align:0em;"></span><span class="mord"><span class="mord">2</span><span class="msupsub"><span class="vlist-t"><span class="vlist-r"><span class="vlist" style="height:0.8491079999999999em;"><span style="top:-3.063em;margin-right:0.05em;"><span class="pstrut" style="height:2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mtight"><span class="mord mtight">2</span><span class="mord mathnormal mtight" style="margin-right:0.03148em;">k</span><span class="mbin mtight">+</span><span class="mord mtight">1</span></span></span></span></span></span></span></span></span></span></span></span> 和 <span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><msup><mn>2</mn><mrow><mn>2</mn><mi>k</mi></mrow></msup></mrow><annotation encoding="application/x-tex">2^{2k}</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.849108em;vertical-align:0em;"></span><span class="mord"><span class="mord">2</span><span class="msupsub"><span class="vlist-t"><span class="vlist-r"><span class="vlist" style="height:0.849108em;"><span style="top:-3.063em;margin-right:0.05em;"><span class="pstrut" style="height:2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mtight"><span class="mord mtight">2</span><span class="mord mathnormal mtight" style="margin-right:0.03148em;">k</span></span></span></span></span></span></span></span></span></span></span></span> 形式，循环节长度都为 <span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><msup><mn>2</mn><mrow><mn>2</mn><mi>k</mi></mrow></msup></mrow><annotation encoding="application/x-tex">2^{2k}</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.849108em;vertical-align:0em;"></span><span class="mord"><span class="mord">2</span><span class="msupsub"><span class="vlist-t"><span class="vlist-r"><span class="vlist" style="height:0.849108em;"><span style="top:-3.063em;margin-right:0.05em;"><span class="pstrut" style="height:2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mtight"><span class="mord mtight">2</span><span class="mord mathnormal mtight" style="margin-right:0.03148em;">k</span></span></span></span></span></span></span></span></span></span></span></span>。</p>
+<p>具体的，我们打出来循环节如下：</p>
+<pre><code class="highlight none">2:  1  1
+4:  1 -1  1  0
+8:  1  0  1  1  1  0  1  1
+16: 1  0  1  1  1  0  1 -1  1  0  1  1  1  0  1  0
+32: 1  0  1  1  1  0  1  0  1  0  1  1  1  0  1  1  1  0  1  1  1  0  1  0  1  0  1  1  1  0  1  1</code></pre>
+<p>观察一下规律：</p>
+<ul>
+<li>
+<p>对于 <span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><msup><mn>2</mn><mrow><mn>2</mn><mi>k</mi><mo>+</mo><mn>1</mn></mrow></msup></mrow><annotation encoding="application/x-tex">2^{2k+1}</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.8491079999999999em;vertical-align:0em;"></span><span class="mord"><span class="mord">2</span><span class="msupsub"><span class="vlist-t"><span class="vlist-r"><span class="vlist" style="height:0.8491079999999999em;"><span style="top:-3.063em;margin-right:0.05em;"><span class="pstrut" style="height:2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mtight"><span class="mord mtight">2</span><span class="mord mathnormal mtight" style="margin-right:0.03148em;">k</span><span class="mbin mtight">+</span><span class="mord mtight">1</span></span></span></span></span></span></span></span></span></span></span></span> 形态，他的等价于 <span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><msup><mn>2</mn><mrow><mn>2</mn><mi>k</mi><mo>−</mo><mn>1</mn></mrow></msup></mrow><annotation encoding="application/x-tex">2^{2k-1}</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.8491079999999999em;vertical-align:0em;"></span><span class="mord"><span class="mord">2</span><span class="msupsub"><span class="vlist-t"><span class="vlist-r"><span class="vlist" style="height:0.8491079999999999em;"><span style="top:-3.063em;margin-right:0.05em;"><span class="pstrut" style="height:2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mtight"><span class="mord mtight">2</span><span class="mord mathnormal mtight" style="margin-right:0.03148em;">k</span><span class="mbin mtight">−</span><span class="mord mtight">1</span></span></span></span></span></span></span></span></span></span></span></span> 形态，进行如此操作：</p>
+<ul>
+<li>复制一次；最后一位改成 <span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mn>0</mn></mrow><annotation encoding="application/x-tex">0</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.64444em;vertical-align:0em;"></span><span class="mord">0</span></span></span></span>；复制一次；</li>
+<li>复制一次；最后一位改成 <span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mn>0</mn></mrow><annotation encoding="application/x-tex">0</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.64444em;vertical-align:0em;"></span><span class="mord">0</span></span></span></span>；复制一次；</li>
+</ul>
+</li>
+<li>
+<p>对于 <span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><msup><mn>2</mn><mrow><mn>2</mn><mi>k</mi></mrow></msup></mrow><annotation encoding="application/x-tex">2^{2k}</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.849108em;vertical-align:0em;"></span><span class="mord"><span class="mord">2</span><span class="msupsub"><span class="vlist-t"><span class="vlist-r"><span class="vlist" style="height:0.849108em;"><span style="top:-3.063em;margin-right:0.05em;"><span class="pstrut" style="height:2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mtight"><span class="mord mtight">2</span><span class="mord mathnormal mtight" style="margin-right:0.03148em;">k</span></span></span></span></span></span></span></span></span></span></span></span> 形态，他的等价于 <span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><msup><mn>2</mn><mrow><mn>2</mn><mi>k</mi><mo>−</mo><mn>1</mn></mrow></msup></mrow><annotation encoding="application/x-tex">2^{2k-1}</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.8491079999999999em;vertical-align:0em;"></span><span class="mord"><span class="mord">2</span><span class="msupsub"><span class="vlist-t"><span class="vlist-r"><span class="vlist" style="height:0.8491079999999999em;"><span style="top:-3.063em;margin-right:0.05em;"><span class="pstrut" style="height:2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mtight"><span class="mord mtight">2</span><span class="mord mathnormal mtight" style="margin-right:0.03148em;">k</span><span class="mbin mtight">−</span><span class="mord mtight">1</span></span></span></span></span></span></span></span></span></span></span></span> 形态，如此操作：</p>
+<ul>
+<li>复制一次；最后一位改成 <span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mn>0</mn></mrow><annotation encoding="application/x-tex">0</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.64444em;vertical-align:0em;"></span><span class="mord">0</span></span></span></span>；</li>
+<li>复制一次；最后一位改成 <span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mo>−</mo><mn>1</mn></mrow><annotation encoding="application/x-tex">-1</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.72777em;vertical-align:-0.08333em;"></span><span class="mord">−</span><span class="mord">1</span></span></span></span>；</li>
+</ul>
+</li>
+</ul>
+<p>但是这个很难做啊，我觉得纯对着这个很难低于平方。</p>
+<p>但是这个启发我们，答案是否只和 <span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi mathvariant="normal">l</mi><mi mathvariant="normal">o</mi><mi mathvariant="normal">w</mi><mi mathvariant="normal">b</mi><mi mathvariant="normal">i</mi><mi mathvariant="normal">t</mi></mrow><annotation encoding="application/x-tex">\mathrm{lowbit}</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.69444em;vertical-align:0em;"></span><span class="mord"><span class="mord mathrm">l</span><span class="mord mathrm">o</span><span class="mord mathrm" style="margin-right:0.01389em;">w</span><span class="mord mathrm">b</span><span class="mord mathrm">i</span><span class="mord mathrm">t</span></span></span></span></span> 有关？通过对表 <code>assert</code> 一下发现是符合的。</p>
+<p>我们对于 <span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi mathvariant="normal">lowbit</mi><mo>⁡</mo><mo stretchy="false">(</mo><mi>a</mi><mo stretchy="false">)</mo><mo>=</mo><msup><mn>2</mn><mi>i</mi></msup><mo separator="true">,</mo><mi mathvariant="normal">lowbit</mi><mo>⁡</mo><mo stretchy="false">(</mo><mi>b</mi><mo stretchy="false">)</mo><mo>=</mo><msup><mn>2</mn><mi>j</mi></msup></mrow><annotation encoding="application/x-tex">\operatorname{lowbit}(a)=2^i,\operatorname{lowbit}(b)=2^j</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:1em;vertical-align:-0.25em;"></span><span class="mop"><span class="mord mathrm">l</span><span class="mord mathrm">o</span><span class="mord mathrm" style="margin-right:0.01389em;">w</span><span class="mord mathrm">b</span><span class="mord mathrm">i</span><span class="mord mathrm">t</span></span><span class="mopen">(</span><span class="mord mathnormal">a</span><span class="mclose">)</span><span class="mspace" style="margin-right:0.2777777777777778em;"></span><span class="mrel">=</span><span class="mspace" style="margin-right:0.2777777777777778em;"></span></span><span class="base"><span class="strut" style="height:1.0746639999999998em;vertical-align:-0.25em;"></span><span class="mord"><span class="mord">2</span><span class="msupsub"><span class="vlist-t"><span class="vlist-r"><span class="vlist" style="height:0.824664em;"><span style="top:-3.063em;margin-right:0.05em;"><span class="pstrut" style="height:2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mathnormal mtight">i</span></span></span></span></span></span></span></span><span class="mpunct">,</span><span class="mspace" style="margin-right:0.16666666666666666em;"></span><span class="mop"><span class="mord mathrm">l</span><span class="mord mathrm">o</span><span class="mord mathrm" style="margin-right:0.01389em;">w</span><span class="mord mathrm">b</span><span class="mord mathrm">i</span><span class="mord mathrm">t</span></span><span class="mopen">(</span><span class="mord mathnormal">b</span><span class="mclose">)</span><span class="mspace" style="margin-right:0.2777777777777778em;"></span><span class="mrel">=</span><span class="mspace" style="margin-right:0.2777777777777778em;"></span></span><span class="base"><span class="strut" style="height:0.824664em;vertical-align:0em;"></span><span class="mord"><span class="mord">2</span><span class="msupsub"><span class="vlist-t"><span class="vlist-r"><span class="vlist" style="height:0.824664em;"><span style="top:-3.063em;margin-right:0.05em;"><span class="pstrut" style="height:2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mathnormal mtight" style="margin-right:0.05724em;">j</span></span></span></span></span></span></span></span></span></span></span> 打表一下，发现表如下：</p>
+<pre><code class="highlight none">-1  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0
+ 0  1  1  1  1  1  1  1  1  1  1  1  1  1  1  1  1  1  1  1
+ 0  1 -1  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0
+ 0  1  0  1  1  1  1  1  1  1  1  1  1  1  1  1  1  1  1  1
+ 0  1  0  1 -1  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0
+ 0  1  0  1  0  1  1  1  1  1  1  1  1  1  1  1  1  1  1  1
+ 0  1  0  1  0  1 -1  0  0  0  0  0  0  0  0  0  0  0  0  0
+ 0  1  0  1  0  1  0  1  1  1  1  1  1  1  1  1  1  1  1  1
+ 0  1  0  1  0  1  0  1 -1  0  0  0  0  0  0  0  0  0  0  0
+ 0  1  0  1  0  1  0  1  0  1  1  1  1  1  1  1  1  1  1  1
+ 0  1  0  1  0  1  0  1  0  1 -1  0  0  0  0  0  0  0  0  0
+ 0  1  0  1  0  1  0  1  0  1  0  1  1  1  1  1  1  1  1  1
+ 0  1  0  1  0  1  0  1  0  1  0  1 -1  0  0  0  0  0  0  0
+ 0  1  0  1  0  1  0  1  0  1  0  1  0  1  1  1  1  1  1  1
+ 0  1  0  1  0  1  0  1  0  1  0  1  0  1 -1  0  0  0  0  0
+ 0  1  0  1  0  1  0  1  0  1  0  1  0  1  0  1  1  1  1  1
+ 0  1  0  1  0  1  0  1  0  1  0  1  0  1  0  1 -1  0  0  0
+ 0  1  0  1  0  1  0  1  0  1  0  1  0  1  0  1  0  1  1  1
+ 0  1  0  1  0  1  0  1  0  1  0  1  0  1  0  1  0  1 -1  0
+ 0  1  0  1  0  1  0  1  0  1  0  1  0  1  0  1  0  1  0  1</code></pre>
+<p>形式非常的优美。预处理 <span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mrow><mi mathvariant="normal">c</mi><mi mathvariant="normal">t</mi><mi mathvariant="normal">z</mi></mrow><mo>=</mo><mi>i</mi></mrow><annotation encoding="application/x-tex">\mathrm{ctz}=i</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.61508em;vertical-align:0em;"></span><span class="mord"><span class="mord mathrm">c</span><span class="mord mathrm">t</span><span class="mord mathrm">z</span></span><span class="mspace" style="margin-right:0.2777777777777778em;"></span><span class="mrel">=</span><span class="mspace" style="margin-right:0.2777777777777778em;"></span></span><span class="base"><span class="strut" style="height:0.65952em;vertical-align:0em;"></span><span class="mord mathnormal">i</span></span></span></span> 的数的个数（扫一遍然后差分一下），然后求一个后缀和就好了。</p>
+<h1 id="模拟赛-梦熊-20250930-c"><a class="markdownIt-Anchor" href="#模拟赛-梦熊-20250930-c"></a> 模拟赛 梦熊 20250930 C</h1>
+<p>本题 aka <a target="_blank" rel="noopener" href="https://qoj.ac/problem/4897">https://qoj.ac/problem/4897</a>。</p>
+<h1 id="模拟赛-梦熊-20250930-d"><a class="markdownIt-Anchor" href="#模拟赛-梦熊-20250930-d"></a> 模拟赛 梦熊 20250930 D</h1>
+<p>本题 aka <a target="_blank" rel="noopener" href="https://uoj.ac/problem/485">https://uoj.ac/problem/485</a>。但是部分分。过整个题需要复杂的多项式科技。</p>
 
 	</div>
 
@@ -791,7 +806,7 @@
 				<span class="btn-inner--icon"><i class="fa fa-twitter"></i></span>
 			</button>
 		</a>
-		<a target="_blank" class="no-pjax icon-telegram" href="https://telegram.me/share/url?url=http://blog.cyx2009.top/archives/20240119_essay/&text=[闲话] 20240119 鲜花" tooltip="分享到 Telegram">
+		<a target="_blank" class="no-pjax icon-telegram" href="https://telegram.me/share/url?url=http://blog.cyx2009.top/archives/potpourri_6/&text=[题解] 杂题选讲 6" tooltip="分享到 Telegram">
 			<button class="btn btn-icon btn-primary" style="background: #42a5f5;border: none;">
 				<span class="btn-inner--icon"><i class="fa fa-telegram"></i></span>
 			</button>
@@ -808,12 +823,12 @@
 </div>
 <script type="text/javascript">
 	socialShare("#share", {
-	    title : `[闲话] 20240119 鲜花`,
-	    description : `今天是 gmx 生日。我昨晚在书包藏了两块巧克力，下午第四节课下课跑去送了。
-她好像看起来很开心/s...`,
+	    title : `[题解] 杂题选讲 6`,
+	    description : `模拟赛 梦熊 20250930 A
+本题 aka https://qoj.ac/problem/67...`,
 	    wechatQrcodeTitle : `分享到微信`,
 	    wechatQrcodeHelper : `微信扫描二维码`,
-	    source : `http://blog.cyx2009.top/archives/20240119_essay/`
+	    source : `http://blog.cyx2009.top/archives/potpourri_6/`
 	});
 	$("#share_show")[0].onclick = function(){
 		$("#share_container").addClass("opened");
@@ -879,7 +894,7 @@
 
 
 
-<div class="post-navigation card shadow-sm"><div class="post-navigation-item post-navigation-pre"><span class="page-navigation-extra-text"><i class="fa fa-arrow-circle-o-left" aria-hidden="true"></i>上一篇</span><a href="/archives/CF351D/" rel="prev"> [题解] CF351D Jeff and Removing Periods</a></div><div class="post-navigation-item post-navigation-next"><span class="page-navigation-extra-text">下一篇 <i class="fa fa-arrow-circle-o-right" aria-hidden="true"></i></span><a href="/archives/ABC336/" rel="next"> [题解] ABC336 做题笔记</a></div></div>
+<div class="post-navigation card shadow-sm"><div class="post-navigation-item post-navigation-pre"></div><div class="post-navigation-item post-navigation-next"><span class="page-navigation-extra-text">下一篇 <i class="fa fa-arrow-circle-o-right" aria-hidden="true"></i></span><a href="/archives/CF2146/" rel="next"> [题解] CF2146 验题人题解</a></div></div>
 
 
 

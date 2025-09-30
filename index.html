@@ -510,7 +510,7 @@
 							<nav class="site-state">
 								<div class="site-state-item site-state-posts">
 									<a href="/archives">
-										<span class="site-state-item-count">216</span>
+										<span class="site-state-item-count">217</span>
 										<span class="site-state-item-name">文章</span>
 									</a>
 								</div>
@@ -572,7 +572,7 @@
 				</button>
 			</div>
 			<div class="modal-body">
-				<a class="badge badge-secondary tag" href="/categories/Essay/" rel="tag">Essay <span class="tag-num">7</span></a><a class="badge badge-secondary tag" href="/categories/Solution/" rel="tag">Solution <span class="tag-num">189</span></a><a class="badge badge-secondary tag" href="/categories/StudyNote/" rel="tag">StudyNote <span class="tag-num">4</span></a><a class="badge badge-secondary tag" href="/categories/Technology/" rel="tag">Technology <span class="tag-num">3</span></a><a class="badge badge-secondary tag" href="/categories/TravelNote/" rel="tag">TravelNote <span class="tag-num">13</span></a>
+				<a class="badge badge-secondary tag" href="/categories/Essay/" rel="tag">Essay <span class="tag-num">7</span></a><a class="badge badge-secondary tag" href="/categories/Solution/" rel="tag">Solution <span class="tag-num">190</span></a><a class="badge badge-secondary tag" href="/categories/StudyNote/" rel="tag">StudyNote <span class="tag-num">4</span></a><a class="badge badge-secondary tag" href="/categories/Technology/" rel="tag">Technology <span class="tag-num">3</span></a><a class="badge badge-secondary tag" href="/categories/TravelNote/" rel="tag">TravelNote <span class="tag-num">13</span></a>
 			</div>
 		</div>
 	</div>
@@ -807,6 +807,72 @@ RSS 简介 | 菜鸟教程
 	<article class="post card bg-white shadow-sm border-0 post-preview">
 	<header class="post-header text-center">
 		
+		<a class="post-title" href="/archives/potpourri_6/">[题解] 杂题选讲 6</a>
+		<div class="post-meta">
+			
+						
+						<div class="post-meta-detail post-meta-detail-time">
+							<i class="fa fa-clock-o" aria-hidden="true"></i>
+							<time title="发布于 2025-9-30 15:43:00 | 编辑于 2025-9-30 19:23:36">2025-9-30 15:43
+							</time>
+						</div>
+					
+						
+							<div class="post-meta-devide">|</div>
+						
+						<div class="post-meta-detail post-meta-detail-categories">
+							<i class="fa fa-bookmark-o" aria-hidden="true"></i>
+							<a class="post-meta-detail-catagory-link" href="/categories/Solution/">Solution</a>
+						</div>
+					
+						
+							<div class="post-meta-devide">|</div>
+						
+						<div class="post-meta-detail post-meta-detail-words">
+							<i class="fa fa-book" aria-hidden="true"></i>
+							<span id="busuanzi_container_page_pv">
+								阅读 <span id="busuanzi_value_page_pv"></span> 次
+							</span>
+						</div>
+					
+						
+							<div class="post-meta-devide">|</div>
+						
+						<div class="post-meta-detail post-meta-detail-words">
+							<i class="fa fa-file-word-o" aria-hidden="true"></i>
+							1.1k 字
+						</div>
+					
+						
+							<div class="post-meta-devide">|</div>
+						
+						<div class="post-meta-detail post-meta-detail-readingtime">
+							<i class="fa fa-hourglass-end" aria-hidden="true"></i>
+							5 分钟
+						</div>
+					
+		</div>
+		
+	</header>
+
+	<div class="post-content">
+		
+			
+				模拟赛 梦熊 20250930 A
+本题 aka https://qoj.ac/problem/670。
+简单题，注意到我们比较字典序由于字母互不相同，所以只关心首字母。
+枚举给定字符串应该出现在哪里，就是出现在 p 的有 n−p+1 的排名代价。对于首字母比他小的 DP 一下，首字母比他大的随便选乘上阶乘。DP 设 fi,j,k 表示前 i 个字...
+			
+		
+	</div>
+
+	
+</article>
+
+
+	<article class="post card bg-white shadow-sm border-0 post-preview">
+	<header class="post-header text-center">
+		
 		<a class="post-title" href="/archives/CF2146/">[题解] CF2146 验题人题解</a>
 		<div class="post-meta">
 			
@@ -950,7 +1016,7 @@ cpp 提交记录：https://codeforces.com/cont...
 						
 						<div class="post-meta-detail post-meta-detail-time">
 							<i class="fa fa-clock-o" aria-hidden="true"></i>
-							<time title="发布于 2025-9-14 16:44:00 | 编辑于 2025-9-29 14:51:09">2025-9-14 16:44
+							<time title="发布于 2025-9-14 16:44:00 | 编辑于 2025-9-30 15:43:05">2025-9-14 16:44
 							</time>
 						</div>
 					
@@ -977,7 +1043,7 @@ cpp 提交记录：https://codeforces.com/cont...
 						
 						<div class="post-meta-detail post-meta-detail-words">
 							<i class="fa fa-file-word-o" aria-hidden="true"></i>
-							13.3k 字
+							13.5k 字
 						</div>
 					
 						
@@ -985,7 +1051,7 @@ cpp 提交记录：https://codeforces.com/cont...
 						
 						<div class="post-meta-detail post-meta-detail-readingtime">
 							<i class="fa fa-hourglass-end" aria-hidden="true"></i>
-							61 分钟
+							62 分钟
 						</div>
 					
 		</div>
@@ -1215,72 +1281,6 @@ cpp 提交记录：https://codeforces.com/cont...
 				模拟赛 梦熊 20250731 A
 考虑把 axi⊕ayi=zi 的都拎出来搜出来一个连通块，连通块内我们可以算出 au=ar⊕vu，其中 r 是连通块最小的编号。vu 是搜连通块的时候可以直接搜出来的限制。
 考虑最小化字典序等价于最小化 ar。那么我们有若干个 ar⊕vi∈[li,ri] 的限制。等价于我们把每个 y∈[li,ri]，把 y⊕vi...
-			
-		
-	</div>
-
-	
-</article>
-
-
-	<article class="post card bg-white shadow-sm border-0 post-preview">
-	<header class="post-header text-center">
-		
-		<a class="post-title" href="/archives/P12975/">[题解] P12975 疯狂星期四</a>
-		<div class="post-meta">
-			
-						
-						<div class="post-meta-detail post-meta-detail-time">
-							<i class="fa fa-clock-o" aria-hidden="true"></i>
-							<time title="发布于 2025-7-18 16:35:00 | 编辑于 2025-7-18 16:43:05">2025-7-18 16:35
-							</time>
-						</div>
-					
-						
-							<div class="post-meta-devide">|</div>
-						
-						<div class="post-meta-detail post-meta-detail-categories">
-							<i class="fa fa-bookmark-o" aria-hidden="true"></i>
-							<a class="post-meta-detail-catagory-link" href="/categories/Solution/">Solution</a>
-						</div>
-					
-						
-							<div class="post-meta-devide">|</div>
-						
-						<div class="post-meta-detail post-meta-detail-words">
-							<i class="fa fa-book" aria-hidden="true"></i>
-							<span id="busuanzi_container_page_pv">
-								阅读 <span id="busuanzi_value_page_pv"></span> 次
-							</span>
-						</div>
-					
-						
-							<div class="post-meta-devide">|</div>
-						
-						<div class="post-meta-detail post-meta-detail-words">
-							<i class="fa fa-file-word-o" aria-hidden="true"></i>
-							298 字
-						</div>
-					
-						
-							<div class="post-meta-devide">|</div>
-						
-						<div class="post-meta-detail post-meta-detail-readingtime">
-							<i class="fa fa-hourglass-end" aria-hidden="true"></i>
-							1 分钟
-						</div>
-					
-		</div>
-		
-	</header>
-
-	<div class="post-content">
-		
-			
-				发现这题当时写的题解没保存。
-注意到有取模，并且对如此小的数取模，猜测答案循环节与 100 有点关系。
-用以下代码打 200 项的表，f(i,j) 表示填了 i 个格子，余数为 j 的方案数。直接模拟题意，枚举这个位置选了什么数，复杂度 O(nV2)。
-发现 f(101,0)=f(1,0),f(2,0)=f(102,0)，尝试打出更多项，发现均成立...
 			
 		
 	</div>
