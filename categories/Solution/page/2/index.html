@@ -465,7 +465,7 @@
 		
 			<p class="text-black mt-3 mb-0 opacity-8">
 				<i class="fa fa-file-o mr-1"></i>
-				190 篇文章
+				191 篇文章
 			</p>
 		
 	</div>
@@ -524,7 +524,7 @@
 							<nav class="site-state">
 								<div class="site-state-item site-state-posts">
 									<a href="/archives">
-										<span class="site-state-item-count">217</span>
+										<span class="site-state-item-count">218</span>
 										<span class="site-state-item-name">文章</span>
 									</a>
 								</div>
@@ -586,7 +586,7 @@
 				</button>
 			</div>
 			<div class="modal-body">
-				<a class="badge badge-secondary tag" href="/categories/Essay/" rel="tag">Essay <span class="tag-num">7</span></a><a class="badge badge-secondary tag" href="/categories/Solution/" rel="tag">Solution <span class="tag-num">190</span></a><a class="badge badge-secondary tag" href="/categories/StudyNote/" rel="tag">StudyNote <span class="tag-num">4</span></a><a class="badge badge-secondary tag" href="/categories/Technology/" rel="tag">Technology <span class="tag-num">3</span></a><a class="badge badge-secondary tag" href="/categories/TravelNote/" rel="tag">TravelNote <span class="tag-num">13</span></a>
+				<a class="badge badge-secondary tag" href="/categories/Essay/" rel="tag">Essay <span class="tag-num">7</span></a><a class="badge badge-secondary tag" href="/categories/Solution/" rel="tag">Solution <span class="tag-num">191</span></a><a class="badge badge-secondary tag" href="/categories/StudyNote/" rel="tag">StudyNote <span class="tag-num">4</span></a><a class="badge badge-secondary tag" href="/categories/Technology/" rel="tag">Technology <span class="tag-num">3</span></a><a class="badge badge-secondary tag" href="/categories/TravelNote/" rel="tag">TravelNote <span class="tag-num">13</span></a>
 			</div>
 		</div>
 	</div>
@@ -616,6 +616,80 @@
 		
 		
 			
+	<article class="post card bg-white shadow-sm border-0 post-preview">
+	<header class="post-header text-center">
+		
+		<a class="post-title" href="/archives/ABC411G/">[题解] ABC411G Count Cycles</a>
+		<div class="post-meta">
+			
+						
+						<div class="post-meta-detail post-meta-detail-time">
+							<i class="fa fa-clock-o" aria-hidden="true"></i>
+							<time title="发布于 2025-6-22 11:44:00 | 编辑于 2025-6-22 12:16:43">2025-6-22 11:44
+							</time>
+						</div>
+					
+						
+							<div class="post-meta-devide">|</div>
+						
+						<div class="post-meta-detail post-meta-detail-categories">
+							<i class="fa fa-bookmark-o" aria-hidden="true"></i>
+							<a class="post-meta-detail-catagory-link" href="/categories/Solution/">Solution</a>
+						</div>
+					
+						
+							<div class="post-meta-devide">|</div>
+						
+						<div class="post-meta-detail post-meta-detail-words">
+							<i class="fa fa-book" aria-hidden="true"></i>
+							<span id="busuanzi_container_page_pv">
+								阅读 <span id="busuanzi_value_page_pv"></span> 次
+							</span>
+						</div>
+					
+						
+							<div class="post-meta-devide">|</div>
+						
+						<div class="post-meta-detail post-meta-detail-words">
+							<i class="fa fa-file-word-o" aria-hidden="true"></i>
+							1.2k 字
+						</div>
+					
+						
+							<div class="post-meta-devide">|</div>
+						
+						<div class="post-meta-detail post-meta-detail-readingtime">
+							<i class="fa fa-hourglass-end" aria-hidden="true"></i>
+							6 分钟
+						</div>
+					
+		</div>
+		
+	</header>
+
+	<div class="post-content">
+		
+			
+				题意
+求 n 个点 m 条边的无向图中简单环数量。可以有重边，没有自环。
+1≤n≤20，1≤m≤2×105。
+ 做法
+有一个显然的 O(2nn3) 的朴素状压 DP。
+设 fs,i,mask 表示开头为 s 目前结尾为 i 包含了 mask 集合里的点，形成了一条链的方案数。转移枚举下一个点乘上两点之间边的个数即可。
+最后把所有可能的开头结尾枚举一...
+			
+		
+	</div>
+
+	
+		<div class="post-tags">
+			<i class="fa fa-tags" aria-hidden="true"></i>
+			<a class="tag badge badge-secondary post-meta-detail-tag -none-link" href="/tags/%E7%8A%B6%E5%8E%8B-DP/" rel="tag">状压 DP</a>
+		</div>
+	
+</article>
+
+
 	<article class="post card bg-white shadow-sm border-0 post-preview">
 	<header class="post-header text-center">
 		
@@ -1278,80 +1352,8 @@ s 很...
 </article>
 
 
-	<article class="post card bg-white shadow-sm border-0 post-preview">
-	<header class="post-header text-center">
-		
-		<a class="post-title" href="/archives/P11947/">[题解] [模拟赛 20250320] P11947 [KTSC 2025] 可爱区间 / maxsum</a>
-		<div class="post-meta">
-			
-						
-						<div class="post-meta-detail post-meta-detail-time">
-							<i class="fa fa-clock-o" aria-hidden="true"></i>
-							<time title="发布于 2025-3-21 18:21:00 | 编辑于 2025-3-28 15:32:00">2025-3-21 18:21
-							</time>
-						</div>
-					
-						
-							<div class="post-meta-devide">|</div>
-						
-						<div class="post-meta-detail post-meta-detail-categories">
-							<i class="fa fa-bookmark-o" aria-hidden="true"></i>
-							<a class="post-meta-detail-catagory-link" href="/categories/Solution/">Solution</a>
-						</div>
-					
-						
-							<div class="post-meta-devide">|</div>
-						
-						<div class="post-meta-detail post-meta-detail-words">
-							<i class="fa fa-book" aria-hidden="true"></i>
-							<span id="busuanzi_container_page_pv">
-								阅读 <span id="busuanzi_value_page_pv"></span> 次
-							</span>
-						</div>
-					
-						
-							<div class="post-meta-devide">|</div>
-						
-						<div class="post-meta-detail post-meta-detail-words">
-							<i class="fa fa-file-word-o" aria-hidden="true"></i>
-							3.5k 字
-						</div>
-					
-						
-							<div class="post-meta-devide">|</div>
-						
-						<div class="post-meta-detail post-meta-detail-readingtime">
-							<i class="fa fa-hourglass-end" aria-hidden="true"></i>
-							18 分钟
-						</div>
-					
-		</div>
-		
-	</header>
 
-	<div class="post-content">
-		
-			
-				题意
-有 n 个数 ai,bi，满足 ai≤bi。
-定义区间 [l,r] 是好的当且仅当存在整数序列 c 满足 ai≤ci≤bi，使得对于所有 0≤s≤e<n 存在 ∑i=seci≤∑i=lrci。
-有 q 次询问，每次给出 l1,r1,l2,r2，求有多少 l∈[l1,r1]∧r∈[l2,r2] 满足 [l,r] 是好的。
-1≤n,q≤2.5×1...
-			
-		
-	</div>
-
-	
-		<div class="post-tags">
-			<i class="fa fa-tags" aria-hidden="true"></i>
-			<a class="tag badge badge-secondary post-meta-detail-tag -none-link" href="/tags/%E5%80%8D%E5%A2%9E/" rel="tag">倍增</a><a class="tag badge badge-secondary post-meta-detail-tag -none-link" href="/tags/%E6%89%AB%E6%8F%8F%E7%BA%BF/" rel="tag">扫描线</a><a class="tag badge badge-secondary post-meta-detail-tag -none-link" href="/tags/%E6%A8%A1%E6%8B%9F%E8%B5%9B/" rel="tag">模拟赛</a><a class="tag badge badge-secondary post-meta-detail-tag -none-link" href="/tags/%E7%BA%BF%E6%AE%B5%E6%A0%91/" rel="tag">线段树</a>
-		</div>
-	
-</article>
-
-
-
-<nav><ul class="pagination"><li class="page-item"><a aria-label="Previous Page" class="page-link" href="/categories/Solution/"><i class="fa fa-angle-left" aria-hidden="true"></i></a></li><li class="page-item"><a class="page-link" href="/categories/Solution/">1</a></li><li class="page-item active"><span class="page-link" style="cursor: default;">2</span></li><li class="page-item"><a class="page-link" href="/categories/Solution/page/3/">3</a></li><li class="page-item"><a class="page-link" href="/categories/Solution/page/4/">4</a></li><li class="page-item"><a class="page-link" href="/categories/Solution/page/5/">5</a></li><li class="page-item"><a class="page-link" href="/categories/Solution/page/6/">6</a></li><li class="page-item"><a class="page-link" href="/categories/Solution/page/7/">7</a></li><li class="page-item"><a aria-label="Next Page" class="page-link" href="/categories/Solution/page/3/"><i class="fa fa-angle-right" aria-hidden="true"></i></a></li><li class="page-item"><a aria-label="Last Page" class="page-link" href="/categories/Solution/page/19/"><i class="fa fa-angle-double-right" aria-hidden="true"></i></a></li></ul></nav><nav><ul class="pagination pagination-mobile"><li class="page-item"><a aria-label="Previous Page" class="page-link" href="/categories/Solution/"><i class="fa fa-angle-left" aria-hidden="true"></i></a></li><li class="page-item"><a class="page-link" href="/categories/Solution/">1</a></li><li class="page-item active"><span class="page-link" style="cursor: default;">2</span></li><li class="page-item"><a class="page-link" href="/categories/Solution/page/3/">3</a></li><li class="page-item"><a class="page-link" href="/categories/Solution/page/4/">4</a></li><li class="page-item"><a class="page-link" href="/categories/Solution/page/5/">5</a></li><li class="page-item"><a aria-label="Next Page" class="page-link" href="/categories/Solution/page/3/"><i class="fa fa-angle-right" aria-hidden="true"></i></a></li><li class="page-item"><a aria-label="Last Page" class="page-link" href="/categories/Solution/page/19/"><i class="fa fa-angle-double-right" aria-hidden="true"></i></a></li></ul></nav>
+<nav><ul class="pagination"><li class="page-item"><a aria-label="Previous Page" class="page-link" href="/categories/Solution/"><i class="fa fa-angle-left" aria-hidden="true"></i></a></li><li class="page-item"><a class="page-link" href="/categories/Solution/">1</a></li><li class="page-item active"><span class="page-link" style="cursor: default;">2</span></li><li class="page-item"><a class="page-link" href="/categories/Solution/page/3/">3</a></li><li class="page-item"><a class="page-link" href="/categories/Solution/page/4/">4</a></li><li class="page-item"><a class="page-link" href="/categories/Solution/page/5/">5</a></li><li class="page-item"><a class="page-link" href="/categories/Solution/page/6/">6</a></li><li class="page-item"><a class="page-link" href="/categories/Solution/page/7/">7</a></li><li class="page-item"><a aria-label="Next Page" class="page-link" href="/categories/Solution/page/3/"><i class="fa fa-angle-right" aria-hidden="true"></i></a></li><li class="page-item"><a aria-label="Last Page" class="page-link" href="/categories/Solution/page/20/"><i class="fa fa-angle-double-right" aria-hidden="true"></i></a></li></ul></nav><nav><ul class="pagination pagination-mobile"><li class="page-item"><a aria-label="Previous Page" class="page-link" href="/categories/Solution/"><i class="fa fa-angle-left" aria-hidden="true"></i></a></li><li class="page-item"><a class="page-link" href="/categories/Solution/">1</a></li><li class="page-item active"><span class="page-link" style="cursor: default;">2</span></li><li class="page-item"><a class="page-link" href="/categories/Solution/page/3/">3</a></li><li class="page-item"><a class="page-link" href="/categories/Solution/page/4/">4</a></li><li class="page-item"><a class="page-link" href="/categories/Solution/page/5/">5</a></li><li class="page-item"><a aria-label="Next Page" class="page-link" href="/categories/Solution/page/3/"><i class="fa fa-angle-right" aria-hidden="true"></i></a></li><li class="page-item"><a aria-label="Last Page" class="page-link" href="/categories/Solution/page/20/"><i class="fa fa-angle-double-right" aria-hidden="true"></i></a></li></ul></nav>
 
 
 		
