@@ -28,7 +28,7 @@
 <meta property="og:description" content="CF2104G Modulo 3 独立想出；思考时间：中偏长；已完成代码；代码时间：中；推荐指数：还可以； 考虑不带修求答案怎么求。一个环最后一定是一个颜色，所以答案是缩点之后的点数为 ccc 则答案为 kc mod 3k^c\bmod 3kcmod3。而 ccc 其实就是 n−∑(leni−1)n-\sum (len_i-1)n−∑(leni​−1)，其中 lenilen_ileni​ 是每个">
 <meta property="og:locale" content="zh_CN">
 <meta property="article:published_time" content="2025-10-15T03:29:00.000Z">
-<meta property="article:modified_time" content="2025-10-20T11:59:10.764Z">
+<meta property="article:modified_time" content="2025-10-21T12:01:04.254Z">
 <meta property="article:author" content="沉石鱼惊旋">
 <meta name="twitter:card" content="summary">
 
@@ -643,7 +643,7 @@
 						
 						<div class="post-meta-detail post-meta-detail-time">
 							<i class="fa fa-clock-o" aria-hidden="true"></i>
-							<time title="发布于 2025-10-15 11:29:00 | 编辑于 2025-10-20 19:59:10">2025-10-15 11:29
+							<time title="发布于 2025-10-15 11:29:00 | 编辑于 2025-10-21 20:01:04">2025-10-15 11:29
 							</time>
 						</div>
 					
@@ -670,7 +670,7 @@
 						
 						<div class="post-meta-detail post-meta-detail-words">
 							<i class="fa fa-file-word-o" aria-hidden="true"></i>
-							5.6k 字
+							5.8k 字
 						</div>
 					
 						
@@ -678,7 +678,7 @@
 						
 						<div class="post-meta-detail post-meta-detail-readingtime">
 							<i class="fa fa-hourglass-end" aria-hidden="true"></i>
-							22 分钟
+							23 分钟
 						</div>
 					
 		</div>
@@ -873,6 +873,19 @@ CMPSWP R2 R3 CMPSWP R4 R5 CMPSWP R6 R7</code></pre>
 <p>转移考虑 <span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>i</mi></mrow><annotation encoding="application/x-tex">i</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.65952em;vertical-align:0em;"></span><span class="mord mathnormal">i</span></span></span></span> 自己选不选点，选的话要把祖先链的状态进行一定修改。以及自己儿子的状态合并上来。</p>
 <p>注意到 <span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>i</mi></mrow><annotation encoding="application/x-tex">i</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.65952em;vertical-align:0em;"></span><span class="mord mathnormal">i</span></span></span></span> 这一维不重要，可以记录成深度。</p>
 <p>然后我我们可以随机或者是 DP 处一个很优秀的点，使得这个点作为根跑的 DP 比较少，大概就是 <span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>d</mi><mo>×</mo><msup><mn>3</mn><mi>d</mi></msup></mrow><annotation encoding="application/x-tex">d\times 3^d</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.77777em;vertical-align:-0.08333em;"></span><span class="mord mathnormal">d</span><span class="mspace" style="margin-right:0.2222222222222222em;"></span><span class="mbin">×</span><span class="mspace" style="margin-right:0.2222222222222222em;"></span></span><span class="base"><span class="strut" style="height:0.849108em;vertical-align:0em;"></span><span class="mord"><span class="mord">3</span><span class="msupsub"><span class="vlist-t"><span class="vlist-r"><span class="vlist" style="height:0.849108em;"><span style="top:-3.063em;margin-right:0.05em;"><span class="pstrut" style="height:2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mathnormal mtight">d</span></span></span></span></span></span></span></span></span></span></span> 比较小，这样很难被卡。</p>
+<h1 id="模拟赛-梦熊-20251021-a"><a class="markdownIt-Anchor" href="#模拟赛-梦熊-20251021-a"></a> 模拟赛 梦熊 20251021 A</h1>
+<p><strong>场切；思考时间：短；已完成代码；代码时间：短；推荐指数：一般；</strong></p>
+<p>本题 aka <a target="_blank" rel="noopener" href="https://www.luogu.com.cn/problem/P4805">https://www.luogu.com.cn/problem/P4805</a>。</p>
+<p>直接区间 DP，合并 <span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mn>3</mn></mrow><annotation encoding="application/x-tex">3</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.64444em;vertical-align:0em;"></span><span class="mord">3</span></span></span></span> 个需要知道两个分割点，只需要枚举一个另一个双指针扫一下。</p>
+<h1 id="模拟赛-梦熊-20251021-b"><a class="markdownIt-Anchor" href="#模拟赛-梦熊-20251021-b"></a> 模拟赛 梦熊 20251021 B</h1>
+<p><strong>场切；思考时间：中；已完成代码；代码时间：中；推荐指数：一般；</strong></p>
+<p>本题 aka <a target="_blank" rel="noopener" href="https://qoj.ac/problem/1349">https://qoj.ac/problem/1349</a>。</p>
+<p>线段树维护目前的答案，激活边和断开边就是子树加一个 <span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mo>+</mo><mi mathvariant="normal">∞</mi></mrow><annotation encoding="application/x-tex">+\infty</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.66666em;vertical-align:-0.08333em;"></span><span class="mord">+</span><span class="mord">∞</span></span></span></span> 或者加上 <span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mo>−</mo><mi mathvariant="normal">∞</mi></mrow><annotation encoding="application/x-tex">-\infty</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.66666em;vertical-align:-0.08333em;"></span><span class="mord">−</span><span class="mord">∞</span></span></span></span>。移动也只需要子树加法。</p>
+<p>都可以线段树维护 DFS 序实现。</p>
+<h1 id="模拟赛-梦熊-20251021-c"><a class="markdownIt-Anchor" href="#模拟赛-梦熊-20251021-c"></a> 模拟赛 梦熊 20251021 C</h1>
+<p>本题 aka <a target="_blank" rel="noopener" href="https://qoj.ac/problem/12905">https://qoj.ac/problem/12905</a>。</p>
+<p>这个问题是可以做到更好的，也许是有明确的下界的。不急，再研究研究。</p>
+<h1 id="模拟赛-梦熊-20251021-d"><a class="markdownIt-Anchor" href="#模拟赛-梦熊-20251021-d"></a> 模拟赛 梦熊 20251021 D</h1>
 
 	</div>
 
