@@ -15,8 +15,34 @@
     <atom:link href="http://blog.cyx2009.top/rss2.xml" rel="self" type="application/rss+xml"/>
     
     <description>沉石鱼惊旋 的博客</description>
-    <pubDate>Wed, 22 Oct 2025 11:58:30 GMT</pubDate>
+    <pubDate>Fri, 24 Oct 2025 11:09:31 GMT</pubDate>
     <generator>http://hexo.io/</generator>
+    
+    <item>
+      <title>[笔记] 关于正交拉丁方的构造与应用</title>
+      <link>http://blog.cyx2009.top/archives/OLS/</link>
+      <guid>http://blog.cyx2009.top/archives/OLS/</guid>
+      <pubDate>Fri, 24 Oct 2025 10:00:00 GMT</pubDate>
+      
+        
+        
+          
+          
+      <description>&lt;h1 id=&quot;定义&quot;&gt;&lt;a class=&quot;markdownIt-Anchor&quot; href=&quot;#定义&quot;&gt;&lt;/a&gt; 定义&lt;/h1&gt;
+&lt;p&gt;&lt;strong&gt;拉丁方阵&lt;/strong&gt;（英语：Latin square）是一种 &lt;span class=&quot;katex&quot;&gt;&lt;span</description>
+          
+        
+      
+      
+      
+      
+      <category domain="http://blog.cyx2009.top/categories/StudyNote/">StudyNote</category>
+      
+      
+      
+      <comments>http://blog.cyx2009.top/archives/OLS/#disqus_thread</comments>
+      
+    </item>
     
     <item>
       <title>[题解] 杂题选讲 7</title>
@@ -526,32 +552,6 @@
       
       
       <comments>http://blog.cyx2009.top/archives/20250309_essay/#disqus_thread</comments>
-      
-    </item>
-    
-    <item>
-      <title>[题解] B3760 [信息与未来 2021] 掷骰子</title>
-      <link>http://blog.cyx2009.top/archives/B3760/</link>
-      <guid>http://blog.cyx2009.top/archives/B3760/</guid>
-      <pubDate>Mon, 07 Apr 2025 15:32:00 GMT</pubDate>
-      
-        
-        
-          
-          
-      <description>&lt;h1 id=&quot;前言&quot;&gt;&lt;a class=&quot;markdownIt-Anchor&quot; href=&quot;#前言&quot;&gt;&lt;/a&gt; 前言&lt;/h1&gt;
-&lt;p&gt;2025.04.07 晚。被 cz</description>
-          
-        
-      
-      
-      
-      
-      <category domain="http://blog.cyx2009.top/categories/Solution/">Solution</category>
-      
-      
-      
-      <comments>http://blog.cyx2009.top/archives/B3760/#disqus_thread</comments>
       
     </item>
     

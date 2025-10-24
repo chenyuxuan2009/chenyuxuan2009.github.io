@@ -1,0 +1,1206 @@
+<!DOCTYPE html>
+
+<html class="article-header-style-1">
+<head><!-- hexo injector head_begin start -->
+<link rel="stylesheet" href="/css/bilicard.css">
+<!-- hexo injector head_begin end -->
+
+<script src="https://cdn.jsdelivr.net/npm/mermaid/dist/mermaid.min.js"></script>
+<script>
+  mermaid.initialize({ startOnLoad: true });
+</script>
+
+</script>
+
+	<link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/highlight.js/11.1.0/styles/a11y-light.min.css">
+	<script src="//cdnjs.cloudflare.com/ajax/libs/highlight.js/11.1.0/highlight.min.js"></script>
+	
+	<title>[笔记] 关于正交拉丁方的构造与应用 - 沉石鱼惊旋 的博客</title>
+	<meta charset="utf-8">
+	
+		<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=5">
+	
+	<meta name="description" content="定义 拉丁方阵（英语：Latin square）是一种 n×nn \times nn×n 的方阵，在这种 n×nn \times nn×n 的方阵里，恰有 nnn 种不同的元素，每一种不同的元素在同一行或同一列里只出现一次。以下是两个拉丁方阵举例： [123231312][abdcbcadcdbadacb]{\displaystyle {\begin{bmatrix}1&amp;2&amp;3\">
+<meta property="og:type" content="article">
+<meta property="og:title" content="[笔记] 关于正交拉丁方的构造与应用">
+<meta property="og:url" content="http://blog.cyx2009.top/archives/OLS/index.html">
+<meta property="og:site_name" content="沉石鱼惊旋 的博客">
+<meta property="og:description" content="定义 拉丁方阵（英语：Latin square）是一种 n×nn \times nn×n 的方阵，在这种 n×nn \times nn×n 的方阵里，恰有 nnn 种不同的元素，每一种不同的元素在同一行或同一列里只出现一次。以下是两个拉丁方阵举例： [123231312][abdcbcadcdbadacb]{\displaystyle {\begin{bmatrix}1&amp;2&amp;3\">
+<meta property="og:locale" content="zh_CN">
+<meta property="article:published_time" content="2025-10-24T10:00:00.000Z">
+<meta property="article:modified_time" content="2025-10-24T11:09:31.445Z">
+<meta property="article:author" content="沉石鱼惊旋">
+<meta name="twitter:card" content="summary">
+
+	<meta name="theme-color" content="#5e72e4">
+	<meta name="theme-color-rgb" content="94,114,228">
+	<meta name="theme-color-origin" content="#5e72e4">
+	<meta name="argon-enable-custom-theme-color" content="true">
+	<meta name="theme-card-radius" content="15">
+	<meta name="theme-version" content="1.0.2">
+	<link rel="icon" href="/assets/img/favicon.ico">
+	<!-- <link rel="shortcut icon" href="/assets/img/favicon.ico"> -->
+	<!-- <link rel="shortcut icon" href="https://s2.loli.net/2022/07/28/dj7Y3yrweQ2MXNb.png"> -->
+	
+<link rel="stylesheet" href="/assets/argon_css_merged.css">
+
+	
+<link rel="stylesheet" href="/style.css">
+
+	
+<link rel="stylesheet" href="//fonts.loli.net/css?family=Open+Sans:300,400,600,700|Noto+Serif+SC:300,600&display=swap.css">
+
+	
+<script src="/assets/argon_js_merged.js"></script>
+
+	
+<script src="/assets/js/argon.min.js"></script>
+
+	
+<script src="//busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js"></script>
+
+
+	
+
+	<script>
+		var argonConfig = {
+			language: "zh_CN",
+			
+				zoomify: {
+					duration: 200,
+					easing: "cubic-bezier(0.4,0,0,1)",
+					scale: 0.9
+				},
+			
+			pangu: "false",
+			
+				lazyload: false,
+			
+			disable_pjax: true,
+			headroom: false
+		}
+	</script>
+	<script>
+		var darkmodeAutoSwitch = "false";
+		function setDarkmode(enable){
+			if (enable == true){
+				$("html").addClass("darkmode");
+			}else{
+				$("html").removeClass("darkmode");
+			}
+			$(window).trigger("scroll");
+		}
+		function toggleDarkmode(){
+			if ($("html").hasClass("darkmode")){
+				setDarkmode(false);
+				sessionStorage.setItem("Argon_Enable_Dark_Mode", "false");
+			}else{
+				setDarkmode(true);
+				sessionStorage.setItem("Argon_Enable_Dark_Mode", "true");
+			}
+		}
+		if (sessionStorage.getItem("Argon_Enable_Dark_Mode") == "true"){
+			setDarkmode(true);
+		}
+		function toggleDarkmodeByPrefersColorScheme(media){
+			if (sessionStorage.getItem('Argon_Enable_Dark_Mode') == "false" || sessionStorage.getItem('Argon_Enable_Dark_Mode') == "true"){
+				return;
+			}
+			if (media.matches){
+				setDarkmode(true);
+			}else{
+				setDarkmode(false);
+			}
+		}
+		function toggleDarkmodeByTime(){
+			if (sessionStorage.getItem('Argon_Enable_Dark_Mode') == "false" || sessionStorage.getItem('Argon_Enable_Dark_Mode') == "true"){
+				return;
+			}
+			let hour = new Date().getHours();
+			if (hour < 7 || hour >= 22){
+				setDarkmode(true);
+			}else{
+				setDarkmode(false);
+			}
+		}
+		if (darkmodeAutoSwitch == 'system'){
+			var darkmodeMediaQuery = window.matchMedia("(prefers-color-scheme: dark)");
+			darkmodeMediaQuery.addListener(toggleDarkmodeByPrefersColorScheme);
+			toggleDarkmodeByPrefersColorScheme(darkmodeMediaQuery);
+		}
+		if (darkmodeAutoSwitch == 'time'){
+			toggleDarkmodeByTime();
+		}
+		if (darkmodeAutoSwitch == 'alwayson'){
+			setDarkmode(true);
+		}
+
+		function toggleAmoledDarkMode(){
+			$("html").toggleClass("amoled-dark");
+			if ($("html").hasClass("amoled-dark")){
+				localStorage.setItem("Argon_Enable_Amoled_Dark_Mode", "true");
+			}else{
+				localStorage.setItem("Argon_Enable_Amoled_Dark_Mode", "false");
+			}
+		}
+		if (localStorage.getItem("Argon_Enable_Amoled_Dark_Mode") == "true"){
+			$("html").addClass("amoled-dark");
+		}else if (localStorage.getItem("Argon_Enable_Amoled_Dark_Mode") == "false"){
+			$("html").removeClass("amoled-dark");
+		}
+	</script>
+	<script>
+		if (navigator.userAgent.indexOf("Safari") !== -1 && navigator.userAgent.indexOf("Chrome") === -1){
+			$("html").addClass("using-safari");
+		}
+	</script>
+
+	
+		
+<script src="/assets/vendor/smoothscroll/smoothscroll1.js"></script>
+
+	
+<meta name="generator" content="Hexo 7.3.0"><link rel="alternate" href="/atom.xml" title="沉石鱼惊旋 的博客" type="application/atom+xml">
+<link rel="alternate" href="/rss2.xml" title="沉石鱼惊旋 的博客" type="application/rss+xml">
+</head>
+
+
+
+<style id="themecolor_css">
+	
+	:root{
+		--themecolor: #5e72e4;
+		--themecolor-dark0: #5368E2;
+		--themecolor-dark: #485FE0;
+		--themecolor-dark2: #324CDD;
+		--themecolor-dark3: #233DD2;
+		--themecolor-light: #8A98EB;
+		--themecolor-rgbstr: 94,114,228;
+		--themecolor-gradient: linear-gradient(150deg,var(--themecolor-light) 15%, var(--themecolor) 70%, var(--themecolor-dark0) 94%);
+
+	}
+</style>
+<style id="theme_cardradius_css">
+	:root{
+		--card-radius: 15px;
+	}
+</style>
+
+<body>
+<div id="toolbar">
+	<!-- <script>
+		window.open('http://img.chen2009.tk/','_blank');
+	</script> -->
+	<header class="header-global">
+		<nav id="navbar-main" class="navbar navbar-main navbar-expand-lg navbar-transparent navbar-light bg-primary headroom--not-bottom headroom--not-top headroom--pinned">
+			<div class="container">
+				
+					<a class="navbar-brand navbar-icon mr-lg-5" href="">
+						<img src="/assets/img/favicon.ico">
+					</a>
+				
+				<button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbar_global" aria-controls="navbar_global" aria-expanded="false" aria-label="Toggle navigation">
+					<span class="navbar-toggler-icon"></span>
+				</button>
+				<a class="navbar-brand" href="/">沉石鱼惊旋 的博客</a>
+				<div class="navbar-collapse collapse" id="navbar_global">
+					<div class="navbar-collapse-header">
+						<div class="row">
+							<div class="col-6 collapse-brand"></div>
+							<div class="col-6 collapse-close">
+								<button type="button" class="navbar-toggler" data-toggle="collapse" data-target="#navbar_global" aria-controls="navbar_global" aria-expanded="false" aria-label="Toggle navigation">
+									<span></span>
+									<span></span>
+								</button>
+							</div>
+						</div>
+					</div>
+					<ul id="navbar_search_btn_mobile" class="navbar-nav align-items-lg-center ml-lg-auto">
+						<li class="nav-item" data-toggle="modal" data-target="#argon_search_modal" style="padding-left: 5px;">
+							<a class="nav-link nav-link-icon">
+								<i class="fa fa-search"></i>
+								<span class="nav-link-inner--text d-lg-none">搜索</span>
+							</a>
+						</li>
+					</ul>
+					
+							<ul class='navbar-nav navbar-nav-hover align-items-lg-center'>
+								
+										<li class='nav-item'>
+											<a href='/' class='nav-link' >
+												<i class='ni ni-book-bookmark d-lg-none'></i>
+												<span class='nav-link-inner--text'>首页</span>
+											</a>
+											
+										</li>
+									
+										<li class='nav-item'>
+											<a href='/archives' class='nav-link' >
+												<i class='ni ni-book-bookmark d-lg-none'></i>
+												<span class='nav-link-inner--text'>归档</span>
+											</a>
+											
+										</li>
+									
+										<li class='nav-item'>
+											<a href='/friends' class='nav-link' >
+												<i class='ni ni-book-bookmark d-lg-none'></i>
+												<span class='nav-link-inner--text'>友链</span>
+											</a>
+											
+										</li>
+									
+							</ul>
+						
+					<ul class="navbar-nav align-items-lg-center ml-lg-auto">
+						<li class="nav-item" data-toggle="modal" data-target="#argon_search_modal" id="navbar_search_btn_pc">
+							<a class="nav-link nav-link-icon">
+								<i class="fa fa-search"></i>
+								<span class="nav-link-inner--text d-lg-none">搜索</span>
+							</a>
+						</li>
+					</ul>
+				</div>
+				
+					<a class="navbar-brand navbar-icon-mobile" href="">
+						<img src="/assets/img/favicon.ico">
+					</a>
+				
+				<div id="navbar_menu_mask" data-toggle="collapse" data-target="#navbar_global"></div>
+			</div>
+		</nav>
+	</header>
+</div>
+<div class="modal fade" id="argon_search_modal" tabindex="-1" role="dialog" aria-labelledby="" aria-hidden="true">
+	<div class="modal-dialog modal-dialog-centered modal-lg" role="document">
+		<div class="modal-content">
+			<div class="modal-header">
+				<h5 class="modal-title">搜索</h5>
+				<button type="button" class="close" data-dismiss="modal" aria-label="Close">
+					<span aria-hidden="true">&times;</span>
+				</button>
+			</div>
+			<div class="modal-body">
+				<!-- TODO -->
+<div class="form-group mb-3">
+	<div class="input-group input-group-alternative">
+		<div class="input-group-prepend">
+			<span class="input-group-text"><i class="fa fa-search"></i></span>
+		</div>
+		<input id="local-search-input" class="form-control" placeholder="搜索什么..." type="text"  autocomplete="off" data-search.path="search.xml" data-config.root="/">
+	</div>
+	<div id="local-search-result"></div>
+</div>
+
+			</div>
+		</div>
+	</div>
+</div>
+<!--Banner-->
+<section id="banner" class="banner section section-lg section-shaped">
+	<div class="shape shape-style-1 shape-primary">
+		<span></span>
+		<span></span>
+		<span></span>
+		<span></span>
+		<span></span>
+		<span></span>
+		<span></span>
+		<span></span>
+		<span></span>
+	</div>
+
+	
+	<div id="banner_container" class="banner-container container text-center">
+		
+			<div class="banner-title text-white" data-text="沉石鱼惊旋 的博客" data-interval=""><span class="banner-title-inner">&nbsp;</span>
+		
+		</div>
+	</div>
+	
+		<style>
+			section.banner{
+				background-image: url(/assets/img/banner.jpg) !important;
+			}
+		</style>
+	
+</section>
+
+
+	<style>
+		#content:before {
+			content: '';
+			display: block;
+			position: fixed;
+			left: 0;
+			right: 0;
+			top: 0;
+			bottom: 0;
+			z-index: -2;
+			background: url(/assets/img/banner2.jpg);
+			background-position: center;
+			background-size: cover;
+			background-repeat: no-repeat;
+			opacity: 1;
+			transition: opacity .5s ease;
+		}
+		html.darkmode #content:before{
+			filter: brightness(0.65);
+		}
+		
+			#content:after {
+				content: '';
+				display: block;
+				position: fixed;
+				left: 0;
+				right: 0;
+				top: 0;
+				bottom: 0;
+				z-index: -2;
+				background: url(/assets/img/banner2.jpg);
+				background-position: center;
+				background-size: cover;
+				background-repeat: no-repeat;
+				opacity: 0;
+				transition: opacity .5s ease;
+			}
+			html.darkmode #content:after {
+				opacity: 1;
+			}
+			html.darkmode #content:before {
+				opacity: 0;
+			}
+		
+		
+			#banner, #banner .shape {
+				background: transparent !important;
+			}
+		
+	</style>
+
+
+
+
+<div id="float_action_buttons" class="float-action-buttons fabtns-unloaded">
+	<!-- <button id="fabtn_toggle_sides" class="btn btn-icon btn-neutral fabtn shadow-sm" type="button" aria-hidden="true" tooltip-move-to-left="移至左侧" tooltip-move-to-right="移至右侧">
+		<span class="btn-inner--icon fabtn-show-on-right"><i class="fa fa-caret-left"></i></span>
+		<span class="btn-inner--icon fabtn-show-on-left"><i class="fa fa-caret-right"></i></span>
+	</button> -->
+	<button id="fabtn_back_to_top" class="btn btn-icon btn-neutral fabtn shadow-sm" type="button" aria-label="Back To Top" tooltip="回到顶部">
+		<span class="btn-inner--icon"><i class="fa fa-angle-up"></i></span>
+	</button>
+	<button id="fabtn_go_to_comment" class="btn btn-icon btn-neutral fabtn shadow-sm d-none" type="button" <-% theme.fab_show_gotocomment_button ? "" : "style='display: none;'"  aria-label="Comment" tooltip="评论">
+		<span class="btn-inner--icon"><i class="fa fa-comment-o"></i></span>
+	</button>
+	<button id="fabtn_toggle_darkmode" class="btn btn-icon btn-neutral fabtn shadow-sm" type="button" <-% theme.fab_show_darkmode_button ? "" : "style='display: none;'"  aria-label="Toggle Darkmode" tooltip-darkmode="夜间模式" tooltip-blackmode="暗黑模式" tooltip-lightmode="日间模式">
+		<span class="btn-inner--icon"><i class="fa fa-moon-o"></i><i class='fa fa-lightbulb-o'></i></span>
+	</button>
+	<button id="fabtn_toggle_blog_settings_popup" class="btn btn-icon btn-neutral fabtn shadow-sm" type="button" <-% theme.fab_show_settings_button ? "" : "style='display: none;'"  aria-label="Open Blog Settings Menu" tooltip="设置">
+		<span class="btn-inner--icon"><i class="fa fa-cog"></i></span>
+	</button>
+	<div id="fabtn_blog_settings_popup" class="card shadow-sm" style="opacity: 0;" aria-hidden="true">
+		<div id="close_blog_settings"><i class="fa fa-close"></i></div>
+		<div class="blog-setting-item mt-3">
+			<div style="transform: translateY(-4px);"><div id="blog_setting_toggle_darkmode_and_amoledarkmode" tooltip-switch-to-darkmode="切换到夜间模式" tooltip-switch-to-blackmode="切换到暗黑模式"><span>夜间模式</span><span>暗黑模式</span></div></div>
+			<div style="flex: 1;"></div>
+			<label id="blog_setting_darkmode_switch" class="custom-toggle">
+				<span class="custom-toggle-slider rounded-circle"></span>
+			</label>
+		</div>
+		<div class="blog-setting-item mt-3">
+			<div style="flex: 1;">字体</div>
+			<div>
+				<button id="blog_setting_font_sans_serif" type="button" class="blog-setting-font btn btn-outline-primary blog-setting-selector-left">Sans Serif</button><button id="blog_setting_font_serif" type="button" class="blog-setting-font btn btn-outline-primary blog-setting-selector-right">Serif</button>
+			</div>
+		</div>
+		<div class="blog-setting-item mt-3">
+			<div style="flex: 1;">阴影</div>
+			<div>
+				<button id="blog_setting_shadow_small" type="button" class="blog-setting-shadow btn btn-outline-primary blog-setting-selector-left">浅阴影</button><button id="blog_setting_shadow_big" type="button" class="blog-setting-shadow btn btn-outline-primary blog-setting-selector-right">深阴影</button>
+			</div>
+		</div>
+		<div class="blog-setting-item mt-3 mb-3">
+			<div style="flex: 1;">滤镜</div>
+			<div id="blog_setting_filters" class="ml-3">
+				<button id="blog_setting_filter_off" type="button" class="blog-setting-filter-btn ml-0" filter-name="off">关闭</button>
+				<button id="blog_setting_filter_sunset" type="button" class="blog-setting-filter-btn" filter-name="sunset">日落</button>
+				<button id="blog_setting_filter_darkness" type="button" class="blog-setting-filter-btn" filter-name="darkness">暗化</button>
+				<button id="blog_setting_filter_grayscale" type="button" class="blog-setting-filter-btn" filter-name="grayscale">灰度</button>
+			</div>
+		</div>
+		<div class="blog-setting-item mb-3">
+			<div id="blog_setting_card_radius_to_default" style="cursor: pointer;" tooltip="恢复默认">圆角</div>
+			<div style="flex: 1;margin-left: 20px;margin-right: 8px;transform: translateY(2px);">
+				<div id="blog_setting_card_radius"></div>
+			</div>
+		</div>
+		
+			<div class="blog-setting-item mt-1 mb-3">
+				<div style="flex: 1;">主题色</div>
+				<div id="theme-color-picker" class="ml-3"></div>
+			</div>
+		
+	</div>
+	<button id="fabtn_open_sidebar" class="btn btn-icon btn-neutral fabtn shadow-sm" type="button" aria-label="Open Sidebar Menu" tooltip="菜单">
+		<span class="btn-inner--icon"><i class="fa fa-bars"></i></span>
+	</button>
+	<button id="fabtn_reading_progress" class="btn btn-icon btn-neutral fabtn shadow-sm" type="button" aria-hidden="true" tooltip="阅读进度">
+		<div id="fabtn_reading_progress_bar" style="width: 0%;"></div>
+		<span id="fabtn_reading_progress_details">0%</span>
+	</button>
+</div>
+
+<div id="content" class="site-content">
+
+
+
+
+
+
+
+
+
+<div class="page-information-card-container">
+	
+</div>
+
+<div id="sidebar_mask"></div>
+<aside id="leftbar" class="leftbar widget-area" role="complementary">
+		
+			<div id="leftbar_announcement" class="card bg-white shadow-sm border-0">
+				<div class="leftbar-announcement-body">
+					<div class="leftbar-announcement-title text-white">公告</div>
+					<div class="leftbar-announcement-content text-white">嘻嘻，随便写了个古诗栏把原来的一言替换掉了！</div>
+				</div>
+			</div>
+		
+		<div id="leftbar_part1" class="widget widget_search card bg-white shadow-sm border-0">
+			<div class="leftbar-banner card-body">
+				<span class="leftbar-banner-title text-white">沉石鱼惊旋 的博客</span>
+				
+				
+					<span class="leftbar-banner-subtitle text-white"><span class='poem'></span></span>
+				
+			</div>
+			
+			
+				<ul id='leftbar_part1_menu' class='leftbar-menu'>
+					<li class='leftbar-menu-item'><a href='/'>首页</a></li><li class='leftbar-menu-item'><a href='/archives'>归档</a></li><li class='leftbar-menu-item'><a href='/rss2.xml'>RSS 订阅</a></li><li class='leftbar-menu-item'><a href='/atom.xml'>RSS 订阅 2</a></li><li class='leftbar-menu-item leftbar-menu-item-haschildren'><a no-pjax onclick='return false;'>实用工具</a><ul class='leftbar-menu-item leftbar-menu-subitem shadow-sm'><li class='leftbar-menu-item'><a target="_blank" rel="noopener" href='https://lab.magiconch.com/homo/'>恶臭数学分解器</a></li><li class='leftbar-menu-item'><a target="_blank" rel="noopener" href='https://lab.magiconch.com/nbnhhsh/'>缩写查询</a></li><li class='leftbar-menu-item'><a target="_blank" rel="noopener" href='https://www.luogu.com.cn/blog/IowaBattleship/latex-gong-shi-tai-quan'>$\LaTeX$ 公式大全</a></li><li class='leftbar-menu-item'><a target="_blank" rel="noopener" href='https://zh.numberempire.com/factoringcalculator.php'>因式分解</a></li><li class='leftbar-menu-item'><a target="_blank" rel="noopener" href='https://csacademy.com/app/graph_editor/'>图论绘画</a></li><li class='leftbar-menu-item'><a target="_blank" rel="noopener" href='https://codeforces.com/blog/entry/62393'>如何卡 umap</a></li><li class='leftbar-menu-item'><a target="_blank" rel="noopener" href='https://oier.baoshuo.dev/'>OIerDB（国内 OI）</a></li><li class='leftbar-menu-item'><a target="_blank" rel="noopener" href='https://cpcfinder.com/'>CPCFinder（国内 XCPC）</a></li><li class='leftbar-menu-item'><a target="_blank" rel="noopener" href='https://cphof.org/'>CPHOF（全球 XCPC）</a></li><li class='leftbar-menu-item'><a target="_blank" rel="noopener" href='https://vv.cicada000.work/'>VV 字幕搜索</a></li></ul></li><li class='leftbar-menu-item'><a target="_blank" rel="noopener" href='http://cyx2009.top/'>目录</a></li>
+				</ul>
+			
+			<div class="card-body text-center leftbar-search-button">
+				<button id="leftbar_search" class="btn btn-secondary btn-lg active btn-sm btn-block border-0" role="button" data-toggle="modal" data-target="#argon_search_modal" >
+					<i class="menu-item-icon fa fa-search mr-0"></i> 搜索
+				</button>
+			</div>
+		</div>
+		<div id="leftbar_part2" class="widget widget_search card bg-white shadow-sm border-0">
+			<div id="leftbar_part2_inner" class="card-body">
+				
+				<div class="nav-wrapper" style="padding-top: 5px;">
+	                <ul class="nav nav-pills nav-fill" role="tablist">
+						
+							<li class="nav-item sidebar-tab-switcher">
+								<a class="active show" id="leftbar_tab_catalog_btn" data-toggle="tab" href="#leftbar_tab_catalog" role="tab" aria-controls="leftbar_tab_catalog" no-pjax>文章目录</a>
+							</li>
+						
+						<li class="nav-item sidebar-tab-switcher">
+							<a class="" id="leftbar_tab_overview_btn" data-toggle="tab" href="#leftbar_tab_overview" role="tab" aria-controls="leftbar_tab_overview" no-pjax>站点概览</a>
+						</li>
+	                </ul>
+				</div>
+				<div>
+					<div class="tab-content" style="padding: 10px 10px 0 10px;">
+						
+							<div class="tab-pane fade active show" id="leftbar_tab_catalog" role="tabpanel" aria-labelledby="leftbar_tab_catalog_btn">
+								<div id="leftbar_catalog"></div>
+								<script type="text/javascript">
+									$(function () {
+										$(document).headIndex({
+											articleWrapSelector: '#post_content',
+											indexBoxSelector: '#leftbar_catalog',
+											subItemBoxClass: "index-subItem-box",
+											itemClass: "index-item",
+											linkClass: "index-link",
+											offset: 80,
+										});
+									})
+								</script>
+								
+									<style>
+										#leftbar_catalog ul {
+											counter-reset: blog_catalog_number;
+										}
+										#leftbar_catalog li.index-item > a:before {
+											content: counters(blog_catalog_number, '.') " ";
+											counter-increment: blog_catalog_number;
+										}
+									</style>
+								
+							</div>
+						
+						<div class="tab-pane fade text-center" id="leftbar_tab_overview" role="tabpanel" aria-labelledby="leftbar_tab_overview_btn">
+							<img id="leftbar_overview_author_image" src="/assets/img/favicon.ico" class="img-fluid rounded-circle shadow-sm" style="width: 100px;" alt="avatar">
+							<h6 id="leftbar_overview_author_name">沉石鱼惊旋</h6>
+							<nav class="site-state">
+								<div class="site-state-item site-state-posts">
+									<a href="/archives">
+										<span class="site-state-item-count">219</span>
+										<span class="site-state-item-name">文章</span>
+									</a>
+								</div>
+								<div class="site-state-item site-state-categories">
+									<a data-toggle="modal" data-target="#blog_categories">
+										<span class="site-state-item-count">5</span>
+										<span class="site-state-item-name">分类</span>
+									</a>
+								</div>      
+								<div class="site-state-item site-state-tags">
+									<a data-toggle="modal" data-target="#blog_tags">
+										<span class="site-state-item-count">77</span>
+										<span class="site-state-item-name">标签</span>
+									</a>
+								</div>
+							</nav>
+							
+									<div class="site-author-links">
+										
+											<div class='site-author-links-item'>
+												<a href="https://codeforces.com/profile/Caylex" rel='noopener' target='_blank'>CF 账号</a>
+											</div>
+										
+											<div class='site-author-links-item'>
+												<a href="https://atcoder.jp/users/cayaxi09" rel='noopener' target='_blank'>AT 账号</a>
+											</div>
+										
+											<div class='site-author-links-item'>
+												<a href="https://www.luogu.com.cn/user/516346" rel='noopener' target='_blank'>洛谷账号</a>
+											</div>
+										
+									</div>
+								
+							
+									<div class='site-friend-links'>
+										<div class='site-friend-links-title'><i class='fa fa-fw fa-link'></i> Links</div>
+										<ul class='site-friend-links-ul'>
+											
+												<li class='site-friend-links-item'>
+													<a href='http://yin-xin.fun/' rel='noopener' target='_blank'>吟心</a>
+												</li>
+											
+										</ul>
+									</div>
+								
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+</aside>
+<div class="modal fade" id="blog_categories" tabindex="-1" role="dialog" aria-labelledby="" aria-hidden="true">
+	<div class="modal-dialog modal-dialog-centered">
+		<div class="modal-content">
+			<div class="modal-header">
+				<h5 class="modal-title">分类</h5>
+				<button type="button" class="close" data-dismiss="modal" aria-label="Close">
+					<span aria-hidden="true">&times;</span>
+				</button>
+			</div>
+			<div class="modal-body">
+				<a class="badge badge-secondary tag" href="/categories/Essay/" rel="tag">Essay <span class="tag-num">7</span></a><a class="badge badge-secondary tag" href="/categories/Solution/" rel="tag">Solution <span class="tag-num">191</span></a><a class="badge badge-secondary tag" href="/categories/StudyNote/" rel="tag">StudyNote <span class="tag-num">5</span></a><a class="badge badge-secondary tag" href="/categories/Technology/" rel="tag">Technology <span class="tag-num">3</span></a><a class="badge badge-secondary tag" href="/categories/TravelNote/" rel="tag">TravelNote <span class="tag-num">13</span></a>
+			</div>
+		</div>
+	</div>
+</div>
+<div class="modal fade" id="blog_tags" tabindex="-1" role="dialog" aria-labelledby="" aria-hidden="true">
+	<div class="modal-dialog modal-dialog-centered">
+		<div class="modal-content">
+			<div class="modal-header">
+				<h5 class="modal-title">标签</h5>
+				<button type="button" class="close" data-dismiss="modal" aria-label="Close">
+					<span aria-hidden="true">&times;</span>
+				</button>
+			</div>
+			<div class="modal-body">
+				<a class="badge badge-secondary tag" href="/tags/Adhoc/" rel="tag">Adhoc <span class="tag-num">1</span></a><a class="badge badge-secondary tag" href="/tags/BFS-%E5%BA%8F/" rel="tag">BFS 序 <span class="tag-num">1</span></a><a class="badge badge-secondary tag" href="/tags/DFS-%E5%BA%8F/" rel="tag">DFS 序 <span class="tag-num">1</span></a><a class="badge badge-secondary tag" href="/tags/%E4%B8%89%E5%88%86/" rel="tag">三分 <span class="tag-num">3</span></a><a class="badge badge-secondary tag" href="/tags/%E4%B8%89%E7%BB%B4%E5%81%8F%E5%BA%8F/" rel="tag">三维偏序 <span class="tag-num">1</span></a><a class="badge badge-secondary tag" href="/tags/%E4%B9%B1%E6%90%9E/" rel="tag">乱搞 <span class="tag-num">6</span></a><a class="badge badge-secondary tag" href="/tags/%E4%BA%8C%E5%88%86/" rel="tag">二分 <span class="tag-num">5</span></a><a class="badge badge-secondary tag" href="/tags/%E4%BA%8C%E5%88%86%E7%AD%94%E6%A1%88/" rel="tag">二分答案 <span class="tag-num">1</span></a><a class="badge badge-secondary tag" href="/tags/%E4%BA%8C%E7%BB%B4%E5%81%8F%E5%BA%8F/" rel="tag">二维偏序 <span class="tag-num">1</span></a><a class="badge badge-secondary tag" href="/tags/%E4%BA%8C%E8%BF%9B%E5%88%B6/" rel="tag">二进制 <span class="tag-num">3</span></a><a class="badge badge-secondary tag" href="/tags/%E4%BA%A4%E4%BA%92/" rel="tag">交互 <span class="tag-num">3</span></a><a class="badge badge-secondary tag" href="/tags/%E5%80%8D%E5%A2%9E/" rel="tag">倍增 <span class="tag-num">2</span></a><a class="badge badge-secondary tag" href="/tags/%E5%88%86%E5%9D%97/" rel="tag">分块 <span class="tag-num">3</span></a><a class="badge badge-secondary tag" href="/tags/%E5%88%86%E6%B2%BB/" rel="tag">分治 <span class="tag-num">1</span></a><a class="badge badge-secondary tag" href="/tags/%E5%88%86%E7%B1%BB%E8%AE%A8%E8%AE%BA/" rel="tag">分类讨论 <span class="tag-num">1</span></a><a class="badge badge-secondary tag" href="/tags/%E5%89%8D%E7%BC%80%E5%92%8C/" rel="tag">前缀和 <span class="tag-num">1</span></a><a class="badge badge-secondary tag" href="/tags/%E5%8A%A8%E6%80%81%E8%A7%84%E5%88%92/" rel="tag">动态规划 <span class="tag-num">18</span></a><a class="badge badge-secondary tag" href="/tags/%E5%8D%95%E8%B0%83%E6%A0%88/" rel="tag">单调栈 <span class="tag-num">1</span></a><a class="badge badge-secondary tag" href="/tags/%E5%8D%A2%E5%8D%A1%E6%96%AF%E5%AE%9A%E7%90%86/" rel="tag">卢卡斯定理 <span class="tag-num">1</span></a><a class="badge badge-secondary tag" href="/tags/%E5%8E%9F%E6%A0%B9/" rel="tag">原根 <span class="tag-num">1</span></a><a class="badge badge-secondary tag" href="/tags/%E5%8F%8C%E5%90%91%E6%90%9C%E7%B4%A2/" rel="tag">双向搜索 <span class="tag-num">2</span></a><a class="badge badge-secondary tag" href="/tags/%E5%8F%8C%E6%8C%87%E9%92%88/" rel="tag">双指针 <span class="tag-num">3</span></a><a class="badge badge-secondary tag" href="/tags/%E5%90%AF%E5%8F%91%E5%BC%8F%E5%90%88%E5%B9%B6/" rel="tag">启发式合并 <span class="tag-num">1</span></a><a class="badge badge-secondary tag" href="/tags/%E5%93%88%E5%B8%8C/" rel="tag">哈希 <span class="tag-num">6</span></a><a class="badge badge-secondary tag" href="/tags/%E5%9D%87%E6%91%8A%E5%88%86%E6%9E%90/" rel="tag">均摊分析 <span class="tag-num">1</span></a><a class="badge badge-secondary tag" href="/tags/%E5%A4%9A%E9%A1%B9%E5%BC%8F/" rel="tag">多项式 <span class="tag-num">1</span></a><a class="badge badge-secondary tag" href="/tags/%E5%A8%81%E5%B0%94%E9%80%8A%E5%AE%9A%E7%90%86/" rel="tag">威尔逊定理 <span class="tag-num">1</span></a><a class="badge badge-secondary tag" href="/tags/%E5%AD%97%E5%85%B8%E6%A0%91/" rel="tag">字典树 <span class="tag-num">1</span></a><a class="badge badge-secondary tag" href="/tags/%E5%AD%97%E7%AC%A6%E4%B8%B2/" rel="tag">字符串 <span class="tag-num">5</span></a><a class="badge badge-secondary tag" href="/tags/%E5%AE%B9%E6%96%A5/" rel="tag">容斥 <span class="tag-num">2</span></a><a class="badge badge-secondary tag" href="/tags/%E5%B9%B3%E8%A1%A1%E6%A0%91/" rel="tag">平衡树 <span class="tag-num">2</span></a><a class="badge badge-secondary tag" href="/tags/%E5%B9%B3%E9%9D%A2%E5%9B%BE%E8%BD%AC%E5%AF%B9%E5%81%B6%E5%9B%BE/" rel="tag">平面图转对偶图 <span class="tag-num">1</span></a><a class="badge badge-secondary tag" href="/tags/%E5%B9%B6%E6%9F%A5%E9%9B%86/" rel="tag">并查集 <span class="tag-num">1</span></a><a class="badge badge-secondary tag" href="/tags/%E6%89%A9%E5%9F%9F/" rel="tag">扩域 <span class="tag-num">1</span></a><a class="badge badge-secondary tag" href="/tags/%E6%89%AB%E6%8F%8F%E7%BA%BF/" rel="tag">扫描线 <span class="tag-num">5</span></a><a class="badge badge-secondary tag" href="/tags/%E6%8B%86%E4%BD%8D/" rel="tag">拆位 <span class="tag-num">2</span></a><a class="badge badge-secondary tag" href="/tags/%E6%8B%93%E6%89%91%E6%8E%92%E5%BA%8F/" rel="tag">拓扑排序 <span class="tag-num">1</span></a><a class="badge badge-secondary tag" href="/tags/%E6%8E%92%E5%BA%8F/" rel="tag">排序 <span class="tag-num">1</span></a><a class="badge badge-secondary tag" href="/tags/%E6%90%9C%E7%B4%A2/" rel="tag">搜索 <span class="tag-num">3</span></a><a class="badge badge-secondary tag" href="/tags/%E6%95%B0%E5%AD%A6/" rel="tag">数学 <span class="tag-num">4</span></a><a class="badge badge-secondary tag" href="/tags/%E6%95%B0%E8%AE%BA/" rel="tag">数论 <span class="tag-num">8</span></a><a class="badge badge-secondary tag" href="/tags/%E6%96%9C%E7%8E%87%E4%BC%98%E5%8C%96/" rel="tag">斜率优化 <span class="tag-num">1</span></a><a class="badge badge-secondary tag" href="/tags/%E6%9C%80%E5%A4%A7%E6%B5%81%E6%9C%80%E5%B0%8F%E5%89%B2/" rel="tag">最大流最小割 <span class="tag-num">1</span></a><a class="badge badge-secondary tag" href="/tags/%E6%9C%80%E5%B0%8F%E7%8E%AF/" rel="tag">最小环 <span class="tag-num">1</span></a><a class="badge badge-secondary tag" href="/tags/%E6%9C%80%E5%B0%8F%E7%94%9F%E6%88%90%E6%A0%91/" rel="tag">最小生成树 <span class="tag-num">2</span></a><a class="badge badge-secondary tag" href="/tags/%E6%9C%80%E7%9F%AD%E8%B7%AF/" rel="tag">最短路 <span class="tag-num">1</span></a><a class="badge badge-secondary tag" href="/tags/%E6%9E%84%E9%80%A0/" rel="tag">构造 <span class="tag-num">3</span></a><a class="badge badge-secondary tag" href="/tags/%E6%A0%91%E5%BD%A2-DP/" rel="tag">树形 DP <span class="tag-num">2</span></a><a class="badge badge-secondary tag" href="/tags/%E6%A0%91%E7%8A%B6%E6%95%B0%E7%BB%84/" rel="tag">树状数组 <span class="tag-num">3</span></a><a class="badge badge-secondary tag" href="/tags/%E6%A0%B9%E5%8F%B7%E5%88%86%E6%B2%BB/" rel="tag">根号分治 <span class="tag-num">7</span></a><a class="badge badge-secondary tag" href="/tags/%E6%A0%B9%E5%8F%B7%E5%B9%B3%E8%A1%A1/" rel="tag">根号平衡 <span class="tag-num">1</span></a><a class="badge badge-secondary tag" href="/tags/%E6%A8%A1%E6%8B%9F/" rel="tag">模拟 <span class="tag-num">3</span></a><a class="badge badge-secondary tag" href="/tags/%E6%A8%A1%E6%8B%9F%E8%B5%9B/" rel="tag">模拟赛 <span class="tag-num">33</span></a><a class="badge badge-secondary tag" href="/tags/%E6%AC%A7%E6%8B%89%E5%9B%9E%E8%B7%AF/" rel="tag">欧拉回路 <span class="tag-num">1</span></a><a class="badge badge-secondary tag" href="/tags/%E6%AC%A7%E6%8B%89%E8%B7%AF%E5%BE%84/" rel="tag">欧拉路径 <span class="tag-num">1</span></a><a class="badge badge-secondary tag" href="/tags/%E6%AD%A3%E9%9A%BE%E5%88%99%E5%8F%8D/" rel="tag">正难则反 <span class="tag-num">1</span></a><a class="badge badge-secondary tag" href="/tags/%E7%8A%B6%E5%8E%8B-DP/" rel="tag">状压 DP <span class="tag-num">2</span></a><a class="badge badge-secondary tag" href="/tags/%E7%94%9F%E6%97%A5%E6%82%96%E8%AE%BA/" rel="tag">生日悖论 <span class="tag-num">1</span></a><a class="badge badge-secondary tag" href="/tags/%E7%9F%A9%E9%98%B5%E4%B9%98%E6%B3%95/" rel="tag">矩阵乘法 <span class="tag-num">1</span></a><a class="badge badge-secondary tag" href="/tags/%E7%AC%9B%E5%8D%A1%E5%B0%94%E6%A0%91/" rel="tag">笛卡尔树 <span class="tag-num">2</span></a><a class="badge badge-secondary tag" href="/tags/%E7%AD%9B%E6%B3%95/" rel="tag">筛法 <span class="tag-num">1</span></a><a class="badge badge-secondary tag" href="/tags/%E7%BA%BF%E6%AE%B5%E6%A0%91/" rel="tag">线段树 <span class="tag-num">9</span></a><a class="badge badge-secondary tag" href="/tags/%E7%BB%84%E5%90%88%E6%95%B0%E5%AD%A6/" rel="tag">组合数学 <span class="tag-num">6</span></a><a class="badge badge-secondary tag" href="/tags/%E7%BD%91%E7%BB%9C%E6%B5%81/" rel="tag">网络流 <span class="tag-num">1</span></a><a class="badge badge-secondary tag" href="/tags/%E8%83%8C%E5%8C%85-DP/" rel="tag">背包 DP <span class="tag-num">2</span></a><a class="badge badge-secondary tag" href="/tags/%E8%8E%AB%E9%98%9F/" rel="tag">莫队 <span class="tag-num">4</span></a><a class="badge badge-secondary tag" href="/tags/%E8%A3%B4%E8%9C%80%E5%AE%9A%E7%90%86/" rel="tag">裴蜀定理 <span class="tag-num">1</span></a><a class="badge badge-secondary tag" href="/tags/%E8%AE%A1%E7%AE%97%E5%87%A0%E4%BD%95/" rel="tag">计算几何 <span class="tag-num">2</span></a><a class="badge badge-secondary tag" href="/tags/%E8%AE%B0%E5%BF%86%E5%8C%96/" rel="tag">记忆化 <span class="tag-num">1</span></a><a class="badge badge-secondary tag" href="/tags/%E8%B0%83%E6%95%B4%E6%B3%95/" rel="tag">调整法 <span class="tag-num">1</span></a><a class="badge badge-secondary tag" href="/tags/%E8%B4%AA%E5%BF%83/" rel="tag">贪心 <span class="tag-num">5</span></a><a class="badge badge-secondary tag" href="/tags/%E8%B4%B9%E9%A9%AC%E5%B0%8F%E5%AE%9A%E7%90%86/" rel="tag">费马小定理 <span class="tag-num">1</span></a><a class="badge badge-secondary tag" href="/tags/%E9%82%BB%E9%A1%B9%E4%BA%A4%E6%8D%A2/" rel="tag">邻项交换 <span class="tag-num">2</span></a><a class="badge badge-secondary tag" href="/tags/%E9%97%B5%E5%8F%AF%E5%A4%AB%E6%96%AF%E5%9F%BA%E5%92%8C/" rel="tag">闵可夫斯基和 <span class="tag-num">1</span></a><a class="badge badge-secondary tag" href="/tags/%E9%98%B6/" rel="tag">阶 <span class="tag-num">1</span></a><a class="badge badge-secondary tag" href="/tags/%E9%9A%8F%E6%9C%BA/" rel="tag">随机 <span class="tag-num">4</span></a><a class="badge badge-secondary tag" href="/tags/%E9%AD%94%E6%80%94%E6%9D%AF/" rel="tag">魔怔杯 <span class="tag-num">2</span></a>
+			</div>
+		</div>
+	</div>
+</div>
+
+
+<div id="primary" class="content-area">
+	<main id="main" class="site-main" role="main">
+		
+		
+			
+	<article class="post post-full card bg-white shadow-sm border-0 post-preview">
+	<header class="post-header text-center">
+		
+		<a class="post-title" href="/archives/OLS/">[笔记] 关于正交拉丁方的构造与应用</a>
+		<div class="post-meta">
+			
+						
+						<div class="post-meta-detail post-meta-detail-time">
+							<i class="fa fa-clock-o" aria-hidden="true"></i>
+							<time title="发布于 2025-10-24 18:00:00 | 编辑于 2025-10-24 19:09:31">2025-10-24 18:00
+							</time>
+						</div>
+					
+						
+							<div class="post-meta-devide">|</div>
+						
+						<div class="post-meta-detail post-meta-detail-categories">
+							<i class="fa fa-bookmark-o" aria-hidden="true"></i>
+							<a class="post-meta-detail-catagory-link" href="/categories/StudyNote/">StudyNote</a>
+						</div>
+					
+						
+							<div class="post-meta-devide">|</div>
+						
+						<div class="post-meta-detail post-meta-detail-words">
+							<i class="fa fa fa-book" aria-hidden="true"></i>
+							<span id="busuanzi_container_page_pv">
+								阅读 <span id="busuanzi_value_page_pv"></span> 次
+							</span>
+						</div>
+					
+						
+							<div class="post-meta-devide">|</div>
+						
+						<div class="post-meta-detail post-meta-detail-words">
+							<i class="fa fa-file-word-o" aria-hidden="true"></i>
+							1.9k 字
+						</div>
+					
+						
+							<div class="post-meta-devide">|</div>
+						
+						<div class="post-meta-detail post-meta-detail-readingtime">
+							<i class="fa fa-hourglass-end" aria-hidden="true"></i>
+							7 分钟
+						</div>
+					
+		</div>
+		
+	</header>
+
+	<div class="post-content" id="post_content">
+		<h1 id="定义"><a class="markdownIt-Anchor" href="#定义"></a> 定义</h1>
+<p><strong>拉丁方阵</strong>（英语：Latin square）是一种 <span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>n</mi><mo>×</mo><mi>n</mi></mrow><annotation encoding="application/x-tex">n \times n</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.66666em;vertical-align:-0.08333em;"></span><span class="mord mathnormal">n</span><span class="mspace" style="margin-right:0.2222222222222222em;"></span><span class="mbin">×</span><span class="mspace" style="margin-right:0.2222222222222222em;"></span></span><span class="base"><span class="strut" style="height:0.43056em;vertical-align:0em;"></span><span class="mord mathnormal">n</span></span></span></span> 的方阵，在这种 <span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>n</mi><mo>×</mo><mi>n</mi></mrow><annotation encoding="application/x-tex">n \times n</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.66666em;vertical-align:-0.08333em;"></span><span class="mord mathnormal">n</span><span class="mspace" style="margin-right:0.2222222222222222em;"></span><span class="mbin">×</span><span class="mspace" style="margin-right:0.2222222222222222em;"></span></span><span class="base"><span class="strut" style="height:0.43056em;vertical-align:0em;"></span><span class="mord mathnormal">n</span></span></span></span> 的方阵里，恰有 <span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>n</mi></mrow><annotation encoding="application/x-tex">n</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.43056em;vertical-align:0em;"></span><span class="mord mathnormal">n</span></span></span></span> 种不同的元素，每一种不同的元素在同一行或同一列里只出现一次。以下是两个拉丁方阵举例：</p>
+<p class='katex-block'><span class="katex-display"><span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML" display="block"><semantics><mrow><mstyle scriptlevel="0" displaystyle="true"><mrow><mo fence="true">[</mo><mtable rowspacing="0.15999999999999992em" columnspacing="1em"><mtr><mtd><mstyle scriptlevel="0" displaystyle="false"><mn>1</mn></mstyle></mtd><mtd><mstyle scriptlevel="0" displaystyle="false"><mn>2</mn></mstyle></mtd><mtd><mstyle scriptlevel="0" displaystyle="false"><mn>3</mn></mstyle></mtd></mtr><mtr><mtd><mstyle scriptlevel="0" displaystyle="false"><mn>2</mn></mstyle></mtd><mtd><mstyle scriptlevel="0" displaystyle="false"><mn>3</mn></mstyle></mtd><mtd><mstyle scriptlevel="0" displaystyle="false"><mn>1</mn></mstyle></mtd></mtr><mtr><mtd><mstyle scriptlevel="0" displaystyle="false"><mn>3</mn></mstyle></mtd><mtd><mstyle scriptlevel="0" displaystyle="false"><mn>1</mn></mstyle></mtd><mtd><mstyle scriptlevel="0" displaystyle="false"><mn>2</mn></mstyle></mtd></mtr></mtable><mo fence="true">]</mo></mrow><mrow><mo fence="true">[</mo><mtable rowspacing="0.15999999999999992em" columnspacing="1em"><mtr><mtd><mstyle scriptlevel="0" displaystyle="false"><mi>a</mi></mstyle></mtd><mtd><mstyle scriptlevel="0" displaystyle="false"><mi>b</mi></mstyle></mtd><mtd><mstyle scriptlevel="0" displaystyle="false"><mi>d</mi></mstyle></mtd><mtd><mstyle scriptlevel="0" displaystyle="false"><mi>c</mi></mstyle></mtd></mtr><mtr><mtd><mstyle scriptlevel="0" displaystyle="false"><mi>b</mi></mstyle></mtd><mtd><mstyle scriptlevel="0" displaystyle="false"><mi>c</mi></mstyle></mtd><mtd><mstyle scriptlevel="0" displaystyle="false"><mi>a</mi></mstyle></mtd><mtd><mstyle scriptlevel="0" displaystyle="false"><mi>d</mi></mstyle></mtd></mtr><mtr><mtd><mstyle scriptlevel="0" displaystyle="false"><mi>c</mi></mstyle></mtd><mtd><mstyle scriptlevel="0" displaystyle="false"><mi>d</mi></mstyle></mtd><mtd><mstyle scriptlevel="0" displaystyle="false"><mi>b</mi></mstyle></mtd><mtd><mstyle scriptlevel="0" displaystyle="false"><mi>a</mi></mstyle></mtd></mtr><mtr><mtd><mstyle scriptlevel="0" displaystyle="false"><mi>d</mi></mstyle></mtd><mtd><mstyle scriptlevel="0" displaystyle="false"><mi>a</mi></mstyle></mtd><mtd><mstyle scriptlevel="0" displaystyle="false"><mi>c</mi></mstyle></mtd><mtd><mstyle scriptlevel="0" displaystyle="false"><mi>b</mi></mstyle></mtd></mtr></mtable><mo fence="true">]</mo></mrow></mstyle></mrow><annotation encoding="application/x-tex">{\displaystyle {\begin{bmatrix}1&amp;2&amp;3\\2&amp;3&amp;1\\3&amp;1&amp;2\\\end{bmatrix}}{\begin{bmatrix}a&amp;b&amp;d&amp;c\\b&amp;c&amp;a&amp;d\\c&amp;d&amp;b&amp;a\\d&amp;a&amp;c&amp;b\end{bmatrix}}}
+</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:4.80303em;vertical-align:-2.15003em;"></span><span class="mord"><span class="mord"><span class="minner"><span class="mopen"><span class="delimsizing mult"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist" style="height:2.0510099999999998em;"><span style="top:-2.2500000000000004em;"><span class="pstrut" style="height:3.1550000000000002em;"></span><span class="delimsizinginner delim-size4"><span>⎣</span></span></span><span style="top:-2.8099900000000004em;"><span class="pstrut" style="height:3.1550000000000002em;"></span><span class="delimsizinginner delim-size4"><span>⎢</span></span></span><span style="top:-4.05101em;"><span class="pstrut" style="height:3.1550000000000002em;"></span><span class="delimsizinginner delim-size4"><span>⎡</span></span></span></span><span class="vlist-s">​</span></span><span class="vlist-r"><span class="vlist" style="height:1.55002em;"><span></span></span></span></span></span></span><span class="mord"><span class="mtable"><span class="col-align-c"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist" style="height:2.05em;"><span style="top:-4.21em;"><span class="pstrut" style="height:3em;"></span><span class="mord"><span class="mord">1</span></span></span><span style="top:-3.0099999999999993em;"><span class="pstrut" style="height:3em;"></span><span class="mord"><span class="mord">2</span></span></span><span style="top:-1.8099999999999994em;"><span class="pstrut" style="height:3em;"></span><span class="mord"><span class="mord">3</span></span></span></span><span class="vlist-s">​</span></span><span class="vlist-r"><span class="vlist" style="height:1.5500000000000007em;"><span></span></span></span></span></span><span class="arraycolsep" style="width:0.5em;"></span><span class="arraycolsep" style="width:0.5em;"></span><span class="col-align-c"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist" style="height:2.05em;"><span style="top:-4.21em;"><span class="pstrut" style="height:3em;"></span><span class="mord"><span class="mord">2</span></span></span><span style="top:-3.0099999999999993em;"><span class="pstrut" style="height:3em;"></span><span class="mord"><span class="mord">3</span></span></span><span style="top:-1.8099999999999994em;"><span class="pstrut" style="height:3em;"></span><span class="mord"><span class="mord">1</span></span></span></span><span class="vlist-s">​</span></span><span class="vlist-r"><span class="vlist" style="height:1.5500000000000007em;"><span></span></span></span></span></span><span class="arraycolsep" style="width:0.5em;"></span><span class="arraycolsep" style="width:0.5em;"></span><span class="col-align-c"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist" style="height:2.05em;"><span style="top:-4.21em;"><span class="pstrut" style="height:3em;"></span><span class="mord"><span class="mord">3</span></span></span><span style="top:-3.0099999999999993em;"><span class="pstrut" style="height:3em;"></span><span class="mord"><span class="mord">1</span></span></span><span style="top:-1.8099999999999994em;"><span class="pstrut" style="height:3em;"></span><span class="mord"><span class="mord">2</span></span></span></span><span class="vlist-s">​</span></span><span class="vlist-r"><span class="vlist" style="height:1.5500000000000007em;"><span></span></span></span></span></span></span></span><span class="mclose"><span class="delimsizing mult"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist" style="height:2.0510099999999998em;"><span style="top:-2.2500000000000004em;"><span class="pstrut" style="height:3.1550000000000002em;"></span><span class="delimsizinginner delim-size4"><span>⎦</span></span></span><span style="top:-2.8099900000000004em;"><span class="pstrut" style="height:3.1550000000000002em;"></span><span class="delimsizinginner delim-size4"><span>⎥</span></span></span><span style="top:-4.05101em;"><span class="pstrut" style="height:3.1550000000000002em;"></span><span class="delimsizinginner delim-size4"><span>⎤</span></span></span></span><span class="vlist-s">​</span></span><span class="vlist-r"><span class="vlist" style="height:1.55002em;"><span></span></span></span></span></span></span></span></span><span class="mord"><span class="minner"><span class="mopen"><span class="delimsizing mult"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist" style="height:2.6529999999999996em;"><span style="top:-1.6499900000000003em;"><span class="pstrut" style="height:3.1550000000000002em;"></span><span class="delimsizinginner delim-size4"><span>⎣</span></span></span><span style="top:-2.79999em;"><span class="pstrut" style="height:3.1550000000000002em;"></span><span class="delimsizinginner delim-size4"><span>⎢</span></span></span><span style="top:-3.3959900000000003em;"><span class="pstrut" style="height:3.1550000000000002em;"></span><span class="delimsizinginner delim-size4"><span>⎢</span></span></span><span style="top:-3.4119800000000002em;"><span class="pstrut" style="height:3.1550000000000002em;"></span><span class="delimsizinginner delim-size4"><span>⎢</span></span></span><span style="top:-4.653em;"><span class="pstrut" style="height:3.1550000000000002em;"></span><span class="delimsizinginner delim-size4"><span>⎡</span></span></span></span><span class="vlist-s">​</span></span><span class="vlist-r"><span class="vlist" style="height:2.15003em;"><span></span></span></span></span></span></span><span class="mord"><span class="mtable"><span class="col-align-c"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist" style="height:2.6500000000000004em;"><span style="top:-4.8100000000000005em;"><span class="pstrut" style="height:3em;"></span><span class="mord"><span class="mord mathnormal">a</span></span></span><span style="top:-3.61em;"><span class="pstrut" style="height:3em;"></span><span class="mord"><span class="mord mathnormal">b</span></span></span><span style="top:-2.4099999999999997em;"><span class="pstrut" style="height:3em;"></span><span class="mord"><span class="mord mathnormal">c</span></span></span><span style="top:-1.2099999999999997em;"><span class="pstrut" style="height:3em;"></span><span class="mord"><span class="mord mathnormal">d</span></span></span></span><span class="vlist-s">​</span></span><span class="vlist-r"><span class="vlist" style="height:2.1500000000000004em;"><span></span></span></span></span></span><span class="arraycolsep" style="width:0.5em;"></span><span class="arraycolsep" style="width:0.5em;"></span><span class="col-align-c"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist" style="height:2.6500000000000004em;"><span style="top:-4.8100000000000005em;"><span class="pstrut" style="height:3em;"></span><span class="mord"><span class="mord mathnormal">b</span></span></span><span style="top:-3.61em;"><span class="pstrut" style="height:3em;"></span><span class="mord"><span class="mord mathnormal">c</span></span></span><span style="top:-2.4099999999999997em;"><span class="pstrut" style="height:3em;"></span><span class="mord"><span class="mord mathnormal">d</span></span></span><span style="top:-1.2099999999999997em;"><span class="pstrut" style="height:3em;"></span><span class="mord"><span class="mord mathnormal">a</span></span></span></span><span class="vlist-s">​</span></span><span class="vlist-r"><span class="vlist" style="height:2.1500000000000004em;"><span></span></span></span></span></span><span class="arraycolsep" style="width:0.5em;"></span><span class="arraycolsep" style="width:0.5em;"></span><span class="col-align-c"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist" style="height:2.6500000000000004em;"><span style="top:-4.8100000000000005em;"><span class="pstrut" style="height:3em;"></span><span class="mord"><span class="mord mathnormal">d</span></span></span><span style="top:-3.61em;"><span class="pstrut" style="height:3em;"></span><span class="mord"><span class="mord mathnormal">a</span></span></span><span style="top:-2.4099999999999997em;"><span class="pstrut" style="height:3em;"></span><span class="mord"><span class="mord mathnormal">b</span></span></span><span style="top:-1.2099999999999997em;"><span class="pstrut" style="height:3em;"></span><span class="mord"><span class="mord mathnormal">c</span></span></span></span><span class="vlist-s">​</span></span><span class="vlist-r"><span class="vlist" style="height:2.1500000000000004em;"><span></span></span></span></span></span><span class="arraycolsep" style="width:0.5em;"></span><span class="arraycolsep" style="width:0.5em;"></span><span class="col-align-c"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist" style="height:2.6500000000000004em;"><span style="top:-4.8100000000000005em;"><span class="pstrut" style="height:3em;"></span><span class="mord"><span class="mord mathnormal">c</span></span></span><span style="top:-3.61em;"><span class="pstrut" style="height:3em;"></span><span class="mord"><span class="mord mathnormal">d</span></span></span><span style="top:-2.4099999999999997em;"><span class="pstrut" style="height:3em;"></span><span class="mord"><span class="mord mathnormal">a</span></span></span><span style="top:-1.2099999999999997em;"><span class="pstrut" style="height:3em;"></span><span class="mord"><span class="mord mathnormal">b</span></span></span></span><span class="vlist-s">​</span></span><span class="vlist-r"><span class="vlist" style="height:2.1500000000000004em;"><span></span></span></span></span></span></span></span><span class="mclose"><span class="delimsizing mult"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist" style="height:2.6529999999999996em;"><span style="top:-1.6499900000000003em;"><span class="pstrut" style="height:3.1550000000000002em;"></span><span class="delimsizinginner delim-size4"><span>⎦</span></span></span><span style="top:-2.79999em;"><span class="pstrut" style="height:3.1550000000000002em;"></span><span class="delimsizinginner delim-size4"><span>⎥</span></span></span><span style="top:-3.3959900000000003em;"><span class="pstrut" style="height:3.1550000000000002em;"></span><span class="delimsizinginner delim-size4"><span>⎥</span></span></span><span style="top:-3.4119800000000002em;"><span class="pstrut" style="height:3.1550000000000002em;"></span><span class="delimsizinginner delim-size4"><span>⎥</span></span></span><span style="top:-4.653em;"><span class="pstrut" style="height:3.1550000000000002em;"></span><span class="delimsizinginner delim-size4"><span>⎤</span></span></span></span><span class="vlist-s">​</span></span><span class="vlist-r"><span class="vlist" style="height:2.15003em;"><span></span></span></span></span></span></span></span></span></span></span></span></span></span></p>
+<p>拉丁方阵有此名称是因为<a target="_blank" rel="noopener" href="https://zh.wikipedia.org/wiki/%E7%91%9E%E5%A3%AB">瑞士</a><a target="_blank" rel="noopener" href="https://zh.wikipedia.org/wiki/%E6%95%B8%E5%AD%B8%E5%AE%B6">数学家</a>和<a target="_blank" rel="noopener" href="https://zh.wikipedia.org/wiki/%E7%89%A9%E7%90%86%E5%AD%B8%E5%AE%B6">物理学家</a><a target="_blank" rel="noopener" href="https://zh.wikipedia.org/wiki/%E8%8E%B1%E6%98%82%E5%93%88%E5%BE%B7%C2%B7%E6%AC%A7%E6%8B%89">欧拉</a>使用<a target="_blank" rel="noopener" href="https://zh.wikipedia.org/wiki/%E6%8B%89%E4%B8%81%E5%AD%97%E6%AF%8D">拉丁字母</a>来做为拉丁方阵里的元素的符号。</p>
+<hr />
+<p>设有两个阶数相同的拉丁方阵 <span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mstyle scriptlevel="0" displaystyle="true"><msub><mi>A</mi><mn>1</mn></msub><mo>=</mo><mo stretchy="false">(</mo><msubsup><mi>a</mi><mrow><mi>i</mi><mo separator="true">,</mo><mi>j</mi></mrow><mrow><mo stretchy="false">(</mo><mn>1</mn><mo stretchy="false">)</mo></mrow></msubsup><msub><mo stretchy="false">)</mo><mrow><mi>n</mi><mo>×</mo><mi>n</mi></mrow></msub><mo separator="true">,</mo><msub><mi>A</mi><mn>2</mn></msub><mo>=</mo><mo stretchy="false">(</mo><msubsup><mi>a</mi><mrow><mi>i</mi><mo separator="true">,</mo><mi>j</mi></mrow><mrow><mo stretchy="false">(</mo><mn>2</mn><mo stretchy="false">)</mo></mrow></msubsup><msub><mo stretchy="false">)</mo><mrow><mi>n</mi><mo>×</mo><mi>n</mi></mrow></msub></mstyle></mrow><annotation encoding="application/x-tex">{\displaystyle A_{1}=(a_{i,j}^{(1)})_{n\times n},A_{2}=(a_{i,j}^{(2)})_{n\times n}}</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:1.4577719999999998em;vertical-align:-0.412972em;"></span><span class="mord"><span class="mord"><span class="mord mathnormal">A</span><span class="msupsub"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist" style="height:0.30110799999999993em;"><span style="top:-2.5500000000000003em;margin-left:0em;margin-right:0.05em;"><span class="pstrut" style="height:2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mtight"><span class="mord mtight">1</span></span></span></span></span><span class="vlist-s">​</span></span><span class="vlist-r"><span class="vlist" style="height:0.15em;"><span></span></span></span></span></span></span><span class="mspace" style="margin-right:0.2777777777777778em;"></span><span class="mrel">=</span><span class="mspace" style="margin-right:0.2777777777777778em;"></span><span class="mopen">(</span><span class="mord"><span class="mord mathnormal">a</span><span class="msupsub"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist" style="height:1.0448em;"><span style="top:-2.4231360000000004em;margin-left:0em;margin-right:0.05em;"><span class="pstrut" style="height:2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mtight"><span class="mord mathnormal mtight">i</span><span class="mpunct mtight">,</span><span class="mord mathnormal mtight" style="margin-right:0.05724em;">j</span></span></span></span><span style="top:-3.2198em;margin-right:0.05em;"><span class="pstrut" style="height:2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mtight"><span class="mopen mtight">(</span><span class="mord mtight">1</span><span class="mclose mtight">)</span></span></span></span></span><span class="vlist-s">​</span></span><span class="vlist-r"><span class="vlist" style="height:0.412972em;"><span></span></span></span></span></span></span><span class="mclose"><span class="mclose">)</span><span class="msupsub"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist" style="height:0.25833100000000003em;"><span style="top:-2.5500000000000003em;margin-left:0em;margin-right:0.05em;"><span class="pstrut" style="height:2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mtight"><span class="mord mathnormal mtight">n</span><span class="mbin mtight">×</span><span class="mord mathnormal mtight">n</span></span></span></span></span><span class="vlist-s">​</span></span><span class="vlist-r"><span class="vlist" style="height:0.208331em;"><span></span></span></span></span></span></span><span class="mpunct">,</span><span class="mspace" style="margin-right:0.16666666666666666em;"></span><span class="mord"><span class="mord mathnormal">A</span><span class="msupsub"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist" style="height:0.30110799999999993em;"><span style="top:-2.5500000000000003em;margin-left:0em;margin-right:0.05em;"><span class="pstrut" style="height:2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mtight"><span class="mord mtight">2</span></span></span></span></span><span class="vlist-s">​</span></span><span class="vlist-r"><span class="vlist" style="height:0.15em;"><span></span></span></span></span></span></span><span class="mspace" style="margin-right:0.2777777777777778em;"></span><span class="mrel">=</span><span class="mspace" style="margin-right:0.2777777777777778em;"></span><span class="mopen">(</span><span class="mord"><span class="mord mathnormal">a</span><span class="msupsub"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist" style="height:1.0448em;"><span style="top:-2.4231360000000004em;margin-left:0em;margin-right:0.05em;"><span class="pstrut" style="height:2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mtight"><span class="mord mathnormal mtight">i</span><span class="mpunct mtight">,</span><span class="mord mathnormal mtight" style="margin-right:0.05724em;">j</span></span></span></span><span style="top:-3.2198em;margin-right:0.05em;"><span class="pstrut" style="height:2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mtight"><span class="mopen mtight">(</span><span class="mord mtight">2</span><span class="mclose mtight">)</span></span></span></span></span><span class="vlist-s">​</span></span><span class="vlist-r"><span class="vlist" style="height:0.412972em;"><span></span></span></span></span></span></span><span class="mclose"><span class="mclose">)</span><span class="msupsub"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist" style="height:0.25833100000000003em;"><span style="top:-2.5500000000000003em;margin-left:0em;margin-right:0.05em;"><span class="pstrut" style="height:2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mtight"><span class="mord mathnormal mtight">n</span><span class="mbin mtight">×</span><span class="mord mathnormal mtight">n</span></span></span></span></span><span class="vlist-s">​</span></span><span class="vlist-r"><span class="vlist" style="height:0.208331em;"><span></span></span></span></span></span></span></span></span></span></span>，其中将所有放置位置相同的元素组成一个二元组，组合成一个新的矩阵 <span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mstyle scriptlevel="0" displaystyle="true"><mo stretchy="false">(</mo><mo stretchy="false">(</mo><msubsup><mi>a</mi><mrow><mi>i</mi><mo separator="true">,</mo><mi>j</mi></mrow><mrow><mo stretchy="false">(</mo><mn>1</mn><mo stretchy="false">)</mo></mrow></msubsup><mo separator="true">,</mo><msubsup><mi>a</mi><mrow><mi>i</mi><mo separator="true">,</mo><mi>j</mi></mrow><mrow><mo stretchy="false">(</mo><mn>2</mn><mo stretchy="false">)</mo></mrow></msubsup><mo stretchy="false">)</mo><msub><mo stretchy="false">)</mo><mrow><mi>n</mi><mo>×</mo><mi>n</mi></mrow></msub></mstyle></mrow><annotation encoding="application/x-tex">{\displaystyle ((a_{i,j}^{(1)},a_{i,j}^{(2)}))_{n\times n}}</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:1.4577719999999998em;vertical-align:-0.412972em;"></span><span class="mord"><span class="mopen">(</span><span class="mopen">(</span><span class="mord"><span class="mord mathnormal">a</span><span class="msupsub"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist" style="height:1.0448em;"><span style="top:-2.4231360000000004em;margin-left:0em;margin-right:0.05em;"><span class="pstrut" style="height:2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mtight"><span class="mord mathnormal mtight">i</span><span class="mpunct mtight">,</span><span class="mord mathnormal mtight" style="margin-right:0.05724em;">j</span></span></span></span><span style="top:-3.2198em;margin-right:0.05em;"><span class="pstrut" style="height:2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mtight"><span class="mopen mtight">(</span><span class="mord mtight">1</span><span class="mclose mtight">)</span></span></span></span></span><span class="vlist-s">​</span></span><span class="vlist-r"><span class="vlist" style="height:0.412972em;"><span></span></span></span></span></span></span><span class="mpunct">,</span><span class="mspace" style="margin-right:0.16666666666666666em;"></span><span class="mord"><span class="mord mathnormal">a</span><span class="msupsub"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist" style="height:1.0448em;"><span style="top:-2.4231360000000004em;margin-left:0em;margin-right:0.05em;"><span class="pstrut" style="height:2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mtight"><span class="mord mathnormal mtight">i</span><span class="mpunct mtight">,</span><span class="mord mathnormal mtight" style="margin-right:0.05724em;">j</span></span></span></span><span style="top:-3.2198em;margin-right:0.05em;"><span class="pstrut" style="height:2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mtight"><span class="mopen mtight">(</span><span class="mord mtight">2</span><span class="mclose mtight">)</span></span></span></span></span><span class="vlist-s">​</span></span><span class="vlist-r"><span class="vlist" style="height:0.412972em;"><span></span></span></span></span></span></span><span class="mclose">)</span><span class="mclose"><span class="mclose">)</span><span class="msupsub"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist" style="height:0.25833100000000003em;"><span style="top:-2.5500000000000003em;margin-left:0em;margin-right:0.05em;"><span class="pstrut" style="height:2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mtight"><span class="mord mathnormal mtight">n</span><span class="mbin mtight">×</span><span class="mord mathnormal mtight">n</span></span></span></span></span><span class="vlist-s">​</span></span><span class="vlist-r"><span class="vlist" style="height:0.208331em;"><span></span></span></span></span></span></span></span></span></span></span>。 当这个新的矩阵 <span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mstyle scriptlevel="0" displaystyle="true"><mo stretchy="false">(</mo><mo stretchy="false">(</mo><msubsup><mi>a</mi><mrow><mi>i</mi><mo separator="true">,</mo><mi>j</mi></mrow><mrow><mo stretchy="false">(</mo><mn>1</mn><mo stretchy="false">)</mo></mrow></msubsup><mo separator="true">,</mo><msubsup><mi>a</mi><mrow><mi>i</mi><mo separator="true">,</mo><mi>j</mi></mrow><mrow><mo stretchy="false">(</mo><mn>2</mn><mo stretchy="false">)</mo></mrow></msubsup><mo stretchy="false">)</mo><msub><mo stretchy="false">)</mo><mrow><mi>n</mi><mo>×</mo><mi>n</mi></mrow></msub></mstyle></mrow><annotation encoding="application/x-tex">{\displaystyle ((a_{i,j}^{(1)},a_{i,j}^{(2)}))_{n\times n}}</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:1.4577719999999998em;vertical-align:-0.412972em;"></span><span class="mord"><span class="mopen">(</span><span class="mopen">(</span><span class="mord"><span class="mord mathnormal">a</span><span class="msupsub"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist" style="height:1.0448em;"><span style="top:-2.4231360000000004em;margin-left:0em;margin-right:0.05em;"><span class="pstrut" style="height:2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mtight"><span class="mord mathnormal mtight">i</span><span class="mpunct mtight">,</span><span class="mord mathnormal mtight" style="margin-right:0.05724em;">j</span></span></span></span><span style="top:-3.2198em;margin-right:0.05em;"><span class="pstrut" style="height:2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mtight"><span class="mopen mtight">(</span><span class="mord mtight">1</span><span class="mclose mtight">)</span></span></span></span></span><span class="vlist-s">​</span></span><span class="vlist-r"><span class="vlist" style="height:0.412972em;"><span></span></span></span></span></span></span><span class="mpunct">,</span><span class="mspace" style="margin-right:0.16666666666666666em;"></span><span class="mord"><span class="mord mathnormal">a</span><span class="msupsub"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist" style="height:1.0448em;"><span style="top:-2.4231360000000004em;margin-left:0em;margin-right:0.05em;"><span class="pstrut" style="height:2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mtight"><span class="mord mathnormal mtight">i</span><span class="mpunct mtight">,</span><span class="mord mathnormal mtight" style="margin-right:0.05724em;">j</span></span></span></span><span style="top:-3.2198em;margin-right:0.05em;"><span class="pstrut" style="height:2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mtight"><span class="mopen mtight">(</span><span class="mord mtight">2</span><span class="mclose mtight">)</span></span></span></span></span><span class="vlist-s">​</span></span><span class="vlist-r"><span class="vlist" style="height:0.412972em;"><span></span></span></span></span></span></span><span class="mclose">)</span><span class="mclose"><span class="mclose">)</span><span class="msupsub"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist" style="height:0.25833100000000003em;"><span style="top:-2.5500000000000003em;margin-left:0em;margin-right:0.05em;"><span class="pstrut" style="height:2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mtight"><span class="mord mathnormal mtight">n</span><span class="mbin mtight">×</span><span class="mord mathnormal mtight">n</span></span></span></span></span><span class="vlist-s">​</span></span><span class="vlist-r"><span class="vlist" style="height:0.208331em;"><span></span></span></span></span></span></span></span></span></span></span> 中每一个元素互不相同时，拉丁方阵 <span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mstyle scriptlevel="0" displaystyle="true"><msub><mi>A</mi><mn>1</mn></msub></mstyle></mrow><annotation encoding="application/x-tex">{\displaystyle A_{1}}</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.83333em;vertical-align:-0.15em;"></span><span class="mord"><span class="mord"><span class="mord mathnormal">A</span><span class="msupsub"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist" style="height:0.30110799999999993em;"><span style="top:-2.5500000000000003em;margin-left:0em;margin-right:0.05em;"><span class="pstrut" style="height:2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mtight"><span class="mord mtight">1</span></span></span></span></span><span class="vlist-s">​</span></span><span class="vlist-r"><span class="vlist" style="height:0.15em;"><span></span></span></span></span></span></span></span></span></span></span> 和 <span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mstyle scriptlevel="0" displaystyle="true"><msub><mi>A</mi><mn>2</mn></msub></mstyle></mrow><annotation encoding="application/x-tex">{\displaystyle A_{2}}</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.83333em;vertical-align:-0.15em;"></span><span class="mord"><span class="mord"><span class="mord mathnormal">A</span><span class="msupsub"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist" style="height:0.30110799999999993em;"><span style="top:-2.5500000000000003em;margin-left:0em;margin-right:0.05em;"><span class="pstrut" style="height:2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mtight"><span class="mord mtight">2</span></span></span></span></span><span class="vlist-s">​</span></span><span class="vlist-r"><span class="vlist" style="height:0.15em;"><span></span></span></span></span></span></span></span></span></span></span> 是互相正交的。 此时，<span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mstyle scriptlevel="0" displaystyle="true"><msub><mi>A</mi><mn>1</mn></msub></mstyle></mrow><annotation encoding="application/x-tex">{\displaystyle A_{1}}</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.83333em;vertical-align:-0.15em;"></span><span class="mord"><span class="mord"><span class="mord mathnormal">A</span><span class="msupsub"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist" style="height:0.30110799999999993em;"><span style="top:-2.5500000000000003em;margin-left:0em;margin-right:0.05em;"><span class="pstrut" style="height:2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mtight"><span class="mord mtight">1</span></span></span></span></span><span class="vlist-s">​</span></span><span class="vlist-r"><span class="vlist" style="height:0.15em;"><span></span></span></span></span></span></span></span></span></span></span> 和 <span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mstyle scriptlevel="0" displaystyle="true"><msub><mi>A</mi><mn>2</mn></msub></mstyle></mrow><annotation encoding="application/x-tex">{\displaystyle A_{2}}</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.83333em;vertical-align:-0.15em;"></span><span class="mord"><span class="mord"><span class="mord mathnormal">A</span><span class="msupsub"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist" style="height:0.30110799999999993em;"><span style="top:-2.5500000000000003em;margin-left:0em;margin-right:0.05em;"><span class="pstrut" style="height:2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mtight"><span class="mord mtight">2</span></span></span></span></span><span class="vlist-s">​</span></span><span class="vlist-r"><span class="vlist" style="height:0.15em;"><span></span></span></span></span></span></span></span></span></span></span> 即为一对<strong>正交拉丁方</strong>。 而在阶数固定的情况下，所有两两正交的拉丁方所成的集合称为<strong>正交拉丁方族</strong>。</p>
+<p>摘自于于 WikiPedia 的『拉丁方阵』词条。</p>
+<h1 id="朝花夕拾"><a class="markdownIt-Anchor" href="#朝花夕拾"></a> 朝花夕拾</h1>
+<p>对于 <span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>n</mi></mrow><annotation encoding="application/x-tex">n</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.43056em;vertical-align:0em;"></span><span class="mord mathnormal">n</span></span></span></span> 为奇数和 <span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>n</mi><mo>≡</mo><mn>0</mn><mspace></mspace><mspace width="0.4444444444444444em"/><mo stretchy="false">(</mo><mrow><mi mathvariant="normal">m</mi><mi mathvariant="normal">o</mi><mi mathvariant="normal">d</mi></mrow><mspace width="0.3333333333333333em"/><mn>4</mn><mo stretchy="false">)</mo></mrow><annotation encoding="application/x-tex">n\equiv 0\pmod 4</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.46375em;vertical-align:0em;"></span><span class="mord mathnormal">n</span><span class="mspace" style="margin-right:0.2777777777777778em;"></span><span class="mrel">≡</span><span class="mspace" style="margin-right:0.2777777777777778em;"></span></span><span class="base"><span class="strut" style="height:0.64444em;vertical-align:0em;"></span><span class="mord">0</span><span class="mspace allowbreak"></span><span class="mspace" style="margin-right:0.4444444444444444em;"></span></span><span class="base"><span class="strut" style="height:1em;vertical-align:-0.25em;"></span><span class="mopen">(</span><span class="mord"><span class="mord"><span class="mord mathrm">m</span><span class="mord mathrm">o</span><span class="mord mathrm">d</span></span></span><span class="mspace" style="margin-right:0.3333333333333333em;"></span><span class="mord">4</span><span class="mclose">)</span></span></span></span> 的情况，构造是较为容易的。欧拉猜想，对于 <span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>n</mi><mo>≡</mo><mn>2</mn><mspace></mspace><mspace width="0.4444444444444444em"/><mo stretchy="false">(</mo><mrow><mi mathvariant="normal">m</mi><mi mathvariant="normal">o</mi><mi mathvariant="normal">d</mi></mrow><mspace width="0.3333333333333333em"/><mn>4</mn><mo stretchy="false">)</mo></mrow><annotation encoding="application/x-tex">n\equiv 2\pmod 4</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.46375em;vertical-align:0em;"></span><span class="mord mathnormal">n</span><span class="mspace" style="margin-right:0.2777777777777778em;"></span><span class="mrel">≡</span><span class="mspace" style="margin-right:0.2777777777777778em;"></span></span><span class="base"><span class="strut" style="height:0.64444em;vertical-align:0em;"></span><span class="mord">2</span><span class="mspace allowbreak"></span><span class="mspace" style="margin-right:0.4444444444444444em;"></span></span><span class="base"><span class="strut" style="height:1em;vertical-align:-0.25em;"></span><span class="mopen">(</span><span class="mord"><span class="mord"><span class="mord mathrm">m</span><span class="mord mathrm">o</span><span class="mord mathrm">d</span></span></span><span class="mspace" style="margin-right:0.3333333333333333em;"></span><span class="mord">4</span><span class="mclose">)</span></span></span></span> 的情况，不存在一对正交拉丁方。</p>
+<p>然而在 1959 年，<a target="_blank" rel="noopener" href="https://www.pnas.org/doi/epdf/10.1073/pnas.45.5.734">On the falsity of Euler's conjecture about the non-existence of two orthogonal Latin squares of order 4t + 2</a> 这篇文章推翻了这一猜想。</p>
+<h1 id="前言"><a class="markdownIt-Anchor" href="#前言"></a> 前言</h1>
+<p>我在 20251021 打模拟赛时，做到了这样一个题：<a target="_blank" rel="noopener" href="https://qoj.ac/problem/12905">Elegant Square - Problem - QOJ.ac</a>。而模拟赛版本要求做到 <span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mn>3</mn><mo>≤</mo><mi>n</mi><mo>≤</mo><mn>202</mn></mrow><annotation encoding="application/x-tex">3\leq n\leq 202</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.78041em;vertical-align:-0.13597em;"></span><span class="mord">3</span><span class="mspace" style="margin-right:0.2777777777777778em;"></span><span class="mrel">≤</span><span class="mspace" style="margin-right:0.2777777777777778em;"></span></span><span class="base"><span class="strut" style="height:0.7719400000000001em;vertical-align:-0.13597em;"></span><span class="mord mathnormal">n</span><span class="mspace" style="margin-right:0.2777777777777778em;"></span><span class="mrel">≤</span><span class="mspace" style="margin-right:0.2777777777777778em;"></span></span><span class="base"><span class="strut" style="height:0.64444em;vertical-align:0em;"></span><span class="mord">2</span><span class="mord">0</span><span class="mord">2</span></span></span></span>，且构造的最大值不超过 <span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mn>2</mn><mo>×</mo><mn>1</mn><msup><mn>0</mn><mn>7</mn></msup></mrow><annotation encoding="application/x-tex">2\times 10^7</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.72777em;vertical-align:-0.08333em;"></span><span class="mord">2</span><span class="mspace" style="margin-right:0.2222222222222222em;"></span><span class="mbin">×</span><span class="mspace" style="margin-right:0.2222222222222222em;"></span></span><span class="base"><span class="strut" style="height:0.8141079999999999em;vertical-align:0em;"></span><span class="mord">1</span><span class="mord"><span class="mord">0</span><span class="msupsub"><span class="vlist-t"><span class="vlist-r"><span class="vlist" style="height:0.8141079999999999em;"><span style="top:-3.063em;margin-right:0.05em;"><span class="pstrut" style="height:2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mtight">7</span></span></span></span></span></span></span></span></span></span></span>。</p>
+<p>我做了一整场，22 分遗憾离场。<s>赛后发现改了几个字节就 50 分了。</s></p>
+<p>这不重要，重要的是，<a target="_blank" rel="noopener" href="https://www.luogu.com.cn/user/516831">Leo_lele</a> 指出，这个问题的本质是构造正交拉丁方。而且，有了一组正交拉丁方之后，我们可以很轻松的做到这个问题的下界（？）。具体的，第一个矩形填前 <span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>n</mi></mrow><annotation encoding="application/x-tex">n</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.43056em;vertical-align:0em;"></span><span class="mord mathnormal">n</span></span></span></span> 个 Square-Free 的数，第二个矩形填在第一个矩形的基础上，再填若干个质数。然后把两个矩形对应位乘起来即可。</p>
+<p>那么现在问题是如何构造一对正交拉丁方，我们查阅了许多资料，问了无数个 AI，都没有获得现成的构造代码。且碍于语言不通，我们阅读英语论文较为吃力，这个问题迟迟没有进展。</p>
+<p>鉴于我俩做不出来这个问题，于是 yyc 把它挂到了知乎上：<a target="_blank" rel="noopener" href="https://www.zhihu.com/question/1964254729556170187">怎样构造 2p（4t+2）形式的正交拉丁方对？ - 知乎</a>。同时 yyc 在精英培训群里提问，被杜老师看到了，杜老师指出了有了正交拉丁方 <a target="_blank" rel="noopener" href="https://atcoder.jp/contests/agc064/tasks/agc064_e">E - Cross Sum Construction</a> 则这个题也可以轻松通过。</p>
+<p>我邀请了较为熟悉的 <a target="_blank" rel="noopener" href="https://www.luogu.com.cn/user/483824">MatrixGroup</a> 老师。矩阵群老师连夜阅读论文，当晚便阅读了 <a target="_blank" rel="noopener" href="https://academic.oup.com/book/53893">Combinatorial Designs and Tournaments</a> 并写下了知乎回答并同步发表在了知乎专栏与洛谷专栏。</p>
+<ul>
+<li><a target="_blank" rel="noopener" href="https://zhuanlan.zhihu.com/p/82045715521">正交拉丁方的构造 - 知乎</a></li>
+<li><a target="_blank" rel="noopener" href="https://www.luogu.com.cn/article/i8x6is6u">正交拉丁方的构造 - 洛谷专栏</a></li>
+</ul>
+<p>第二天起床之后我便阅读了文章。在持续骚扰 ChatGPT、矩阵群和 yyc 一天之后，我成功写出了 43kb 的代码，通过了 <span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mn>1</mn><mo>≤</mo><mi>n</mi><mo>≤</mo><mn>1000</mn></mrow><annotation encoding="application/x-tex">1\leq n\leq 1000</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.78041em;vertical-align:-0.13597em;"></span><span class="mord">1</span><span class="mspace" style="margin-right:0.2777777777777778em;"></span><span class="mrel">≤</span><span class="mspace" style="margin-right:0.2777777777777778em;"></span></span><span class="base"><span class="strut" style="height:0.7719400000000001em;vertical-align:-0.13597em;"></span><span class="mord mathnormal">n</span><span class="mspace" style="margin-right:0.2777777777777778em;"></span><span class="mrel">≤</span><span class="mspace" style="margin-right:0.2777777777777778em;"></span></span><span class="base"><span class="strut" style="height:0.64444em;vertical-align:0em;"></span><span class="mord">1</span><span class="mord">0</span><span class="mord">0</span><span class="mord">0</span></span></span></span> 的正交测试。</p>
+<p>具体代码在 <a target="_blank" rel="noopener" href="https://github.com/chenyuxuan2009/OrthogonalLatinSquare">chenyuxuan2009/OrthogonalLatinSquare</a> 可以阅读。作为竞赛选手我已经尽力把代码写的工程风格让它可读一点了 qwq。在此需要再次感谢 ChatGPT 为我提供了有限域乘法模板，以及找出了 <span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mn>4</mn></mrow><annotation encoding="application/x-tex">4</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.64444em;vertical-align:0em;"></span><span class="mord">4</span></span></span></span> 阶有限射影平面和 <span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mn>5</mn></mrow><annotation encoding="application/x-tex">5</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.64444em;vertical-align:0em;"></span><span class="mord">5</span></span></span></span> 阶有限仿射平面，以及矩阵群老师多次指出我的代码的弱智错误。</p>
+<h1 id="在-oi-中的使用"><a class="markdownIt-Anchor" href="#在-oi-中的使用"></a> 在 OI 中的使用</h1>
+<p>接下来，我会举两个题目的例子。</p>
+<h2 id="qoj12905"><a class="markdownIt-Anchor" href="#qoj12905"></a> QOJ12905</h2>
+<p>应该是爆了目前网上所有代码的标，包括 pp_orange 留下来的圣遗物 std。</p>
+<p>首先有一些很自然的想法：我们找到两个矩阵，每个矩阵填一些质数，且一个质数在每行和每列都出现了一次，然后把他和前一个矩阵乘起来。如果找不到，我们再加一个矩形。事实上，网络上此题几乎所有题解都是这么做的，即使不是也需要引入 <span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi mathvariant="script">O</mi><mo stretchy="false">(</mo><mn>1</mn><mo stretchy="false">)</mo></mrow><annotation encoding="application/x-tex">\mathcal O(1)</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:1em;vertical-align:-0.25em;"></span><span class="mord mathcal" style="margin-right:0.02778em;">O</span><span class="mopen">(</span><span class="mord">1</span><span class="mclose">)</span></span></span></span> 个额外的质数。</p>
+<p>不难发现这个就是在找一对正交拉丁方。而我们根据前人的智慧，除了 <span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>n</mi><mo>=</mo><mn>2</mn><mo separator="true">,</mo><mn>6</mn></mrow><annotation encoding="application/x-tex">n=2,6</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.43056em;vertical-align:0em;"></span><span class="mord mathnormal">n</span><span class="mspace" style="margin-right:0.2777777777777778em;"></span><span class="mrel">=</span><span class="mspace" style="margin-right:0.2777777777777778em;"></span></span><span class="base"><span class="strut" style="height:0.8388800000000001em;vertical-align:-0.19444em;"></span><span class="mord">2</span><span class="mpunct">,</span><span class="mspace" style="margin-right:0.16666666666666666em;"></span><span class="mord">6</span></span></span></span> 都是有构造的。</p>
+<p>有了正交拉丁方，直接就找出来了。但是，我们真的需要两个质数吗？稍微想一下可以发现，我们第一个矩阵可以填若干个 Square-Free 的数。第二个矩阵再填一些质数。</p>
+<p>依此，我们在 <span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>n</mi><mo>=</mo><mn>202</mn></mrow><annotation encoding="application/x-tex">n=202</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.43056em;vertical-align:0em;"></span><span class="mord mathnormal">n</span><span class="mspace" style="margin-right:0.2777777777777778em;"></span><span class="mrel">=</span><span class="mspace" style="margin-right:0.2777777777777778em;"></span></span><span class="base"><span class="strut" style="height:0.64444em;vertical-align:0em;"></span><span class="mord">2</span><span class="mord">0</span><span class="mord">2</span></span></span></span> 的时候，最大值只有 <span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mn>566209</mn></mrow><annotation encoding="application/x-tex">566209</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.64444em;vertical-align:0em;"></span><span class="mord">5</span><span class="mord">6</span><span class="mord">6</span><span class="mord">2</span><span class="mord">0</span><span class="mord">9</span></span></span></span>。而 <span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>n</mi><mo>=</mo><mn>30</mn></mrow><annotation encoding="application/x-tex">n=30</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.43056em;vertical-align:0em;"></span><span class="mord mathnormal">n</span><span class="mspace" style="margin-right:0.2777777777777778em;"></span><span class="mrel">=</span><span class="mspace" style="margin-right:0.2777777777777778em;"></span></span><span class="base"><span class="strut" style="height:0.64444em;vertical-align:0em;"></span><span class="mord">3</span><span class="mord">0</span></span></span></span> 的时候，只有 <span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mn>8878</mn></mrow><annotation encoding="application/x-tex">8878</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.64444em;vertical-align:0em;"></span><span class="mord">8</span><span class="mord">8</span><span class="mord">7</span><span class="mord">8</span></span></span></span>。</p>
+<p><a target="_blank" rel="noopener" href="https://qoj.ac/submission/1574614">Submission #1574614 - QOJ.ac</a></p>
+<h2 id="agc064e"><a class="markdownIt-Anchor" href="#agc064e"></a> AGC064E</h2>
+<p>需要参考一些原题解 <a target="_blank" rel="noopener" href="https://atcoder.jp/contests/agc064/editorial/6983">Editorial - AtCoder Grand Contest 064</a> 和洛谷目前唯一一篇题解 <a target="_blank" rel="noopener" href="https://www.luogu.com.cn/article/xh08fk5p">AT_agc064_e [AGC064E] Cross Sum Construction题解 - 洛谷专栏</a>。</p>
+<p>总之，对于 <span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>n</mi><mo>=</mo><mn>2</mn><mo separator="true">,</mo><mn>6</mn></mrow><annotation encoding="application/x-tex">n=2,6</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.43056em;vertical-align:0em;"></span><span class="mord mathnormal">n</span><span class="mspace" style="margin-right:0.2777777777777778em;"></span><span class="mrel">=</span><span class="mspace" style="margin-right:0.2777777777777778em;"></span></span><span class="base"><span class="strut" style="height:0.8388800000000001em;vertical-align:-0.19444em;"></span><span class="mord">2</span><span class="mpunct">,</span><span class="mspace" style="margin-right:0.16666666666666666em;"></span><span class="mord">6</span></span></span></span>，这个数据范围非常小，足以搜索出一个方案通过本题。</p>
+<p>对于其他情况，我们已有两个拉丁方 <span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><msup><mi>L</mi><mn>1</mn></msup><mo separator="true">,</mo><msup><mi>L</mi><mn>2</mn></msup></mrow><annotation encoding="application/x-tex">L^1,L^2</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:1.008548em;vertical-align:-0.19444em;"></span><span class="mord"><span class="mord mathnormal">L</span><span class="msupsub"><span class="vlist-t"><span class="vlist-r"><span class="vlist" style="height:0.8141079999999999em;"><span style="top:-3.063em;margin-right:0.05em;"><span class="pstrut" style="height:2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mtight">1</span></span></span></span></span></span></span></span><span class="mpunct">,</span><span class="mspace" style="margin-right:0.16666666666666666em;"></span><span class="mord"><span class="mord mathnormal">L</span><span class="msupsub"><span class="vlist-t"><span class="vlist-r"><span class="vlist" style="height:0.8141079999999999em;"><span style="top:-3.063em;margin-right:0.05em;"><span class="pstrut" style="height:2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mtight">2</span></span></span></span></span></span></span></span></span></span></span>，则 <span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><msub><mi>s</mi><mrow><mi>i</mi><mo separator="true">,</mo><mi>j</mi></mrow></msub><mo>←</mo><msub><mi>a</mi><msubsup><mi>L</mi><mrow><mi>i</mi><mo separator="true">,</mo><mi>j</mi></mrow><mn>1</mn></msubsup></msub><mo>+</mo><msub><mi>b</mi><msubsup><mi>L</mi><mrow><mi>i</mi><mo separator="true">,</mo><mi>j</mi></mrow><mn>2</mn></msubsup></msub></mrow><annotation encoding="application/x-tex">s_{i,j}\gets a_{L^1_{i,j}}+b_{L^2_{i,j}}</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.716668em;vertical-align:-0.286108em;"></span><span class="mord"><span class="mord mathnormal">s</span><span class="msupsub"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist" style="height:0.311664em;"><span style="top:-2.5500000000000003em;margin-left:0em;margin-right:0.05em;"><span class="pstrut" style="height:2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mtight"><span class="mord mathnormal mtight">i</span><span class="mpunct mtight">,</span><span class="mord mathnormal mtight" style="margin-right:0.05724em;">j</span></span></span></span></span><span class="vlist-s">​</span></span><span class="vlist-r"><span class="vlist" style="height:0.286108em;"><span></span></span></span></span></span></span><span class="mspace" style="margin-right:0.2777777777777778em;"></span><span class="mrel">←</span><span class="mspace" style="margin-right:0.2777777777777778em;"></span></span><span class="base"><span class="strut" style="height:1.12493em;vertical-align:-0.5416em;"></span><span class="mord"><span class="mord mathnormal">a</span><span class="msupsub"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist" style="height:0.3448em;"><span style="top:-2.4812200000000004em;margin-left:0em;margin-right:0.05em;"><span class="pstrut" style="height:2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mtight"><span class="mord mtight"><span class="mord mathnormal mtight">L</span><span class="msupsub"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist" style="height:0.8051142857142857em;"><span style="top:-2.177714285714286em;margin-left:0em;margin-right:0.07142857142857144em;"><span class="pstrut" style="height:2.5em;"></span><span class="sizing reset-size3 size1 mtight"><span class="mord mtight"><span class="mord mathnormal mtight">i</span><span class="mpunct mtight">,</span><span class="mord mathnormal mtight" style="margin-right:0.05724em;">j</span></span></span></span><span style="top:-2.8448em;margin-right:0.07142857142857144em;"><span class="pstrut" style="height:2.5em;"></span><span class="sizing reset-size3 size1 mtight"><span class="mord mtight">1</span></span></span></span><span class="vlist-s">​</span></span><span class="vlist-r"><span class="vlist" style="height:0.46117142857142857em;"><span></span></span></span></span></span></span></span></span></span></span><span class="vlist-s">​</span></span><span class="vlist-r"><span class="vlist" style="height:0.5416em;"><span></span></span></span></span></span></span><span class="mspace" style="margin-right:0.2222222222222222em;"></span><span class="mbin">+</span><span class="mspace" style="margin-right:0.2222222222222222em;"></span></span><span class="base"><span class="strut" style="height:1.23604em;vertical-align:-0.5416em;"></span><span class="mord"><span class="mord mathnormal">b</span><span class="msupsub"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist" style="height:0.3448em;"><span style="top:-2.4812200000000004em;margin-left:0em;margin-right:0.05em;"><span class="pstrut" style="height:2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mtight"><span class="mord mtight"><span class="mord mathnormal mtight">L</span><span class="msupsub"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist" style="height:0.8051142857142857em;"><span style="top:-2.177714285714286em;margin-left:0em;margin-right:0.07142857142857144em;"><span class="pstrut" style="height:2.5em;"></span><span class="sizing reset-size3 size1 mtight"><span class="mord mtight"><span class="mord mathnormal mtight">i</span><span class="mpunct mtight">,</span><span class="mord mathnormal mtight" style="margin-right:0.05724em;">j</span></span></span></span><span style="top:-2.8448em;margin-right:0.07142857142857144em;"><span class="pstrut" style="height:2.5em;"></span><span class="sizing reset-size3 size1 mtight"><span class="mord mtight">2</span></span></span></span><span class="vlist-s">​</span></span><span class="vlist-r"><span class="vlist" style="height:0.46117142857142857em;"><span></span></span></span></span></span></span></span></span></span></span><span class="vlist-s">​</span></span><span class="vlist-r"><span class="vlist" style="height:0.5416em;"><span></span></span></span></span></span></span></span></span></span> 即可。不需要去精心讨论，这些工作我们构造拉丁方的时候就已经做过了。</p>
+<p><a target="_blank" rel="noopener" href="https://atcoder.jp/contests/agc064/submissions/70385883">Submission #70385883 - AtCoder Grand Contest 064</a></p>
+<p>代码的 <span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>n</mi><mo>=</mo><mn>2</mn><mo separator="true">,</mo><mn>6</mn></mrow><annotation encoding="application/x-tex">n=2,6</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.43056em;vertical-align:0em;"></span><span class="mord mathnormal">n</span><span class="mspace" style="margin-right:0.2777777777777778em;"></span><span class="mrel">=</span><span class="mspace" style="margin-right:0.2777777777777778em;"></span></span><span class="base"><span class="strut" style="height:0.8388800000000001em;vertical-align:-0.19444em;"></span><span class="mord">2</span><span class="mpunct">,</span><span class="mspace" style="margin-right:0.16666666666666666em;"></span><span class="mord">6</span></span></span></span> 并非搜索，贺了一下题解，抱歉。</p>
+<p>另外杜老师指出这个题写个搜子能过 <span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mn>1000</mn></mrow><annotation encoding="application/x-tex">1000</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.64444em;vertical-align:0em;"></span><span class="mord">1</span><span class="mord">0</span><span class="mord">0</span><span class="mord">0</span></span></span></span>。</p>
+<h1 id="后话"><a class="markdownIt-Anchor" href="#后话"></a> 后话</h1>
+<p>OLS 相关内容，我研究了半周。本周二打完模拟赛我做了半天的 OLS 相关内容，读了一晚上的论文，却没有太大收获。本以为这是浪费时间，作为高一正式选手我可能把时间浪费在这上面是很愚蠢的，有这个时间我的同届对手们已经卷了十个题了（</p>
+<p>但是在一步步讨论、挖掘、请教中，做这种“科研”也是有他的独特魅力的。前人智慧，令我叹为观止。</p>
+<p>现在我确乎是浪费了半周时间在这上面。不过能在 1024 这个独特的二进制日，能够向大家展示这份成果，尤其是我一天写完的这 1147 行 43547 byte 的 <code>ols.h</code> 代码。有和我一样喜欢把时间浪费在研究这种东西上的朋友，我对此感到很幸运。</p>
+<p>最后再次感谢矩阵群、yyc、ChatGPT、dyh 老师以及 tby 老师。</p>
+
+	</div>
+
+	
+		<div class="post-donate">
+			<button class="btn donate-btn btn-danger">赞赏</button>
+			<div class="donate-qrcode card shadow-sm bg-white">
+				<img src="http://img.cyx2009.top/pay_wx.jpg">
+			</div>
+		</div>
+	
+
+	
+			<div class='additional-content-after-post'>爱你宝宝！</div>
+		
+
+	
+</article>
+
+	<div id="share_container">
+	<div id="share" data-initialized="true">
+		<a class="no-pjax icon-wechat" tooltip="分享到微信">
+			<button class="btn btn-icon btn-success">
+				<span class="btn-inner--icon"><i class="fa fa-weixin"></i></span>
+			</button>
+		</a>
+		<a target="_blank" class="no-pjax icon-douban" tooltip="分享到豆瓣">
+			<button class="btn btn-icon btn-primary" style="background: #209261;border: none;">
+				豆
+			</button>
+		</a>
+		<a target="_blank" class="no-pjax icon-qq" tooltip="分享到 QQ">
+			<button class="btn btn-icon btn-primary" style="background: #2196f3;border: none;">
+				<span class="btn-inner--icon"><i class="fa fa-qq"></i></span>
+			</button>
+		</a>
+		<a target="_blank" class="no-pjax icon-qzone" tooltip="分享到 QQ 空间">
+			<button class="btn btn-icon btn-primary" style="background: #ffc107;border: none;">
+				<span class="btn-inner--icon"><i class="fa fa-star"></i></span>
+			</button>
+		</a>
+		<a target="_blank" class="no-pjax icon-weibo" tooltip="分享到微博">
+			<button class="btn btn-icon btn-warning">
+				<span class="btn-inner--icon"><i class="fa fa-weibo"></i></span>
+			</button>
+		</a>
+		<a target="_blank" class="no-pjax icon-facebook" tooltip="分享到 Facebook">
+			<button class="btn btn-icon btn-primary" style="background: #283593;border: none;">
+				<span class="btn-inner--icon"><i class="fa fa-facebook"></i></span>
+			</button>
+		</a>
+		<a target="_blank" class="no-pjax icon-twitter" tooltip="分享到 Twitter">
+			<button class="btn btn-icon btn-primary" style="background: #03a9f4;border: none;">
+				<span class="btn-inner--icon"><i class="fa fa-twitter"></i></span>
+			</button>
+		</a>
+		<a target="_blank" class="no-pjax icon-telegram" href="https://telegram.me/share/url?url=http://blog.cyx2009.top/archives/OLS/&text=[笔记] 关于正交拉丁方的构造与应用" tooltip="分享到 Telegram">
+			<button class="btn btn-icon btn-primary" style="background: #42a5f5;border: none;">
+				<span class="btn-inner--icon"><i class="fa fa-telegram"></i></span>
+			</button>
+		</a>
+		<a target="_blank" class="no-pjax icon-copy-link" id="share_copy_link" tooltip="复制链接">
+			<button class="btn btn-icon btn-default">
+				<span class="btn-inner--icon"><i class="fa fa-link"></i></span>
+			</button>
+		</a>
+	</div>
+	<button id="share_show" class="btn btn-icon btn-primary" tooltip="分享">
+		<span class="btn-inner--icon"><i class="fa fa-share"></i></span>
+	</button>
+</div>
+<script type="text/javascript">
+	socialShare("#share", {
+	    title : `[笔记] 关于正交拉丁方的构造与应用`,
+	    description : `定义
+拉丁方阵（英语：Latin square）是一种 n×n 的方阵，在这种 n×n 的方阵里，恰...`,
+	    wechatQrcodeTitle : `分享到微信`,
+	    wechatQrcodeHelper : `微信扫描二维码`,
+	    source : `http://blog.cyx2009.top/archives/OLS/`
+	});
+	$("#share_show")[0].onclick = function(){
+		$("#share_container").addClass("opened");
+	};
+	$("#share_copy_link")[0].onclick = function(){
+		let input = document.createElement('input');
+		document.body.appendChild(input);
+		input.setAttribute("value", window.location.href);
+		input.setAttribute("readonly", "readonly");
+		input.setAttribute("style", "opacity: 0;mouse-events:none;");
+		input.select();
+		if (document.execCommand('copy')){
+			iziToast.show({
+				title: '链接已复制',
+				message: "链接已复制到剪贴板",
+				class: 'shadow',
+				position: 'topRight',
+				backgroundColor: '#2dce89',
+				titleColor: '#ffffff',
+				messageColor: '#ffffff',
+				iconColor: '#ffffff',
+				progressBarColor: '#ffffff',
+				icon: 'fa fa-check',
+				timeout: 5000
+			});
+		}else{
+			iziToast.show({
+				title: '复制失败',
+				message: "请手动复制链接",
+				class: 'shadow',
+				position: 'topRight',
+				backgroundColor: '#f5365c',
+				titleColor: '#ffffff',
+				messageColor: '#ffffff',
+				iconColor: '#ffffff',
+				progressBarColor: '#ffffff',
+				icon: 'fa fa-close',
+				timeout: 5000
+			});
+		}
+		document.body.removeChild(input);
+	};
+</script>
+
+
+
+	<div id="post_comment" class="card shadow-sm">
+		<div id="giscus"></div>
+<script src="https://giscus.app/client.js"
+        data-repo="chenyuxuan2009/blogtalk"
+        data-repo-id="R_kgDOHDKqeg"
+        data-category="General"
+        data-category-id="DIC_kwDOHDKqes4COOnc"
+        data-mapping="pathname"
+        data-input-position="top"
+        data-theme="light"
+        data-lang="zh-CN"
+        crossorigin="anonymous"
+        async>
+</script>
+
+	</div>
+
+
+
+<div class="post-navigation card shadow-sm"><div class="post-navigation-item post-navigation-pre"></div><div class="post-navigation-item post-navigation-next"><span class="page-navigation-extra-text">下一篇 <i class="fa fa-arrow-circle-o-right" aria-hidden="true"></i></span><a href="/archives/potpourri_7/" rel="next"> [题解] 杂题选讲 7</a></div></div>
+
+
+
+		
+		
+		
+		
+
+                    <footer id="footer" class="site-footer card shadow-sm border-0">
+                        
+                        <div>Theme <a target="_blank" rel="noopener" href="https://github.com/solstice23/hexo-theme-argon"><strong>Argon</strong></a> | Powered by Hexo</div>
+                        <span id="busuanzi_container_site_uv">
+                            本站访客数 <span id="busuanzi_value_site_uv"></span> 人次
+                        </span>
+                        <span id="timeDate">载入时间...</span>
+                          <script>
+  function createtime() {
+    // 建站时间，东八区 +08:00
+    var grt = new Date("2022-03-28T20:00:00+08:00");
+    var now = new Date();
+
+    var diff = now - grt;
+
+    var days = diff / 1000 / 60 / 60 / 24;
+    var dnum = Math.floor(days);
+
+    var hours = diff / 1000 / 60 / 60 - (24 * dnum);
+    var hnum = Math.floor(hours);
+    if (String(hnum).length == 1) hnum = "0" + hnum;
+
+    var minutes = diff / 1000 / 60 - (24 * 60 * dnum) - (60 * hnum);
+    var mnum = Math.floor(minutes);
+    if (String(mnum).length == 1) mnum = "0" + mnum;
+
+    var seconds = diff / 1000 - (24 * 60 * 60 * dnum) - (60 * 60 * hnum) - (60 * mnum);
+    var snum = Math.floor(seconds);
+    if (String(snum).length == 1) snum = "0" + snum;
+
+    document.getElementById("timeDate").innerHTML =
+      "本站已安全运行 " + dnum + " 天 " + hnum + " 小时 " + mnum + " 分 " + snum + " 秒";
+  }
+
+  // 立即执行一次
+  createtime();
+  // 每 1 秒刷新一次
+  setInterval(createtime, 1000);
+                          </script>
+
+                        <style>
+                            .particle {
+  position: fixed;
+  pointer-events: none;
+  background-color: currentColor;
+  border-radius: 50%;
+  width: 10px;
+  height: 10px;
+}
+
+.ripple {
+  position: fixed;
+  border-radius: 50%;
+  pointer-events: none;
+  border: 2px solid rgba(255, 20, 97, 0.8);
+  transform: translate(-50%, -50%);
+  animation: ripple-effect 0.6s ease-out forwards;
+}
+
+@keyframes ripple-effect {
+  0% {
+    width: 0;
+    height: 0;
+    opacity: 0.5;
+  }
+  100% {
+    width: 50px;
+    height: 50px;
+    opacity: 0;
+  }
+}
+                        </style>
+                     <!--    <script>
+        window.onload = (() => {
+            //定义点击出现文字类
+            function ClickFrontShow() {
+                //定义所需文字和颜色
+                this.fron = ['复杂度', '枚举', '模拟', '递归 & 分治', '贪心', '排序',
+                    '前缀和 & 差分', '二分', '倍增', '构造',
+                    'DFS（搜索）', 'BFS（搜索）', '双向搜索', '启发式搜索', 'A*',
+                    '迭代加深搜索', 'IDA*', '回溯法', 'Dancing Links',
+                    'Alpha-Beta 剪枝',
+                    '记忆化搜索', '背包 DP', '区间 DP', 'DAG 上的 DP', '树形 DP',
+                    '状压 DP', '数位 DP', '插头 DP', '计数 DP', '动态 DP',
+                    '概率 DP',
+                    '字符串匹配', '字符串哈希', '字典树 (Trie)', '前缀函数与 KMP 算法',
+                    'Boyer-Moore 算法', 'Z 函数（扩展 KMP）', '自动机',
+                    'AC 自动机', '后缀数组 (SA)', '后缀自动机 (SAM)', '后缀平衡树',
+                    '广义后缀自动机', '后缀树', 'Manacher', '回文树', '序列自动机',
+                    '最小表示法', 'Lyndon 分解', 'Main-Lorentz 算法',
+                    '符号', '进位制', '位运算', '二进制集合操作', '平衡三进制', '高精度计算',
+                    '快速幂', '置换和排列', '弧度制与坐标系', '复数', '数论',
+                    '多项式与生成函数', '组合数学', '线性代数', '线性规划', '群论', '概率论',
+                    '博弈论', '牛顿迭代法', '数值积分', '傅里叶-莫茨金消元法', '序理论',
+                    '杨氏矩阵', 'Schreier–Sims 算法',
+                    'Berlekamp-Massey 算法',
+                    '栈', '队列', '链表', '哈希表', '并查集', '堆', '块状数据结构',
+                    '单调栈', '单调队列', 'ST 表', '树状数组', '线段树', '李超线段树',
+                    '区间最值操作 & 区间历史最值', '划分树', '二叉搜索树 & 平衡树', '跳表',
+                    '可持久化数据结构', '树套树', 'K-D Tree', '动态树', '析合树',
+                    'PQ 树', '手指树', '霍夫曼树',
+                    '图论相关概念', '图的存储', 'DFS（图论）', 'BFS（图论）', '树上问题',
+                    '矩阵树定理', '有向无环图', '拓扑排序', '最小生成树', '斯坦纳树',
+                    '最小树形图', '最小直径生成树', '最短路', '拆点', '差分约束', 'k 短路',
+                    '同余最短路', '连通性相关', '2-SAT', '欧拉图', '哈密顿图', '二分图',
+                    '最小环', '平面图', '图的着色', '网络流', 'Stoer-Wagner 算法',
+                    '图的匹配', 'Prufer 序列', 'LGV 引理', '弦图', '最大团搜索算法',
+                    '二维计算几何基础', '三维计算几何基础', '距离', 'Pick 定理', '三角剖分',
+                    '凸包', '扫描线', '旋转卡壳', '半平面交', '平面最近点对', '随机增量法',
+                    '反演变换', '计算几何杂项',
+                    '离散化', '双指针', '离线算法', '分数规划', '随机化', '悬线法',
+                    '计算理论基础', '字节顺序', '约瑟夫问题', '格雷码', '表达式求值',
+                    '在一台机器上规划任务', '主元素问题', 'Garsia-Wachs 算法',
+                    '15-puzzle', 'Kahan 求和', '珂朵莉树/颜色段均摊',
+                    'RMQ', '并查集应用', '括号序列', '线段树与离线询问'
+                ];
+                this.colo = ['#FF69B4', '#ff6651', 'orange', '#FF00FF',
+                    '#00FF7F', '#00BFFF', '#BA55D3'
+                ];
+                //获取body元素
+                this.elBody = document.getElementsByTagName("body")[0];
+                //初始化randomNum
+                this.randomNum = null;
+                //初始化字体inde
+                this.finde = 0;
+                //初始化className
+                this.cls = 0;
+            }
+
+            //定义初始化
+            ClickFrontShow.prototype.init = function(frontArray,
+                colorArray) {
+                //自定义颜色和字体
+                this.fron = frontArray || this.fron;
+                this.colo = colorArray || this.colo;
+
+                this.listenMouse();
+            }
+
+            //创建文字
+            ClickFrontShow.prototype.createFront = function(classname) {
+                var self = this;
+                let ospan = document.createElement('span');
+                //设置样式
+                let cssText =
+                    // "width: 100%; height: 100%; top: 0; left: 0; z-index: 99999; position: fixed;";
+                    // "position:absolute; cursor: default; transform: translate(-50%,-50%); font-weight: bold; opacity: 1; z-index: 1000; transition: 1s;width: 100%; height: 100%;pointer-events: none;";
+                    // "position:absolute; width: 40px; height: 20px; cursor: default; transform: translate(-50%,-50%); font-weight: bold; opacity: 1; z-index: 1000; transition: 1s;";
+                    "position:fixed; width: 40px; height: 20px; cursor: default; transform: translate(-50%,-50%); font-weight: bold; opacity: 1; z-index: 1000; transition: 1s;";
+                //随机字体和颜色
+                let randomFront = self.fron[Math.round(Math
+                    .random() * (self.fron.length - 1))];
+                let randomColor = self.colo[Math.round(Math
+                    .random() * (self.colo.length - 1))];
+                //字体下标增1
+                self.finde = (self.finde + 1) % self.fron.length;
+                //向body中添加元素
+                self.elBody.appendChild(ospan);
+                //绑定一个classname
+                ospan.className = String(classname);
+                //添加样式
+                ospan.style.cssText = cssText +
+                    "-moz-user-select: none;-webkit-user-select: none;-ms-user-select: none;user-select: none;"
+                ospan.style.color = randomColor;
+                ospan.innerHTML = randomFront;
+            }
+
+
+            //监听鼠标点击
+            ClickFrontShow.prototype.listenMouse = function() {
+                var self = this;
+
+                //鼠标点击事件
+                document.onclick = function(e) {
+                    //避免classname值重复导致出现bug
+                    if (self.cls === 20) {
+                        self.cls = 0;
+                    } else {
+                        self.cls += 1;
+                    }
+                    //创建文字
+                    self.createFront(self.cls);
+                    let el = document.getElementsByClassName(
+                        self.cls)[0];
+
+                    //鼠标点击位置
+
+                    el.style.left = e.clientX + 'px';
+                    el.style.top = e.clientY + 'px';
+                    // alert('x: '+el.style.left+' y: '+el.style.top);
+
+                    //过时改变
+                    setTimeout(function() {
+                        el.style.opacity = 0;
+                        el.style.top = el.offsetTop -
+                            100 + 'px';
+                    }, 100);
+                    //过时清除
+                    setTimeout(function() {
+                        self.elBody.removeChild(el);
+                    }, 2000);
+                }
+            }
+            //实例化
+            var frontShow = new ClickFrontShow();
+            //用户可在此传递参数，默认第一个参数是字体数组；
+            //第二个参数是颜色数组，必须是数组类型！
+            frontShow.init();
+        })();
+                        </script> -->
+                     <script>
+                  const colors = ['#FF1461', '#18FF92', '#5A87FF', '#FBF38C'];
+  
+  document.addEventListener('click', (e) => {
+    const ripple = document.createElement('div');
+    ripple.className = 'ripple';
+    ripple.style.left = `${e.clientX}px`;
+    ripple.style.top = `${e.clientY}px`;
+    document.body.appendChild(ripple);
+    
+    // パーティクルを8個生成
+    for (let i = 0; i < 8; i++) {
+      const particle = document.createElement('div');
+      particle.className = 'particle';
+      particle.style.backgroundColor = colors[Math.floor(Math.random() * colors.length)];
+      particle.style.left = `${e.clientX - 4}px`;
+      particle.style.top = `${e.clientY - 4}px`;
+      
+      // アニメーションの初期設定
+      const angle = ((i * 45 + 22.5) * Math.PI) / 180;
+      const velocity = 2 + Math.random() * 2;
+      const startTime = performance.now();
+      
+      // アニメーション実行
+      const animate = (currentTime) => {
+        const progress = (currentTime - startTime) / 600;
+        
+        if (progress >= 1) {
+          particle.remove();
+          return;
+        }
+        
+        particle.style.left = `${e.clientX - 4 + Math.cos(angle) * velocity * progress * 20}px`;
+        particle.style.top = `${e.clientY - 4 + Math.sin(angle) * velocity * progress * 20}px`;
+        particle.style.opacity = 1 - progress;
+        particle.style.transform = `scale(${1 - progress})`;
+        
+        requestAnimationFrame(animate);
+      };
+      
+      document.body.appendChild(particle);
+      requestAnimationFrame(animate);
+    }
+    
+    // 600ms後に波紋を削除
+    setTimeout(() => ripple.remove(), 600);
+  });
+                </script>
+                    </footer>
+                </main>
+            </div>
+        </div>
+        
+<script src="/argontheme.js"></script>
+
+        
+        
+        
+            <link rel="stylesheet" href="//cdn.jsdelivr.net/npm/katex@0.16.21/dist/katex.min.css">
+            <script src="//cdn.jsdelivr.net/npm/katex@0.16.21/dist/katex.min.js"></script>
+            <script src="//cdn.jsdelivr.net/npm/katex@0.16.21/dist/contrib/auto-render.min.js"></script>
+            <script>
+                document.addEventListener("DOMContentLoaded", function() {
+                    renderMathInElement(document.body, {
+                      // customised options
+                      // • auto-render specific keys, e.g.:
+                      delimiters: [
+                          {left: '$$', right: '$$', display: true},
+                          {left: '$', right: '$', display: false},
+                          {left: '\\(', right: '\\)', display: false},
+                          {left: '\\[', right: '\\]', display: true}
+                      ],
+                      // • rendering keys, e.g.:
+                      throwOnError : false
+                    });
+                });
+            </script>
+        
+
+        
+            <script>
+                var argonEnableCodeHighlight = true;
+            </script>
+            
+<link rel="stylesheet" href="/assets/vendor/highlight/styles/vs2015.css">
+
+        
+
+        
+          <script src='https://unpkg.com/mermaid@7.1.2/dist/mermaid.min.js'></script>
+          <script>
+            if (window.mermaid) {
+              mermaid.initialize({theme: 'forest'});
+            }
+          </script>
+        
+    </div>
+</div>
+<noscript>
+    <style>
+        article img.lazyload[src^="data:image/svg+xml;base64,PCEtLUFyZ29uTG9hZGluZy0tPg"]{display: none;}
+        .comment-item-text .comment-sticker.lazyload{display: none;}
+    </style>
+</noscript>
+</body>
+
+
+
+</html>
+
