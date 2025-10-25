@@ -465,7 +465,7 @@
 		
 			<p class="text-black mt-3 mb-0 opacity-8">
 				<i class="fa fa-file-o mr-1"></i>
-				191 篇文章
+				192 篇文章
 			</p>
 		
 	</div>
@@ -524,7 +524,7 @@
 							<nav class="site-state">
 								<div class="site-state-item site-state-posts">
 									<a href="/archives">
-										<span class="site-state-item-count">219</span>
+										<span class="site-state-item-count">220</span>
 										<span class="site-state-item-name">文章</span>
 									</a>
 								</div>
@@ -586,7 +586,7 @@
 				</button>
 			</div>
 			<div class="modal-body">
-				<a class="badge badge-secondary tag" href="/categories/Essay/" rel="tag">Essay <span class="tag-num">7</span></a><a class="badge badge-secondary tag" href="/categories/Solution/" rel="tag">Solution <span class="tag-num">191</span></a><a class="badge badge-secondary tag" href="/categories/StudyNote/" rel="tag">StudyNote <span class="tag-num">5</span></a><a class="badge badge-secondary tag" href="/categories/Technology/" rel="tag">Technology <span class="tag-num">3</span></a><a class="badge badge-secondary tag" href="/categories/TravelNote/" rel="tag">TravelNote <span class="tag-num">13</span></a>
+				<a class="badge badge-secondary tag" href="/categories/Essay/" rel="tag">Essay <span class="tag-num">7</span></a><a class="badge badge-secondary tag" href="/categories/Solution/" rel="tag">Solution <span class="tag-num">192</span></a><a class="badge badge-secondary tag" href="/categories/StudyNote/" rel="tag">StudyNote <span class="tag-num">5</span></a><a class="badge badge-secondary tag" href="/categories/Technology/" rel="tag">Technology <span class="tag-num">3</span></a><a class="badge badge-secondary tag" href="/categories/TravelNote/" rel="tag">TravelNote <span class="tag-num">13</span></a>
 			</div>
 		</div>
 	</div>
@@ -619,13 +619,13 @@
 	<article class="post card bg-white shadow-sm border-0 post-preview">
 	<header class="post-header text-center">
 		
-		<a class="post-title" href="/archives/potpourri_7/">[题解] 杂题选讲 7</a>
+		<a class="post-title" href="/archives/MXJ27/">[题解] MX-J27 题解</a>
 		<div class="post-meta">
 			
 						
 						<div class="post-meta-detail post-meta-detail-time">
 							<i class="fa fa-clock-o" aria-hidden="true"></i>
-							<time title="发布于 2025-10-15 11:29:00 | 编辑于 2025-10-24 20:22:39">2025-10-15 11:29
+							<time title="发布于 2025-10-25 11:25:00 | 编辑于 2025-10-25 19:46:42">2025-10-25 11:25
 							</time>
 						</div>
 					
@@ -652,7 +652,77 @@
 						
 						<div class="post-meta-detail post-meta-detail-words">
 							<i class="fa fa-file-word-o" aria-hidden="true"></i>
-							7.2k 字
+							3.1k 字
+						</div>
+					
+						
+							<div class="post-meta-devide">|</div>
+						
+						<div class="post-meta-detail post-meta-detail-readingtime">
+							<i class="fa fa-hourglass-end" aria-hidden="true"></i>
+							13 分钟
+						</div>
+					
+		</div>
+		
+	</header>
+
+	<div class="post-content">
+		
+			
+				免责声明：本篇题解在比赛结束前属于私有状态，仅保存在本地。
+ A. 分块
+ 题意
+给定 n，询问有多少个 1≤x≤n 满足 ⌊x⌋ 是 x 的因子。
+q 次询问，1≤n≤1018，1≤q≤105。
+ 部分分 40
+对于一次询问，我们肯定可以直接暴力遍历所有的 1≤x≤n 进行判断。
+可以预处理，先把 1 到 106 都扫一遍，然后可以知道每个 1≤...
+			
+		
+	</div>
+
+	
+</article>
+
+
+	<article class="post card bg-white shadow-sm border-0 post-preview">
+	<header class="post-header text-center">
+		
+		<a class="post-title" href="/archives/potpourri_7/">[题解] 杂题选讲 7</a>
+		<div class="post-meta">
+			
+						
+						<div class="post-meta-detail post-meta-detail-time">
+							<i class="fa fa-clock-o" aria-hidden="true"></i>
+							<time title="发布于 2025-10-15 11:29:00 | 编辑于 2025-10-25 17:07:22">2025-10-15 11:29
+							</time>
+						</div>
+					
+						
+							<div class="post-meta-devide">|</div>
+						
+						<div class="post-meta-detail post-meta-detail-categories">
+							<i class="fa fa-bookmark-o" aria-hidden="true"></i>
+							<a class="post-meta-detail-catagory-link" href="/categories/Solution/">Solution</a>
+						</div>
+					
+						
+							<div class="post-meta-devide">|</div>
+						
+						<div class="post-meta-detail post-meta-detail-words">
+							<i class="fa fa-book" aria-hidden="true"></i>
+							<span id="busuanzi_container_page_pv">
+								阅读 <span id="busuanzi_value_page_pv"></span> 次
+							</span>
+						</div>
+					
+						
+							<div class="post-meta-devide">|</div>
+						
+						<div class="post-meta-detail post-meta-detail-words">
+							<i class="fa fa-file-word-o" aria-hidden="true"></i>
+							7.4k 字
 						</div>
 					
 						
@@ -1223,74 +1293,6 @@ cpp 提交记录：https://codeforces.com/cont...
 设 cost⁡(l,r) 表示 [l,r] 删空的代价。因为和 wmax⁡ 和 wmin⁡ 相关，这也要知道。设 dp(l,r,L,R) 表示删空了 [l,r] 除了值域为 [L,R] 的部分的代价。
 转移显然有 cost(l,r)←min⁡L≤R{dp(l,r,L,R)+a+b×(R−L)2}。
 而 ...
-			
-		
-	</div>
-
-	
-</article>
-
-
-	<article class="post card bg-white shadow-sm border-0 post-preview">
-	<header class="post-header text-center">
-		
-		<a class="post-title" href="/archives/potpourri_1/">[题解] 杂题选讲 1</a>
-		<div class="post-meta">
-			
-						
-						<div class="post-meta-detail post-meta-detail-time">
-							<i class="fa fa-clock-o" aria-hidden="true"></i>
-							<time title="发布于 2025-6-25 21:26:00 | 编辑于 2025-8-30 14:40:11">2025-6-25 21:26
-							</time>
-						</div>
-					
-						
-							<div class="post-meta-devide">|</div>
-						
-						<div class="post-meta-detail post-meta-detail-categories">
-							<i class="fa fa-bookmark-o" aria-hidden="true"></i>
-							<a class="post-meta-detail-catagory-link" href="/categories/Solution/">Solution</a>
-						</div>
-					
-						
-							<div class="post-meta-devide">|</div>
-						
-						<div class="post-meta-detail post-meta-detail-words">
-							<i class="fa fa-book" aria-hidden="true"></i>
-							<span id="busuanzi_container_page_pv">
-								阅读 <span id="busuanzi_value_page_pv"></span> 次
-							</span>
-						</div>
-					
-						
-							<div class="post-meta-devide">|</div>
-						
-						<div class="post-meta-detail post-meta-detail-words">
-							<i class="fa fa-file-word-o" aria-hidden="true"></i>
-							13.7k 字
-						</div>
-					
-						
-							<div class="post-meta-devide">|</div>
-						
-						<div class="post-meta-detail post-meta-detail-readingtime">
-							<i class="fa fa-hourglass-end" aria-hidden="true"></i>
-							60 分钟
-						</div>
-					
-		</div>
-		
-	</header>
-
-	<div class="post-content">
-		
-			
-				每个题都好好写题解有点多了，写点自己能看懂的笔记。
- CF1267G Game Relics
-*3000，期望 DP。
-因为 x≤ci 故策略一定是先抽再买。
-设还剩了 r 个，剩下的集合为 S，抽到新物品的期望是 (nr+1)×x2，而剩下的随便买一个的期望是 1r∑i∈Sci。
-全排列枚举获得的顺序，每种方案依据两种期望的大小决策这个物品用抽还...
 			
 		
 	</div>

@@ -15,8 +15,35 @@
     <atom:link href="http://blog.cyx2009.top/rss2.xml" rel="self" type="application/rss+xml"/>
     
     <description>沉石鱼惊旋 的博客</description>
-    <pubDate>Fri, 24 Oct 2025 11:15:37 GMT</pubDate>
+    <pubDate>Sat, 25 Oct 2025 11:46:42 GMT</pubDate>
     <generator>http://hexo.io/</generator>
+    
+    <item>
+      <title>[题解] MX-J27 题解</title>
+      <link>http://blog.cyx2009.top/archives/MXJ27/</link>
+      <guid>http://blog.cyx2009.top/archives/MXJ27/</guid>
+      <pubDate>Sat, 25 Oct 2025 03:25:00 GMT</pubDate>
+      
+        
+        
+          
+          
+      <description>&lt;p&gt;免责声明：本篇题解在比赛结束前属于私有状态，仅保存在本地。&lt;/p&gt;
+&lt;h1 id=&quot;a-分块&quot;&gt;&lt;a class=&quot;markdownIt-Anchor&quot; href=&quot;#a-分块&quot;&gt;&lt;/a&gt; A. 分块&lt;/h1&gt;
+&lt;h2 id=&quot;题意&quot;&gt;&lt;a</description>
+          
+        
+      
+      
+      
+      
+      <category domain="http://blog.cyx2009.top/categories/Solution/">Solution</category>
+      
+      
+      
+      <comments>http://blog.cyx2009.top/archives/MXJ27/#disqus_thread</comments>
+      
+    </item>
     
     <item>
       <title>[笔记] 关于正交拉丁方的构造与应用</title>
@@ -525,33 +552,6 @@
       
       
       <comments>http://blog.cyx2009.top/archives/P12098/#disqus_thread</comments>
-      
-    </item>
-    
-    <item>
-      <title>[闲话] 20250409 闲话 | 可能是 PakenCamp2024 D3 C 题题解</title>
-      <link>http://blog.cyx2009.top/archives/20250309_essay/</link>
-      <guid>http://blog.cyx2009.top/archives/20250309_essay/</guid>
-      <pubDate>Wed, 09 Apr 2025 11:21:00 GMT</pubDate>
-      
-        
-        
-          
-          
-      <description>&lt;p&gt;这个题太简单了不太想专开一篇文章。&lt;/p&gt;
-&lt;p&gt;正好今天收到了逆天私信，就当个闲话记录了。&lt;/p&gt;
-&lt;p&gt;&lt;img</description>
-          
-        
-      
-      
-      
-      
-      <category domain="http://blog.cyx2009.top/categories/Essay/">Essay</category>
-      
-      
-      
-      <comments>http://blog.cyx2009.top/archives/20250309_essay/#disqus_thread</comments>
       
     </item>
     

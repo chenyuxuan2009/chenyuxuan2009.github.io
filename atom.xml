@@ -6,7 +6,7 @@
   <link href="http://blog.cyx2009.top/atom.xml" rel="self"/>
   
   <link href="http://blog.cyx2009.top/"/>
-  <updated>2025-10-24T11:15:37.136Z</updated>
+  <updated>2025-10-25T11:46:42.095Z</updated>
   <id>http://blog.cyx2009.top/</id>
   
   <author>
@@ -17,11 +17,36 @@
   <generator uri="https://hexo.io/">Hexo</generator>
   
   <entry>
+    <title>[题解] MX-J27 题解</title>
+    <link href="http://blog.cyx2009.top/archives/MXJ27/"/>
+    <id>http://blog.cyx2009.top/archives/MXJ27/</id>
+    <published>2025-10-25T03:25:00.000Z</published>
+    <updated>2025-10-25T11:46:42.095Z</updated>
+    
+    
+      
+      
+        
+        
+    <summary type="html">&lt;p&gt;免责声明：本篇题解在比赛结束前属于私有状态，仅保存在本地。&lt;/p&gt;
+&lt;h1 id=&quot;a-分块&quot;&gt;&lt;a class=&quot;markdownIt-Anchor&quot; href=&quot;#a-分块&quot;&gt;&lt;/a&gt; A. 分块&lt;/h1&gt;
+&lt;h2 id=&quot;题意&quot;&gt;&lt;a</summary>
+        
+      
+    
+    
+    
+    <category term="Solution" scheme="http://blog.cyx2009.top/categories/Solution/"/>
+    
+    
+  </entry>
+  
+  <entry>
     <title>[笔记] 关于正交拉丁方的构造与应用</title>
     <link href="http://blog.cyx2009.top/archives/OLS/"/>
     <id>http://blog.cyx2009.top/archives/OLS/</id>
     <published>2025-10-24T10:00:00.000Z</published>
-    <updated>2025-10-24T11:15:37.136Z</updated>
+    <updated>2025-10-24T14:32:23.851Z</updated>
     
     
       
@@ -45,7 +70,7 @@
     <link href="http://blog.cyx2009.top/archives/potpourri_7/"/>
     <id>http://blog.cyx2009.top/archives/potpourri_7/</id>
     <published>2025-10-15T03:29:00.000Z</published>
-    <updated>2025-10-24T12:22:39.613Z</updated>
+    <updated>2025-10-25T09:07:22.683Z</updated>
     
     
       
@@ -485,31 +510,6 @@
     <category term="模拟" scheme="http://blog.cyx2009.top/tags/%E6%A8%A1%E6%8B%9F/"/>
     
     <category term="扩域" scheme="http://blog.cyx2009.top/tags/%E6%89%A9%E5%9F%9F/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>[闲话] 20250409 闲话 | 可能是 PakenCamp2024 D3 C 题题解</title>
-    <link href="http://blog.cyx2009.top/archives/20250309_essay/"/>
-    <id>http://blog.cyx2009.top/archives/20250309_essay/</id>
-    <published>2025-04-09T11:21:00.000Z</published>
-    <updated>2025-08-02T12:41:14.420Z</updated>
-    
-    
-      
-      
-        
-        
-    <summary type="html">&lt;p&gt;这个题太简单了不太想专开一篇文章。&lt;/p&gt;
-&lt;p&gt;正好今天收到了逆天私信，就当个闲话记录了。&lt;/p&gt;
-&lt;p&gt;&lt;img</summary>
-        
-      
-    
-    
-    
-    <category term="Essay" scheme="http://blog.cyx2009.top/categories/Essay/"/>
-    
     
   </entry>
   
