@@ -1,9 +1,7 @@
 <!DOCTYPE html>
 
 <html class="article-header-style-1">
-<head><!-- hexo injector head_begin start -->
-<link rel="stylesheet" href="/css/bilicard.css">
-<!-- hexo injector head_begin end -->
+<head>
 
 <script src="https://cdn.jsdelivr.net/npm/mermaid/dist/mermaid.min.js"></script>
 <script>
@@ -20,12 +18,12 @@
 	
 		<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=5">
 	
-	<meta name="description" content="考虑离线操作。用 FHQ-Treap 维护，这样拓展成 O(n+q)\mathcal O(n+q)O(n+q) 长度的序列，单点修改。删除就是相当于改为 000。 平衡树节点打上 deldeldel 标记表示这个节点是否被删除。 直接 split 出来可能找不到合法点，是一个删除的点。再写一个 find 用来找合法点。 之后对平衡树做中序遍历搜一遍，时间戳即为对应点在新序列的编号。 平衡树 val">
+	<meta name="description" content="考虑离线操作。用 FHQ-Treap 维护，这样拓展成 O(n+q) 长度的序列，单点修改。删除就是相当于改为 0。 平衡树节点打上 del 标记表示这个节点是否被删除。 直接 split 出来可能找不到合法点，是一个删除的点。再写一个 find 用来找合法点。 之后对平衡树做中序遍历搜一遍，时间戳即为对应点在新序列的…">
 <meta property="og:type" content="article">
 <meta property="og:title" content="[题解] [模拟赛 20241008] CodeChef DISTNUM">
 <meta property="og:url" content="http://blog.cyx2009.top/archives/CC_DISTNUM/index.html">
 <meta property="og:site_name" content="沉石鱼惊旋 的博客">
-<meta property="og:description" content="考虑离线操作。用 FHQ-Treap 维护，这样拓展成 O(n+q)\mathcal O(n+q)O(n+q) 长度的序列，单点修改。删除就是相当于改为 000。 平衡树节点打上 deldeldel 标记表示这个节点是否被删除。 直接 split 出来可能找不到合法点，是一个删除的点。再写一个 find 用来找合法点。 之后对平衡树做中序遍历搜一遍，时间戳即为对应点在新序列的编号。 平衡树 val">
+<meta property="og:description" content="考虑离线操作。用 FHQ-Treap 维护，这样拓展成 O(n+q) 长度的序列，单点修改。删除就是相当于改为 0。 平衡树节点打上 del 标记表示这个节点是否被删除。 直接 split 出来可能找不到合法点，是一个删除的点。再写一个 find 用来找合法点。 之后对平衡树做中序遍历搜一遍，时间戳即为对应点在新序列的…">
 <meta property="og:locale" content="zh_CN">
 <meta property="article:published_time" content="2024-10-13T03:51:00.000Z">
 <meta property="article:modified_time" content="2025-02-17T07:15:29.899Z">

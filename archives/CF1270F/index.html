@@ -1,9 +1,7 @@
 <!DOCTYPE html>
 
 <html class="article-header-style-1">
-<head><!-- hexo injector head_begin start -->
-<link rel="stylesheet" href="/css/bilicard.css">
-<!-- hexo injector head_begin end -->
+<head>
 
 <script src="https://cdn.jsdelivr.net/npm/mermaid/dist/mermaid.min.js"></script>
 <script>
@@ -20,12 +18,12 @@
 	
 		<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=5">
 	
-	<meta name="description" content="题目翻译 给定长度为 nnn 的 01\tt 0101 串，求有多少个区间 [l,r][l,r][l,r] 满足 [l,r][l,r][l,r] 中 1\tt 11 的个数整除 r−l+1r-l+1r−l+1。 1≤n≤2×1051\leq n\leq 2\times 10^51≤n≤2×105  题目思路 设 sis_isi​ 表示 [1,i][1,i][1,i] 的 1\tt 11 的个数。">
+	<meta name="description" content="题目翻译 给定长度为 n 的 01 串，求有多少个区间 [l,r] 满足 [l,r] 中 1 的个数整除 r−l+1。 1≤n≤2×105  题目思路 设 si 表示 [1,i] 的 1 的个数。 那么我们就是求 si−sj∣i−j 的 (i,j) 个数，其中 0≤j">
 <meta property="og:type" content="article">
 <meta property="og:title" content="[题解] CF1270F Awesome Substrings">
 <meta property="og:url" content="http://blog.cyx2009.top/archives/CF1270F/index.html">
 <meta property="og:site_name" content="沉石鱼惊旋 的博客">
-<meta property="og:description" content="题目翻译 给定长度为 nnn 的 01\tt 0101 串，求有多少个区间 [l,r][l,r][l,r] 满足 [l,r][l,r][l,r] 中 1\tt 11 的个数整除 r−l+1r-l+1r−l+1。 1≤n≤2×1051\leq n\leq 2\times 10^51≤n≤2×105  题目思路 设 sis_isi​ 表示 [1,i][1,i][1,i] 的 1\tt 11 的个数。">
+<meta property="og:description" content="题目翻译 给定长度为 n 的 01 串，求有多少个区间 [l,r] 满足 [l,r] 中 1 的个数整除 r−l+1。 1≤n≤2×105  题目思路 设 si 表示 [1,i] 的 1 的个数。 那么我们就是求 si−sj∣i−j 的 (i,j) 个数，其中 0≤j">
 <meta property="og:locale" content="zh_CN">
 <meta property="article:published_time" content="2025-02-20T13:01:00.000Z">
 <meta property="article:modified_time" content="2025-02-20T13:17:30.610Z">

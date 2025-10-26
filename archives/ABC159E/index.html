@@ -1,9 +1,7 @@
 <!DOCTYPE html>
 
 <html class="article-header-style-1">
-<head><!-- hexo injector head_begin start -->
-<link rel="stylesheet" href="/css/bilicard.css">
-<!-- hexo injector head_begin end -->
+<head>
 
 <script src="https://cdn.jsdelivr.net/npm/mermaid/dist/mermaid.min.js"></script>
 <script>
@@ -20,12 +18,12 @@
 	
 		<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=5">
 	
-	<meta name="description" content="题目翻译 有一个 H×WH\times WH×W 的矩阵，切若干次，使得每一块中 111 个数 ≤k\leq k≤k，只能一切到底，问最少用几刀。  题目思路 直接暴力枚举每一行每一列绝对不行，复杂度 O(2H+W)\mathcal O(2^{H+W})O(2H+W)。 我们发现 HHH 很小，我们可以枚举 HHH 在哪里切割，复杂度 O(2H)\mathcal O(2^H)O(2H)。其实最多">
+	<meta name="description" content="题目翻译 有一个 H×W 的矩阵，切若干次，使得每一块中 1 个数 ≤k，只能一切到底，问最少用几刀。  题目思路 直接暴力枚举每一行每一列绝对不行，复杂度 O(2H+W)。 我们发现 H 很小，我们可以枚举 H 在哪里切割，复杂度 O(2H)。其实最多只有 H−1 刀，为了方便描述，统一用 H。 接着，我们对于 W …">
 <meta property="og:type" content="article">
 <meta property="og:title" content="[题解] ABC159E Dividing Chocolate">
 <meta property="og:url" content="http://blog.cyx2009.top/archives/ABC159E/index.html">
 <meta property="og:site_name" content="沉石鱼惊旋 的博客">
-<meta property="og:description" content="题目翻译 有一个 H×WH\times WH×W 的矩阵，切若干次，使得每一块中 111 个数 ≤k\leq k≤k，只能一切到底，问最少用几刀。  题目思路 直接暴力枚举每一行每一列绝对不行，复杂度 O(2H+W)\mathcal O(2^{H+W})O(2H+W)。 我们发现 HHH 很小，我们可以枚举 HHH 在哪里切割，复杂度 O(2H)\mathcal O(2^H)O(2H)。其实最多">
+<meta property="og:description" content="题目翻译 有一个 H×W 的矩阵，切若干次，使得每一块中 1 个数 ≤k，只能一切到底，问最少用几刀。  题目思路 直接暴力枚举每一行每一列绝对不行，复杂度 O(2H+W)。 我们发现 H 很小，我们可以枚举 H 在哪里切割，复杂度 O(2H)。其实最多只有 H−1 刀，为了方便描述，统一用 H。 接着，我们对于 W …">
 <meta property="og:locale" content="zh_CN">
 <meta property="article:published_time" content="2023-02-14T08:35:00.000Z">
 <meta property="article:modified_time" content="2025-02-12T08:00:26.010Z">

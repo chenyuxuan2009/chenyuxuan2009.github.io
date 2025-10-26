@@ -1,9 +1,7 @@
 <!DOCTYPE html>
 
 <html class="article-header-style-1">
-<head><!-- hexo injector head_begin start -->
-<link rel="stylesheet" href="/css/bilicard.css">
-<!-- hexo injector head_begin end -->
+<head>
 
 <script src="https://cdn.jsdelivr.net/npm/mermaid/dist/mermaid.min.js"></script>
 <script>
@@ -20,12 +18,12 @@
 	
 		<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=5">
 	
-	<meta name="description" content="题目思路 就是进制转换啦。 进制转换，肯定要讲一下短除法。就是每次看余数并做除法。 比如 101010 转换 222 进制。 13 mod 2&#x3D;113\bmod2&#x3D;113mod2&#x3D;1。 6 mod 2&#x3D;06 \bmod 2&#x3D;06mod2&#x3D;0。 3 mod 2&#x3D;13 \bmod2&#x3D;13mod2&#x3D;1。 1 mod 2&#x3D;11\bmod2&#x3D;11mod2&#x3D;1。 最后倒序枚举余数即可。 那么，我们可以有两种">
+	<meta name="description" content="题目思路 就是进制转换啦。 进制转换，肯定要讲一下短除法。就是每次看余数并做除法。 比如 10 转换 2 进制。 13 mod 2&#x3D;1。 6 mod 2&#x3D;0。 3 mod 2&#x3D;1。 1 mod 2&#x3D;1。 最后倒序枚举余数即可。 那么，我们可以有两种方案，递归和存数组。 存数组，字面意思，把余数存下来，最后翻转，输出。 …">
 <meta property="og:type" content="article">
 <meta property="og:title" content="[题解] B3619 10 进制转 x 进制">
 <meta property="og:url" content="http://blog.cyx2009.top/archives/B3619/index.html">
 <meta property="og:site_name" content="沉石鱼惊旋 的博客">
-<meta property="og:description" content="题目思路 就是进制转换啦。 进制转换，肯定要讲一下短除法。就是每次看余数并做除法。 比如 101010 转换 222 进制。 13 mod 2&#x3D;113\bmod2&#x3D;113mod2&#x3D;1。 6 mod 2&#x3D;06 \bmod 2&#x3D;06mod2&#x3D;0。 3 mod 2&#x3D;13 \bmod2&#x3D;13mod2&#x3D;1。 1 mod 2&#x3D;11\bmod2&#x3D;11mod2&#x3D;1。 最后倒序枚举余数即可。 那么，我们可以有两种">
+<meta property="og:description" content="题目思路 就是进制转换啦。 进制转换，肯定要讲一下短除法。就是每次看余数并做除法。 比如 10 转换 2 进制。 13 mod 2&#x3D;1。 6 mod 2&#x3D;0。 3 mod 2&#x3D;1。 1 mod 2&#x3D;1。 最后倒序枚举余数即可。 那么，我们可以有两种方案，递归和存数组。 存数组，字面意思，把余数存下来，最后翻转，输出。 …">
 <meta property="og:locale" content="zh_CN">
 <meta property="article:published_time" content="2022-03-28T09:36:00.000Z">
 <meta property="article:modified_time" content="2025-02-12T09:52:13.208Z">

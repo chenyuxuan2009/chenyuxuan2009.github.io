@@ -1,9 +1,7 @@
 <!DOCTYPE html>
 
 <html class="article-header-style-1">
-<head><!-- hexo injector head_begin start -->
-<link rel="stylesheet" href="/css/bilicard.css">
-<!-- hexo injector head_begin end -->
+<head>
 
 <script src="https://cdn.jsdelivr.net/npm/mermaid/dist/mermaid.min.js"></script>
 <script>
@@ -20,12 +18,12 @@
 	
 		<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=5">
 	
-	<meta name="description" content="题意 定义 f(l,r)&#x3D;min⁡i∈[l,r]aiOR⁡max⁡i∈[l,r]ainf(l,r)&#x3D;\min\limits_{i\in [l,r]} a_i \operatorname{OR} \max\limits_{i\in [l,r]} a_inf(l,r)&#x3D;i∈[l,r]min​ai​ORi∈[l,r]max​ai​n。 求 ⨁i&#x3D;1n⨁j&#x3D;inf(i,j)\bigoplus\limit">
+	<meta name="description" content="题意 定义 f(l,r)&#x3D;min⁡i∈[l,r]aiOR⁡max⁡i∈[l,r]ain。 求 ⨁i&#x3D;1n⨁j&#x3D;inf(i,j)。其中 ⊕ 是按位异或，OR⁡ 是按位或。 1≤n≤106，1≤ai≤1018，保证 ai 互不相同。  做法 考虑分治。 分治之后分最小值最大值在哪一侧进行讨论。   若最大值最小值在同一侧 …">
 <meta property="og:type" content="article">
 <meta property="og:title" content="[题解] GYM102562B Bitwise Party">
 <meta property="og:url" content="http://blog.cyx2009.top/archives/GYM102562B/index.html">
 <meta property="og:site_name" content="沉石鱼惊旋 的博客">
-<meta property="og:description" content="题意 定义 f(l,r)&#x3D;min⁡i∈[l,r]aiOR⁡max⁡i∈[l,r]ainf(l,r)&#x3D;\min\limits_{i\in [l,r]} a_i \operatorname{OR} \max\limits_{i\in [l,r]} a_inf(l,r)&#x3D;i∈[l,r]min​ai​ORi∈[l,r]max​ai​n。 求 ⨁i&#x3D;1n⨁j&#x3D;inf(i,j)\bigoplus\limit">
+<meta property="og:description" content="题意 定义 f(l,r)&#x3D;min⁡i∈[l,r]aiOR⁡max⁡i∈[l,r]ain。 求 ⨁i&#x3D;1n⨁j&#x3D;inf(i,j)。其中 ⊕ 是按位异或，OR⁡ 是按位或。 1≤n≤106，1≤ai≤1018，保证 ai 互不相同。  做法 考虑分治。 分治之后分最小值最大值在哪一侧进行讨论。   若最大值最小值在同一侧 …">
 <meta property="og:locale" content="zh_CN">
 <meta property="article:published_time" content="2025-02-21T11:40:00.000Z">
 <meta property="article:modified_time" content="2025-02-21T11:55:50.793Z">

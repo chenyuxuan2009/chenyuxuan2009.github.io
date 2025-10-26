@@ -1,9 +1,7 @@
 <!DOCTYPE html>
 
 <html class="article-header-style-1">
-<head><!-- hexo injector head_begin start -->
-<link rel="stylesheet" href="/css/bilicard.css">
-<!-- hexo injector head_begin end -->
+<head>
 
 <script src="https://cdn.jsdelivr.net/npm/mermaid/dist/mermaid.min.js"></script>
 <script>
@@ -20,12 +18,12 @@
 	
 		<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=5">
 	
-	<meta name="description" content="P5336 [THUSC 2016] 成绩单 设 cost⁡(l,r)\operatorname{cost}(l,r)cost(l,r) 表示 [l,r][l,r][l,r] 删空的代价。因为和 wmax⁡w_{\max}wmax​ 和 wmin⁡w_{\min}wmin​ 相关，这也要知道。设 dp(l,r,L,R)dp(l,r,L,R)dp(l,r,L,R) 表示删空了 [l,r][l,r]">
+	<meta name="description" content="P5336 [THUSC 2016] 成绩单 设 cost⁡(l,r) 表示 [l,r] 删空的代价。因为和 wmax⁡ 和 wmin⁡ 相关，这也要知道。设 dp(l,r,L,R) 表示删空了 [l,r] 除了值域为 [L,R] 的部分的代价。 转移显然有 cost(l,r)←min⁡L≤R{dp(l,r,L,R)+…">
 <meta property="og:type" content="article">
 <meta property="og:title" content="[题解] 杂题选讲 2">
 <meta property="og:url" content="http://blog.cyx2009.top/archives/potpourri_2/index.html">
 <meta property="og:site_name" content="沉石鱼惊旋 的博客">
-<meta property="og:description" content="P5336 [THUSC 2016] 成绩单 设 cost⁡(l,r)\operatorname{cost}(l,r)cost(l,r) 表示 [l,r][l,r][l,r] 删空的代价。因为和 wmax⁡w_{\max}wmax​ 和 wmin⁡w_{\min}wmin​ 相关，这也要知道。设 dp(l,r,L,R)dp(l,r,L,R)dp(l,r,L,R) 表示删空了 [l,r][l,r]">
+<meta property="og:description" content="P5336 [THUSC 2016] 成绩单 设 cost⁡(l,r) 表示 [l,r] 删空的代价。因为和 wmax⁡ 和 wmin⁡ 相关，这也要知道。设 dp(l,r,L,R) 表示删空了 [l,r] 除了值域为 [L,R] 的部分的代价。 转移显然有 cost(l,r)←min⁡L≤R{dp(l,r,L,R)+…">
 <meta property="og:locale" content="zh_CN">
 <meta property="article:published_time" content="2025-07-17T13:38:00.000Z">
 <meta property="article:modified_time" content="2025-08-23T03:18:12.600Z">

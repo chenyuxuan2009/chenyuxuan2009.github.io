@@ -1,9 +1,7 @@
 <!DOCTYPE html>
 
 <html class="article-header-style-1">
-<head><!-- hexo injector head_begin start -->
-<link rel="stylesheet" href="/css/bilicard.css">
-<!-- hexo injector head_begin end -->
+<head>
 
 <script src="https://cdn.jsdelivr.net/npm/mermaid/dist/mermaid.min.js"></script>
 <script>
@@ -20,12 +18,12 @@
 	
 		<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=5">
 	
-	<meta name="description" content="题目翻译 一个 n×mn\times mn×m 的网格，每个格子里有 111 个数，问对于所有相同的数，曼哈顿距离总和是多少？ 曼哈顿距离：ai1,j1a_{i_1,j_1}ai1​,j1​​ 与 ai2,j2a_{i_2,j_2}ai2​,j2​​ 距离为 ∣i1−i2∣+∣j1−j2∣\left|i_1-i_2\right|+\left|j_1-j_2\right|∣i1​−i2​∣+∣j1">
+	<meta name="description" content="题目翻译 一个 n×m 的网格，每个格子里有 1 个数，问对于所有相同的数，曼哈顿距离总和是多少？ 曼哈顿距离：ai1,j1 与 ai2,j2 距离为 ∣i1−i2∣+∣j1−j2∣。  题目思路 暴力搜一遍，肯定挂掉，n×m 有 100000。 所以，我们对每种数进行分类，每一类再分成 x 轴的总距离求和加上 y 轴…">
 <meta property="og:type" content="article">
 <meta property="og:title" content="[题解] CF1648A Weird Sum">
 <meta property="og:url" content="http://blog.cyx2009.top/archives/CF1648A/index.html">
 <meta property="og:site_name" content="沉石鱼惊旋 的博客">
-<meta property="og:description" content="题目翻译 一个 n×mn\times mn×m 的网格，每个格子里有 111 个数，问对于所有相同的数，曼哈顿距离总和是多少？ 曼哈顿距离：ai1,j1a_{i_1,j_1}ai1​,j1​​ 与 ai2,j2a_{i_2,j_2}ai2​,j2​​ 距离为 ∣i1−i2∣+∣j1−j2∣\left|i_1-i_2\right|+\left|j_1-j_2\right|∣i1​−i2​∣+∣j1">
+<meta property="og:description" content="题目翻译 一个 n×m 的网格，每个格子里有 1 个数，问对于所有相同的数，曼哈顿距离总和是多少？ 曼哈顿距离：ai1,j1 与 ai2,j2 距离为 ∣i1−i2∣+∣j1−j2∣。  题目思路 暴力搜一遍，肯定挂掉，n×m 有 100000。 所以，我们对每种数进行分类，每一类再分成 x 轴的总距离求和加上 y 轴…">
 <meta property="og:locale" content="zh_CN">
 <meta property="og:image" content="https://cdn.luogu.com.cn/upload/image_hosting/4x536hgp.png">
 <meta property="article:published_time" content="2022-03-10T14:10:00.000Z">

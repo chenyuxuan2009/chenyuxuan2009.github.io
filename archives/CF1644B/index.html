@@ -1,9 +1,7 @@
 <!DOCTYPE html>
 
 <html class="article-header-style-1">
-<head><!-- hexo injector head_begin start -->
-<link rel="stylesheet" href="/css/bilicard.css">
-<!-- hexo injector head_begin end -->
+<head>
 
 <script src="https://cdn.jsdelivr.net/npm/mermaid/dist/mermaid.min.js"></script>
 <script>
@@ -20,12 +18,12 @@
 	
 		<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=5">
 	
-	<meta name="description" content="题目翻译 我们定义对于所有 iii (3≤i≤n3 \leq i \leq n3≤i≤n)， pi−2+pi−1≠pip_{i-2}+p_{i-1} \ne p_ipi−2​+pi−1​&#x3D;pi​  这样的数列称之为 反斐波那契数列 ，给定一个 nnn ，请输出 nnn 个长度为 nnn 的不同的反斐波那契数列。  题目思路 只要 pi−2p_{i-2}pi−2​ 和 pi−1p_{i-1}pi">
+	<meta name="description" content="题目翻译 我们定义对于所有 i (3≤i≤n)， pi−2+pi−1≠pi  这样的数列称之为 反斐波那契数列 ，给定一个 n ，请输出 n 个长度为 n 的不同的反斐波那契数列。  题目思路 只要 pi−2 和 pi−1 中任意一个数大于 pi ，那么肯定为反斐波那契数列。 所以构造一个降序的数列，然后每次把最后一个…">
 <meta property="og:type" content="article">
 <meta property="og:title" content="[题解] CF1644B Anti-Fibonacci Permutation">
 <meta property="og:url" content="http://blog.cyx2009.top/archives/CF1644B/index.html">
 <meta property="og:site_name" content="沉石鱼惊旋 的博客">
-<meta property="og:description" content="题目翻译 我们定义对于所有 iii (3≤i≤n3 \leq i \leq n3≤i≤n)， pi−2+pi−1≠pip_{i-2}+p_{i-1} \ne p_ipi−2​+pi−1​&#x3D;pi​  这样的数列称之为 反斐波那契数列 ，给定一个 nnn ，请输出 nnn 个长度为 nnn 的不同的反斐波那契数列。  题目思路 只要 pi−2p_{i-2}pi−2​ 和 pi−1p_{i-1}pi">
+<meta property="og:description" content="题目翻译 我们定义对于所有 i (3≤i≤n)， pi−2+pi−1≠pi  这样的数列称之为 反斐波那契数列 ，给定一个 n ，请输出 n 个长度为 n 的不同的反斐波那契数列。  题目思路 只要 pi−2 和 pi−1 中任意一个数大于 pi ，那么肯定为反斐波那契数列。 所以构造一个降序的数列，然后每次把最后一个…">
 <meta property="og:locale" content="zh_CN">
 <meta property="article:published_time" content="2022-02-23T08:43:00.000Z">
 <meta property="article:modified_time" content="2025-02-12T06:19:36.135Z">

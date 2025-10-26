@@ -1,9 +1,7 @@
 <!DOCTYPE html>
 
 <html class="article-header-style-1">
-<head><!-- hexo injector head_begin start -->
-<link rel="stylesheet" href="/css/bilicard.css">
-<!-- hexo injector head_begin end -->
+<head>
 
 <script src="https://cdn.jsdelivr.net/npm/mermaid/dist/mermaid.min.js"></script>
 <script>
@@ -20,12 +18,12 @@
 	
 		<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=5">
 	
-	<meta name="description" content="题目翻译 给定 3×n3\times n3×n 的 0&#x2F;1\tt{0&#x2F;1}0&#x2F;1 网格图，给定 qqq 个询问 [l,r][l,r][l,r]，查询 [l,r][l,r][l,r] 部分有几个 1\tt 11 组成的联通块。 联通是四联通。 1≤n≤5×1051\leq n\leq 5\times 10^51≤n≤5×105，1≤q≤3×1051\leq q\leq 3\times 10^51≤">
+	<meta name="description" content="题目翻译 给定 3×n 的 0&#x2F;1 网格图，给定 q 个询问 [l,r]，查询 [l,r] 部分有几个 1 组成的联通块。 联通是四联通。 1≤n≤5×105，1≤q≤3×105。  题目思路 可以离线的区间询问，尝试普通莫队。 考虑预处理出 8×8 的表表示加了新列会增加多少的联通块。 但是这样有问题。 1111 1…">
 <meta property="og:type" content="article">
 <meta property="og:title" content="[题解] CF1661E Narrow Components">
 <meta property="og:url" content="http://blog.cyx2009.top/archives/CF1661E/index.html">
 <meta property="og:site_name" content="沉石鱼惊旋 的博客">
-<meta property="og:description" content="题目翻译 给定 3×n3\times n3×n 的 0&#x2F;1\tt{0&#x2F;1}0&#x2F;1 网格图，给定 qqq 个询问 [l,r][l,r][l,r]，查询 [l,r][l,r][l,r] 部分有几个 1\tt 11 组成的联通块。 联通是四联通。 1≤n≤5×1051\leq n\leq 5\times 10^51≤n≤5×105，1≤q≤3×1051\leq q\leq 3\times 10^51≤">
+<meta property="og:description" content="题目翻译 给定 3×n 的 0&#x2F;1 网格图，给定 q 个询问 [l,r]，查询 [l,r] 部分有几个 1 组成的联通块。 联通是四联通。 1≤n≤5×105，1≤q≤3×105。  题目思路 可以离线的区间询问，尝试普通莫队。 考虑预处理出 8×8 的表表示加了新列会增加多少的联通块。 但是这样有问题。 1111 1…">
 <meta property="og:locale" content="zh_CN">
 <meta property="article:published_time" content="2024-09-12T03:47:00.000Z">
 <meta property="article:modified_time" content="2025-08-30T06:41:53.471Z">

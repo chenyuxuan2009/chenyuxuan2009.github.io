@@ -6,7 +6,7 @@
   <link href="http://blog.cyx2009.top/atom.xml" rel="self"/>
   
   <link href="http://blog.cyx2009.top/"/>
-  <updated>2025-10-26T02:06:06.268Z</updated>
+  <updated>2025-10-26T13:44:00.317Z</updated>
   <id>http://blog.cyx2009.top/</id>
   
   <author>
@@ -21,18 +21,17 @@
     <link href="http://blog.cyx2009.top/archives/MXJ27/"/>
     <id>http://blog.cyx2009.top/archives/MXJ27/</id>
     <published>2025-10-25T03:25:00.000Z</published>
-    <updated>2025-10-26T02:06:06.268Z</updated>
+    <updated>2025-10-26T13:44:00.317Z</updated>
     
     
-      
-      
-        
-        
-    <summary type="html">&lt;p&gt;免责声明：本篇题解在比赛结束前属于私有状态，仅保存在本地。&lt;/p&gt;
-&lt;h1 id=&quot;a-分块&quot;&gt;&lt;a class=&quot;markdownIt-Anchor&quot; href=&quot;#a-分块&quot;&gt;&lt;/a&gt; A. 分块&lt;/h1&gt;
-&lt;h2 id=&quot;题意&quot;&gt;&lt;a</summary>
-        
-      
+    <summary type="html">讲评 PDF 在 MX-J27.pdf。
+免责声明：本篇题解在比赛结束前属于私有状态，仅保存在本地。
+ A. 分块
+ 题意
+给定 n，询问有多少个 1≤x≤n 满足 ⌊x⌋ 是 x 的因子。
+q 次询问，1≤n≤1018，1≤q≤105。
+ 部分分 40
+对于一次询问，我们肯定可以直接暴力遍历所有的 1≤x≤n 进行判…</summary>
     
     
     
@@ -49,14 +48,10 @@
     <updated>2025-10-24T14:32:23.851Z</updated>
     
     
-      
-      
-        
-        
-    <summary type="html">&lt;h1 id=&quot;定义&quot;&gt;&lt;a class=&quot;markdownIt-Anchor&quot; href=&quot;#定义&quot;&gt;&lt;/a&gt; 定义&lt;/h1&gt;
-&lt;p&gt;&lt;strong&gt;拉丁方阵&lt;/strong&gt;（英语：Latin square）是一种 &lt;span class=&quot;katex&quot;&gt;&lt;span</summary>
-        
-      
+    <summary type="html">定义
+拉丁方阵（英语：Latin square）是一种 n×n 的方阵，在这种 n×n 的方阵里，恰有 n 种不同的元素，每一种不同的元素在同一行或同一列里只出现一次。以下是两个拉丁方阵举例：
+[123231312][abdcbcadcdbadacb]
+拉丁方阵有此名称是因为瑞士数学家和物理学家欧拉使用拉丁字母来做为拉…</summary>
     
     
     
@@ -73,13 +68,10 @@
     <updated>2025-10-25T14:00:28.920Z</updated>
     
     
-      
-      
-        
-        
-    <summary type="html">&lt;h1 id=&quot;cf2104g-modulo-3&quot;&gt;&lt;a class=&quot;markdownIt-Anchor&quot; href=&quot;#cf2104g-modulo-3&quot;&gt;&lt;/a&gt; CF2104G Modulo</summary>
-        
-      
+    <summary type="html">CF2104G Modulo 3
+独立想出；思考时间：中偏长；已完成代码；代码时间：中；推荐指数：还可以；
+考虑不带修求答案怎么求。一个环最后一定是一个颜色，所以答案是缩点之后的点数为 c 则答案为 kc mod 3。而 c 其实就是 n−∑(leni−1)，其中 leni 是每个环的环长。
+根据费马小定理，只需要知道…</summary>
     
     
     
@@ -96,14 +88,10 @@
     <updated>2025-10-15T03:28:57.808Z</updated>
     
     
-      
-      
-        
-        
-    <summary type="html">&lt;h1 id=&quot;模拟赛-梦熊-20250930-a&quot;&gt;&lt;a class=&quot;markdownIt-Anchor&quot; href=&quot;#模拟赛-梦熊-20250930-a&quot;&gt;&lt;/a&gt; 模拟赛 梦熊 20250930 A&lt;/h1&gt;
-&lt;p&gt;本题 aka &lt;a</summary>
-        
-      
+    <summary type="html">模拟赛 梦熊 20250930 A
+本题 aka https://qoj.ac/problem/670。
+简单题，注意到我们比较字典序由于字母互不相同，所以只关心首字母。
+枚举给定字符串应该出现在哪里，就是出现在 p 的有 n−p+1 的排名代价。对于首字母比他小的 DP 一下，首字母比他大的随便选乘上阶乘。DP 设 …</summary>
     
     
     
@@ -120,14 +108,10 @@
     <updated>2025-09-21T23:45:25.636Z</updated>
     
     
-      
-      
-        
-        
-    <summary type="html">&lt;p&gt;虽然 date 是写的 21:44，但是是完赛才公布的。&lt;/p&gt;
-&lt;h1 id=&quot;a-equal-occurrences&quot;&gt;&lt;a class=&quot;markdownIt-Anchor&quot; href=&quot;#a-equal-occurrences&quot;&gt;&lt;/a&gt; A. Equal</summary>
-        
-      
+    <summary type="html">虽然 date 是写的 21:44，但是是完赛才公布的。
+ A. Equal Occurrences
+开个桶，按照元素出现次数排序，显然我们需要的是桶里的一段后缀。枚举所有数保留 ai 个元素，则可以保留 (n−i+1)×ai 个数。把这个对于所有元素取一个 max⁡ 即可。
+cpp 提交记录：https://code…</summary>
     
     
     
@@ -144,14 +128,12 @@
     <updated>2025-09-20T14:22:48.056Z</updated>
     
     
-      
-      
-        
-        
-    <summary type="html">&lt;h1 id=&quot;初赛&quot;&gt;&lt;a class=&quot;markdownIt-Anchor&quot; href=&quot;#初赛&quot;&gt;&lt;/a&gt; 初赛&lt;/h1&gt;
-&lt;h2 id=&quot;day-1e97&quot;&gt;&lt;a class=&quot;markdownIt-Anchor&quot; href=&quot;#day-1e97&quot;&gt;&lt;/a&gt; Day</summary>
-        
-      
+    <summary type="html">初赛
+ Day -(1e9+7)
+该从什么时候开始写呢……
+暑假去了代码源 NOI 集训，然后回家做了两天题，打打洛谷 NOIP 模拟赛，然后去了一下梦熊，去完梦熊回家就去了 sxz。
+在 sxz 给小朋友讲了若干套初赛卷子，晚上在宿舍挑灯夜战做初赛题，憋憋。
+关于梦熊的信息学奥赛满分之路还是啥来着的一个初赛书，我只能…</summary>
     
     
     
@@ -168,14 +150,10 @@
     <updated>2025-10-14T06:22:13.714Z</updated>
     
     
-      
-      
-        
-        
-    <summary type="html">&lt;h1 id=&quot;模拟赛-洛谷-2025-noip-15-a&quot;&gt;&lt;a class=&quot;markdownIt-Anchor&quot; href=&quot;#模拟赛-洛谷-2025-noip-15-a&quot;&gt;&lt;/a&gt; 模拟赛 洛谷 2025 NOIP #15 A&lt;/h1&gt;
-&lt;p&gt;本题 aka &lt;a</summary>
-        
-      
+    <summary type="html">模拟赛 洛谷 2025 NOIP #15 A
+本题 aka https://qoj.ac/problem/3090。
+注意到，我们设 k 为第一个不满足 Xk&lt;Xk+1 的位置，则排列需要形如，
+[val≥X1]⏟several numbers&gt;X1,X1,[val≥X2]⏟several numbers&gt;X2,X2,…</summary>
     
     
     
@@ -192,14 +170,10 @@
     <updated>2025-10-15T12:28:51.869Z</updated>
     
     
-      
-      
-        
-        
-    <summary type="html">&lt;h1 id=&quot;cf1073e-segment-sum&quot;&gt;&lt;a class=&quot;markdownIt-Anchor&quot; href=&quot;#cf1073e-segment-sum&quot;&gt;&lt;/a&gt; CF1073E Segment Sum&lt;/h1&gt;
-&lt;p&gt;数位 DP，&lt;span</summary>
-        
-      
+    <summary type="html">CF1073E Segment Sum
+数位 DP，fi,j 表示方案数，gi,j 表示总和，枚举下一位填什么，多出来一些方案数乘上这一位的数乘上 10 的次幂的贡献，每次转移的时候加一下就行了。
+ 梦熊炼石计划 2025 #2 A
+弱智题，显然 ai=bi 的被强选了，可以证明 mex⁡ 就是这些数的 mex⁡，如果…</summary>
     
     
     
@@ -216,13 +190,10 @@
     <updated>2025-08-21T06:15:12.714Z</updated>
     
     
-      
-      
-        
-        
-    <summary type="html">&lt;p&gt;首先求出最短路，&lt;span class=&quot;katex&quot;&gt;&lt;span class=&quot;katex-mathml&quot;&gt;&lt;math</summary>
-        
-      
+    <summary type="html">首先求出最短路，diss,u 表示 s→u 最短路，dist,u 表示 u→t 最短路。这里可以使用 Dijkstra 算法。
+如果 diss,t≤k，那么不管怎么加都满足条件，特判掉，输出 n(n−1)2。
+否则，我们可以枚举 (u,v)，判断 diss,u+l+disv,t≤k。
+但是这样子是 O(n2) 的，考虑…</summary>
     
     
     
@@ -243,14 +214,11 @@
     <updated>2025-09-15T10:57:52.744Z</updated>
     
     
-      
-      
-        
-        
-    <summary type="html">&lt;p&gt;这里是我的原创题合集。&lt;/p&gt;
-&lt;h1 id=&quot;p12593-沉石鱼惊旋&quot;&gt;&lt;a class=&quot;markdownIt-Anchor&quot; href=&quot;#p12593-沉石鱼惊旋&quot;&gt;&lt;/a&gt; P12593</summary>
-        
-      
+    <summary type="html">这里是我的原创题合集。
+ P12593 沉石鱼惊旋
+备注：本题本来是随手出的题，尝试贪心发现假完了，没人会做，正好这边国赛模拟缺一个简单图论题就拿来了。开 n≤8 是照顾 Python 和 Java 运行速度，以及控难度。
+去向：洛谷 蓝桥杯国赛模拟
+链接：https://www.luogu.com.cn/proble…</summary>
     
     
     
@@ -267,14 +235,9 @@
     <updated>2025-08-28T08:14:00.139Z</updated>
     
     
-      
-      
-        
-        
-    <summary type="html">&lt;h1 id=&quot;模拟赛-梦熊-20250731-a&quot;&gt;&lt;a class=&quot;markdownIt-Anchor&quot; href=&quot;#模拟赛-梦熊-20250731-a&quot;&gt;&lt;/a&gt; 模拟赛 梦熊 20250731 A&lt;/h1&gt;
-&lt;p&gt;考虑把 &lt;span</summary>
-        
-      
+    <summary type="html">模拟赛 梦熊 20250731 A
+考虑把 axi⊕ayi=zi 的都拎出来搜出来一个连通块，连通块内我们可以算出 au=ar⊕vu，其中 r 是连通块最小的编号。vu 是搜连通块的时候可以直接搜出来的限制。
+考虑最小化字典序等价于最小化 ar。那么我们有若干个 ar⊕vi∈[li,ri] 的限制。等价于我们把每个 y…</summary>
     
     
     
@@ -291,14 +254,10 @@
     <updated>2025-07-18T08:43:05.032Z</updated>
     
     
-      
-      
-        
-        
-    <summary type="html">&lt;p&gt;&lt;s&gt;发现这题当时写的题解没保存。&lt;/s&gt;&lt;/p&gt;
-&lt;p&gt;注意到有取模，并且对如此小的数取模，猜测答案循环节与 &lt;span class=&quot;katex&quot;&gt;&lt;span class=&quot;katex-mathml&quot;&gt;&lt;math</summary>
-        
-      
+    <summary type="html">发现这题当时写的题解没保存。
+注意到有取模，并且对如此小的数取模，猜测答案循环节与 100 有点关系。
+用以下代码打 200 项的表，f(i,j) 表示填了 i 个格子，余数为 j 的方案数。直接模拟题意，枚举这个位置选了什么数，复杂度 O(nV2)。
+发现 f(101,0)=f(1,0),f(2,0)=f(102,0…</summary>
     
     
     
@@ -315,14 +274,9 @@
     <updated>2025-08-23T03:18:12.600Z</updated>
     
     
-      
-      
-        
-        
-    <summary type="html">&lt;h1 id=&quot;p5336-thusc-2016-成绩单&quot;&gt;&lt;a class=&quot;markdownIt-Anchor&quot; href=&quot;#p5336-thusc-2016-成绩单&quot;&gt;&lt;/a&gt; P5336 [THUSC 2016] 成绩单&lt;/h1&gt;
-&lt;p&gt;设 &lt;span</summary>
-        
-      
+    <summary type="html">P5336 [THUSC 2016] 成绩单
+设 cost⁡(l,r) 表示 [l,r] 删空的代价。因为和 wmax⁡ 和 wmin⁡ 相关，这也要知道。设 dp(l,r,L,R) 表示删空了 [l,r] 除了值域为 [L,R] 的部分的代价。
+转移显然有 cost(l,r)←min⁡L≤R{dp(l,r,L,R)+…</summary>
     
     
     
@@ -339,14 +293,7 @@
     <updated>2025-07-15T10:00:05.927Z</updated>
     
     
-      
-      
-        
-        
-    <summary type="html">&lt;p&gt;被制裁了。嘟嘟嘟。&lt;/p&gt;
-</summary>
-        
-      
+    <summary type="html">被制裁了。嘟嘟嘟。</summary>
     
     
     
@@ -363,14 +310,12 @@
     <updated>2025-08-30T06:40:11.300Z</updated>
     
     
-      
-      
-        
-        
-    <summary type="html">&lt;p&gt;每个题都好好写题解有点多了，写点自己能看懂的笔记。&lt;/p&gt;
-&lt;h1 id=&quot;cf1267g-game-relics&quot;&gt;&lt;a class=&quot;markdownIt-Anchor&quot; href=&quot;#cf1267g-game-relics&quot;&gt;&lt;/a&gt; CF1267G Game</summary>
-        
-      
+    <summary type="html">每个题都好好写题解有点多了，写点自己能看懂的笔记。
+ CF1267G Game Relics
+*3000，期望 DP。
+因为 x≤ci 故策略一定是先抽再买。
+设还剩了 r 个，剩下的集合为 S，抽到新物品的期望是 (nr+1)×x2，而剩下的随便买一个的期望是 1r∑i∈Sci。
+全排列枚举获得的顺序，每种方案依据两…</summary>
     
     
     
@@ -387,14 +332,13 @@
     <updated>2025-06-22T04:16:43.391Z</updated>
     
     
-      
-      
-        
-        
-    <summary type="html">&lt;h1 id=&quot;题意&quot;&gt;&lt;a class=&quot;markdownIt-Anchor&quot; href=&quot;#题意&quot;&gt;&lt;/a&gt; 题意&lt;/h1&gt;
-&lt;p&gt;求 &lt;span class=&quot;katex&quot;&gt;&lt;span class=&quot;katex-mathml&quot;&gt;&lt;math</summary>
-        
-      
+    <summary type="html">题意
+求 n 个点 m 条边的无向图中简单环数量。可以有重边，没有自环。
+1≤n≤20，1≤m≤2×105。
+ 做法
+有一个显然的 O(2nn3) 的朴素状压 DP。
+设 fs,i,mask 表示开头为 s 目前结尾为 i 包含了 mask 集合里的点，形成了一条链的方案数。转移枚举下一个点乘上两点之间边的个数即可。
+…</summary>
     
     
     
@@ -413,13 +357,11 @@
     <updated>2025-05-24T10:15:59.204Z</updated>
     
     
-      
-      
-        
-        
-    <summary type="html">&lt;p&gt;做题需要先看数据范围。发现 &lt;span class=&quot;katex&quot;&gt;&lt;span class=&quot;katex-mathml&quot;&gt;&lt;math</summary>
-        
-      
+    <summary type="html">做题需要先看数据范围。发现 n≤8，显然我们可以枚举全排列枚举删除顺序。使用打删除标记遍历每一条边来模拟题意。
+枚举全排列可以使用 next_permutation 或 DFS 搜索（如 std）。
+m 是 n2 级别的，故复杂度 O(n!n2)。
+当然本题也可以通过状态压缩 DP 做到 O(2nn2) 的复杂度。
+开…</summary>
     
     
     
@@ -438,16 +380,10 @@
     <updated>2025-09-27T09:06:16.680Z</updated>
     
     
-      
-      
-        
-        
-    <summary type="html">&lt;p&gt;今天常外拍毕业照。&lt;/p&gt;
-&lt;p&gt;本来订的昨天的，我猜是因为昨天下大雨了。&lt;/p&gt;
-&lt;p&gt;昨天我还在学校体育馆小走廊练足球，令人感慨。甚至射门进女厕所了。诶不是我上次射门门还没开啊？？？&lt;/p&gt;
-&lt;p&gt;经过在小锡监文化课的洗礼感觉常州无锡教育差异其实蛮大的。比如政史开卷导致</summary>
-        
-      
+    <summary type="html">今天常外拍毕业照。
+本来订的昨天的，我猜是因为昨天下大雨了。
+昨天我还在学校体育馆小走廊练足球，令人感慨。甚至射门进女厕所了。诶不是我上次射门门还没开啊？？？
+经过在小锡监文化课的洗礼感觉常州无锡教育差异其实蛮大的。比如政史开卷导致的在思维方面，一边注重于开放性的答题一边注重于知识点的掌握，我觉得我的开放性大题写的都不…</summary>
     
     
     
@@ -464,14 +400,15 @@
     <updated>2025-05-09T15:14:43.721Z</updated>
     
     
-      
-      
-        
-        
-    <summary type="html">&lt;h1 id=&quot;题意&quot;&gt;&lt;a class=&quot;markdownIt-Anchor&quot; href=&quot;#题意&quot;&gt;&lt;/a&gt; 题意&lt;/h1&gt;
-&lt;p&gt;给定一棵 &lt;span class=&quot;katex&quot;&gt;&lt;span class=&quot;katex-mathml&quot;&gt;&lt;math</summary>
-        
-      
+    <summary type="html">题意
+给定一棵 n 个点的树，每次选一个路径 u→v，依次写下 distance⁡(u,v),u,v 这三个数。
+显然你会写下不超过 3n 个数。找到最大字典序的三元组序列。
+多测，1≤t≤104，1≤n,∑n≤1.5×105。
+ 前言
+我爆标了。我爆标了。我爆标了。
+第一次爆非朴素题的标！！！
+ 做法
+省流：编一个比…</summary>
     
     
     
@@ -490,15 +427,12 @@
     <updated>2025-08-30T06:40:11.301Z</updated>
     
     
-      
-      
-        
-        
-    <summary type="html">&lt;h1 id=&quot;前言&quot;&gt;&lt;a class=&quot;markdownIt-Anchor&quot; href=&quot;#前言&quot;&gt;&lt;/a&gt; 前言&lt;/h1&gt;
-&lt;ul&gt;
-&lt;li&gt;&lt;a</summary>
-        
-      
+    <summary type="html">前言
+
+https://www.luogu.com.cn/problem/P12098
+https://codeforces.com/contest/2052/problem/G
+
+晚自习在机房随机开洛谷最后一页的题，开到了这个题，看了一眼发现会了，结果 CF 评了个 2800 洛谷评紫。为了证明这个题不值 2800，…</summary>
     
     
     

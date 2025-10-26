@@ -1,9 +1,7 @@
 <!DOCTYPE html>
 
 <html class="article-header-style-1">
-<head><!-- hexo injector head_begin start -->
-<link rel="stylesheet" href="/css/bilicard.css">
-<!-- hexo injector head_begin end -->
+<head>
 
 <script src="https://cdn.jsdelivr.net/npm/mermaid/dist/mermaid.min.js"></script>
 <script>
@@ -20,12 +18,12 @@
 	
 		<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=5">
 	
-	<meta name="description" content="做法 考虑先把 B&#x3D;sorted⁡(A)B&#x3D;\operatorname{sorted}(A)B&#x3D;sorted(A) 的 AAA 条件表示出来。 先分析 n&#x3D;2n&#x3D;2n&#x3D;2 的情况。此时只有 a1≤a2a_1\leq a_2a1​≤a2​ 或者 a1&#x3D;a2+1a_1&#x3D;a_2+1a1​&#x3D;a2​+1 的情况才是合法的。就是不需要操作或者一次操作可以交换。 同理扩展一下，这里我是手玩了几个然后猜猜猜猜出">
+	<meta name="description" content="做法 考虑先把 B&#x3D;sorted⁡(A) 的 A 条件表示出来。 先分析 n&#x3D;2 的情况。此时只有 a1≤a2 或者 a1&#x3D;a2+1 的情况才是合法的。就是不需要操作或者一次操作可以交换。 同理扩展一下，这里我是手玩了几个然后猜猜猜猜出来的。相当于问 A 能否被分成若干个区间，满足区间内极差不超过 1，并且上一个区间的…">
 <meta property="og:type" content="article">
 <meta property="og:title" content="[题解] P12032 [USACO25OPEN] Lazy Sort P">
 <meta property="og:url" content="http://blog.cyx2009.top/archives/P12032/index.html">
 <meta property="og:site_name" content="沉石鱼惊旋 的博客">
-<meta property="og:description" content="做法 考虑先把 B&#x3D;sorted⁡(A)B&#x3D;\operatorname{sorted}(A)B&#x3D;sorted(A) 的 AAA 条件表示出来。 先分析 n&#x3D;2n&#x3D;2n&#x3D;2 的情况。此时只有 a1≤a2a_1\leq a_2a1​≤a2​ 或者 a1&#x3D;a2+1a_1&#x3D;a_2+1a1​&#x3D;a2​+1 的情况才是合法的。就是不需要操作或者一次操作可以交换。 同理扩展一下，这里我是手玩了几个然后猜猜猜猜出">
+<meta property="og:description" content="做法 考虑先把 B&#x3D;sorted⁡(A) 的 A 条件表示出来。 先分析 n&#x3D;2 的情况。此时只有 a1≤a2 或者 a1&#x3D;a2+1 的情况才是合法的。就是不需要操作或者一次操作可以交换。 同理扩展一下，这里我是手玩了几个然后猜猜猜猜出来的。相当于问 A 能否被分成若干个区间，满足区间内极差不超过 1，并且上一个区间的…">
 <meta property="og:locale" content="zh_CN">
 <meta property="article:published_time" content="2025-04-07T07:43:00.000Z">
 <meta property="article:modified_time" content="2025-10-17T10:11:12.479Z">

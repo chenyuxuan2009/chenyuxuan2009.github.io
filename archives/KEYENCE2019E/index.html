@@ -1,9 +1,7 @@
 <!DOCTYPE html>
 
 <html class="article-header-style-1">
-<head><!-- hexo injector head_begin start -->
-<link rel="stylesheet" href="/css/bilicard.css">
-<!-- hexo injector head_begin end -->
+<head>
 
 <script src="https://cdn.jsdelivr.net/npm/mermaid/dist/mermaid.min.js"></script>
 <script>
@@ -20,12 +18,12 @@
 	
 		<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=5">
 	
-	<meta name="description" content="题目翻译 点 i,ji,ji,j 连边的代价是 ∣i−j∣×d+ai+aj|i-j|\times d+a_i+a_j∣i−j∣×d+ai​+aj​，问最小生成树边权之和。 1≤n≤2×1051\leq n\leq 2\times 10^51≤n≤2×105，1≤d,ai≤1091\leq d,a_i\leq 10^91≤d,ai​≤109。  题目思路 典。 O(n2)\mathcal O(n^">
+	<meta name="description" content="题目翻译 点 i,j 连边的代价是 ∣i−j∣×d+ai+aj，问最小生成树边权之和。 1≤n≤2×105，1≤d,ai≤109。  题目思路 典。 O(n2) 条边很多情况都可以直接上 Boruvka。 Boruvka 大致流程是维护联通块，每一轮把联通块之间最短的边连起来。每次联通块个数至少减半，一共进行 O(lo…">
 <meta property="og:type" content="article">
 <meta property="og:title" content="[题解] KEYENCE2019E Connecting Cities">
 <meta property="og:url" content="http://blog.cyx2009.top/archives/KEYENCE2019E/index.html">
 <meta property="og:site_name" content="沉石鱼惊旋 的博客">
-<meta property="og:description" content="题目翻译 点 i,ji,ji,j 连边的代价是 ∣i−j∣×d+ai+aj|i-j|\times d+a_i+a_j∣i−j∣×d+ai​+aj​，问最小生成树边权之和。 1≤n≤2×1051\leq n\leq 2\times 10^51≤n≤2×105，1≤d,ai≤1091\leq d,a_i\leq 10^91≤d,ai​≤109。  题目思路 典。 O(n2)\mathcal O(n^">
+<meta property="og:description" content="题目翻译 点 i,j 连边的代价是 ∣i−j∣×d+ai+aj，问最小生成树边权之和。 1≤n≤2×105，1≤d,ai≤109。  题目思路 典。 O(n2) 条边很多情况都可以直接上 Boruvka。 Boruvka 大致流程是维护联通块，每一轮把联通块之间最短的边连起来。每次联通块个数至少减半，一共进行 O(lo…">
 <meta property="og:locale" content="zh_CN">
 <meta property="article:published_time" content="2024-11-02T09:29:00.000Z">
 <meta property="article:modified_time" content="2025-02-17T07:01:48.571Z">

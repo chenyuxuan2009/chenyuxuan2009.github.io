@@ -1,9 +1,7 @@
 <!DOCTYPE html>
 
 <html class="article-header-style-1">
-<head><!-- hexo injector head_begin start -->
-<link rel="stylesheet" href="/css/bilicard.css">
-<!-- hexo injector head_begin end -->
+<head>
 
 <script src="https://cdn.jsdelivr.net/npm/mermaid/dist/mermaid.min.js"></script>
 <script>
@@ -20,12 +18,12 @@
 	
 		<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=5">
 	
-	<meta name="description" content="题意 求 nnn 个点 mmm 条边的无向图中简单环数量。可以有重边，没有自环。 1≤n≤201\leq n\leq 201≤n≤20，1≤m≤2×1051\leq m\leq 2\times 10^51≤m≤2×105。  做法 有一个显然的 O(2nn3)\mathcal O(2^nn^3)O(2nn3) 的朴素状压 DP。 设 fs,i,maskf_{s,i,mask}fs,i,mask​">
+	<meta name="description" content="题意 求 n 个点 m 条边的无向图中简单环数量。可以有重边，没有自环。 1≤n≤20，1≤m≤2×105。  做法 有一个显然的 O(2nn3) 的朴素状压 DP。 设 fs,i,mask 表示开头为 s 目前结尾为 i 包含了 mask 集合里的点，形成了一条链的方案数。转移枚举下一个点乘上两点之间边的个数即可。 …">
 <meta property="og:type" content="article">
 <meta property="og:title" content="[题解] ABC411G Count Cycles">
 <meta property="og:url" content="http://blog.cyx2009.top/archives/ABC411G/index.html">
 <meta property="og:site_name" content="沉石鱼惊旋 的博客">
-<meta property="og:description" content="题意 求 nnn 个点 mmm 条边的无向图中简单环数量。可以有重边，没有自环。 1≤n≤201\leq n\leq 201≤n≤20，1≤m≤2×1051\leq m\leq 2\times 10^51≤m≤2×105。  做法 有一个显然的 O(2nn3)\mathcal O(2^nn^3)O(2nn3) 的朴素状压 DP。 设 fs,i,maskf_{s,i,mask}fs,i,mask​">
+<meta property="og:description" content="题意 求 n 个点 m 条边的无向图中简单环数量。可以有重边，没有自环。 1≤n≤20，1≤m≤2×105。  做法 有一个显然的 O(2nn3) 的朴素状压 DP。 设 fs,i,mask 表示开头为 s 目前结尾为 i 包含了 mask 集合里的点，形成了一条链的方案数。转移枚举下一个点乘上两点之间边的个数即可。 …">
 <meta property="og:locale" content="zh_CN">
 <meta property="article:published_time" content="2025-06-22T03:44:00.000Z">
 <meta property="article:modified_time" content="2025-06-22T04:16:43.391Z">
