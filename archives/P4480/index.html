@@ -785,6 +785,12 @@ deque&lt;info&gt; slw;
     <span class="keyword">return</span> <span class="number">0</span>;
 &#125;</code></pre>
 	</div>
+<div style="text-align: center; position: relative;">
+  <button id="like-btn" class="like-btn">
+    点赞 <span id="like-count">0</span>
+  </button>
+</div>
+<div id="heart-container" style="position: fixed; left: 0; top: 0; width: 100%; height: 100%; pointer-events: none; overflow: visible;"></div>
 
 	
 		<div class="post-donate">
@@ -794,10 +800,90 @@ deque&lt;info&gt; slw;
 			</div>
 		</div>
 	
-
 	
 			<div class='additional-content-after-post'>爱你宝宝！</div>
 		
+
+
+<script>
+const postId = "P4480";
+const apiUrl = "https://hexo-like.2176807108.workers.dev";
+const btn = document.querySelector("#like-btn");
+const countEl = document.querySelector("#like-count");
+const heartContainer = document.querySelector("#heart-container");
+
+let busy = false;
+
+function updateCount(count) { countEl.textContent = count; }
+
+// 从 Worker KV 获取初始点赞数
+function fetchCount() {
+  fetch(`${apiUrl}?postId=${postId}`)
+    .then(res => res.json())
+    .then(data => {
+      if (data.count !== undefined) updateCount(data.count);
+    })
+    .catch(err => console.error(err));
+}
+
+// 创建一个随机 heart.gif
+function createRandomHeart() {
+  const heart = document.createElement("img");
+  heart.src = "/assets/img/heart.gif"; // 替换为你的 gif
+  heart.className = "heart";
+
+  const centerX = window.innerWidth / 2;
+  const centerY = window.innerHeight / 2;
+
+  heart.style.left = `${centerX}px`;
+  heart.style.top = `${centerY}px`;
+
+  const offsetX = (Math.random() - 0.5) * 200;
+  const offsetY = - (Math.random() * 200 + 50);
+  const rotate = (Math.random() - 0.5) * 60;
+  const scale = Math.random() * 0.5 + 1.2; // 1.2~1.7
+
+  heartContainer.appendChild(heart);
+
+  requestAnimationFrame(() => {
+    heart.style.transform = `translate(${offsetX}px, ${offsetY}px) rotate(${rotate}deg) scale(${scale})`;
+    heart.style.opacity = "1";
+  });
+
+  setTimeout(() => {
+    heart.style.opacity = "0";
+    heart.style.transform = `translate(${offsetX}px, ${offsetY}px) rotate(${rotate}deg) scale(0)`;
+    setTimeout(() => heart.remove(), 800);
+  }, 800);
+}
+
+// 页面加载获取初始点赞数
+fetchCount();
+
+// 点击按钮
+btn.addEventListener("click", () => {
+  if (busy) return;
+  busy = true;
+  fetch(apiUrl, {
+    method: "POST",
+    headers: { "Content-Type": "application/json" },
+    body: JSON.stringify({ postId })
+  })
+  .then(res => res.json())
+  .then(data => {
+    busy = false;
+    if (data.error) alert(data.error);
+    else {
+      updateCount(data.count);
+      const n = Math.floor(Math.random() * 3) + 3; // 3~5 个 heart
+      for (let i = 0; i < n; i++) createRandomHeart();
+    }
+  })
+  .catch(err => { busy = false; console.error(err); });
+});
+
+</script>
+
 
 	
 		<div class="post-tags">

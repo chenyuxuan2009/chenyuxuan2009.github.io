@@ -7,6 +7,8 @@
 \usepackage{tikz}
 \usetikzlibrary{calc}
 \usepackage{graphicx}
+\usepackage{hyperref}
+\newcommand{\link}[2]{\href{#1}{\textcolor{blue}{#2}}}
 \useoutertheme[width=3\baselineskip,right]{sidebar}
 % 目录标数字
 \setbeamertemplate{section in toc}[sections numbered] 
@@ -75,6 +77,7 @@
 \author{沉石鱼惊旋}
 \title{MX-J27 Solution}
 \date{October 25, 2025}
+\institute{\link{https://www.bilibili.com/video/BV1mqsfzbEk8}{讲评回放链接}}
 
 \begin{document}
 
@@ -112,7 +115,7 @@
 \end{frame}
 
 \begin{frame}
-  \frametitle{部分分 80}
+  \frametitle{部分分 50}
 
   \begin{itemize}
     \item <1 - > 这一档分虽然 $\mathcal O(n)$ 做不了了，但是 $\mathcal O(\sqrt n)$ 是可行的。
@@ -125,7 +128,7 @@
 \end{frame}
 
 \begin{frame}
-  \frametitle{部分分 80}
+  \frametitle{部分分 50}
 
   \begin{itemize}
     \item <1 - > 也就是说，$\lfloor\sqrt{k(k+3)}\rfloor\neq k$。
@@ -139,7 +142,7 @@
   \frametitle{满分 100}
 
   \begin{itemize}
-    \item <1 - > 80 分的做法，存在一个关键性质：只有 $x=k^2,x=k(k+1),x=k(k+2)$ 这三类形式的 $x$。
+    \item <1 - > 50 分的做法，存在一个关键性质：只有 $x=k^2,x=k(k+1),x=k(k+2)$ 这三类形式的 $x$。
     \item <2 - > 而显然，如果存在 $x=k^2$，则 $[1,n]$ 一定存在 $x=(k-1)^2$。其他两种同理。
     \item <3 - > 因此，我们只关心最大的 $x=k^2$ 的 $k$ 是多少。剩下的 $1\leq k'\leq k$ 都一定合法。
   \end{itemize}
@@ -404,9 +407,7 @@
     \item <1 - > 如果是第一种算法，实现可以不显式建图以降低常数因子对程序效率的影响。
     \item <2 - > 另外本题 $o=0$ 的情况下，答案如果是无解，不应该输出 $-1\times 0$，而应该输出 $-1$，存在部分选手没有读清题意在这里挂分的情况。
   \end{itemize}
-
 \end{frame}
-
 
 \section{鲜花 \& 抽奖}
 

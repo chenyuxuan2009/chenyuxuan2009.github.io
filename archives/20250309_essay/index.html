@@ -716,6 +716,12 @@
 <p>样例有点菜，随便过，<span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>M</mi><mo>=</mo><mn>100</mn><mo separator="true">,</mo><mi>K</mi><mo>=</mo><mn>5</mn></mrow><annotation encoding="application/x-tex">M=100,K=5</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.68333em;vertical-align:0em;"></span><span class="mord mathnormal" style="margin-right:0.10903em;">M</span><span class="mspace" style="margin-right:0.2777777777777778em;"></span><span class="mrel">=</span><span class="mspace" style="margin-right:0.2777777777777778em;"></span></span><span class="base"><span class="strut" style="height:0.8777699999999999em;vertical-align:-0.19444em;"></span><span class="mord">1</span><span class="mord">0</span><span class="mord">0</span><span class="mpunct">,</span><span class="mspace" style="margin-right:0.16666666666666666em;"></span><span class="mord mathnormal" style="margin-right:0.07153em;">K</span><span class="mspace" style="margin-right:0.2777777777777778em;"></span><span class="mrel">=</span><span class="mspace" style="margin-right:0.2777777777777778em;"></span></span><span class="base"><span class="strut" style="height:0.64444em;vertical-align:0em;"></span><span class="mord">5</span></span></span></span> 的时候答案大小是 <span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mn>38</mn></mrow><annotation encoding="application/x-tex">38</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.64444em;vertical-align:0em;"></span><span class="mord">3</span><span class="mord">8</span></span></span></span>，可以对着这个调一下。</p>
 
 	</div>
+<div style="text-align: center; position: relative;">
+  <button id="like-btn" class="like-btn">
+    点赞 <span id="like-count">0</span>
+  </button>
+</div>
+<div id="heart-container" style="position: fixed; left: 0; top: 0; width: 100%; height: 100%; pointer-events: none; overflow: visible;"></div>
 
 	
 		<div class="post-donate">
@@ -725,10 +731,90 @@
 			</div>
 		</div>
 	
-
 	
 			<div class='additional-content-after-post'>爱你宝宝！</div>
 		
+
+
+<script>
+const postId = "20250309_essay";
+const apiUrl = "https://hexo-like.2176807108.workers.dev";
+const btn = document.querySelector("#like-btn");
+const countEl = document.querySelector("#like-count");
+const heartContainer = document.querySelector("#heart-container");
+
+let busy = false;
+
+function updateCount(count) { countEl.textContent = count; }
+
+// 从 Worker KV 获取初始点赞数
+function fetchCount() {
+  fetch(`${apiUrl}?postId=${postId}`)
+    .then(res => res.json())
+    .then(data => {
+      if (data.count !== undefined) updateCount(data.count);
+    })
+    .catch(err => console.error(err));
+}
+
+// 创建一个随机 heart.gif
+function createRandomHeart() {
+  const heart = document.createElement("img");
+  heart.src = "/assets/img/heart.gif"; // 替换为你的 gif
+  heart.className = "heart";
+
+  const centerX = window.innerWidth / 2;
+  const centerY = window.innerHeight / 2;
+
+  heart.style.left = `${centerX}px`;
+  heart.style.top = `${centerY}px`;
+
+  const offsetX = (Math.random() - 0.5) * 200;
+  const offsetY = - (Math.random() * 200 + 50);
+  const rotate = (Math.random() - 0.5) * 60;
+  const scale = Math.random() * 0.5 + 1.2; // 1.2~1.7
+
+  heartContainer.appendChild(heart);
+
+  requestAnimationFrame(() => {
+    heart.style.transform = `translate(${offsetX}px, ${offsetY}px) rotate(${rotate}deg) scale(${scale})`;
+    heart.style.opacity = "1";
+  });
+
+  setTimeout(() => {
+    heart.style.opacity = "0";
+    heart.style.transform = `translate(${offsetX}px, ${offsetY}px) rotate(${rotate}deg) scale(0)`;
+    setTimeout(() => heart.remove(), 800);
+  }, 800);
+}
+
+// 页面加载获取初始点赞数
+fetchCount();
+
+// 点击按钮
+btn.addEventListener("click", () => {
+  if (busy) return;
+  busy = true;
+  fetch(apiUrl, {
+    method: "POST",
+    headers: { "Content-Type": "application/json" },
+    body: JSON.stringify({ postId })
+  })
+  .then(res => res.json())
+  .then(data => {
+    busy = false;
+    if (data.error) alert(data.error);
+    else {
+      updateCount(data.count);
+      const n = Math.floor(Math.random() * 3) + 3; // 3~5 个 heart
+      for (let i = 0; i < n; i++) createRandomHeart();
+    }
+  })
+  .catch(err => { busy = false; console.error(err); });
+});
+
+</script>
+
 
 	
 </article>

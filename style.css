@@ -10387,3 +10387,39 @@ pre code.language-plain {
   background: none !important;
   color: inherit !important;
 }
+
+.like-btn {
+  display: inline-block;
+  padding: .625rem 1.25rem;
+  font-size: .875rem;
+  font-weight: 600;
+  line-height: 1.5;
+  text-align: center;
+  border-radius: .25rem;
+  background-color: #f5365c;
+  color: #fff;
+  border: 1px solid transparent;
+  box-shadow: 0 4px 6px rgba(50,50,93,.11), 0 1px 3px rgba(0,0,0,.08);
+  cursor: pointer;
+  transition: all .15s ease;
+  margin: 20px auto 30px auto;
+  outline: none;
+}
+
+.like-btn:hover { background-color: #ff6781; }
+.like-btn:active { transform: scale(0.95); }
+.like-btn:focus { outline: none; }
+
+.heart {
+  position: fixed;
+  pointer-events: none;
+  user-select: none;
+  width: 100px; /* 初始小 */
+  height: 100px;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%) scale(0);
+  transition: transform 1s ease, opacity 1s ease;
+  opacity: 0;
+  z-index: 9999;
+}
