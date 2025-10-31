@@ -15,8 +15,72 @@
     <atom:link href="http://blog.cyx2009.top/rss2.xml" rel="self" type="application/rss+xml"/>
     
     <description>沉石鱼惊旋 的博客</description>
-    <pubDate>Sun, 26 Oct 2025 13:44:00 GMT</pubDate>
+    <pubDate>Fri, 31 Oct 2025 12:02:38 GMT</pubDate>
     <generator>http://hexo.io/</generator>
+    
+    <item>
+      <title>『置顶』[笔记] 模板列表</title>
+      <link>http://blog.cyx2009.top/archives/cp_template/</link>
+      <guid>http://blog.cyx2009.top/archives/cp_template/</guid>
+      <pubDate>Thu, 30 Oct 2025 13:40:00 GMT</pubDate>
+      
+      <description>这是我的 OI/ACM 模板库。
+
+
+
+题目链接
+备注
+标准代码
+默写代码（CSP2025）
+
+
+
+
+快速读入
+虽然前缀和在 int 范围里，但是输出 -2147483648 取相反数输出会寄。
+LG 169229997
+LG 244333098
+
+
+同余方程（exgcd）
+洛谷的 exgcd 板子太糖了，拿这个当 e…</description>
+      
+      
+      
+      
+      <category domain="http://blog.cyx2009.top/categories/StudyNote/">StudyNote</category>
+      
+      
+      
+      <comments>http://blog.cyx2009.top/archives/cp_template/#disqus_thread</comments>
+      
+    </item>
+    
+    <item>
+      <title>[题解] 杂题选讲 8</title>
+      <link>http://blog.cyx2009.top/archives/potpourri_8/</link>
+      <guid>http://blog.cyx2009.top/archives/potpourri_8/</guid>
+      <pubDate>Wed, 29 Oct 2025 12:57:00 GMT</pubDate>
+      
+      <description>模拟赛 ZR20251028 T1
+
+  WARNING
+  未完成代码。
+独立想出；思考时间：短；未完成代码；代码时间：nan；推荐指数：好题；
+
+
+t1 是不是，加起来为 2^k 则必须是 0xxxx 1yyyyyy，然后你找到这个区间里第一个 1000000，然后劈成两半，左边选了什么，右边对应会 ban 掉一个…</description>
+      
+      
+      
+      
+      <category domain="http://blog.cyx2009.top/categories/Solution/">Solution</category>
+      
+      
+      
+      <comments>http://blog.cyx2009.top/archives/potpourri_8/#disqus_thread</comments>
+      
+    </item>
     
     <item>
       <title>[题解] MX-J27 题解</title>
@@ -427,65 +491,6 @@ m 是 n2 级别的，故复杂度 O(n!n2)。
       
       
       <comments>http://blog.cyx2009.top/archives/20250509_essay/#disqus_thread</comments>
-      
-    </item>
-    
-    <item>
-      <title>[题解] CF2107D Apple Tree Traversing</title>
-      <link>http://blog.cyx2009.top/archives/CF2107D/</link>
-      <guid>http://blog.cyx2009.top/archives/CF2107D/</guid>
-      <pubDate>Fri, 09 May 2025 14:47:00 GMT</pubDate>
-      
-      <description>题意
-给定一棵 n 个点的树，每次选一个路径 u→v，依次写下 distance⁡(u,v),u,v 这三个数。
-显然你会写下不超过 3n 个数。找到最大字典序的三元组序列。
-多测，1≤t≤104，1≤n,∑n≤1.5×105。
- 前言
-我爆标了。我爆标了。我爆标了。
-第一次爆非朴素题的标！！！
- 做法
-省流：编一个比…</description>
-      
-      
-      
-      
-      <category domain="http://blog.cyx2009.top/categories/Solution/">Solution</category>
-      
-      
-      <category domain="http://blog.cyx2009.top/tags/%E5%9D%87%E6%91%8A%E5%88%86%E6%9E%90/">均摊分析</category>
-      
-      
-      <comments>http://blog.cyx2009.top/archives/CF2107D/#disqus_thread</comments>
-      
-    </item>
-    
-    <item>
-      <title>[题解] P12098 [NERC2024] Geometric Balance</title>
-      <link>http://blog.cyx2009.top/archives/P12098/</link>
-      <guid>http://blog.cyx2009.top/archives/P12098/</guid>
-      <pubDate>Thu, 10 Apr 2025 15:04:00 GMT</pubDate>
-      
-      <description>前言
-
-https://www.luogu.com.cn/problem/P12098
-https://codeforces.com/contest/2052/problem/G
-
-晚自习在机房随机开洛谷最后一页的题，开到了这个题，看了一眼发现会了，结果 CF 评了个 2800 洛谷评紫。为了证明这个题不值 2800，…</description>
-      
-      
-      
-      
-      <category domain="http://blog.cyx2009.top/categories/Solution/">Solution</category>
-      
-      
-      <category domain="http://blog.cyx2009.top/tags/%E8%AE%A1%E7%AE%97%E5%87%A0%E4%BD%95/">计算几何</category>
-      
-      <category domain="http://blog.cyx2009.top/tags/%E6%A8%A1%E6%8B%9F/">模拟</category>
-      
-      <category domain="http://blog.cyx2009.top/tags/%E6%89%A9%E5%9F%9F/">扩域</category>
-      
-      
-      <comments>http://blog.cyx2009.top/archives/P12098/#disqus_thread</comments>
       
     </item>
     
