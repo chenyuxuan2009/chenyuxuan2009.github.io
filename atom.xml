@@ -6,7 +6,7 @@
   <link href="http://blog.cyx2009.top/atom.xml" rel="self"/>
   
   <link href="http://blog.cyx2009.top/"/>
-  <updated>2025-10-31T12:02:38.431Z</updated>
+  <updated>2025-11-03T06:54:51.043Z</updated>
   <id>http://blog.cyx2009.top/</id>
   
   <author>
@@ -15,6 +15,28 @@
   </author>
   
   <generator uri="https://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>[游记] 2024 ICPC 南京 区域赛 游记 &amp; 题解</title>
+    <link href="http://blog.cyx2009.top/archives/ICPC_2025_Nanjing_R/"/>
+    <id>http://blog.cyx2009.top/archives/ICPC_2025_Nanjing_R/</id>
+    <published>2025-11-03T06:33:00.000Z</published>
+    <updated>2025-11-03T06:54:51.043Z</updated>
+    
+    
+    <summary type="html">Day -998244353
+xzy 和 zyc 找我，问我打不打南京。说徐州那边可能有学校有名额，但是差一个人。
+于是和他们组了一队，保险起见在洛谷那边也要了打星名额。
+事实上，最后用的是洛谷的名额（
+不过更准确说是 Hydro 的名额，不过没事洛谷 Hydro 一家亲。洛谷的给了马老师他们队。
+最后我们的队名在自己…</summary>
+    
+    
+    
+    <category term="TravelNote" scheme="http://blog.cyx2009.top/categories/TravelNote/"/>
+    
+    
+  </entry>
   
   <entry>
     <title>『置顶』[笔记] 模板列表</title>
@@ -125,7 +147,7 @@ q 次询问，1≤n≤1018，1≤q≤105。
     <link href="http://blog.cyx2009.top/archives/potpourri_7/"/>
     <id>http://blog.cyx2009.top/archives/potpourri_7/</id>
     <published>2025-10-15T03:29:00.000Z</published>
-    <updated>2025-11-02T10:57:23.138Z</updated>
+    <updated>2025-11-02T11:44:17.503Z</updated>
     
     
     <summary type="html">CF2104G Modulo 3
@@ -185,7 +207,7 @@ cpp 提交记录：https://code…</summary>
     <link href="http://blog.cyx2009.top/archives/CSP2025/"/>
     <id>http://blog.cyx2009.top/archives/CSP2025/</id>
     <published>2025-09-19T10:04:00.000Z</published>
-    <updated>2025-11-01T14:23:36.799Z</updated>
+    <updated>2025-11-02T12:38:53.933Z</updated>
     
     
     <summary type="html">初赛
@@ -429,26 +451,6 @@ m 是 n2 级别的，故复杂度 O(n!n2)。
     
     
     <category term="搜索" scheme="http://blog.cyx2009.top/tags/%E6%90%9C%E7%B4%A2/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>[闲话] 20250509 闲话</title>
-    <link href="http://blog.cyx2009.top/archives/20250509_essay/"/>
-    <id>http://blog.cyx2009.top/archives/20250509_essay/</id>
-    <published>2025-05-09T15:28:00.000Z</published>
-    <updated>2025-09-27T09:06:16.680Z</updated>
-    
-    
-    <summary type="html">今天常外拍毕业照。
-本来订的昨天的，我猜是因为昨天下大雨了。
-昨天我还在学校体育馆小走廊练足球，令人感慨。甚至射门进女厕所了。诶不是我上次射门门还没开啊？？？
-经过在小锡监文化课的洗礼感觉常州无锡教育差异其实蛮大的。比如政史开卷导致的在思维方面，一边注重于开放性的答题一边注重于知识点的掌握，我觉得我的开放性大题写的都不…</summary>
-    
-    
-    
-    <category term="Essay" scheme="http://blog.cyx2009.top/categories/Essay/"/>
-    
     
   </entry>
   

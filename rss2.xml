@@ -15,8 +15,32 @@
     <atom:link href="http://blog.cyx2009.top/rss2.xml" rel="self" type="application/rss+xml"/>
     
     <description>沉石鱼惊旋 的博客</description>
-    <pubDate>Fri, 31 Oct 2025 12:02:38 GMT</pubDate>
+    <pubDate>Mon, 03 Nov 2025 06:54:51 GMT</pubDate>
     <generator>http://hexo.io/</generator>
+    
+    <item>
+      <title>[游记] 2024 ICPC 南京 区域赛 游记 &amp; 题解</title>
+      <link>http://blog.cyx2009.top/archives/ICPC_2025_Nanjing_R/</link>
+      <guid>http://blog.cyx2009.top/archives/ICPC_2025_Nanjing_R/</guid>
+      <pubDate>Mon, 03 Nov 2025 06:33:00 GMT</pubDate>
+      
+      <description>Day -998244353
+xzy 和 zyc 找我，问我打不打南京。说徐州那边可能有学校有名额，但是差一个人。
+于是和他们组了一队，保险起见在洛谷那边也要了打星名额。
+事实上，最后用的是洛谷的名额（
+不过更准确说是 Hydro 的名额，不过没事洛谷 Hydro 一家亲。洛谷的给了马老师他们队。
+最后我们的队名在自己…</description>
+      
+      
+      
+      
+      <category domain="http://blog.cyx2009.top/categories/TravelNote/">TravelNote</category>
+      
+      
+      
+      <comments>http://blog.cyx2009.top/archives/ICPC_2025_Nanjing_R/#disqus_thread</comments>
+      
+    </item>
     
     <item>
       <title>『置顶』[笔记] 模板列表</title>
@@ -469,28 +493,6 @@ m 是 n2 级别的，故复杂度 O(n!n2)。
       
       
       <comments>http://blog.cyx2009.top/archives/P12593/#disqus_thread</comments>
-      
-    </item>
-    
-    <item>
-      <title>[闲话] 20250509 闲话</title>
-      <link>http://blog.cyx2009.top/archives/20250509_essay/</link>
-      <guid>http://blog.cyx2009.top/archives/20250509_essay/</guid>
-      <pubDate>Fri, 09 May 2025 15:28:00 GMT</pubDate>
-      
-      <description>今天常外拍毕业照。
-本来订的昨天的，我猜是因为昨天下大雨了。
-昨天我还在学校体育馆小走廊练足球，令人感慨。甚至射门进女厕所了。诶不是我上次射门门还没开啊？？？
-经过在小锡监文化课的洗礼感觉常州无锡教育差异其实蛮大的。比如政史开卷导致的在思维方面，一边注重于开放性的答题一边注重于知识点的掌握，我觉得我的开放性大题写的都不…</description>
-      
-      
-      
-      
-      <category domain="http://blog.cyx2009.top/categories/Essay/">Essay</category>
-      
-      
-      
-      <comments>http://blog.cyx2009.top/archives/20250509_essay/#disqus_thread</comments>
       
     </item>
     
