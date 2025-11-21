@@ -6,7 +6,7 @@
   <link href="http://blog.cyx2009.top/atom.xml" rel="self"/>
   
   <link href="http://blog.cyx2009.top/"/>
-  <updated>2025-11-09T14:54:01.962Z</updated>
+  <updated>2025-11-21T11:46:40.051Z</updated>
   <id>http://blog.cyx2009.top/</id>
   
   <author>
@@ -17,11 +17,32 @@
   <generator uri="https://hexo.io/">Hexo</generator>
   
   <entry>
+    <title>[题解] 杂题选讲 9</title>
+    <link href="http://blog.cyx2009.top/archives/potpourri_9/"/>
+    <id>http://blog.cyx2009.top/archives/potpourri_9/</id>
+    <published>2025-11-17T03:17:00.000Z</published>
+    <updated>2025-11-21T11:46:40.051Z</updated>
+    
+    
+    <summary type="html">CF2165B Marble Council
+场切；思考时间：中；已完成代码；代码时间：中；推荐指数：好题；
+考虑一种数如果出现了，出现几次都无所谓，我们把他单独开若干个集合就好了。
+但是如果一种数没出现，我们就得看看有多少情况使得它没出现了。
+没出现的话，每个集合我都可以塞『众数出现次数』个它。由于我们出现的话是单开…</summary>
+    
+    
+    
+    <category term="Solution" scheme="http://blog.cyx2009.top/categories/Solution/"/>
+    
+    
+  </entry>
+  
+  <entry>
     <title>[游记] 2025 ICPC 南京 区域赛 游记</title>
     <link href="http://blog.cyx2009.top/archives/ICPC_2025_Nanjing_R/"/>
     <id>http://blog.cyx2009.top/archives/ICPC_2025_Nanjing_R/</id>
     <published>2025-11-03T06:33:00.000Z</published>
-    <updated>2025-11-09T14:54:01.962Z</updated>
+    <updated>2025-11-09T15:00:02.665Z</updated>
     
     
     <summary type="html">Day -998244353
@@ -79,7 +100,7 @@ LG 244333098
     <link href="http://blog.cyx2009.top/archives/potpourri_8/"/>
     <id>http://blog.cyx2009.top/archives/potpourri_8/</id>
     <published>2025-10-29T12:57:00.000Z</published>
-    <updated>2025-11-07T12:15:13.855Z</updated>
+    <updated>2025-11-19T01:31:49.499Z</updated>
     
     
     <summary type="html">模拟赛 ZR20251028 T1
@@ -428,29 +449,6 @@ cpp 提交记录：https://code…</summary>
     
     
     <category term="状压 DP" scheme="http://blog.cyx2009.top/tags/%E7%8A%B6%E5%8E%8B-DP/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>[题解] P12593 沉石鱼惊旋</title>
-    <link href="http://blog.cyx2009.top/archives/P12593/"/>
-    <id>http://blog.cyx2009.top/archives/P12593/</id>
-    <published>2025-05-24T10:04:00.000Z</published>
-    <updated>2025-05-24T10:15:59.204Z</updated>
-    
-    
-    <summary type="html">做题需要先看数据范围。发现 n≤8，显然我们可以枚举全排列枚举删除顺序。使用打删除标记遍历每一条边来模拟题意。
-枚举全排列可以使用 next_permutation 或 DFS 搜索（如 std）。
-m 是 n2 级别的，故复杂度 O(n!n2)。
-当然本题也可以通过状态压缩 DP 做到 O(2nn2) 的复杂度。
-开…</summary>
-    
-    
-    
-    <category term="Solution" scheme="http://blog.cyx2009.top/categories/Solution/"/>
-    
-    
-    <category term="搜索" scheme="http://blog.cyx2009.top/tags/%E6%90%9C%E7%B4%A2/"/>
     
   </entry>
   

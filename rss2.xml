@@ -15,8 +15,31 @@
     <atom:link href="http://blog.cyx2009.top/rss2.xml" rel="self" type="application/rss+xml"/>
     
     <description>沉石鱼惊旋 的博客</description>
-    <pubDate>Sun, 09 Nov 2025 14:54:01 GMT</pubDate>
+    <pubDate>Fri, 21 Nov 2025 11:46:40 GMT</pubDate>
     <generator>http://hexo.io/</generator>
+    
+    <item>
+      <title>[题解] 杂题选讲 9</title>
+      <link>http://blog.cyx2009.top/archives/potpourri_9/</link>
+      <guid>http://blog.cyx2009.top/archives/potpourri_9/</guid>
+      <pubDate>Mon, 17 Nov 2025 03:17:00 GMT</pubDate>
+      
+      <description>CF2165B Marble Council
+场切；思考时间：中；已完成代码；代码时间：中；推荐指数：好题；
+考虑一种数如果出现了，出现几次都无所谓，我们把他单独开若干个集合就好了。
+但是如果一种数没出现，我们就得看看有多少情况使得它没出现了。
+没出现的话，每个集合我都可以塞『众数出现次数』个它。由于我们出现的话是单开…</description>
+      
+      
+      
+      
+      <category domain="http://blog.cyx2009.top/categories/Solution/">Solution</category>
+      
+      
+      
+      <comments>http://blog.cyx2009.top/archives/potpourri_9/#disqus_thread</comments>
+      
+    </item>
     
     <item>
       <title>[游记] 2025 ICPC 南京 区域赛 游记</title>
@@ -468,31 +491,6 @@ cpp 提交记录：https://code…</description>
       
       
       <comments>http://blog.cyx2009.top/archives/ABC411G/#disqus_thread</comments>
-      
-    </item>
-    
-    <item>
-      <title>[题解] P12593 沉石鱼惊旋</title>
-      <link>http://blog.cyx2009.top/archives/P12593/</link>
-      <guid>http://blog.cyx2009.top/archives/P12593/</guid>
-      <pubDate>Sat, 24 May 2025 10:04:00 GMT</pubDate>
-      
-      <description>做题需要先看数据范围。发现 n≤8，显然我们可以枚举全排列枚举删除顺序。使用打删除标记遍历每一条边来模拟题意。
-枚举全排列可以使用 next_permutation 或 DFS 搜索（如 std）。
-m 是 n2 级别的，故复杂度 O(n!n2)。
-当然本题也可以通过状态压缩 DP 做到 O(2nn2) 的复杂度。
-开…</description>
-      
-      
-      
-      
-      <category domain="http://blog.cyx2009.top/categories/Solution/">Solution</category>
-      
-      
-      <category domain="http://blog.cyx2009.top/tags/%E6%90%9C%E7%B4%A2/">搜索</category>
-      
-      
-      <comments>http://blog.cyx2009.top/archives/P12593/#disqus_thread</comments>
       
     </item>
     

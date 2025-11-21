@@ -519,7 +519,7 @@
 							<nav class="site-state">
 								<div class="site-state-item site-state-posts">
 									<a href="/archives">
-										<span class="site-state-item-count">223</span>
+										<span class="site-state-item-count">224</span>
 										<span class="site-state-item-name">文章</span>
 									</a>
 								</div>
@@ -581,7 +581,7 @@
 				</button>
 			</div>
 			<div class="modal-body">
-				<a class="badge badge-secondary tag" href="/categories/Essay/" rel="tag">Essay <span class="tag-num">7</span></a><a class="badge badge-secondary tag" href="/categories/Solution/" rel="tag">Solution <span class="tag-num">193</span></a><a class="badge badge-secondary tag" href="/categories/StudyNote/" rel="tag">StudyNote <span class="tag-num">6</span></a><a class="badge badge-secondary tag" href="/categories/Technology/" rel="tag">Technology <span class="tag-num">3</span></a><a class="badge badge-secondary tag" href="/categories/TravelNote/" rel="tag">TravelNote <span class="tag-num">14</span></a>
+				<a class="badge badge-secondary tag" href="/categories/Essay/" rel="tag">Essay <span class="tag-num">7</span></a><a class="badge badge-secondary tag" href="/categories/Solution/" rel="tag">Solution <span class="tag-num">194</span></a><a class="badge badge-secondary tag" href="/categories/StudyNote/" rel="tag">StudyNote <span class="tag-num">6</span></a><a class="badge badge-secondary tag" href="/categories/Technology/" rel="tag">Technology <span class="tag-num">3</span></a><a class="badge badge-secondary tag" href="/categories/TravelNote/" rel="tag">TravelNote <span class="tag-num">14</span></a>
 			</div>
 		</div>
 	</div>
@@ -609,6 +609,78 @@
 		
 		
 				
+	<article class="post card bg-white shadow-sm border-0 post-preview">
+	<header class="post-header text-center">
+		
+		<a class="post-title" href="/archives/P12593/">[题解] P12593 沉石鱼惊旋</a>
+		<div class="post-meta">
+			
+						
+						<div class="post-meta-detail post-meta-detail-time">
+							<i class="fa fa-clock-o" aria-hidden="true"></i>
+							<time title="发布于 2025-5-24 18:04:00 | 编辑于 2025-5-24 18:15:59">2025-5-24 18:04
+							</time>
+						</div>
+					
+						
+							<div class="post-meta-devide">|</div>
+						
+						<div class="post-meta-detail post-meta-detail-categories">
+							<i class="fa fa-bookmark-o" aria-hidden="true"></i>
+							<a class="post-meta-detail-catagory-link" href="/categories/Solution/">Solution</a>
+						</div>
+					
+						
+							<div class="post-meta-devide">|</div>
+						
+						<div class="post-meta-detail post-meta-detail-words">
+							<i class="fa fa-book" aria-hidden="true"></i>
+							<span id="busuanzi_container_page_pv">
+								阅读 <span id="busuanzi_value_page_pv"></span> 次
+							</span>
+						</div>
+					
+						
+							<div class="post-meta-devide">|</div>
+						
+						<div class="post-meta-detail post-meta-detail-words">
+							<i class="fa fa-file-word-o" aria-hidden="true"></i>
+							1.1k 字
+						</div>
+					
+						
+							<div class="post-meta-devide">|</div>
+						
+						<div class="post-meta-detail post-meta-detail-readingtime">
+							<i class="fa fa-hourglass-end" aria-hidden="true"></i>
+							5 分钟
+						</div>
+					
+		</div>
+		
+	</header>
+
+	<div class="post-content">
+		
+			
+				做题需要先看数据范围。发现 n≤8，显然我们可以枚举全排列枚举删除顺序。使用打删除标记遍历每一条边来模拟题意。
+枚举全排列可以使用 next_permutation 或 DFS 搜索（如 std）。
+m 是 n2 级别的，故复杂度 O(n!n2)。
+当然本题也可以通过状态压缩 DP 做到 O(2nn2) 的复杂度。
+开 n=8 是因为放在这个位置被...
+			
+		
+	</div>
+
+	
+		<div class="post-tags">
+			<i class="fa fa-tags" aria-hidden="true"></i>
+			<a class="tag badge badge-secondary post-meta-detail-tag -none-link" href="/tags/%E6%90%9C%E7%B4%A2/" rel="tag">搜索</a>
+		</div>
+	
+</article>
+
+
 	<article class="post card bg-white shadow-sm border-0 post-preview">
 	<header class="post-header text-center post-header-with-thumbnail">
 		
@@ -1269,78 +1341,6 @@ s 很...
 		<div class="post-tags">
 			<i class="fa fa-tags" aria-hidden="true"></i>
 			<a class="tag badge badge-secondary post-meta-detail-tag -none-link" href="/tags/%E5%8A%A8%E6%80%81%E8%A7%84%E5%88%92/" rel="tag">动态规划</a>
-		</div>
-	
-</article>
-
-
-	<article class="post card bg-white shadow-sm border-0 post-preview">
-	<header class="post-header text-center">
-		
-		<a class="post-title" href="/archives/P11946/">[题解] [模拟赛 20250325] P11946 [KTSC 2025] 信竞天择 2 / evolution</a>
-		<div class="post-meta">
-			
-						
-						<div class="post-meta-detail post-meta-detail-time">
-							<i class="fa fa-clock-o" aria-hidden="true"></i>
-							<time title="发布于 2025-3-25 21:01:00 | 编辑于 2025-3-27 20:01:49">2025-3-25 21:01
-							</time>
-						</div>
-					
-						
-							<div class="post-meta-devide">|</div>
-						
-						<div class="post-meta-detail post-meta-detail-categories">
-							<i class="fa fa-bookmark-o" aria-hidden="true"></i>
-							<a class="post-meta-detail-catagory-link" href="/categories/Solution/">Solution</a>
-						</div>
-					
-						
-							<div class="post-meta-devide">|</div>
-						
-						<div class="post-meta-detail post-meta-detail-words">
-							<i class="fa fa-book" aria-hidden="true"></i>
-							<span id="busuanzi_container_page_pv">
-								阅读 <span id="busuanzi_value_page_pv"></span> 次
-							</span>
-						</div>
-					
-						
-							<div class="post-meta-devide">|</div>
-						
-						<div class="post-meta-detail post-meta-detail-words">
-							<i class="fa fa-file-word-o" aria-hidden="true"></i>
-							1.1k 字
-						</div>
-					
-						
-							<div class="post-meta-devide">|</div>
-						
-						<div class="post-meta-detail post-meta-detail-readingtime">
-							<i class="fa fa-hourglass-end" aria-hidden="true"></i>
-							5 分钟
-						</div>
-					
-		</div>
-		
-	</header>
-
-	<div class="post-content">
-		
-			
-				题意
-一棵 n 个节点的有根树，以 0 为根。每个点 u 有一个 pu。对于所有 u，u 的父亲 fa 总是满足 pfa<pu。
-你可以给出 u≠v 的一对 u,v 调用交互库 compare⁡(u,v) 查询 [pu<pv] 。
-还原排列。
-设 P 表示这棵树所有可能的 p 的个数，Z=⌈log⁡2P⌉，你调用了 C 次交互库，令 K=C/Z。当...
-			
-		
-	</div>
-
-	
-		<div class="post-tags">
-			<i class="fa fa-tags" aria-hidden="true"></i>
-			<a class="tag badge badge-secondary post-meta-detail-tag -none-link" href="/tags/Adhoc/" rel="tag">Adhoc</a><a class="tag badge badge-secondary post-meta-detail-tag -none-link" href="/tags/%E6%A8%A1%E6%8B%9F%E8%B5%9B/" rel="tag">模拟赛</a>
 		</div>
 	
 </article>
