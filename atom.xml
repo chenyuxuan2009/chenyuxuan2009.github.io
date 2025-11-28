@@ -6,7 +6,7 @@
   <link href="http://blog.cyx2009.top/atom.xml" rel="self"/>
   
   <link href="http://blog.cyx2009.top/"/>
-  <updated>2025-11-27T09:11:27.422Z</updated>
+  <updated>2025-11-27T12:04:51.354Z</updated>
   <id>http://blog.cyx2009.top/</id>
   
   <author>
@@ -15,6 +15,25 @@
   </author>
   
   <generator uri="https://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>[游记] NOIP 2025 游记</title>
+    <link href="http://blog.cyx2009.top/archives/NOIP2025/"/>
+    <id>http://blog.cyx2009.top/archives/NOIP2025/</id>
+    <published>2025-11-27T12:04:00.000Z</published>
+    <updated>2025-11-27T12:04:51.354Z</updated>
+    
+    
+    <summary type="html">Day -2
+该写游记了。
+今天在家摆一摆，看了看做题笔记和板子。</summary>
+    
+    
+    
+    <category term="TravelNote" scheme="http://blog.cyx2009.top/categories/TravelNote/"/>
+    
+    
+  </entry>
   
   <entry>
     <title>[题解] 杂题选讲 9</title>
@@ -410,7 +429,7 @@ cpp 提交记录：https://code…</summary>
     <link href="http://blog.cyx2009.top/archives/potpourri_1/"/>
     <id>http://blog.cyx2009.top/archives/potpourri_1/</id>
     <published>2025-06-25T13:26:00.000Z</published>
-    <updated>2025-10-31T13:21:38.118Z</updated>
+    <updated>2025-11-28T12:13:55.704Z</updated>
     
     
     <summary type="html">每个题都好好写题解有点多了，写点自己能看懂的笔记。
@@ -424,31 +443,6 @@ cpp 提交记录：https://code…</summary>
     
     <category term="Solution" scheme="http://blog.cyx2009.top/categories/Solution/"/>
     
-    
-  </entry>
-  
-  <entry>
-    <title>[题解] ABC411G Count Cycles</title>
-    <link href="http://blog.cyx2009.top/archives/ABC411G/"/>
-    <id>http://blog.cyx2009.top/archives/ABC411G/</id>
-    <published>2025-06-22T03:44:00.000Z</published>
-    <updated>2025-06-22T04:16:43.391Z</updated>
-    
-    
-    <summary type="html">题意
-求 n 个点 m 条边的无向图中简单环数量。可以有重边，没有自环。
-1≤n≤20，1≤m≤2×105。
- 做法
-有一个显然的 O(2nn3) 的朴素状压 DP。
-设 fs,i,mask 表示开头为 s 目前结尾为 i 包含了 mask 集合里的点，形成了一条链的方案数。转移枚举下一个点乘上两点之间边的个数即可。
-…</summary>
-    
-    
-    
-    <category term="Solution" scheme="http://blog.cyx2009.top/categories/Solution/"/>
-    
-    
-    <category term="状压 DP" scheme="http://blog.cyx2009.top/tags/%E7%8A%B6%E5%8E%8B-DP/"/>
     
   </entry>
   

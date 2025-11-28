@@ -15,8 +15,29 @@
     <atom:link href="http://blog.cyx2009.top/rss2.xml" rel="self" type="application/rss+xml"/>
     
     <description>沉石鱼惊旋 的博客</description>
-    <pubDate>Thu, 27 Nov 2025 09:11:27 GMT</pubDate>
+    <pubDate>Thu, 27 Nov 2025 12:04:51 GMT</pubDate>
     <generator>http://hexo.io/</generator>
+    
+    <item>
+      <title>[游记] NOIP 2025 游记</title>
+      <link>http://blog.cyx2009.top/archives/NOIP2025/</link>
+      <guid>http://blog.cyx2009.top/archives/NOIP2025/</guid>
+      <pubDate>Thu, 27 Nov 2025 12:04:00 GMT</pubDate>
+      
+      <description>Day -2
+该写游记了。
+今天在家摆一摆，看了看做题笔记和板子。</description>
+      
+      
+      
+      
+      <category domain="http://blog.cyx2009.top/categories/TravelNote/">TravelNote</category>
+      
+      
+      
+      <comments>http://blog.cyx2009.top/archives/NOIP2025/#disqus_thread</comments>
+      
+    </item>
     
     <item>
       <title>[题解] 杂题选讲 9</title>
@@ -464,33 +485,6 @@ cpp 提交记录：https://code…</description>
       
       
       <comments>http://blog.cyx2009.top/archives/potpourri_1/#disqus_thread</comments>
-      
-    </item>
-    
-    <item>
-      <title>[题解] ABC411G Count Cycles</title>
-      <link>http://blog.cyx2009.top/archives/ABC411G/</link>
-      <guid>http://blog.cyx2009.top/archives/ABC411G/</guid>
-      <pubDate>Sun, 22 Jun 2025 03:44:00 GMT</pubDate>
-      
-      <description>题意
-求 n 个点 m 条边的无向图中简单环数量。可以有重边，没有自环。
-1≤n≤20，1≤m≤2×105。
- 做法
-有一个显然的 O(2nn3) 的朴素状压 DP。
-设 fs,i,mask 表示开头为 s 目前结尾为 i 包含了 mask 集合里的点，形成了一条链的方案数。转移枚举下一个点乘上两点之间边的个数即可。
-…</description>
-      
-      
-      
-      
-      <category domain="http://blog.cyx2009.top/categories/Solution/">Solution</category>
-      
-      
-      <category domain="http://blog.cyx2009.top/tags/%E7%8A%B6%E5%8E%8B-DP/">状压 DP</category>
-      
-      
-      <comments>http://blog.cyx2009.top/archives/ABC411G/#disqus_thread</comments>
       
     </item>
     

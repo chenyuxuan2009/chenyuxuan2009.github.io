@@ -13,22 +13,21 @@
 	<link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/highlight.js/11.1.0/styles/a11y-light.min.css">
 	<script src="//cdnjs.cloudflare.com/ajax/libs/highlight.js/11.1.0/highlight.min.js"></script>
 	
-	<title>[题解] CF351D Jeff and Removing Periods - 沉石鱼惊旋 的博客</title>
+	<title>[游记] NOIP 2025 游记 - 沉石鱼惊旋 的博客</title>
 	<meta charset="utf-8">
 	
 		<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=5">
 	
-	<meta name="description" content="闲话 和等差数列过不去了。碰上等差数列就要调 1h。  题目翻译 为了方便描述，我们约定数值相同的数为同一颜色的数。 有 n 个数，我们定义一次操作为：选择若干个同颜色数，使得他们在序列中的位置为一个等差数列。删除它们。 操作完之后可以重排整个序列。 有 q 个询问，每次询问给定 [l,r]，求至少几次操作能全部删除 …">
+	<meta name="description" content="Day -2 该写游记了。 今天在家摆一摆，看了看做题笔记和板子。">
 <meta property="og:type" content="article">
-<meta property="og:title" content="[题解] CF351D Jeff and Removing Periods">
-<meta property="og:url" content="http://blog.cyx2009.top/archives/CF351D/index.html">
+<meta property="og:title" content="[游记] NOIP 2025 游记">
+<meta property="og:url" content="http://blog.cyx2009.top/archives/NOIP2025/index.html">
 <meta property="og:site_name" content="沉石鱼惊旋 的博客">
-<meta property="og:description" content="闲话 和等差数列过不去了。碰上等差数列就要调 1h。  题目翻译 为了方便描述，我们约定数值相同的数为同一颜色的数。 有 n 个数，我们定义一次操作为：选择若干个同颜色数，使得他们在序列中的位置为一个等差数列。删除它们。 操作完之后可以重排整个序列。 有 q 个询问，每次询问给定 [l,r]，求至少几次操作能全部删除 …">
+<meta property="og:description" content="Day -2 该写游记了。 今天在家摆一摆，看了看做题笔记和板子。">
 <meta property="og:locale" content="zh_CN">
-<meta property="article:published_time" content="2024-01-29T17:32:00.000Z">
-<meta property="article:modified_time" content="2025-02-17T07:14:39.707Z">
+<meta property="article:published_time" content="2025-11-27T12:04:00.000Z">
+<meta property="article:modified_time" content="2025-11-27T12:04:51.354Z">
 <meta property="article:author" content="沉石鱼惊旋">
-<meta property="article:tag" content="莫队">
 <meta name="twitter:card" content="summary">
 
 	<meta name="theme-color" content="#5e72e4">
@@ -636,13 +635,13 @@
 	<article class="post post-full card bg-white shadow-sm border-0 post-preview">
 	<header class="post-header text-center">
 		
-		<a class="post-title" href="/archives/CF351D/">[题解] CF351D Jeff and Removing Periods</a>
+		<a class="post-title" href="/archives/NOIP2025/">[游记] NOIP 2025 游记</a>
 		<div class="post-meta">
 			
 						
 						<div class="post-meta-detail post-meta-detail-time">
 							<i class="fa fa-clock-o" aria-hidden="true"></i>
-							<time title="发布于 2024-1-30 1:32:00 | 编辑于 2025-2-17 15:14:39">2024-1-30 1:32
+							<time title="发布于 2025-11-27 20:04:00 | 编辑于 2025-11-27 20:04:51">2025-11-27 20:04
 							</time>
 						</div>
 					
@@ -651,7 +650,7 @@
 						
 						<div class="post-meta-detail post-meta-detail-categories">
 							<i class="fa fa-bookmark-o" aria-hidden="true"></i>
-							<a class="post-meta-detail-catagory-link" href="/categories/Solution/">Solution</a>
+							<a class="post-meta-detail-catagory-link" href="/categories/TravelNote/">TravelNote</a>
 						</div>
 					
 						
@@ -669,7 +668,7 @@
 						
 						<div class="post-meta-detail post-meta-detail-words">
 							<i class="fa fa-file-word-o" aria-hidden="true"></i>
-							1.5k 字
+							24 字
 						</div>
 					
 						
@@ -677,7 +676,7 @@
 						
 						<div class="post-meta-detail post-meta-detail-readingtime">
 							<i class="fa fa-hourglass-end" aria-hidden="true"></i>
-							7 分钟
+							1 分钟
 						</div>
 					
 		</div>
@@ -685,202 +684,10 @@
 	</header>
 
 	<div class="post-content" id="post_content">
-		<h1 id="闲话"><a class="markdownIt-Anchor" href="#闲话"></a> 闲话</h1>
-<p>和等差数列过不去了。碰上等差数列就要调 1h。</p>
-<h1 id="题目翻译"><a class="markdownIt-Anchor" href="#题目翻译"></a> 题目翻译</h1>
-<p>为了方便描述，我们约定数值相同的数为同一颜色的数。</p>
-<p>有 <span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>n</mi></mrow><annotation encoding="application/x-tex">n</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.43056em;vertical-align:0em;"></span><span class="mord mathnormal">n</span></span></span></span> 个数，我们定义一次操作为：选择若干个同颜色数，使得他们在序列中的位置为一个等差数列。删除它们。</p>
-<p>操作完之后可以重排整个序列。</p>
-<p>有 <span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>q</mi></mrow><annotation encoding="application/x-tex">q</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.625em;vertical-align:-0.19444em;"></span><span class="mord mathnormal" style="margin-right:0.03588em;">q</span></span></span></span> 个询问，每次询问给定 <span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mo stretchy="false">[</mo><mi>l</mi><mo separator="true">,</mo><mi>r</mi><mo stretchy="false">]</mo></mrow><annotation encoding="application/x-tex">[l,r]</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:1em;vertical-align:-0.25em;"></span><span class="mopen">[</span><span class="mord mathnormal" style="margin-right:0.01968em;">l</span><span class="mpunct">,</span><span class="mspace" style="margin-right:0.16666666666666666em;"></span><span class="mord mathnormal" style="margin-right:0.02778em;">r</span><span class="mclose">]</span></span></span></span>，求至少几次操作能全部删除 <span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mo stretchy="false">[</mo><mi>l</mi><mo separator="true">,</mo><mi>r</mi><mo stretchy="false">]</mo></mrow><annotation encoding="application/x-tex">[l,r]</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:1em;vertical-align:-0.25em;"></span><span class="mopen">[</span><span class="mord mathnormal" style="margin-right:0.01968em;">l</span><span class="mpunct">,</span><span class="mspace" style="margin-right:0.16666666666666666em;"></span><span class="mord mathnormal" style="margin-right:0.02778em;">r</span><span class="mclose">]</span></span></span></span>。</p>
-<p>询问互不影响。</p>
-<p><span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mn>1</mn><mo>≤</mo><mi>n</mi><mo separator="true">,</mo><mi>q</mi><mo separator="true">,</mo><msub><mi>a</mi><mi>i</mi></msub><mo>≤</mo><mn>1</mn><msup><mn>0</mn><mn>5</mn></msup></mrow><annotation encoding="application/x-tex">1\leq n,q,a_i\leq 10^5</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.78041em;vertical-align:-0.13597em;"></span><span class="mord">1</span><span class="mspace" style="margin-right:0.2777777777777778em;"></span><span class="mrel">≤</span><span class="mspace" style="margin-right:0.2777777777777778em;"></span></span><span class="base"><span class="strut" style="height:0.8304100000000001em;vertical-align:-0.19444em;"></span><span class="mord mathnormal">n</span><span class="mpunct">,</span><span class="mspace" style="margin-right:0.16666666666666666em;"></span><span class="mord mathnormal" style="margin-right:0.03588em;">q</span><span class="mpunct">,</span><span class="mspace" style="margin-right:0.16666666666666666em;"></span><span class="mord"><span class="mord mathnormal">a</span><span class="msupsub"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist" style="height:0.31166399999999994em;"><span style="top:-2.5500000000000003em;margin-left:0em;margin-right:0.05em;"><span class="pstrut" style="height:2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mathnormal mtight">i</span></span></span></span><span class="vlist-s">​</span></span><span class="vlist-r"><span class="vlist" style="height:0.15em;"><span></span></span></span></span></span></span><span class="mspace" style="margin-right:0.2777777777777778em;"></span><span class="mrel">≤</span><span class="mspace" style="margin-right:0.2777777777777778em;"></span></span><span class="base"><span class="strut" style="height:0.8141079999999999em;vertical-align:0em;"></span><span class="mord">1</span><span class="mord"><span class="mord">0</span><span class="msupsub"><span class="vlist-t"><span class="vlist-r"><span class="vlist" style="height:0.8141079999999999em;"><span style="top:-3.063em;margin-right:0.05em;"><span class="pstrut" style="height:2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mtight">5</span></span></span></span></span></span></span></span></span></span></span></p>
-<h1 id="题目思路"><a class="markdownIt-Anchor" href="#题目思路"></a> 题目思路</h1>
-<p>与翻译类似，约定数值相同的数为同一颜色的数。</p>
-<p>看起来就长了一眼莫队样子。</p>
-<p>分析一下，发现操作一次之后，通过重排是可以调整使得之后每次都能删除某一种相同数。</p>
-<p>但是，如果我们第一次操作就可以删除某一种相同数，换言之，<strong>如果原区间本身就包含一个颜色使得位置为等差数列</strong>，答案即为区间颜色数。反之，答案为区间颜色数 <span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mo>+</mo><mn>1</mn></mrow><annotation encoding="application/x-tex">+1</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.72777em;vertical-align:-0.08333em;"></span><span class="mord">+</span><span class="mord">1</span></span></span></span>。</p>
-<p>区间颜色数是很好维护的，我们用一个桶记录每个数出现几次即可。</p>
-<p>另外介绍一种小常数写法，我们记录 <span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>p</mi><mi>r</mi><msub><mi>e</mi><mi>i</mi></msub></mrow><annotation encoding="application/x-tex">pre_i</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.625em;vertical-align:-0.19444em;"></span><span class="mord mathnormal">p</span><span class="mord mathnormal" style="margin-right:0.02778em;">r</span><span class="mord"><span class="mord mathnormal">e</span><span class="msupsub"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist" style="height:0.31166399999999994em;"><span style="top:-2.5500000000000003em;margin-left:0em;margin-right:0.05em;"><span class="pstrut" style="height:2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mathnormal mtight">i</span></span></span></span><span class="vlist-s">​</span></span><span class="vlist-r"><span class="vlist" style="height:0.15em;"><span></span></span></span></span></span></span></span></span></span> 与 <span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>n</mi><mi>x</mi><msub><mi>t</mi><mi>i</mi></msub></mrow><annotation encoding="application/x-tex">nxt_i</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.76508em;vertical-align:-0.15em;"></span><span class="mord mathnormal">n</span><span class="mord mathnormal">x</span><span class="mord"><span class="mord mathnormal">t</span><span class="msupsub"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist" style="height:0.31166399999999994em;"><span style="top:-2.5500000000000003em;margin-left:0em;margin-right:0.05em;"><span class="pstrut" style="height:2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mathnormal mtight">i</span></span></span></span><span class="vlist-s">​</span></span><span class="vlist-r"><span class="vlist" style="height:0.15em;"><span></span></span></span></span></span></span></span></span></span> 表示与 <span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><msub><mi>a</mi><mi>i</mi></msub></mrow><annotation encoding="application/x-tex">a_i</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.58056em;vertical-align:-0.15em;"></span><span class="mord"><span class="mord mathnormal">a</span><span class="msupsub"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist" style="height:0.31166399999999994em;"><span style="top:-2.5500000000000003em;margin-left:0em;margin-right:0.05em;"><span class="pstrut" style="height:2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mathnormal mtight">i</span></span></span></span><span class="vlist-s">​</span></span><span class="vlist-r"><span class="vlist" style="height:0.15em;"><span></span></span></span></span></span></span></span></span></span> 颜色相同的数上一次或下一次出现在什么位置，这能做到访址连续跑得更快。</p>
-<pre><code class="highlight cpp"><span class="comment">// while(L&gt;Query[i].L)ANS+=(++h[a[--L]]==1);</span>
-<span class="comment">// while(R&lt;Query[i].R)ANS+=(++h[a[++R]]==1);	  </span>
-<span class="comment">// while(L&lt;Query[i].L)ANS-=(--h[a[L++]]==0);</span>
-<span class="comment">// while(R&gt;Query[i].R)ANS-=(--h[a[R--]]==0);</span>
-<span class="keyword">while</span>(L&gt;Query[i].L)ANS+=(nxt[--L]&gt;R);
-<span class="keyword">while</span>(R&lt;Query[i].R)ANS+=(pre[++R]&lt;L);	  
-<span class="keyword">while</span>(L&lt;Query[i].L)ANS-=(nxt[L++]&gt;R);
-<span class="keyword">while</span>(R&gt;Query[i].R)ANS-=(pre[R--]&lt;L);</code></pre>
-<p>注释即为正常桶记录写法，非注释即为这种访址连续的写法。</p>
-<p>然后我们考虑如何判断『原区间本身就包含一个颜色使得位置为等差数列』，为了莫队方便把信息传递到下个区间，我们改成『维护区间内有多少颜色使得位置为等差数列』。</p>
-<p>这个有一个很显然的单次修改查询 <span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi mathvariant="script">O</mi><mo stretchy="false">(</mo><mi>log</mi><mo>⁡</mo><mi>n</mi><mo stretchy="false">)</mo></mrow><annotation encoding="application/x-tex">\mathcal O(\log n)</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:1em;vertical-align:-0.25em;"></span><span class="mord mathcal" style="margin-right:0.02778em;">O</span><span class="mopen">(</span><span class="mop">lo<span style="margin-right:0.01389em;">g</span></span><span class="mspace" style="margin-right:0.16666666666666666em;"></span><span class="mord mathnormal">n</span><span class="mclose">)</span></span></span></span> 的做法为，维护若干 multiset，每次暴力插入删除当前点的贡献，然后判断最大值与最小值是否相等。附一个到此步 TLE on 23 的码：<a target="_blank" rel="noopener" href="https://codeforces.com/contest/351/submission/243942020">CF submission 243942020</a>。</p>
-<p>然后考虑优化，我们现在把要维护的问题转化为：</p>
-<blockquote>
-<p>有 <span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>n</mi></mrow><annotation encoding="application/x-tex">n</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.43056em;vertical-align:0em;"></span><span class="mord mathnormal">n</span></span></span></span> 个类别，每次操作在一个类别里加入或删除一个数，每次判断这个类别是否只有 <span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mn>1</mn></mrow><annotation encoding="application/x-tex">1</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.64444em;vertical-align:0em;"></span><span class="mord">1</span></span></span></span> 种数。</p>
-</blockquote>
-<p>然后，我们考虑一个人类智慧做法：</p>
-<p>维护 <span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mn>3</mn></mrow><annotation encoding="application/x-tex">3</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.64444em;vertical-align:0em;"></span><span class="mord">3</span></span></span></span> 个信息，类别中数的个数 <span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>c</mi><mi>n</mi><msub><mi>t</mi><mi>i</mi></msub></mrow><annotation encoding="application/x-tex">cnt_i</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.76508em;vertical-align:-0.15em;"></span><span class="mord mathnormal">c</span><span class="mord mathnormal">n</span><span class="mord"><span class="mord mathnormal">t</span><span class="msupsub"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist" style="height:0.31166399999999994em;"><span style="top:-2.5500000000000003em;margin-left:0em;margin-right:0.05em;"><span class="pstrut" style="height:2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mathnormal mtight">i</span></span></span></span><span class="vlist-s">​</span></span><span class="vlist-r"><span class="vlist" style="height:0.15em;"><span></span></span></span></span></span></span></span></span></span>，类别中数的和 <span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>s</mi><mi>u</mi><msub><mi>m</mi><mrow><mn>0</mn><mo separator="true">,</mo><mi>i</mi></mrow></msub></mrow><annotation encoding="application/x-tex">sum_{0,i}</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.716668em;vertical-align:-0.286108em;"></span><span class="mord mathnormal">s</span><span class="mord mathnormal">u</span><span class="mord"><span class="mord mathnormal">m</span><span class="msupsub"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist" style="height:0.311664em;"><span style="top:-2.5500000000000003em;margin-left:0em;margin-right:0.05em;"><span class="pstrut" style="height:2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mtight"><span class="mord mtight">0</span><span class="mpunct mtight">,</span><span class="mord mathnormal mtight">i</span></span></span></span></span><span class="vlist-s">​</span></span><span class="vlist-r"><span class="vlist" style="height:0.286108em;"><span></span></span></span></span></span></span></span></span></span>，类别中数的平方和 <span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>s</mi><mi>u</mi><msub><mi>m</mi><mrow><mn>1</mn><mo separator="true">,</mo><mi>i</mi></mrow></msub></mrow><annotation encoding="application/x-tex">sum_{1,i}</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.716668em;vertical-align:-0.286108em;"></span><span class="mord mathnormal">s</span><span class="mord mathnormal">u</span><span class="mord"><span class="mord mathnormal">m</span><span class="msupsub"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist" style="height:0.311664em;"><span style="top:-2.5500000000000003em;margin-left:0em;margin-right:0.05em;"><span class="pstrut" style="height:2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mtight"><span class="mord mtight">1</span><span class="mpunct mtight">,</span><span class="mord mathnormal mtight">i</span></span></span></span></span><span class="vlist-s">​</span></span><span class="vlist-r"><span class="vlist" style="height:0.286108em;"><span></span></span></span></span></span></span></span></span></span>。</p>
-<p>有这三个信息我们就可以判断是否类别中均为一个数了。</p>
-<p><s>你怎么知道这是我深夜在 U 群问怎么做这个问题然后 skip2004 告诉我的解法。</s></p>
-<p>然后我们把之前 TLE on 23 的码改一改就可以了！</p>
-<h1 id="完整代码"><a class="markdownIt-Anchor" href="#完整代码"></a> 完整代码</h1>
-<p><a target="_blank" rel="noopener" href="https://codeforces.com/contest/351/submission/243951477">CF submission 243951477</a></p>
-<pre><code class="highlight cpp"><span class="meta">#<span class="keyword">include</span> <span class="string">&lt;bits/stdc++.h&gt;</span></span>
-<span class="keyword">using</span> <span class="keyword">namespace</span> std;
-<span class="keyword">typedef</span> <span class="type">long</span> <span class="type">long</span> ll;
-<span class="meta">#<span class="keyword">define</span> getchar() p1 == p2 &amp;&amp; (p2 = (p1 = buf) + fread(buf, 1, 1000000, stdin), p1 == p2) ? EOF : *p1++</span>
-<span class="type">char</span> buf[<span class="number">1000000</span>], *p1 = buf, *p2 = buf;
-<span class="keyword">template</span> &lt;<span class="keyword">typename</span> T&gt;
-<span class="function"><span class="type">void</span> <span class="title">read</span><span class="params">(T &amp;x)</span></span>
-<span class="function"></span>&#123;
-    x = <span class="number">0</span>;
-    <span class="type">int</span> f = <span class="number">1</span>;
-    <span class="type">char</span> c = <span class="built_in">getchar</span>();
-    <span class="keyword">for</span> (; c &lt; <span class="string">&#x27;0&#x27;</span> || c &gt; <span class="string">&#x27;9&#x27;</span>; c = <span class="built_in">getchar</span>())
-        <span class="keyword">if</span> (c == <span class="string">&#x27;-&#x27;</span>)
-            f = -f;
-    <span class="keyword">for</span> (; c &gt;= <span class="string">&#x27;0&#x27;</span> &amp;&amp; c &lt;= <span class="string">&#x27;9&#x27;</span>; c = <span class="built_in">getchar</span>())
-        x = x * <span class="number">10</span> + c - <span class="string">&#x27;0&#x27;</span>;
-    x *= f;
-&#125;
-<span class="keyword">template</span> &lt;<span class="keyword">typename</span> T, <span class="keyword">typename</span>... Args&gt;
-<span class="function"><span class="type">void</span> <span class="title">read</span><span class="params">(T &amp;x, Args &amp;...y)</span></span>
-<span class="function"></span>&#123;
-    <span class="built_in">read</span>(x);
-    <span class="built_in">read</span>(y...);
-&#125;
-<span class="type">int</span> fa[<span class="number">100020</span>];
-<span class="type">int</span> a[<span class="number">100020</span>];
-<span class="type">int</span> ans[<span class="number">100020</span>];
-<span class="type">int</span> pre[<span class="number">100020</span>];
-<span class="type">int</span> nxt[<span class="number">100020</span>];
-<span class="type">int</span> p[<span class="number">100020</span>];
-ll sum[<span class="number">2</span>][<span class="number">100020</span>];
-<span class="type">int</span> cnt[<span class="number">100020</span>];
-multiset&lt;<span class="type">int</span>&gt; s[<span class="number">100020</span>];
-<span class="type">int</span> n, len, ANS, q, tot;
-<span class="keyword">struct</span> <span class="title class_">node</span>
-&#123;
-    <span class="type">int</span> L, R, id;
-&#125; Query[<span class="number">1000020</span>];
-<span class="function"><span class="type">bool</span> <span class="title">cmp</span><span class="params">(node a, node b)</span></span>
-<span class="function"></span>&#123;
-    <span class="keyword">if</span> (fa[a.L] != fa[b.L])
-        <span class="keyword">return</span> a.L &lt; b.L;
-    <span class="keyword">if</span> (fa[a.L] &amp; <span class="number">1</span>)
-        <span class="keyword">return</span> a.R &gt; b.R;
-    <span class="keyword">return</span> a.R &lt; b.R;
-&#125;
-<span class="function">ll <span class="title">sq</span><span class="params">(<span class="type">int</span> x)</span> </span>&#123; <span class="keyword">return</span> <span class="number">1LL</span> * x * x; &#125;
-<span class="function"><span class="type">bool</span> <span class="title">same</span><span class="params">(<span class="type">int</span> x)</span> </span>&#123; <span class="keyword">return</span> !cnt[x] ? <span class="number">1</span> : !(sum[<span class="number">0</span>][x] % cnt[x]) &amp;&amp; !(sum[<span class="number">1</span>][x] % cnt[x]) &amp;&amp; <span class="built_in">sq</span>(sum[<span class="number">0</span>][x] / cnt[x]) * cnt[x] == sum[<span class="number">1</span>][x]; &#125;
-<span class="function"><span class="type">void</span> <span class="title">add</span><span class="params">(<span class="type">int</span> x, <span class="type">bool</span> ff)</span></span>
-<span class="function"></span>&#123;
-    <span class="type">bool</span> f = <span class="number">0</span>;
-    <span class="keyword">if</span> (ff &amp; <span class="number">1</span>)
-    &#123;
-        <span class="keyword">if</span> (<span class="built_in">same</span>(a[x]))
-            f = <span class="number">1</span>;
-        cnt[a[x]]++;
-        sum[<span class="number">0</span>][a[x]] += x - pre[x];
-        sum[<span class="number">1</span>][a[x]] += <span class="built_in">sq</span>(x - pre[x]);
-        <span class="keyword">if</span> (!<span class="built_in">same</span>(a[x]) &amp;&amp; f)
-            tot--;
-    &#125;
-    <span class="keyword">else</span>
-    &#123;
-        <span class="keyword">if</span> (<span class="built_in">same</span>(a[x]))
-            f = <span class="number">1</span>;
-        cnt[a[x]]++;
-        sum[<span class="number">0</span>][a[x]] += nxt[x] - x;
-        sum[<span class="number">1</span>][a[x]] += <span class="built_in">sq</span>(nxt[x] - x);
-        <span class="keyword">if</span> (!<span class="built_in">same</span>(a[x]) &amp;&amp; f)
-            tot--;
-    &#125;
-&#125;
-<span class="function"><span class="type">void</span> <span class="title">del</span><span class="params">(<span class="type">int</span> x, <span class="type">bool</span> ff)</span></span>
-<span class="function"></span>&#123;
-    <span class="type">bool</span> f = <span class="number">0</span>;
-    <span class="keyword">if</span> (ff &amp; <span class="number">1</span>)
-    &#123;
-        <span class="keyword">if</span> (!<span class="built_in">same</span>(a[x]))
-            f = <span class="number">1</span>;
-        cnt[a[x]]--;
-        sum[<span class="number">0</span>][a[x]] -= x - pre[x];
-        sum[<span class="number">1</span>][a[x]] -= <span class="built_in">sq</span>(x - pre[x]);
-        <span class="keyword">if</span> (<span class="built_in">same</span>(a[x]) &amp;&amp; f)
-            tot++;
-    &#125;
-    <span class="keyword">else</span>
-    &#123;
-        <span class="keyword">if</span> (!<span class="built_in">same</span>(a[x]))
-            f = <span class="number">1</span>;
-        cnt[a[x]]--;
-        sum[<span class="number">0</span>][a[x]] -= nxt[x] - x;
-        sum[<span class="number">1</span>][a[x]] -= <span class="built_in">sq</span>(nxt[x] - x);
-        <span class="keyword">if</span> (<span class="built_in">same</span>(a[x]) &amp;&amp; f)
-            tot++;
-    &#125;
-&#125;
-<span class="function"><span class="type">int</span> <span class="title">main</span><span class="params">()</span></span>
-<span class="function"></span>&#123;
-    <span class="built_in">read</span>(n);
-    len = <span class="built_in">sqrt</span>(n);
-    <span class="keyword">for</span> (<span class="type">int</span> i = <span class="number">1</span>; i &lt;= n; i++)
-    &#123;
-        <span class="built_in">read</span>(a[i]);
-        fa[i] = (i + len - <span class="number">1</span>) / len;
-        nxt[i] = n + <span class="number">1</span>;
-        pre[i] = p[a[i]];
-        nxt[pre[i]] = i;
-        p[a[i]] = i;
-    &#125;
-    <span class="built_in">read</span>(q);
-    <span class="keyword">for</span> (<span class="type">int</span> i = <span class="number">1</span>; i &lt;= q; i++)
-    &#123;
-        <span class="type">int</span> L, R;
-        <span class="built_in">read</span>(L, R);
-        Query[i] = &#123;L, R, i&#125;;
-    &#125;
-    <span class="built_in">sort</span>(Query + <span class="number">1</span>, Query + q + <span class="number">1</span>, cmp);
-    <span class="type">int</span> L = <span class="number">1</span>, R = <span class="number">0</span>;
-    <span class="keyword">for</span> (<span class="type">int</span> i = <span class="number">1</span>; i &lt;= q; i++)
-    &#123;
-        <span class="keyword">while</span> (L &gt; Query[i].L)
-        &#123;
-            L--;
-            <span class="keyword">if</span> (nxt[L] &gt; R)
-                ANS++, tot++;
-            <span class="keyword">else</span>
-                <span class="built_in">add</span>(L, <span class="number">0</span>);
-        &#125;
-        <span class="keyword">while</span> (R &lt; Query[i].R)
-        &#123;
-            R++;
-            <span class="keyword">if</span> (pre[R] &lt; L)
-                ANS++, tot++;
-            <span class="keyword">else</span>
-                <span class="built_in">add</span>(R, <span class="number">1</span>);
-        &#125;
-        <span class="keyword">while</span> (L &lt; Query[i].L)
-        &#123;
-            <span class="keyword">if</span> (nxt[L] &gt; R)
-                ANS--, tot--;
-            <span class="keyword">else</span>
-                <span class="built_in">del</span>(L, <span class="number">0</span>);
-            L++;
-        &#125;
-        <span class="keyword">while</span> (R &gt; Query[i].R)
-        &#123;
-            <span class="keyword">if</span> (pre[R] &lt; L)
-                ANS--, tot--;
-            <span class="keyword">else</span>
-                <span class="built_in">del</span>(R, <span class="number">1</span>);
-            R--;
-        &#125;
-        ans[Query[i].id] = ANS + <span class="number">1</span> - (tot &gt; <span class="number">0</span>);
-    &#125;
-    <span class="keyword">for</span> (<span class="type">int</span> i = <span class="number">1</span>; i &lt;= q; i++)
-        <span class="built_in">printf</span>(<span class="string">&quot;%d\n&quot;</span>, ans[i]);
-    <span class="keyword">return</span> <span class="number">0</span>;
-&#125;</code></pre>
+		<h1 id="day-2"><a class="markdownIt-Anchor" href="#day-2"></a> Day -2</h1>
+<p>该写游记了。</p>
+<p>今天在家摆一摆，看了看做题笔记和板子。</p>
+
 	</div>
 <div style="text-align: center; position: relative;">
   <button id="like-btn" class="like-btn">
@@ -903,7 +710,7 @@ multiset&lt;<span class="type">int</span>&gt; s[<span class="number">100020</spa
 
 
 <script>
-const postId = "CF351D";
+const postId = "NOIP2025";
 const apiUrl = "https://hexo-like.2176807108.workers.dev";
 const btn = document.querySelector("#like-btn");
 const countEl = document.querySelector("#like-count");
@@ -983,11 +790,6 @@ btn.addEventListener("click", () => {
 
 
 	
-		<div class="post-tags">
-			<i class="fa fa-tags" aria-hidden="true"></i>
-			<a class="tag badge badge-secondary post-meta-detail-tag -none-link" href="/tags/%E8%8E%AB%E9%98%9F/" rel="tag">莫队</a>
-		</div>
-	
 </article>
 
 	<div id="share_container">
@@ -1027,7 +829,7 @@ btn.addEventListener("click", () => {
 				<span class="btn-inner--icon"><i class="fa fa-twitter"></i></span>
 			</button>
 		</a>
-		<a target="_blank" class="no-pjax icon-telegram" href="https://telegram.me/share/url?url=http://blog.cyx2009.top/archives/CF351D/&text=[题解] CF351D Jeff and Removing Periods" tooltip="分享到 Telegram">
+		<a target="_blank" class="no-pjax icon-telegram" href="https://telegram.me/share/url?url=http://blog.cyx2009.top/archives/NOIP2025/&text=[游记] NOIP 2025 游记" tooltip="分享到 Telegram">
 			<button class="btn btn-icon btn-primary" style="background: #42a5f5;border: none;">
 				<span class="btn-inner--icon"><i class="fa fa-telegram"></i></span>
 			</button>
@@ -1044,14 +846,13 @@ btn.addEventListener("click", () => {
 </div>
 <script type="text/javascript">
 	socialShare("#share", {
-	    title : `[题解] CF351D Jeff and Removing Periods`,
-	    description : `闲话
-和等差数列过不去了。碰上等差数列就要调 1h。
- 题目翻译
-为了方便描述，我们约定数值相同的数...`,
+	    title : `[游记] NOIP 2025 游记`,
+	    description : `Day -2
+该写游记了。
+今天在家摆一摆，看了看做题笔记和板子。`,
 	    wechatQrcodeTitle : `分享到微信`,
 	    wechatQrcodeHelper : `微信扫描二维码`,
-	    source : `http://blog.cyx2009.top/archives/CF351D/`
+	    source : `http://blog.cyx2009.top/archives/NOIP2025/`
 	});
 	$("#share_show")[0].onclick = function(){
 		$("#share_container").addClass("opened");
@@ -1117,7 +918,7 @@ btn.addEventListener("click", () => {
 
 
 
-<div class="post-navigation card shadow-sm"><div class="post-navigation-item post-navigation-pre"><span class="page-navigation-extra-text"><i class="fa fa-arrow-circle-o-left" aria-hidden="true"></i>上一篇</span><a href="/archives/Mo_s_algorithm/" rel="prev"> [笔记] 莫队 学习笔记</a></div><div class="post-navigation-item post-navigation-next"><span class="page-navigation-extra-text">下一篇 <i class="fa fa-arrow-circle-o-right" aria-hidden="true"></i></span><a href="/archives/20240119_essay/" rel="next"> [闲话] 20240119 鲜花</a></div></div>
+<div class="post-navigation card shadow-sm"><div class="post-navigation-item post-navigation-pre"></div><div class="post-navigation-item post-navigation-next"><span class="page-navigation-extra-text">下一篇 <i class="fa fa-arrow-circle-o-right" aria-hidden="true"></i></span><a href="/archives/potpourri_9/" rel="next"> [题解] 杂题选讲 9</a></div></div>
 
 
 
