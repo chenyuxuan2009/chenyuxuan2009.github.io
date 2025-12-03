@@ -15,7 +15,7 @@
     <atom:link href="http://blog.cyx2009.top/rss2.xml" rel="self" type="application/rss+xml"/>
     
     <description>沉石鱼惊旋 的博客</description>
-    <pubDate>Thu, 27 Nov 2025 12:04:51 GMT</pubDate>
+    <pubDate>Wed, 03 Dec 2025 12:39:56 GMT</pubDate>
     <generator>http://hexo.io/</generator>
     
     <item>
@@ -24,9 +24,10 @@
       <guid>http://blog.cyx2009.top/archives/NOIP2025/</guid>
       <pubDate>Thu, 27 Nov 2025 12:04:00 GMT</pubDate>
       
-      <description>Day -2
-该写游记了。
-今天在家摆一摆，看了看做题笔记和板子。</description>
+      <description>兄弟，什么都不想写了，反正 NOIP 除了收了 xlw 的徽章屁事没干。
+开场十五分钟过了 T1 优势在我，而且发现了前缀和超过 m 的情况判掉了，我王朝了。
+做了一小时 T2 没做明白，然后想了几个充要条件发现假了，去上厕所想出了真的充要条件，我此时以为自己还有赢的机会。
+然后写了个四次方的玉玉症了调不出来了贡献死活…</description>
       
       
       
