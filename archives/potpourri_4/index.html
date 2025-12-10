@@ -25,12 +25,12 @@
 <meta property="og:site_name" content="沉石鱼惊旋 的博客">
 <meta property="og:description" content="CF1073E Segment Sum 数位 DP，fi,j 表示方案数，gi,j 表示总和，枚举下一位填什么，多出来一些方案数乘上这一位的数乘上 10 的次幂的贡献，每次转移的时候加一下就行了。  梦熊炼石计划 2025 #2 A 弱智题，显然 ai&#x3D;bi 的被强选了，可以证明 mex⁡ 就是这些数的 mex⁡，如果…">
 <meta property="og:locale" content="zh_CN">
-<meta property="og:image" content="https://cdn.jsdelivr.net/gh/chenyuxuan2009/img@main/images/20250910193602591.png">
+<meta property="og:image" content="https://cdn.jsdelivr.net/gh/Caylex09/img@main/images/20250910193602591.png">
 <meta property="article:published_time" content="2025-08-28T08:13:00.000Z">
-<meta property="article:modified_time" content="2025-11-01T01:41:01.838Z">
+<meta property="article:modified_time" content="2025-12-10T09:29:55.399Z">
 <meta property="article:author" content="沉石鱼惊旋">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:image" content="https://cdn.jsdelivr.net/gh/chenyuxuan2009/img@main/images/20250910193602591.png">
+<meta name="twitter:image" content="https://cdn.jsdelivr.net/gh/Caylex09/img@main/images/20250910193602591.png">
 
 	<meta name="theme-color" content="#5e72e4">
 	<meta name="theme-color-rgb" content="94,114,228">
@@ -645,7 +645,7 @@
 	<article class="post post-full card bg-white shadow-sm border-0 post-preview">
 	<header class="post-header text-center post-header-with-thumbnail">
 		
-				<img class='post-thumbnail lazyload' src='https://cdn.jsdelivr.net/gh/chenyuxuan2009/img@main/images/20250910193602591.png' data-original='https://cdn.jsdelivr.net/gh/chenyuxuan2009/img@main/images/20250910193602591.png' alt='thumbnail'></img>
+				<img class='post-thumbnail lazyload' src='https://cdn.jsdelivr.net/gh/Caylex09/img@main/images/20250910193602591.png' data-original='https://cdn.jsdelivr.net/gh/Caylex09/img@main/images/20250910193602591.png' alt='thumbnail'></img>
 				<div class='post-header-text-container'>
 			
 		<a class="post-title" href="/archives/potpourri_4/">[题解] 杂题选讲 4</a>
@@ -654,7 +654,7 @@
 						
 						<div class="post-meta-detail post-meta-detail-time">
 							<i class="fa fa-clock-o" aria-hidden="true"></i>
-							<time title="发布于 2025-8-28 16:13:00 | 编辑于 2025-11-1 9:41:01">2025-8-28 16:13
+							<time title="发布于 2025-8-28 16:13:00 | 编辑于 2025-12-10 17:29:55">2025-8-28 16:13
 							</time>
 						</div>
 					
@@ -1078,7 +1078,7 @@ M834 80h400000v40h-400000z'/></svg></span></span></span><span class="vlist-s">�
 <h1 id="agc028d-chords"><a class="markdownIt-Anchor" href="#agc028d-chords"></a> AGC028D Chords</h1>
 <p>首先要破环成链，不妨就看成 <span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mo stretchy="false">[</mo><mn>1</mn><mo separator="true">,</mo><mi>n</mi><mo stretchy="false">]</mo></mrow><annotation encoding="application/x-tex">[1,n]</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:1em;vertical-align:-0.25em;"></span><span class="mopen">[</span><span class="mord">1</span><span class="mpunct">,</span><span class="mspace" style="margin-right:0.16666666666666666em;"></span><span class="mord mathnormal">n</span><span class="mclose">]</span></span></span></span> 的数轴，在上方画弧线段，弧线段有交就代表是一个连通块。</p>
 <p>考察一下，破环成链之后，什么是一个连通块。</p>
-<p><img src="https://cdn.jsdelivr.net/gh/chenyuxuan2009/img@main/images/20250910193602591.png" alt="" /></p>
+<p><img src="https://cdn.jsdelivr.net/gh/Caylex09/img@main/images/20250910193602591.png" alt="" /></p>
 <p>在本图中，标红的 <span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mo stretchy="false">(</mo><mi>l</mi><mo separator="true">,</mo><mi>r</mi><mo stretchy="false">)</mo></mrow><annotation encoding="application/x-tex">(l,r)</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:1em;vertical-align:-0.25em;"></span><span class="mopen">(</span><span class="mord mathnormal" style="margin-right:0.01968em;">l</span><span class="mpunct">,</span><span class="mspace" style="margin-right:0.16666666666666666em;"></span><span class="mord mathnormal" style="margin-right:0.02778em;">r</span><span class="mclose">)</span></span></span></span> 这三条曲线，形成了一个连通块，我们让 <span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mo stretchy="false">(</mo><mi>l</mi><mo separator="true">,</mo><mi>r</mi><mo stretchy="false">)</mo></mrow><annotation encoding="application/x-tex">(l,r)</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:1em;vertical-align:-0.25em;"></span><span class="mopen">(</span><span class="mord mathnormal" style="margin-right:0.01968em;">l</span><span class="mpunct">,</span><span class="mspace" style="margin-right:0.16666666666666666em;"></span><span class="mord mathnormal" style="margin-right:0.02778em;">r</span><span class="mclose">)</span></span></span></span> 代表这个连通块。</p>
 <p>一个连通块，在数轴上对应连续的区间扣掉若干个小的区间。</p>
 <p>设 <span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>f</mi><mo stretchy="false">(</mo><mi>l</mi><mo separator="true">,</mo><mi>r</mi><mo stretchy="false">)</mo></mrow><annotation encoding="application/x-tex">f(l,r)</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:1em;vertical-align:-0.25em;"></span><span class="mord mathnormal" style="margin-right:0.10764em;">f</span><span class="mopen">(</span><span class="mord mathnormal" style="margin-right:0.01968em;">l</span><span class="mpunct">,</span><span class="mspace" style="margin-right:0.16666666666666666em;"></span><span class="mord mathnormal" style="margin-right:0.02778em;">r</span><span class="mclose">)</span></span></span></span> 表示，<span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mo stretchy="false">(</mo><mi>l</mi><mo separator="true">,</mo><mi>r</mi><mo stretchy="false">)</mo></mrow><annotation encoding="application/x-tex">(l,r)</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:1em;vertical-align:-0.25em;"></span><span class="mopen">(</span><span class="mord mathnormal" style="margin-right:0.01968em;">l</span><span class="mpunct">,</span><span class="mspace" style="margin-right:0.16666666666666666em;"></span><span class="mord mathnormal" style="margin-right:0.02778em;">r</span><span class="mclose">)</span></span></span></span> 代表了一个连通块的方案数。</p>
