@@ -15,8 +15,33 @@
     <atom:link href="http://blog.cyx2009.top/rss2.xml" rel="self" type="application/rss+xml"/>
     
     <description>沉石鱼惊旋 的博客</description>
-    <pubDate>Wed, 03 Dec 2025 13:42:54 GMT</pubDate>
+    <pubDate>Wed, 10 Dec 2025 01:42:16 GMT</pubDate>
     <generator>http://hexo.io/</generator>
+    
+    <item>
+      <title>[题解] 杂题选讲 1-</title>
+      <link>http://blog.cyx2009.top/archives/potpourri_10/</link>
+      <guid>http://blog.cyx2009.top/archives/potpourri_10/</guid>
+      <pubDate>Tue, 09 Dec 2025 13:09:00 GMT</pubDate>
+      
+      <description>CF715C Digit Tree
+独立想出；思考时间：中；已完成代码；代码时间：中偏长；推荐指数：还可以；
+先把式子拆开，设 ui 表示 i→1 爬上去的数。di 表示 1→i 爬下来的数。
+那么爬上去的部分是：
+(up[u]-up[lca])/pw10[dep[lca]-1]
+爬下来的部分是：
+down[v]-do…</description>
+      
+      
+      
+      
+      <category domain="http://blog.cyx2009.top/categories/Solution/">Solution</category>
+      
+      
+      
+      <comments>http://blog.cyx2009.top/archives/potpourri_10/#disqus_thread</comments>
+      
+    </item>
     
     <item>
       <title>[游记] NOIP 2025 游记</title>
@@ -462,30 +487,6 @@ cpp 提交记录：https://code…</description>
       
       
       <comments>http://blog.cyx2009.top/archives/ASTAR2025/#disqus_thread</comments>
-      
-    </item>
-    
-    <item>
-      <title>[题解] 杂题选讲 1</title>
-      <link>http://blog.cyx2009.top/archives/potpourri_1/</link>
-      <guid>http://blog.cyx2009.top/archives/potpourri_1/</guid>
-      <pubDate>Wed, 25 Jun 2025 13:26:00 GMT</pubDate>
-      
-      <description>每个题都好好写题解有点多了，写点自己能看懂的笔记。
- CF1267G Game Relics
-*3000，期望 DP。
-因为 x≤ci 故策略一定是先抽再买。
-设还剩了 r 个，剩下的集合为 S，抽到新物品的期望是 (nr+1)×x2，而剩下的随便买一个的期望是 1r∑i∈Sci。
-全排列枚举获得的顺序，每种方案依据两…</description>
-      
-      
-      
-      
-      <category domain="http://blog.cyx2009.top/categories/Solution/">Solution</category>
-      
-      
-      
-      <comments>http://blog.cyx2009.top/archives/potpourri_1/#disqus_thread</comments>
       
     </item>
     

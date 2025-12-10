@@ -6,7 +6,7 @@
   <link href="http://blog.cyx2009.top/atom.xml" rel="self"/>
   
   <link href="http://blog.cyx2009.top/"/>
-  <updated>2025-12-03T13:42:54.064Z</updated>
+  <updated>2025-12-10T01:42:16.347Z</updated>
   <id>http://blog.cyx2009.top/</id>
   
   <author>
@@ -15,6 +15,29 @@
   </author>
   
   <generator uri="https://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>[题解] 杂题选讲 1-</title>
+    <link href="http://blog.cyx2009.top/archives/potpourri_10/"/>
+    <id>http://blog.cyx2009.top/archives/potpourri_10/</id>
+    <published>2025-12-09T13:09:00.000Z</published>
+    <updated>2025-12-10T01:42:16.347Z</updated>
+    
+    
+    <summary type="html">CF715C Digit Tree
+独立想出；思考时间：中；已完成代码；代码时间：中偏长；推荐指数：还可以；
+先把式子拆开，设 ui 表示 i→1 爬上去的数。di 表示 1→i 爬下来的数。
+那么爬上去的部分是：
+(up[u]-up[lca])/pw10[dep[lca]-1]
+爬下来的部分是：
+down[v]-do…</summary>
+    
+    
+    
+    <category term="Solution" scheme="http://blog.cyx2009.top/categories/Solution/"/>
+    
+    
+  </entry>
   
   <entry>
     <title>[游记] NOIP 2025 游记</title>
@@ -41,7 +64,7 @@
     <link href="http://blog.cyx2009.top/archives/potpourri_9/"/>
     <id>http://blog.cyx2009.top/archives/potpourri_9/</id>
     <published>2025-11-17T03:17:00.000Z</published>
-    <updated>2025-12-03T12:51:51.342Z</updated>
+    <updated>2025-12-08T08:56:02.616Z</updated>
     
     
     <summary type="html">CF2165B Marble Council
@@ -421,28 +444,6 @@ cpp 提交记录：https://code…</summary>
     
     
     <category term="TravelNote" scheme="http://blog.cyx2009.top/categories/TravelNote/"/>
-    
-    
-  </entry>
-  
-  <entry>
-    <title>[题解] 杂题选讲 1</title>
-    <link href="http://blog.cyx2009.top/archives/potpourri_1/"/>
-    <id>http://blog.cyx2009.top/archives/potpourri_1/</id>
-    <published>2025-06-25T13:26:00.000Z</published>
-    <updated>2025-11-28T12:13:55.704Z</updated>
-    
-    
-    <summary type="html">每个题都好好写题解有点多了，写点自己能看懂的笔记。
- CF1267G Game Relics
-*3000，期望 DP。
-因为 x≤ci 故策略一定是先抽再买。
-设还剩了 r 个，剩下的集合为 S，抽到新物品的期望是 (nr+1)×x2，而剩下的随便买一个的期望是 1r∑i∈Sci。
-全排列枚举获得的顺序，每种方案依据两…</summary>
-    
-    
-    
-    <category term="Solution" scheme="http://blog.cyx2009.top/categories/Solution/"/>
     
     
   </entry>
